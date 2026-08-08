@@ -81,3 +81,123 @@ body {
   color: var(--krem-silik);
   font-size: 13px;
 }
+
+.kart {
+  display: block;
+  background: var(--kirmizi-koyu);
+  border: 1px solid var(--kenar);
+  border-radius: var(--yuvarlak);
+  box-shadow: var(--golge);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.16s ease, border-color 0.16s ease;
+}
+
+.kart:hover {
+  transform: translateY(-3px);
+  border-color: var(--altin);
+}
+
+.kart-foto {
+  height: 150px;
+  display: grid;
+  place-items: center;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--kirmizi-derin),
+    var(--kirmizi-derin) 12px,
+    rgba(110, 10, 18, 0.72) 12px,
+    rgba(110, 10, 18, 0.72) 24px
+  );
+  color: var(--krem-silik);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.kart-govde { padding: 16px 18px 18px; }
+
+.kart-ust {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.kart-isim {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.kart-yer {
+  margin: 4px 0 14px;
+  color: var(--krem-sonuk);
+  font-size: 13px;
+}
+
+.fiyat {
+  flex: none;
+  color: var(--altin);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.fiyat-yok { color: var(--krem-silik); font-size: 12px; font-weight: 400; }
+
+.rozetler { display: flex; gap: 8px; }
+
+.rozet {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 8px 4px;
+  border: 1px solid var(--kenar);
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.14);
+}
+
+.rozet-etiket {
+  color: var(--krem-silik);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.rozet-puan {
+  color: var(--altin);
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.rozet-yok .rozet-puan { color: var(--krem-silik); }
+
+.isaretler {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.isaretler:empty { margin-top: 0; }
+
+.odul, .rez-uyari {
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-size: 11px;
+  letter-spacing: 0.03em;
+}
+
+.odul { background: var(--altin); color: var(--kirmizi-derin); font-weight: 700; }
+
+.rez-uyari {
+  border: 1px solid var(--kenar);
+  color: var(--krem-sonuk);
+}
