@@ -357,3 +357,24 @@ body {
 .kaynak th, .kaynak td { padding: 9px 10px; text-align: left; border-bottom: 1px solid var(--kenar); }
 .kaynak th { color: var(--krem-silik); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; }
 .kaynak td.silik { color: var(--krem-silik); }
+
+@media (max-width: 640px) {
+  .ust { padding: 34px 18px 20px; }
+  .govde { padding: 0 18px 44px; }
+
+  .filtreler { gap: 11px; padding: 14px; }
+  .filtre { flex: 1 1 100%; }
+  .filtreler select { width: 100%; min-width: 0; }
+  .sifirla { width: 100%; margin-left: 0; }
+
+  .liste { grid-template-columns: 1fr; }
+
+  .rozetler { gap: 6px; }
+  .rozet-puan { font-size: 18px; }
+
+  .cift { grid-template-columns: 1fr; gap: 2px 0; }
+  .cift dd { margin-bottom: 10px; }
+
+  .kaynak { font-size: 13px; }
+  .kaynak th, .kaynak td { padding: 7px 6px; }
+}
