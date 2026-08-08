@@ -201,3 +201,59 @@ body {
   border: 1px solid var(--kenar);
   color: var(--krem-sonuk);
 }
+
+.filtreler {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 14px;
+  padding: 16px 18px;
+  border: 1px solid var(--kenar);
+  border-radius: var(--yuvarlak);
+  background: rgba(0, 0, 0, 0.14);
+}
+
+.filtre { display: flex; flex-direction: column; gap: 5px; }
+
+.filtre-etiket {
+  color: var(--krem-silik);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.filtreler select {
+  min-width: 148px;
+  padding: 8px 10px;
+  border: 1px solid var(--kenar);
+  border-radius: 9px;
+  background: var(--kirmizi-derin);
+  color: var(--krem);
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.filtreler select:focus-visible { outline: 2px solid var(--altin); outline-offset: 1px; }
+
+.sifirla {
+  margin-left: auto;
+  padding: 9px 15px;
+  border: 1px solid var(--kenar);
+  border-radius: 9px;
+  background: transparent;
+  color: var(--krem-sonuk);
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.sifirla:hover { border-color: var(--altin); color: var(--altin); }
+
+.bos {
+  grid-column: 1 / -1;
+  padding: 44px 20px;
+  border: 1px dashed var(--kenar);
+  border-radius: var(--yuvarlak);
+  color: var(--krem-sonuk);
+  text-align: center;
+}
