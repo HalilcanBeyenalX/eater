@@ -10,11 +10,16 @@ const ODUL_ETIKETLERI = {
   'michelin-secilmis': 'Michelin Guide seçkisi'
 };
 
+// Doğrulanamayan / boş bırakılan alanlar için tek görsel işaret. Ham "veri
+// yok" metni yerine kullanılır; okuyucuya bozuk bir alan gibi görünmemesi
+// için ayrı bir sınıfla soluk renkte çizilir (bkz. styles.css .deger-yok).
+const BOS_ISARET = '<span class="deger-yok">—</span>';
+
 function odulEtiketi(tip) {
   return ODUL_ETIKETLERI[tip] || 'Ödüllü';
 }
 
-function veyaYok(deger, bosMetin = 'veri yok') {
+function veyaYok(deger, bosMetin = BOS_ISARET) {
   if (deger === null || deger === undefined || deger === '') return bosMetin;
   return deger;
 }
@@ -39,6 +44,6 @@ function puanRozeti(etiket, puan) {
 
 function fiyatEtiketi(segment) {
   const sembol = FIYAT_SEMBOLLERI[segment];
-  if (!sembol) return '<span class="fiyat fiyat-yok">veri yok</span>';
+  if (!sembol) return '<span class="fiyat fiyat-yok">—</span>';
   return `<span class="fiyat" title="${FIYAT_ADLARI[segment]} fiyat aralığı">${sembol}</span>`;
 }

@@ -11,6 +11,17 @@
   --kirmizi-derin-desen: rgba(110, 10, 18, 0.72);
   --ortu-koyu: rgba(0, 0, 0, 0.14);
   --kenar: rgba(255, 243, 228, 0.18);
+
+  /* Yüzey ölçeği — aynı kırmızı ailesinden, sayfayı düz bir kırmızıdan
+     ayrı katmanlı bölümlere ayırmak için. Sırasıyla: yükseltilmiş (sayfayla
+     aynı parlaklıkta ama daha az doygun, "tonlanmış" bir panel), oyuk
+     (sayfadan daha koyu, geri çekilmiş bir zemin) ve derin (en koyu, en
+     sessiz kapanış yüzeyi).
+     Değerler her metin katmanı için karta uygulanan kontrastı temel
+     tasarımdan daha kötü olmayacak şekilde seçildi. */
+  --yuzey-yukseltilmis: #A92D37;
+  --yuzey-oyuk: #8A0F19;
+  --yuzey-derin: #54080E;
   --golge: 0 6px 20px rgba(0, 0, 0, 0.28);
   --yuvarlak: 14px;
   --serif: Georgia, "Times New Roman", serif;
@@ -22,8 +33,6 @@
 body {
   margin: 0;
   background: var(--kirmizi);
-  background-image:
-    radial-gradient(1200px 600px at 50% -10%, var(--altin-hale), transparent 65%);
   color: var(--krem);
   font-family: var(--sans);
   line-height: 1.55;
@@ -33,6 +42,9 @@ body {
 .ust {
   padding: 56px 24px 28px;
   text-align: center;
+  background-color: var(--yuzey-oyuk);
+  background-image:
+    radial-gradient(1200px 600px at 50% -10%, var(--altin-hale), transparent 65%);
 }
 
 .logo {
@@ -76,7 +88,10 @@ body {
   border-top: 1px solid var(--kenar);
   padding: 26px 24px 48px;
   text-align: center;
+  background-color: var(--yuzey-derin);
 }
+
+.alt p + p { margin-top: 8px; }
 
 .alt p {
   max-width: 62ch;
@@ -151,6 +166,10 @@ body {
 
 .fiyat-yok { color: var(--krem-silik); font-size: 12px; font-weight: 400; }
 
+/* Doğrulanamayan alanlar için em tire işareti — gerçek değerlerle
+   karışmasın diye soluk renkte, ham metinden ayrı bir sınıfla çizilir. */
+.deger-yok { color: var(--krem-silik); }
+
 .rozetler { display: flex; gap: 8px; }
 
 .rozet {
@@ -216,7 +235,7 @@ body {
   padding: 16px 18px;
   border: 1px solid var(--kenar);
   border-radius: var(--yuvarlak);
-  background: var(--ortu-koyu);
+  background: var(--yuzey-yukseltilmis);
 }
 
 .filtre { display: flex; flex-direction: column; gap: 5px; }
@@ -309,6 +328,7 @@ body {
   border: 1px solid var(--kenar);
   border-radius: var(--yuvarlak);
   background: var(--kirmizi-koyu);
+  box-shadow: var(--golge);
 }
 
 .metrik .rozet { border: none; background: none; padding: 0; align-items: flex-start; }
@@ -316,8 +336,17 @@ body {
 .metrik p { margin: 10px 0 0; color: var(--krem-sonuk); font-size: 14px; }
 
 .blok {
-  padding: 24px 0;
-  border-top: 1px solid var(--kenar);
+  padding: 24px 26px;
+  margin-top: 18px;
+  border: 1px solid var(--kenar);
+  border-radius: var(--yuvarlak);
+  background: var(--yuzey-oyuk);
+}
+
+/* Ardışık panellerin ayırt edilebilmesi için hafif bir alternasyon —
+   restoran rehberi sakin kalsın diye yalnızca iki tonlu ve sınırlı. */
+.blok:nth-of-type(even) {
+  background: var(--yuzey-yukseltilmis);
 }
 
 .blok h2 {
@@ -367,6 +396,8 @@ body {
 @media (max-width: 640px) {
   .ust { padding: 34px 18px 20px; }
   .govde { padding: 0 18px 44px; }
+
+  .blok { padding: 18px; margin-top: 14px; }
 
   .filtreler { gap: 11px; padding: 14px; }
   .filtre { flex: 1 1 100%; }

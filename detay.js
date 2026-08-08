@@ -20,7 +20,7 @@ function fiyatMetni(fiyat) {
 }
 
 function kaynakSatiri(ad, k) {
-  if (!k) return `<tr><td>${ad}</td><td class="silik" colspan="2">veri yok</td></tr>`;
+  if (!k) return `<tr><td>${ad}</td><td class="silik" colspan="2">${BOS_ISARET}</td></tr>`;
   if (ad === 'TikTok') {
     return `<tr><td>TikTok</td><td>—</td><td>${k.incelenenVideo} video incelendi</td></tr>`;
   }
@@ -42,16 +42,16 @@ function metrikKarti(baslik, metrik) {
 function detayHTML(r) {
   const rez = r.rezervasyon;
   const rezGerekiyorMetni = typeof rez.gerekiyor !== 'boolean'
-    ? 'veri yok'
+    ? BOS_ISARET
     : (rez.gerekiyor ? 'Evet' : 'Hayır — ama yoğun saatlerde beklemek gerekebilir');
   const rezSatirlari = `
       <dl class="cift">
         <dt>Gerekli mi</dt><dd>${rezGerekiyorMetni}</dd>
-        <dt>Yöntem</dt><dd>${rez.yontem.length ? rez.yontem.join(', ') : 'veri yok'}</dd>
-        <dt>Telefon</dt><dd>${rez.telefon ? `<a href="tel:${rez.telefon.replace(/\s/g, '')}">${rez.telefon}</a>` : 'veri yok'}</dd>
-        <dt>Online</dt><dd>${rez.link ? `<a href="${rez.link}" target="_blank" rel="noopener">Rezervasyon sayfası</a>` : 'veri yok'}</dd>
+        <dt>Yöntem</dt><dd>${rez.yontem.length ? rez.yontem.join(', ') : BOS_ISARET}</dd>
+        <dt>Telefon</dt><dd>${rez.telefon ? `<a href="tel:${rez.telefon.replace(/\s/g, '')}">${rez.telefon}</a>` : BOS_ISARET}</dd>
+        <dt>Online</dt><dd>${rez.link ? `<a href="${rez.link}" target="_blank" rel="noopener">Rezervasyon sayfası</a>` : BOS_ISARET}</dd>
         <dt>Bekleme süresi</dt><dd>${veyaYok(rez.beklemeSuresi)}</dd>
-        <dt>Kapora</dt><dd>${rez.kapora ? (rez.kapora.var ? `Evet — ${rez.kapora.detay}` : 'İstenmiyor') : 'veri yok'}</dd>
+        <dt>Kapora</dt><dd>${rez.kapora ? (rez.kapora.var ? `Evet — ${rez.kapora.detay}` : 'İstenmiyor') : BOS_ISARET}</dd>
       </dl>`;
 
   return `
@@ -85,7 +85,7 @@ function detayHTML(r) {
       ${etiketler(r.ambiyans.etiketler)}
       <dl class="cift">
         <dt>Kıyafet kuralı</dt><dd>${veyaYok(r.ambiyans.dressCode, 'Belirtilmiş bir kıyafet kuralı yok')}</dd>
-        <dt>Kimler için uygun</dt><dd>${r.ambiyans.uygun.length ? r.ambiyans.uygun.join(', ') : 'veri yok'}</dd>
+        <dt>Kimler için uygun</dt><dd>${r.ambiyans.uygun.length ? r.ambiyans.uygun.join(', ') : BOS_ISARET}</dd>
       </dl>
     </section>
 
@@ -129,6 +129,7 @@ function detayHTML(r) {
         </tbody>
       </table>
       <p class="silik">Son güncelleme: ${r.sonGuncelleme}. Puanlar bu örneklemden çıkarılmış öznel değerlendirmelerdir.</p>
+      <p class="silik">— işareti, ilgili alan için doğrulanmış bir veri bulunamadığını gösterir.</p>
     </section>`;
 }
 
