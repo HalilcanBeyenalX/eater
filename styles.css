@@ -235,6 +235,8 @@ body {
 
 .filtreler select:focus-visible { outline: 2px solid var(--altin); outline-offset: 1px; }
 
+#fSiralama { border-color: var(--altin-koyu); }
+
 .sifirla {
   margin-left: auto;
   padding: 9px 15px;

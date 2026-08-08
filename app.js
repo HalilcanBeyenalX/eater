@@ -29,6 +29,8 @@ function kartHTML(r) {
 
 const filtreDurumu = { segment: '', semt: '', etiket: '', rezervasyon: '' };
 
+let siralamaOlcutu = 'yemek';
+
 function filtrele(liste, f) {
   return liste.filter(r => {
     if (f.segment && r.fiyat.segment !== f.segment) return false;
@@ -37,6 +39,27 @@ function filtrele(liste, f) {
     if (f.rezervasyon === 'gerekli' && r.rezervasyon.gerekiyor !== true) return false;
     if (f.rezervasyon === 'gerekmiyor' && r.rezervasyon.gerekiyor !== false) return false;
     return true;
+  });
+}
+
+const FIYAT_SIRASI = { ucuz: 0, orta: 1, pahali: 2 };
+
+function sirala(liste, olcut) {
+  const kopya = [...liste];
+
+  if (olcut === 'fiyat') {
+    return kopya.sort((a, b) => {
+      const fark = (FIYAT_SIRASI[a.fiyat.segment] ?? 99) - (FIYAT_SIRASI[b.fiyat.segment] ?? 99);
+      if (fark !== 0) return fark;
+      return (a.fiyat.kisiBasi?.min ?? Infinity) - (b.fiyat.kisiBasi?.min ?? Infinity);
+    });
+  }
+
+  // Puana göre azalan. Puanı olmayan (null) restoranlar daima sona düşer.
+  return kopya.sort((a, b) => {
+    const pa = typeof a[olcut].puan === 'number' ? a[olcut].puan : -1;
+    const pb = typeof b[olcut].puan === 'number' ? b[olcut].puan : -1;
+    return pb - pa;
   });
 }
 
@@ -75,6 +98,12 @@ function filtreleriCiz() {
       { deger: 'gerekli', metin: 'Gerekli' },
       { deger: 'gerekmiyor', metin: 'Gerekmiyor' }
     ]) +
+    secimKutusu('fSiralama', 'Sırala', [
+      { deger: 'yemek', metin: 'Yemek puanı' },
+      { deger: 'ambiyans', metin: 'Ambiyans puanı' },
+      { deger: 'servis', metin: 'Servis puanı' },
+      { deger: 'fiyat', metin: 'Fiyat (ucuzdan)' }
+    ]) +
     '<button id="fSifirla" class="sifirla" type="button">Filtreleri temizle</button>';
 
   const bagla = (id, alan) => {
@@ -88,6 +117,13 @@ function filtreleriCiz() {
   bagla('fEtiket', 'etiket');
   bagla('fRezervasyon', 'rezervasyon');
 
+  const sSecim = document.getElementById('fSiralama');
+  sSecim.value = siralamaOlcutu;
+  sSecim.addEventListener('change', e => {
+    siralamaOlcutu = e.target.value;
+    render();
+  });
+
   document.getElementById('fSifirla').addEventListener('click', () => {
     Object.keys(filtreDurumu).forEach(k => { filtreDurumu[k] = ''; });
     ['fSegment', 'fSemt', 'fEtiket', 'fRezervasyon']
@@ -97,7 +133,7 @@ function filtreleriCiz() {
 }
 
 function render() {
-  const liste = filtrele(RESTORANLAR, filtreDurumu);
+  const liste = sirala(filtrele(RESTORANLAR, filtreDurumu), siralamaOlcutu);
   const kap = document.getElementById('liste');
 
   if (liste.length === 0) {
