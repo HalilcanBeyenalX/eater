@@ -102,7 +102,9 @@ Puan verilirken hangi yorum örüntüsüne dayandığı ilgili `ozet` alanında 
     diger:       "Michelin Guide, Vedat Milor incelemesi ..."       // string | null, opsiyonel
   },
 
-  fotolar: [],                          // şimdilik daima boş
+  fotolar: [                            // boş olabilir
+    { dosya: "fotolar/mikla-1.jpg", alt: "...", kaynak: "https://...", kredi: "Mikla" }
+  ],
   sonGuncelleme: "2026-08-08"           // "YYYY-AA-GG"
 }
 ```
@@ -214,7 +216,11 @@ doldurmak yasaktır.
 
 | Alan | Tip | `null` olabilir | Anlamı |
 |---|---|---|---|
-| `fotolar` | `string[]` | Hayır | Şimdilik **daima `[]`**. Fotoğraflar sonraki bir aşamada eklenecek. |
+| `fotolar` | `{dosya,alt,kaynak,kredi}[]` | Hayır | Restoran fotoğrafları; fotoğraf bulunamazsa `[]`. Sıradaki ilk öğe kartta ve detay sayfasının başında kullanılır. |
+| `fotolar[].dosya` | `string` | Hayır | Depo içindeki göreli yol (`fotolar/<id>-1.jpg`). Dış bağlantı **kullanılmaz** — site çevrimdışı ve `file://` üzerinden de çalışmalı. |
+| `fotolar[].alt` | `string` | Hayır | Türkçe, kısa, görselde ne olduğunu anlatan metin. Erişilebilirlik için zorunlu. |
+| `fotolar[].kaynak` | `string` | Hayır | Görselin alındığı **tam URL**. Kaynağı adlandırılamayan görsel kullanılmaz. |
+| `fotolar[].kredi` | `string` | Hayır | Görselin kime ait olduğu; detay sayfasında her fotoğrafın altında gösterilir. Bu görseller üçüncü tarafların telifindedir; site yayına alınacaksa izin gerekir. |
 | `sonGuncelleme` | `string` | Hayır | Verinin toplandığı tarih, `"YYYY-AA-GG"` biçiminde. |
 
 ---

@@ -7,6 +7,18 @@ function maddeListesi(dizi, bosMetin) {
   return `<ul class="madde">${dizi.map(x => `<li>${x}</li>`).join('')}</ul>`;
 }
 
+function fotoGalerisi(fotolar) {
+  if (!Array.isArray(fotolar) || fotolar.length === 0) return '';
+  const gorseller = fotolar
+    .map((f, i) => `
+      <figure class="foto${i === 0 ? ' foto-bas' : ''}">
+        <img src="${f.dosya}" alt="${f.alt}"${i === 0 ? '' : ' loading="lazy"'}>
+        ${fotoKredisi(f)}
+      </figure>`)
+    .join('');
+  return `<section class="fotolar">${gorseller}</section>`;
+}
+
 function etiketler(dizi) {
   if (!Array.isArray(dizi) || dizi.length === 0) return '';
   return `<div class="etiketler">${dizi.map(e => `<span class="etiket">${e}</span>`).join('')}</div>`;
@@ -61,6 +73,8 @@ function detayHTML(r) {
       <div class="isaretler">${r.oduller.map(o => `<span class="odul">★ ${odulEtiketi(o.tip)}</span>`).join('')}</div>
       ${r.oduller.length ? `<ul class="odul-detaylari silik">${r.oduller.map(o => `<li>${o.detay}</li>`).join('')}</ul>` : ''}
     </div>
+
+    ${fotoGalerisi(r.fotolar)}
 
     <section class="metrikler">
       ${metrikKarti('Yemek', r.yemek)}

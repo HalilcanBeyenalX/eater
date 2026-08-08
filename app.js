@@ -7,10 +7,14 @@ function kartHTML(r) {
   const rezUyari = r.rezervasyon.gerekiyor
     ? '<span class="rez-uyari">Rezervasyon gerekli</span>'
     : '';
+  const foto = ilkFoto(r.fotolar);
+  const fotoBlok = foto
+    ? `<div class="kart-foto"><img src="${foto.dosya}" alt="${foto.alt}" loading="lazy"></div>`
+    : '<div class="kart-foto kart-foto-bos" aria-hidden="true"><span>fotoğraf yakında</span></div>';
 
   return `
     <a class="kart" href="detay.html?id=${encodeURIComponent(r.id)}">
-      <div class="kart-foto" aria-hidden="true"><span>fotoğraf yakında</span></div>
+      ${fotoBlok}
       <div class="kart-govde">
         <div class="kart-ust">
           <h2 class="kart-isim">${r.isim}</h2>

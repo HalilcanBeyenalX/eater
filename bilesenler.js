@@ -47,3 +47,16 @@ function fiyatEtiketi(segment) {
   if (!sembol) return '<span class="fiyat fiyat-yok">—</span>';
   return `<span class="fiyat" title="${FIYAT_ADLARI[segment]} fiyat aralığı">${sembol}</span>`;
 }
+
+// Fotoğraf yardımcıları. fotolar[] girdileri: { dosya, alt, kaynak, kredi }
+function ilkFoto(fotolar) {
+  return Array.isArray(fotolar) && fotolar.length ? fotolar[0] : null;
+}
+
+function fotoKredisi(f) {
+  if (!f.kredi && !f.kaynak) return '';
+  const kaynak = f.kaynak
+    ? ` · <a href="${f.kaynak}" target="_blank" rel="noopener">kaynak</a>`
+    : '';
+  return `<figcaption class="foto-kredi silik">${f.kredi || '—'}${kaynak}</figcaption>`;
+}
