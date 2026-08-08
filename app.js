@@ -2,7 +2,7 @@
 
 function kartHTML(r) {
   const oduller = r.oduller
-    .map(o => `<span class="odul">★ ${o.detay}</span>`)
+    .map(o => `<span class="odul">★ ${odulEtiketi(o.tip)}</span>`)
     .join('');
   const rezUyari = r.rezervasyon.gerekiyor
     ? '<span class="rez-uyari">Rezervasyon gerekli</span>'
@@ -51,7 +51,16 @@ function sirala(liste, olcut) {
     return kopya.sort((a, b) => {
       const fark = (FIYAT_SIRASI[a.fiyat.segment] ?? 99) - (FIYAT_SIRASI[b.fiyat.segment] ?? 99);
       if (fark !== 0) return fark;
-      return (a.fiyat.kisiBasi?.min ?? Infinity) - (b.fiyat.kisiBasi?.min ?? Infinity);
+
+      // Bilinmeyen (null) kişi başı fiyatlar daima sona düşer. İki taraf da
+      // Infinity olduğunda çıkarma NaN döndürür (Infinity - Infinity); bunun
+      // yerine null durumları ayrı ayrı ele alınıp asla NaN dönmez.
+      const aMin = a.fiyat.kisiBasi?.min;
+      const bMin = b.fiyat.kisiBasi?.min;
+      if (aMin == null && bMin == null) return 0;
+      if (aMin == null) return 1;
+      if (bMin == null) return -1;
+      return aMin - bMin;
     });
   }
 

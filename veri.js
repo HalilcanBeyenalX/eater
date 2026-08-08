@@ -20,7 +20,7 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "orta",
       "kisiBasi": null,
-      "not": "Kişi başı harcama aralığı doğrulanamadı, bu yüzden kisiBasi boş bırakıldı. Elde edilen somut veriler: Michelin Guide restoranı 'olağanüstü fiyat/kalite oranı' gerekçesiyle Bib Gourmand'a alıyor ve ana yemeklerin nadiren 25-30 avroyu aştığını yazıyor; meyhankoli.com mekânı ₺₺ seviyesinde etiketliyor. Buna karşılık Google yorumlarında (Wanderlog üzerinden okunanlar) kişi başı 80 ₺ ekmek, 140 ₺ su ve %10 servis bedeli gibi ek kalemler ile 6.000 ₺'yi aşan bir hesap bildiriliyor; Türkçe yorumlarda 'porsiyonlar küçük, fiyat yüksek' eleştirisi tekrarlanıyor. Segment bu iki taraf tartıldıktan sonra 'orta' seçildi; kaynaklar bu konuda hemfikir değil."
+      "not": "Kişi başı harcama aralığı doğrulanamadı, bu yüzden kisiBasi boş bırakıldı. Elde edilen somut veriler: Michelin Guide restoranı 'olağanüstü fiyat/kalite oranı' gerekçesiyle Bib Gourmand'a alıyor ve ana yemeklerin nadiren 25-30 avroyu aştığını yazıyor; meyhankoli.com mekânı ₺₺ seviyesinde etiketliyor. Buna karşılık Google yorumlarında (Wanderlog üzerinden okunanlar) kişi başı 80 ₺ ekmek, 140 ₺ su ve %10 servis bedeli gibi ek kalemler ile 6.000 ₺'yi aşan bir hesap bildiriliyor; Türkçe yorumlarda 'porsiyonlar küçük, fiyat yüksek' eleştirisi tekrarlanıyor. Segment bu iki taraf tartıldıktan sonra 'orta' seçildi; kaynaklar bu konuda hemfikir değil. Sahibinin belirlediği eşiklere göre (ucuz: 750 ₺ altı; orta: 750-2.500 ₺; pahalı: 2.500 ₺ üstü) bu veriler 'orta' segmentine karşılık geliyor."
     },
 
     "yemek": {
@@ -98,7 +98,8 @@ const RESTORANLAR = [
     "kaynaklar": {
       "google": { "puan": 4.3, "yorumSayisi": 3031, "incelenen": 8 },
       "tripadvisor": { "puan": 4.2, "yorumSayisi": 1360, "incelenen": 5 },
-      "tiktok": null
+      "tiktok": null,
+      "diger": "MICHELIN Guide Türkiye 2026 (Bib Gourmand seçkisi) ve Uplifers incelemesi de değerlendirmeye dahil edildi."
     },
 
     "fotolar": [],
@@ -119,7 +120,7 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "pahali",
       "kisiBasi": null,
-      "not": "Bu restoranın en çok konuşulan konusu fiyat, ama doğrulanmış rakamlar birbiriyle uyuşmadığı için kişi başı aralık verilmedi. Doğrulanan somut veriler: (1) Şikayetvar'a 25 Aralık 2025'te düşen bir şikâyette iki kişi için 16.000 ₺, yani kişi başı yaklaşık 8.000 ₺; (2) aynı sitedeki diğer şikâyetlerde iki kişilik hesaplar 8.500-11.500 ₺ aralığında; (3) 11 Ocak 2026'da basına yansıyan bir adisyonda kalkanın kilosu 8.000 ₺, 2,5 kg balık 20.000 ₺, domates salatası 1.000 ₺, kalamar tava 1.000 ₺, su-ekmek-mısır ekmeği 600 ₺, iki tatlı 800 ₺ ve %10 servis 2.600 ₺ ile toplam 28.900 ₺. Kalkan kiloyla satıldığı ve mekânın menü vermediği için hesap sipariş edilen balığın ağırlığına göre çok geniş bir bantta değişiyor; yorumlarda fiyatların sipariş öncesi sorulması gerektiği ısrarla tekrarlanıyor. Ekşi Sözlük'te yalnızca adisyona ayrılmış, onlarca sayfalık ayrı bir başlık bulunuyor. Onedio'daki 'iki kişi 1.500-2.000 ₺' bilgisi tarihsiz ve güncel adisyonlarla açıkça çeliştiği için kullanılmadı."
+      "not": "Bu restoranın en çok konuşulan konusu fiyat, ama doğrulanmış rakamlar birbiriyle uyuşmadığı için kişi başı aralık verilmedi. Doğrulanan somut veriler: (1) Şikayetvar'a 25 Aralık 2025'te düşen bir şikâyette iki kişi için 16.000 ₺, yani kişi başı yaklaşık 8.000 ₺; (2) aynı sitedeki diğer şikâyetlerde iki kişilik hesaplar 8.500-11.500 ₺ aralığında; (3) 11 Ocak 2026'da basına yansıyan bir adisyonda kalkanın kilosu 8.000 ₺, 2,5 kg balık 20.000 ₺, domates salatası 1.000 ₺, kalamar tava 1.000 ₺, su-ekmek-mısır ekmeği 600 ₺, iki tatlı 800 ₺ ve %10 servis 2.600 ₺ ile toplam 28.900 ₺. Kalkan kiloyla satıldığı ve mekânın menü vermediği için hesap sipariş edilen balığın ağırlığına göre çok geniş bir bantta değişiyor; yorumlarda fiyatların sipariş öncesi sorulması gerektiği ısrarla tekrarlanıyor. Ekşi Sözlük'te yalnızca adisyona ayrılmış, onlarca sayfalık ayrı bir başlık bulunuyor. Onedio'daki 'iki kişi 1.500-2.000 ₺' bilgisi tarihsiz ve güncel adisyonlarla açıkça çeliştiği için kullanılmadı. Sahibinin belirlediği eşiklere göre (ucuz: 750 ₺ altı; orta: 750-2.500 ₺; pahalı: 2.500 ₺ üstü) kişi başı ~8.000 ₺'lik doğrulanmış rakamlar 'pahalı' segmentine karşılık geliyor."
     },
 
     "yemek": {
@@ -129,7 +130,7 @@ const RESTORANLAR = [
 
     "neYenir": [
       {
-        "yemek": "Kalkan Tandır",
+        "yemek": "Bütün Kalkan",
         "kacKisiOnerdi": null,
         "not": "Mekânın imza yemeği. MICHELIN Guide 'kusursuz ızgara kalkan'ı evin spesiyali olarak anıyor; restoranın kendi sitesi kalkanın geleneksel fırında bütün hâlde pişirildiğini anlatıyor; Vedat Milor bütün kalkanı ızgarada pişirebilen üç ustadan birinin burada olduğunu yazıyor. Fiyatı kiloyla belirlendiği için sipariş öncesi ağırlık ve tutar sorulması yorumlarda tekrarlanan bir uyarı."
       },
@@ -198,7 +199,8 @@ const RESTORANLAR = [
     "kaynaklar": {
       "google": null,
       "tripadvisor": { "puan": 3.7, "yorumSayisi": 115, "incelenen": 3 },
-      "tiktok": { "incelenenVideo": 1, "ozet": "İçeriği okunabilen tek video, bir yemek hesabı incelemesi: kalkan tava için en küçük balığın pişirildiği, yanında domates salatası, lakerda ve hamsili mısır ekmeği geldiği, hesabın 3.000 ₺ tuttuğu ve yazarın 'bu paraya değmez' dediği anlatılıyor. Balığın tazeliği ve pişirme yöntemi olumlu bulunmuş, lakerda ise beklentinin altında kalmış." }
+      "tiktok": { "incelenenVideo": 1, "ozet": "İçeriği okunabilen tek video, bir yemek hesabı incelemesi: kalkan tava için en küçük balığın pişirildiği, yanında domates salatası, lakerda ve hamsili mısır ekmeği geldiği, hesabın 3.000 ₺ tuttuğu ve yazarın 'bu paraya değmez' dediği anlatılıyor. Balığın tazeliği ve pişirme yöntemi olumlu bulunmuş, lakerda ise beklentinin altında kalmış." },
+      "diger": "MICHELIN Guide Türkiye 2026 seçkisi, Vedat Milor değerlendirmesi, Şikayetvar'daki fiyat şikâyetleri ve Ekşi Sözlük'teki adisyon başlığı da değerlendirmeye dahil edildi."
     },
 
     "fotolar": [],
@@ -217,9 +219,9 @@ const RESTORANLAR = [
     "koordinat": null,
 
     "fiyat": {
-      "segment": "pahali",
+      "segment": "orta",
       "kisiBasi": null,
-      "not": "Beyaz Fırın bir zincir ve yayımlanan fiyat listesi şube bazlı değil, marka geneli. Bu yüzden kişi başı aralık verilmedi. 2 Haziran 2026 tarihli marka geneli fiyat listesinden doğrulanan kalemler: iki kişilik kahvaltı tabağı 1.650 ₺, tek kişilik kahvaltı tabağı 750 ₺, kahvaltı tavası 860 ₺, patatesli gül böreği 190 ₺, Polka 240 ₺, menemen 320 ₺, şnitzel 650-780 ₺, somon ızgara 850 ₺, ev yapımı limonata 160 ₺, filtre kahve 130 ₺. Markanın kendi menü PDF'i de 2026 yaz menüsü olarak yayımlanmış durumda. Etiler şubesine özel TripAdvisor yorumlarında fiyatlar 'biraz pahalı ama Etiler için makul' diye değerlendiriliyor. Karşılaştırma için: Ağustos 2023'te Gurme Rehber'in Etiler şubesi yazısında börek tabağı 240 ₺, sucuklu poşe yumurta 210 ₺, çay 30 ₺ idi."
+      "not": "Beyaz Fırın bir zincir ve yayımlanan fiyat listesi şube bazlı değil, marka geneli. Bu yüzden kişi başı aralık verilmedi. 2 Haziran 2026 tarihli marka geneli fiyat listesinden doğrulanan kalemler: iki kişilik kahvaltı tabağı 1.650 ₺, tek kişilik kahvaltı tabağı 750 ₺, kahvaltı tavası 860 ₺, patatesli gül böreği 190 ₺, Polka 240 ₺, menemen 320 ₺, şnitzel 650-780 ₺, somon ızgara 850 ₺, ev yapımı limonata 160 ₺, filtre kahve 130 ₺. Markanın kendi menü PDF'i de 2026 yaz menüsü olarak yayımlanmış durumda. Etiler şubesine özel TripAdvisor yorumlarında fiyatlar 'biraz pahalı ama Etiler için makul' diye değerlendiriliyor. Karşılaştırma için: Ağustos 2023'te Gurme Rehber'in Etiler şubesi yazısında börek tabağı 240 ₺, sucuklu poşe yumurta 210 ₺, çay 30 ₺ idi. Sahibinin belirlediği eşiklere göre (ucuz: 750 ₺ altı; orta: 750-2.500 ₺; pahalı: 2.500 ₺ üstü) kişi başı 750-1.650 ₺ aralığındaki bu kalemler 'orta' segmentine karşılık geliyor."
     },
 
     "yemek": {
@@ -293,7 +295,8 @@ const RESTORANLAR = [
     "kaynaklar": {
       "google": null,
       "tripadvisor": { "puan": 4.5, "yorumSayisi": 18, "incelenen": 4 },
-      "tiktok": null
+      "tiktok": null,
+      "diger": "Yandex Haritalar'daki Etiler şubesi kaydı (4,3/5, 137 yorum), Şikayetvar'ın Etiler şubesi sayfası, Gurme Rehber ve Üşengeç Şef incelemeleri de değerlendirmeye dahil edildi."
     },
 
     "fotolar": [],

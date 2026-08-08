@@ -82,7 +82,8 @@ Puan verilirken hangi yorum örüntüsüne dayandığı ilgili `ozet` alanında 
   },
 
   oduller: [                            // boş dizi olabilir
-    { tip: "michelin-bib", detay: "Bib Gourmand 2024" }
+    // detay: rozette gösterilmez, serbest metin kökendir (bkz. 4.7)
+    { tip: "michelin-bib", detay: "MICHELIN Guide İstanbul 2024 Bib Gourmand seçkisi — iki bağımsız listeden doğrulandı." }
   ],
 
   rezervasyon: {
@@ -97,7 +98,8 @@ Puan verilirken hangi yorum örüntüsüne dayandığı ilgili `ozet` alanında 
   kaynaklar: {
     google:      { puan: 4.5, yorumSayisi: 12400, incelenen: 60 },  // | null
     tripadvisor: { puan: 4.0, yorumSayisi: 3100,  incelenen: 40 },  // | null
-    tiktok:      { incelenenVideo: 15, ozet: "..." }                // | null
+    tiktok:      { incelenenVideo: 15, ozet: "..." },               // | null
+    diger:       "Michelin Guide, Vedat Milor incelemesi ..."       // string | null, opsiyonel
   },
 
   fotolar: [],                          // şimdilik daima boş
@@ -127,7 +129,7 @@ Puan verilirken hangi yorum örüntüsüne dayandığı ilgili `ozet` alanında 
 
 | Alan | Tip | `null` olabilir | Anlamı ve kaynağı |
 |---|---|---|---|
-| `fiyat.segment` | `"ucuz" \| "orta" \| "pahali" \| null` | Evet | Filtre değeri. **Sadece bu üç değer**; Türkçe karakter yok, küçük harf ASCII (`pahali`, `"pahalı"` değil). Arayüzde `₺` / `₺₺` / `₺₺₺` olarak gösterilir. Kaynak: fiyat listeleri, doğrulanmış adisyonlar, kaynaklardaki fiyat seviyesi etiketleri, yorumlardaki fiyat örüntüsü. Kaynaklar çelişiyorsa çelişki `fiyat.not` içinde açıkça yazılır. |
+| `fiyat.segment` | `"ucuz" \| "orta" \| "pahali" \| null` | Evet | Filtre değeri. **Sadece bu üç değer**; Türkçe karakter yok, küçük harf ASCII (`pahali`, `"pahalı"` değil). Arayüzde `₺` / `₺₺` / `₺₺₺` olarak gösterilir. Kaynak: fiyat listeleri, doğrulanmış adisyonlar, kaynaklardaki fiyat seviyesi etiketleri, yorumlardaki fiyat örüntüsü. Kaynaklar çelişiyorsa çelişki `fiyat.not` içinde açıkça yazılır. Eşikler (kişi başı, TRY, İstanbul 2026 — sahibinin belirlediği ölçüt): **`ucuz`** 750 ₺ altı; **`orta`** 750-2.500 ₺; **`pahali`** 2.500 ₺ üstü. Kişi başı somut tutar yoksa `fiyat.not` içindeki kanıtlar bu eşiklere göre değerlendirilip segment ona göre seçilir. |
 | `fiyat.kisiBasi` | `{min:number, max:number, paraBirimi:string} \| null` | Evet | Kişi başı harcama aralığı. **Yalnızca** kaynağın kendisi kişi başı bir aralık verdiğinde doldurulur. Toplam hesabı kişi sayısına bölerek, ya da menü kalemlerini toplayarak aralık **üretilmez** — o durumda `null` bırakılır ve somut sayılar `fiyat.not` içine yazılır. `paraBirimi` ISO kodu (`"TRY"`). |
 | `fiyat.not` | `string \| null` | Evet | Fiyatla ilgili serbest metin: doğrulanmış somut tutarlar, tutarların **tarihi**, ekmek/su/servis bedeli gibi ek kalemler, kaynaklar arası çelişkiler, fiyatın neden aralık olarak verilemediği. Tarih taşımayan fiyat verisi kullanılacaksa tarihsiz olduğu burada belirtilir. |
 
@@ -174,8 +176,8 @@ Dizi; **boş olabilir ve boş olması normaldir**.
 
 | Alan | Tip | `null` olabilir | Anlamı ve kaynağı |
 |---|---|---|---|
-| `tip` | `string` | Hayır | Ödülün makine-okunur türü. Kullanılan değerler: `"michelin-yildiz"`, `"michelin-bib"`, `"michelin-secilmis"` (yıldız/Bib olmadan rehberde yer alma), `"gault-millau"`. Yeni bir tür gerekirse bu listeye eklenir. |
-| `detay` | `string` | Hayır | Ödülün insan-okunur açıklaması, mümkünse **yıl/seçki bilgisiyle**. |
+| `tip` | `string` | Hayır | Ödülün makine-okunur türü. Kullanılan değerler: `"michelin-yildiz"`, `"michelin-bib"`, `"michelin-secilmis"` (yıldız/Bib olmadan rehberde yer alma), `"gault-millau"`. Yeni bir tür gerekirse bu listeye eklenir. Arayüz `tip` değerini kısa bir rozet etiketine çevirir (`bilesenler.js` içindeki `odulEtiketi`): `"michelin-bib"` → "Michelin Bib Gourmand", `"michelin-secilmis"` → "Michelin Guide seçkisi", tanınmayan bir `tip` → "Ödüllü". Rozet **asla** `detay` metnini göstermez. |
+| `detay` | `string` | Hayır | Ödülün **serbest metin kökeni/provenance'ı** — kısa bir etiket değil, ödülün doğrulanma şeklini anlatan cümle(ler), mümkünse yıl/seçki bilgisiyle. Rozette gösterilmez; yalnızca detay sayfasında rozetlerin altında okunabilir metin olarak (`.odul-detaylari`) render edilir. |
 
 > **Michelin kuralı.** Michelin bilgisi asla varsayımla yazılmaz. Restoranın Michelin Guide
 > İstanbul seçkisinde yer aldığı doğrulanamıyorsa `oduller: []` olur. "Bu kadar bilinen bir
@@ -205,6 +207,7 @@ doldurmak yasaktır.
 | `kaynaklar.google` | `{puan, yorumSayisi, incelenen} \| null` | Evet | `puan`: Google Maps toplu puanı. `yorumSayisi`: platformdaki toplam yorum sayısı. Google Maps doğrudan kazımaya kapalı olduğundan bu iki değer yalnızca kendini açıkça "Google puanı / Google yorumu" diye tanımlayan bir kaynaktan alınır. Kaynağın güncelliği şüpheliyse (ör. yanında bariz eski fiyat verisi varsa) blok `null` yapılır. |
 | `kaynaklar.tripadvisor` | `{puan, yorumSayisi, incelenen} \| null` | Evet | Aynı kurallar TripAdvisor için. |
 | `kaynaklar.tiktok` | `{incelenenVideo, ozet} \| null` | Evet | `incelenenVideo`: içeriği **gerçekten okunan/izlenen** video sayısı. `ozet`: bu videolardan çıkan bulgu. Videoya erişilemediyse anahtar `null`. |
+| `kaynaklar.diger` | `string \| null` | Evet (opsiyonel) | `google`/`tripadvisor`/`tiktok` kalıplarına girmeyen ama puanlamada fiilen kullanılan diğer kaynakları (Michelin Guide, Vedat Milor, Şikayetvar, Ekşi Sözlük, Yandex Haritalar, blog incelemeleri vb.) adlandıran serbest metin. **Yalnızca** o restoranın kendi `ozet`/`not` alanlarında zaten anılan kaynaklardan derlenir — buraya yeni bir araştırma sonucu eklenmez. Detay sayfasındaki kaynaklar tablosunun son satırında, "veri yok" satırı gibi değer sütunlarına yayılarak gösterilir. |
 | `incelenen` | `number` | — | **Gerçekten okunan** yorum sayısı. `yorumSayisi` ile karıştırılmaz: `yorumSayisi` platformdaki toplam, `incelenen` bizim okuduğumuzdur. Temsilî yuvarlak sayı yazmak yasaktır; 12 yorum okunduysa `12` yazılır. |
 
 ### 4.10 Diğer

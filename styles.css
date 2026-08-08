@@ -7,6 +7,9 @@
   --krem-silik: rgba(255, 243, 228, 0.48);
   --altin: #F5B700;
   --altin-koyu: #C99400;
+  --altin-hale: rgba(245, 183, 0, 0.16);
+  --kirmizi-derin-desen: rgba(110, 10, 18, 0.72);
+  --ortu-koyu: rgba(0, 0, 0, 0.14);
   --kenar: rgba(255, 243, 228, 0.18);
   --golge: 0 6px 20px rgba(0, 0, 0, 0.28);
   --yuvarlak: 14px;
@@ -20,7 +23,7 @@ body {
   margin: 0;
   background: var(--kirmizi);
   background-image:
-    radial-gradient(1200px 600px at 50% -10%, rgba(245, 183, 0, 0.16), transparent 65%);
+    radial-gradient(1200px 600px at 50% -10%, var(--altin-hale), transparent 65%);
   color: var(--krem);
   font-family: var(--sans);
   line-height: 1.55;
@@ -107,8 +110,8 @@ body {
     45deg,
     var(--kirmizi-derin),
     var(--kirmizi-derin) 12px,
-    rgba(110, 10, 18, 0.72) 12px,
-    rgba(110, 10, 18, 0.72) 24px
+    var(--kirmizi-derin-desen) 12px,
+    var(--kirmizi-derin-desen) 24px
   );
   color: var(--krem-silik);
   font-size: 12px;
@@ -159,7 +162,7 @@ body {
   padding: 8px 4px;
   border: 1px solid var(--kenar);
   border-radius: 10px;
-  background: rgba(0, 0, 0, 0.14);
+  background: var(--ortu-koyu);
 }
 
 .rozet-etiket {
@@ -188,6 +191,9 @@ body {
 
 .isaretler:empty { margin-top: 0; }
 
+.odul-detaylari { margin: 8px 0 0; padding-left: 18px; }
+.odul-detaylari li { margin-bottom: 4px; }
+
 .odul, .rez-uyari {
   padding: 3px 9px;
   border-radius: 999px;
@@ -210,7 +216,7 @@ body {
   padding: 16px 18px;
   border: 1px solid var(--kenar);
   border-radius: var(--yuvarlak);
-  background: rgba(0, 0, 0, 0.14);
+  background: var(--ortu-koyu);
 }
 
 .filtre { display: flex; flex-direction: column; gap: 5px; }

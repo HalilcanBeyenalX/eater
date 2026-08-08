@@ -26,7 +26,7 @@ function kaynakSatiri(ad, k) {
   }
   return `<tr>
     <td>${ad}</td>
-    <td>${k.puan} / 5</td>
+    <td>${ondalikTR(k.puan)} / 5</td>
     <td>${k.yorumSayisi.toLocaleString('tr-TR')} yorum — ${k.incelenen} tanesi incelendi</td>
   </tr>`;
 }
@@ -58,9 +58,8 @@ function detayHTML(r) {
     <div class="detay-basi">
       <h1 class="detay-isim">${r.isim}</h1>
       <p class="detay-yer">${r.semt}, ${r.sehir} · ${r.mutfak.join(', ')} · ${fiyatEtiketi(r.fiyat.segment)}</p>
-      <div class="isaretler">
-        ${r.oduller.map(o => `<span class="odul">★ ${o.detay}</span>`).join('')}
-      </div>
+      <div class="isaretler">${r.oduller.map(o => `<span class="odul">★ ${odulEtiketi(o.tip)}</span>`).join('')}</div>
+      ${r.oduller.length ? `<ul class="odul-detaylari silik">${r.oduller.map(o => `<li>${o.detay}</li>`).join('')}</ul>` : ''}
     </div>
 
     <section class="metrikler">
@@ -126,6 +125,7 @@ function detayHTML(r) {
           ${kaynakSatiri('Google', r.kaynaklar.google)}
           ${kaynakSatiri('TripAdvisor', r.kaynaklar.tripadvisor)}
           ${kaynakSatiri('TikTok', r.kaynaklar.tiktok)}
+          ${r.kaynaklar.diger ? `<tr><td>Diğer kaynaklar</td><td colspan="2">${r.kaynaklar.diger}</td></tr>` : ''}
         </tbody>
       </table>
       <p class="silik">Son güncelleme: ${r.sonGuncelleme}. Puanlar bu örneklemden çıkarılmış öznel değerlendirmelerdir.</p>
@@ -138,9 +138,15 @@ function bulVeCiz() {
   const kap = document.getElementById('detay');
 
   if (!r) {
+    // `id` URL'den geliyor, veri.js'ten değil — bu yüzden innerHTML'e ham
+    // olarak konmaz. Çevresindeki işaretleme innerHTML ile kurulur, ama
+    // id değeri boş bir <code> öğesine textContent ile atanır.
     kap.innerHTML = `
-      <p class="bos">Böyle bir restoran bulunamadı${id ? ` (<code>${id}</code>)` : ''}.
+      <p class="bos">Böyle bir restoran bulunamadı${id ? ' (<code></code>)' : ''}.
       <a href="index.html">Listeye dön</a>.</p>`;
+    if (id) {
+      kap.querySelector('code').textContent = id;
+    }
     return;
   }
 
