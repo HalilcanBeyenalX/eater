@@ -259,3 +259,101 @@ body {
   color: var(--krem-sonuk);
   text-align: center;
 }
+
+.ust-ince {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 22px 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.logo-kucuk { font-size: 24px; letter-spacing: 0.2em; }
+
+.geri {
+  color: var(--krem-sonuk);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.geri:hover { color: var(--altin); }
+
+.detay-basi { padding-bottom: 22px; border-bottom: 1px solid var(--kenar); }
+
+.detay-isim {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(30px, 5vw, 46px);
+}
+
+.detay-yer { margin: 6px 0 12px; color: var(--krem-sonuk); }
+
+.metrikler {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin: 26px 0;
+}
+
+.metrik {
+  padding: 18px;
+  border: 1px solid var(--kenar);
+  border-radius: var(--yuvarlak);
+  background: var(--kirmizi-koyu);
+}
+
+.metrik .rozet { border: none; background: none; padding: 0; align-items: flex-start; }
+.metrik .rozet-puan { font-size: 34px; }
+.metrik p { margin: 10px 0 0; color: var(--krem-sonuk); font-size: 14px; }
+
+.blok {
+  padding: 24px 0;
+  border-top: 1px solid var(--kenar);
+}
+
+.blok h2 {
+  margin: 0 0 14px;
+  font-family: var(--serif);
+  font-size: 20px;
+  color: var(--altin);
+}
+
+.blok.ikili {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 26px;
+}
+
+.yemekler { margin: 0; padding-left: 22px; }
+.yemekler li { margin-bottom: 12px; }
+.yemek-ad { font-weight: 700; }
+.yemek-sayi { display: block; color: var(--altin-koyu); font-size: 12px; }
+.yemek-not { display: block; color: var(--krem-sonuk); font-size: 13px; }
+
+.etiketler { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 14px; }
+
+.etiket {
+  padding: 4px 11px;
+  border: 1px solid var(--kenar);
+  border-radius: 999px;
+  font-size: 12px;
+  color: var(--krem-sonuk);
+}
+
+.cift { display: grid; grid-template-columns: minmax(120px, 180px) 1fr; gap: 8px 18px; margin: 0; }
+.cift dt { color: var(--krem-silik); font-size: 13px; }
+.cift dd { margin: 0; }
+.cift a, .harita { color: var(--altin); }
+
+.madde { margin: 0; padding-left: 20px; color: var(--krem-sonuk); }
+.madde li { margin-bottom: 6px; }
+
+.silik { color: var(--krem-silik); font-size: 13px; }
+
+.kaynak { width: 100%; border-collapse: collapse; font-size: 14px; }
+.kaynak th, .kaynak td { padding: 9px 10px; text-align: left; border-bottom: 1px solid var(--kenar); }
+.kaynak th { color: var(--krem-silik); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; }
+.kaynak td.silik { color: var(--krem-silik); }
