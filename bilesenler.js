@@ -6,8 +6,13 @@ const FIYAT_ADLARI = { ucuz: 'Ucuz', orta: 'Orta', pahali: 'Pahalı' };
 // oduller[].tip -> kısa, rozete uygun Türkçe etiket. Tanınmayan bir tip
 // asla ham `detay` metnine düşmez; "Ödüllü" ile karşılanır.
 const ODUL_ETIKETLERI = {
+  'michelin-yildiz': 'Michelin yıldızı',
   'michelin-bib': 'Michelin Bib Gourmand',
-  'michelin-secilmis': 'Michelin Guide seçkisi'
+  'michelin-secilmis': 'Michelin Guide seçkisi',
+  'michelin-yesil': 'Michelin Yeşil Yıldız',
+  'gault-millau': 'Gault&Millau',
+  'servis-odulu': 'Servis ödülü',
+  '50best': "World's 50 Best"
 };
 
 // Doğrulanamayan / boş bırakılan alanlar için tek görsel işaret. Ham "veri

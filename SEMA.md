@@ -178,7 +178,7 @@ Dizi; **boş olabilir ve boş olması normaldir**.
 
 | Alan | Tip | `null` olabilir | Anlamı ve kaynağı |
 |---|---|---|---|
-| `tip` | `string` | Hayır | Ödülün makine-okunur türü. Kullanılan değerler: `"michelin-yildiz"`, `"michelin-bib"`, `"michelin-secilmis"` (yıldız/Bib olmadan rehberde yer alma), `"gault-millau"`. Yeni bir tür gerekirse bu listeye eklenir. Arayüz `tip` değerini kısa bir rozet etiketine çevirir (`bilesenler.js` içindeki `odulEtiketi`): `"michelin-bib"` → "Michelin Bib Gourmand", `"michelin-secilmis"` → "Michelin Guide seçkisi", tanınmayan bir `tip` → "Ödüllü". Rozet **asla** `detay` metnini göstermez. |
+| `tip` | `string` | Hayır | Ödülün makine-okunur türü. Kullanılan değerler: `"michelin-yildiz"`, `"michelin-bib"`, `"michelin-secilmis"` (yıldız/Bib olmadan rehberde yer alma), `"gault-millau"`. Yeni bir tür gerekirse bu listeye eklenir. Arayüz `tip` değerini kısa bir rozet etiketine çevirir (`bilesenler.js` içindeki `odulEtiketi`): `"michelin-bib"` → "Michelin Bib Gourmand", `"michelin-secilmis"` → "Michelin Guide seçkisi", `"michelin-yildiz"` → "Michelin yıldızı", `"michelin-yesil"` → "Michelin Yeşil Yıldız", `"gault-millau"` → "Gault&Millau", `"servis-odulu"` → "Servis ödülü", `"50best"` → "World's 50 Best"; tanınmayan bir `tip` → "Ödüllü". Rozet **asla** `detay` metnini göstermez. |
 | `detay` | `string` | Hayır | Ödülün **serbest metin kökeni/provenance'ı** — kısa bir etiket değil, ödülün doğrulanma şeklini anlatan cümle(ler), mümkünse yıl/seçki bilgisiyle. Rozette gösterilmez; yalnızca detay sayfasında rozetlerin altında okunabilir metin olarak (`.odul-detaylari`) render edilir. |
 
 > **Michelin kuralı.** Michelin bilgisi asla varsayımla yazılmaz. Restoranın Michelin Guide
