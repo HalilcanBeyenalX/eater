@@ -11,3 +11,9 @@
 Not: "anon public" anahtarı tarayıcıya gömülmek üzere tasarlanmıştır, gizli
 değildir; asıl koruma veritabanındaki satır seviyesi güvenlik (RLS) kurallarıdır.
 `service_role` anahtarını hiçbir zaman siteye koymayın.
+
+## Ek 3 — Yemek fotoğrafları (10 Ağustos 2026)
+
+`docs/supabase-sema.sql` dosyasındaki "Ek 3" bloğunu SQL Editor'a yapıştırıp Run deyin.
+Blok idempotenttir; yanlışlıkla iki kez çalıştırmak hata vermez. Bu blok `yemek-fotolari`
+adında herkese açık bir Storage bucket'ı oluşturur — Dashboard → Storage altında görünür.

@@ -63,3 +63,33 @@ alter table takipler enable row level security;
 create policy "takip okuma" on takipler for select using (true);
 create policy "takip ekleme" on takipler for insert with check (auth.uid() = takip_eden);
 create policy "takip silme" on takipler for delete using (auth.uid() = takip_eden);
+
+-- Ek 3 (10 Ağustos 2026): favori yemek fotoğrafları.
+-- Sütunlar Storage'daki dosya yolunu tutar (yemek-fotolari/{kullanici_id}/{uuid}-N.jpg).
+alter table ziyaretler add column if not exists sevilen_yemek1_foto text;
+alter table ziyaretler add column if not exists sevilen_yemek2_foto text;
+
+-- Herkese açık okunur bucket. Profiller ve ziyaretler zaten açık; fotoğraflar da öyle.
+insert into storage.buckets (id, name, public)
+  values ('yemek-fotolari', 'yemek-fotolari', true)
+  on conflict (id) do update set public = true;
+
+-- Postgres'te "create policy if not exists" yok — idempotentlik için drop+create.
+drop policy if exists "yemek foto okuma" on storage.objects;
+create policy "yemek foto okuma" on storage.objects
+  for select using (bucket_id = 'yemek-fotolari');
+
+-- Girişli kullanıcı yalnız kendi klasörüne ({kullanici_id}/...) yazar/siler.
+drop policy if exists "yemek foto yukleme" on storage.objects;
+create policy "yemek foto yukleme" on storage.objects
+  for insert with check (
+    bucket_id = 'yemek-fotolari'
+    and auth.uid()::text = (storage.foldername(name))[1]
+  );
+
+drop policy if exists "yemek foto silme" on storage.objects;
+create policy "yemek foto silme" on storage.objects
+  for delete using (
+    bucket_id = 'yemek-fotolari'
+    and auth.uid()::text = (storage.foldername(name))[1]
+  );
