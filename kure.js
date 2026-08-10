@@ -74,7 +74,60 @@ function kureUlkeSec(ulkeAdi) {
 
 function kureKonumAl() { return kullaniciKonumu; }
 
-function konumCubuguKur() { /* Task 6 dolduracak */ }
+function konumBelirle(lat, lng, etiket) {
+  kullaniciKonumu = { lat, lng };
+  kure.pointsData([{ lat, lng }])
+    .pointColor(() => '#ff5252')
+    .pointAltitude(0.03)
+    .pointRadius(0.6);
+  kure.controls().autoRotate = false; // pin görünür kalsın
+  kure.pointOfView({ lat, lng, altitude: 1.6 }, 1000);
+  document.getElementById('konumMesaj').textContent = etiket;
+  yakinlikModunuAc(); // app.js: Yakınlık seçeneğini ekler ve seçer
+}
+
+async function konumAra() {
+  const mesaj = document.getElementById('konumMesaj');
+  const sorgu = document.getElementById('konumArama').value.trim();
+  if (!sorgu) return;
+  mesaj.textContent = 'Aranıyor…';
+  try {
+    const yanit = await fetch(
+      'https://nominatim.openstreetmap.org/search?format=json&limit=1&q=' +
+        encodeURIComponent(sorgu),
+      { headers: { 'Accept-Language': 'tr' } });
+    if (!yanit.ok) throw new Error(String(yanit.status));
+    const liste = await yanit.json();
+    if (liste.length === 0) {
+      mesaj.textContent = 'Bulunamadı — daha genel bir ad dene ("Kadıköy, İstanbul" gibi).';
+      return;
+    }
+    konumBelirle(Number(liste[0].lat), Number(liste[0].lon),
+      `📍 ${liste[0].display_name.split(',')[0]}`);
+  } catch {
+    mesaj.textContent = 'Bağlantı hatası — internetini kontrol edip tekrar dene.';
+  }
+}
+
+function konumumuKullan() {
+  const mesaj = document.getElementById('konumMesaj');
+  if (!navigator.geolocation) {
+    mesaj.textContent = 'Tarayıcın konum desteklemiyor — yazarak arayabilirsin.';
+    return;
+  }
+  mesaj.textContent = 'Konum alınıyor…';
+  navigator.geolocation.getCurrentPosition(
+    p => konumBelirle(p.coords.latitude, p.coords.longitude, '📍 Konumun'),
+    () => { mesaj.textContent = 'Konum izni verilmedi — yazarak arayabilirsin.'; });
+}
+
+function konumCubuguKur() {
+  document.getElementById('btnKonumAra').addEventListener('click', konumAra);
+  document.getElementById('konumArama').addEventListener('keydown', e => {
+    if (e.key === 'Enter') { e.preventDefault(); konumAra(); }
+  });
+  document.getElementById('btnKonumum').addEventListener('click', konumumuKullan);
+}
 
 window.eaterKure = { ulkeSec: kureUlkeSec, konumAl: kureKonumAl };
 document.addEventListener('DOMContentLoaded', kureyiKur);

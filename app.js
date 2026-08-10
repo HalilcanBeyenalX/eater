@@ -7,6 +7,10 @@ function kartHTML(r) {
   const rezUyari = r.rezervasyon.gerekiyor
     ? '<span class="rez-uyari">Rezervasyon gerekli</span>'
     : '';
+  const konum = window.eaterKure?.konumAl();
+  const mesafe = (konum && r.koordinat)
+    ? `<span class="mesafe">${mesafeMetni(mesafeKm(konum, r.koordinat))}</span>`
+    : '';
   const foto = ilkFoto(r.fotolar);
   const fotoBlok = foto
     ? `<div class="kart-foto"><img src="${foto.dosya}" alt="${foto.alt}" loading="lazy"></div>`
@@ -20,7 +24,7 @@ function kartHTML(r) {
           <h2 class="kart-isim">${r.isim}</h2>
           ${fiyatEtiketi(r.fiyat.segment)}
         </div>
-        <p class="kart-yer">${r.semt} · ${r.mutfak.join(', ')}</p>
+        <p class="kart-yer">${r.semt} · ${r.mutfak.join(', ')}${mesafe}</p>
         <div class="rozetler">
           ${puanRozeti('Yemek', r.yemek.puan)}
           ${puanRozeti('Ambiyans', r.ambiyans.puan)}
@@ -51,6 +55,18 @@ const FIYAT_SIRASI = { ucuz: 0, orta: 1, pahali: 2 };
 
 function sirala(liste, olcut) {
   const kopya = [...liste];
+
+  if (olcut === 'yakinlik') {
+    const konum = window.eaterKure?.konumAl();
+    if (!konum) return kopya; // konum yokken seçenek menüde zaten yok
+    return kopya.sort((a, b) => {
+      // koordinat: null restoranlar daima sona; iki null eşit sayılır (NaN üretme).
+      if (!a.koordinat && !b.koordinat) return 0;
+      if (!a.koordinat) return 1;
+      if (!b.koordinat) return -1;
+      return mesafeKm(konum, a.koordinat) - mesafeKm(konum, b.koordinat);
+    });
+  }
 
   if (olcut === 'fiyat') {
     return kopya.sort((a, b) => {
@@ -118,6 +134,8 @@ function filtreleriCiz() {
       { deger: 'gerekmiyor', metin: 'Gerekmiyor' }
     ]) +
     secimKutusu('fSiralama', 'Sırala', [
+      ...(window.eaterKure?.konumAl()
+        ? [{ deger: 'yakinlik', metin: 'Yakınlık' }] : []),
       { deger: 'yemek', metin: 'Yemek puanı' },
       { deger: 'ambiyans', metin: 'Ambiyans puanı' },
       { deger: 'servis', metin: 'Servis puanı' },

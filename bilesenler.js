@@ -133,3 +133,20 @@ function fotoBuyutmeKur(kap) {
     document.body.appendChild(ortu);
   });
 }
+
+// --- Mesafe (yakınlık sıralaması) ---
+
+// Kuş uçuşu (haversine), km. a ve b: {lat, lng}.
+function mesafeKm(a, b) {
+  const R = 6371;
+  const rad = d => d * Math.PI / 180;
+  const dLat = rad(b.lat - a.lat);
+  const dLng = rad(b.lng - a.lng);
+  const s = Math.sin(dLat / 2) ** 2 +
+    Math.cos(rad(a.lat)) * Math.cos(rad(b.lat)) * Math.sin(dLng / 2) ** 2;
+  return 2 * R * Math.asin(Math.sqrt(s));
+}
+
+function mesafeMetni(km) {
+  return km < 10 ? `~${ondalikTR(km)} km` : `~${Math.round(km).toLocaleString('tr-TR')} km`;
+}
