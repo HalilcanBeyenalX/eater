@@ -18,6 +18,8 @@ EATER, restoranları yorumlardan çıkarılmış yemek/ambiyans/servis puanları
 | `SEMA.md` | Veri alanlarının tanımı — otomasyon için referans |
 | `bilesenler.js` | Paylaşılan çizim yardımcıları: `puanRozeti`, `fiyatEtiketi`, `veyaYok`, `gezinmeHTML`, `kacis` |
 | `app.js` | Liste sayfası: kart render, filtreleme (ülke/şehir), sıralama |
+| `kure.js` | Dünya küresi, konum (GPS/Nominatim) ve yakınlık — yalnız `index.html` |
+| `dunya-ulkeler.js` | Ülke sınırları verisi (üretilmiş; elle düzenlenmez) |
 | `detay.js` | Detay sayfası render + "Günlüğüme ekle" |
 | `docs/supabase-sema.sql` | Veritabanı şeması ve RLS kuralları |
 | `docs/supabase-kurulum.md` | Supabase kurulum yönergesi |
@@ -38,6 +40,8 @@ Sunucu kurmaya gerek yok: `index.html` dosyasına çift tıklayıp doğrudan `fi
 `SEMA.md`'deki alan tanımlarına uyan bir nesneyi `veri.js` içindeki `RESTORANLAR` dizisine eklemek yeterlidir. Başka hiçbir dosyaya dokunmaya gerek yok — kart, filtreler, sıralama ve detay sayfası yeni nesneyi otomatik olarak işler.
 
 Doğrulanamayan alanlar tahmin edilerek doldurulmaz; `SEMA.md`'nin belirttiği gibi `null` (veya boş dizi) bırakılır ve arayüzde "veri yok" olarak gösterilir.
+
+Yeni bir **ülkeden** ilk restoran eklenirken `kure.js` içindeki `ULKE_KODLARI` sözlüğüne o ülkenin ISO alpha-3 kodu da eklenmelidir (ör. `'İtalya': 'ITA'`); aksi halde ülke kürede vurgulanmaz (konsola uyarı düşer, site bozulmaz).
 
 ## Sonraki Adımlar
 
