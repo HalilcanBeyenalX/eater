@@ -167,6 +167,35 @@ function bulVeCiz() {
 
   document.title = `${r.isim} — EATER`;
   kap.innerHTML = detayHTML(r);
+  gunlukBaglantisiniEkle(r);
+}
+
+// Detaydan günlüğe geçiş + girişli kullanıcıya son ziyaretinin puanlarını
+// site puanının yanında gösterir. Kişisel puanlar katalog puanına karışmaz.
+async function gunlukBaglantisiniEkle(r) {
+  const kutu = document.createElement('div');
+  kutu.className = 'panel';
+  kutu.innerHTML = `<a class="sekme sekme-aktif" href="gunluk.html?restoran=${encodeURIComponent(r.id)}">+ Günlüğüme ekle</a>
+    <span id="senPuanlarin"></span>`;
+  document.querySelector('main').appendChild(kutu);
+
+  if (!eaterHesap.hazir()) return;
+  const o = await eaterHesap.oturum();
+  if (!o) return;
+  const { data: ziyaretler } = await eaterHesap.istemci
+    .from('ziyaretler').select('yemek_puan, ambiyans_puan, servis_puan')
+    .eq('kullanici', o.user.id).eq('restoran_id', r.id)
+    .order('tarih', { ascending: false }).limit(1);
+  if (!ziyaretler || ziyaretler.length === 0) return;
+  const z = ziyaretler[0];
+  const ciz = (etiket, site, sen) =>
+    typeof sen === 'number'
+      ? `<span class="silik">${etiket} — Site: ${typeof site === 'number' ? ondalikTR(site) : '—'} · Sen: ${ondalikTR(sen)}</span> `
+      : '';
+  document.getElementById('senPuanlarin').innerHTML =
+    ' ' + ciz('Yemek', r.yemek.puan, z.yemek_puan) +
+    ciz('Ambiyans', r.ambiyans.puan, z.ambiyans_puan) +
+    ciz('Servis', r.servis.puan, z.servis_puan);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
