@@ -83,7 +83,7 @@ function gezinmeHTML(aktif) {
   return `
     <nav class="gezinme">
       ${sekme('index.html', 'Keşfet', 'kesfet')}
-      ${sekme('gunluk.html', 'Gittiklerim', 'gunluk')}
+      ${sekme('gunluk.html', 'ATE', 'gunluk')}
       ${sekme('kisiler.html', 'Kişiler', 'kisiler')}
       <span id="hesapKutusu" class="hesap-kutusu"></span>
     </nav>`;

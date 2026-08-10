@@ -176,10 +176,32 @@ async function gunlukBaglantisiniEkle(r) {
   const kutu = document.createElement('div');
   kutu.className = 'panel';
   kutu.innerHTML = `<a class="sekme sekme-aktif" href="gunluk.html?restoran=${encodeURIComponent(r.id)}">+ Günlüğüme ekle</a>
-    <span id="senPuanlarin"></span>`;
+    <span id="senPuanlarin"></span>
+    <div id="yiyiciFavorileri"></div>`;
   document.querySelector('main').appendChild(kutu);
 
   if (!eaterHesap.hazir()) return;
+
+  // Tüm kullanıcıların bu restorandaki favori yemekleri (girişsiz de görünür).
+  const { data: favVeri } = await eaterHesap.istemci
+    .from('ziyaretler').select('sevilen_yemek1, sevilen_yemek2')
+    .eq('restoran_id', r.id);
+  const sayim = new Map();
+  (favVeri || []).forEach(v => [v.sevilen_yemek1, v.sevilen_yemek2].forEach(y => {
+    const ad = (y || '').trim();
+    if (!ad) return;
+    const anahtar = ad.toLocaleLowerCase('tr');
+    const kayit = sayim.get(anahtar) || { ad, n: 0 };
+    kayit.n += 1;
+    sayim.set(anahtar, kayit);
+  }));
+  if (sayim.size > 0) {
+    const liste = [...sayim.values()].sort((a, b) => b.n - a.n)
+      .map(f => `${kacis(f.ad)}${f.n > 1 ? ` ×${f.n}` : ''}`)
+      .join(' · ');
+    document.getElementById('yiyiciFavorileri').innerHTML =
+      `<p class="silik">Yiyicilerin favorileri: ${liste}</p>`;
+  }
   const o = await eaterHesap.oturum();
   if (!o) return;
   const { data: ziyaretler } = await eaterHesap.istemci

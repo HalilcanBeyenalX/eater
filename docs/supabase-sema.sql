@@ -46,3 +46,20 @@ create policy "ziyaret okuma" on ziyaretler for select using (true);
 create policy "ziyaret ekleme" on ziyaretler for insert with check (auth.uid() = kullanici);
 create policy "ziyaret güncelleme" on ziyaretler for update using (auth.uid() = kullanici);
 create policy "ziyaret silme" on ziyaretler for delete using (auth.uid() = kullanici);
+
+-- Ek 1 (10 Ağustos 2026): ziyaret başına en fazla iki favori yemek.
+alter table ziyaretler add column if not exists sevilen_yemek1 text;
+alter table ziyaretler add column if not exists sevilen_yemek2 text;
+
+-- Ek 2 (10 Ağustos 2026): takip ("Eater ekle").
+create table takipler (
+  takip_eden uuid not null references auth.users(id) on delete cascade,
+  takip_edilen uuid not null references auth.users(id) on delete cascade,
+  created_at timestamptz not null default now(),
+  primary key (takip_eden, takip_edilen),
+  check (takip_eden <> takip_edilen)
+);
+alter table takipler enable row level security;
+create policy "takip okuma" on takipler for select using (true);
+create policy "takip ekleme" on takipler for insert with check (auth.uid() = takip_eden);
+create policy "takip silme" on takipler for delete using (auth.uid() = takip_eden);

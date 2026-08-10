@@ -1,4 +1,10 @@
-// EATER — Gittiklerim: giriş/kayıt, ziyaret ekleme formu, kendi kayıt listem.
+// EATER — ATE (Gittiklerim): giriş/kayıt, ziyaret ekleme formu, kendi kayıt listem.
+
+const DIGER = '__diger';
+
+function benzersizSirali(dizi) {
+  return [...new Set(dizi)].sort((a, b) => a.localeCompare(b, 'tr'));
+}
 
 function girisFormuHTML() {
   return `
@@ -27,41 +33,107 @@ function puanAlani(id, etiket) {
     </label>`;
 }
 
-function ziyaretFormuHTML(onSecimId) {
-  const secenekler = RESTORANLAR
-    .map(r => `<option value="${r.id}" ${r.id === onSecimId ? 'selected' : ''}>${r.isim} (${r.sehir})</option>`)
-    .join('');
+function secenekHTML(deger, metin, secili) {
+  return `<option value="${kacis(deger)}"${secili ? ' selected' : ''}>${kacis(metin)}</option>`;
+}
+
+// Kademeli mekân seçimi durumu: ülke → şehir → mekân. DIGER = katalog dışı.
+const formSecim = { ulke: '', sehir: '', mekan: '' };
+
+function mekanSecimHTML() {
+  const ulkeler = benzersizSirali(RESTORANLAR.map(r => r.ulke));
+  const ulkeKatalog = ulkeler.includes(formSecim.ulke);
+  const sehirler = ulkeKatalog
+    ? benzersizSirali(RESTORANLAR.filter(r => r.ulke === formSecim.ulke).map(r => r.sehir))
+    : [];
+  const sehirKatalog = sehirler.includes(formSecim.sehir);
+  const mekanlar = (ulkeKatalog && sehirKatalog)
+    ? RESTORANLAR.filter(r => r.ulke === formSecim.ulke && r.sehir === formSecim.sehir)
+    : [];
+  return `
+    <div class="form-satir">
+      <label>Ülke
+        <select id="zUlke">
+          <option value="">Seç…</option>
+          ${ulkeler.map(u => secenekHTML(u, u, formSecim.ulke === u)).join('')}
+          ${secenekHTML(DIGER, 'Başka bir ülke…', formSecim.ulke === DIGER)}
+        </select>
+      </label>
+      ${formSecim.ulke === DIGER
+        ? '<label>Ülke adı<input type="text" id="zUlkeSerbest" placeholder="ör. İtalya"></label>' : ''}
+      <label>Şehir
+        <select id="zSehir" ${formSecim.ulke === '' ? 'disabled' : ''}>
+          <option value="">Seç…</option>
+          ${sehirler.map(s => secenekHTML(s, s, formSecim.sehir === s)).join('')}
+          ${formSecim.ulke === '' ? '' : secenekHTML(DIGER, 'Başka bir şehir…', formSecim.sehir === DIGER)}
+        </select>
+      </label>
+      ${formSecim.sehir === DIGER
+        ? '<label>Şehir adı<input type="text" id="zSehirSerbest" placeholder="ör. Roma"></label>' : ''}
+      <label>Mekân
+        <select id="zMekan" ${formSecim.sehir === '' ? 'disabled' : ''}>
+          <option value="">Seç…</option>
+          ${mekanlar.map(r => secenekHTML(r.id, r.isim, formSecim.mekan === r.id)).join('')}
+          ${formSecim.sehir === '' ? '' : secenekHTML(DIGER, 'Katalogda yok — kendim yazacağım', formSecim.mekan === DIGER)}
+        </select>
+      </label>
+      ${formSecim.mekan === DIGER
+        ? '<label>Mekân adı<input type="text" id="zIsim" placeholder="Mekânın adı"></label>' : ''}
+    </div>`;
+}
+
+function mekanSecimBagla() {
+  const yenidenCiz = () => {
+    document.getElementById('mekanSecimi').innerHTML = mekanSecimHTML();
+    mekanSecimBagla();
+  };
+  document.getElementById('zUlke')?.addEventListener('change', e => {
+    formSecim.ulke = e.target.value;
+    formSecim.sehir = formSecim.ulke === DIGER ? DIGER : '';
+    formSecim.mekan = formSecim.ulke === DIGER ? DIGER : '';
+    yenidenCiz();
+  });
+  document.getElementById('zSehir')?.addEventListener('change', e => {
+    formSecim.sehir = e.target.value;
+    formSecim.mekan = formSecim.sehir === DIGER ? DIGER : '';
+    yenidenCiz();
+  });
+  document.getElementById('zMekan')?.addEventListener('change', e => {
+    formSecim.mekan = e.target.value;
+    yenidenCiz();
+  });
+}
+
+function ziyaretFormuHTML() {
   return `
     <div class="panel">
       <h2>Ziyaret ekle</h2>
       <form id="fZiyaret" class="dikey-form">
-        <label>Mekân
-          <select id="zRestoran">
-            <option value="">— katalog dışı mekân —</option>${secenekler}
-          </select>
-        </label>
-        <div id="serbestAlan">
-          <input type="text" id="zIsim" placeholder="Mekân adı">
-          <input type="text" id="zUlke" placeholder="Ülke">
-          <input type="text" id="zSehir" placeholder="Şehir">
-        </div>
+        <div id="mekanSecimi">${mekanSecimHTML()}</div>
         <label>Tarih <input type="date" id="zTarih" required></label>
         <div class="puan-satiri">
           ${puanAlani('zYemek', 'Yemek')}${puanAlani('zAmbiyans', 'Ambiyans')}${puanAlani('zServis', 'Servis')}
         </div>
-        <textarea id="zYorum" placeholder="Yorumun (isteğe bağlı)" rows="3"></textarea>
+        <div class="form-satir">
+          <label>En sevdiğin yemek
+            <input type="text" id="zFav1" placeholder="ör. Hünkar Beğendi" maxlength="80"></label>
+          <label>İkinci favorin
+            <input type="text" id="zFav2" placeholder="isteğe bağlı" maxlength="80"></label>
+        </div>
+        <textarea id="zYorum" placeholder="Yorumun (opsiyonel)" rows="3"></textarea>
         <button type="submit">Günlüğe ekle</button>
       </form>
       <p id="ziyaretHata" class="hata" aria-live="polite"></p>
-      <h2>Gittiklerim</h2>
+      <h2>ATE — Gittiklerim</h2>
       <div id="ziyaretListesi"></div>
     </div>`;
 }
 
-// Ziyaret kartı. mekanAdi/yer/yorum kullanıcı üretimi olabilir — kacis() şart.
+// Ziyaret kartı. mekanAdi/yer/yorum/favoriler kullanıcı üretimi olabilir — kacis() şart.
 function ziyaretKartHTML(z, mekanAdi, yer) {
   const puan = (etiket, deger) =>
     typeof deger === 'number' ? puanRozeti(etiket, deger) : '';
+  const favoriler = [z.sevilen_yemek1, z.sevilen_yemek2].filter(Boolean);
   return `
     <article class="ziyaret">
       <div class="ziyaret-ust">
@@ -71,6 +143,7 @@ function ziyaretKartHTML(z, mekanAdi, yer) {
       <div class="rozetler">
         ${puan('Yemek', z.yemek_puan)}${puan('Ambiyans', z.ambiyans_puan)}${puan('Servis', z.servis_puan)}
       </div>
+      ${favoriler.length ? `<p class="silik">Favoriler: ${kacis(favoriler.join(', '))}</p>` : ''}
       ${z.yorum ? `<p>${kacis(z.yorum)}</p>` : ''}
     </article>`;
 }
@@ -101,6 +174,10 @@ async function ziyaretleriGoster(kullaniciId) {
     : ziyaretler.map(z => ziyaretKartHTML(z, ...ziyaretIsimYer(z, mekanlar))).join('');
 }
 
+function alanDegeri(id) {
+  return document.getElementById(id)?.value.trim() ?? '';
+}
+
 function sayiVeyaNull(id) {
   const ham = document.getElementById(id).value;
   return ham === '' ? null : Number(ham);
@@ -109,14 +186,17 @@ function sayiVeyaNull(id) {
 async function ziyaretKaydet(kullaniciId) {
   const hataKutusu = document.getElementById('ziyaretHata');
   hataKutusu.textContent = '';
-  const restoranId = document.getElementById('zRestoran').value || null;
+
+  let restoranId = null;
   let mekanId = null;
-  if (!restoranId) {
-    const isim = document.getElementById('zIsim').value.trim();
-    const ulke = document.getElementById('zUlke').value.trim();
-    const sehir = document.getElementById('zSehir').value.trim();
-    if (!isim || !ulke || !sehir) {
-      hataKutusu.textContent = 'Katalog dışı mekân için ad, ülke ve şehir gerekli.';
+  if (formSecim.mekan && formSecim.mekan !== DIGER) {
+    restoranId = formSecim.mekan;
+  } else {
+    const ulke = formSecim.ulke === DIGER ? alanDegeri('zUlkeSerbest') : formSecim.ulke;
+    const sehir = formSecim.sehir === DIGER ? alanDegeri('zSehirSerbest') : formSecim.sehir;
+    const isim = alanDegeri('zIsim');
+    if (!ulke || !sehir || !isim) {
+      hataKutusu.textContent = 'Mekân için önce ülke ve şehir seçip mekânı belirtmelisin.';
       return;
     }
     const { data, error } = await eaterHesap.istemci
@@ -124,6 +204,7 @@ async function ziyaretKaydet(kullaniciId) {
     if (error) { hataKutusu.textContent = error.message; return; }
     mekanId = data.id;
   }
+
   const { error } = await eaterHesap.istemci.from('ziyaretler').insert({
     kullanici: kullaniciId,
     restoran_id: restoranId,
@@ -132,10 +213,15 @@ async function ziyaretKaydet(kullaniciId) {
     yemek_puan: sayiVeyaNull('zYemek'),
     ambiyans_puan: sayiVeyaNull('zAmbiyans'),
     servis_puan: sayiVeyaNull('zServis'),
-    yorum: document.getElementById('zYorum').value.trim() || null
+    sevilen_yemek1: alanDegeri('zFav1') || null,
+    sevilen_yemek2: alanDegeri('zFav2') || null,
+    yorum: alanDegeri('zYorum') || null
   });
   if (error) { hataKutusu.textContent = error.message; return; }
   document.getElementById('fZiyaret').reset();
+  formSecim.ulke = ''; formSecim.sehir = ''; formSecim.mekan = '';
+  document.getElementById('mekanSecimi').innerHTML = mekanSecimHTML();
+  mekanSecimBagla();
   ziyaretleriGoster(kullaniciId);
 }
 
@@ -166,8 +252,17 @@ async function sayfayiKur() {
     });
     return;
   }
+
+  // ?restoran= ile gelindiyse kademeli seçim o restorana kurulur.
   const onSecim = new URLSearchParams(window.location.search).get('restoran');
-  kap.innerHTML = ziyaretFormuHTML(onSecim);
+  const secili = onSecim && RESTORANLAR.find(r => r.id === onSecim);
+  if (secili) {
+    formSecim.ulke = secili.ulke;
+    formSecim.sehir = secili.sehir;
+    formSecim.mekan = secili.id;
+  }
+  kap.innerHTML = ziyaretFormuHTML();
+  mekanSecimBagla();
   document.getElementById('fZiyaret').addEventListener('submit', e => {
     e.preventDefault();
     ziyaretKaydet(o.user.id);

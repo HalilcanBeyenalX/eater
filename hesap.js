@@ -43,5 +43,36 @@ const eaterHesap = (() => {
     document.getElementById('btnCikis')?.addEventListener('click', cikisYap);
   }
 
-  return { hazir: () => kuruldu, istemci, oturum, kayitOl, girisYap, cikisYap, hesapKutusunuCiz };
+  // --- Takip (Eater ekle) ---
+
+  // Girişli kullanıcının takip ettiği kişilerin id kümesi; girişsizse null.
+  async function takipEttiklerim() {
+    const o = await oturum();
+    if (!o) return null;
+    const { data } = await istemci.from('takipler')
+      .select('takip_edilen').eq('takip_eden', o.user.id);
+    return { benimId: o.user.id, kume: new Set((data || []).map(t => t.takip_edilen)) };
+  }
+
+  // Takibi aç/kapat. Girişsizse giriş sayfasına yollar, false döner.
+  async function takipDegistir(hedefId, suAnTakipte) {
+    const o = await oturum();
+    if (!o) { window.location.href = 'gunluk.html'; return false; }
+    if (suAnTakipte) {
+      await istemci.from('takipler').delete()
+        .eq('takip_eden', o.user.id).eq('takip_edilen', hedefId);
+    } else {
+      await istemci.from('takipler').insert({ takip_eden: o.user.id, takip_edilen: hedefId });
+    }
+    return true;
+  }
+
+  async function takipciSayisi(hedefId) {
+    const { count } = await istemci.from('takipler')
+      .select('*', { count: 'exact', head: true }).eq('takip_edilen', hedefId);
+    return count ?? 0;
+  }
+
+  return { hazir: () => kuruldu, istemci, oturum, kayitOl, girisYap, cikisYap,
+    hesapKutusunuCiz, takipEttiklerim, takipDegistir, takipciSayisi };
 })();

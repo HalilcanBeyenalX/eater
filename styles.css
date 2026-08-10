@@ -481,15 +481,49 @@ body {
   cursor: pointer; text-decoration: none; }
 
 /* --- Panel, formlar ve ziyaret kartları (günlük/profil sayfaları) --- */
-.panel { background: rgba(0,0,0,.18); border-radius: 12px; padding: 1.25rem; margin-top: 1rem; }
-.dikey-form { display: flex; flex-direction: column; gap: .6rem; max-width: 420px; }
+.panel {
+  background: var(--yuzey-oyuk);
+  border: 1px solid var(--kenar);
+  border-radius: var(--yuvarlak);
+  box-shadow: var(--golge);
+  padding: 2rem 1.75rem;
+  margin: 1.5rem auto;
+  max-width: 680px;
+}
+.panel h2 { font-family: var(--serif); font-size: 1.6rem; margin: 0 0 1rem; }
+.panel form + h2 { margin-top: 2rem; }
+.panel a { color: var(--altin); }
+.dikey-form { display: flex; flex-direction: column; gap: .85rem; }
+.dikey-form label { display: flex; flex-direction: column; gap: .3rem;
+  font-size: .85rem; letter-spacing: .02em; color: var(--krem-sonuk); }
 .dikey-form input, .dikey-form select, .dikey-form textarea {
-  font: inherit; padding: .55rem .7rem; border-radius: 8px;
-  border: 1px solid rgba(255,255,255,.25); background: rgba(0,0,0,.25); color: inherit; }
-.dikey-form button { font: inherit; padding: .55rem; border-radius: 8px; border: none;
-  cursor: pointer; font-weight: 600; }
+  font: inherit; color: var(--krem); padding: .6rem .75rem; border-radius: 10px;
+  border: 1px solid var(--kenar); background: var(--yuzey-derin); }
+.dikey-form input::placeholder, .dikey-form textarea::placeholder { color: var(--krem-silik); }
+.dikey-form select:disabled { opacity: .45; }
+.dikey-form input:focus, .dikey-form select:focus, .dikey-form textarea:focus {
+  outline: 2px solid var(--altin); outline-offset: 1px; }
+.dikey-form button {
+  font: inherit; padding: .7rem; border-radius: 10px; border: none; cursor: pointer;
+  font-weight: 700; background: var(--altin); color: var(--kirmizi-derin); }
+.dikey-form button:hover { background: var(--altin-koyu); }
+.form-satir { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: .6rem; }
 .puan-satiri { display: flex; gap: .6rem; }
 .puan-alani { display: flex; flex-direction: column; gap: .25rem; flex: 1; }
 .hata { color: #ffb3a7; min-height: 1.2em; }
-.ziyaret { border-top: 1px solid rgba(255,255,255,.15); padding: .8rem 0; }
+.ziyaret { border-top: 1px solid rgba(255,255,255,.15); padding: 1rem 0; }
 .ziyaret-ust { display: flex; justify-content: space-between; gap: .75rem; flex-wrap: wrap; }
+
+/* --- Kişiler ve takip (Eater ekle) --- */
+.kisi-satir { display: flex; justify-content: space-between; align-items: center;
+  gap: 1rem; flex-wrap: wrap; }
+.kisi-ad { font-family: var(--serif); font-size: 1.5rem; font-weight: 700;
+  color: var(--krem); text-decoration: none; }
+.kisi-ad:hover { text-decoration: underline; }
+.panel a.kisi-ad { color: var(--krem); }
+.profil-ad { margin: 0; }
+.takip-btn { font: inherit; padding: .45rem 1.1rem; border-radius: 999px; cursor: pointer;
+  background: none; border: 1px solid var(--altin); color: var(--altin); font-weight: 600; }
+.takip-btn:hover { background: var(--altin-hale); }
+.takip-btn.takipte { background: var(--altin); color: var(--kirmizi-derin); }
+.takip-btn:disabled { opacity: .6; cursor: wait; }
