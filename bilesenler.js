@@ -66,6 +66,15 @@ function fotoKredisi(f) {
   return `<figcaption class="foto-kredi silik">${f.kredi || '—'}${kaynak}</figcaption>`;
 }
 
+// Kullanıcıdan gelen metinler (yorum, kullanıcı adı, mekân adı) HTML'e ham
+// gömülmez — innerHTML'e girmeden önce bu fonksiyondan geçirilir (XSS önlemi).
+function kacis(metin) {
+  if (metin === null || metin === undefined) return '';
+  return String(metin)
+    .replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;').replaceAll("'", '&#39;');
+}
+
 // Üst gezinme. aktif: 'kesfet' | 'gunluk' | 'kisiler'. #hesapKutusu içeriğini
 // hesap.js doldurur (bu dosya yüklü değilse kutu boş kalır).
 function gezinmeHTML(aktif) {

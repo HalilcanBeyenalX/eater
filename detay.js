@@ -171,5 +171,6 @@ function bulVeCiz() {
 
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('gezinme').innerHTML = gezinmeHTML('kesfet');
+  eaterHesap.hesapKutusunuCiz();
   bulVeCiz();
 });
