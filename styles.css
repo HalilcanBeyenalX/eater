@@ -527,3 +527,31 @@ body {
 .takip-btn:hover { background: var(--altin-hale); }
 .takip-btn.takipte { background: var(--altin); color: var(--kirmizi-derin); }
 .takip-btn:disabled { opacity: .6; cursor: wait; }
+
+/* --- Yemek fotoğrafları --- */
+.fav-satir { display: flex; gap: .4rem; align-items: center; }
+.fav-satir input { flex: 1; min-width: 0; }
+.foto-alan { display: flex; gap: .25rem; align-items: center; }
+.foto-btn {
+  width: 42px; height: 42px; padding: 0; flex: none;
+  border: 1px solid var(--kenar); border-radius: 10px;
+  background: var(--yuzey-oyuk); color: var(--krem); font-size: 1.1rem;
+  cursor: pointer; overflow: hidden;
+}
+.foto-btn img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.foto-sil {
+  width: 22px; height: 22px; padding: 0; flex: none; line-height: 1;
+  border: none; border-radius: 50%; background: var(--ortu-koyu);
+  color: var(--krem-sonuk); font-size: .8rem; cursor: pointer;
+}
+.ziyaret-fotolar { display: flex; gap: .5rem; margin: .4rem 0; }
+.ziyaret-foto {
+  width: 76px; height: 76px; object-fit: cover;
+  border-radius: 10px; border: 1px solid var(--kenar); cursor: zoom-in;
+}
+.foto-buyutme {
+  position: fixed; inset: 0; z-index: 60; cursor: zoom-out;
+  background: rgba(0, 0, 0, .85);
+  display: flex; align-items: center; justify-content: center;
+}
+.foto-buyutme img { max-width: 92vw; max-height: 92vh; border-radius: var(--yuvarlak); }

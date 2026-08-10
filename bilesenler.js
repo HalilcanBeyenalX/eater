@@ -88,3 +88,48 @@ function gezinmeHTML(aktif) {
       <span id="hesapKutusu" class="hesap-kutusu"></span>
     </nav>`;
 }
+
+// --- Yemek fotoğrafları (ziyaretler) ---
+
+// Telefon fotoğrafı (8+ MB) yüklenmeden önce tarayıcıda küçültülür; Supabase'in
+// 1 GB ücretsiz depolamasında bir fotoğraf ~300 KB yer tutar.
+function fotoKucult(dosya, maksKenar = 1600, kalite = 0.8) {
+  return new Promise((coz, reddet) => {
+    const url = URL.createObjectURL(dosya);
+    const img = new Image();
+    img.onload = () => {
+      URL.revokeObjectURL(url);
+      const oran = Math.min(1, maksKenar / Math.max(img.width, img.height));
+      const tuval = document.createElement('canvas');
+      tuval.width = Math.round(img.width * oran);
+      tuval.height = Math.round(img.height * oran);
+      tuval.getContext('2d').drawImage(img, 0, 0, tuval.width, tuval.height);
+      tuval.toBlob(b => b ? coz(b) : reddet(new Error('görsel dönüştürülemedi')),
+        'image/jpeg', kalite);
+    };
+    img.onerror = () => { URL.revokeObjectURL(url); reddet(new Error('görsel okunamadı')); };
+    img.src = url;
+  });
+}
+
+// Ziyaret kartındaki foto şeridi. Yol sütunları boşsa boş string döner.
+function ziyaretFotolariHTML(z) {
+  const yollar = [z.sevilen_yemek1_foto, z.sevilen_yemek2_foto].filter(Boolean);
+  if (yollar.length === 0 || !eaterHesap.hazir()) return '';
+  return `<div class="ziyaret-fotolar">${yollar.map(y =>
+    `<img class="ziyaret-foto" src="${kacis(eaterHesap.fotoUrl(y))}"
+          alt="Yemek fotoğrafı" loading="lazy">`).join('')}</div>`;
+}
+
+// Tam boy görüntüleme: kap içindeki .ziyaret-foto tıklamalarını yakalar.
+function fotoBuyutmeKur(kap) {
+  kap.addEventListener('click', e => {
+    const img = e.target.closest('.ziyaret-foto');
+    if (!img) return;
+    const ortu = document.createElement('div');
+    ortu.className = 'foto-buyutme';
+    ortu.innerHTML = `<img src="${kacis(img.src)}" alt="Yemek fotoğrafı — tam boy">`;
+    ortu.addEventListener('click', () => ortu.remove());
+    document.body.appendChild(ortu);
+  });
+}

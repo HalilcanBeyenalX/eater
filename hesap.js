@@ -43,6 +43,21 @@ const eaterHesap = (() => {
     document.getElementById('btnCikis')?.addEventListener('click', cikisYap);
   }
 
+  // --- Yemek fotoğrafları (Storage) ---
+
+  // Yol: {kullanici_id}/{uuid}-{sira}.jpg — rastgele ad, ziyaret kaydından önce
+  // yüklemeye izin verir; RLS ilk klasör adını auth.uid() ile karşılaştırır.
+  async function fotoYukle(kullaniciId, dosyaBlob, sira) {
+    const yol = `${kullaniciId}/${crypto.randomUUID()}-${sira}.jpg`;
+    const { error } = await istemci.storage.from('yemek-fotolari')
+      .upload(yol, dosyaBlob, { contentType: 'image/jpeg' });
+    return error ? { hata: error.message } : { yol };
+  }
+
+  function fotoUrl(yol) {
+    return istemci.storage.from('yemek-fotolari').getPublicUrl(yol).data.publicUrl;
+  }
+
   // --- Takip (Eater ekle) ---
 
   // Girişli kullanıcının takip ettiği kişilerin id kümesi; girişsizse null.
@@ -74,5 +89,6 @@ const eaterHesap = (() => {
   }
 
   return { hazir: () => kuruldu, istemci, oturum, kayitOl, girisYap, cikisYap,
-    hesapKutusunuCiz, takipEttiklerim, takipDegistir, takipciSayisi };
+    hesapKutusunuCiz, takipEttiklerim, takipDegistir, takipciSayisi,
+    fotoYukle, fotoUrl };
 })();
