@@ -13,6 +13,17 @@
   </header>
 
   <main class="govde">
+    <section id="kureBolumu" class="kure-bolumu" hidden aria-label="Dünya küresi">
+      <div id="kure"></div>
+      <div class="konum-cubugu">
+        <input id="konumArama" type="search" placeholder="Semt, şehir veya ülke yaz…"
+               aria-label="Konum ara">
+        <button id="btnKonumAra" type="button">Ara</button>
+        <button id="btnKonumum" type="button">📍 Konumumu kullan</button>
+      </div>
+      <p id="konumMesaj" class="silik konum-mesaj" aria-live="polite"></p>
+      <p class="silik osm-kredi">Konum araması: © OpenStreetMap katkıcıları</p>
+    </section>
     <section id="filtreler" class="filtreler" aria-label="Filtreler"></section>
     <p id="sonucSayisi" class="sonuc-sayisi" aria-live="polite"></p>
     <section id="liste" class="liste"></section>
@@ -32,5 +43,9 @@
   <script src="bilesenler.js"></script>
   <script src="hesap.js"></script>
   <script src="app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/globe.gl@2.46.1/dist/globe.gl.min.js"
+          integrity="sha384-fS13P48RBFel+cPUp5960AhzvtEr64LerQ00neZuM+Hi/VDxxemdQnN7IcWPYvPb" crossorigin="anonymous"></script>
+  <script src="dunya-ulkeler.js"></script>
+  <script src="kure.js"></script>
 </body>
 </html>

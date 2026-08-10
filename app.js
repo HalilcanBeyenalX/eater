@@ -136,6 +136,7 @@ function filtreleriCiz() {
     filtreDurumu.ulke = e.target.value;
     filtreDurumu.sehir = '';
     filtreleriCiz(); // şehir seçenekleri seçilen ülkeye daralır
+    window.eaterKure?.ulkeSec(filtreDurumu.ulke);
     render();
   });
   bagla('fSehir', 'sehir');
@@ -160,6 +161,7 @@ function filtreleriCiz() {
     Object.keys(filtreDurumu).forEach(k => { filtreDurumu[k] = ''; });
     ['fSegment', 'fUlke', 'fSehir', 'fEtiket', 'fRezervasyon']
       .forEach(id => { document.getElementById(id).value = ''; });
+    window.eaterKure?.ulkeSec(filtreDurumu.ulke);
     render();
   });
 }
@@ -176,6 +178,22 @@ function render() {
 
   document.getElementById('sonucSayisi').textContent =
     `${liste.length} restoran${liste.length !== RESTORANLAR.length ? ` (toplam ${RESTORANLAR.length})` : ''}`;
+}
+
+// kure.js ülkeye tıklanınca çağırır; '' filtreyi temizler.
+function ulkeFiltresiUygula(ulke) {
+  filtreDurumu.ulke = ulke;
+  filtreDurumu.sehir = '';
+  filtreleriCiz();
+  render();
+  window.eaterKure?.ulkeSec(ulke);
+}
+
+// kure.js konum belirlenince çağırır: "Yakınlık" seçeneği görünür ve seçilir.
+function yakinlikModunuAc() {
+  siralamaOlcutu = 'yakinlik';
+  filtreleriCiz();
+  render();
 }
 
 document.addEventListener('DOMContentLoaded', () => {

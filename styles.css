@@ -555,3 +555,27 @@ body {
   display: flex; align-items: center; justify-content: center;
 }
 .foto-buyutme img { max-width: 92vw; max-height: 92vh; border-radius: var(--yuvarlak); }
+
+/* --- Dünya küresi --- */
+.kure-bolumu {
+  margin-bottom: 1rem; border-radius: var(--yuvarlak);
+  background: var(--yuzey-derin); box-shadow: var(--golge);
+  padding: .5rem .9rem .9rem; overflow: hidden;
+}
+#kure { display: flex; justify-content: center; }
+#kure canvas { max-width: 100%; }
+.konum-cubugu { display: flex; gap: .5rem; flex-wrap: wrap; margin-top: .4rem; }
+.konum-cubugu input {
+  flex: 1; min-width: 160px; padding: .5rem .7rem;
+  border: 1px solid var(--kenar); border-radius: 10px;
+  background: var(--yuzey-oyuk); color: var(--krem);
+}
+.konum-cubugu button {
+  padding: .5rem .8rem; border: none; border-radius: 10px;
+  background: var(--altin); color: var(--kirmizi-derin);
+  font-weight: 600; cursor: pointer;
+}
+.konum-cubugu button:hover { background: var(--altin-koyu); }
+.konum-mesaj { margin: .35rem 0 0; }
+.osm-kredi { margin: .15rem 0 0; font-size: .75rem; }
+.mesafe { color: var(--altin); font-weight: 600; margin-left: .4rem; }
