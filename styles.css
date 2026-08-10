@@ -479,3 +479,17 @@ body {
 .hesap-kutusu a, .hesap-kutusu button { font: inherit; color: inherit; background: none;
   border: 1px solid rgba(255,255,255,.35); border-radius: 999px; padding: .4rem .9rem;
   cursor: pointer; text-decoration: none; }
+
+/* --- Panel, formlar ve ziyaret kartları (günlük/profil sayfaları) --- */
+.panel { background: rgba(0,0,0,.18); border-radius: 12px; padding: 1.25rem; margin-top: 1rem; }
+.dikey-form { display: flex; flex-direction: column; gap: .6rem; max-width: 420px; }
+.dikey-form input, .dikey-form select, .dikey-form textarea {
+  font: inherit; padding: .55rem .7rem; border-radius: 8px;
+  border: 1px solid rgba(255,255,255,.25); background: rgba(0,0,0,.25); color: inherit; }
+.dikey-form button { font: inherit; padding: .55rem; border-radius: 8px; border: none;
+  cursor: pointer; font-weight: 600; }
+.puan-satiri { display: flex; gap: .6rem; }
+.puan-alani { display: flex; flex-direction: column; gap: .25rem; flex: 1; }
+.hata { color: #ffb3a7; min-height: 1.2em; }
+.ziyaret { border-top: 1px solid rgba(255,255,255,.15); padding: .8rem 0; }
+.ziyaret-ust { display: flex; justify-content: space-between; gap: .75rem; flex-wrap: wrap; }
