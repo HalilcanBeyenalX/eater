@@ -40,6 +40,9 @@ function secenekHTML(deger, metin, secili) {
 // Kademeli mekân seçimi durumu: ülke → şehir → mekân. DIGER = katalog dışı.
 const formSecim = { ulke: '', sehir: '', mekan: '' };
 
+// Seçilip küçültülmüş foto Blob'ları; kaydetmede Storage'a yüklenir.
+const fotoSecim = { 1: null, 2: null };
+
 function mekanSecimHTML() {
   const ulkeler = benzersizSirali(RESTORANLAR.map(r => r.ulke));
   const ulkeKatalog = ulkeler.includes(formSecim.ulke);
@@ -104,6 +107,37 @@ function mekanSecimBagla() {
   });
 }
 
+// 📷 düğmeleri: gizli file input'u tetikler; seçilen görsel küçültülüp önizlenir.
+function fotoBaglariniKur() {
+  [1, 2].forEach(n => {
+    const btn = document.getElementById('btnFoto' + n);
+    const sil = document.getElementById('btnFotoSil' + n);
+    const girdi = document.getElementById('fotoInput' + n);
+    btn.addEventListener('click', () => girdi.click());
+    sil.addEventListener('click', () => fotoTemizle(n));
+    girdi.addEventListener('change', async () => {
+      const dosya = girdi.files[0];
+      if (!dosya) return;
+      try {
+        fotoSecim[n] = await fotoKucult(dosya);
+        btn.innerHTML = `<img src="${URL.createObjectURL(fotoSecim[n])}" alt="Seçilen fotoğraf">`;
+        sil.hidden = false;
+      } catch {
+        fotoTemizle(n);
+        document.getElementById('ziyaretHata').textContent =
+          'Fotoğraf işlenemedi — başka bir görsel dene.';
+      }
+    });
+  });
+}
+
+function fotoTemizle(n) {
+  fotoSecim[n] = null;
+  document.getElementById('fotoInput' + n).value = '';
+  document.getElementById('btnFoto' + n).innerHTML = '📷';
+  document.getElementById('btnFotoSil' + n).hidden = true;
+}
+
 function ziyaretFormuHTML() {
   return `
     <div class="panel">
@@ -116,10 +150,28 @@ function ziyaretFormuHTML() {
         </div>
         <div class="form-satir">
           <label>En sevdiğin yemek
-            <input type="text" id="zFav1" placeholder="ör. Hünkar Beğendi" maxlength="80"></label>
+            <span class="fav-satir">
+              <input type="text" id="zFav1" placeholder="ör. Hünkar Beğendi" maxlength="80">
+              <span class="foto-alan">
+                <button type="button" class="foto-btn" id="btnFoto1"
+                        title="Yemeğin fotoğrafını ekle" aria-label="Fotoğraf ekle">📷</button>
+                <button type="button" class="foto-sil" id="btnFotoSil1" hidden
+                        title="Fotoğrafı kaldır" aria-label="Fotoğrafı kaldır">✕</button>
+              </span>
+            </span></label>
           <label>İkinci favorin
-            <input type="text" id="zFav2" placeholder="isteğe bağlı" maxlength="80"></label>
+            <span class="fav-satir">
+              <input type="text" id="zFav2" placeholder="isteğe bağlı" maxlength="80">
+              <span class="foto-alan">
+                <button type="button" class="foto-btn" id="btnFoto2"
+                        title="Yemeğin fotoğrafını ekle" aria-label="Fotoğraf ekle">📷</button>
+                <button type="button" class="foto-sil" id="btnFotoSil2" hidden
+                        title="Fotoğrafı kaldır" aria-label="Fotoğrafı kaldır">✕</button>
+              </span>
+            </span></label>
         </div>
+        <input type="file" id="fotoInput1" accept="image/*" capture="environment" hidden>
+        <input type="file" id="fotoInput2" accept="image/*" capture="environment" hidden>
         <textarea id="zYorum" placeholder="Yorumun (opsiyonel)" rows="3"></textarea>
         <button type="submit">Günlüğe ekle</button>
       </form>
@@ -144,6 +196,7 @@ function ziyaretKartHTML(z, mekanAdi, yer) {
         ${puan('Yemek', z.yemek_puan)}${puan('Ambiyans', z.ambiyans_puan)}${puan('Servis', z.servis_puan)}
       </div>
       ${favoriler.length ? `<p class="silik">Favoriler: ${kacis(favoriler.join(', '))}</p>` : ''}
+      ${ziyaretFotolariHTML(z)}
       ${z.yorum ? `<p>${kacis(z.yorum)}</p>` : ''}
     </article>`;
 }
@@ -187,8 +240,9 @@ async function ziyaretKaydet(kullaniciId) {
   const hataKutusu = document.getElementById('ziyaretHata');
   hataKutusu.textContent = '';
 
+  // 1) Mekân seçimini doğrula (henüz hiçbir şey yazmadan).
   let restoranId = null;
-  let mekanId = null;
+  let yeniMekan = null; // katalog dışı mekân: foto yüklemesinden sonra insert edilir
   if (formSecim.mekan && formSecim.mekan !== DIGER) {
     restoranId = formSecim.mekan;
   } else {
@@ -199,12 +253,28 @@ async function ziyaretKaydet(kullaniciId) {
       hataKutusu.textContent = 'Mekân için önce ülke ve şehir seçip mekânı belirtmelisin.';
       return;
     }
+    yeniMekan = { isim, ulke, sehir, ekleyen: kullaniciId };
+  }
+
+  // 2) Fotoğrafları yükle. Yükleme başarısızsa ziyaret KAYDEDİLMEZ (spec §4).
+  const fotoYollari = { 1: null, 2: null };
+  for (const n of [1, 2]) {
+    if (!fotoSecim[n]) continue;
+    const { yol, hata } = await eaterHesap.fotoYukle(kullaniciId, fotoSecim[n], n);
+    if (hata) { hataKutusu.textContent = `Fotoğraf yüklenemedi: ${hata}`; return; }
+    fotoYollari[n] = yol;
+  }
+
+  // 3) Katalog dışı mekân şimdi eklenir.
+  let mekanId = null;
+  if (yeniMekan) {
     const { data, error } = await eaterHesap.istemci
-      .from('mekanlar').insert({ isim, ulke, sehir, ekleyen: kullaniciId }).select().single();
+      .from('mekanlar').insert(yeniMekan).select().single();
     if (error) { hataKutusu.textContent = error.message; return; }
     mekanId = data.id;
   }
 
+  // 4) Ziyaret satırı.
   const { error } = await eaterHesap.istemci.from('ziyaretler').insert({
     kullanici: kullaniciId,
     restoran_id: restoranId,
@@ -215,10 +285,13 @@ async function ziyaretKaydet(kullaniciId) {
     servis_puan: sayiVeyaNull('zServis'),
     sevilen_yemek1: alanDegeri('zFav1') || null,
     sevilen_yemek2: alanDegeri('zFav2') || null,
+    sevilen_yemek1_foto: fotoYollari[1],
+    sevilen_yemek2_foto: fotoYollari[2],
     yorum: alanDegeri('zYorum') || null
   });
   if (error) { hataKutusu.textContent = error.message; return; }
   document.getElementById('fZiyaret').reset();
+  fotoTemizle(1); fotoTemizle(2);
   formSecim.ulke = ''; formSecim.sehir = ''; formSecim.mekan = '';
   document.getElementById('mekanSecimi').innerHTML = mekanSecimHTML();
   mekanSecimBagla();
@@ -263,6 +336,7 @@ async function sayfayiKur() {
   }
   kap.innerHTML = ziyaretFormuHTML();
   mekanSecimBagla();
+  fotoBaglariniKur();
   document.getElementById('fZiyaret').addEventListener('submit', e => {
     e.preventDefault();
     ziyaretKaydet(o.user.id);
@@ -274,4 +348,5 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('gezinme').innerHTML = gezinmeHTML('gunluk');
   eaterHesap.hesapKutusunuCiz();
   sayfayiKur();
+  fotoBuyutmeKur(document.body);
 });

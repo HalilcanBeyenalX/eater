@@ -15,6 +15,7 @@ function profilZiyaretHTML(z, mekanAdi, yer) {
         ${puan('Yemek', z.yemek_puan)}${puan('Ambiyans', z.ambiyans_puan)}${puan('Servis', z.servis_puan)}
       </div>
       ${favoriler.length ? `<p class="silik">Favoriler: ${kacis(favoriler.join(', '))}</p>` : ''}
+      ${ziyaretFotolariHTML(z)}
       ${z.yorum ? `<p>${kacis(z.yorum)}</p>` : ''}
     </article>`;
 }
@@ -84,4 +85,5 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('gezinme').innerHTML = gezinmeHTML('kisiler');
   eaterHesap.hesapKutusunuCiz();
   profiliGoster();
+  fotoBuyutmeKur(document.body);
 });
