@@ -457,7 +457,14 @@ const RESTORANLAR = [
       "tiktok": null,
       "diger": "Gault&Millau Türkiye 2026 (1 toque, 12,5/20), restoranın resmî sitesi ve Temmuz 2026 menüsü, Gurme Rehber ve Müdavim'in Etiler şubesi incelemeleri, Ekşi Sözlük 'da mario' başlığı, Şikayetvar kaydı, meyhankoli, RestaurantGuru ve OpenStreetMap POI kaydı da değerlendirmeye dahil edildi."
     },
-    "fotolar": [],
+    "fotolar": [
+      {
+        "dosya": "fotolar/da-mario-etiler-1.jpg",
+        "alt": "Kapari, zeytin ve domatesli spagetti; yanında zeytin ve ekmek sepeti",
+        "kaynak": "https://www.damario.com.tr/static/uploads/2026/01/bg-1.webp",
+        "kredi": "Da Mario"
+      }
+    ],
     "sonGuncelleme": "2026-08-08"
   },
   {
@@ -812,7 +819,14 @@ const RESTORANLAR = [
       "tiktok": null,
       "diger": "MICHELIN Guide İstanbul seçkisi ve 2023 Servis Ödülü duyurusu, Michelin Türkiye basın sayfası, Gault&Millau Türkiye 2026 (2 toque), restoranın resmî sitesi ve Temmuz 2026 menü sayfaları, Voggia'nın 23 Mart 2026 tarihli incelemesi, top25restaurants değerlendirmesi, Şikayetvar'daki 7 şikâyet (19 Ekim 2025 tarihli ikisi dahil), Zomato (4,4/5, 723 yorum), Foursquare (9,1/10, 3.979 yorum), Yandex Haritalar (4,3/5, 49 yorum), RestaurantGuru ve OpenStreetMap POI kaydı da değerlendirmeye dahil edildi."
     },
-    "fotolar": [],
+    "fotolar": [
+      {
+        "dosya": "fotolar/sunset-grill-bar-1.jpg",
+        "alt": "Bar tezgâhında kırılmış buzla servis edilen kokteyl",
+        "kaynak": "https://www.sunsetgrillbar.com/assets/upload/images/bar-2535f1.jpg",
+        "kredi": "Sunset Grill & Bar"
+      }
+    ],
     "sonGuncelleme": "2026-08-08"
   },
   {
@@ -1057,7 +1071,14 @@ const RESTORANLAR = [
       "tiktok": null,
       "diger": "MICHELIN Guide Türkiye 2026 seçkisine dair Anadolu Ajansı, Türkiye Today, yemek.com ve OGGUSTO derlemeleri; Gault & Millau Türkiye 2026 ödül sayfası; restoranın kendi menü, rezervasyon ve rezervasyon kuralları sayfaları; Vedat Milor'un Hürriyet'teki 2018 tarihli Mikla yazısı; ET Food Voyage incelemesi; Ekşi Sözlük 'mikla' başlığı; Wanderlog ve restaurantguru derlemeleri; Gazete Oksijen ve 10Haber'in 2023 tarihli sahiplik değişikliği haberleri; OpenStreetMap POI kaydı da değerlendirmeye dahil edildi."
     },
-    "fotolar": [],
+    "fotolar": [
+      {
+        "dosya": "fotolar/mikla-1.jpg",
+        "alt": "Beyaz tabakta sunulan tek porsiyonluk imza yemek",
+        "kaynak": "https://www.miklarestaurant.com/media/n03p2lla/4.webp",
+        "kredi": "Mikla"
+      }
+    ],
     "sonGuncelleme": "2026-08-08"
   },
   {
@@ -1183,7 +1204,14 @@ const RESTORANLAR = [
       "tiktok": null,
       "diger": "Restoranın kendi Türkçe ve İngilizce siteleri, Ön Bilgilendirme Formu ve Mesafeli Satış Sözleşmesi, 22 Temmuz 2026 tarihli tadım menüsü PDF'i ve Rezervem rezervasyon sayfası; MICHELIN Guide Türkiye 2026 seçkisine dair Anadolu Ajansı, Türkiye Today, yemek.com ve OGGUSTO derlemeleri; Gault & Millau Türkiye 2026 ödül sayfası; Ekşi Sözlük 'neolokal' başlığı; restaurantguru derlemesi ve Foodle kaydı da değerlendirmeye dahil edildi."
     },
-    "fotolar": [],
+    "fotolar": [
+      {
+        "dosya": "fotolar/neolokal-1.jpg",
+        "alt": "Pişirme kâğıdı üzerine dizilmiş taze ıspanak yaprakları",
+        "kaynak": "https://www.neolokal.com/wp-content/uploads/2023/01/11.01.2023_Neolokal-22820-copy.jpg",
+        "kredi": "Neolokal"
+      }
+    ],
     "sonGuncelleme": "2026-08-08"
   },
   {
