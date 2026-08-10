@@ -169,4 +169,7 @@ function bulVeCiz() {
   kap.innerHTML = detayHTML(r);
 }
 
-document.addEventListener('DOMContentLoaded', bulVeCiz);
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('gezinme').innerHTML = gezinmeHTML('kesfet');
+  bulVeCiz();
+});

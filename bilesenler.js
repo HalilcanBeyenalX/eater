@@ -65,3 +65,17 @@ function fotoKredisi(f) {
     : '';
   return `<figcaption class="foto-kredi silik">${f.kredi || '—'}${kaynak}</figcaption>`;
 }
+
+// Üst gezinme. aktif: 'kesfet' | 'gunluk' | 'kisiler'. #hesapKutusu içeriğini
+// hesap.js doldurur (bu dosya yüklü değilse kutu boş kalır).
+function gezinmeHTML(aktif) {
+  const sekme = (href, ad, anahtar) =>
+    `<a class="sekme${aktif === anahtar ? ' sekme-aktif' : ''}" href="${href}">${ad}</a>`;
+  return `
+    <nav class="gezinme">
+      ${sekme('index.html', 'Keşfet', 'kesfet')}
+      ${sekme('gunluk.html', 'Gittiklerim', 'gunluk')}
+      ${sekme('kisiler.html', 'Kişiler', 'kisiler')}
+      <span id="hesapKutusu" class="hesap-kutusu"></span>
+    </nav>`;
+}

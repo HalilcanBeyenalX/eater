@@ -467,3 +467,15 @@ body {
   .fotolar { grid-template-columns: 1fr; gap: 12px; }
   .foto-bas img { aspect-ratio: 3 / 2; }
 }
+
+/* --- Gezinme sekmeleri ve hesap kutusu --- */
+.gezinme { display: flex; gap: .25rem; justify-content: center; align-items: center;
+  flex-wrap: wrap; margin-top: 1rem; }
+.sekme { padding: .45rem 1rem; border-radius: 999px; text-decoration: none;
+  color: inherit; opacity: .75; }
+.sekme:hover { opacity: 1; }
+.sekme-aktif { background: rgba(255,255,255,.12); opacity: 1; font-weight: 600; }
+.hesap-kutusu { margin-left: .75rem; }
+.hesap-kutusu a, .hesap-kutusu button { font: inherit; color: inherit; background: none;
+  border: 1px solid rgba(255,255,255,.35); border-radius: 999px; padding: .4rem .9rem;
+  cursor: pointer; text-decoration: none; }
