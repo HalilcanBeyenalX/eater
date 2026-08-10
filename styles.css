@@ -544,9 +544,15 @@ body {
   border: none; border-radius: 50%; background: var(--ortu-koyu);
   color: var(--krem-sonuk); font-size: .8rem; cursor: pointer;
 }
+/* .dikey-form button'ın genel dolgusu foto düğmelerini ezmesin — işaret ortalı kalsın. */
+.dikey-form .foto-btn { padding: 0; }
+.dikey-form .foto-sil {
+  padding: 0;
+  display: inline-flex; align-items: center; justify-content: center;
+}
 .ziyaret-fotolar { display: flex; gap: .5rem; margin: .4rem 0; }
 .ziyaret-foto {
-  width: 76px; height: 76px; object-fit: cover;
+  width: 112px; height: 112px; object-fit: cover;
   border-radius: 10px; border: 1px solid var(--kenar); cursor: zoom-in;
 }
 .foto-buyutme {
