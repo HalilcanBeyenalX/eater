@@ -12,6 +12,14 @@ const ULKE_KODLARI = {
 const KOD_ULKE = Object.fromEntries(
   Object.entries(ULKE_KODLARI).map(([ad, kod]) => [kod, ad]));
 
+// Nominatim arama sonucu ISO alpha-2 ülke kodu döndürür ("fr" gibi);
+// aranan yerin ülkesine göre listeyi süzmek için veri.js adına çevrilir.
+const ULKE_ISO2 = {
+  tr: 'Turkey', it: 'Italy', fr: 'France', es: 'Spain',
+  gr: 'Greece', de: 'Germany', gb: 'United Kingdom', nl: 'Netherlands',
+  pt: 'Portugal', us: 'USA', jp: 'Japan', kr: 'South Korea'
+};
+
 const KURE_RENK_KATALOG = 'rgba(245, 183, 0, 0.65)';   // --altin ailesi
 const KURE_RENK_SECILI  = 'rgba(255, 243, 228, 0.85)'; // --krem
 const KURE_RENK_DIGER   = 'rgba(255, 255, 255, 0.06)';
@@ -93,7 +101,7 @@ async function konumAra() {
   mesaj.textContent = 'Searching…';
   try {
     const yanit = await fetch(
-      'https://nominatim.openstreetmap.org/search?format=json&limit=1&q=' +
+      'https://nominatim.openstreetmap.org/search?format=json&limit=1&addressdetails=1&q=' +
         encodeURIComponent(sorgu),
       { headers: { 'Accept-Language': 'en' } });
     if (!yanit.ok) throw new Error(String(yanit.status));
@@ -104,8 +112,22 @@ async function konumAra() {
     }
     konumBelirle(Number(liste[0].lat), Number(liste[0].lon),
       `📍 ${liste[0].display_name.split(',')[0]}`);
+    aramaUlkesineSuz(liste[0].address);
   } catch {
     mesaj.textContent = 'Connection error — check your internet and try again.';
+  }
+}
+
+// Aranan yerin ülkesine göre liste süzülür: katalogda restoranı olan bir
+// ülkeyse filtre ona kurulur (küre vurgusu dahil); değilse filtre temizlenir
+// ve mesaja not düşülür. GPS bilerek dokunmaz — kendi konumun ülke "seçimi" değildir.
+function aramaUlkesineSuz(adres) {
+  const ulkeAdi = ULKE_ISO2[adres?.country_code] || '';
+  if (ulkeAdi && kureKatalogKodlari().has(ULKE_KODLARI[ulkeAdi])) {
+    ulkeFiltresiUygula(ulkeAdi);
+  } else {
+    ulkeFiltresiUygula('');
+    document.getElementById('konumMesaj').textContent += ' — no restaurants in this country yet';
   }
 }
 
