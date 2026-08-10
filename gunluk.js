@@ -240,62 +240,69 @@ async function ziyaretKaydet(kullaniciId) {
   const hataKutusu = document.getElementById('ziyaretHata');
   hataKutusu.textContent = '';
 
-  // 1) Mekân seçimini doğrula (henüz hiçbir şey yazmadan).
-  let restoranId = null;
-  let yeniMekan = null; // katalog dışı mekân: foto yüklemesinden sonra insert edilir
-  if (formSecim.mekan && formSecim.mekan !== DIGER) {
-    restoranId = formSecim.mekan;
-  } else {
-    const ulke = formSecim.ulke === DIGER ? alanDegeri('zUlkeSerbest') : formSecim.ulke;
-    const sehir = formSecim.sehir === DIGER ? alanDegeri('zSehirSerbest') : formSecim.sehir;
-    const isim = alanDegeri('zIsim');
-    if (!ulke || !sehir || !isim) {
-      hataKutusu.textContent = 'Mekân için önce ülke ve şehir seçip mekânı belirtmelisin.';
-      return;
+  // Kayıt sürerken çift gönderimi engelle; işlem bitince (hangi yoldan çıkarsa çıksın) geri aç.
+  const gonderButonu = document.querySelector('#fZiyaret button[type="submit"]');
+  if (gonderButonu) gonderButonu.disabled = true;
+  try {
+    // 1) Mekân seçimini doğrula (henüz hiçbir şey yazmadan).
+    let restoranId = null;
+    let yeniMekan = null; // katalog dışı mekân: foto yüklemesinden sonra insert edilir
+    if (formSecim.mekan && formSecim.mekan !== DIGER) {
+      restoranId = formSecim.mekan;
+    } else {
+      const ulke = formSecim.ulke === DIGER ? alanDegeri('zUlkeSerbest') : formSecim.ulke;
+      const sehir = formSecim.sehir === DIGER ? alanDegeri('zSehirSerbest') : formSecim.sehir;
+      const isim = alanDegeri('zIsim');
+      if (!ulke || !sehir || !isim) {
+        hataKutusu.textContent = 'Mekân için önce ülke ve şehir seçip mekânı belirtmelisin.';
+        return;
+      }
+      yeniMekan = { isim, ulke, sehir, ekleyen: kullaniciId };
     }
-    yeniMekan = { isim, ulke, sehir, ekleyen: kullaniciId };
-  }
 
-  // 2) Fotoğrafları yükle. Yükleme başarısızsa ziyaret KAYDEDİLMEZ (spec §4).
-  const fotoYollari = { 1: null, 2: null };
-  for (const n of [1, 2]) {
-    if (!fotoSecim[n]) continue;
-    const { yol, hata } = await eaterHesap.fotoYukle(kullaniciId, fotoSecim[n], n);
-    if (hata) { hataKutusu.textContent = `Fotoğraf yüklenemedi: ${hata}`; return; }
-    fotoYollari[n] = yol;
-  }
+    // 2) Fotoğrafları yükle. Yükleme başarısızsa ziyaret KAYDEDİLMEZ (spec §4).
+    const fotoYollari = { 1: null, 2: null };
+    for (const n of [1, 2]) {
+      if (!fotoSecim[n]) continue;
+      const { yol, hata } = await eaterHesap.fotoYukle(kullaniciId, fotoSecim[n], n);
+      if (hata) { hataKutusu.textContent = `Fotoğraf yüklenemedi: ${hata}`; return; }
+      fotoYollari[n] = yol;
+    }
 
-  // 3) Katalog dışı mekân şimdi eklenir.
-  let mekanId = null;
-  if (yeniMekan) {
-    const { data, error } = await eaterHesap.istemci
-      .from('mekanlar').insert(yeniMekan).select().single();
+    // 3) Katalog dışı mekân şimdi eklenir.
+    let mekanId = null;
+    if (yeniMekan) {
+      const { data, error } = await eaterHesap.istemci
+        .from('mekanlar').insert(yeniMekan).select().single();
+      if (error) { hataKutusu.textContent = error.message; return; }
+      mekanId = data.id;
+    }
+
+    // 4) Ziyaret satırı.
+    const { error } = await eaterHesap.istemci.from('ziyaretler').insert({
+      kullanici: kullaniciId,
+      restoran_id: restoranId,
+      mekan_id: mekanId,
+      tarih: document.getElementById('zTarih').value,
+      yemek_puan: sayiVeyaNull('zYemek'),
+      ambiyans_puan: sayiVeyaNull('zAmbiyans'),
+      servis_puan: sayiVeyaNull('zServis'),
+      sevilen_yemek1: alanDegeri('zFav1') || null,
+      sevilen_yemek2: alanDegeri('zFav2') || null,
+      sevilen_yemek1_foto: fotoYollari[1],
+      sevilen_yemek2_foto: fotoYollari[2],
+      yorum: alanDegeri('zYorum') || null
+    });
     if (error) { hataKutusu.textContent = error.message; return; }
-    mekanId = data.id;
+    document.getElementById('fZiyaret').reset();
+    fotoTemizle(1); fotoTemizle(2);
+    formSecim.ulke = ''; formSecim.sehir = ''; formSecim.mekan = '';
+    document.getElementById('mekanSecimi').innerHTML = mekanSecimHTML();
+    mekanSecimBagla();
+    ziyaretleriGoster(kullaniciId);
+  } finally {
+    if (gonderButonu) gonderButonu.disabled = false;
   }
-
-  // 4) Ziyaret satırı.
-  const { error } = await eaterHesap.istemci.from('ziyaretler').insert({
-    kullanici: kullaniciId,
-    restoran_id: restoranId,
-    mekan_id: mekanId,
-    tarih: document.getElementById('zTarih').value,
-    yemek_puan: sayiVeyaNull('zYemek'),
-    ambiyans_puan: sayiVeyaNull('zAmbiyans'),
-    servis_puan: sayiVeyaNull('zServis'),
-    sevilen_yemek1: alanDegeri('zFav1') || null,
-    sevilen_yemek2: alanDegeri('zFav2') || null,
-    sevilen_yemek1_foto: fotoYollari[1],
-    sevilen_yemek2_foto: fotoYollari[2],
-    yorum: alanDegeri('zYorum') || null
-  });
-  if (error) { hataKutusu.textContent = error.message; return; }
-  document.getElementById('fZiyaret').reset();
-  fotoTemizle(1); fotoTemizle(2);
-  formSecim.ulke = ''; formSecim.sehir = ''; formSecim.mekan = '';
-  document.getElementById('mekanSecimi').innerHTML = mekanSecimHTML();
-  mekanSecimBagla();
-  ziyaretleriGoster(kullaniciId);
 }
 
 async function sayfayiKur() {

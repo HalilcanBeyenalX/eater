@@ -46,7 +46,7 @@ function kureyiKur() {
     .width(kap.clientWidth)
     .height(Math.min(420, Math.round(window.innerHeight * 0.5)))
     .backgroundColor('rgba(0,0,0,0)')
-    .globeImageUrl('https://cdn.jsdelivr.net/npm/three-globe@2/example/img/earth-blue-marble.jpg')
+    .globeImageUrl('https://cdn.jsdelivr.net/npm/three-globe@2.45.2/example/img/earth-blue-marble.jpg')
     .polygonsData(DUNYA_ULKELER.features)
     .polygonAltitude(0.008)
     .polygonCapColor(kureUlkeRengi)
@@ -63,7 +63,7 @@ function kureyiKur() {
   kure.controls().autoRotateSpeed = 0.6;
   kure.pointOfView({ lat: 39, lng: 35, altitude: 2.2 }, 0); // açılışta Türkiye görünür
   window.addEventListener('resize', () => kure.width(kap.clientWidth));
-  konumCubuguKur(); // Task 6'da dolar; bu görevde boş gövdeli tanımlanır
+  konumCubuguKur(); // konum çubuğu bağları
 }
 
 // app.js her ülke filtresi değişiminde çağırır — vurgu senkron kalır.

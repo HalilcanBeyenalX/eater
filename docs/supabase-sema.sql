@@ -69,10 +69,12 @@ create policy "takip silme" on takipler for delete using (auth.uid() = takip_ede
 alter table ziyaretler add column if not exists sevilen_yemek1_foto text;
 alter table ziyaretler add column if not exists sevilen_yemek2_foto text;
 
--- Herkese açık okunur bucket. Profiller ve ziyaretler zaten açık; fotoğraflar da öyle.
-insert into storage.buckets (id, name, public)
-  values ('yemek-fotolari', 'yemek-fotolari', true)
-  on conflict (id) do update set public = true;
+-- Herkese açık okunur bucket; yalnız JPEG, en çok 5 MB — istemciyi atlayan doğrudan yüklemeler de bu sınırlara takılır.
+insert into storage.buckets (id, name, public, file_size_limit, allowed_mime_types)
+  values ('yemek-fotolari', 'yemek-fotolari', true, 5242880, array['image/jpeg'])
+  on conflict (id) do update set public = true,
+    file_size_limit = excluded.file_size_limit,
+    allowed_mime_types = excluded.allowed_mime_types;
 
 -- Postgres'te "create policy if not exists" yok — idempotentlik için drop+create.
 drop policy if exists "yemek foto okuma" on storage.objects;
