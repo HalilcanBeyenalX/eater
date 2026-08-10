@@ -9,18 +9,18 @@ function benzersizSirali(dizi) {
 function girisFormuHTML() {
   return `
     <div class="panel">
-      <h2>Giriş yap</h2>
+      <h2>Log in</h2>
       <form id="fGiris" class="dikey-form">
-        <input type="email" id="gEposta" placeholder="E-posta" required>
-        <input type="password" id="gSifre" placeholder="Şifre" required>
-        <button type="submit">Giriş</button>
+        <input type="email" id="gEposta" placeholder="Email" required>
+        <input type="password" id="gSifre" placeholder="Password" required>
+        <button type="submit">Log in</button>
       </form>
-      <h2>Hesabın yok mu?</h2>
+      <h2>No account yet?</h2>
       <form id="fKayit" class="dikey-form">
-        <input type="text" id="kAd" placeholder="Kullanıcı adı" required minlength="2" maxlength="30">
-        <input type="email" id="kEposta" placeholder="E-posta" required>
-        <input type="password" id="kSifre" placeholder="Şifre (en az 6 karakter)" required minlength="6">
-        <button type="submit">Kayıt ol</button>
+        <input type="text" id="kAd" placeholder="Username" required minlength="2" maxlength="30">
+        <input type="email" id="kEposta" placeholder="Email" required>
+        <input type="password" id="kSifre" placeholder="Password (min 6 characters)" required minlength="6">
+        <button type="submit">Sign up</button>
       </form>
       <p id="hesapHata" class="hata" aria-live="polite"></p>
     </div>`;
@@ -55,33 +55,33 @@ function mekanSecimHTML() {
     : [];
   return `
     <div class="form-satir">
-      <label>Ülke
+      <label>Country
         <select id="zUlke">
-          <option value="">Seç…</option>
+          <option value="">Select…</option>
           ${ulkeler.map(u => secenekHTML(u, u, formSecim.ulke === u)).join('')}
-          ${secenekHTML(DIGER, 'Başka bir ülke…', formSecim.ulke === DIGER)}
+          ${secenekHTML(DIGER, 'Another country…', formSecim.ulke === DIGER)}
         </select>
       </label>
       ${formSecim.ulke === DIGER
-        ? '<label>Ülke adı<input type="text" id="zUlkeSerbest" placeholder="ör. İtalya"></label>' : ''}
-      <label>Şehir
+        ? '<label>Country name<input type="text" id="zUlkeSerbest" placeholder="e.g. Italy"></label>' : ''}
+      <label>City
         <select id="zSehir" ${formSecim.ulke === '' ? 'disabled' : ''}>
-          <option value="">Seç…</option>
+          <option value="">Select…</option>
           ${sehirler.map(s => secenekHTML(s, s, formSecim.sehir === s)).join('')}
-          ${formSecim.ulke === '' ? '' : secenekHTML(DIGER, 'Başka bir şehir…', formSecim.sehir === DIGER)}
+          ${formSecim.ulke === '' ? '' : secenekHTML(DIGER, 'Another city…', formSecim.sehir === DIGER)}
         </select>
       </label>
       ${formSecim.sehir === DIGER
-        ? '<label>Şehir adı<input type="text" id="zSehirSerbest" placeholder="ör. Roma"></label>' : ''}
-      <label>Mekân
+        ? '<label>City name<input type="text" id="zSehirSerbest" placeholder="e.g. Rome"></label>' : ''}
+      <label>Place
         <select id="zMekan" ${formSecim.sehir === '' ? 'disabled' : ''}>
-          <option value="">Seç…</option>
+          <option value="">Select…</option>
           ${mekanlar.map(r => secenekHTML(r.id, r.isim, formSecim.mekan === r.id)).join('')}
-          ${formSecim.sehir === '' ? '' : secenekHTML(DIGER, 'Katalogda yok — kendim yazacağım', formSecim.mekan === DIGER)}
+          ${formSecim.sehir === '' ? '' : secenekHTML(DIGER, "Not in the catalog — I'll type it", formSecim.mekan === DIGER)}
         </select>
       </label>
       ${formSecim.mekan === DIGER
-        ? '<label>Mekân adı<input type="text" id="zIsim" placeholder="Mekânın adı"></label>' : ''}
+        ? '<label>Place name<input type="text" id="zIsim" placeholder="Name of the place"></label>' : ''}
     </div>`;
 }
 
@@ -120,12 +120,12 @@ function fotoBaglariniKur() {
       if (!dosya) return;
       try {
         fotoSecim[n] = await fotoKucult(dosya);
-        btn.innerHTML = `<img src="${URL.createObjectURL(fotoSecim[n])}" alt="Seçilen fotoğraf">`;
+        btn.innerHTML = `<img src="${URL.createObjectURL(fotoSecim[n])}" alt="Selected photo">`;
         sil.hidden = false;
       } catch {
         fotoTemizle(n);
         document.getElementById('ziyaretHata').textContent =
-          'Fotoğraf işlenemedi — başka bir görsel dene.';
+          "Couldn't process the photo — try another image (HEIC isn't supported in every browser).";
       }
     });
   });
@@ -141,42 +141,42 @@ function fotoTemizle(n) {
 function ziyaretFormuHTML() {
   return `
     <div class="panel">
-      <h2>Ziyaret ekle</h2>
+      <h2>Add a visit</h2>
       <form id="fZiyaret" class="dikey-form">
         <div id="mekanSecimi">${mekanSecimHTML()}</div>
-        <label>Tarih <input type="date" id="zTarih" required></label>
+        <label>Date <input type="date" id="zTarih" required></label>
         <div class="puan-satiri">
-          ${puanAlani('zYemek', 'Yemek')}${puanAlani('zAmbiyans', 'Ambiyans')}${puanAlani('zServis', 'Servis')}
+          ${puanAlani('zYemek', 'Food')}${puanAlani('zAmbiyans', 'Ambiance')}${puanAlani('zServis', 'Service')}
         </div>
         <div class="form-satir">
-          <label>En sevdiğin yemek
+          <label>Favorite dish
             <span class="fav-satir">
-              <input type="text" id="zFav1" placeholder="ör. Hünkar Beğendi" maxlength="80">
+              <input type="text" id="zFav1" placeholder="e.g. Hünkar Beğendi" maxlength="80">
               <span class="foto-alan">
                 <button type="button" class="foto-btn" id="btnFoto1"
-                        title="Yemeğin fotoğrafını ekle" aria-label="Fotoğraf ekle">📷</button>
+                        title="Add a photo of the dish" aria-label="Add photo">📷</button>
                 <button type="button" class="foto-sil" id="btnFotoSil1" hidden
-                        title="Fotoğrafı kaldır" aria-label="Fotoğrafı kaldır">✕</button>
+                        title="Remove photo" aria-label="Remove photo">✕</button>
               </span>
             </span></label>
-          <label>İkinci favorin
+          <label>Second favorite
             <span class="fav-satir">
-              <input type="text" id="zFav2" placeholder="isteğe bağlı" maxlength="80">
+              <input type="text" id="zFav2" placeholder="optional" maxlength="80">
               <span class="foto-alan">
                 <button type="button" class="foto-btn" id="btnFoto2"
-                        title="Yemeğin fotoğrafını ekle" aria-label="Fotoğraf ekle">📷</button>
+                        title="Add a photo of the dish" aria-label="Add photo">📷</button>
                 <button type="button" class="foto-sil" id="btnFotoSil2" hidden
-                        title="Fotoğrafı kaldır" aria-label="Fotoğrafı kaldır">✕</button>
+                        title="Remove photo" aria-label="Remove photo">✕</button>
               </span>
             </span></label>
         </div>
         <input type="file" id="fotoInput1" accept="image/*" capture="environment" hidden>
         <input type="file" id="fotoInput2" accept="image/*" capture="environment" hidden>
-        <textarea id="zYorum" placeholder="Yorumun (opsiyonel)" rows="3"></textarea>
-        <button type="submit">Günlüğe ekle</button>
+        <textarea id="zYorum" placeholder="Your notes (optional)" rows="3"></textarea>
+        <button type="submit">Add to diary</button>
       </form>
       <p id="ziyaretHata" class="hata" aria-live="polite"></p>
-      <h2>ATE — Gittiklerim</h2>
+      <h2>ATE — My visits</h2>
       <div id="ziyaretListesi"></div>
     </div>`;
 }
@@ -193,9 +193,9 @@ function ziyaretKartHTML(z, mekanAdi, yer) {
         <span class="silik">${kacis(yer)} · ${kacis(z.tarih)}</span>
       </div>
       <div class="rozetler">
-        ${puan('Yemek', z.yemek_puan)}${puan('Ambiyans', z.ambiyans_puan)}${puan('Servis', z.servis_puan)}
+        ${puan('Food', z.yemek_puan)}${puan('Ambiance', z.ambiyans_puan)}${puan('Service', z.servis_puan)}
       </div>
-      ${favoriler.length ? `<p class="silik">Favoriler: ${kacis(favoriler.join(', '))}</p>` : ''}
+      ${favoriler.length ? `<p class="silik">Favorites: ${kacis(favoriler.join(', '))}</p>` : ''}
       ${ziyaretFotolariHTML(z)}
       ${z.yorum ? `<p>${kacis(z.yorum)}</p>` : ''}
     </article>`;
@@ -207,7 +207,7 @@ function ziyaretIsimYer(z, mekanlar) {
     return r ? [r.isim, `${r.sehir}, ${r.ulke}`] : [z.restoran_id, ''];
   }
   const m = mekanlar.find(x => x.id === z.mekan_id);
-  return m ? [m.isim, `${m.sehir}, ${m.ulke}`] : ['(silinmiş mekân)', ''];
+  return m ? [m.isim, `${m.sehir}, ${m.ulke}`] : ['(deleted place)', ''];
 }
 
 async function ziyaretleriGoster(kullaniciId) {
@@ -215,7 +215,7 @@ async function ziyaretleriGoster(kullaniciId) {
   const { data: ziyaretler, error } = await eaterHesap.istemci
     .from('ziyaretler').select('*')
     .eq('kullanici', kullaniciId).order('tarih', { ascending: false });
-  if (error) { kap.innerHTML = `<p class="hata">Kayıtlar yüklenemedi: ${kacis(error.message)}</p>`; return; }
+  if (error) { kap.innerHTML = `<p class="hata">Could not load entries: ${kacis(error.message)}</p>`; return; }
   const mekanIdler = ziyaretler.filter(z => z.mekan_id).map(z => z.mekan_id);
   let mekanlar = [];
   if (mekanIdler.length > 0) {
@@ -223,7 +223,7 @@ async function ziyaretleriGoster(kullaniciId) {
       .from('mekanlar').select('*').in('id', mekanIdler));
   }
   kap.innerHTML = ziyaretler.length === 0
-    ? '<p class="silik">Henüz kayıt yok — ilk ziyaretini yukarıdan ekle.</p>'
+    ? '<p class="silik">No entries yet — add your first visit above.</p>'
     : ziyaretler.map(z => ziyaretKartHTML(z, ...ziyaretIsimYer(z, mekanlar))).join('');
 }
 
@@ -254,7 +254,7 @@ async function ziyaretKaydet(kullaniciId) {
       const sehir = formSecim.sehir === DIGER ? alanDegeri('zSehirSerbest') : formSecim.sehir;
       const isim = alanDegeri('zIsim');
       if (!ulke || !sehir || !isim) {
-        hataKutusu.textContent = 'Mekân için önce ülke ve şehir seçip mekânı belirtmelisin.';
+        hataKutusu.textContent = 'Pick a country and city first, then name the place.';
         return;
       }
       yeniMekan = { isim, ulke, sehir, ekleyen: kullaniciId };
@@ -265,7 +265,7 @@ async function ziyaretKaydet(kullaniciId) {
     for (const n of [1, 2]) {
       if (!fotoSecim[n]) continue;
       const { yol, hata } = await eaterHesap.fotoYukle(kullaniciId, fotoSecim[n], n);
-      if (hata) { hataKutusu.textContent = `Fotoğraf yüklenemedi: ${hata}`; return; }
+      if (hata) { hataKutusu.textContent = `Photo upload failed: ${hata}`; return; }
       fotoYollari[n] = yol;
     }
 
@@ -308,7 +308,7 @@ async function ziyaretKaydet(kullaniciId) {
 async function sayfayiKur() {
   const kap = document.getElementById('icerik');
   if (!eaterHesap.hazir()) {
-    kap.innerHTML = '<p class="panel">Günlük özelliği henüz yapılandırılmadı (Supabase ayarları boş). Katalog için <a href="index.html">Keşfet</a> sayfası açık.</p>';
+    kap.innerHTML = '<p class="panel">The diary is not configured yet (Supabase settings are empty). The catalog is open on the <a href="index.html">Explore</a> page.</p>';
     return;
   }
   const o = await eaterHesap.oturum();

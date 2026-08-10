@@ -41,7 +41,7 @@ Sunucu kurmaya gerek yok: `index.html` dosyasına çift tıklayıp doğrudan `fi
 
 Doğrulanamayan alanlar tahmin edilerek doldurulmaz; `SEMA.md`'nin belirttiği gibi `null` (veya boş dizi) bırakılır ve arayüzde "veri yok" olarak gösterilir.
 
-Yeni bir **ülkeden** ilk restoran eklenirken `kure.js` içindeki `ULKE_KODLARI` sözlüğüne o ülkenin ISO alpha-3 kodu da eklenmelidir (ör. `'İtalya': 'ITA'`); aksi halde ülke kürede vurgulanmaz (konsola uyarı düşer, site bozulmaz).
+Yeni bir **ülkeden** ilk restoran eklenirken `kure.js` içindeki `ULKE_KODLARI` sözlüğüne o ülkenin ISO alpha-3 kodu da eklenmelidir (ör. `'Italy': 'ITA'` — anahtarlar veri.js'teki İngilizce ülke adlarıyla birebir aynıdır); aksi halde ülke kürede vurgulanmaz (konsola uyarı düşer, site bozulmaz). Site içeriği (arayüz ve veri metinleri) İngilizcedir; kod ve dokümantasyon Türkçe kalır.
 
 ## Sonraki Adımlar
 

@@ -46,8 +46,8 @@ Puan verilirken hangi yorum örüntüsüne dayandığı ilgili `ozet` alanında 
 {
   id: "karakoy-lokantasi",              // string, slug
   isim: "Karaköy Lokantası",            // string
-  ulke: "Türkiye",                      // string
-  sehir: "İstanbul",                    // string
+  ulke: "Turkey",                       // string, İngilizce ülke adı
+  sehir: "Istanbul",                    // string, İngilizce/yerel yazım
   semt: "Karaköy",                      // string
   mutfak: ["Türk", "Meyhane"],          // string[]
   adres: "...",                         // string | null
@@ -119,8 +119,8 @@ Puan verilirken hangi yorum örüntüsüne dayandığı ilgili `ozet` alanında 
 |---|---|---|---|
 | `id` | `string` | Hayır | Slug. Küçük harf, ASCII, kelimeler arası `-`. Dizi içinde **tekil** olmalı. Arayüzde anahtar olarak kullanılır. Elle yazılır, restoran adından türetilir. |
 | `isim` | `string` | Hayır | Restoranın kendi tanıttığı ad. Kaynak: resmî site / resmî sosyal hesap. Zincirse şube adı da yazılır (`"Beyaz Fırın Etiler"`). |
-| `ulke` | `string` | Hayır | Şimdilik daima `"Türkiye"`. |
-| `sehir` | `string` | Hayır | Şimdilik daima `"İstanbul"`. |
+| `ulke` | `string` | Hayır | İngilizce ülke adı (`"Turkey"`, `"France"`). `kure.js` içindeki `ULKE_KODLARI` anahtarlarıyla birebir aynı yazılmalı — aksi halde ülke kürede vurgulanmaz. |
+| `sehir` | `string` | Hayır | Şehrin İngilizce/uluslararası yazımı (`"Istanbul"`, `"Paris"`). |
 | `semt` | `string` | Hayır | Restoranın bulunduğu semt. Kaynak: doğrulanmış adres. Filtrede kullanılır, yazımı tutarlı olmalı. |
 | `mutfak` | `string[]` | Hayır (boş olabilir) | Mutfak/konsept etiketleri. Kaynak: Michelin Guide açıklaması, resmî site, yemek yazıları. Filtrede kullanılır. |
 | `adres` | `string \| null` | Evet | Tam açık adres. **Yalnızca** resmî site veya birbirini doğrulayan en az iki bağımsız kaynaktan yazılır. Örüntüden adres türetilmez. |
@@ -218,7 +218,7 @@ doldurmak yasaktır.
 |---|---|---|---|
 | `fotolar` | `{dosya,alt,kaynak,kredi}[]` | Hayır | Restoran fotoğrafları; fotoğraf bulunamazsa `[]`. Sıradaki ilk öğe kartta ve detay sayfasının başında kullanılır. |
 | `fotolar[].dosya` | `string` | Hayır | Depo içindeki göreli yol (`fotolar/<id>-1.jpg`). Dış bağlantı **kullanılmaz** — site çevrimdışı ve `file://` üzerinden de çalışmalı. |
-| `fotolar[].alt` | `string` | Hayır | Türkçe, kısa, görselde ne olduğunu anlatan metin. Erişilebilirlik için zorunlu. |
+| `fotolar[].alt` | `string` | Hayır | İngilizce, kısa, görselde ne olduğunu anlatan metin (site içeriği İngilizce). Erişilebilirlik için zorunlu. |
 | `fotolar[].kaynak` | `string` | Hayır | Görselin alındığı **tam URL**. Kaynağı adlandırılamayan görsel kullanılmaz. |
 | `fotolar[].kredi` | `string` | Hayır | Görselin kime ait olduğu; detay sayfasında her fotoğrafın altında gösterilir. Bu görseller üçüncü tarafların telifindedir; site yayına alınacaksa izin gerekir. |
 | `sonGuncelleme` | `string` | Hayır | Verinin toplandığı tarih, `"YYYY-AA-GG"` biçiminde. |

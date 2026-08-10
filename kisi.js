@@ -12,9 +12,9 @@ function profilZiyaretHTML(z, mekanAdi, yer) {
         <span class="silik">${kacis(yer)} · ${kacis(z.tarih)}</span>
       </div>
       <div class="rozetler">
-        ${puan('Yemek', z.yemek_puan)}${puan('Ambiyans', z.ambiyans_puan)}${puan('Servis', z.servis_puan)}
+        ${puan('Food', z.yemek_puan)}${puan('Ambiance', z.ambiyans_puan)}${puan('Service', z.servis_puan)}
       </div>
-      ${favoriler.length ? `<p class="silik">Favoriler: ${kacis(favoriler.join(', '))}</p>` : ''}
+      ${favoriler.length ? `<p class="silik">Favorites: ${kacis(favoriler.join(', '))}</p>` : ''}
       ${ziyaretFotolariHTML(z)}
       ${z.yorum ? `<p>${kacis(z.yorum)}</p>` : ''}
     </article>`;
@@ -23,15 +23,15 @@ function profilZiyaretHTML(z, mekanAdi, yer) {
 async function profiliGoster() {
   const kap = document.getElementById('icerik');
   if (!eaterHesap.hazir()) {
-    kap.innerHTML = '<p class="panel">Profiller henüz yapılandırılmadı (Supabase ayarları boş).</p>';
+    kap.innerHTML = '<p class="panel">Profiles are not configured yet (Supabase settings are empty).</p>';
     return;
   }
   const id = new URLSearchParams(window.location.search).get('id');
-  if (!id) { kap.innerHTML = '<p class="panel">Profil bulunamadı.</p>'; return; }
+  if (!id) { kap.innerHTML = '<p class="panel">Profile not found.</p>'; return; }
 
   const { data: profil, error } = await eaterHesap.istemci
     .from('profiller').select('*').eq('id', id).single();
-  if (error || !profil) { kap.innerHTML = '<p class="panel">Profil bulunamadı.</p>'; return; }
+  if (error || !profil) { kap.innerHTML = '<p class="panel">Profile not found.</p>'; return; }
 
   const [{ data: ziyaretler = [] }, takipciler, takip] = await Promise.all([
     eaterHesap.istemci.from('ziyaretler').select('*')
@@ -51,14 +51,14 @@ async function profiliGoster() {
       return r ? [r.isim, `${r.sehir}, ${r.ulke}`] : [z.restoran_id, ''];
     }
     const m = mekanlar.find(x => x.id === z.mekan_id);
-    return m ? [m.isim, `${m.sehir}, ${m.ulke}`] : ['(silinmiş mekân)', ''];
+    return m ? [m.isim, `${m.sehir}, ${m.ulke}`] : ['(deleted place)', ''];
   };
 
   const kendim = takip && takip.benimId === id;
   const takipte = takip ? takip.kume.has(id) : false;
   const dugme = kendim ? '' : `
     <button type="button" id="btnTakip" class="takip-btn${takipte ? ' takipte' : ''}">
-      ${takipte ? '✓ Eater’ın' : '+ Eater ekle'}
+      ${takipte ? '✓ Your Eater' : '+ Add Eater'}
     </button>`;
 
   document.title = `${profil.kullanici_adi} — EATER`;
@@ -69,9 +69,9 @@ async function profiliGoster() {
         ${dugme}
       </div>
       ${profil.tanitim ? `<p>${kacis(profil.tanitim)}</p>` : ''}
-      <p class="silik">${takipciler} eater · ${ziyaretler.length} ziyaret</p>
+      <p class="silik">${takipciler} eater${takipciler === 1 ? '' : 's'} · ${ziyaretler.length} visit${ziyaretler.length === 1 ? '' : 's'}</p>
       ${ziyaretler.map(z => profilZiyaretHTML(z, ...isimYer(z))).join('') ||
-        '<p class="silik">Henüz kayıt yok.</p>'}
+        '<p class="silik">No entries yet.</p>'}
     </div>`;
 
   document.getElementById('btnTakip')?.addEventListener('click', async e => {

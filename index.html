@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="tr">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>EATER — Restoran Rehberi</title>
+  <title>EATER — Restaurant Guide</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,26 +13,26 @@
   </header>
 
   <main class="govde">
-    <section id="kureBolumu" class="kure-bolumu" hidden aria-label="Dünya küresi">
+    <section id="kureBolumu" class="kure-bolumu" hidden aria-label="World globe">
       <div id="kure"></div>
       <div class="konum-cubugu">
-        <input id="konumArama" type="search" placeholder="Semt, şehir veya ülke yaz…"
-               aria-label="Konum ara">
-        <button id="btnKonumAra" type="button">Ara</button>
-        <button id="btnKonumum" type="button">📍 Konumumu kullan</button>
+        <input id="konumArama" type="search" placeholder="Type a district, city or country…"
+               aria-label="Search location">
+        <button id="btnKonumAra" type="button">Search</button>
+        <button id="btnKonumum" type="button">📍 Use my location</button>
       </div>
       <p id="konumMesaj" class="silik konum-mesaj" aria-live="polite"></p>
-      <p class="silik osm-kredi">Konum araması: © OpenStreetMap katkıcıları</p>
+      <p class="silik osm-kredi">Location search: © OpenStreetMap contributors</p>
     </section>
-    <section id="filtreler" class="filtreler" aria-label="Filtreler"></section>
+    <section id="filtreler" class="filtreler" aria-label="Filters"></section>
     <p id="sonucSayisi" class="sonuc-sayisi" aria-live="polite"></p>
     <section id="liste" class="liste"></section>
   </main>
 
   <footer class="alt">
-    <p>Puanlar, kullanıcı yorumlarından oluşan bir örneklemden çıkarılmış öznel değerlendirmelerdir.
-       Genel puan hesaplanmaz — yemek, ambiyans ve servis ayrı ayrı değerlendirilir.</p>
-    <p class="silik">— işareti, ilgili alan için doğrulanmış bir veri bulunamadığını gösterir.</p>
+    <p>Scores are subjective assessments drawn from a sample of user reviews.
+       No overall score is computed — food, ambiance and service are always rated separately.</p>
+    <p class="silik">The — mark means no verified data was found for that field.</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.112.2"

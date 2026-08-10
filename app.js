@@ -5,7 +5,7 @@ function kartHTML(r) {
     .map(o => `<span class="odul">★ ${odulEtiketi(o.tip)}</span>`)
     .join('');
   const rezUyari = r.rezervasyon.gerekiyor
-    ? '<span class="rez-uyari">Rezervasyon gerekli</span>'
+    ? '<span class="rez-uyari">Reservation required</span>'
     : '';
   const konum = window.eaterKure?.konumAl();
   const mesafe = (konum && r.koordinat)
@@ -14,7 +14,7 @@ function kartHTML(r) {
   const foto = ilkFoto(r.fotolar);
   const fotoBlok = foto
     ? `<div class="kart-foto"><img src="${foto.dosya}" alt="${foto.alt}" loading="lazy"></div>`
-    : '<div class="kart-foto kart-foto-bos" aria-hidden="true"><span>fotoğraf yakında</span></div>';
+    : '<div class="kart-foto kart-foto-bos" aria-hidden="true"><span>photo coming soon</span></div>';
 
   return `
     <a class="kart" href="detay.html?id=${encodeURIComponent(r.id)}">
@@ -26,9 +26,9 @@ function kartHTML(r) {
         </div>
         <p class="kart-yer">${r.semt} · ${r.mutfak.join(', ')}${mesafe}</p>
         <div class="rozetler">
-          ${puanRozeti('Yemek', r.yemek.puan)}
-          ${puanRozeti('Ambiyans', r.ambiyans.puan)}
-          ${puanRozeti('Servis', r.servis.puan)}
+          ${puanRozeti('Food', r.yemek.puan)}
+          ${puanRozeti('Ambiance', r.ambiyans.puan)}
+          ${puanRozeti('Service', r.servis.puan)}
         </div>
         <div class="isaretler">${oduller}${rezUyari}</div>
       </div>
@@ -116,32 +116,32 @@ function filtreleriCiz() {
   const etiketler = benzersiz(RESTORANLAR.flatMap(r => r.ambiyans.etiketler));
 
   document.getElementById('filtreler').innerHTML =
-    secimKutusu('fSegment', 'Fiyat', [
-      { deger: '', metin: 'Hepsi' },
-      { deger: 'ucuz', metin: '₺ Ucuz' },
-      { deger: 'orta', metin: '₺₺ Orta' },
-      { deger: 'pahali', metin: '₺₺₺ Pahalı' }
+    secimKutusu('fSegment', 'Price', [
+      { deger: '', metin: 'All' },
+      { deger: 'ucuz', metin: '$ Budget' },
+      { deger: 'orta', metin: '$$ Mid-range' },
+      { deger: 'pahali', metin: '$$$ High-end' }
     ]) +
-    secimKutusu('fUlke', 'Ülke',
-      [{ deger: '', metin: 'Hepsi' }, ...ulkeler.map(u => ({ deger: u, metin: u }))]) +
-    secimKutusu('fSehir', 'Şehir',
-      [{ deger: '', metin: 'Hepsi' }, ...sehirler.map(s => ({ deger: s, metin: s }))]) +
-    secimKutusu('fEtiket', 'Ambiyans',
-      [{ deger: '', metin: 'Hepsi' }, ...etiketler.map(e => ({ deger: e, metin: e }))]) +
-    secimKutusu('fRezervasyon', 'Rezervasyon', [
-      { deger: '', metin: 'Farketmez' },
-      { deger: 'gerekli', metin: 'Gerekli' },
-      { deger: 'gerekmiyor', metin: 'Gerekmiyor' }
+    secimKutusu('fUlke', 'Country',
+      [{ deger: '', metin: 'All' }, ...ulkeler.map(u => ({ deger: u, metin: u }))]) +
+    secimKutusu('fSehir', 'City',
+      [{ deger: '', metin: 'All' }, ...sehirler.map(s => ({ deger: s, metin: s }))]) +
+    secimKutusu('fEtiket', 'Ambiance',
+      [{ deger: '', metin: 'All' }, ...etiketler.map(e => ({ deger: e, metin: e }))]) +
+    secimKutusu('fRezervasyon', 'Reservation', [
+      { deger: '', metin: 'Any' },
+      { deger: 'gerekli', metin: 'Required' },
+      { deger: 'gerekmiyor', metin: 'Not required' }
     ]) +
-    secimKutusu('fSiralama', 'Sırala', [
+    secimKutusu('fSiralama', 'Sort', [
       ...(window.eaterKure?.konumAl()
-        ? [{ deger: 'yakinlik', metin: 'Yakınlık' }] : []),
-      { deger: 'yemek', metin: 'Yemek puanı' },
-      { deger: 'ambiyans', metin: 'Ambiyans puanı' },
-      { deger: 'servis', metin: 'Servis puanı' },
-      { deger: 'fiyat', metin: 'Fiyat (ucuzdan)' }
+        ? [{ deger: 'yakinlik', metin: 'Nearby' }] : []),
+      { deger: 'yemek', metin: 'Food score' },
+      { deger: 'ambiyans', metin: 'Ambiance score' },
+      { deger: 'servis', metin: 'Service score' },
+      { deger: 'fiyat', metin: 'Price (low to high)' }
     ]) +
-    '<button id="fSifirla" class="sifirla" type="button">Filtreleri temizle</button>';
+    '<button id="fSifirla" class="sifirla" type="button">Clear filters</button>';
 
   const bagla = (id, alan) => {
     document.getElementById(id).addEventListener('change', e => {
@@ -189,13 +189,13 @@ function render() {
   const kap = document.getElementById('liste');
 
   if (liste.length === 0) {
-    kap.innerHTML = '<p class="bos">Bu filtrelerle eşleşen restoran yok. Filtreleri temizleyip tekrar deneyin.</p>';
+    kap.innerHTML = '<p class="bos">No restaurants match these filters. Clear the filters and try again.</p>';
   } else {
     kap.innerHTML = liste.map(kartHTML).join('');
   }
 
   document.getElementById('sonucSayisi').textContent =
-    `${liste.length} restoran${liste.length !== RESTORANLAR.length ? ` (toplam ${RESTORANLAR.length})` : ''}`;
+    `${liste.length} restaurant${liste.length === 1 ? '' : 's'}${liste.length !== RESTORANLAR.length ? ` (of ${RESTORANLAR.length})` : ''}`;
 }
 
 // kure.js ülkeye tıklanınca çağırır; '' filtreyi temizler.

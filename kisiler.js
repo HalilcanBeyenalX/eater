@@ -3,13 +3,13 @@
 async function kisileriGoster() {
   const kap = document.getElementById('icerik');
   if (!eaterHesap.hazir()) {
-    kap.innerHTML = '<p class="panel">Kişiler henüz yapılandırılmadı (Supabase ayarları boş).</p>';
+    kap.innerHTML = '<p class="panel">Eaters are not configured yet (Supabase settings are empty).</p>';
     return;
   }
   const { data: profiller, error } = await eaterHesap.istemci
     .from('profiller').select('id, kullanici_adi, tanitim')
     .order('created_at', { ascending: false }).limit(100);
-  if (error) { kap.innerHTML = `<p class="panel hata">Liste yüklenemedi: ${kacis(error.message)}</p>`; return; }
+  if (error) { kap.innerHTML = `<p class="panel hata">Could not load the list: ${kacis(error.message)}</p>`; return; }
 
   const takip = await eaterHesap.takipEttiklerim(); // girişsizse null
 
@@ -19,7 +19,7 @@ async function kisileriGoster() {
     const dugme = kendim ? '' : `
       <button type="button" class="takip-btn${takipte ? ' takipte' : ''}"
         data-id="${kacis(p.id)}" data-takipte="${takipte ? '1' : ''}">
-        ${takipte ? '✓ Eater’ın' : '+ Eater ekle'}
+        ${takipte ? '✓ Your Eater' : '+ Add Eater'}
       </button>`;
     return `
       <article class="ziyaret kisi-satir">
@@ -33,8 +33,8 @@ async function kisileriGoster() {
 
   kap.innerHTML = `
     <div class="panel">
-      <h2>Kişiler</h2>
-      ${profiller.length === 0 ? '<p class="silik">Henüz kimse yok — ilk sen ol.</p>' : ''}
+      <h2>Eaters</h2>
+      ${profiller.length === 0 ? '<p class="silik">Nobody here yet — be the first.</p>' : ''}
       ${profiller.map(satir).join('')}
     </div>`;
 

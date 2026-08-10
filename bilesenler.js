@@ -1,17 +1,18 @@
 // EATER — app.js ve detay.js tarafından paylaşılan çizim yardımcıları.
 
-const FIYAT_SEMBOLLERI = { ucuz: '₺', orta: '₺₺', pahali: '₺₺₺' };
-const FIYAT_ADLARI = { ucuz: 'Ucuz', orta: 'Orta', pahali: 'Pahalı' };
+// Site globale açıldı: fiyat simgesi para biriminden bağımsız $ ölçeği.
+const FIYAT_SEMBOLLERI = { ucuz: '$', orta: '$$', pahali: '$$$' };
+const FIYAT_ADLARI = { ucuz: 'Budget', orta: 'Mid-range', pahali: 'High-end' };
 
-// oduller[].tip -> kısa, rozete uygun Türkçe etiket. Tanınmayan bir tip
-// asla ham `detay` metnine düşmez; "Ödüllü" ile karşılanır.
+// oduller[].tip -> kısa, rozete uygun etiket. Tanınmayan bir tip
+// asla ham `detay` metnine düşmez; "Award-winning" ile karşılanır.
 const ODUL_ETIKETLERI = {
-  'michelin-yildiz': 'Michelin yıldızı',
+  'michelin-yildiz': 'Michelin star',
   'michelin-bib': 'Michelin Bib Gourmand',
-  'michelin-secilmis': 'Michelin Guide seçkisi',
-  'michelin-yesil': 'Michelin Yeşil Yıldız',
+  'michelin-secilmis': 'Michelin Guide selection',
+  'michelin-yesil': 'Michelin Green Star',
   'gault-millau': 'Gault&Millau',
-  'servis-odulu': 'Servis ödülü',
+  'servis-odulu': 'Service award',
   '50best': "World's 50 Best"
 };
 
@@ -21,7 +22,7 @@ const ODUL_ETIKETLERI = {
 const BOS_ISARET = '<span class="deger-yok">—</span>';
 
 function odulEtiketi(tip) {
-  return ODUL_ETIKETLERI[tip] || 'Ödüllü';
+  return ODUL_ETIKETLERI[tip] || 'Award-winning';
 }
 
 function veyaYok(deger, bosMetin = BOS_ISARET) {
@@ -29,9 +30,10 @@ function veyaYok(deger, bosMetin = BOS_ISARET) {
   return deger;
 }
 
-// Sayıyı Türkçe ondalık ayırıcıyla (virgül) biçimlendirir: 8.6 -> "8,6".
+// Sayıyı nokta ondalıklı biçimlendirir: 8.6 -> "8.6". (Ad tarihsel; site
+// İngilizceye geçince ayraç da noktaya döndü, çağıran yerler değişmedi.)
 function ondalikTR(sayi, basamak = 1) {
-  return sayi.toFixed(basamak).replace('.', ',');
+  return sayi.toFixed(basamak);
 }
 
 function puanRozeti(etiket, puan) {
@@ -50,7 +52,7 @@ function puanRozeti(etiket, puan) {
 function fiyatEtiketi(segment) {
   const sembol = FIYAT_SEMBOLLERI[segment];
   if (!sembol) return '<span class="fiyat fiyat-yok">—</span>';
-  return `<span class="fiyat" title="${FIYAT_ADLARI[segment]} fiyat aralığı">${sembol}</span>`;
+  return `<span class="fiyat" title="${FIYAT_ADLARI[segment]} price range">${sembol}</span>`;
 }
 
 // Fotoğraf yardımcıları. fotolar[] girdileri: { dosya, alt, kaynak, kredi }
@@ -61,7 +63,7 @@ function ilkFoto(fotolar) {
 function fotoKredisi(f) {
   if (!f.kredi && !f.kaynak) return '';
   const kaynak = f.kaynak
-    ? ` · <a href="${f.kaynak}" target="_blank" rel="noopener">kaynak</a>`
+    ? ` · <a href="${f.kaynak}" target="_blank" rel="noopener">source</a>`
     : '';
   return `<figcaption class="foto-kredi silik">${f.kredi || '—'}${kaynak}</figcaption>`;
 }
@@ -82,9 +84,9 @@ function gezinmeHTML(aktif) {
     `<a class="sekme${aktif === anahtar ? ' sekme-aktif' : ''}" href="${href}">${ad}</a>`;
   return `
     <nav class="gezinme">
-      ${sekme('index.html', 'Keşfet', 'kesfet')}
+      ${sekme('index.html', 'Explore', 'kesfet')}
       ${sekme('gunluk.html', 'ATE', 'gunluk')}
-      ${sekme('kisiler.html', 'Kişiler', 'kisiler')}
+      ${sekme('kisiler.html', 'Eaters', 'kisiler')}
       <span id="hesapKutusu" class="hesap-kutusu"></span>
     </nav>`;
 }
@@ -118,7 +120,7 @@ function ziyaretFotolariHTML(z) {
   if (yollar.length === 0 || !eaterHesap.hazir()) return '';
   return `<div class="ziyaret-fotolar">${yollar.map(y =>
     `<img class="ziyaret-foto" src="${kacis(eaterHesap.fotoUrl(y))}"
-          alt="Yemek fotoğrafı" loading="lazy">`).join('')}</div>`;
+          alt="Food photo" loading="lazy">`).join('')}</div>`;
 }
 
 // Tam boy görüntüleme: kap içindeki .ziyaret-foto tıklamalarını yakalar.
@@ -128,7 +130,7 @@ function fotoBuyutmeKur(kap) {
     if (!img) return;
     const ortu = document.createElement('div');
     ortu.className = 'foto-buyutme';
-    ortu.innerHTML = `<img src="${kacis(img.src)}" alt="Yemek fotoğrafı — tam boy">`;
+    ortu.innerHTML = `<img src="${kacis(img.src)}" alt="Food photo — full size">`;
     ortu.addEventListener('click', () => ortu.remove());
     document.body.appendChild(ortu);
   });
@@ -148,5 +150,5 @@ function mesafeKm(a, b) {
 }
 
 function mesafeMetni(km) {
-  return km < 10 ? `~${ondalikTR(km)} km` : `~${Math.round(km).toLocaleString('tr-TR')} km`;
+  return km < 10 ? `~${ondalikTR(km)} km` : `~${Math.round(km).toLocaleString('en-US')} km`;
 }

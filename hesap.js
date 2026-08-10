@@ -37,9 +37,9 @@ const eaterHesap = (() => {
     if (!istemci) { kutu.innerHTML = ''; return; }
     const o = await oturum();
     kutu.innerHTML = o
-      ? `<a href="kisi.html?id=${encodeURIComponent(o.user.id)}">Profilim</a>
-         <button type="button" id="btnCikis">Çıkış</button>`
-      : '<a href="gunluk.html">Giriş</a>';
+      ? `<a href="kisi.html?id=${encodeURIComponent(o.user.id)}">My profile</a>
+         <button type="button" id="btnCikis">Log out</button>`
+      : '<a href="gunluk.html">Log in</a>';
     document.getElementById('btnCikis')?.addEventListener('click', cikisYap);
   }
 

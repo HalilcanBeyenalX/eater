@@ -2,12 +2,12 @@
 // Globe (CDN) veya DUNYA_ULKELER yoksa hiçbir şey çizilmez; #kureBolumu gizli
 // kalır ve sayfa bugünkü filtre+liste haliyle çalışır.
 
-// veri.js ülke adları Türkçe, sınır verisi ISO alpha-3 — eşleme buradan.
+// veri.js ülke adları İngilizce, sınır verisi ISO alpha-3 — eşleme buradan.
 // Kataloğa yeni ülke eklenince buraya bir satır eklemek yeterli (README'de not).
 const ULKE_KODLARI = {
-  'Türkiye': 'TUR', 'İtalya': 'ITA', 'Fransa': 'FRA', 'İspanya': 'ESP',
-  'Yunanistan': 'GRC', 'Almanya': 'DEU', 'İngiltere': 'GBR', 'Hollanda': 'NLD',
-  'Portekiz': 'PRT', 'ABD': 'USA', 'Japonya': 'JPN', 'Güney Kore': 'KOR'
+  'Turkey': 'TUR', 'Italy': 'ITA', 'France': 'FRA', 'Spain': 'ESP',
+  'Greece': 'GRC', 'Germany': 'DEU', 'United Kingdom': 'GBR', 'Netherlands': 'NLD',
+  'Portugal': 'PRT', 'USA': 'USA', 'Japan': 'JPN', 'South Korea': 'KOR'
 };
 const KOD_ULKE = Object.fromEntries(
   Object.entries(ULKE_KODLARI).map(([ad, kod]) => [kod, ad]));
@@ -90,35 +90,35 @@ async function konumAra() {
   const mesaj = document.getElementById('konumMesaj');
   const sorgu = document.getElementById('konumArama').value.trim();
   if (!sorgu) return;
-  mesaj.textContent = 'Aranıyor…';
+  mesaj.textContent = 'Searching…';
   try {
     const yanit = await fetch(
       'https://nominatim.openstreetmap.org/search?format=json&limit=1&q=' +
         encodeURIComponent(sorgu),
-      { headers: { 'Accept-Language': 'tr' } });
+      { headers: { 'Accept-Language': 'en' } });
     if (!yanit.ok) throw new Error(String(yanit.status));
     const liste = await yanit.json();
     if (liste.length === 0) {
-      mesaj.textContent = 'Bulunamadı — daha genel bir ad dene ("Kadıköy, İstanbul" gibi).';
+      mesaj.textContent = 'No match — try something broader (e.g. "Kadıköy, Istanbul").';
       return;
     }
     konumBelirle(Number(liste[0].lat), Number(liste[0].lon),
       `📍 ${liste[0].display_name.split(',')[0]}`);
   } catch {
-    mesaj.textContent = 'Bağlantı hatası — internetini kontrol edip tekrar dene.';
+    mesaj.textContent = 'Connection error — check your internet and try again.';
   }
 }
 
 function konumumuKullan() {
   const mesaj = document.getElementById('konumMesaj');
   if (!navigator.geolocation) {
-    mesaj.textContent = 'Tarayıcın konum desteklemiyor — yazarak arayabilirsin.';
+    mesaj.textContent = "Your browser doesn't support location — you can search by typing.";
     return;
   }
-  mesaj.textContent = 'Konum alınıyor…';
+  mesaj.textContent = 'Getting your location…';
   navigator.geolocation.getCurrentPosition(
-    p => konumBelirle(p.coords.latitude, p.coords.longitude, '📍 Konumun'),
-    () => { mesaj.textContent = 'Konum izni verilmedi — yazarak arayabilirsin.'; });
+    p => konumBelirle(p.coords.latitude, p.coords.longitude, '📍 Your location'),
+    () => { mesaj.textContent = 'Location permission denied — you can search by typing.'; });
 }
 
 function konumCubuguKur() {

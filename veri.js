@@ -9,13 +9,13 @@ const RESTORANLAR = [
   {
     "id": "karakoy-lokantasi",
     "isim": "Karaköy Lokantası",
-    "ulke": "Türkiye",
-    "sehir": "İstanbul",
+    "ulke": "Turkey",
+    "sehir": "Istanbul",
     "semt": "Karaköy",
     "mutfak": [
-      "Türk",
+      "Turkish",
       "Meyhane",
-      "Akdeniz"
+      "Mediterranean"
     ],
     "adres": "Kemankeş Mahallesi, Kemankeş Caddesi No:57, Karaköy, Beyoğlu, İstanbul",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Karak%C3%B6y%20Lokantas%C4%B1%2C%20Kemanke%C5%9F%20Caddesi%20No%3A57%2C%20Karak%C3%B6y%2C%20Beyo%C4%9Flu%2C%20%C4%B0stanbul",
@@ -26,85 +26,85 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "orta",
       "kisiBasi": null,
-      "not": "Kişi başı harcama aralığı doğrulanamadı, bu yüzden kisiBasi boş bırakıldı. Elde edilen somut veriler: Michelin Guide restoranı 'olağanüstü fiyat/kalite oranı' gerekçesiyle Bib Gourmand'a alıyor ve ana yemeklerin nadiren 25-30 avroyu aştığını yazıyor; meyhankoli.com mekânı ₺₺ seviyesinde etiketliyor. Buna karşılık Google yorumlarında (Wanderlog üzerinden okunanlar) kişi başı 80 ₺ ekmek, 140 ₺ su ve %10 servis bedeli gibi ek kalemler ile 6.000 ₺'yi aşan bir hesap bildiriliyor; Türkçe yorumlarda 'porsiyonlar küçük, fiyat yüksek' eleştirisi tekrarlanıyor. Segment bu iki taraf tartıldıktan sonra 'orta' seçildi; kaynaklar bu konuda hemfikir değil. Sahibinin belirlediği eşiklere göre (ucuz: 750 ₺ altı; orta: 750-2.500 ₺; pahalı: 2.500 ₺ üstü) bu veriler 'orta' segmentine karşılık geliyor."
+      "not": "The per-person spending range could not be verified, so kisiBasi was left blank. Concrete data obtained: the Michelin Guide places the restaurant in the Bib Gourmand category citing an 'exceptional price/quality ratio' and notes that main courses rarely exceed 25-30 euros; meyhankoli.com tags the venue at the ₺₺ level. In contrast, Google reviews (read via Wanderlog) report a bill exceeding ₺6,000 per person with extra line items such as ₺80 bread, ₺140 water, and a 10% service charge; Turkish-language reviews repeatedly criticize 'small portions, high prices.' After weighing both sides, the segment was set to 'orta' (mid-range); the sources do not agree on this point. According to the thresholds set by the owner (cheap: under ₺750; mid-range: ₺750-2,500; expensive: over ₺2,500), this data corresponds to the mid-range segment."
     },
     "yemek": {
       "puan": 8.6,
-      "ozet": "Kaynaklar yemek konusunda birbirini destekliyor: MICHELIN Guide Türkiye 2026 seçkisinde Bib Gourmand, TripAdvisor 4,2/5 (yaklaşık 1.360 yorum, İstanbul'da 9.705 restoran içinde ~448. sıra), Wanderlog üzerinden görülen Google puanı 4,3 (3.031 yorum). Övgü neredeyse tamamen mezelerde ve hünkar beğendide yoğunlaşıyor. 9,0'a çıkarılmamasının nedeni iki tekrar eden şikâyet: porsiyonların küçük bulunması ve tatlıların menünün en zayıf halkası sayılması (Uplifers incelemesi). Bu, 8,0-8,9 bandındaki 'güçlü ama tekrarlayan küçük şikâyetler var' tanımına uyuyor."
+      "ozet": "Sources reinforce each other on the food: Bib Gourmand in the MICHELIN Guide Turkey 2026 selection, TripAdvisor 4.2/5 (about 1,360 reviews, ranked ~448th out of 9,705 restaurants in Istanbul), a Google rating of 4.3 as seen via Wanderlog (3,031 reviews). Praise is concentrated almost entirely on the mezes and the hünkar beğendi. The reason it wasn't raised to 9.0 is two recurring complaints: portions considered small and desserts seen as the menu's weakest link (Uplifers review). This fits the 8.0-8.9 band definition of 'strong but with recurring minor complaints.'"
     },
     "neYenir": [
       {
         "yemek": "Hünkar Beğendi",
         "kacKisiOnerdi": null,
-        "not": "MICHELIN Guide açıklamasında mekânın yıldız yemeği olarak anlatılıyor (közlenmiş patlıcan üzerine ağır ateşte pişmiş kuzu). Wanderlog'da okunan Google yorumlarında ve Türkçe yemek yazılarında da tekrar ediyor. Kaç kişinin önerdiği sayılabilir bir yorum kümesinden çıkarılamadı."
+        "not": "Described in the MICHELIN Guide write-up as the venue's signature dish (slow-cooked lamb over smoked eggplant purée). It also recurs in Google reviews read via Wanderlog and in Turkish food articles. How many people recommended it could not be derived from a countable set of comments."
       },
       {
         "yemek": "Ahtapot Izgara",
         "kacKisiOnerdi": null,
-        "not": "MICHELIN Guide'ın 'kusursuz ızgara ahtapot' vurgusu, restoranın kendi menü listesindeki 'Ahtapot Izgara' kalemi ve Türkçe blog derlemelerindeki meze önerileriyle örtüşüyor."
+        "not": "The MICHELIN Guide's emphasis on 'flawless grilled octopus' matches the 'Ahtapot Izgara' item on the restaurant's own menu list and the meze recommendations found in Turkish blog roundups."
       },
       {
         "yemek": "Pastırmalı Humus",
         "kacKisiOnerdi": null,
-        "not": "Uplifers incelemesinde alışılmıştan daha hafif ve az yağlı bulunarak öne çıkarılıyor; Türkçe mekân derlemelerinde de humus özellikle övülüyor."
+        "not": "Highlighted in the Uplifers review as lighter and less oily than usual; the hummus is also specifically praised in Turkish venue roundups."
       },
       {
         "yemek": "Topik",
         "kacKisiOnerdi": null,
-        "not": "Uplifers incelemesinde şeker-tarçın-soğan dengesiyle ayrıca anlatılıyor; meze seçkisi üzerine yazan Türkçe kaynaklarda da geçiyor."
+        "not": "Also described in the Uplifers review for its sugar-cinnamon-onion balance; it also appears in Turkish sources writing about the meze selection."
       },
       {
         "yemek": "Fava",
         "kacKisiOnerdi": null,
-        "not": "Wanderlog üzerinden okunan bir Google yorumunda 'İzmirli olmama rağmen yediğim en lezzetli fava' diye anlatılıyor; restoranın menü listesinde de yer alıyor."
+        "not": "Described in a Google review read via Wanderlog as 'the tastiest fava I've eaten despite being from Izmir'; it also appears on the restaurant's own menu list."
       }
     ],
     "ambiyans": {
       "puan": 8.0,
-      "ozet": "Turkuaz çini kaplamalı iç mekân ve liman kenarındaki terasa dair övgü hemen her kaynakta var; MICHELIN Guide sakin terası ve kıyı konumunu ayrıca anıyor. Öğlen esnaf lokantası, akşam meyhane olarak iki ayrı konseptle çalıştığı Türkçe kaynaklarda tutarlı biçimde anlatılıyor. Puanı 9'un altında tutan şey, Google ve TripAdvisor yorumlarında tekrarlanan iki şikâyet: masaların birbirine çok yakın olması ve gürültü seviyesi ('gördüğüm en gürültülü restoran' yorumu dahil).",
+      "ozet": "Praise for the turquoise tile-clad interior and the harborside terrace appears in nearly every source; the MICHELIN Guide separately notes the calm terrace and waterfront location. Turkish sources consistently describe it operating under two distinct concepts: a neighborhood lunch spot by day and a meyhane by night. What keeps the score below 9 is two recurring complaints in Google and TripAdvisor reviews: tables being too close together and the noise level (including a review calling it 'the noisiest restaurant I've seen').",
       "etiketler": [
-        "canlı",
-        "gürültülü",
-        "teras",
+        "lively",
+        "noisy",
+        "terrace",
         "meyhane",
-        "çini-dekor"
+        "tiled-decor"
       ],
       "dressCode": null,
       "uygun": [
-        "grup",
-        "çift",
-        "iş yemeği"
+        "groups",
+        "couples",
+        "business dinner"
       ]
     },
     "servis": {
       "puan": 7.5,
-      "ozet": "Servis, bu restoranın en bölünmüş başlığı. Bir yanda TripAdvisor yorumlarında İngilizce bilen, güler yüzlü personel övgüsü ve arama sonuçlarında 'profesyonel personel' yorumları var. Diğer yanda Uplifers incelemesi servisi mekânın asıl zayıf yanı sayıp 'tek bir gülümseme yakalayamadım' diyor ve TripAdvisor'da işletme sahibiyle yaşanan olumsuz bir deneyimi anlatan bir yorum bulunuyor. Belirgin ve tekrar eden bir zayıflık olduğu için 7,0-7,9 bandına konuldu.",
+      "ozet": "Service is this restaurant's most divided topic. On one side there's praise in TripAdvisor reviews for English-speaking, friendly staff and 'professional staff' comments in search results. On the other, the Uplifers review considers service the venue's actual weak point, saying 'I couldn't catch a single smile,' and there's a TripAdvisor review describing a negative experience with the owner. Because this is a clear and recurring weakness, it was placed in the 7.0-7.9 band.",
       "artilar": [
-        "TripAdvisor yorumlarında İngilizce konuşan personel",
-        "Meze dolabının önünde durup seçerek sipariş verebilme"
+        "English-speaking staff noted in TripAdvisor reviews",
+        "Being able to order by standing at the meze case and picking items"
       ],
       "eksiler": [
-        "Uplifers incelemesinde mesafeli ve gülümsemeyen personel eleştirisi",
-        "Masaların çok yakın olması ve yüksek gürültü seviyesi (Google ve TripAdvisor yorumları)",
-        "Ekmek ve suyun ayrıca ücretlendirilmesi ve üstüne %10 servis bedeli (Google yorumları)",
-        "Tatlıların menünün en zayıf halkası bulunması (Uplifers)"
+        "Uplifers review criticizes distant, unsmiling staff",
+        "Tables too close together and high noise level (Google and TripAdvisor reviews)",
+        "Bread and water charged separately, plus a 10% service fee on top (Google reviews)",
+        "Desserts found to be the menu's weakest link (Uplifers)"
       ]
     },
     "oduller": [
       {
         "tip": "michelin-bib",
-        "detay": "MICHELIN Guide İstanbul — Bib Gourmand. 2026 İstanbul Bib Gourmand seçkisinde yer alıyor (iki bağımsız listeden doğrulandı)."
+        "detay": "MICHELIN Guide Istanbul — Bib Gourmand. Included in the 2026 Istanbul Bib Gourmand selection (verified from two independent lists)."
       }
     ],
     "rezervasyon": {
       "gerekiyor": true,
       "yontem": [
-        "telefon",
+        "phone",
         "online"
       ],
       "telefon": "+90 212 292 44 55",
       "link": "https://www.karakoylokantasi.com/en/reservation",
-      "beklemeSuresi": "Rezervasyonun şart olduğu hem Türkçe mekân yazılarında hem TripAdvisor yorumlarında tekrarlanıyor; bir TripAdvisor yorumunda cumartesi akşamı yaklaşık bir saat beklendiği anlatılıyor. Restoranın kendi rezervasyon sayfası masayı rezervasyon saatinden itibaren 15 dakika tuttuklarını yazıyor.",
+      "beklemeSuresi": "That reservations are required is repeated in both Turkish venue write-ups and TripAdvisor reviews; one TripAdvisor review describes waiting about an hour on a Saturday evening. The restaurant's own reservation page states that they hold the table for 15 minutes from the reservation time.",
       "kapora": null
     },
     "kaynaklar": {
@@ -119,7 +119,7 @@ const RESTORANLAR = [
         "incelenen": 5
       },
       "tiktok": null,
-      "diger": "MICHELIN Guide Türkiye 2026 (Bib Gourmand seçkisi) ve Uplifers incelemesi de değerlendirmeye dahil edildi."
+      "diger": "The MICHELIN Guide Turkey 2026 (Bib Gourmand selection) and the Uplifers review were also included in the assessment."
     },
     "fotolar": [],
     "sonGuncelleme": "2026-08-08"
@@ -127,13 +127,13 @@ const RESTORANLAR = [
   {
     "id": "balikci-kahraman",
     "isim": "Balıkçı Kahraman",
-    "ulke": "Türkiye",
-    "sehir": "İstanbul",
+    "ulke": "Turkey",
+    "sehir": "Istanbul",
     "semt": "Rumelikavağı",
     "mutfak": [
-      "Deniz Ürünleri",
-      "Karadeniz",
-      "Türk"
+      "Seafood",
+      "Black Sea",
+      "Turkish"
     ],
     "adres": "Rumeli Kavağı Mahallesi, İskele Caddesi No:15, Sarıyer, İstanbul",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Bal%C4%B1k%C3%A7%C4%B1%20Kahraman%2C%20%C4%B0skele%20Caddesi%20No%3A15%2C%20Rumeli%20Kava%C4%9F%C4%B1%2C%20Sar%C4%B1yer%2C%20%C4%B0stanbul",
@@ -141,79 +141,79 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "pahali",
       "kisiBasi": null,
-      "not": "Bu restoranın en çok konuşulan konusu fiyat, ama doğrulanmış rakamlar birbiriyle uyuşmadığı için kişi başı aralık verilmedi. Doğrulanan somut veriler: (1) Şikayetvar'a 25 Aralık 2025'te düşen bir şikâyette iki kişi için 16.000 ₺, yani kişi başı yaklaşık 8.000 ₺; (2) aynı sitedeki diğer şikâyetlerde iki kişilik hesaplar 8.500-11.500 ₺ aralığında; (3) 11 Ocak 2026'da basına yansıyan bir adisyonda kalkanın kilosu 8.000 ₺, 2,5 kg balık 20.000 ₺, domates salatası 1.000 ₺, kalamar tava 1.000 ₺, su-ekmek-mısır ekmeği 600 ₺, iki tatlı 800 ₺ ve %10 servis 2.600 ₺ ile toplam 28.900 ₺. Kalkan kiloyla satıldığı ve mekânın menü vermediği için hesap sipariş edilen balığın ağırlığına göre çok geniş bir bantta değişiyor; yorumlarda fiyatların sipariş öncesi sorulması gerektiği ısrarla tekrarlanıyor. Ekşi Sözlük'te yalnızca adisyona ayrılmış, onlarca sayfalık ayrı bir başlık bulunuyor. Onedio'daki 'iki kişi 1.500-2.000 ₺' bilgisi tarihsiz ve güncel adisyonlarla açıkça çeliştiği için kullanılmadı. Sahibinin belirlediği eşiklere göre (ucuz: 750 ₺ altı; orta: 750-2.500 ₺; pahalı: 2.500 ₺ üstü) kişi başı ~8.000 ₺'lik doğrulanmış rakamlar 'pahalı' segmentine karşılık geliyor."
+      "not": "The most talked-about topic for this restaurant is price, but since the verified figures don't agree with each other, no per-person range was given. Verified concrete data: (1) a complaint filed on Şikayetvar on December 25, 2025 reports ₺16,000 for two people, i.e. about ₺8,000 per person; (2) other complaints on the same site show two-person bills ranging ₺8,500-11,500; (3) a receipt reported in the press on January 11, 2026 shows turbot at ₺8,000/kg, 2.5 kg of fish at ₺20,000, tomato salad ₺1,000, fried calamari ₺1,000, water-bread-cornbread ₺600, two desserts ₺800, and a 10% service charge of ₺2,600, for a total of ₺28,900. Because turbot is sold by weight and the venue doesn't provide a menu, the bill varies widely depending on the weight of fish ordered; reviews insistently repeat that prices should be asked before ordering. Ekşi Sözlük has a separate, dozens-of-pages-long thread devoted solely to the bill. The 'two people for ₺1,500-2,000' figure on Onedio is undated and clearly contradicts current receipts, so it was not used. According to the owner's thresholds (cheap: under ₺750; mid-range: ₺750-2,500; expensive: over ₺2,500), the verified figures of roughly ₺8,000 per person correspond to the expensive segment."
     },
     "yemek": {
       "puan": 8.7,
-      "ozet": "Şikâyetlerin neredeyse tamamı fiyata, yemeğe değil. MICHELIN Guide Türkiye 2026 seçkisinde yer alıyor ve bütün hâlde ızgara kalkanı, lakerdayı ve balık kokorecini övüyor; Vedat Milor domates salatasına ve hamsili mısır ekmeği + lakerda ikilisine 10 üzerinden 10 veriyor. TripAdvisor'daki bir yorumun başlığı bile 'Kalkan müthiş ama fiyat...' Yemek tarafında tek belirgin itiraz, bir TikTok incelemesinde lakerdanın daha sıradan yerlerde daha iyisinin yendiğinin söylenmesi. TripAdvisor'ın 3,7/5'lik toplu puanı ise ağırlıkla fiyat ve ambiyans kaynaklı; bu iki başlık ayrı ayrı puanlandığı için yemek puanına yansıtılmadı."
+      "ozet": "Almost all the complaints are about price, not the food. It's included in the MICHELIN Guide Turkey 2026 selection, which praises the whole grilled turbot, lakerda (salted bonito), and fish kokoreç; Vedat Milor gives the tomato salad and the anchovy cornbread + lakerda pairing a perfect 10/10. Even a TripAdvisor review title reads 'The turbot is amazing but the price...' The only clear complaint on the food side is a TikTok review saying better lakerda can be found at more ordinary places. TripAdvisor's aggregate rating of 3.7/5 is mostly driven by price and ambiance; since those are scored separately, this wasn't reflected in the food score."
     },
     "neYenir": [
       {
         "yemek": "Bütün Kalkan",
         "kacKisiOnerdi": null,
-        "not": "Mekânın imza yemeği. MICHELIN Guide 'kusursuz ızgara kalkan'ı evin spesiyali olarak anıyor; restoranın kendi sitesi kalkanın geleneksel fırında bütün hâlde pişirildiğini anlatıyor; Vedat Milor bütün kalkanı ızgarada pişirebilen üç ustadan birinin burada olduğunu yazıyor. Fiyatı kiloyla belirlendiği için sipariş öncesi ağırlık ve tutar sorulması yorumlarda tekrarlanan bir uyarı."
+        "not": "The venue's signature dish. The MICHELIN Guide calls the flawless grilled turbot the house specialty; the restaurant's own website says the turbot is traditionally oven-roasted whole; Vedat Milor writes that this is one of only three places with a chef who can properly grill a whole turbot. Since it's priced by weight, reviews repeatedly warn to ask about weight and cost before ordering."
       },
       {
         "yemek": "Domates Salatası",
         "kacKisiOnerdi": null,
-        "not": "Vedat Milor 10 üzerinden 10 veriyor. Meyhankoli ve TikTok incelemesinde de kalkanın yanında öne çıkan kalem olarak geçiyor."
+        "not": "Vedat Milor gives it a perfect 10/10. It's also mentioned in Meyhankoli and the TikTok review as a standout side alongside the turbot."
       },
       {
         "yemek": "Lakerda",
         "kacKisiOnerdi": null,
-        "not": "MICHELIN Guide 'tereyağı kıvamında lakerda' diye anlatıyor, Vedat Milor mısır ekmeğinin üzerine sürülmesini tavsiye edip 10/10 veriyor. Buna karşılık bir TikTok incelemesinde 'daha ortalama yerlerde daha iyisini yedim' deniyor — kaynaklar bu kalemde ayrışıyor."
+        "not": "The MICHELIN Guide describes it as 'butter-textured lakerda,' and Vedat Milor recommends spreading it on cornbread, giving it a 10/10. In contrast, a TikTok review says 'I've had better at more average places' — sources diverge on this item."
       },
       {
         "yemek": "Hamsili Mısır Ekmeği",
         "kacKisiOnerdi": null,
-        "not": "Vedat Milor lakerdayla birlikte 10/10 veriyor; TikTok incelemesinde de balık gelmeden servis edilen kalemler arasında sayılıyor."
+        "not": "Vedat Milor gives it a 10/10 alongside the lakerda; the TikTok review also counts it among the items served before the fish arrives."
       },
       {
         "yemek": "Balık Kokoreç",
         "kacKisiOnerdi": null,
-        "not": "MICHELIN Guide'ın mekân için saydığı yemekler arasında ilk sırada geçiyor; Onedio incelemesi de Michelin'in bu öneriyi öne çıkardığını aktarıyor."
+        "not": "Listed first among the dishes the MICHELIN Guide names for this venue; the Onedio review also cites this as Michelin's top recommendation."
       }
     ],
     "ambiyans": {
       "puan": 6.5,
-      "ozet": "Ambiyans, kaynaklarda tutarlı biçimde mekânın zayıf yanı. Deniz manzarası yok, mekân ara sokakta ve iç dekorasyonun standart bir balıkçıdan farkı olmadığı yazılıyor; TripAdvisor'da 40 dakikalık yolu 'sıfır ambiyans' gerekçesiyle sorgulayan yorumlar var. Ekşi Sözlük yorumlarında da 'tadı iyi, servis iyi ama manzara yok ve fiyat çok yüksek' örüntüsü tekrarlanıyor. Bu, 7,0 altındaki 'kalıcı memnuniyetsizlik' tanımına uyuyor. Karşı tarafta yalnızca 'şirin mekân' düzeyinde birkaç ifade var.",
+      "ozet": "Ambiance is consistently the venue's weak point across sources. There's no sea view, the venue is on a side street, and the interior decor is said to be no different from a standard fish restaurant; TripAdvisor reviews question the 40-minute trip citing 'zero ambiance.' Ekşi Sözlük reviews repeat the same pattern: 'good taste, good service, but no view and prices are very high.' This fits the below-7.0 definition of 'persistent dissatisfaction.' On the other side, there are only a few comments at the level of 'cute place.'",
       "etiketler": [
-        "manzarasız",
-        "sade",
-        "balıkçı",
-        "ara-sokak"
+        "no-view",
+        "simple",
+        "fish-tavern",
+        "side-street"
       ],
       "dressCode": null,
       "uygun": [
-        "grup"
+        "groups"
       ]
     },
     "servis": {
       "puan": 6.8,
-      "ozet": "Personelin ilgisi ve balığın pişirilmesi konusunda övgü var, ama tekrarlayan ve ciddi bir örüntü puanı aşağı çekiyor: menü verilmemesi ve fiyatların sipariş öncesi söylenmemesi. Şikayetvar'daki dört şikâyetin dördü de fahiş fiyat başlıklı ve hiçbirine işletme yanıtı görünmüyor; sayfadaki marka puanı 1 değerlendirmeyle 0/100. Ekşi Sözlük yorumlarında 'sabit fiyat yok, müşteriye göre yazıyorlar' ve adisyon hatası iddiaları geçiyor. Fiyatın kendisi ayrı bir başlıkta değerlendirildiği için burada puanlanan şey fiyat değil, fiyatın müşteriye önceden bildirilmemesi.",
+      "ozet": "There's praise for staff attentiveness and how the fish is cooked, but a recurring, serious pattern pulls the score down: not providing a menu and not stating prices before ordering. All four complaints on Şikayetvar are about exorbitant pricing and none appear to have a business response; the page's brand score is 0/100 from a single review. Ekşi Sözlük reviews mention 'no fixed prices, they write it based on the customer' and allegations of bill errors. Since price itself is assessed under a separate heading, what's scored here is not the price but the failure to disclose it to customers in advance.",
       "artilar": [
-        "Bütün kalkanın ustalıkla pişirilmesi (MICHELIN Guide ve Vedat Milor değerlendirmeleri)",
-        "Hesap sonunda karpuz ve tatlı ikramı geldiğini belirten yorumlar",
-        "Ekşi Sözlük yorumlarında servis ve müşteri ilgisine tam not veren örnekler"
+        "Skillful cooking of the whole turbot (MICHELIN Guide and Vedat Milor reviews)",
+        "Reviews mentioning a complimentary watermelon and dessert at the end of the meal",
+        "Ekşi Sözlük comments giving full marks for service and customer attentiveness in some cases"
       ],
       "eksiler": [
-        "Menü verilmemesi; fiyatların sipariş öncesi söylenmediğine dair tekrarlayan şikâyetler",
-        "Adisyon hataları ve 'fiyatı müşteriye göre yazıyorlar' iddiaları (Ekşi Sözlük)",
-        "Şikayetvar'daki dört şikâyetin tamamı fahiş fiyat konulu ve işletme yanıtı yok",
-        "%10 servis bedelinin hesabı belirgin biçimde büyütmesi (Ocak 2026 adisyonunda 2.600 ₺)"
+        "No menu provided; recurring complaints that prices aren't stated before ordering",
+        "Bill errors and claims that 'prices are written based on the customer' (Ekşi Sözlük)",
+        "All four complaints on Şikayetvar concern exorbitant pricing with no business response",
+        "The 10% service charge noticeably inflating the bill (₺2,600 on the January 2026 receipt)"
       ]
     },
     "oduller": [
       {
         "tip": "michelin-secilmis",
-        "detay": "MICHELIN Guide Türkiye 2026 — rehberde seçilmiş restoran. Yıldız ya da Bib Gourmand değil; İstanbul Bib Gourmand listelerinde yer almıyor."
+        "detay": "MICHELIN Guide Turkey 2026 — restaurant selected in the guide. Not a star or Bib Gourmand; not included in the Istanbul Bib Gourmand lists."
       }
     ],
     "rezervasyon": {
       "gerekiyor": null,
       "yontem": [
-        "telefon",
-        "e-posta"
+        "phone",
+        "email"
       ],
       "telefon": "+90 212 242 64 47",
       "link": null,
@@ -229,9 +229,9 @@ const RESTORANLAR = [
       },
       "tiktok": {
         "incelenenVideo": 1,
-        "ozet": "İçeriği okunabilen tek video, bir yemek hesabı incelemesi: kalkan tava için en küçük balığın pişirildiği, yanında domates salatası, lakerda ve hamsili mısır ekmeği geldiği, hesabın 3.000 ₺ tuttuğu ve yazarın 'bu paraya değmez' dediği anlatılıyor. Balığın tazeliği ve pişirme yöntemi olumlu bulunmuş, lakerda ise beklentinin altında kalmış."
+        "ozet": "The only video whose content could be read is a meal-bill review: for the pan-fried turbot the smallest fish was cooked, served with tomato salad, lakerda, and anchovy cornbread; the bill came to ₺3,000 and the author said 'not worth the money.' The freshness and cooking method of the fish were found positive, while the lakerda fell short of expectations."
       },
-      "diger": "MICHELIN Guide Türkiye 2026 seçkisi, Vedat Milor değerlendirmesi, Şikayetvar'daki fiyat şikâyetleri ve Ekşi Sözlük'teki adisyon başlığı da değerlendirmeye dahil edildi."
+      "diger": "The MICHELIN Guide Turkey 2026 selection, Vedat Milor's review, the price complaints on Şikayetvar, and the receipt thread on Ekşi Sözlük were also included in the assessment."
     },
     "fotolar": [],
     "sonGuncelleme": "2026-08-08"
@@ -239,13 +239,13 @@ const RESTORANLAR = [
   {
     "id": "beyaz-firin-etiler",
     "isim": "Beyaz Fırın Etiler",
-    "ulke": "Türkiye",
-    "sehir": "İstanbul",
+    "ulke": "Turkey",
+    "sehir": "Istanbul",
     "semt": "Etiler",
     "mutfak": [
       "Brasserie",
-      "Pastane",
-      "Kahvaltı"
+      "Patisserie",
+      "Breakfast"
     ],
     "adres": "Etiler Mahallesi, Nispetiye Caddesi No:82, Beşiktaş, İstanbul",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Beyaz%20F%C4%B1r%C4%B1n%20Etiler%2C%20Nispetiye%20Caddesi%20No%3A82%2C%20Etiler%2C%20Be%C5%9Fikta%C5%9F%2C%20%C4%B0stanbul",
@@ -253,79 +253,79 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "orta",
       "kisiBasi": null,
-      "not": "Beyaz Fırın bir zincir ve yayımlanan fiyat listesi şube bazlı değil, marka geneli. Bu yüzden kişi başı aralık verilmedi. 2 Haziran 2026 tarihli marka geneli fiyat listesinden doğrulanan kalemler: iki kişilik kahvaltı tabağı 1.650 ₺, tek kişilik kahvaltı tabağı 750 ₺, kahvaltı tavası 860 ₺, patatesli gül böreği 190 ₺, Polka 240 ₺, menemen 320 ₺, şnitzel 650-780 ₺, somon ızgara 850 ₺, ev yapımı limonata 160 ₺, filtre kahve 130 ₺. Markanın kendi menü PDF'i de 2026 yaz menüsü olarak yayımlanmış durumda. Etiler şubesine özel TripAdvisor yorumlarında fiyatlar 'biraz pahalı ama Etiler için makul' diye değerlendiriliyor. Karşılaştırma için: Ağustos 2023'te Gurme Rehber'in Etiler şubesi yazısında börek tabağı 240 ₺, sucuklu poşe yumurta 210 ₺, çay 30 ₺ idi. Sahibinin belirlediği eşiklere göre (ucuz: 750 ₺ altı; orta: 750-2.500 ₺; pahalı: 2.500 ₺ üstü) kişi başı 750-1.650 ₺ aralığındaki bu kalemler 'orta' segmentine karşılık geliyor."
+      "not": "Beyaz Fırın is a chain and the published price list is brand-wide, not branch-specific. So no per-person range was given. Items verified from the brand-wide price list dated June 2, 2026: two-person breakfast platter ₺1,650, single-person breakfast platter ₺750, breakfast pan ₺860, potato gül böreği (rose pastry) ₺190, Polka ₺240, menemen ₺320, schnitzel ₺650-780, grilled salmon ₺850, homemade lemonade ₺160, filter coffee ₺130. The brand's own menu PDF has also been published as the 2026 summer menu. In TripAdvisor reviews specific to the Etiler branch, prices are described as 'a bit expensive but reasonable for Etiler.' For comparison: in an August 2023 Gurme Rehber article about the Etiler branch, the pastry platter was ₺240, poached egg with sucuk was ₺210, and tea was ₺30. According to the owner's thresholds (cheap: under ₺750; mid-range: ₺750-2,500; expensive: over ₺2,500), these items in the ₺750-1,650 per-person range correspond to the mid-range segment."
     },
     "yemek": {
       "puan": 7.5,
-      "ozet": "Yalnızca Etiler şubesine ait kaynaklar kullanıldı; markanın diğer şubelerine ait yorumlar (ör. Time Out'un Ataşehir-Suadiye-Erenköy değerlendirmesi ve Ataşehir şubesinin Yandex sayfası) kapsam dışı bırakıldı. Etiler için TripAdvisor 4,5/5 ama yalnızca 18 yorum üzerinden; Yandex Haritalar'da Nispetiye Cd. No:82 kaydı 4,3/5 ve 137 yorum. Pastane tarafı — özellikle patatesli gül böreği, Polka ve milföy — hem TripAdvisor'da hem Etiler şubesini ayrı ayrı yazan iki blog incelemesinde tutarlı biçimde övülüyor; Gurme Rehber Etiler şubesine lezzette 10 üzerinden 7,5 veriyor. Puanı aşağıda tutan şey Şikayetvar'ın Etiler şubesi sayfasındaki 11 şikâyette tekrarlanan hijyen ve yabancı madde bildirimleri (beş ay boyunca kıl, cam parçası, ambalajda plastik tel, bozuk pasta). Bu, 7,0-7,9 bandındaki 'belirgin ve sık tekrarlanan bir zayıflık' tanımına uyuyor."
+      "ozet": "Only sources specific to the Etiler branch were used; reviews of the brand's other branches (e.g. Time Out's Ataşehir-Suadiye-Erenköy review and the Ataşehir branch's Yandex page) were excluded. For Etiler, TripAdvisor is 4.5/5 but based on only 18 reviews; the Yandex Maps listing for Nispetiye Cd. No:82 shows 4.3/5 and 137 reviews. The bakery side — especially the potato gül böreği, Polka, and puff pastry — is consistently praised both on TripAdvisor and in two blog reviews specifically covering the Etiler branch; Gurme Rehber gives the Etiler branch 7.5/10 for taste. What keeps the score down is the recurring hygiene and foreign-object reports in the 11 complaints on Şikayetvar's Etiler branch page (hair, glass fragments, plastic wire in packaging, spoiled cake over five months). This fits the 7.0-7.9 band definition of 'a clear and frequently recurring weakness.'"
     },
     "neYenir": [
       {
         "yemek": "Patatesli Gül Böreği",
         "kacKisiOnerdi": null,
-        "not": "Marka geneli menü derlemelerinde 'markanın en ikonik tuzlu ürünü' olarak anlatılıyor (2026 fiyat listesinde 190 ₺). Etiler şubesine özel yazılarda da fırın reyonunun öne çıkan kalemleri arasında geçiyor."
+        "not": "Described in brand-wide menu roundups as 'the brand's most iconic savory item' (₺190 on the 2026 price list). It's also among the standout bakery-case items in write-ups specific to the Etiler branch."
       },
       {
         "yemek": "Polka",
         "kacKisiOnerdi": null,
-        "not": "Markanın gizli tarifli imza pastası; 2026 marka geneli fiyat listesinde 240 ₺. Şube ayrımı yapan bir kaynakta ayrıca doğrulanamadı, yani bu öneri marka düzeyinde geçerli."
+        "not": "The brand's secret-recipe signature cake; ₺240 on the 2026 brand-wide price list. Not separately verified in a branch-specific source, so this recommendation applies at the brand level."
       },
       {
         "yemek": "Kahvaltı Tavası",
         "kacKisiOnerdi": null,
-        "not": "2026 menüsünde 860 ₺; kızarmış hellim, ekşi mayalı ekmek üzerinde göz yumurta, dana jambon, üç çeşit mantar, kiraz domates ve avokadodan oluşuyor. Etiler şubesine gelen yorumlarda kahvaltı en çok övülen öğün."
+        "not": "₺860 on the 2026 menu; consists of grilled halloumi, a fried egg over sourdough bread, prosciutto, three types of mushroom, cherry tomatoes, and avocado. Breakfast is the most praised meal in reviews specific to the Etiler branch."
       },
       {
         "yemek": "Sucuklu Poşe Yumurta",
         "kacKisiOnerdi": null,
-        "not": "Gurme Rehber'in Etiler şubesi yazısında 'buradaki favorimiz' diye anlatılıyor. Aynı şubeyi yazan başka bir inceleme domates soslu, burrata peynirli poşe yumurta versiyonunu öne çıkarıyor."
+        "not": "Described as 'our favorite here' in Gurme Rehber's article on the Etiler branch. Another review of the same branch highlights a version with tomato sauce and burrata poached egg."
       },
       {
         "yemek": "Çilekli Milföy",
         "kacKisiOnerdi": null,
-        "not": "Etiler şubesini ayrı ele alan Üşengeç Şef incelemesinde tatlı olarak özellikle bu öneriliyor."
+        "not": "Specifically recommended as a dessert in the Üşengeç Şef review covering the Etiler branch."
       }
     ],
     "ambiyans": {
       "puan": 8.2,
-      "ozet": "Etiler şubesini ayrı ayrı yazan iki inceleme mekânı tutarlı biçimde övüyor: art deco etkili, iki katlı, yaklaşık 350 kişilik, dikey kış bahçeli bir mekân ve girişte 6,5 metrelik fırın tezgâhı; ikinci inceleme 'pırıl pırıl' diyor ve bahçe, kapalı salon ve üst kat olmak üzere üç ayrı oturma alanı olduğunu anlatıyor. Puanı 9'un altında tutan şey yoğunluk: hafta sonu kahvaltı saatlerinde mekânın dolduğu, kapıda karşılayan personel bulunmadığı ve kalabalık-gürültü sorunları birden fazla yorumda geçiyor.",
+      "ozet": "Two reviews specifically covering the Etiler branch consistently praise the venue: an art-deco-influenced, two-story space seating about 350, with a vertical winter garden and a 6.5-meter bakery counter at the entrance; a second review calls it 'sparkling clean' and describes three separate seating areas — garden, indoor hall, and upper floor. What keeps the score below 9 is crowding: multiple reviews mention the venue filling up during weekend breakfast hours, no host greeting guests at the door, and crowd/noise issues.",
       "etiketler": [
-        "ferah",
+        "airy",
         "art-deco",
-        "kış-bahçesi",
-        "kalabalık",
-        "pastane"
+        "winter-garden",
+        "crowded",
+        "patisserie"
       ],
       "dressCode": null,
       "uygun": [
-        "tek kişi",
-        "grup"
+        "solo",
+        "groups"
       ]
     },
     "servis": {
       "puan": 7.2,
-      "ozet": "Etiler şubesi için servis yorumları açıkça birbiriyle çelişiyor: aynı şube için hem 'personel ilgisiz, servis inanılmaz yavaş' hem 'servis süper, çalışanlar güler yüzlü' ifadeleri var; bir yorumda hiç sıra beklemeden oturulduğu, başka bir yorumda kapıda karşılayan kimse olmadığı anlatılıyor. TripAdvisor özetinde de 'zaman zaman servis tutarsızlıkları ve sipariş sorunları' geçiyor. Şikayetvar'ın Etiler sayfasındaki 11 şikâyette şikâyet bildiren müşteriye personelin ilgisiz kaldığı, hatta alay edildiği (Nisan 2024) yer alıyor; buna karşılık marka son bir yıldaki şikâyetlerin tamamına yanıt vermiş görünüyor. Tutarsızlık belirgin ve sık tekrarlandığı için 7,0-7,9 bandı.",
+      "ozet": "Service reviews for the Etiler branch openly contradict each other: for the same branch there are both 'staff indifferent, service unbelievably slow' and 'service is fantastic, staff are friendly' comments; one review says they were seated without any wait, another says no one greeted them at the door. The TripAdvisor summary also mentions 'occasional service inconsistencies and order issues.' Among the 11 complaints on Şikayetvar's Etiler page, one complaining customer reports staff being dismissive, even mocking (April 2024); on the other hand, the brand appears to have responded to all complaints in the past year. Because the inconsistency is pronounced and frequently repeated, it falls in the 7.0-7.9 band.",
       "artilar": [
-        "Yorumların bir bölümünde güler yüzlü ve ilgili personel",
-        "Hafta içi sıra beklemeden oturulabildiğini belirten yorumlar",
-        "Şikayetvar'da son bir yıldaki şikâyetlerin tamamına işletme yanıtı verilmiş"
+        "Friendly and attentive staff in some reviews",
+        "Reviews mentioning being seated without a wait on weekdays",
+        "All complaints on Şikayetvar in the past year have received a business response"
       ],
       "eksiler": [
-        "Aynı şube için hem 'çok yavaş ve ilgisiz' hem 'süper' denen tutarsız servis",
-        "Şikayetvar'ın Etiler sayfasında tekrarlayan hijyen ve yabancı madde bildirimleri",
-        "Kapıda karşılayan personel olmadığına dair yorumlar",
-        "Hafta sonu kahvaltı saatlerinde yer bulmanın zor olması"
+        "Inconsistent service — both 'very slow and indifferent' and 'fantastic' for the same branch",
+        "Recurring hygiene and foreign-object reports on Şikayetvar's Etiler page",
+        "Reviews mentioning no host greeting guests at the door",
+        "Difficulty finding a table during weekend breakfast hours"
       ]
     },
     "oduller": [],
     "rezervasyon": {
       "gerekiyor": null,
       "yontem": [
-        "telefon"
+        "phone"
       ],
       "telefon": "+90 212 263 70 91",
       "link": null,
-      "beklemeSuresi": "Hafta sonu kahvaltı saatlerinde ya rezervasyon yaptırmak ya da sıra beklemeyi göze almak gerektiği birden fazla kaynakta belirtiliyor; hafta içi sıra beklemeden oturulduğunu söyleyen yorumlar da var. Rezervasyonun zorunlu olup olmadığı ve somut bekleme süresi doğrulanamadı, bu yüzden 'gerekiyor' alanı boş bırakıldı.",
+      "beklemeSuresi": "Multiple sources state that during weekend breakfast hours you either need a reservation or should expect to wait; there are also reviews saying you can be seated without a wait on weekdays. Whether reservations are mandatory and a concrete wait time could not be verified, so the 'gerekiyor' (required) field was left blank.",
       "kapora": null
     },
     "kaynaklar": {
@@ -336,7 +336,7 @@ const RESTORANLAR = [
         "incelenen": 4
       },
       "tiktok": null,
-      "diger": "Yandex Haritalar'daki Etiler şubesi kaydı (4,3/5, 137 yorum), Şikayetvar'ın Etiler şubesi sayfası, Gurme Rehber ve Üşengeç Şef incelemeleri de değerlendirmeye dahil edildi."
+      "diger": "The Etiler branch listing on Yandex Maps (4.3/5, 137 reviews), Şikayetvar's Etiler branch page, and the Gurme Rehber and Üşengeç Şef reviews were also included in the assessment."
     },
     "fotolar": [],
     "sonGuncelleme": "2026-08-08"
@@ -344,13 +344,13 @@ const RESTORANLAR = [
   {
     "id": "da-mario-etiler",
     "isim": "Da Mario Etiler",
-    "ulke": "Türkiye",
-    "sehir": "İstanbul",
+    "ulke": "Turkey",
+    "sehir": "Istanbul",
     "semt": "Etiler",
     "mutfak": [
-      "İtalyan",
+      "Italian",
       "Pizza",
-      "Akdeniz"
+      "Mediterranean"
     ],
     "adres": "Etiler Mahallesi, Nispetiye Caddesi, Dilhayat Sokak No:7, Etiler, Beşiktaş, İstanbul",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Da%20Mario%2C%20Dilhayat%20Sokak%20No%3A7%2C%20Etiler%2C%20Be%C5%9Fikta%C5%9F%2C%20%C4%B0stanbul",
@@ -361,86 +361,86 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "orta",
       "kisiBasi": null,
-      "not": "Kişi başı aralık veren güvenilir bir kaynak bulunamadığı için kisiBasi boş bırakıldı. Elde edilen somut veriler: (1) RestaurantGuru'nun Etiler kaydı kişi başı harcamayı 'yaklaşık 2.000 ₺ ve üzeri' bandında etiketliyor — bandın üst ucu açık olduğu için tek başına eşik belirlemeye yetmiyor; (2) menufiyati.tr'nin 5 Haziran 2026 tarihli Da Mario menü listesinde makarnalar 1.100-1.350 ₺ (Tagliatelle alla Bolognese 1.200 ₺, Linguine con Pomodorini 1.100 ₺, Spaghetti ai Frutti di Mare 1.350 ₺), antipasti 1.200-1.350 ₺ (Burrata 1.350 ₺, Dana Carpaccio 1.200 ₺), Istakozlu Tagliolini 4.800 ₺ olarak veriliyor — ancak bu kaynak restoranın şubelerini yanlış sayıyor (var olmayan bir 'Kalamış şubesi'nden söz ediyor; resmî site yalnızca Etiler ve İstinyePark'ı listeliyor), bu yüzden segment kararında belirleyici sayılmadı; (3) karşılaştırma için Gurme Rehber'in Nisan 2022 tarihli Etiler yazısında burrata-trüflü tagliolini 225 ₺, Diavola pizza 145 ₺, bufalo mozzarella 160 ₺ idi; (4) restoranın resmî Temmuz 2026 menü PDF'i yayımda ama metni makinece okunabilir değil, fiyatlar oradan doğrulanamadı. Ekşi Sözlük ve TripAdvisor yorumlarında 'fiyatlar yüksek / fiyatına değmiyor' eleştirisi tekrar ediyor, meyhankoli sayfasındaki '400 ₺ ortalama' bilgisi ise açıkça eski. Sahibinin belirlediği eşiklere göre (ucuz: 750 ₺ altı; orta: 750-2.500 ₺; pahalı: 2.500 ₺ üstü) doğrulanabilen tek kişi başı veri 'orta' bandının üst ucuna denk geliyor; iki tabaklı bir akşam yemeğinin 2.500 ₺'yi aşması muhtemel görünüyor ama bunu gösteren güvenilir bir kişi başı rakam bulunamadı."
+      "not": "No reliable source giving a per-person range was found, so kisiBasi was left blank. Concrete data obtained: (1) RestaurantGuru's Etiler listing tags per-person spending at 'around ₺2,000 and up' — since the upper end is open-ended, this alone isn't enough to set a threshold; (2) menufiyati.tr's Da Mario menu list dated June 5, 2026 gives pasta dishes at ₺1,100-1,350 (Tagliatelle alla Bolognese ₺1,200, Linguine con Pomodorini ₺1,100, Spaghetti ai Frutti di Mare ₺1,350), antipasti at ₺1,200-1,350 (Burrata ₺1,350, Beef Carpaccio ₺1,200), and Lobster Tagliolini at ₺4,800 — however this source miscounts the restaurant's branches (it mentions a nonexistent 'Kalamış branch'; the official site lists only Etiler and İstinyePark), so it wasn't treated as decisive for the segment decision; (3) for comparison, in an April 2022 Gurme Rehber article on Etiler, burrata-truffle tagliolini was ₺225, Diavola pizza was ₺145, and buffalo mozzarella was ₺160; (4) the restaurant's official July 2026 menu PDF is published but its text isn't machine-readable, so prices couldn't be verified from it. Ekşi Sözlük and TripAdvisor reviews repeat the criticism 'prices are high / not worth it,' while the ₺400 average figure on the meyhankoli page is clearly outdated. According to the owner's thresholds (cheap: under ₺750; mid-range: ₺750-2,500; expensive: over ₺2,500), the one verifiable per-person figure falls at the upper end of the mid-range band; a two-course dinner is likely to exceed ₺2,500, but no reliable per-person figure showing this was found."
     },
     "yemek": {
       "puan": 7.8,
-      "ozet": "Yalnızca Etiler şubesine ait kaynaklar kullanıldı; İstinyePark şubesinin ayrı TripAdvisor kaydı ve marka geneli yazılar kapsam dışı bırakıldı. Etiler için TripAdvisor 4,0/5 (206 yorum, İstanbul'da 13.891 restoran içinde 1.128. sıra), RestaurantGuru üzerinden görülen Google puanı 4,2/5 (1.573 yorum), Foursquare 8,6/10 (1.301 yorum). Gault&Millau Türkiye 2026 rehberinde 1 toque ve 12,5/20 ile 'gurme masa' kategorisinde. Övgü tutarlı biçimde el yapımı taze makarnalarda, taş fırın pizzada, burrata ve carpaccio'da yoğunlaşıyor; Gurme Rehber Etiler şubesine lezzette 10 üzerinden 7,5 veriyor. Puanı 8'in altında tutan iki tekrar eden itiraz var: Ekşi Sözlük'te tiramisunun 'çoğunlukla krema' bulunması ve carpaccio, lazanya, creme brûlée'yi eleştiren girdiler; TripAdvisor'da ise 'gerçekten İtalyan mı, yemekler hep vasat' diyen ve fiyatı fahiş bulan yorumlar. Bu, 7,0-7,9 bandındaki 'belirgin ve sık tekrarlanan bir zayıflık' tanımına uyuyor."
+      "ozet": "Only sources specific to the Etiler branch were used; the İstinyePark branch's separate TripAdvisor listing and brand-wide write-ups were excluded. For Etiler, TripAdvisor is 4.0/5 (206 reviews, ranked 1,128th out of 13,891 restaurants in Istanbul), a Google rating of 4.2/5 seen via RestaurantGuru (1,573 reviews), Foursquare 8.6/10 (1,301 reviews). In the Gault&Millau Turkey 2026 guide it holds 1 toque and 12.5/20 in the 'gourmet table' category. Praise is consistently concentrated on handmade fresh pasta, stone-oven pizza, burrata, and carpaccio; Gurme Rehber gives the Etiler branch 7.5/10 for taste. Two recurring complaints keep the score below 8: on Ekşi Sözlük, the tiramisu being found 'mostly cream' and entries criticizing the carpaccio, lasagna, and crème brûlée; on TripAdvisor, reviews asking 'is this really Italian, the food is always mediocre' and finding prices exorbitant. This fits the 7.0-7.9 band definition of 'a clear and frequently recurring weakness.'"
     },
     "neYenir": [
       {
         "yemek": "Burrata",
         "kacKisiOnerdi": null,
-        "not": "Müdavim'in Etiler şubesi yazısında 'bol porsiyonlu ve lezzeti yoğun' diye öne çıkarılıyor; Gurme Rehber'in Etiler incelemesinde de bufalo mozzarella/burrata başlangıcı öneriliyor. Restoranın kendi menü tanıtımında da antipasti bölümünün başında yer alıyor."
+        "not": "Highlighted in Müdavim's Etiler review as 'generous portion and intense flavor'; Gurme Rehber's Etiler review also recommends the buffalo mozzarella/burrata starter. It's also listed at the top of the antipasti section in the restaurant's own menu."
       },
       {
         "yemek": "Linguine Asparagi e Tartufo",
         "kacKisiOnerdi": null,
-        "not": "Restoranın resmî sitesi 'Kuşkonmazlı ve Trüflü Linguine'yi imza tabaklar arasında sayıyor; Müdavim incelemesi de aynı tabağı öneriyor. RestaurantGuru'da öne çıkan yemekler arasında 'asparagus truffle linguine' geçiyor."
+        "not": "The restaurant's official website lists 'Asparagus and Truffle Linguine' among its signature dishes; the Müdavim review also recommends the same dish. It's also among the standout items on RestaurantGuru as 'asparagus truffle linguine.'"
       },
       {
         "yemek": "Tagliolini con Burrata e Tartufo",
         "kacKisiOnerdi": null,
-        "not": "Gurme Rehber'in Etiler yazısı bu tabağı 'oldukça lezzetli' bulup zeytinyağı ve parmesanın tadı tamamladığını yazıyor (Nisan 2022'de 225 ₺). Müdavim incelemesinde de trüflü-burratalı taglioni öneriliyor."
+        "not": "Gurme Rehber's Etiler article finds this dish 'quite delicious,' saying the olive oil and parmesan complete it (₺225 in April 2022). The Müdavim review also recommends the truffle-burrata taglioni."
       },
       {
         "yemek": "Dana Carpaccio",
         "kacKisiOnerdi": null,
-        "not": "Müdavim incelemesinde 'iyi marine edilmiş' diye öne çıkarılıyor ve RestaurantGuru'nun popüler kalemler listesinde 'beef carpaccio' başta geliyor. Buna karşılık Ekşi Sözlük'te carpaccio'yu beğenmeyen bir girdi de var — kaynaklar bu kalemde ayrışıyor."
+        "not": "Highlighted as 'well-marinated' in the Müdavim review, and 'beef carpaccio' tops RestaurantGuru's list of popular items. On the other hand, there's an Ekşi Sözlük entry that didn't like the carpaccio — sources diverge on this item."
       },
       {
         "yemek": "Pizza Diavola",
         "kacKisiOnerdi": null,
-        "not": "Gurme Rehber'in Etiler yazısında 'buranın favori klasiklerinden' diye anlatılıyor, sucuğun ve hamurun kalitesi vurgulanıyor (Nisan 2022'de 145 ₺). Ekşi Sözlük'te de prosciutto e funghi dahil taş fırın pizzalar övülüyor."
+        "not": "Described in Gurme Rehber's Etiler article as 'one of the favorite classics here,' emphasizing the quality of the sucuk and the dough (₺145 in April 2022). Ekşi Sözlük also praises the stone-oven pizzas, including the prosciutto e funghi."
       }
     ],
     "ambiyans": {
       "puan": 8.3,
-      "ozet": "Etiler şubesi bir villa içinde; kaynaklar mekânı tutarlı biçimde 'beyaz örtülü masalar, ahşap kaplama, loş aydınlatma, şık ama samimi' diye anlatıyor. Ağaçlarla gölgelenen bahçe hemen her kaynakta ayrıca övülüyor: Müdavim bahar-yaz aylarında bar bölümü olan bahçeyi özellikle öneriyor, restoranın kendi sitesi de bahçeyi öne çıkarıyor, Ekşi Sözlük'te loş ışığın 'çok hoş' olduğu yazılıyor. Gurme Rehber mekâna 10 üzerinden 7,5 veriyor. Puanı 9'un altında tutan şey yoğunluk: akşam saatleri ve hafta sonları mekânın dolduğu, birkaç gün önceden rezervasyon gerektiği birden fazla kaynakta tekrarlanıyor.",
+      "ozet": "The Etiler branch is inside a villa; sources consistently describe it as 'white tablecloths, wood paneling, dim lighting, elegant but intimate.' The tree-shaded garden is separately praised in nearly every source: Müdavim specifically recommends the garden, which has a bar area in spring/summer; the restaurant's own website also highlights the garden; Ekşi Sözlük describes the dim lighting as 'quite lovely.' Gurme Rehber rates the venue 7.5/10. What keeps the score below 9 is crowding: multiple sources repeat that the venue fills up on evenings and weekends and that reservations a few days ahead are needed.",
       "etiketler": [
-        "bahçe",
-        "şık",
-        "loş",
+        "garden",
+        "elegant",
+        "dim",
         "villa",
-        "kalabalık"
+        "crowded"
       ],
       "dressCode": null,
       "uygun": [
-        "çift",
-        "aile",
-        "iş yemeği",
-        "grup"
+        "couples",
+        "family",
+        "business dinner",
+        "groups"
       ]
     },
     "servis": {
       "puan": 8.0,
-      "ozet": "Servis, kaynakların çoğunda olumlu ama tam bir uzlaşma yok. Meyhankoli'de aktarılan bir yorum 'servis hızlı, garsonlar saygılı ve incelikli' diyor; Ekşi Sözlük'te İstanbul'un diğer üst segment mekânlarına kıyasla servisin başarılı bulunduğu girdiler var; nerdenerede kaydında servis 10/10 puanlanmış (tek değerlendirme). Karşı tarafta TripAdvisor'da servis tutarsızlığından ve fiyat/hizmet dengesizliğinden yakınan yorumlar, meyhankoli özetinde de 'servis kalitesi yorumlar arasında değişkenlik gösteriyor' notu var. Şikayetvar'daki tek şikâyet (2 Ocak 2025) işletmenin müşteriye ulaşması üzerine geri çekilmiş — bu, şikâyet yönetiminin çalıştığına dair somut bir kanıt. Tekrarlayan küçük şikâyetler nedeniyle 8,0-8,9 bandının alt ucu.",
+      "ozet": "Service is mostly positive across sources but there's no full consensus. A comment relayed on meyhankoli says 'service is fast, waiters are respectful and considerate'; there are Ekşi Sözlük entries finding the service successful compared to other upscale Istanbul venues; on nerdenerede, service was rated 10/10 (a single review). On the other side, TripAdvisor has complaints about service inconsistency and a price/service imbalance, and the meyhankoli summary also notes 'service quality varies among reviews.' The single complaint on Şikayetvar (January 2, 2025) was withdrawn after the business reached out to the customer — concrete evidence that complaint handling works. Because of recurring minor complaints, it sits at the lower end of the 8.0-8.9 band.",
       "artilar": [
-        "Hızlı servis ve saygılı personel (meyhankoli'de aktarılan yorumlar)",
-        "Üst segment rakiplerine kıyasla başarılı bulunan servis (Ekşi Sözlük girdileri)",
-        "Şikayetvar'daki tek şikâyetin işletme temasıyla çözülüp geri çekilmesi (Ocak 2025)"
+        "Fast service and respectful staff (comments relayed on meyhankoli)",
+        "Service found successful compared to upscale competitors (Ekşi Sözlük entries)",
+        "The single complaint on Şikayetvar was resolved and withdrawn after business contact (January 2025)"
       ],
       "eksiler": [
-        "TripAdvisor yorumlarında servis tutarsızlığı ve fiyat/hizmet dengesizliği eleştirisi",
-        "İçeceklerin özellikle pahalı bulunması (meyhankoli'de aktarılan yorumlar)",
-        "Akşam ve hafta sonu yoğunluğu nedeniyle birkaç gün önceden rezervasyon gerekmesi"
+        "TripAdvisor reviews criticizing service inconsistency and a price/service imbalance",
+        "Drinks found particularly expensive (comments relayed on meyhankoli)",
+        "Needing to reserve a few days ahead due to evening and weekend crowds"
       ]
     },
     "oduller": [
       {
         "tip": "gault-millau",
-        "detay": "Gault&Millau Türkiye 2026 Gastronomi Rehberi — 1 toque, 12,5/20 ('gurme masa'), mutfak şefi Emre Koyucan. Hem Gault&Millau Türkiye'nin kendi Da Mario Etiler sayfasından hem de 8 Aralık 2025'teki 2026 rehberi tanıtımını aktaran Food in Life listesinden doğrulandı. Restoranın kendi sitesi ayrıca Ospitalità Italiana sertifikasını ve İncili Gastronomi Rehberi'nde üç çatalı anıyor; İncili Gastronomi Rehberi'nin sitesi bakım modunda olduğu için bu ikinci bilgi bağımsız olarak doğrulanamadı. MICHELIN Guide İstanbul seçkisinde Da Mario'ya rastlanmadı."
+        "detay": "Gault&Millau Turkey 2026 Gastronomy Guide — 1 toque, 12.5/20 ('gourmet table'), head chef Emre Koyucan. Verified from both Gault&Millau Turkey's own Da Mario Etiler page and the Food in Life listing covering the December 8, 2025 launch of the 2026 guide. The restaurant's own website also mentions the Ospitalità Italiana certification and three forks in the İncili Gastronomi Rehberi; since the İncili Gastronomi Rehberi's site is in maintenance mode, this second piece of information could not be independently verified. Da Mario was not found in the MICHELIN Guide Istanbul selection."
       }
     ],
     "rezervasyon": {
       "gerekiyor": null,
       "yontem": [
-        "telefon",
+        "phone",
         "online"
       ],
       "telefon": "+90 212 263 74 84",
       "link": null,
-      "beklemeSuresi": "Rezervasyonun zorunlu olduğuna dair bir ifade bulunamadı, bu yüzden 'gerekiyor' boş bırakıldı; buna karşılık akşam yemekleri ve hafta sonları için birkaç gün önceden rezervasyon önerildiği Gurme Rehber, Müdavim ve mekân derlemelerinde tutarlı biçimde tekrarlanıyor. Bahar-yaz aylarında bahçe için ayrıca rezervasyon öneriliyor. Somut bekleme süresi veren bir kaynak bulunamadı.",
+      "beklemeSuresi": "No statement was found saying reservations are mandatory, so 'gerekiyor' was left blank; however, recommending reservations a few days ahead for dinner and weekends is consistently repeated across Gurme Rehber, Müdavim, and venue roundups. Reservations are also recommended for the garden in spring/summer. No source giving a concrete wait time was found.",
       "kapora": null
     },
     "kaynaklar": {
@@ -455,12 +455,12 @@ const RESTORANLAR = [
         "incelenen": 3
       },
       "tiktok": null,
-      "diger": "Gault&Millau Türkiye 2026 (1 toque, 12,5/20), restoranın resmî sitesi ve Temmuz 2026 menüsü, Gurme Rehber ve Müdavim'in Etiler şubesi incelemeleri, Ekşi Sözlük 'da mario' başlığı, Şikayetvar kaydı, meyhankoli, RestaurantGuru ve OpenStreetMap POI kaydı da değerlendirmeye dahil edildi."
+      "diger": "Gault&Millau Turkey 2026 (1 toque, 12.5/20), the restaurant's official website and July 2026 menu, the Gurme Rehber and Müdavim reviews of the Etiler branch, the Ekşi Sözlük 'da mario' thread, the Şikayetvar record, meyhankoli, RestaurantGuru, and the OpenStreetMap POI record were also included in the assessment."
     },
     "fotolar": [
       {
         "dosya": "fotolar/da-mario-etiler-1.jpg",
-        "alt": "Kapari, zeytin ve domatesli spagetti; yanında zeytin ve ekmek sepeti",
+        "alt": "Spaghetti with capers, olives, and tomatoes, served with a basket of olives and bread",
         "kaynak": "https://www.damario.com.tr/static/uploads/2026/01/bg-1.webp",
         "kredi": "Da Mario"
       }
@@ -470,13 +470,13 @@ const RESTORANLAR = [
   {
     "id": "hodan-nisantasi",
     "isim": "Hodan",
-    "ulke": "Türkiye",
-    "sehir": "İstanbul",
+    "ulke": "Turkey",
+    "sehir": "Istanbul",
     "semt": "Nişantaşı",
     "mutfak": [
-      "Modern Türk",
-      "Anadolu",
-      "Şef Restoranı"
+      "Modern Turkish",
+      "Anatolian",
+      "Chef-driven"
     ],
     "adres": "Harbiye Mahallesi, Mim Kemal Öke Caddesi No:19/A, Nişantaşı, Şişli, İstanbul",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Hodan%2C%20Mim%20Kemal%20%C3%96ke%20Caddesi%20No%3A19%2FA%2C%20Harbiye%2C%20Ni%C5%9Fanta%C5%9F%C4%B1%2C%20%C5%9Ei%C5%9Fli%2C%20%C4%B0stanbul",
@@ -484,84 +484,84 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "orta",
       "kisiBasi": null,
-      "not": "Hiçbir kaynak kişi başı aralık vermediği için kisiBasi boş bırakıldı; ayrıca bulunabilen fiyat verilerinin çoğu tarihsiz. Doğrulanan somut veriler: Made in City rehberi mekânı '1000+ ₺' fiyat bandında etiketliyor; arama sonuçlarından okunabilen Ekşi Sözlük yorumlarında tabakların 300-900 ₺ arasında değiştiği, tek kişilik bir hesabın 1.200 ₺ civarında kaldığı, tatlıların tanesinin 200 ₺ olduğu ve brunch menüsünün 2.500 ₺ olduğu aktarılıyor — bu rakamların tarihi yorumlarda belirtilmiyor. TripAdvisor yorumlarında 'çok küçük porsiyonlar için inanılmaz yüksek fiyat' ve fiyat/performansa 10 üzerinden 4-5 veren değerlendirmeler tekrar ediyor. Mekân Beyoğlu'ndaki eski adresindeyken (Müdavim incelemesi) tabak fiyatları 60-95 ₺ bandındaydı; bu veri bugünkü seviyeyi göstermediği için yalnızca karşılaştırma amacıyla anılıyor. Sahibinin belirlediği eşiklere göre (ucuz: 750 ₺ altı; orta: 750-2.500 ₺; pahalı: 2.500 ₺ üstü) hem à la carte hesap hem brunch menüsü 'orta' bandına düşüyor; brunch tam eşiğin üzerinde değil, sınırında."
+      "not": "No source gave a per-person range, so kisiBasi was left blank; most of the price data that could be found is also undated. Verified concrete data: the Made in City guide tags the venue in the '1000+ ₺' price band; Ekşi Sözlük reviews found via search results report that dishes range ₺300-900, a single-person bill runs around ₺1,200, desserts are ₺200 each, and the brunch menu is ₺2,500 — the dates of these figures aren't stated in the reviews. TripAdvisor reviews repeat 'unbelievably high prices for very small portions' and give price/performance ratings of 4-5 out of 10. When the venue was at its former Beyoğlu address (Müdavim review), dish prices were in the ₺60-95 band; since this data doesn't reflect the current level, it's cited only for comparison. According to the owner's thresholds (cheap: under ₺750; mid-range: ₺750-2,500; expensive: over ₺2,500), both the à la carte bill and the brunch menu fall into the mid-range segment; the brunch is right at the threshold, not clearly above it."
     },
     "yemek": {
       "puan": 7.5,
-      "ozet": "Kaynaklar bu restoranda belirgin biçimde ikiye bölünüyor. Olumlu taraf: Gault&Millau Türkiye 2026 rehberinde 2 toque ve 13/20 (2025 rehberinde 1 toque, 12,5/20 idi — yani puanı yükselmiş), Yandex Haritalar'ın Nişantaşı kaydında 4,3/5 (34 yorum), Gault&Millau'nun 'İstanbul'un en iyi brunch mekânı' ödülü, ve Türkçe gastronomi yazılarında şef Çiğdem Seferoğlu'nun Anadolu üreticileriyle kurduğu tedarik ağının tutarlı biçimde övülmesi. Olumsuz taraf: TripAdvisor'da 3,1/5 (29 yorum, İstanbul'da 9.672 restoran içinde 5.763. sıra); 'porsiyonlar çok küçük, tatsız, özel bir şey yok' ve 'yağlı ve ağır yemekler' başlıklı yorumlar; Ekşi Sözlük'te fiyat/performansa 10 üzerinden 4-5 verilmesi ve mekânın 'çok abartıldığı' değerlendirmesi. TripAdvisor kaydının önemli bir bölümü mekânın Beyoğlu dönemine ait olduğu için Nişantaşı'ndaki yeni mutfağı birebir yansıtmayabilir; bu ayrım yapılamadı. Belirgin ve sık tekrarlanan bir zayıflık (porsiyon/fiyat dengesi) bulunduğu için 7,0-7,9 bandı."
+      "ozet": "Sources are clearly split on this restaurant. Positive side: 2 toques and 13/20 in the Gault&Millau Turkey 2026 guide (up from 1 toque, 12.5/20 in the 2025 guide — i.e. its score rose), a 4.3/5 rating (34 reviews) on the Nişantaşı listing on Yandex Maps, Gault&Millau's 'Istanbul's best brunch venue' award, and Turkish food writing consistently praising chef Çiğdem Seferoğlu's supply network with Anatolian producers. Negative side: 3.1/5 on TripAdvisor (29 reviews, ranked 5,763rd out of 9,672 restaurants in Istanbul); reviews titled 'portions are very small, bland, nothing special' and 'oily and heavy dishes'; Ekşi Sözlük giving 4-5 out of 10 for price/performance and calling the venue 'overhyped.' A significant portion of the TripAdvisor record dates to the venue's Beyoğlu period, so it may not fully reflect the new kitchen in Nişantaşı; this distinction couldn't be made. Because there's a clear and frequently recurring weakness (portion/price balance), it falls in the 7.0-7.9 band."
     },
     "neYenir": [
       {
         "yemek": "Taş Fırında Konya Küflüsü",
         "kacKisiOnerdi": null,
-        "not": "Şefin yeteneğini yansıtan imza tabaklar arasında Yandex kaydında, Mekan Önerisi ve Müdavim incelemelerinde tutarlı biçimde anılıyor. Müdavim'in Beyoğlu dönemine ait fiyat listesinde 75 ₺ idi."
+        "not": "Consistently mentioned as one of the signature dishes reflecting the chef's talent in the Yandex listing, Mekan Önerisi, and Müdavim reviews. In Müdavim's price list from the Beyoğlu period it was ₺75."
       },
       {
         "yemek": "Erzincan Tulumlu Çıtır Pide",
         "kacKisiOnerdi": null,
-        "not": "Yandex Haritalar kaydında ve Türkçe mekân yazılarında Konya küflüsüyle birlikte mekânın öne çıkan iki tabağından biri olarak geçiyor; menünün 'Taş Fırından' bölümünün merkezinde yer alıyor."
+        "not": "Mentioned in the Yandex Maps listing and Turkish venue write-ups as one of the venue's two standout dishes alongside the Konya küflüsü; it's central to the 'From the Stone Oven' section of the menu."
       },
       {
         "yemek": "Çıtır Enginar",
         "kacKisiOnerdi": null,
-        "not": "Gault&Millau Türkiye Hodan sayfası çıtır enginarı mekânın imza lezzetlerinden biri olarak sayıyor; Türkçe derlemelerde de 'en çok beğenilen tabaklardan' diye anılıyor."
+        "not": "Gault&Millau Turkey's Hodan page counts the crispy artichoke among the venue's signature flavors; Turkish roundups also describe it as 'one of the most beloved dishes.'"
       },
       {
         "yemek": "Tiramisu",
         "kacKisiOnerdi": null,
-        "not": "Gault&Millau Türkiye sayfası tiramisuyu çıtır enginarla birlikte iki imza lezzetten biri olarak öneriyor. Müdavim incelemesi tatlı olarak fıstıklı sufleyi öne çıkarıyor — kaynaklar tatlı önerisinde ayrışıyor."
+        "not": "The Gault&Millau Turkey page recommends the tiramisu alongside the crispy artichoke as one of two signature flavors. The Müdavim review highlights the pistachio soufflé as the dessert instead — sources diverge on the dessert recommendation."
       },
       {
         "yemek": "Ciğer ve Nohut Dürüm",
         "kacKisiOnerdi": null,
-        "not": "Gazete Oksijen'in 14 Temmuz 2026 tarihli brunch derlemesinde, Hodan'ın hafta sonu sofrasını klasik kahvaltının ötesine taşıyan Antep esintili tabak olarak özellikle anlatılıyor. Yalnızca brunch servisinde geçerli."
+        "not": "Gazete Oksijen's brunch roundup dated July 14, 2026 specifically describes this Antep-influenced dish as taking Hodan's weekend spread beyond a classic breakfast. Only available during brunch service."
       }
     ],
     "ambiyans": {
       "puan": 8.5,
-      "ozet": "Ambiyans, kaynakların üzerinde en çok uzlaştığı başlık. Beyoğlu dönemindeki Cezayir binasının bahçe katı 'sanat eserleri, ağaçlar, beyaz örtülü masalar' ve 'Beyoğlu'nun kalabalığından yalıtan' atmosferiyle övülüyordu; Nişantaşı'ndaki yeni adres için Indagare 'cam kubbeli bahçe terası', Oggusto ise 'şehrin merkezinde olmasına rağmen sakin ve samimi', 'daha geniş bir deneyim alanı' diyor. Ekşi Sözlük yorumlarında bahçe bölümü 'gizli bir avlu' benzetmesiyle anlatılıyor, TripAdvisor'daki olumlu yorumlarda da 'bahçe serasında muhteşem mekân, çağdaş sanat' geçiyor. Hafta sonları canlı müzik olduğu Gazete Oksijen'in Temmuz 2026 derlemesinde belirtiliyor. Puanı 9'a çıkarmamanın nedeni, mekânın Ağustos 2026 itibarıyla yeni adresinde yeni olması ve yeni salona dair bağımsız değerlendirmenin henüz az olması.",
+      "ozet": "Ambiance is the topic sources agree on the most. During the Beyoğlu period, the garden floor of the Cezayir building was praised for its 'artworks, trees, white tablecloths' and an atmosphere 'insulated from Beyoğlu's crowds'; for the new Nişantaşı address, Indagare says 'glass-domed garden terrace,' while Oggusto says 'calm and intimate despite being in the city center' and 'a larger experience space.' Ekşi Sözlük reviews describe the garden section as resembling 'a hidden courtyard'; positive TripAdvisor reviews also mention 'a magnificent venue in the garden conservatory, contemporary art.' Gazete Oksijen's July 2026 roundup notes there's live music on weekends. The reason it's not raised to 9 is that as of August 2026 the venue is new at its new address, and independent evaluation of the new dining room is still limited.",
       "etiketler": [
-        "bahçe",
-        "sakin",
-        "şık",
-        "sanat",
-        "canlı-müzik"
+        "garden",
+        "calm",
+        "elegant",
+        "art",
+        "live-music"
       ],
-      "dressCode": "Şık giyim öneriliyor (Made in City rehberi)",
+      "dressCode": "Smart dress recommended (Made in City guide)",
       "uygun": [
-        "çift",
-        "iş yemeği",
-        "grup"
+        "couples",
+        "business dinner",
+        "groups"
       ]
     },
     "servis": {
       "puan": 7.2,
-      "ozet": "Servisle ilgili tekrarlayan tek örüntü olumsuz: hem Yandex kaydındaki yorum özetinde hem Mekan Önerisi'nde hem de arama sonuçlarından okunabilen Türkçe yorumlarda 'yemekler lezzetli ama servis zaman zaman yavaş' ifadesi tekrarlanıyor. TripAdvisor'da 'kötü müşteri hizmeti, küçük porsiyon, yüksek fiyat' başlıklı olumsuz bir yorum var. Karşı tarafta TripAdvisor'daki olumlu yorumlardan biri servis kalitesini 'mükemmel ve üst düzey' diye niteliyor ve Yandex yorumlarında kokteyller ayrıca övülüyor. Yavaşlık şikâyeti belirgin ve sık tekrarlandığı için 7,0-7,9 bandı. Şikayetvar'da Hodan adına açılmış bir marka sayfası bulunamadı.",
+      "ozet": "The only recurring pattern regarding service is negative: the review summary on the Yandex listing, Mekan Önerisi, and Turkish reviews found via search results all repeat 'food is delicious but service is sometimes slow.' TripAdvisor has a negative review titled 'bad customer service, small portions, high price.' On the other side, one positive TripAdvisor review calls the service quality 'excellent and top-tier,' and Yandex reviews separately praise the cocktails. Because the slowness complaint is clear and frequently repeated, it falls in the 7.0-7.9 band. No Hodan brand page could be found on Şikayetvar.",
       "artilar": [
-        "TripAdvisor'daki olumlu yorumlarda 'üst düzey' bulunan servis kalitesi",
-        "Yandex yorumlarında kokteyl ve bar tarafının ayrıca övülmesi",
-        "Şef Çiğdem Seferoğlu'nun üretici ağının menüde ve anlatımda somut karşılığı olması"
+        "Service quality found 'top-tier' in positive TripAdvisor reviews",
+        "The cocktail and bar side separately praised in Yandex reviews",
+        "Chef Çiğdem Seferoğlu's producer network having concrete expression in the menu and storytelling"
       ],
       "eksiler": [
-        "Birden fazla kaynakta tekrarlanan yavaş servis şikâyeti",
-        "Porsiyonların küçük bulunması ve tüm tabakların aynı boyutta gelmesi eleştirisi",
-        "TripAdvisor'da fiyat/performans dengesizliği ve 'kötü müşteri hizmeti' yorumları"
+        "Slow service complaint repeated across multiple sources",
+        "Criticism that portions are small and all dishes arrive the same size",
+        "TripAdvisor reviews citing a price/performance imbalance and 'bad customer service'"
       ]
     },
     "oduller": [
       {
         "tip": "gault-millau",
-        "detay": "Gault&Millau Türkiye 2026 Gastronomi Rehberi — 2 toque, 13/20, şef Çiğdem Seferoğlu (8 Aralık 2025 tarihli tören; Food in Life'ın 2026 rehberi listesinden doğrulandı). 2025 rehberinde 1 toque / 12,5/20 ile yer alıyordu ve aynı yıl 'İstanbul'un en iyi brunch mekânı' ödülünü almıştı (Gault&Millau Türkiye'nin kendi Hodan sayfası). MICHELIN Guide İstanbul seçkisinde Hodan'ın İstanbul şubesine rastlanmadı; markanın Bodrum'daki ayrı işletmesi Hodan Yalıkavak MICHELIN Guide 2026 tavsiye listesinde yer alıyor, ancak bu ayrı bir şube olduğu için buraya ödül olarak yazılmadı."
+        "detay": "Gault&Millau Turkey 2026 Gastronomy Guide — 2 toques, 13/20, chef Çiğdem Seferoğlu (ceremony dated December 8, 2025; verified from Food in Life's 2026 guide listing). It held 1 toque / 12.5/20 in the 2025 guide and won the 'Istanbul's best brunch venue' award that same year (Gault&Millau Turkey's own Hodan page). Hodan's Istanbul branch was not found in the MICHELIN Guide Istanbul selection; the brand's separate business in Bodrum, Hodan Yalıkavak, is included in the MICHELIN Guide 2026 recommended list, but since that is a separate branch it wasn't recorded here as an award."
       }
     ],
     "rezervasyon": {
       "gerekiyor": null,
       "yontem": [
-        "telefon"
+        "phone"
       ],
       "telefon": "+90 533 304 76 34",
       "link": null,
-      "beklemeSuresi": "Rezervasyonun zorunlu olduğuna dair açık bir ifade bulunamadı, bu yüzden 'gerekiyor' boş bırakıldı. Buna karşılık 'hep kalabalık olduğu için gitmeden önce rezervasyon yaptırmakta fayda var' uyarısı Gazete Oksijen'in Temmuz 2026 derlemesinde, Müdavim'de ve Made in City rehberinde tekrarlanıyor. Somut bekleme süresi veren bir kaynak yok. Pazartesi kapalı; Salı-Cumartesi 12:30-16:00 öğle ve 18:00-23:00 akşam, Pazar brunch servisi çalışma düzeni Beyoğlu dönemine ait kaynaklardan geliyor ve yeni adres için doğrulanamadı.",
+      "beklemeSuresi": "No explicit statement was found that reservations are mandatory, so 'gerekiyor' was left blank. However, the warning 'it's always crowded so it helps to book ahead' is repeated in Gazete Oksijen's July 2026 roundup, Müdavim, and the Made in City guide. No source gives a concrete wait time. Closed Monday; Tuesday-Saturday lunch 12:30-16:00 and dinner 18:00-23:00, Sunday brunch service — this schedule comes from sources dating to the Beyoğlu period and could not be verified for the new address.",
       "kapora": null
     },
     "kaynaklar": {
@@ -572,7 +572,7 @@ const RESTORANLAR = [
         "incelenen": 3
       },
       "tiktok": null,
-      "diger": "Gault&Millau Türkiye 2025 ve 2026 rehberleri, Yandex Haritalar'ın Nişantaşı kaydı (4,3/5, 34 yorum), Gazete Oksijen'in 14 Temmuz 2026 tarihli brunch derlemesi, Oggusto'nun 'İstanbul'un en yeni mekânları' listesi, Müdavim ve Mekan Önerisi incelemeleri, Made in City ve Indagare rehberleri, Foursquare kaydı ve Ekşi Sözlük 'hodan' başlığı da değerlendirmeye dahil edildi. Google Haritalar puanı yalnızca mekânın eski Beyoğlu adresini gösteren güncelliği şüpheli bir kaynakta görüldüğü için kullanılmadı."
+      "diger": "The Gault&Millau Turkey 2025 and 2026 guides, the Nişantaşı listing on Yandex Maps (4.3/5, 34 reviews), Gazete Oksijen's brunch roundup dated July 14, 2026, Oggusto's 'Istanbul's newest venues' list, the Müdavim and Mekan Önerisi reviews, the Made in City and Indagare guides, the Foursquare record, and the Ekşi Sözlük 'hodan' thread were also included in the assessment. The Google Maps rating was not used because it was only found in a source of questionable currency showing the venue's old Beyoğlu address."
     },
     "fotolar": [],
     "sonGuncelleme": "2026-08-08"
@@ -580,12 +580,12 @@ const RESTORANLAR = [
   {
     "id": "nusret-etiler",
     "isim": "Nusr-Et Steakhouse Etiler",
-    "ulke": "Türkiye",
-    "sehir": "İstanbul",
+    "ulke": "Turkey",
+    "sehir": "Istanbul",
     "semt": "Etiler",
     "mutfak": [
       "Steakhouse",
-      "Et",
+      "Meat",
       "Sushi"
     ],
     "adres": "Etiler Mahallesi, Nisbetiye Caddesi No:87, Etiler, Beşiktaş, İstanbul",
@@ -597,86 +597,86 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "pahali",
       "kisiBasi": null,
-      "not": "Kişi başı aralık verilmedi çünkü elde edilen rakamlar farklı yıllara ait ve birbirini tam doğrulamıyor. Doğrulanan somut veriler: (1) 12 Ağustos 2024'te sosyal medyaya düşen ve birden fazla haber sitesinde yayımlanan Etiler şubesi adisyonu 7 kişi için 16.372 ₺, yani kişi başı yaklaşık 2.339 ₺; (2) Uplifers'ın 2025 tarihli 'Etiler'in en iyi 15 restoranı' listesi Nusr-Et için kişi başı 1.500-2.500 ₺ veriyor; (3) RestaurantGuru'nun Etiler kaydı kişi başını 'yaklaşık 2.000 ₺ ve üzeri' bandında etiketliyor; (4) 2026 için birbirinden bağımsız birkaç menü listesi 200 gramlık tek bir ana yemeği 2.100-2.200 ₺ (Dana Lokum 2.100 ₺, Dana Antrikot 2.200 ₺), Dana Carpaccio'yu 1.250-1.450 ₺ ve Tomahawk'ı 4.300-5.000 ₺ bandında gösteriyor — bu listeler resmî değil, aralarında da tutarsızlıklar var, bu yüzden tek tek rakamlar değil yalnızca büyüklük mertebesi kullanıldı. Restoranın kendi sitesi ve menü sayfası fiyat yayımlamıyor; Ekşi Sözlük'te sıkça anılan 'menü verilmiyor, Nusret masaya gelip canlı menü gibi anlatıyor' düzeni de fiyatın önceden bilinmesini zorlaştırıyor. Sahibinin belirlediği eşiklere göre (ucuz: 750 ₺ altı; orta: 750-2.500 ₺; pahalı: 2.500 ₺ üstü) 2024-2025 verileri 'orta' bandının tam üst sınırında kalıyor; segment, 2026 ana yemek fiyatlarına ve tek bir ana yemeğin bile 2.000 ₺'yi aştığına dayanılarak 'pahalı' seçildi. Bu tercih, doğrulanmış 2026 kişi başı rakamı bulunmadığı için kesin değildir."
+      "not": "No per-person range was given because the figures obtained belong to different years and don't fully corroborate each other. Verified concrete data: (1) an Etiler branch receipt that surfaced on social media on August 12, 2024 and was published by multiple news sites shows ₺16,372 for 7 people, i.e. about ₺2,339 per person; (2) Uplifers' 2025 'Etiler's best 15 restaurants' list gives Nusr-Et a per-person range of ₺1,500-2,500; (3) RestaurantGuru's Etiler listing tags per-person spending at 'around ₺2,000 and up'; (4) several independent 2026 menu lists show a single 200-gram main course at ₺2,100-2,200 (Dana Lokum ₺2,100, Dana Antrikot/ribeye ₺2,200), beef carpaccio at ₺1,250-1,450, and Tomahawk at ₺4,300-5,000 — these lists aren't official and are inconsistent with each other, so only the order of magnitude was used, not individual figures. The restaurant's own website and menu page don't publish prices; the arrangement often mentioned on Ekşi Sözlük — 'no menu given, Nusret comes to the table and narrates it like a live menu' — also makes it hard to know the price in advance. According to the owner's thresholds (cheap: under ₺750; mid-range: ₺750-2,500; expensive: over ₺2,500), the 2024-2025 data sits right at the top edge of the mid-range band; the segment was set to 'expensive' based on 2026 main-course prices and the fact that even a single main course exceeds ₺2,000. This choice is not definitive since no verified 2026 per-person figure was found."
     },
     "yemek": {
       "puan": 8.0,
-      "ozet": "Yalnızca Etiler şubesine ait kaynaklar kullanıldı; İstinyePark, Bebek, Galataport ve yurt dışı şubelerine ait yorumlar ile Nusr-Et Burger markasının şikâyetleri kapsam dışı bırakıldı — bu ayrım özellikle Şikayetvar'da önemliydi, çünkü oradaki 36 şikâyet farklı markaları ve şubeleri karıştırıyor. Etiler için RestaurantGuru üzerinden görülen Google puanı 4,2/5 (21.083 yorum), TripAdvisor 3,9/5 (2.589 yorum); Gault&Millau Türkiye 2026 rehberinde 2 toque ve 14/20. Övgü tutarlı biçimde 28-30 gün dinlendirilmiş etin yumuşaklığında ve pişirme derecesinde yoğunlaşıyor; Ekşi Sözlük'te 'Türkiye'de et yenecek en iyi yerlerden' ifadesi geçiyor, Trip.com yorumlarında etin 'hiç yağlı olmayan, çok lezzetli' bulunduğu aktarılıyor. Puanı 9'a taşımayan şey, yemeğin kendisinden çok fiyat/performans tartışması ve TripAdvisor'ın 3,9'luk toplu puanı; ayrıca RestaurantGuru özetinde 'kalite iyi ama primli fiyat, bir kez denenir düzenli gidilmez' örüntüsü tekrar ediyor. Bu, 8,0-8,9 bandındaki 'güçlü ama tekrarlayan küçük şikâyetler var' tanımına uyuyor."
+      "ozet": "Only sources specific to the Etiler branch were used; reviews of the İstinyePark, Bebek, Galataport, and international branches, as well as complaints about the Nusr-Et Burger brand, were excluded — this distinction mattered especially on Şikayetvar, where the 36 complaints mix different brands and branches. For Etiler, a Google rating of 4.2/5 seen via RestaurantGuru (21,083 reviews), TripAdvisor 3.9/5 (2,589 reviews); 2 toques and 14/20 in the Gault&Millau Turkey 2026 guide. Praise is consistently concentrated on the tenderness and doneness of beef aged 28-30 days; Ekşi Sözlük says 'one of the best places in Turkey to eat meat,' and Trip.com reviews report the meat as 'not fatty at all, very flavorful.' What keeps it from reaching 9 is less about the food itself and more the price/performance debate and TripAdvisor's aggregate 3.9; the RestaurantGuru summary also repeats a pattern of 'quality is good but the price is a premium, try it once, don't go regularly.' This fits the 8.0-8.9 band definition of 'strong but with recurring minor complaints.'"
     },
     "neYenir": [
       {
         "yemek": "Lokum",
         "kacKisiOnerdi": null,
-        "not": "Markanın imza eti; restoranın kendi sitesi Nusr-Et Sushi ve Nusr-Et Special ile birlikte imza tabaklar arasında sayıyor. Lokantalarım incelemesi 'ağızda dağılan, sırtın iç kısmından' diye anlatıyor. Ekşi Sözlük girdilerinde de bonfile/lokum ikilisi öne çıkan sipariş."
+        "not": "The brand's signature cut of meat; the restaurant's own website lists it among the signature dishes alongside Nusr-Et Sushi and Nusr-Et Special. The Lokantalarım review describes it as 'melts in the mouth, from the inner part of the back.' Ekşi Sözlük entries also cite the bonfile/lokum duo as the standout order."
       },
       {
         "yemek": "Nusr-Et Sushi",
         "kacKisiOnerdi": null,
-        "not": "Dana etinden yapılan, markaya özgü kalem; restoranın kendi Etiler sayfası imza tabaklar arasında ilk sıralarda anıyor. Menüde balık sushisi değil et sushisi olduğu için ayrı bir kalem olarak yazıldı."
+        "not": "A brand-specific item made from beef; the restaurant's own Etiler page lists it near the top of its signature dishes. Written as a separate item since it's a beef sushi, not fish sushi, on the menu."
       },
       {
         "yemek": "Tomahawk",
         "kacKisiOnerdi": null,
-        "not": "Nusr-Et'in resmî menü tanıtımında Steak Tartar ve Lokum ile birlikte sayılan imza kesim. Paylaşıma açık menü listelerinde 600-800 gramlık porsiyonla en pahalı kalemlerden biri olarak geçiyor; masada kesilip servis edilmesiyle biliniyor."
+        "not": "A signature cut counted alongside Steak Tartar and Lokum in Nusr-Et's official menu presentation. Publicly shared menu lists show it as one of the most expensive items with a 600-800 gram portion; known for being carved and served tableside."
       },
       {
         "yemek": "Dana Pirzola",
         "kacKisiOnerdi": null,
-        "not": "Lokantalarım'ın Etiler incelemesinde T-Bone ve Dallas ile birlikte öne çıkan kesimler arasında sayılıyor ve yanına Shiraz öneriliyor. RestaurantGuru'nun popüler kalemler listesinde de 'beef ribs' geçiyor."
+        "not": "Cited among the standout cuts alongside T-Bone and Dallas in Lokantalarım's Etiler review, paired with a recommendation of Shiraz. RestaurantGuru's popular items list also mentions 'beef ribs.'"
       },
       {
         "yemek": "Altın Baklava (Golden Baklava)",
         "kacKisiOnerdi": null,
-        "not": "Restoranın kendi sitesi tatlı tarafında bu kalemi öne çıkarıyor; RestaurantGuru'nun popüler kalemler listesinde de baklava tatlı olarak ilk sırada anılıyor. Yenilebilir altın varak uygulaması markanın en çok konuşulan sunumlarından."
+        "not": "The restaurant's own website highlights this item on the dessert side; RestaurantGuru's popular items list also ranks baklava first among desserts. The edible gold-leaf presentation is one of the brand's most talked-about touches."
       }
     ],
     "ambiyans": {
       "puan": 8.0,
-      "ozet": "Kaynaklar mekânı tutarlı biçimde 'şık ve lüks' diye tanımlıyor; Trip.com kaydı 'üst segment, trendy atmosfer' diyor, Türkçe mekân derlemeleri Nusr-Et'i yalnızca bir et restoranı değil 'gösteri sahnesi' olarak anlatıyor — garsonların ateş şovu, Salt Bae imzalı tuzlama hareketi ve yüksek enerjili servis. Etiler şubesi markanın doğduğu yer (2010) olduğu için ayrıca sembolik. Puanı 9'a taşımayan şey, aynı gösteri unsurunun bir bölüm yorumcuda ters tepmesi: Ekşi Sözlük girdilerinde girişe lüks otomobillerin park edilmesi ve ünlülerle çekilmiş fotoğrafların pazarlamada kullanılması 'statü satmak' diye eleştiriliyor, yoğun saatlerde oturma düzeninin sorunlu olduğu belirtiliyor.",
+      "ozet": "Sources consistently describe the venue as 'elegant and luxurious'; the Trip.com listing says 'upscale, trendy atmosphere,' and Turkish venue roundups describe Nusr-Et not just as a steakhouse but as a 'stage show' — the staff's fire show, the Salt Bae signature salting move, and high-energy service. The Etiler branch is also symbolic as the brand's birthplace (2010). What keeps it from reaching 9 is that the same showmanship backfires for some reviewers: Ekşi Sözlük entries criticize luxury cars parked at the entrance and photos with celebrities used in marketing as 'selling status,' and note that seating arrangements are problematic during busy hours.",
       "etiketler": [
-        "lüks",
-        "gösterişli",
-        "canlı",
-        "kalabalık",
+        "luxury",
+        "glamorous",
+        "lively",
+        "crowded",
         "steakhouse"
       ],
       "dressCode": null,
       "uygun": [
-        "grup",
-        "iş yemeği",
-        "çift"
+        "groups",
+        "business dinner",
+        "couples"
       ]
     },
     "servis": {
       "puan": 7.5,
-      "ozet": "Servis, bu restoranın en bölünmüş başlığı. Olumlu tarafta Trip.com ve Türkçe derlemelerde 'servis üst düzeydi, personel çok ilgiliydi, hızlıydı' yorumları, Nusret'in bizzat masaya gelip eti kesmesi ve RestaurantGuru özetindeki 'profesyonel servis' vurgusu var. Olumsuz tarafta Ekşi Sözlük girdilerinde servisin iyi olmadığı, özellikle içecek siparişlerinde gecikme yaşandığı ve yoğun saatlerde servis kalitesinin düştüğü yazılıyor; RestaurantGuru özeti de 'zaman zaman servis aksaklıkları' diyor. Ayrıca menü verilmemesi ve fiyatların sipariş öncesi net olmaması, fiyattan bağımsız olarak bir servis sorunu olarak buraya yazıldı. Şikayetvar'daki 36 şikâyette Etiler'e özgü olanları diğer şubelerden ve Nusr-Et Burger'den ayırmak mümkün olmadığı için o kaynak puanlamada kullanılmadı. Belirgin ve sık tekrarlanan bir zayıflık olduğu için 7,0-7,9 bandı.",
+      "ozet": "Service is this restaurant's most divided topic. On the positive side there are Trip.com and Turkish roundup comments like 'top-tier service, staff were very attentive,' Nusret personally coming to the table to carve the meat, and RestaurantGuru's summary emphasis on 'professional service.' On the negative side, Ekşi Sözlük entries say service isn't good, that there are particular delays with drink orders, and that service quality drops during busy hours; the RestaurantGuru summary also mentions 'occasional service hiccups.' Also, not providing a menu and prices not being clear before ordering was recorded here as a service issue independent of the price itself. The 36 complaints on Şikayetvar couldn't be separated between the Etiler branch and other branches/Nusr-Et Burger, so that source wasn't used for scoring. Because it's a clear and frequently recurring weakness, it falls in the 7.0-7.9 band.",
       "artilar": [
-        "Trip.com ve Türkçe derlemelerde ilgili, hızlı ve güler yüzlü personel yorumları",
-        "Etin masada kesilip sunulması ve Salt Bae imzalı tuzlama gösterisi",
-        "Vale hizmeti ve otopark sorununun olmaması (Ekşi Sözlük girdileri)"
+        "Attentive, fast, and friendly staff mentioned in Trip.com and Turkish roundups",
+        "Meat carved and presented tableside, plus the Salt Bae signature salting show",
+        "No valet or parking issues (Ekşi Sözlük entries)"
       ],
       "eksiler": [
-        "Ekşi Sözlük'te tekrarlanan yavaş içecek servisi ve yoğun saatlerde düşen servis kalitesi",
-        "Basılı menü verilmemesi; fiyatların sipariş öncesi net olmaması",
-        "RestaurantGuru özetinde geçen 'zaman zaman servis aksaklıkları' notu",
-        "Hafta sonları için 1-2 hafta önceden rezervasyon gerekmesi"
+        "Recurring slow drink service and declining service quality during busy hours (Ekşi Sözlük)",
+        "No printed menu given; prices not clear before ordering",
+        "The RestaurantGuru summary's mention of 'occasional service hiccups'",
+        "Needing to book 1-2 weeks ahead for weekends"
       ]
     },
     "oduller": [
       {
         "tip": "gault-millau",
-        "detay": "Gault&Millau Türkiye 2026 Gastronomi Rehberi — 2 toque, 14/20, şefler Nusret Gökçe ve Oğuzhan Dedeoğlu (8 Aralık 2025 tarihli tören; Food in Life'ın 2026 rehberi listesinden doğrulandı, kayıt açıkça 'Nusr-Et Steakhouse Etiler' şubesini adlandırıyor). MICHELIN Guide İstanbul seçkisinde Nusr-Et'e rastlanmadı; 2026 İstanbul yıldız, Bib Gourmand ve tavsiye listelerinde adı geçmiyor."
+        "detay": "Gault&Millau Turkey 2026 Gastronomy Guide — 2 toques, 14/20, chefs Nusret Gökçe and Oğuzhan Dedeoğlu (ceremony dated December 8, 2025; verified from Food in Life's 2026 guide listing, which explicitly names the 'Nusr-Et Steakhouse Etiler' branch). Nusr-Et was not found in the MICHELIN Guide Istanbul selection; it doesn't appear in the 2026 Istanbul star, Bib Gourmand, or recommended lists."
       }
     ],
     "rezervasyon": {
       "gerekiyor": true,
       "yontem": [
-        "telefon",
+        "phone",
         "online"
       ],
       "telefon": "+90 530 919 09 94",
       "link": null,
-      "beklemeSuresi": "Rezervasyonun şart olduğu iki bağımsız kaynakta belirtiliyor (Trip.com kaydı 'rezervasyon gerekli' diyor; Dress Code Finder 'rezervasyon şart, hafta içi için birkaç gün, hafta sonu için 1-2 hafta önceden' diyor). Lokantalarım incelemesi özellikle hafta içi öğle servisi için rezervasyon öneriyor. Restoranın kendi sitesinde rezervasyon bölümü var ama doğrudan erişilebilir bir rezervasyon URL'i doğrulanamadı; OpenTable üzerinde de bir Nusr-Et Etiler kaydı görünüyor, ancak sayfa açılamadığı için link boş bırakıldı.",
+      "beklemeSuresi": "That reservations are mandatory is stated in two independent sources (the Trip.com listing says 'reservation required'; Dress Code Finder says 'reservation mandatory, a few days ahead on weekdays, 1-2 weeks ahead for weekends'). The Lokantalarım review specifically recommends reservations for weekday lunch service. The restaurant's own website has a reservation section but no directly accessible reservation URL could be verified; there's also a Nusr-Et Etiler listing on OpenTable, but since the page couldn't be opened, the link was left blank.",
       "kapora": null
     },
     "kaynaklar": {
@@ -691,7 +691,7 @@ const RESTORANLAR = [
         "incelenen": 0
       },
       "tiktok": null,
-      "diger": "Gault&Millau Türkiye 2026 (2 toque, 14/20), Nusr-Et'in resmî Etiler sayfası, 12 Ağustos 2024 tarihli Etiler adisyonu haberleri (Mynet ve diğer haber siteleri), Uplifers'ın 2025 Etiler listesi, Lokantalarım incelemesi, Ekşi Sözlük 'nusr-et' başlığı, Trip.com kaydı, RestaurantGuru ve OpenStreetMap POI kaydı da değerlendirmeye dahil edildi. Şikayetvar'daki 36 şikâyet şube ve marka ayrımı yapılamadığı için puanlamada kullanılmadı."
+      "diger": "Gault&Millau Turkey 2026 (2 toques, 14/20), Nusr-Et's official Etiler page, news coverage of the August 12, 2024 Etiler receipt (Mynet and other news sites), Uplifers' 2025 Etiler list, the Lokantalarım review, the Ekşi Sözlük 'nusr-et' thread, the Trip.com listing, RestaurantGuru, and the OpenStreetMap POI record were also included in the assessment. The 36 complaints on Şikayetvar couldn't be separated by branch and brand, so they weren't used for scoring."
     },
     "fotolar": [],
     "sonGuncelleme": "2026-08-08"
@@ -699,12 +699,12 @@ const RESTORANLAR = [
   {
     "id": "sunset-grill-bar",
     "isim": "Sunset Grill & Bar",
-    "ulke": "Türkiye",
-    "sehir": "İstanbul",
+    "ulke": "Turkey",
+    "sehir": "Istanbul",
     "semt": "Ulus",
     "mutfak": [
-      "Akdeniz",
-      "Japon",
+      "Mediterranean",
+      "Japanese",
       "Sushi",
       "Steakhouse"
     ],
@@ -717,92 +717,92 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "pahali",
       "kisiBasi": null,
-      "not": "Hiçbir kaynak kişi başı aralık vermediği için kisiBasi boş bırakıldı; restoranın kendi sitesindeki Temmuz 2026 menü PDF'leri makinece okunabilir olmadığı için fiyatlar oradan alınamadı. Doğrulanan en somut veri: Şikayetvar'a 19 Ekim 2025'te düşen bir şikâyette 8 kişilik bir masanın hesabı 20.291 ₺, yani kişi başı yaklaşık 2.536 ₺ — üstelik pasta ücreti ve servis bedeli bu tutarın dışında ayrıca yansıtılmış. Aynı şikâyette servis ücretinin ayrı kesildiği, üçüncü taraf derlemelerde ise hesaba yaklaşık %15 servis bedeli eklendiği belirtiliyor. RestaurantGuru kaydı kişi başını 'yaklaşık 2.000 ₺ (yaklaşık 100 avro)' diye etiketliyor; bu iki rakam birbiriyle tutarsız olduğu için yalnızca doğrulanmış adisyon esas alındı. TripAdvisor'da 'Fiyatlar aşırı yüksek' ve 'Prices beyond belief' başlıklı yorumlar bulunuyor; top25restaurants incelemesi mekânı $$$$ (çok pahalı) bandında etiketliyor ve bir misafirin şaraba 100 dolar yerine 1.000 dolar fatura edildiğini, ayrıca ambiyans ve vestiyer gibi ek kalemlerin şikâyet konusu olduğunu aktarıyor. Sahibinin belirlediği eşiklere göre (ucuz: 750 ₺ altı; orta: 750-2.500 ₺; pahalı: 2.500 ₺ üstü) Ekim 2025 tarihli doğrulanmış kişi başı ~2.536 ₺ 'pahalı' segmentine karşılık geliyor."
+      "not": "No source gave a per-person range, so kisiBasi was left blank; the restaurant's own July 2026 menu PDFs on its website aren't machine-readable, so prices couldn't be taken from them. The most concrete data verified: a complaint filed on Şikayetvar on October 19, 2025 reports a bill of ₺20,291 for a table of 8, i.e. about ₺2,536 per person — and a cake fee and service charge were billed separately on top of that amount. The same complaint states the service charge was billed separately, and third-party roundups mention about a 15% service charge added to the bill. The RestaurantGuru listing tags per-person spending as 'around ₺2,000 (about 100 euros)'; since these two figures are inconsistent with each other, only the verified receipt was used. TripAdvisor has reviews titled 'Prices are extremely high' and 'Prices beyond belief'; the top25restaurants review tags the venue in the $$$$ (very expensive) band and reports a guest being billed $1,000 instead of $100 for wine, plus complaints about extra charges like ambiance and coat check. According to the owner's thresholds (cheap: under ₺750; mid-range: ₺750-2,500; expensive: over ₺2,500), the verified October 2025 per-person figure of about ₺2,536 corresponds to the expensive segment."
     },
     "yemek": {
       "puan": 8.0,
-      "ozet": "Sunset tek şubeli olduğu için şube ayrımı sorunu yaşanmadı. Kaynaklar: MICHELIN Guide İstanbul seçkisinde yer alıyor (yıldız veya Bib Gourmand değil), Gault&Millau Türkiye 2026'da 2 toque, RestaurantGuru üzerinden görülen Google puanı 4,1/5 (4.489 yorum), TripAdvisor 3,8/5 (1.510 yorum), Zomato 4,4/5 (723 yorum), Foursquare 9,1/10 (3.979 yorum); RestaurantGuru sıralamasında İstanbul'da 68.798 restoran içinde 315. sırada. Övgü iki yerde yoğunlaşıyor: 1999'da açılan ve Türkiye'nin ilk sushi barı sayılan bölüm ile evde 30 gün dinlendirilen kömür ateşinde ızgara etler; Voggia'nın 23 Mart 2026 tarihli incelemesi Sunset Fillet'i ve sushi barı öne çıkarıyor, Türkçe yorumlarda dana yanak 'yediğim en lezzetli et' diye anılıyor. Puanı 9'a taşımayan şey belirgin bir tutarlılık sorunu: top25restaurants incelemesi son yorumlarda porsiyon ve yemek kalitesinde ciddi dalgalanma olduğunu, miso cod'un karışık yorum aldığını yazıyor; Şikayetvar'daki Ekim 2025 şikâyetinde sushi'nin 'taze değil, bayat' geldiği bildiriliyor. Bu, 8,0-8,9 bandındaki 'güçlü ama tekrarlayan küçük şikâyetler var' tanımına uyuyor."
+      "ozet": "Since Sunset has only one location, there was no branch-separation issue. Sources: included in the MICHELIN Guide Istanbul selection (not a star or Bib Gourmand), 2 toques in Gault&Millau Turkey 2026, a Google rating of 4.1/5 seen via RestaurantGuru (4,489 reviews), TripAdvisor 3.8/5 (1,510 reviews), Zomato 4.4/5 (723 reviews), Foursquare 9.1/10 (3,979 reviews); ranked 315th out of 68,798 restaurants in Istanbul on RestaurantGuru. Praise is concentrated in two areas: the section that opened in 1999 and is considered Turkey's first sushi bar, and the meats grilled over charcoal after being dry-aged in-house for 30 days; Voggia's review dated March 23, 2026 highlights the Sunset Fillet and the sushi bar, and Turkish reviews describe the beef cheek as 'the most delicious meat I've eaten.' What keeps it from reaching 9 is a clear consistency issue: the top25restaurants review says there's been serious fluctuation in portion and food quality in recent reviews, and that the miso cod gets mixed reviews; a complaint on Şikayetvar dated October 2025 reports the sushi arriving 'not fresh, stale.' This fits the 8.0-8.9 band definition of 'strong but with recurring minor complaints.'"
     },
     "neYenir": [
       {
         "yemek": "Sushi ve Sashimi Seçkisi",
         "kacKisiOnerdi": null,
-        "not": "Sushi bar 1999'da açıldı ve birden fazla kaynakta Türkiye'nin ilk yüksek segment sushi barı olarak anılıyor (Gault&Millau Türkiye sayfası, Voggia, top25restaurants). Türkçe yorumlarda 'sushi'nin en güzel yapıldığı yerlerden' ifadesi geçiyor. Karşı örnek: Şikayetvar'daki 19 Ekim 2025 şikâyetinde sushi'nin bayat geldiği bildiriliyor — kaynaklar bu kalemde ayrışıyor."
+        "not": "The sushi bar opened in 1999 and is cited in multiple sources as Turkey's first upscale sushi bar (Gault&Millau Turkey's page, Voggia, top25restaurants). Turkish reviews say it's 'among the places that make the best sushi.' Counter-example: a complaint on Şikayetvar dated October 19, 2025 reports the sushi arriving stale — sources diverge on this item."
       },
       {
         "yemek": "Kömür Ateşinde Dinlendirilmiş Izgara Et",
         "kacKisiOnerdi": null,
-        "not": "Restoranın kendi sitesi ve Voggia'nın Mart 2026 incelemesi, evde 30 gün dinlendirilen ve kömür ateşinde pişirilen etleri menünün ana çekim noktası olarak anlatıyor. Gault&Millau sayfası da mekânın California mutfağı ve ızgara et geleneğiyle başladığını yazıyor."
+        "not": "The restaurant's own website and Voggia's March 2026 review describe the meats, aged in-house for 30 days and grilled over charcoal, as the menu's main draw. The Gault&Millau page also notes the venue began with California cuisine and a grilling tradition."
       },
       {
         "yemek": "Sunset Fillet",
         "kacKisiOnerdi": null,
-        "not": "Voggia'nın 23 Mart 2026 tarihli incelemesinde kuşkonmaz ve patates püresiyle servis edilen imza tabak olarak özellikle anılıyor."
+        "not": "Specifically cited in Voggia's review dated March 23, 2026 as a signature dish served with asparagus and mashed potatoes."
       },
       {
         "yemek": "Dana Yanak",
         "kacKisiOnerdi": null,
-        "not": "Türkçe yorumlarda 'yediğim en lezzetli et' diye öne çıkarılıyor. Buna karşılık Şikayetvar'daki bir şikâyette dana yanak ve ördek gibi imza tabakların porsiyon ve hazırlık kalitesinin belirgin biçimde düştüğü iddia ediliyor — kaynaklar ayrışıyor."
+        "not": "Highlighted in Turkish reviews as 'the most delicious meat I've eaten.' On the other hand, a Şikayetvar complaint claims the portion and preparation quality of signature dishes like beef cheek and duck has clearly declined — sources diverge."
       },
       {
         "yemek": "Miso Cod",
         "kacKisiOnerdi": null,
-        "not": "top25restaurants incelemesi bu tabağın menüde sık öne çıktığını ama karışık yorum aldığını yazıyor. Öneri listesine, hem sık anıldığı hem de tartışmalı olduğu açıkça belirtilerek eklendi."
+        "not": "The top25restaurants review says this dish is often featured on the menu but gets mixed reviews. Added to the recommendation list while explicitly noting it's both frequently mentioned and controversial."
       }
     ],
     "ambiyans": {
       "puan": 9.2,
-      "ozet": "Ambiyans, kaynakların neredeyse istisnasız uzlaştığı başlık ve mekânın asıl sermayesi. Ulus Parkı'nın tepesinde, Boğaz'a ve Boğaziçi Köprüsü'ne bakan teras; MICHELIN Guide açıklaması 'şehrin ve Boğaz'ın muhteşem manzarası' diyor, top25restaurants 'asıl çekim gücü konum' diye özetliyor ve 350 kişilik iç-dış oturma alanını anlatıyor, ZAGAT alıntısı restoranın kendi sitesinde 'ılık ve yıldızlı bir gecede Boğaz'ın üzerindeki bu terasın üstüne yok' diye aktarılıyor. Voggia'nın Mart 2026 incelemesi mekânı 'yaşayan bir referans noktası' diye niteliyor ve bar, ana salon ve Sunset After olarak katmanlı bir akşam kurgusu anlattığını yazıyor. Olumsuz tarafta yalnızca oturma yeri dağıtımıyla ilgili şikâyetler var: Şikayetvar'da rezervasyona rağmen arka bölüme oturtulma ve kapıda grup bileşimine göre ayrım yapılması iddiaları geçiyor. 9,0-10 bandındaki 'o kategoride şehirde referans nokta' tanımına uyuyor.",
+      "ozet": "Ambiance is the topic sources agree on almost unanimously, and it's the venue's real asset. Atop Ulus Parkı, with a terrace overlooking the Bosphorus and the Bosphorus Bridge; the MICHELIN Guide description says 'a stunning view of the city and the Bosphorus,' top25restaurants sums it up as 'the main draw is the location' and describes a 350-seat indoor-outdoor area, and a ZAGAT quote on the restaurant's own website reads 'nothing beats this terrace over the Bosphorus on a warm, starry night.' Voggia's March 2026 review calls the venue 'a living landmark' and describes a layered evening structure of bar, main dining room, and Sunset After. The only negative side concerns seating allocation: Şikayetvar has claims of being seated in the back despite a reservation and of the door staff sorting groups by composition. This fits the 9.0-10 band definition of 'a reference point in the city in that category.'",
       "etiketler": [
-        "boğaz-manzarası",
-        "teras",
+        "bosphorus-view",
+        "terrace",
         "fine-dining",
-        "gün-batımı",
+        "sunset",
         "bar"
       ],
       "dressCode": null,
       "uygun": [
-        "çift",
-        "iş yemeği",
-        "grup"
+        "couples",
+        "business dinner",
+        "groups"
       ]
     },
     "servis": {
       "puan": 8.0,
-      "ozet": "Servis bu restoranda hem en güçlü hem de en tartışmalı başlık. Güçlü taraf resmî: MICHELIN Guide İstanbul'un ilk seçkisinde (Ekim 2022'de açıklanan, 2023 rehberi) Mastercard sunumuyla verilen Servis Ödülü Sunset Grill & Bar ekibine gitti; Michelin'in gerekçesi misafir konforunu mutlak öncelik yapan 'eski usul' bir konukseverlik anlayışı. Gault&Millau Türkiye de mekâna 'Sektöre Katkı' ve 'Onur' ödülleri veriyor. Zayıf taraf güncel: Şikayetvar'daki 7 şikâyetin ikisi 19 Ekim 2025'te aynı gün açılmış ve ikisi de rezervasyona rağmen yaklaşık 40 dakika barda ayakta bekletilmeyi, ardından arka bölüme oturtulmayı anlatıyor; aynı şikâyetlerde hesabı ödemek isteyen misafirin uzun süre görmezden gelindiği belirtiliyor. top25restaurants incelemesi ise bir misafire şarabın 100 dolar yerine 1.000 dolar fatura edildiğini ve ambiyans/vestiyer gibi ek kalemlerin şikâyet konusu olduğunu aktarıyor. Ödüllü bir geçmişle güncel ve tekrar eden aksaklıklar arasındaki bu makas nedeniyle puan 8,0-8,9 bandının alt ucunda tutuldu.",
+      "ozet": "Service is both the strongest and most controversial topic at this restaurant. The strong side is official: in the MICHELIN Guide Istanbul's first selection (announced October 2022, the 2023 guide), the Service Award presented with Mastercard went to the Sunset Grill & Bar team; Michelin's reasoning cited an 'old-school' hospitality approach that makes guest comfort the absolute priority. Gault&Millau Turkey also gives the venue 'Contribution to the Industry' and 'Honor' awards. The weak side is current: two of the 7 complaints on Şikayetvar were filed on the same day, October 19, 2025, and both describe being kept standing at the bar for about 40 minutes despite a reservation, then being seated in the back; the same complaints say a guest wanting to pay the bill was ignored for a long time. The top25restaurants review also reports a guest being billed $1,000 instead of $100 for wine, and complaints about extra charges like ambiance and coat check. Because of this gap between an award-winning history and current, recurring lapses, the score was kept at the lower end of the 8.0-8.9 band.",
       "artilar": [
-        "MICHELIN Guide İstanbul Servis Ödülü (2023 seçkisi, Mastercard sunumuyla)",
-        "Gault&Millau Türkiye'nin Sektöre Katkı ve Onur ödülleri",
-        "Türkçe yorumlarda 'servis harikaydı' ifadesinin sık tekrarlanması",
-        "Şikayetvar'daki şikâyetlerden en az birinin 'çözüldü' olarak işaretlenmesi"
+        "MICHELIN Guide Istanbul Service Award (2023 selection, presented with Mastercard)",
+        "Gault&Millau Turkey's Contribution to the Industry and Honor awards",
+        "Frequent repetition of 'service was amazing' in Turkish reviews",
+        "At least one complaint on Şikayetvar marked as 'resolved'"
       ],
       "eksiler": [
-        "Rezervasyona rağmen ~40 dakika ayakta bekletilme (Şikayetvar, 19 Ekim 2025, iki ayrı şikâyet)",
-        "Rezervasyon sahiplerinin arka bölüme oturtulması ve kapıda grup bileşimine göre ayrım iddiaları",
-        "Hesap ödeme talebinin uzun süre karşılıksız kalması (Şikayetvar, Ekim 2025)",
-        "Pasta ve servis bedelinin ayrıca yansıtılması; adisyon hatası iddiası (top25restaurants)"
+        "Kept standing for ~40 minutes despite a reservation (Şikayetvar, October 19, 2025, two separate complaints)",
+        "Reservation holders seated in the back and claims of sorting by group composition at the door",
+        "Requests to pay the bill going unanswered for a long time (Şikayetvar, October 2025)",
+        "Cake and service charges billed separately; claims of billing errors (top25restaurants)"
       ]
     },
     "oduller": [
       {
         "tip": "michelin-secilmis",
-        "detay": "MICHELIN Guide İstanbul — rehberde seçilmiş restoran. Yıldız ya da Bib Gourmand değil; 2026 İstanbul yıldız ve Bib Gourmand listelerinde yer almıyor, tavsiye edilen restoranlar seçkisinde yer alıyor. Ayrıca MICHELIN Guide İstanbul'un ilk seçkisiyle (Ekim 2022'de açıklanan 2023 rehberi) verilen Mastercard sunumlu Servis Ödülü'nün sahibi; bu ödül Michelin'in kendi duyurusundan ve Michelin Türkiye'nin basın sayfasından doğrulandı."
+        "detay": "MICHELIN Guide Istanbul — restaurant selected in the guide. Not a star or Bib Gourmand; not in the 2026 Istanbul star and Bib Gourmand lists, but included in the recommended restaurants selection. Also the recipient of the Mastercard-presented Service Award from MICHELIN Guide Istanbul's first selection (the 2023 guide, announced October 2022); this award was verified from Michelin's own announcement and Michelin Turkey's press page."
       },
       {
         "tip": "gault-millau",
-        "detay": "Gault&Millau Türkiye 2026 Gastronomi Rehberi — 2 toque, mutfak şefi Marios Tsouris. Puan kaynaklar arasında farklılık gösteriyor: Gault&Millau Türkiye'nin kendi Sunset Grill & Bar sayfası 14/20, 2026 rehberinin tanıtımını aktaran Food in Life listesi 14,5/20 veriyor. Aynı sayfada mekâna 'Sektöre Katkı' ve 'Onur' ödülleri de veriliyor. Restoranın kendi sitesi ayrıca Wine Spectator ve Chaîne des Rôtisseurs üyeliğini anıyor; bunlar bağımsız olarak doğrulanamadığı için ayrı ödül kaydı açılmadı."
+        "detay": "Gault&Millau Turkey 2026 Gastronomy Guide — 2 toques, head chef Marios Tsouris. Scores differ between sources: Gault&Millau Turkey's own Sunset Grill & Bar page gives 14/20, while the Food in Life listing covering the 2026 guide launch gives 14.5/20. The same page also gives the venue 'Contribution to the Industry' and 'Honor' awards. The restaurant's own website also mentions Wine Spectator and Chaîne des Rôtisseurs membership; since these couldn't be independently verified, no separate award record was created."
       }
     ],
     "rezervasyon": {
       "gerekiyor": null,
       "yontem": [
-        "telefon",
+        "phone",
         "online",
-        "e-posta"
+        "email"
       ],
       "telefon": "+90 212 287 03 57",
       "link": null,
-      "beklemeSuresi": "Rezervasyonun koşullu olarak gerekli olduğu belirtildiği için 'gerekiyor' boş bırakıldı: kaynaklar 'özellikle akşam ve hafta sonları, iyi masalardan birine oturup manzaranın tadını çıkarmak için rezervasyon önemli' diyor; top25restaurants ise doğrudan 'rezervasyon şart' diyor. Somut bekleme süresi veren doğrulanmış bir kaynak yok; buna karşılık Şikayetvar'daki 19 Ekim 2025 tarihli iki şikâyette rezervasyonlu misafirlerin barda yaklaşık 40 dakika bekletildiği anlatılıyor. Restoranın kendi sitesindeki rezervasyon düğmesi JavaScript ile çalıştığı için doğrudan bir rezervasyon URL'i çıkarılamadı, bu yüzden link boş bırakıldı; 15 kişi ve üzeri grup menüleri için info@sunsetgrillbar.com adresi veriliyor.",
+      "beklemeSuresi": "Since reservations are stated to be conditionally necessary, 'gerekiyor' was left blank: sources say 'reservations matter, especially for evenings and weekends, to get one of the good tables and enjoy the view'; top25restaurants directly says 'reservation required.' No verified source gives a concrete wait time; however, two complaints on Şikayetvar dated October 19, 2025 describe reservation holders being kept waiting at the bar for about 40 minutes. Because the reservation button on the restaurant's own website runs on JavaScript, a direct reservation URL couldn't be extracted, so the link was left blank; for groups of 15 or more, the email info@sunsetgrillbar.com is given for group menus.",
       "kapora": null
     },
     "kaynaklar": {
@@ -817,12 +817,12 @@ const RESTORANLAR = [
         "incelenen": 2
       },
       "tiktok": null,
-      "diger": "MICHELIN Guide İstanbul seçkisi ve 2023 Servis Ödülü duyurusu, Michelin Türkiye basın sayfası, Gault&Millau Türkiye 2026 (2 toque), restoranın resmî sitesi ve Temmuz 2026 menü sayfaları, Voggia'nın 23 Mart 2026 tarihli incelemesi, top25restaurants değerlendirmesi, Şikayetvar'daki 7 şikâyet (19 Ekim 2025 tarihli ikisi dahil), Zomato (4,4/5, 723 yorum), Foursquare (9,1/10, 3.979 yorum), Yandex Haritalar (4,3/5, 49 yorum), RestaurantGuru ve OpenStreetMap POI kaydı da değerlendirmeye dahil edildi."
+      "diger": "The MICHELIN Guide Istanbul selection and 2023 Service Award announcement, the Michelin Turkey press page, Gault&Millau Turkey 2026 (2 toques), the restaurant's official website and July 2026 menu pages, Voggia's review dated March 23, 2026, the top25restaurants review, the 7 complaints on Şikayetvar (including two dated October 19, 2025), Zomato (4.4/5, 723 reviews), Foursquare (9.1/10, 3,979 reviews), Yandex Maps (4.3/5, 49 reviews), RestaurantGuru, and the OpenStreetMap POI record were also included in the assessment."
     },
     "fotolar": [
       {
         "dosya": "fotolar/sunset-grill-bar-1.jpg",
-        "alt": "Bar tezgâhında kırılmış buzla servis edilen kokteyl",
+        "alt": "A cocktail served over crushed ice at the bar counter",
         "kaynak": "https://www.sunsetgrillbar.com/assets/upload/images/bar-2535f1.jpg",
         "kredi": "Sunset Grill & Bar"
       }
@@ -832,12 +832,12 @@ const RESTORANLAR = [
   {
     "id": "lacivert",
     "isim": "Lacivert",
-    "ulke": "Türkiye",
-    "sehir": "İstanbul",
+    "ulke": "Turkey",
+    "sehir": "Istanbul",
     "semt": "Anadolu Hisarı",
     "mutfak": [
-      "Deniz Ürünleri",
-      "Akdeniz",
+      "Seafood",
+      "Mediterranean",
       "Fine Dining"
     ],
     "adres": "Anadolu Hisarı, Körfez Caddesi No:57/A, 34410 Beykoz, İstanbul",
@@ -849,86 +849,86 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "pahali",
       "kisiBasi": null,
-      "not": "Restoranın kendi menüsü (lacivertrestaurant.com üzerindeki 'Lacivert-Menu-Temmuz26-EN.pdf', Temmuz 2026 tarihli) indirildi, ancak menü sayfaları görüntü olarak hazırlandığı için içindeki fiyatlar okunamadı; bu yüzden resmî fiyat listesi kullanılamadı. Kişi başı aralık hiçbir kaynak böyle bir aralık vermediği için boş bırakıldı. Doğrulanan somut veriler yorumlardan geliyor: Ekşi Sözlük'te yalnızca bu restoranın adisyonuna ayrılmış ayrı bir başlıkta (24 Ocak 2025) cacık 290 ₺, patlıcan salatası 440 ₺, tatlı 350 ₺, çay 80 ₺ ve bir kadeh/şişe şarap 480 ₺ olarak aktarılıyor; aynı başlıkta kuver ve servis bedelinin toplamının yaklaşık 50 dolar olduğu ve iki kişilik hesabın 11.000 ₺ civarına çıktığı yazılıyor, bir yazar kişi başı tutarı 100 avroya benzetiyor. 2 Ekim 2024 tarihli bir başka Ekşi Sözlük yorumunda kuver kişi başı 125 ₺, hesaba %10 servis bedeli eklendiği ve valenin 300 ₺ olduğu belirtiliyor. Kaynaklar tam hemfikir değil: restaurantguru.com sayfası kişi başı ~2.000 ₺ (tarihsiz, algoritmik bir tahmin) yazarken Wanderlog fiyat seviyesini $$$$ olarak etiketliyor. menufiyati.tr'de 'Lacivert Menü Fiyatları 2026' başlıklı ayrıntılı bir liste bulundu ama sayfa hiçbir kaynak göstermiyor ve restoranın kendi menüsüyle karşılaştırılamadığı için kullanılmadı. Sahibinin belirlediği eşiklere göre (ucuz: 750 ₺ altı; orta: 750-2.500 ₺; pahalı: 2.500 ₺ üstü) doğrulanmış kişi başı ~5.500 ₺'lik adisyon verisi 'pahalı' segmentine karşılık geliyor."
+      "not": "The restaurant's own menu ('Lacivert-Menu-Temmuz26-EN.pdf' on lacivertrestaurant.com, dated July 2026) was downloaded, but since the menu pages are prepared as images, the prices inside couldn't be read; so the official price list couldn't be used. No source gave a per-person range, so it was left blank. Verified concrete data comes from reviews: in a thread on Ekşi Sözlük devoted solely to this restaurant's bill (January 24, 2025), cacık (yogurt-cucumber dip) is reported at ₺290, eggplant salad ₺440, dessert ₺350, tea ₺80, and a glass/bottle of wine ₺480; the same thread states the combined cover charge and service fee came to about $50 and the two-person bill came to around ₺11,000, with one writer comparing the per-person cost to 100 euros. Another Ekşi Sözlük review dated October 2, 2024 states the per-person cover charge is ₺125, a 10% service fee is added to the bill, and valet is ₺300. Sources don't fully agree: restaurantguru.com tags per-person spending at ~₺2,000 (undated, an algorithmic estimate), while Wanderlog tags the price level as $$$$. A detailed list titled 'Lacivert Menu Prices 2026' was found on menufiyati.tr, but since the page cites no sources and couldn't be cross-checked against the restaurant's own menu, it wasn't used. According to the owner's thresholds (cheap: under ₺750; mid-range: ₺750-2,500; expensive: over ₺2,500), the verified per-person receipt data of about ₺5,500 corresponds to the expensive segment."
     },
     "yemek": {
       "puan": 7.2,
-      "ozet": "Platform puanları iyi ama yorum metinleri belirgin biçimde bölünmüş. restaurantguru.com'un derlediği tabloda Google 4,3/5 (2.990 yorum), Zomato 4,4/5, Foursquare 8,8/10; TripAdvisor ise 3,9/5 (659 yorum, İstanbul'da 9.734 restoran içinde ~600. sıra) ile belirgin biçimde daha düşük. Gault & Millau Türkiye 2026 seçkisinde 1 toque / 12 üzerinden 20 puanla rehberin en alt basamağında yer alıyor. Övgü tarafında balık çorbası, levrek külbastı ve ızgara ahtapot/kalamar tekrarlanıyor. Buna karşılık Ekşi Sözlük'te okunan 40 kadar entry'de 'yemekler berbat', 'lezzet olarak 1/10', 'yemekler tırt, manzara 10 numara' ve 'porsiyonlar küçük' ifadeleri yıllara yayılarak tekrarlanıyor; birden fazla yazar mekânın 'manzara sattığını' söylüyor. Karşı tarafta 23 Mayıs 2025 tarihli bir yorum 'gayet de lezzetliydi, 8/10' diyor. Bu, 7,0-7,9 bandındaki 'iyi ama belirgin ve sık tekrarlanan bir zayıflık var' tanımına uyuyor."
+      "ozet": "Platform ratings are good but review text is clearly split. In the table compiled by restaurantguru.com, Google is 4.3/5 (2,990 reviews), Zomato 4.4/5, Foursquare 8.8/10; TripAdvisor is notably lower at 3.9/5 (659 reviews, ranked ~600th out of 9,734 restaurants in Istanbul). It sits at the bottom rung of the Gault & Millau Turkey 2026 selection with 1 toque / 12 out of 20. On the praise side, the fish soup, grilled sea bass, and grilled octopus/calamari recur. In contrast, about 40 entries read on Ekşi Sözlük repeat, across years, phrases like 'the food is terrible,' 'a 1/10 for taste,' 'the food is mediocre, the view is a 10,' and 'small portions'; multiple writers say the venue is 'selling the view.' On the other side, a review dated May 23, 2025 says 'it really was delicious, 8/10.' This fits the 7.0-7.9 band definition of 'good, but with a clear and frequently recurring weakness.'"
     },
     "neYenir": [
       {
         "yemek": "Balık Çorbası",
         "kacKisiOnerdi": null,
-        "not": "Zomato/mekan.com yorum derlemelerinde mekânın en çok anılan kalemi; 'yenmiş en iyi balık çorbalarından biri' diye anlatılıyor. Kaynaklar bu kalemde ayrışıyor: Wanderlog üzerinden okunan bir Google yorumunda 'balık çorbasının tadı iyi değildi' deniyor."
+        "not": "The most-mentioned item in Zomato/mekan.com review roundups; described as 'one of the best fish soups I've had.' Sources diverge on this item: a Google review read via Wanderlog says 'the fish soup didn't taste good.'"
       },
       {
         "yemek": "Levrek Külbastı",
         "kacKisiOnerdi": null,
-        "not": "10 Nisan 2022 tarihli bir Ekşi Sözlük yorumunda 'levrek külbastıyı kesinlikle deneyin derim, harikaydı' diye özellikle öneriliyor."
+        "not": "An Ekşi Sözlük review dated April 10, 2022 specifically recommends 'definitely try the grilled sea bass, it was wonderful.'"
       },
       {
         "yemek": "Zahmetsiz Levrek",
         "kacKisiOnerdi": null,
-        "not": "2 Ekim 2024 tarihli Ekşi Sözlük yorumu bu kalemi adıyla anıp beğendiğini yazıyor; aynı yorumda kuver ve servis bedelleri de aktarılıyor."
+        "not": "An Ekşi Sözlük review dated October 2, 2024 names this item specifically and says they enjoyed it; the same review also details the cover charge and service fee."
       },
       {
         "yemek": "Izgara Ahtapot",
         "kacKisiOnerdi": null,
-        "not": "1 Nisan 2025 tarihli bir Ekşi Sözlük yorumunda başlangıç olarak ahtapot ya da kalamar ızgara öneriliyor ve 'lezzet olarak başarılıydı' deniyor. Gault & Millau Türkiye'nin restoran sayfası da ahtapotu geleneksel tekniklerle pişirdiklerini vurguluyor. Wanderlog üzerinden okunan Google yorumlarında kalamar hem çok övülüyor hem bir yorumda 'az pişmiş' bulunuyor."
+        "not": "An Ekşi Sözlük review dated April 1, 2025 recommends grilled octopus or calamari as a starter, saying 'it was successful in terms of taste.' Gault & Millau Turkey's restaurant page also emphasizes they cook the octopus using traditional techniques. In Google reviews read via Wanderlog, the calamari is both highly praised and, in one review, found 'undercooked.'"
       },
       {
         "yemek": "Kabak Çiçeği Dolması",
         "kacKisiOnerdi": null,
-        "not": "Wanderlog üzerinden okunan bir Google yorumunda ('squash blossom stuffed') özellikle övülüyor; aynı yorumda ana yemek balığın patlıcan soslu hâli de beğeniliyor."
+        "not": "Specifically praised in a Google review read via Wanderlog ('squash blossom stuffed'); the same review also praises the eggplant-sauce version of the fish main course."
       }
     ],
     "ambiyans": {
       "puan": 9.0,
-      "ozet": "Ambiyans, kaynakların neredeyse tamamının hemfikir olduğu tek başlık. Restoran Boğaz'ın Anadolu yakasında, Fatih Sultan Mehmet Köprüsü'nün hemen altında, denize sıfır konumda; Rumeli Hisarı tarafından kalkan kendi teknesiyle karşıya geçiliyor (resmî anlatım ve birden fazla Google/Ekşi yorumu). Ekşi Sözlük'te en sert eleştiriyi yazanlar bile 'manzara 10 numara' ve 'manzara olarak bazı masalar 9/10' diyor; gün batımı saatlerinde dışarıda oturmak özellikle öneriliyor. Puanı 10'a çıkarmayan iki nokta var: manzaranın masadan masaya belirgin biçimde değişmesi ve 10 Nisan 2022 tarihli bir yorumda mekânın 'lüksünü belli eden bir şey yok, tuvaletler bile eski' denmesi.",
+      "ozet": "Ambiance is the one topic nearly all sources agree on. The restaurant sits on the Anatolian side of the Bosphorus, right beneath the Fatih Sultan Mehmet Bridge, directly on the water; guests arriving from Rumeli Hisarı cross by the restaurant's own boat (official description and multiple Google/Ekşi reviews). Even the harshest critics on Ekşi Sözlük say 'the view is a 10' and 'some tables are a 9/10 for view'; sitting outside at sunset is specifically recommended. Two things keep it from reaching 10: the view varies noticeably from table to table, and a review dated April 10, 2022 says 'there's nothing that shows off luxury, even the restrooms are dated.'",
       "etiketler": [
-        "boğaz-manzarası",
-        "deniz-kenarı",
-        "teras",
-        "lüks",
-        "tekne-servisi"
+        "bosphorus-view",
+        "seaside",
+        "terrace",
+        "luxury",
+        "boat-service"
       ],
       "dressCode": null,
       "uygun": [
-        "çift",
-        "iş yemeği",
-        "grup"
+        "couples",
+        "business dinner",
+        "groups"
       ]
     },
     "servis": {
       "puan": 7.3,
-      "ozet": "Servis yorumları ikiye bölünmüş. Olumlu tarafta Zomato/mekan.com derlemelerinde 'güler yüzlü garsonlar', 'hizmet mükemmel seviyede' ve 30 Ağustos 2016 tarihli pazar kahvaltısı yorumundaki hizmet övgüsü var; şirketlerin yurt dışı misafirlerini burada ağırladığı birden fazla yorumda geçiyor. Olumsuz tarafta tekrar eden ve somut örnekleri olan bir örüntü var: kuver (kişi başı 125 ₺), %10 servis bedeli ve 300 ₺ vale ücretinin ayrı ayrı yazılması birçok yorumda 'zorla alınan bahşiş' diye eleştiriliyor; 6 Temmuz 2021 tarihli yorumda valelerin lüks araç sahiplerine öncelik verip taksi bekleyen yaşlı çifti ayakta beklettiği anlatılıyor; 4 Nisan 2022'de tek tatlı için ikinci çatal verilmemesi ayrı bir şikâyet konusu; 15 Haziran 2025 tarihli yorumda rezervasyon için telefonun günlerce açılmadığı yazılıyor. 2016 tarihli bir yorumda menü verilmeyip yemek listesinin sözlü anlatıldığı da belirtiliyor. Belirgin ve tekrar eden zayıflık olduğu için 7,0-7,9 bandına konuldu.",
+      "ozet": "Service reviews are split in two. On the positive side, Zomato/mekan.com roundups mention 'friendly waiters,' 'service at an excellent level,' and there's service praise in a Sunday brunch review dated August 30, 2016; multiple reviews mention companies hosting foreign guests here. On the negative side there's a recurring pattern with concrete examples: the cover charge (₺125 per person), 10% service fee, and ₺300 valet fee being billed separately is criticized in many reviews as a 'forced tip'; a review dated July 6, 2021 describes valets prioritizing owners of luxury cars while an elderly couple waiting for a taxi was left standing; on April 4, 2022, not being given a second fork for a single shared dessert was a separate complaint; a review dated June 15, 2025 says the reservation phone line went unanswered for days. A 2016 review also mentions no menu being given, with dishes described verbally. Because it's a clear and recurring weakness, it falls in the 7.0-7.9 band.",
       "artilar": [
-        "Rumeli Hisarı'ndan kalkan ücretsiz tekne servisi (resmî anlatım ve Google yorumları)",
-        "Güler yüzlü ve ilgili personel (Zomato/mekan.com yorum derlemeleri)",
-        "Pazar kahvaltısında hizmetin 'mükemmel seviyede' bulunması (Ekşi Sözlük, 2016)"
+        "Free boat service departing from Rumeli Hisarı (official description and Google reviews)",
+        "Friendly and attentive staff (Zomato/mekan.com review roundups)",
+        "Service found 'excellent' for Sunday brunch (Ekşi Sözlük, 2016)"
       ],
       "eksiler": [
-        "Kuver (kişi başı 125 ₺), %10 servis ve 300 ₺ vale ücretinin ayrı ayrı yansıtılması (Ekşi Sözlük, Ekim 2024 ve Ocak 2025)",
-        "Vale ekibinin müşteriler arasında ayrım yaptığına dair ayrıntılı şikâyet (Ekşi Sözlük, Temmuz 2021)",
-        "Tek tatlıya ikinci çatal verilmemesi gibi katı tutum örnekleri (Ekşi Sözlük, Nisan 2022)",
-        "Rezervasyon telefonunun açılmaması (Ekşi Sözlük, Haziran 2025)"
+        "Cover charge (₺125 per person), 10% service fee, and ₺300 valet fee billed separately (Ekşi Sözlük, October 2024 and January 2025)",
+        "Detailed complaint that the valet team discriminates among customers (Ekşi Sözlük, July 2021)",
+        "Rigid conduct such as not providing a second fork for a single shared dessert (Ekşi Sözlük, April 2022)",
+        "Reservation phone line going unanswered (Ekşi Sözlük, June 2025)"
       ]
     },
     "oduller": [
       {
         "tip": "gault-millau",
-        "detay": "Gault & Millau Türkiye 2026 seçkisi — 1 toque, 20 üzerinden 12 puan, 'Deniz Ürünleri' kategorisinde. Rehberin kendi restoran sayfasından (gault-millau.com.tr/lacivert-3) ve 2026 ödül duyuru sayfasından doğrulandı; aynı sayfada yönetici şef Rıdvan Külçek olarak veriliyor. Restoranın Michelin tarafı ayrıca kontrol edildi: MICHELIN Guide Türkiye 2026 seçkisinde (4 Aralık 2025'te açıklandı) ne yıldız, ne Bib Gourmand, ne de rehberde seçilmiş restoran olarak yer alıyor; taranan yıldız, Bib Gourmand ve İstanbul liste derlemelerinin hiçbirinde adı geçmiyor."
+        "detay": "Gault & Millau Turkey 2026 selection — 1 toque, 12 out of 20, in the 'Seafood' category. Verified from the guide's own restaurant page (gault-millau.com.tr/lacivert-3) and the 2026 award announcement page; the same page names Rıdvan Külçek as executive chef. The restaurant's Michelin status was also separately checked: in the MICHELIN Guide Turkey 2026 selection (announced December 4, 2025), it appears neither as a star, nor Bib Gourmand, nor a recommended restaurant in the guide; it doesn't appear in any of the star, Bib Gourmand, or Istanbul list roundups reviewed."
       }
     ],
     "rezervasyon": {
       "gerekiyor": null,
       "yontem": [
-        "telefon",
+        "phone",
         "online"
       ],
       "telefon": "+90 216 413 37 53",
       "link": "https://rezervasyon.rezervin.com/tr/lacivert",
-      "beklemeSuresi": "1 Nisan 2025 tarihli bir Ekşi Sözlük yorumunda 'rezervasyon konusu önemli, genelde yoğun' deniyor; 15 Haziran 2025 tarihli bir başka yorumda rezervasyon telefonunun günlerce açılmadığı anlatılıyor. Rezervasyonun zorunlu olup olmadığına dair resmî bir ifade bulunamadığı için 'gerekiyor' alanı boş bırakıldı. Rezervasyon bağlantısı restoranın kendi sitesinde verilen rezervin.com sayfası ve erişilebilir olduğu doğrulandı.",
+      "beklemeSuresi": "An Ekşi Sözlük review dated April 1, 2025 says 'reservations matter, it's generally busy'; another review dated June 15, 2025 says the reservation phone line went unanswered for days. No official statement was found on whether reservations are mandatory, so 'gerekiyor' was left blank. The reservation link is the rezervin.com page given on the restaurant's own website, and it has been verified as accessible.",
       "kapora": null
     },
     "kaynaklar": {
@@ -943,7 +943,7 @@ const RESTORANLAR = [
         "incelenen": 3
       },
       "tiktok": null,
-      "diger": "Restoranın kendi sitesi ve Temmuz 2026 tarihli menü PDF'i, sahibi D-ream'in marka sayfası, Gault & Millau Türkiye'nin restoran ve 2026 ödül sayfaları, Ekşi Sözlük'teki 'lacivert restaurant' ve 'lacivert restaurant adisyonu' başlıkları, Wanderlog ve restaurantguru derlemeleri, Zomato/mekan.com yorum özetleri, OpenStreetMap POI kaydı ve MICHELIN Guide Türkiye 2026 liste derlemeleri (yokluğun doğrulanması için) değerlendirmeye dahil edildi."
+      "diger": "The restaurant's own website and its July 2026 menu PDF, its owner D-ream's brand page, Gault & Millau Turkey's restaurant and 2026 award pages, the Ekşi Sözlük 'lacivert restaurant' and 'lacivert restaurant adisyonu' threads, Wanderlog and restaurantguru roundups, Zomato/mekan.com review summaries, the OpenStreetMap POI record, and MICHELIN Guide Turkey 2026 list roundups (to verify absence) were also included in the assessment."
     },
     "fotolar": [],
     "sonGuncelleme": "2026-08-08"
@@ -951,12 +951,12 @@ const RESTORANLAR = [
   {
     "id": "mikla",
     "isim": "Mikla",
-    "ulke": "Türkiye",
-    "sehir": "İstanbul",
+    "ulke": "Turkey",
+    "sehir": "Istanbul",
     "semt": "Beyoğlu",
     "mutfak": [
-      "Modern Anadolu",
-      "Akdeniz",
+      "Modern Anatolian",
+      "Mediterranean",
       "Fine Dining"
     ],
     "adres": "The Marmara Pera, Meşrutiyet Caddesi No:15, 34430 Beyoğlu, İstanbul",
@@ -972,89 +972,89 @@ const RESTORANLAR = [
         "max": 10500,
         "paraBirimi": "TRY"
       },
-      "not": "Aralık doğrudan restoranın kendi menü sayfasından alındı (miklarestaurant.com/menu, Ağustos 2026'da okundu): üç kalemlik prix fixe à la carte kişi başı 8.500 ₺, yedi kalemlik Mikla tadım menüsü kişi başı 10.500 ₺ (yalnızca tüm masa için), vegan tadım menüsü 9.600 ₺. Menüde KDV'nin dahil, servisin dahil olmadığı açıkça yazıyor. Şarap eşleşmeleri ayrıca 3.200 ₺ (üç kadeh), 5.500 ₺ ve 8.000 ₺; peynir-bal tabağı iki kişilik 2.500 ₺; kokteyller 950-1.150 ₺. Fiyatın hızlı arttığı Ekşi Sözlük kayıtlarından izlenebiliyor: tadım menüsü 26 Kasım 2022'de 2.600 ₺ + %12 servis, 14 Kasım 2025'te 8.000 ₺, Ağustos 2026'da 10.500 ₺. Sahibinin belirlediği eşiklere göre (ucuz: 750 ₺ altı; orta: 750-2.500 ₺; pahalı: 2.500 ₺ üstü) bu aralık açık biçimde 'pahalı' segmentine düşüyor."
+      "not": "The range was taken directly from the restaurant's own menu page (miklarestaurant.com/menu, read in August 2026): the three-course prix fixe à la carte is ₺8,500 per person, the seven-course Mikla tasting menu is ₺10,500 per person (only for the whole table), and the vegan tasting menu is ₺9,600. The menu explicitly states VAT is included but service is not. Wine pairings are also listed at ₺3,200 (three glasses), ₺5,500, and ₺8,000; the cheese-and-honey plate is ₺2,500 for two; cocktails are ₺950-1,150. The rapid price increase can be tracked through Ekşi Sözlük entries: the tasting menu was ₺2,600 + 12% service on November 26, 2022, ₺8,000 on November 14, 2025, and ₺10,500 in August 2026. According to the owner's thresholds (cheap: under ₺750; mid-range: ₺750-2,500; expensive: over ₺2,500), this range clearly falls into the expensive segment."
     },
     "yemek": {
       "puan": 8.2,
-      "ozet": "Kurumsal değerlendirmeler güçlü: MICHELIN Guide Türkiye 2026 seçkisinde bir yıldızını korudu, Gault & Millau Türkiye 2026'da 3 toque / 20 üzerinden 15 puan aldı, TripAdvisor 4,2/5 (2.224 yorum, İstanbul'da 9.761 restoran içinde ~478. sıra), restaurantguru'nun derlediği Google puanı 4,3/5 (2.686 yorum). Övgü tadım menüsünün bütünlüğünde, balık ekmek yorumunda, uzun pişmiş kuzuda ve şarap programında (450 etiket) yoğunlaşıyor. Puanı 9'un altında tutan şey tutarlılık eleştirisinin yıllara yayılması: Vedat Milor'un Hürriyet'teki 16 Haziran 2018 tarihli yazısı mutfağı 'çelişkili duygular' başlığıyla değerlendirip levreği kuru ve donmuş görünümlü, ayva tatlısını fazla pişmiş, kuzu incikini lezzetsiz buluyor; TripAdvisor'da 'Good, but nowhere near michelin' başlıklı bir yorum var; Ekşi Sözlük'te 3 Eylül 2025 tarihli bir yorum 'kalite baya düşmüş, düzelene kadar gidilmez' diyor ve 4 Ekim 2023 tarihli bir yorum 'Türkiye'deki diğer Michelin'lere göre bir tık altta kaldı' diye yazıyor. Bu, 8,0-8,9 bandındaki 'güçlü ama tekrarlayan küçük şikâyetler var' tanımına uyuyor. Not: restoranın çoğunluk hissesi Kasım 2023'te Fenix Yapı'ya satıldı ve kurucu şef Mehmet Gürs hisselerini devretti; ekibin ve sistemin aynı kaldığı basına yansıdı, ancak kalite tartışmalarının bir kısmı bu tarihten sonrasına ait."
+      "ozet": "Institutional reviews are strong: it retained its star in the MICHELIN Guide Turkey 2026 selection, scored 3 toques / 15 out of 20 in Gault & Millau Turkey 2026, TripAdvisor 4.2/5 (2,224 reviews, ranked ~478th out of 9,761 restaurants in Istanbul), a Google rating of 4.3/5 compiled by restaurantguru (2,686 reviews). Praise concentrates on the coherence of the tasting menu, the fish-and-bread course, the slow-cooked lamb, and the wine program (450 labels). What keeps the score below 9 is that consistency criticism recurs across years: Vedat Milor's June 16, 2018 piece in Hürriyet, titled 'mixed feelings,' finds the sea bass dry and looking frozen, the quince dessert overcooked, and the lamb shank flavorless; TripAdvisor has a review titled 'Good, but nowhere near Michelin'; an Ekşi Sözlük review dated September 3, 2025 says 'quality has really dropped, not worth going until it's fixed,' and one dated October 4, 2023 says it 'fell a notch below other Michelin restaurants in Turkey.' This fits the 8.0-8.9 band definition of 'strong but with recurring minor complaints.' Note: majority ownership of the restaurant was sold to Fenix Yapı in November 2023 and founding chef Mehmet Gürs transferred his shares; press reports say the team and system stayed the same, but some of the quality debate dates from after this point."
     },
     "neYenir": [
       {
         "yemek": "Balık Ekmek (Hamsi)",
         "kacKisiOnerdi": null,
-        "not": "Üç ayrı kaynakta öne çıkıyor: Vedat Milor'un 2018 tarihli yazısında ince ve çıtır ekmeğiyle övülüyor, ET Food Voyage incelemesi akşamın favorisi sayıyor, 28 Aralık 2022 tarihli Ekşi Sözlük yorumu 'balık ekmek yorumunun yaratıcılığı müthişti' diyor."
+        "not": "Stands out across three separate sources: Vedat Milor's 2018 piece praises the thin, crisp bread; the ET Food Voyage review calls it the highlight of the evening; an Ekşi Sözlük review dated December 28, 2022 says 'the creativity of the fish sandwich course was incredible.'"
       },
       {
         "yemek": "Ağır Ateşte Pişmiş Kuzu",
         "kacKisiOnerdi": null,
-        "not": "Restoranın Ağustos 2026'da yayımlanan tadım menüsünde 'braised lamb' olarak yer alıyor. Ekşi Sözlük'te iki ayrı kullanıcı öne çıkarıyor: biri '12 saat pişmiş kuzu sırt, muazzam bir lezzet ve doku' diyor, diğeri 'ızgara kuzu unutulmazdı' yazıyor. ET Food Voyage incelemesi de fıstıklı kuzu pirzolayı kusursuz buluyor."
+        "not": "Listed as 'braised lamb' on the tasting menu published in August 2026. Two separate Ekşi Sözlük users highlight it: one says '12-hour cooked lamb saddle, an amazing flavor and texture,' the other writes 'the grilled lamb was unforgettable.' The ET Food Voyage review also finds the pistachio-crusted lamb chop flawless."
       },
       {
         "yemek": "Kurutulmuş Dana Bonfile",
         "kacKisiOnerdi": null,
-        "not": "Hem prix fixe à la carte hem tadım menüsünde yer alan sabit kalem (restoranın kendi menü sayfası, Ağustos 2026). Wanderlog üzerinden okunan bir Google yorumunda kuru dinlendirilmiş etin diğer Michelin restoranlarına göre 'kocaman' porsiyonla geldiği anlatılıyor."
+        "not": "A fixed item on both the prix fixe à la carte and the tasting menu (the restaurant's own menu page, August 2026). A Google review read via Wanderlog describes the dry-aged beef arriving in a 'huge' portion compared to other Michelin restaurants."
       },
       {
         "yemek": "Ayva Tatlısı",
         "kacKisiOnerdi": null,
-        "not": "Kaynaklar bu kalemde açıkça ayrışıyor: Vedat Milor 2018'de ayvanın fazla pişirilip reçele döndüğünü yazıyor, ET Food Voyage yanındaki fındıklı dondurmayı tatlının kendisinden daha çok beğeniyor; buna karşılık 28 Aralık 2022 tarihli Ekşi Sözlük yorumu 'ayva tatlısıyla bitirdim' diye olumlu anıyor. Ağustos 2026 menüsünde bu kalem yer almıyor, mevsime göre değişiyor olabilir."
+        "not": "Sources clearly diverge on this item: Vedat Milor writes in 2018 that the quince was overcooked and turned into jam, and ET Food Voyage prefers the accompanying hazelnut ice cream over the dessert itself; in contrast, an Ekşi Sözlük review dated December 28, 2022 mentions it positively, saying they finished with the quince dessert. It doesn't appear on the August 2026 menu, so it may be seasonal."
       },
       {
         "yemek": "Yanmış Fındık Helvası",
         "kacKisiOnerdi": null,
-        "not": "Restoranın Ağustos 2026'da yayımlanan yedi kalemlik tadım menüsünün kapanış tatlısı. Bağımsız bir yorumda ayrıca öne çıktığına dair kayıt bulunamadı; öneri yalnızca restoranın kendi menüsüne dayanıyor."
+        "not": "The closing dessert of the seven-course tasting menu published by the restaurant in August 2026. No record was found of it being separately highlighted in an independent review; the recommendation is based solely on the restaurant's own menu."
       }
     ],
     "ambiyans": {
       "puan": 9.0,
-      "ozet": "Mekân The Marmara Pera'nın en üst iki katında ve panoramik İstanbul manzarası hemen her kaynakta ilk anılan şey. Wanderlog üzerinden okunan Google yorumları gün batımını 'kesinlikle büyüleyici' diye anlatıyor ve iç mekânın 20. yüzyıl ortası modern tasarımını övüyor; Vedat Milor da ambiyansı ve terası olumlu değerlendiriyor; 28 Aralık 2022 tarihli Ekşi Sözlük yorumu mekânın 'ortam yeri veya Instagram yeri değil, tam anlamıyla gerçek yemek yeri' olduğunu vurguluyor. Puanı 9,0'da tutan tek tekrar eden şikâyet masa dağılımı: 4 Ekim 2023 tarihli bir Ekşi Sözlük yorumu manzaralı masaların turistlere verildiğini, çok önceden rezervasyon yapılsa bile yerel misafirlere 'masa kalmadı' denebildiğini yazıyor; başka bir yorum da salonda Türk müşterinin azınlıkta kaldığını anlatıyor.",
+      "ozet": "The venue is on the top two floors of The Marmara Pera, and the panoramic Istanbul view is the first thing nearly every source mentions. Google reviews read via Wanderlog describe the sunset as 'absolutely mesmerizing' and praise the mid-20th-century modern design of the interior; Vedat Milor also rates the ambiance and terrace positively; an Ekşi Sözlük review dated December 28, 2022 emphasizes that the venue is 'not an atmosphere place or an Instagram place, it's a real dining place.' The one recurring complaint keeping the score at 9.0 concerns table allocation: an Ekşi Sözlük review dated October 4, 2023 says view tables go to tourists and that local guests can be told 'no tables left' even with reservations made well in advance; another review says Turkish guests were a minority in the room.",
       "etiketler": [
-        "çatı-katı",
-        "panoramik-manzara",
+        "rooftop",
+        "panoramic-view",
         "modern",
         "bar",
         "fine-dining"
       ],
       "dressCode": null,
       "uygun": [
-        "çift",
-        "iş yemeği"
+        "couples",
+        "business dinner"
       ]
     },
     "servis": {
       "puan": 8.7,
-      "ozet": "Servis, Mikla'nın en tutarlı güçlü yanı. Wanderlog üzerinden okunan Google yorumlarında personel 'ilgili, nazik ve gerçekten tutkulu' diye tarif ediliyor; 28 Aralık 2022 tarihli Ekşi Sözlük yorumu 'hizmet, servis, garsonların ilgisi çok iyi, etkilendim' diyor; birden fazla yorum menüde olmayan ikramlardan söz ediyor. Restoranın kendi rezervasyon kuralları da şeffaf: iptalin en az 8 saat önce yapılması, rezervasyon saatinden 30 dakika sonra masanın düşmesi ve alerji notlarının önceden alınması yazılı olarak duyurulmuş. Puanı 9'un altına çeken iki şey var: manzaralı masaların dağıtımında ayrımcılık iddiaları ve hesaba eklenen %12 servis bedelinin yorumlarda sık sık ayrıca eleştirilmesi (menüde servisin dahil olmadığı yazıyor).",
+      "ozet": "Service is Mikla's most consistently strong point. Google reviews read via Wanderlog describe staff as 'attentive, courteous, and genuinely passionate'; an Ekşi Sözlük review dated December 28, 2022 says 'the hospitality, service, staff attentiveness are all excellent, I was impressed'; multiple reviews mention off-menu extras. The restaurant's own reservation rules are also transparent: cancellations must be made at least 8 hours ahead, tables are released 30 minutes after the reservation time, and allergy notes are collected in advance, all stated in writing. Two things pull the score below 9: allegations of discrimination in the allocation of view tables, and the 12% service charge added to the bill being frequently and separately criticized in reviews (the menu states service is not included).",
       "artilar": [
-        "İlgili, bilgili ve müdahaleci olmayan servis (Google yorumları ve Ekşi Sözlük)",
-        "Menü dışı ikramlar ve şarap eşleşmesinde yönlendirme (Ekşi Sözlük yorumları)",
-        "Rezervasyon ve iptal kurallarının restoranın kendi sitesinde açıkça yazılı olması"
+        "Attentive, knowledgeable, non-intrusive service (Google reviews and Ekşi Sözlük)",
+        "Off-menu extras and guidance on wine pairing (Ekşi Sözlük reviews)",
+        "Reservation and cancellation rules clearly stated in writing on the restaurant's own website"
       ],
       "eksiler": [
-        "Manzaralı masaların dağıtımında ayrım yapıldığı yönünde tekrarlayan yorumlar (Ekşi Sözlük, 2023)",
-        "%12 servis bedelinin hesabı belirgin biçimde büyütmesi (Ekşi Sözlük, 2022 ve sonrası)",
-        "Tadım menüsünün yalnızca tüm masa için sipariş edilebilmesi (restoranın kendi menüsü)"
+        "Recurring reviews claiming discrimination in the allocation of view tables (Ekşi Sözlük, 2023)",
+        "The 12% service charge noticeably inflating the bill (Ekşi Sözlük, 2022 onward)",
+        "The tasting menu can only be ordered for the whole table (the restaurant's own menu)"
       ]
     },
     "oduller": [
       {
         "tip": "michelin-yildiz",
-        "detay": "MICHELIN Guide Türkiye 2026 — 1 yıldız (korundu). 4 Aralık 2025'te açıklanan 2026 seçkisinde bir yıldızını koruyan İstanbul restoranları arasında; Anadolu Ajansı, Türkiye Today, yemek.com ve OGGUSTO'nun birbirinden bağımsız 2026 liste derlemelerinin dördünde de aynı şekilde geçiyor. İki yıldız değil, Bib Gourmand değil. guide.michelin.com doğrudan okunamadı (bot koruması) ama restoranın kendi sitesi de Michelin yıldızını duyuruyor."
+        "detay": "MICHELIN Guide Turkey 2026 — 1 star (retained). Among the Istanbul restaurants that retained a star in the 2026 selection announced December 4, 2025; appears consistently in all four independent 2026 list roundups from Anadolu Ajansı, Türkiye Today, yemek.com, and OGGUSTO. Not two stars, not Bib Gourmand. guide.michelin.com couldn't be read directly (bot protection), but the restaurant's own website also announces the Michelin star."
       },
       {
         "tip": "gault-millau",
-        "detay": "Gault & Millau Türkiye 2026 — 3 toque, 20 üzerinden 15 puan, 'Şef Restoranı' kategorisinde. Rehberin 2026 ödül duyuru sayfasından doğrulandı; restoranın kendi sitesi de üç toque'u ve rehberin En İyi Yönetici / En İyi Barmen ödüllerini anıyor."
+        "detay": "Gault & Millau Turkey 2026 — 3 toques, 15 out of 20, in the 'Chef-driven Restaurant' category. Verified from the guide's 2026 award announcement page; the restaurant's own website also mentions the three toques and the guide's Best Manager / Best Bartender awards."
       }
     ],
     "rezervasyon": {
       "gerekiyor": null,
       "yontem": [
         "online",
-        "telefon",
-        "e-posta"
+        "phone",
+        "email"
       ],
       "telefon": "+90 212 293 56 56",
       "link": "https://www.miklarestaurant.com/reservation",
-      "beklemeSuresi": "Restoran pazar günleri ve öğle servisinde kapalı; akşam 18:00'de açılıyor, son yemek siparişi 21:30, kapanış 24:00, bar 02:00'ye kadar açık (restoranın kendi sitesi). Kendi rezervasyon kuralları sayfasına göre iptalin en az 8 saat önce yapılması gerekiyor ve rezervasyon saatinden 30 dakika sonra gelinmezse masa iptal ediliyor; 8 kişiden kalabalık gruplar için telefon veya e-posta isteniyor. Rezervasyonun zorunlu olduğuna dair açık bir ifade bulunamadığı için 'gerekiyor' alanı boş bırakıldı.",
+      "beklemeSuresi": "The restaurant is closed Sundays and for lunch service; it opens at 18:00 in the evening, last food order is 21:30, closing is 24:00, and the bar stays open until 02:00 (the restaurant's own website). Per its own reservation rules page, cancellations must be made at least 8 hours ahead, and the table is canceled if guests haven't arrived within 30 minutes of the reservation time; groups larger than 8 are asked to call or email. No explicit statement was found that reservations are mandatory, so 'gerekiyor' was left blank.",
       "kapora": null
     },
     "kaynaklar": {
@@ -1069,12 +1069,12 @@ const RESTORANLAR = [
         "incelenen": 2
       },
       "tiktok": null,
-      "diger": "MICHELIN Guide Türkiye 2026 seçkisine dair Anadolu Ajansı, Türkiye Today, yemek.com ve OGGUSTO derlemeleri; Gault & Millau Türkiye 2026 ödül sayfası; restoranın kendi menü, rezervasyon ve rezervasyon kuralları sayfaları; Vedat Milor'un Hürriyet'teki 2018 tarihli Mikla yazısı; ET Food Voyage incelemesi; Ekşi Sözlük 'mikla' başlığı; Wanderlog ve restaurantguru derlemeleri; Gazete Oksijen ve 10Haber'in 2023 tarihli sahiplik değişikliği haberleri; OpenStreetMap POI kaydı da değerlendirmeye dahil edildi."
+      "diger": "Anadolu Ajansı, Türkiye Today, yemek.com, and OGGUSTO roundups on the MICHELIN Guide Turkey 2026 selection; the Gault & Millau Turkey 2026 award page; the restaurant's own menu, reservation, and reservation-rules pages; Vedat Milor's 2018 Mikla piece in Hürriyet; the ET Food Voyage review; the Ekşi Sözlük 'mikla' thread; Wanderlog and restaurantguru roundups; Gazete Oksijen's and 10Haber's 2023 ownership-change news coverage; and the OpenStreetMap POI record were also included in the assessment."
     },
     "fotolar": [
       {
         "dosya": "fotolar/mikla-1.jpg",
-        "alt": "Beyaz tabakta sunulan tek porsiyonluk imza yemek",
+        "alt": "A single-portion signature dish presented on a white plate",
         "kaynak": "https://www.miklarestaurant.com/media/n03p2lla/4.webp",
         "kredi": "Mikla"
       }
@@ -1084,12 +1084,12 @@ const RESTORANLAR = [
   {
     "id": "neolokal",
     "isim": "Neolokal",
-    "ulke": "Türkiye",
-    "sehir": "İstanbul",
+    "ulke": "Turkey",
+    "sehir": "Istanbul",
     "semt": "Karaköy",
     "mutfak": [
-      "Modern Türk",
-      "Anadolu",
+      "Modern Turkish",
+      "Anatolian",
       "Fine Dining"
     ],
     "adres": "SALT Galata, Bankalar Caddesi No:11, Karaköy, 34420 Beyoğlu, İstanbul",
@@ -1101,93 +1101,93 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "pahali",
       "kisiBasi": null,
-      "not": "Restoranın kendi sitesindeki güncel tadım menüsü PDF'i (neolokal_tasting_menu_tr_2026_V2_210726.pdf, 22 Temmuz 2026'da yüklenmiş) indirildi ama sayfalar görüntü olarak hazırlandığı için içindeki fiyatlar okunamadı; bu yüzden 2026 fiyatı doğrulanamadı ve kisiBasi boş bırakıldı. Elde edilen tarihli somut veriler: 2025 için tadım menüsü kişi başı 6.100 ₺ + servis, vejetaryen tadım menüsü 5.300 ₺ + servis, şarap eşleşmeleri 4.000 ₺ ve 5.000 ₺ (KDV dahil, hepsi kişi başı); TripAdvisor yorumlarında da 6.100 ₺'lik tadım menüsü anılıyor. Ekşi Sözlük'te 27 Ağustos 2024 tarihli bir yorum tadım menüsünü 5.300 ₺ + %12 servis = 5.936 ₺ (günün kuruyla ~170 dolar) diye ayrıntılandırıyor; 14 Ocak 2024 tarihli bir yorum iki kişilik hesabı 14.500 ₺ (~500 dolar) olarak veriyor; 8 Ocak 2023 tarihli bir yorum tadım menüsünü 2.100 ₺, şarapları 9.000 ₺'den başlayan bir bant olarak anlatıyor. Aynı yorumlarda ağız temizlemek için içilen suyun hesaba ayrıca yazılması eleştiriliyor. Sahibinin belirlediği eşiklere göre (ucuz: 750 ₺ altı; orta: 750-2.500 ₺; pahalı: 2.500 ₺ üstü) bu rakamlar 'pahalı' segmentine karşılık geliyor."
+      "not": "The restaurant's current tasting-menu PDF on its website (neolokal_tasting_menu_tr_2026_V2_210726.pdf, uploaded July 22, 2026) was downloaded, but since the pages are prepared as images, the prices inside couldn't be read; so the 2026 price couldn't be verified and kisiBasi was left blank. Dated concrete data obtained: for 2025, the tasting menu was ₺6,100 + service per person, the vegetarian tasting menu ₺5,300 + service, wine pairings ₺4,000 and ₺5,000 (VAT included, all per person); TripAdvisor reviews also mention the ₺6,100 tasting menu. An Ekşi Sözlük review dated August 27, 2024 breaks down the tasting menu as ₺5,300 + 12% service = ₺5,936 (about $170 at that day's exchange rate); a review dated January 14, 2024 gives a two-person bill of ₺14,500 (~$500); a review dated January 8, 2023 describes the tasting menu at ₺2,100, with wines starting from a ₺9,000 band. The same reviews criticize the palate-cleansing water being billed separately. According to the owner's thresholds (cheap: under ₺750; mid-range: ₺750-2,500; expensive: over ₺2,500), these figures correspond to the expensive segment."
     },
     "yemek": {
       "puan": 8.0,
-      "ozet": "Kurumsal tarafta çok güçlü, kullanıcı tarafında belirgin biçimde bölünmüş bir dosya. MICHELIN Guide Türkiye 2026'da bir yıldızını korudu, Gault & Millau Türkiye 2026'da 4 toque / 20 üzerinden 18 puanla ülkenin en üst iki restoranından biri (yalnızca TURK Fatih Tutak önünde), 2026 seçkisinde restoranın sommelier'si Ersin Topkara Sommelier Ödülü'nü aldı; restoranın World's 50 Best 2025 listesinde 100. sırada yer aldığı da kaynaklarda geçiyor. Buna karşılık platform puanları bu seviyeye göre ölçülü: restaurantguru derlemesinde Google 4,3/5 (1.321 yorum), TripAdvisor 4,1/5 (496 yorum). Ekşi Sözlük'te okunan 20 entry'de tekrar eden üç eleştiri var: 'tadım menüsü aldığı yıldızı hak etmiyor', baharat ve tozlandırılmış garnitürlerin yemeğin önüne geçmesi ve porsiyon/malzeme cimriliği ('malzeme kalitesi aşırı düşük', 'mixed bag'). Karşı tarafta kuzu, karides ve tatlı tabağını çok öven, servis ve menü dengesini kusursuz bulan ayrıntılı yorumlar da var. Bu, 8,0-8,9 bandındaki 'güçlü ama tekrarlayan küçük şikâyetler var' tanımına uyuyor."
+      "ozet": "A file that's very strong institutionally but clearly divided on the user side. It retained its star in the MICHELIN Guide Turkey 2026, scored 4 toques / 18 out of 20 in Gault & Millau Turkey 2026 — one of the country's top two restaurants (only behind TURK Fatih Tutak) — and the restaurant's sommelier Ersin Topkara won the Sommelier Award in the 2026 selection; sources also mention the restaurant ranking 100th on the World's 50 Best 2025 list. In contrast, platform ratings are modest for this level: a Google rating of 4.3/5 compiled by restaurantguru (1,321 reviews), TripAdvisor 4.1/5 (496 reviews). Of about 20 entries read on Ekşi Sözlük, three complaints recur: 'the tasting menu doesn't deserve the star it received,' spices and powdered garnishes overpowering the dish, and stinginess in portion/ingredients ('the ingredient quality is way too low,' 'mixed bag'). On the other side, there are also detailed reviews highly praising the lamb, prawn, and dessert course, and finding the service and menu balance flawless. This fits the 8.0-8.9 band definition of 'strong but with recurring minor complaints.'"
     },
     "neYenir": [
       {
         "yemek": "Kuzu",
         "kacKisiOnerdi": null,
-        "not": "restaurantguru'nun derlediği öne çıkan yemekler listesinde 'lamb neck' olarak geçiyor; Ekşi Sözlük'te 7 Mart 2023 tarihli yorum 'kuzu muhteşemdi' diyor, aynı yazar menünün geri kalanını daha az beğeniyor."
+        "not": "Listed as 'lamb neck' in restaurantguru's compiled list of standout dishes; an Ekşi Sözlük review dated March 7, 2023 says 'the lamb was amazing,' though the same writer liked the rest of the menu less."
       },
       {
         "yemek": "Ekşi Mayalı Ekmek ve Zeytinli Tereyağı",
         "kacKisiOnerdi": null,
-        "not": "restaurantguru derlemesinde 'sourdough bread with olive and parsley-infused butter' diye öne çıkarılıyor; Ekşi Sözlük'te en eleştirel yorumlardan biri bile 'önden gelen tereyağ gayet güzeldi' diye yazıyor."
+        "not": "Highlighted in restaurantguru's roundup as 'sourdough bread with olive and parsley-infused butter'; even one of the most critical Ekşi Sözlük reviews says 'the butter served up front was quite nice.'"
       },
       {
         "yemek": "Karides",
         "kacKisiOnerdi": null,
-        "not": "restaurantguru derlemesinde 'red prawn' olarak listeleniyor; Ekşi Sözlük'te 7 Mart 2023 tarihli yorum 'güllü tatlı tabağı ve karides de çok çok iyiydi' diyor."
+        "not": "Listed as 'red prawn' in restaurantguru's roundup; an Ekşi Sözlük review dated March 7, 2023 says 'the rose-shaped dessert plate and the prawn were both really, really good.'"
       },
       {
         "yemek": "Sinkonta (Balkabağı)",
         "kacKisiOnerdi": null,
-        "not": "restaurantguru derlemesinde mekânın imza kalemlerinden biri olarak listeleniyor. Kaynaklar ayrışıyor: Ekşi Sözlük'te tadım menüsünü ayrıntılı anlatan bir yorum 'balkabağı sinkonta' için beğenisiz bir ifade kullanıyor."
+        "not": "Listed as one of the venue's signature items in restaurantguru's roundup. Sources diverge: a detailed Ekşi Sözlük review describing the tasting menu uses an unfavorable phrase for the 'pumpkin sinkonta.'"
       },
       {
         "yemek": "Kuzu Kulağı Sorbe",
         "kacKisiOnerdi": null,
-        "not": "25 Ocak 2023 tarihli Ekşi Sözlük yorumunda menünün öne çıkan iki kaleminden biri olarak anılıyor ('kuzu kulağı sorbe ve ana yemekler güzeldi, ön plana çıkıyorlar')."
+        "not": "Cited as one of the menu's two standout items in an Ekşi Sözlük review dated January 25, 2023 ('the sheep sorrel sorbet and the mains were good, they stand out')."
       }
     ],
     "ambiyans": {
       "puan": 8.5,
-      "ozet": "Mekân, Karaköy'de tarihi Osmanlı Bankası binası olan SALT Galata'nın içinde; büyük pencereleri ve terasından tarihi yarımada görülüyor. restaurantguru'nun derlediği bir Google yorumu gün batımında Sultanahmet ve Ayasofya manzarasını 'güzel ve unutulmaz' diye anlatıyor; Ekşi Sözlük'te en sert eleştiriyi yazan kullanıcı bile 'ortamdaki fiziksel şartlar çok güzel' diyor. Restoranın NUDE Restaurant Design ödülü aldığı kendi sitesinde belirtiliyor. Puanı aşağı çeken iki somut şikâyet var: 6 Kasım 2022 tarihli yorumda 'korkunç derecede gürültü var, özellikle tüm masalar dolduğunda' deniyor; 30 Aralık 2023 tarihli yorumda bir tabak öncesinde masaya tablet ve kulaklık konup video izletilmesi gereksiz bulunuyor (kulaklığın şarjının bittiği de anlatılıyor).",
+      "ozet": "The venue is inside SALT Galata in Karaköy, the historic Ottoman Bank building; its large windows and terrace offer a view of the historic peninsula. A Google review compiled by restaurantguru describes the sunset view of Sultanahmet and Hagia Sophia as 'beautiful and unforgettable'; even the harshest critic on Ekşi Sözlük says 'the physical setting is very beautiful.' The restaurant's own website states it received the NUDE Restaurant Design award. Two concrete complaints pull the score down: a review dated November 6, 2022 says 'it gets terribly loud, especially once all the tables fill up'; a review dated December 30, 2023 finds it unnecessary that a tablet and headphones are placed on the table before a dish to play a video (also noting the headphones' battery had died).",
       "etiketler": [
-        "tarihi-bina",
-        "manzara",
-        "teras",
-        "gürültülü",
+        "historic-building",
+        "view",
+        "terrace",
+        "noisy",
         "fine-dining"
       ],
       "dressCode": null,
       "uygun": [
-        "çift",
-        "iş yemeği"
+        "couples",
+        "business dinner"
       ]
     },
     "servis": {
       "puan": 7.8,
-      "ozet": "Servis konusunda kaynaklar açıkça çelişiyor. Olumlu tarafta ayrıntılı bir Ekşi Sözlük yorumu servis ekibini 'son derece profesyonel ve belli ki iyi eğitimli' buluyor, masada sunulan ürün anlatım kartlarını başarılı sayıyor; restaurantguru'nun derlediği Google yorumlarında 'servis harikaydı' ifadesi geçiyor. Olumsuz tarafta somut ve tekrar eden örnekler var: 13 Kasım 2022'den sonraki bir yorumda girişteki karşılama tavrı ve garsonların 'aşırı fazla, samimi olmayan' hâli 'Mikla, Nicole ya da TURK'te karşılaşmadığım bir kasıntılık' diye anlatılıyor; 25 Ocak 2023 tarihli yorumda tabaklardan masaya yemek döküldüğü ve yanlış kokteyl getirildiği yazılıyor; 27 Ağustos 2024 tarihli yorumda tadım menüsündeyken ağız temizleme suyunun hesaba ayrıca yazılması 'ucuz bir hareket' olarak eleştiriliyor; restaurantguru'nun derlediği bir yorumda kredi kartından iki kez tahsilat yapıldığı bildiriliyor. Rezervasyonun kredi kartına ön provizyonla bağlanması da kimi misafirler için ek sürtünme yaratıyor.",
+      "ozet": "Sources openly conflict on service. On the positive side, a detailed Ekşi Sözlük review finds the service team 'extremely professional and clearly well-trained,' rating the item-explanation cards presented at the table as successful; Google reviews compiled by restaurantguru include the phrase 'service was fantastic.' On the negative side there are concrete, recurring examples: a review posted after November 13, 2022 describes the welcome at the entrance and the waiters being 'excessively over-the-top, not warm' as 'a pretentiousness I didn't encounter at Mikla, Nicole, or TURK'; a review dated January 25, 2023 says food was spilled on the table from the plates and the wrong cocktail was brought; a review dated August 27, 2024 criticizes the palate-cleansing water being billed separately during the tasting menu as 'a cheap move'; a review compiled by restaurantguru reports being charged twice on a credit card. Reservations being tied to a credit-card pre-authorization also creates extra friction for some guests.",
       "artilar": [
-        "Profesyonel ve iyi eğitimli servis ekibi (Ekşi Sözlük'te ayrıntılı yorum)",
-        "Masada sunulan ürün/yemek anlatım kartları (Ekşi Sözlük)",
-        "2026 MICHELIN Guide Türkiye Sommelier Ödülü'nün restoranın sommelier'si Ersin Topkara'ya verilmesi"
+        "Professional, well-trained service team (detailed Ekşi Sözlük review)",
+        "Item-explanation cards presented tableside (Ekşi Sözlük)",
+        "The restaurant's sommelier Ersin Topkara receiving the 2026 MICHELIN Guide Turkey Sommelier Award"
       ],
       "eksiler": [
-        "Karşılama ve garson tavrının mesafeli/'kasıntı' bulunması (Ekşi Sözlük)",
-        "Tabak taşımada sakarlık ve yanlış kokteyl servisi (Ekşi Sözlük, Ocak 2023)",
-        "Tadım menüsü içindeyken suyun hesaba ayrıca yazılması (Ekşi Sözlük, Ağustos 2024)",
-        "Kredi kartından çift tahsilat bildirimi (restaurantguru'nun derlediği yorum)"
+        "Welcome and waiter demeanor found distant/'pretentious' (Ekşi Sözlük)",
+        "Clumsiness carrying plates and a wrong cocktail served (Ekşi Sözlük, January 2023)",
+        "Palate-cleansing water billed separately during the tasting menu (Ekşi Sözlük, August 2024)",
+        "Report of a double credit-card charge (review compiled by restaurantguru)"
       ]
     },
     "oduller": [
       {
         "tip": "michelin-yildiz",
-        "detay": "MICHELIN Guide Türkiye 2026 — 1 yıldız (korundu). 4 Aralık 2025'te açıklanan 2026 seçkisinde bir yıldızını koruyan İstanbul restoranları arasında; Anadolu Ajansı, Türkiye Today, yemek.com ve OGGUSTO'nun bağımsız 2026 liste derlemelerinin dördünde de aynı şekilde geçiyor. İki yıldız değil, Bib Gourmand değil. Aynı seçkide restoranın sommelier'si Ersin Topkara Sommelier Ödülü'nü aldı. Restoranın ayrıca Michelin Yeşil Yıldız'ı bulunuyor ve Türkiye'de Yeşil Yıldız alan ilk restoran olduğu birden fazla kaynakta yazıyor; Yeşil Yıldız 2026'da yeni verilenler arasında değil, önceki yıllardan devam ediyor. guide.michelin.com doğrudan okunamadı (bot koruması)."
+        "detay": "MICHELIN Guide Turkey 2026 — 1 star (retained). Among the Istanbul restaurants that retained a star in the 2026 selection announced December 4, 2025; appears consistently in all four independent 2026 list roundups from Anadolu Ajansı, Türkiye Today, yemek.com, and OGGUSTO. Not two stars, not Bib Gourmand. In the same selection, the restaurant's sommelier Ersin Topkara won the Sommelier Award. The restaurant also holds a Michelin Green Star and multiple sources state it was the first restaurant in Turkey to receive one; the Green Star is not among the newly awarded ones for 2026, it carries over from previous years. guide.michelin.com couldn't be read directly (bot protection)."
       },
       {
         "tip": "gault-millau",
-        "detay": "Gault & Millau Türkiye 2026 — 4 toque, 20 üzerinden 18 puan ('Prestijli Sofra'). Rehberin kendi 2026 ödül duyuru sayfasından doğrulandı; listede yalnızca TURK Fatih Tutak (18,5/20) daha yüksek puanlı. Not: bir üçüncü taraf sayfası Gault & Millau puanını 16/20 diye veriyor, bu büyük olasılıkla önceki bir baskıya ait; rehberin kendi 2026 sayfası esas alındı."
+        "detay": "Gault & Millau Turkey 2026 — 4 toques, 18 out of 20 ('Prestigious Table'). Verified from the guide's own 2026 award announcement page; only TURK Fatih Tutak (18.5/20) scores higher on the list. Note: one third-party page gives the Gault & Millau score as 16/20, most likely from a previous edition; the guide's own 2026 page was taken as authoritative."
       }
     ],
     "rezervasyon": {
       "gerekiyor": true,
       "yontem": [
         "online",
-        "telefon",
-        "e-posta"
+        "phone",
+        "email"
       ],
       "telefon": "+90 212 244 00 16",
       "link": "https://www.neolokal.com/#rezervasyon",
-      "beklemeSuresi": "Restoran kendi Ön Bilgilendirme Formu'nda 'sınırlı sayıda masa ile hizmet vermekte olmamız' ve tadım menüsünün ön mutfak hazırlığı gerektirmesi nedeniyle rezervasyonu ön provizyona bağladığını yazıyor; rezervasyon saatine 30 dakika gecikme 'gelmeme' sayılıyor. Ekşi Sözlük'te 8 Ocak 2023 tarihli bir yorum 'rezervasyon yapmanın çok zor olduğu' bir mekân olduğunu, 25 Mart 2025 tarihli bir başka yorum genelde yoğun olduğunu belirtiyor. Somut bir bekleme süresi bulunamadı.",
+      "beklemeSuresi": "The restaurant's own Pre-Information Form states that because they operate with a limited number of tables and the tasting menu requires advance kitchen preparation, reservations are tied to a pre-authorization; arriving 30 minutes late to the reservation counts as a 'no-show.' An Ekşi Sözlük review dated January 8, 2023 says it's a venue where 'getting a reservation is very hard,' and another review dated March 25, 2025 says it's generally busy. No concrete wait time was found.",
       "kapora": {
         "var": true,
-        "detay": "Restoranın kendi Mesafeli Satış Sözleşmesi ve Ön Bilgilendirme Formu'na göre online rezervasyonda kredi kartına, tarih/saat ve kişi sayısına göre belirlenen bir 'cayma bedeli' tutarında ön provizyon (bloke) konuyor; işlem Rezervem Teknoloji üzerinden yürütülüyor. Rezervasyona uygun şekilde gelinirse bloke kaldırılıyor. Gelinmemesi ya da 30 dakikadan fazla gecikilmesi hâlinde tutar tahsil ediliyor ve iade edilmiyor. Cayma hakkı standart rezervasyonlarda en az 48 saat, özel etkinlik ve 7+ kişilik rezervasyonlarda en az 72 saat öncesine kadar kullanılabiliyor. Tutarın kendisi rezervasyon ekranında belirtiliyor ve önceden sabit bir rakam olarak yayımlanmıyor."
+        "detay": "Per the restaurant's own Distance Sales Agreement and Pre-Information Form, an online reservation places a pre-authorization (hold) on the credit card for a 'cancellation fee' amount determined by the date/time and number of guests; the transaction is processed via Rezervem Teknoloji. The hold is released if the guest shows up as reserved. If the guest doesn't show or is more than 30 minutes late, the amount is charged and non-refundable. The right of withdrawal can be exercised up to at least 48 hours in advance for standard reservations, and at least 72 hours for special events and reservations of 7+ people. The amount itself is shown on the reservation screen and isn't published as a fixed figure in advance."
       }
     },
     "kaynaklar": {
@@ -1202,12 +1202,12 @@ const RESTORANLAR = [
         "incelenen": 3
       },
       "tiktok": null,
-      "diger": "Restoranın kendi Türkçe ve İngilizce siteleri, Ön Bilgilendirme Formu ve Mesafeli Satış Sözleşmesi, 22 Temmuz 2026 tarihli tadım menüsü PDF'i ve Rezervem rezervasyon sayfası; MICHELIN Guide Türkiye 2026 seçkisine dair Anadolu Ajansı, Türkiye Today, yemek.com ve OGGUSTO derlemeleri; Gault & Millau Türkiye 2026 ödül sayfası; Ekşi Sözlük 'neolokal' başlığı; restaurantguru derlemesi ve Foodle kaydı da değerlendirmeye dahil edildi."
+      "diger": "The restaurant's official Turkish and English websites, its Pre-Information Form and Distance Sales Agreement, the tasting-menu PDF dated July 22, 2026, and the Rezervem reservation page; Anadolu Ajansı, Türkiye Today, yemek.com, and OGGUSTO roundups on the MICHELIN Guide Turkey 2026 selection; the Gault & Millau Turkey 2026 award page; the Ekşi Sözlük 'neolokal' thread; the restaurantguru roundup; and the Foodle record were also included in the assessment."
     },
     "fotolar": [
       {
         "dosya": "fotolar/neolokal-1.jpg",
-        "alt": "Pişirme kâğıdı üzerine dizilmiş taze ıspanak yaprakları",
+        "alt": "Fresh spinach leaves arranged on parchment paper",
         "kaynak": "https://www.neolokal.com/wp-content/uploads/2023/01/11.01.2023_Neolokal-22820-copy.jpg",
         "kredi": "Neolokal"
       }
@@ -1217,13 +1217,13 @@ const RESTORANLAR = [
   {
     "id": "yeni-lokanta",
     "isim": "Yeni Lokanta",
-    "ulke": "Türkiye",
-    "sehir": "İstanbul",
+    "ulke": "Turkey",
+    "sehir": "Istanbul",
     "semt": "Beyoğlu",
     "mutfak": [
-      "Modern Türk",
-      "Anadolu",
-      "Akdeniz"
+      "Modern Turkish",
+      "Anatolian",
+      "Mediterranean"
     ],
     "adres": "Tomtom Mahallesi, Kumbaracı Yokuşu No:66/B, 34433 Beyoğlu, İstanbul",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Yeni%20Lokanta%2C%20Kumbarac%C4%B1%20Yoku%C5%9Fu%2066/B%2C%20Beyo%C4%9Flu%2C%20%C4%B0stanbul",
@@ -1238,86 +1238,86 @@ const RESTORANLAR = [
         "max": 6500,
         "paraBirimi": "TRY"
       },
-      "not": "Aralık doğrudan restoranın kendi sitesinde yayımlanan menü PDF'lerinden alındı (Ağustos 2026'da indirildi): dokuz kalemlik tadım menüsü kişi başı 6.500 ₺, yedi kalemlik tadım menüsü kişi başı 5.350 ₺; her ikisi de tüm masa tarafından sipariş edilmek zorunda. Şarap eşleşmesi dokuz kalemlik menüde beş kadeh için +3.750 ₺, yedi kalemlik menüde dört kadeh için +3.150 ₺. À la carte yenirse kalemler daha düşük: başlangıçlar 740-880 ₺ (elma-sultani bezelye salatası 740 ₺, köfte tartar 880 ₺, asma karides 860 ₺), ana yemekler 1.950-2.300 ₺ (isotlu dana kaburga 2.150 ₺, kuzu 2.150 ₺, dana uykuluk 1.950 ₺, deniz levreği 2.300 ₺), tatlılar 780 ₺, ev yapımı dondurma 240 ₺, kokteyller 930 ₺. Yani bir başlangıç + bir ana yemekle bile kişi başı 2.690 ₺'yi geçiyor. Sitenin kendisi 'menü kalemleri ve fiyatlar değişebilir' notunu düşüyor. Sahibinin belirlediği eşiklere göre (ucuz: 750 ₺ altı; orta: 750-2.500 ₺; pahalı: 2.500 ₺ üstü) hem tadım menüsü hem tipik à la carte harcaması 'pahalı' segmentine düşüyor. Ekşi Sözlük'te fiyatların 'sundukları hizmet ve klasmanındaki rakipleriyle kıyaslandığında normal' bulunduğu (2017) ve 'sundukları deneyim için bir tık fazla' bulunduğu (2022) iki ayrı yorum var."
+      "not": "The range was taken directly from the menu PDFs published on the restaurant's own website (downloaded August 2026): the nine-course tasting menu is ₺6,500 per person, the seven-course tasting menu is ₺5,350 per person; both must be ordered by the whole table. Wine pairing is +₺3,750 for five glasses with the nine-course menu, +₺3,150 for four glasses with the seven-course menu. À la carte items run lower: starters ₺740-880 (apple-sultana pea salad ₺740, tartare köfte ₺880, prawn on a spit ₺860), mains ₺1,950-2,300 (beef short rib with isot pepper ₺2,150, lamb ₺2,150, veal sweetbread ₺1,950, sea bass ₺2,300), desserts ₺780, homemade ice cream ₺240, cocktails ₺930. So even a starter plus a main exceeds ₺2,690 per person. The site itself notes 'menu items and prices are subject to change.' According to the owner's thresholds (cheap: under ₺750; mid-range: ₺750-2,500; expensive: over ₺2,500), both the tasting menu and a typical à la carte spend fall into the expensive segment. There are two separate Ekşi Sözlük reviews finding the prices 'normal compared to competitors of the same class and service' (2017) and 'a touch high for the experience offered' (2022)."
     },
     "yemek": {
       "puan": 9.0,
-      "ozet": "Bu dört restoran içinde yorum örüntüsü en tutarlı olan yer. restaurantguru'nun derlediği tabloda Google 4,8/5 (2.597 yorum) — okunan tüm kaynaklar içindeki en yüksek Google puanı — TripAdvisor 4,4/5 (593 yorum), Zomato 4,6/5. MICHELIN Guide Türkiye seçkisinde yer alıyor ve müfettiş notu şefin yaklaşımının Türk lezzetlerine 'daha taze ve hafif bir nitelik' kattığını söylüyor. Ekşi Sözlük'te 2013'ten bugüne okunan 26 entry'de olumsuz bir lezzet yorumu yok denecek kadar az; mantı, ekşi mayalı ekmek + isli tereyağı ve humus on yıldan uzun süredir aynı biçimde övülüyor. Tek yapıcı eleştiri tadım menüsünün ağırlığına dair: bir yazar menünün 'tıka basa' doyurduğunu, kapanıştaki katmerin gereksiz ağır kaldığını yazıyor. Vedat Milor'un Gurman Atlas kaydı mutfağı 'dürüst bir çaba' diye niteleyip şef Civan Er'in mutfakta olmasını olumlu buluyor, ama malzeme kalitesini sınırlayıcı bir unsur olarak işaret ediyor: 'premium kuzu ya da balık bile bazen lezzetsiz gelebiliyor'. Neredeyse hiç olumsuz yorum bulunmadığı için 9,0-10 bandının alt ucuna konuldu. Not: şefin Londra'daki şubesine ait yorumlar (Beak Street) kapsam dışı bırakıldı."
+      "ozet": "Among these restaurants, this is the venue with the most consistent review pattern. In the table compiled by restaurantguru, Google is 4.8/5 (2,597 reviews) — the highest Google rating among all sources reviewed — TripAdvisor 4.4/5 (593 reviews), Zomato 4.6/5. Included in the MICHELIN Guide Turkey selection, and the inspector's note says the chef's approach gives Turkish flavors 'a fresher, lighter quality.' Of 26 entries read on Ekşi Sözlük dating from 2013 to today, negative taste comments are practically nonexistent; the mantı (dumplings), sourdough bread with smoked butter, and hummus have been consistently praised the same way for over a decade. The one constructive criticism concerns the heaviness of the tasting menu: one writer says the menu leaves you 'stuffed,' and that the closing katmer (layered pastry) is unnecessarily heavy. Vedat Milor's Gurman Atlas entry calls the cooking 'an honest effort' and finds chef Civan Er's presence in the kitchen a positive, but flags ingredient quality as a limiting factor: 'even premium lamb or fish can sometimes come out bland.' Because negative reviews are nearly nonexistent, it's placed at the lower end of the 9.0-10 band. Note: reviews of the chef's London branch (Beak Street) were excluded."
     },
     "neYenir": [
       {
         "yemek": "Yeni Lokanta Mantısı",
         "kacKisiOnerdi": 7,
-        "not": "Okunan 26 Ekşi Sözlük entry'si içinde yedi farklı kullanıcı mantıyı adıyla öneriyor; kuru patlıcanlı, etli, tahinli ve zencefilli versiyonlar ayrı ayrı anılıyor. Restoranın Ağustos 2026'da yayımlanan tadım menüsünde 'yeni lokanta mantısı (dana)' açılış kalemi olarak yer alıyor. 50 Best Discovery kaydı da şefin mantıdaki kuzuyu kuru patlıcanla değiştirmesini imza hamlesi sayıyor."
+        "not": "Of the 26 Ekşi Sözlük entries read, seven different users recommend the mantı by name; versions with dried eggplant, meat, tahini, and ginger are each mentioned separately. On the tasting menu published by the restaurant in August 2026, 'yeni lokanta mantısı (dana/beef)' is the opening course. The 50 Best Discovery record also considers the chef's move of replacing the lamb in the mantı with dried eggplant a signature touch."
       },
       {
         "yemek": "Ekşi Mayalı Ekmek ve İsli Tereyağı",
         "kacKisiOnerdi": 4,
-        "not": "Okunan 26 Ekşi Sözlük entry'si içinde dört farklı kullanıcı özellikle isli tereyağını anıyor; biri 'o isli tereyağı için bir apartmanın ikinci katından atlayabilirim' diyor, bir diğeri 'mantı ve isli tereyağı artık klasik oldu' yazıyor."
+        "not": "Of the 26 Ekşi Sözlük entries read, four different users specifically mention the smoked butter; one writes 'I could jump from a second-floor apartment for that smoked butter,' another writes 'the mantı and smoked butter have become a classic now.'"
       },
       {
         "yemek": "Humus",
         "kacKisiOnerdi": 4,
-        "not": "Okunan 26 Ekşi Sözlük entry'si içinde dört farklı kullanıcı humusu öneriyor; biri vişneli humus versiyonunu ayrıca anıyor. 2013'teki ilk yorumdan 2017'ye kadar aralıklarla tekrar ediyor."
+        "not": "Of the 26 Ekşi Sözlük entries read, four different users recommend the hummus; one separately mentions the sour cherry hummus version. It recurs intermittently from the first review in 2013 through 2017."
       },
       {
         "yemek": "İsotlu Dana Kaburga",
         "kacKisiOnerdi": null,
-        "not": "Restoranın kendi à la carte menüsünde 2.150 ₺ ve dokuz kalemlik tadım menüsünün ana yemeği (Ağustos 2026). Ekşi Sözlük'te 7 Kasım 2022 tarihli yorum 'ıslama dana kaburgasını bayıla bayıla yedik' diyor, 11 Haziran 2016 tarihli yorum kış menüsündeki 'isli kaburgalar'ı öne çıkarıyor."
+        "not": "₺2,150 on the restaurant's own à la carte menu and the main course of the nine-course tasting menu (August 2026). An Ekşi Sözlük review dated November 7, 2022 says 'we devoured the braised beef short rib,' and a review dated June 11, 2016 highlights the 'smoked ribs' on the winter menu."
       },
       {
         "yemek": "Muhallebili Kadayıf Kızartması",
         "kacKisiOnerdi": null,
-        "not": "Ekşi Sözlük'te 'kesinlikle orgazmik bir tatlı' diye anlatılıyor; 50 Best Discovery kaydı da şefin kadayıfa sarılıp kızartılan, manda sütlü dondurma, Antep fıstığı ve portakal şekerlemesiyle servis edilen muhallebisini 'tek başına gitmeye değer' sayıyor. Restoranın Ağustos 2026'da yayımlanan tadım menüsündeki tatlı 'baklava rulo, Boz Antep fıstığı, portakal, hindistan cevizli dondurma' olarak yazılmış, yani tatlının bugünkü hâli değişmiş olabilir."
+        "not": "Described on Ekşi Sözlük as 'a downright orgasmic dessert'; the 50 Best Discovery record also calls the chef's muhallebi wrapped and fried in kadayıf, served with water-buffalo-milk ice cream, pistachio, and candied orange, 'worth the trip on its own.' On the tasting menu published by the restaurant in August 2026, the dessert is listed as 'baklava roll, Boz pistachio, orange, coconut ice cream,' so today's version may have changed."
       }
     ],
     "ambiyans": {
       "puan": 8.7,
-      "ozet": "Ekşi Sözlük'te on iki yıla yayılan yorumlar mekânı tutarlı biçimde 'sıcak, samimi ve sade' diye anlatıyor: Kumbaracı Yokuşu'nda, loş, masalarda yeşil lambalar, kapasitesi 50 kişiyi geçmeyen bir salon; ayrıntılı bir yorum mekânın camla ayrılmış ön bölüm, ana salon ve arka bölüm olmak üzere üç kısımdan oluştuğunu ve rezervasyonda ön bölümün tercih edilmesi gerektiğini anlatıyor. 50 Best Discovery ve yemek yazıları odun fırınını ve rustik dekoru öne çıkarıyor. Bir yorum mekânın öğlen esnaf lokantası gibi tencere yemeği çıkardığını, akşam ise tadım menüleriyle başka bir kimliğe büründüğünü yazıyor. Puanı 9'un altında tutan tek tekrar eden nokta mekânın küçüklüğü ve akşamları rezervasyonsuz yer bulunamaması.",
+      "ozet": "Reviews spanning twelve years on Ekşi Sözlük consistently describe the venue as 'warm, intimate, and understated': on Kumbaracı Yokuşu, dimly lit, green table lamps, a dining room seating no more than 50; a detailed review describes the venue as made up of three sections — a glass-partitioned front area, the main dining room, and the back room — and notes the front section should be requested when booking. 50 Best Discovery and food writing highlight the wood-fired oven and rustic decor. One review notes the venue serves stew-style neighborhood-lunch food by day and takes on a different identity with tasting menus at night. The one recurring point keeping the score below 9 is the venue's small size and the impossibility of getting a table without a reservation in the evening.",
       "etiketler": [
-        "samimi",
-        "loş",
-        "küçük",
-        "sade",
-        "odun-fırını"
+        "intimate",
+        "dim",
+        "small",
+        "simple",
+        "wood-fired-oven"
       ],
       "dressCode": null,
       "uygun": [
-        "çift",
-        "iş yemeği",
-        "grup"
+        "couples",
+        "business dinner",
+        "groups"
       ]
     },
     "servis": {
       "puan": 8.8,
-      "ozet": "Servis, yorumlarda ayrıca ve özellikle övülen bir başlık. 2021-2022'de üç kez giden ayrıntılı bir Ekşi Sözlük yorumu servisi 'İstanbul ortalamasının çok çok üzerinde' bulup nedenini de yazıyor: menüye tam hâkim garsonlar, masada gereğinden bir saniye fazla kalmama, sohbeti bölmeme. Başka yorumlar da 'servis elemanları harika' diyor; restaurantguru'nun derlediği bir Google yorumu 'inanılmaz ilgi' ve menü dışı ikramlardan söz ediyor. Puanı 9'un altında tutan iki nokta: hesaba eklenen %10 servis bedelinin iki ayrı yorumda sert biçimde eleştirilmesi (biri bu yüzden bir daha gitmeyeceğini yazıyor) ve akşam saatlerinde rezervasyonsuz gidilmemesi gerektiğinin tekrarlanması. Not: Londra şubesinde yaşanan adisyon hatası ve servis eleştirisi, şube ayrımı gereği bu değerlendirmeye katılmadı.",
+      "ozet": "Service is a topic separately and specifically praised in reviews. A detailed Ekşi Sözlük review from a guest who visited three times in 2021-2022 finds service 'far, far above the Istanbul average' and explains why: waiters fully in command of the menu, never lingering a second too long at the table, never interrupting conversation. Other reviews also say 'the service staff are wonderful'; a Google review compiled by restaurantguru mentions 'incredible attentiveness' and off-menu extras. Two things keep the score below 9: the 10% service charge added to the bill being sharply criticized in two separate reviews (one says they won't return because of it), and the repeated point that you shouldn't go without a reservation in the evening. Note: a billing error and service criticism experienced at the London branch were excluded from this assessment due to the branch separation.",
       "artilar": [
-        "Menüye tam hâkim, ölçülü ve müdahaleci olmayan servis (Ekşi Sözlük'te ayrıntılı yorum, 2021-2022)",
-        "Kokteyl programının ayrıca övülmesi (birden fazla Ekşi Sözlük yorumu)",
-        "Menü dışı ikramlar ve sıcak karşılama (restaurantguru'nun derlediği Google yorumu)"
+        "Service fully in command of the menu, measured, and non-intrusive (detailed Ekşi Sözlük review, 2021-2022)",
+        "The cocktail program separately praised (multiple Ekşi Sözlük reviews)",
+        "Off-menu extras and a warm welcome (Google review compiled by restaurantguru)"
       ],
       "eksiler": [
-        "Hesaba eklenen %10 servis bedelinin iki ayrı yorumda sert biçimde eleştirilmesi (Ekşi Sözlük, 2021)",
-        "Akşam saatlerinde rezervasyonsuz yer bulunamaması (Ekşi Sözlük)",
-        "Beş kişi ve üzeri gruplarda tadım menüsünün zorunlu olması (restoranın kendi sitesi)"
+        "The 10% service charge added to the bill sharply criticized in two separate reviews (Ekşi Sözlük, 2021)",
+        "Impossible to get a table without a reservation in the evening (Ekşi Sözlük)",
+        "The tasting menu being mandatory for groups of five or more (the restaurant's own website)"
       ]
     },
     "oduller": [
       {
         "tip": "michelin-secilmis",
-        "detay": "MICHELIN Guide Türkiye — rehberde seçilmiş restoran. Yıldız değil, Bib Gourmand değil: 4 Aralık 2025'te açıklanan 2026 seçkisinin yıldız listelerinde (Anadolu Ajansı, Türkiye Today, yemek.com, OGGUSTO derlemeleri) adı geçmiyor ve İstanbul Bib Gourmand derlemelerinde de yer almıyor; buna karşılık guide.michelin.com'da restoranın kendi kaydı bulunuyor ve müfettiş açıklaması yayımlanmış durumda. OGGUSTO'nun derlemesi restoranın rehbere ilk kez 2023 seçkisinde 'önerilen restoran' olarak girdiğini yazıyor. Ekşi Sözlük'te 12 Kasım 2023 tarihli bir yorum da yıldız alamamasını açıkça sorguluyor. guide.michelin.com doğrudan okunamadı (bot koruması), bu yüzden yıldızsız oluş dört bağımsız liste derlemesinden çapraz doğrulandı. Not: Gault & Millau Türkiye 2026 ödül listesinde restoranın adı bulunamadı."
+        "detay": "MICHELIN Guide Turkey — restaurant selected in the guide. Not a star, not Bib Gourmand: it doesn't appear in the star lists of the 2026 selection announced December 4, 2025 (Anadolu Ajansı, Türkiye Today, yemek.com, OGGUSTO roundups) nor in the Istanbul Bib Gourmand roundups; however, the restaurant has its own entry on guide.michelin.com with a published inspector's note. OGGUSTO's roundup states the restaurant first entered the guide as a 'recommended restaurant' in the 2023 selection. An Ekşi Sözlük review dated November 12, 2023 also openly questions why it hasn't received a star. guide.michelin.com couldn't be read directly (bot protection), so the absence of a star was cross-verified from four independent list roundups. Note: the restaurant's name could not be found in the Gault & Millau Turkey 2026 award list."
       }
     ],
     "rezervasyon": {
       "gerekiyor": null,
       "yontem": [
         "online",
-        "telefon",
-        "e-posta"
+        "phone",
+        "email"
       ],
       "telefon": "+90 212 292 25 50",
       "link": "https://guest.rezervem.com.tr/Yeni-Lokanta",
-      "beklemeSuresi": "Restoran pazartesi-cumartesi 12:00-16:00 ve 17:00-00:30, pazar 13:00-22:00 açık (kendi sitesi). Site rezervasyon sayfasındaki işlemlerin 'talep' olduğunu, onaylanmış rezervasyon anlamına gelmediğini açıkça yazıyor; beş kişi ve üzeri gruplarda tadım menüsü zorunlu, özel oda talepleri e-posta ile alınıyor. Ekşi Sözlük'te 'akşam saatlerinde kesinlikle rezervasyonsuz gidilmemesi gereken mekân' diyen bir yorum var ama öğle servisi için böyle bir uyarı yok; koşullu olduğu için 'gerekiyor' alanı boş bırakıldı. Somut bekleme süresi bulunamadı.",
+      "beklemeSuresi": "The restaurant is open Monday-Saturday 12:00-16:00 and 17:00-00:30, Sunday 13:00-22:00 (its own website). The site's reservation page explicitly states that submissions are a 'request,' not a confirmed reservation; the tasting menu is mandatory for groups of five or more, and special-room requests are handled by email. There's an Ekşi Sözlük review saying 'a venue you should absolutely not go to in the evening without a reservation,' but there's no such warning for lunch service; since it's conditional, 'gerekiyor' was left blank. No concrete wait time was found.",
       "kapora": null
     },
     "kaynaklar": {
@@ -1332,9 +1332,355 @@ const RESTORANLAR = [
         "incelenen": 1
       },
       "tiktok": null,
-      "diger": "Restoranın kendi sitesi ve oradan indirilen beş menü PDF'i (tadım, à la carte, tatlı, kokteyl), MICHELIN Guide Türkiye 2026 seçkisine dair Anadolu Ajansı, Türkiye Today, yemek.com ve OGGUSTO derlemeleri, Vedat Milor'un Gurman Atlas kaydı, 50 Best Discovery sayfası, Ekşi Sözlük 'yeni lokanta' başlığı, restaurantguru derlemesi, Gault & Millau Türkiye 2026 ödül listesi (yokluğun doğrulanması için) ve OpenStreetMap POI kaydı da değerlendirmeye dahil edildi."
+      "diger": "The restaurant's own website and the five menu PDFs downloaded from it (tasting, à la carte, dessert, cocktail); Anadolu Ajansı, Türkiye Today, yemek.com, and OGGUSTO roundups on the MICHELIN Guide Turkey 2026 selection; Vedat Milor's Gurman Atlas record; the 50 Best Discovery page; the Ekşi Sözlük 'yeni lokanta' thread; the restaurantguru roundup; the Gault & Millau Turkey 2026 award list (to verify absence); and the OpenStreetMap POI record were also included in the assessment."
     },
     "fotolar": [],
     "sonGuncelleme": "2026-08-08"
+  },
+  {
+    "id": "beaucoco-paris",
+    "isim": "BeauCoCo Paris",
+    "ulke": "France",
+    "sehir": "Paris",
+    "semt": "Opéra",
+    "mutfak": [
+      "French",
+      "European"
+    ],
+    "adres": "1 Place Jacques Rouché, 75009 Paris, France",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=BeauCoCo%20Paris%2C%201%20Place%20Jacques%20Rouch%C3%A9%2C%2075009%20Paris",
+    "koordinat": null,
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": null,
+      "not": "No official price list found on restaurant-beaucoco.com. RestaurantGuru (accessed Aug 2026) lists an average spend of about €100 per person, given as a single figure rather than a min-max range, so kisiBasi was left null rather than invented. TripAdvisor tags the venue at the highest price tier ($$$$). Multiple TripAdvisor reviewers (Jul 2026) explicitly say prices do not match what is served; TripAdvisor's own 'Value' subscore is the lowest of its four dimensions at 2.7/5."
+    },
+    "yemek": {
+      "puan": 6.8,
+      "ozet": "Based on 11 TripAdvisor reviews read (Jun-Aug 2026, out of 643 total, platform Food subscore 3.2/5). Recent reviews skew positive on specific dishes -- lobster linguine, octopus, tuna starter and a chicken main were each singled out as excellent by individual reviewers -- but recurring complaints exist: one reviewer (Aug 2026) called the food 'mediocre', another (Jun 2026) described a supposedly 1.2kg ribeye as 'extremely tough'. Starters were called 'ok, nothing stood out' by one reviewer even when mains were praised. The gap between the generally positive recent reviews I read and the platform-wide 3.2/5 subscore suggests inconsistency over time is a real pattern, not just recency bias."
+    },
+    "neYenir": [
+      {
+        "yemek": "Lobster linguine",
+        "kacKisiOnerdi": null,
+        "not": "Called 'MAGNIFICENT' by one TripAdvisor reviewer (Jul 2026) who ordered it for a birthday dinner; also listed on the Gault&Millau menu description as 'lieu jaune coco et citronnelle' style seafood pasta."
+      },
+      {
+        "yemek": "Octopus (main course)",
+        "kacKisiOnerdi": null,
+        "not": "Praised alongside the lobster linguine by the same TripAdvisor reviewer (Jul 2026) as 'truly MAGNIFICENT'."
+      },
+      {
+        "yemek": "Tuna starter",
+        "kacKisiOnerdi": null,
+        "not": "Specifically recommended ('recommend the tuna') by a TripAdvisor reviewer, Jul 2026."
+      },
+      {
+        "yemek": "Croque truffé / croque monsieur canapé",
+        "kacKisiOnerdi": null,
+        "not": "Called 'delicious as a canapé' by a TripAdvisor reviewer (Jul 2026); also appears by name ('croque truffé') in the Gault&Millau dish description of the menu."
+      },
+      {
+        "yemek": "Entrecôte Angus, sauce béarnaise",
+        "kacKisiOnerdi": null,
+        "not": "Named as a menu signature in the Gault&Millau review (fr.gaultmillau.com, accessed Aug 2026); not independently confirmed in the TripAdvisor reviews I read, so treated as menu-description evidence only."
+      }
+    ],
+    "ambiyans": {
+      "puan": 7.5,
+      "ozet": "TripAdvisor Atmosphere subscore 3.2/5 (643 reviews); among the 11 reviews I read, the art-deco Palais Garnier setting (design by Corinne Sachot), live music and evening entertainment (singers, DJ) are repeatedly and enthusiastically praised ('festive', 'elegant', 'like a musical and comedy show'). The recurring negative is noise: one reviewer noted the loud music/party format meant they were seated away from the entertainment at the early sitting and recommended the post-10pm 'second sitting' for the real vibe; the official TripAdvisor AI review summary also flags that loud music can impede conversation.",
+      "etiketler": [
+        "historic-building",
+        "lively",
+        "elegant",
+        "live-music",
+        "noisy"
+      ],
+      "dressCode": "Smart and Elegant",
+      "uygun": [
+        "couples",
+        "groups"
+      ]
+    },
+    "servis": {
+      "puan": 6.0,
+      "ozet": "TripAdvisor Service subscore 3.0/5 (643 reviews). Among the 11 reviews I read, several individual staff members are praised by name (Hugo, Quentin) for kindness even when the overall visit went badly, but repeated, serious complaints recur: a lost reservation and refusal to reseat a family (Aug 2026), a discrimination allegation over outdoor seating on a cold night (Jul 2026), and a detailed complaint (Jul 2026) that 'steps of service' were ignored -- food arriving before drinks or water, plates for different courses served simultaneously. 30-45+ minute waits for ordered wine were reported twice.",
+      "artilar": [
+        "Individual servers repeatedly praised by name for warmth",
+        "Fast food delivery to the table once ordered"
+      ],
+      "eksiler": [
+        "Slow drink/wine service, 30-45+ minute waits reported",
+        "Reports of poor table placement and perceived favoritism toward 'VIP' tables",
+        "Rude reception when handling complaints or seating requests",
+        "Courses not paced/coursed correctly (multiple dishes and courses arriving together)"
+      ]
+    },
+    "oduller": [
+      {
+        "tip": "gault-millau",
+        "detay": "Gault&Millau guide lists BeauCoCo (Palais Garnier, the current name of the venue previously branded 'Coco') at 11/20 with the 'Table Gourmande' designation. Verified at fr.gaultmillau.com/fr/restaurants/beau-co-co, address matches (1 Place Jacques Rouché, 75009 Paris), accessed Aug 2026."
+      }
+    ],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "online",
+        "phone"
+      ],
+      "telefon": "+33 1 42 68 86 80",
+      "link": "https://www.sevenrooms.com/experiences/beaucocoparis",
+      "beklemeSuresi": "No explicit statement that reservations are mandatory, but the venue runs on a SevenRooms booking system with a card guarantee, and reviews describe a distinction between an early sitting and a livelier 'second sitting' after 10pm. Reviewers report 30-45+ minute waits for drinks even with a reservation.",
+      "kapora": {
+        "var": true,
+        "detay": "Online reservation requires a card guarantee via ADYEN (per restaurant-beaucoco.com/paris-fr/termes-et-conditions-dutilisation/). The official terms state a no-show or uncancelled reservation is charged fifty (50) euros held as guarantee."
+      }
+    },
+    "kaynaklar": {
+      "google": {
+        "puan": 3.8,
+        "yorumSayisi": 6206,
+        "incelenen": 0
+      },
+      "tripadvisor": {
+        "puan": 2.9,
+        "yorumSayisi": 643,
+        "incelenen": 11
+      },
+      "tiktok": null,
+      "diger": "Gault&Millau (fr.gaultmillau.com) — 11/20, 'Table Gourmande'; RestaurantGuru — aggregation page citing the above Google figure and an approx. €100/person average spend."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-10"
+  },
+  {
+    "id": "bambini-paris",
+    "isim": "Bambini Paris",
+    "ulke": "France",
+    "sehir": "Paris",
+    "semt": "Passy",
+    "mutfak": [
+      "Italian"
+    ],
+    "adres": "13 Avenue du Président Wilson, 75116 Paris, France",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Bambini%20Paris%2C%2013%20Avenue%20du%20Pr%C3%A9sident%20Wilson%2C%2075116%20Paris",
+    "koordinat": null,
+    "fiyat": {
+      "segment": "orta",
+      "kisiBasi": {
+        "min": 40,
+        "max": 90,
+        "paraBirimi": "EUR"
+      },
+      "not": "Range per RestaurantGuru (accessed Aug 2026), which states '€40 - €90' per person. Corroborated by concrete menu figures found separately: a pizza+dessert formula around €26, pasta €15-17, mains €25-29 (menu-price aggregator search results, undated). Several TripAdvisor reviewers explicitly complain about the price-to-portion ratio (e.g. a melon-and-ham starter described as 'a few grams... for 16 euros', and '70€ for two dishes, an apple juice, and a bottle of water' without dessert). Value is TripAdvisor's lowest subscore for this venue (2.3/5), so despite the €40-90 range technically spanning into 'pahali' territory at the top end, 'orta' was chosen because the RestaurantGuru range midpoint and most concrete menu prices found sit within the 30-80 band; this is a borderline call and is flagged here rather than resolved definitively."
+    },
+    "yemek": {
+      "puan": 6.0,
+      "ozet": "Based on 13 TripAdvisor reviews read (May-Aug 2026, out of 436 total; platform Food subscore 2.9/5, the lowest of the three restaurants researched). Recurring complaint: dishes served lukewarm or undercooked -- an Aug 2026 reviewer described undercooked pasta and 'lacked flavor'; a Jul 2026 reviewer's rigatoni was 'served only lukewarm'. Positive counterpoint from a May 2026 reviewer who ordered trofie with pistachio pesto and tuna linguine with lemon, both 'prepared really well', and tiramisu described as 'really amazing'. A Jul 2026 reviewer called truffle tagliatelle 'acceptable and quite tasty' but under-seasoned. Portion-for-price complaints recur independently of taste complaints."
+    },
+    "neYenir": [
+      {
+        "yemek": "Trofie with pistachio pesto",
+        "kacKisiOnerdi": null,
+        "not": "Praised as 'prepared really well' by one TripAdvisor reviewer (May 2026, family birthday dinner)."
+      },
+      {
+        "yemek": "Tuna linguine with lemon",
+        "kacKisiOnerdi": null,
+        "not": "Praised by the same reviewer as the trofie above (May 2026 TripAdvisor review)."
+      },
+      {
+        "yemek": "Tiramisu",
+        "kacKisiOnerdi": null,
+        "not": "Called 'really amazing' in the same May 2026 review; also appears repeatedly in complaint reviews as the dish guests waited unusually long for, which independently confirms it is a frequently-ordered item."
+      },
+      {
+        "yemek": "Truffle tagliatelle",
+        "kacKisiOnerdi": null,
+        "not": "Described as the most expensive dish on the menu and 'acceptable and quite tasty, although... could have been seasoned more' by a Jul 2026 TripAdvisor reviewer."
+      },
+      {
+        "yemek": "Rigatoni",
+        "kacKisiOnerdi": null,
+        "not": "One of the restaurant's most-mentioned dishes (TripAdvisor 'popular mentions' tag), but two separate TripAdvisor reviewers (Jun-Aug 2026) specifically reported it arriving undercooked or lukewarm -- included here because it is clearly a signature order, with the quality caveat noted."
+      }
+    ],
+    "ambiyans": {
+      "puan": 7.6,
+      "ozet": "TripAdvisor Atmosphere subscore 3.5/5 (436 reviews), the best of the four TripAdvisor dimensions for this venue. Among the 13 reviews I read, the terrace and Eiffel Tower view are praised repeatedly and even mentioned favorably by reviewers who were otherwise critical of food or service (e.g. 'one extra point for the location with a view of the tower'). One Jul 2026 reviewer said the promised view 'is not there' from their table, and the TripAdvisor AI summary notes the outdoor seating 'did feel a bit crowded at times'.",
+      "etiketler": [
+        "view",
+        "terrace",
+        "calm",
+        "crowded"
+      ],
+      "dressCode": null,
+      "uygun": [
+        "couples",
+        "groups",
+        "solo"
+      ]
+    },
+    "servis": {
+      "puan": 5.5,
+      "ozet": "TripAdvisor Service subscore 2.9/5 (436 reviews). Among the 13 reviews I read, wait times are the dominant and most severe complaint: two separate Jun 2026 reviewers reported roughly 1-1.5 hour waits for a single tiramisu and a plain carafe of water. A May 2026 reviewer describes being refused a lunch reservation for two starters because the restaurant enforces a minimum of one main dish per person. A May 2026 review documents a mishandled accessibility request for a wheelchair user (contradictory information about step-free access, staff moving the wheelchair without consent). A Jun 2026 reviewer specifically felt foreign/international guests were treated worse than others.",
+      "artilar": [
+        "Staff described as friendly once seated (multiple reviews)",
+        "Service quality reported to improve over the course of a longer visit (Jun 2026 review)"
+      ],
+      "eksiler": [
+        "Very long waits reported for simple items -- up to ~1.5 hours for water or a single dessert",
+        "Mandatory 'one main course per person' policy turns away guests wanting only starters",
+        "One documented case of a poorly handled wheelchair-accessibility request",
+        "Reports that plates are cleared or dishes rushed out before guests are ready"
+      ]
+    },
+    "oduller": [
+      {
+        "tip": "gault-millau",
+        "detay": "Listed with a written review on the Gault&Millau guide (fr.gaultmillau.com/en/restaurants/bambini, accessed Aug 2026), but no numeric score/toque is shown on that listing -- treated as guide inclusion only, not a scored rating."
+      }
+    ],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "online",
+        "phone",
+        "email"
+      ],
+      "telefon": "+33 1 40 70 86 08",
+      "link": "https://www.sevenrooms.com/reservations/bambiniparis",
+      "beklemeSuresi": "Reservations run through SevenRooms with a card guarantee; contact email contact@bambini-paris.com confirmed via the Palais de Tokyo's own venue page. One reviewer (May 2026) reports being refused a lunch table without ordering a full main course per person. No explicit statement found that reservations are strictly mandatory.",
+      "kapora": {
+        "var": true,
+        "detay": "Official terms of service (bambini-restaurant.com/paris-fr/termes-et-conditions-dutilisation/) state a no-show or uncancelled reservation guaranteed by card is charged fifty (50) euros. Corroborated by a May 2026 TripAdvisor review describing a bank-card imprint with a stated €50-per-person cancellation charge for a group booking."
+      }
+    },
+    "kaynaklar": {
+      "google": {
+        "puan": 3.8,
+        "yorumSayisi": 4489,
+        "incelenen": 0
+      },
+      "tripadvisor": {
+        "puan": 2.7,
+        "yorumSayisi": 436,
+        "incelenen": 13
+      },
+      "tiktok": null,
+      "diger": "Gault&Millau (fr.gaultmillau.com) — listed, no numeric score; RestaurantGuru — aggregation page citing the above Google figure and the €40-90/person range; Palais de Tokyo official venue page (palaisdetokyo.com/en/bambini) — address, phone, hours."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-10"
+  },
+  {
+    "id": "entrecote-de-paris-1974",
+    "isim": "L'Entrecôte de Paris 1974",
+    "ulke": "France",
+    "sehir": "Paris",
+    "semt": "Champs-Élysées",
+    "mutfak": [
+      "French",
+      "Steakhouse"
+    ],
+    "adres": "29 Rue de Marignan, 75008 Paris, France",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=L%27Entrec%C3%B4te%20de%20Paris%2C%2029%20Rue%20de%20Marignan%2C%2075008%20Paris",
+    "koordinat": {
+      "lat": 48.8695103,
+      "lng": 2.306366
+    },
+    "fiyat": {
+      "segment": "ucuz",
+      "kisiBasi": {
+        "min": 20,
+        "max": 30,
+        "paraBirimi": "EUR"
+      },
+      "not": "Range per RestaurantGuru (accessed Aug 2026): '€20 - €30' per person. Directly corroborated by a concrete, dated data point: a Jun 2026 TripAdvisor reviewer paid €26.50 for the full formule (steak, sauce, fries, walnut salad); a children's menu with drink and dessert is separately cited at €11 (undated menu-aggregator search result). Chosen segment 'ucuz' because the whole verified range sits at or under the ~€30/person threshold given for this project, even though TripAdvisor's own coarse price-tier symbol shows $$-$$$ (a relative, not absolute, scale)."
+    },
+    "yemek": {
+      "puan": 7.8,
+      "ozet": "Based on 15 TripAdvisor reviews read (May-Aug 2026, out of 1,748 total; platform Food subscore 3.7/5, the highest of the three restaurants researched). Strongly and repeatedly praised: 10 of the 15 reviews I read explicitly recommend the steak-frites-sauce combination ('excellent meat', 'the famous sauce, and the fries make a perfect combination', 'my most favourite restaurant in Paris'). Two reviews were clearly negative on food quality (one called the meat 'not good quality and... porly cooked', another said the signature Café-de-Paris-style sauce was 'the worst... I had in my hole life' while calling the meat itself fine). One reviewer (Jun 2026) who visited expecting the original/older 'Le Relais de l'Entrecôte' realized this is a different, later (1974) establishment, but rated the food, service and atmosphere here as being on par regardless."
+    },
+    "neYenir": [
+      {
+        "yemek": "Entrecôte steak with secret sauce and fries",
+        "kacKisiOnerdi": 9,
+        "not": "The restaurant's single main dish. Recommended explicitly in 9 of the 15 TripAdvisor reviews I read (Aug 2026 read-through) -- e.g. 'excellent meat, accompanied by fries... the quantity... will not lead to any frustration'; 'the quality of the meat, the famous sauce, and the fries make a perfect combination'."
+      },
+      {
+        "yemek": "Walnut salad (starter)",
+        "kacKisiOnerdi": null,
+        "not": "Part of the fixed formule; specifically praised as 'a good salad sprinkled with walnuts' by one reviewer (Aug 2026) and mentioned alongside the steak by a second (Jun 2026)."
+      },
+      {
+        "yemek": "French onion soup",
+        "kacKisiOnerdi": null,
+        "not": "Alternative starter, called 'really good' by one TripAdvisor reviewer (Jun 2026); also listed on the official menu (lentrecotedeparis.fr)."
+      },
+      {
+        "yemek": "Crème brûlée (from the dessert cart)",
+        "kacKisiOnerdi": null,
+        "not": "Mentioned as 'good' by one reviewer (Jul 2026); the official site describes desserts as presented tableside on a cart, but I could not find more than this single review naming a specific dessert."
+      },
+      {
+        "yemek": "Mixed steak platter (for sharing)",
+        "kacKisiOnerdi": null,
+        "not": "A family-style version of the same steak/sauce/fries described as 'generous mixed platters of perfectly cooked meat' by one reviewer (May 2026 TripAdvisor review, family visit)."
+      }
+    ],
+    "ambiyans": {
+      "puan": 7.2,
+      "ozet": "TripAdvisor Atmosphere subscore 3.3/5 (1,748 reviews). Described consistently as a classic, bustling Parisian brasserie with art nouveau mirrors and Mucha-style posters (per general restaurant descriptions found in search results); reviews I read call it 'very Parisian', 'lively yet relaxed', and one business-trip reviewer called it a 'classic French spot... simple but interesting'. The main friction point is not the room itself but getting into it: since the restaurant takes no reservations, reviewers describe queuing, and one reviewer (May 2026) specifically complained about unfair queue management ('they keep picking people up from behind').",
+      "etiketler": [
+        "classic",
+        "lively",
+        "casual"
+      ],
+      "dressCode": null,
+      "uygun": [
+        "couples",
+        "groups",
+        "business dinner"
+      ]
+    },
+    "servis": {
+      "puan": 8.0,
+      "ozet": "TripAdvisor Service subscore 3.6/5 (1,748 reviews), the highest of the three restaurants researched. Among the 15 reviews I read, service is praised far more consistently than at the other two venues: 'the service was top notch, fine dining attention', 'truly exceptional... friendly, warm, helpful, and attentive', 'quality service with attentive staff', one reviewer even named and thanked the manager by name (Jun 2026). The only recurring negative theme is not about table service but about queue fairness for walk-ins (no reservations are taken at all).",
+      "artilar": [
+        "Warm, attentive table service repeatedly praised across many independent reviews",
+        "Fast seating and table turnover reported despite high demand",
+        "Staff praised by name in at least one review"
+      ],
+      "eksiler": [
+        "No reservation system at all, so entry depends entirely on the walk-in queue",
+        "One reviewer (May 2026) reported the queue being managed unfairly, with some guests seated out of arrival order"
+      ]
+    },
+    "oduller": [],
+    "rezervasyon": {
+      "gerekiyor": false,
+      "yontem": [],
+      "telefon": "+33 1 42 25 28 60",
+      "link": null,
+      "beklemeSuresi": "The restaurant does not accept reservations at all ('Nous ne prenons pas de réservation', official site lentrecotedeparis.fr). Service is continuous through the day. Secondary sources describe queuing outside and recommend arriving 40-60 minutes before opening at peak times; one TripAdvisor reviewer (May 2026) complained the queue is not managed fairly.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": {
+        "puan": 3.9,
+        "yorumSayisi": 7301,
+        "incelenen": 0
+      },
+      "tripadvisor": {
+        "puan": 3.4,
+        "yorumSayisi": 1748,
+        "incelenen": 15
+      },
+      "tiktok": null,
+      "diger": "RestaurantGuru (restaurantguru.com/Entrecote-de-Paris-Paris, accessed Aug 2026) — aggregation page citing the above Google figure and the €20-30/person range; official site lentrecotedeparis.fr — address, phone, hours, no-reservation policy. No Michelin Guide or Gault&Millau listing could be found for this specific address, so oduller is left empty."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-10"
   }
 ];
