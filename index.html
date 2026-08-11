@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>EATER — Restaurant Guide</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H"
+        crossorigin="anonymous">
 </head>
 <body>
   <header class="ust">
@@ -26,6 +29,10 @@
       </div>
       <p id="konumMesaj" class="silik konum-mesaj" aria-live="polite"></p>
       <p class="silik osm-kredi">Location search: © OpenStreetMap contributors</p>
+    </section>
+    <section id="haritaBolumu" class="harita-bolumu" hidden aria-label="City map">
+      <div id="harita"></div>
+      <p id="haritaNotu" class="silik harita-notu"></p>
     </section>
     <section id="filtreler" class="filtreler" aria-label="Filters"></section>
     <p id="sonucSayisi" class="sonuc-sayisi" aria-live="polite"></p>
@@ -50,5 +57,9 @@
           integrity="sha384-fS13P48RBFel+cPUp5960AhzvtEr64LerQ00neZuM+Hi/VDxxemdQnN7IcWPYvPb" crossorigin="anonymous"></script>
   <script src="dunya-ulkeler.js"></script>
   <script src="kure.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH"
+          crossorigin="anonymous"></script>
+  <script src="harita.js"></script>
 </body>
 </html>

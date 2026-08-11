@@ -55,19 +55,6 @@ function fiyatEtiketi(segment) {
   return `<span class="fiyat" title="${FIYAT_ADLARI[segment]} price range">${sembol}</span>`;
 }
 
-// Fotoğraf yardımcıları. fotolar[] girdileri: { dosya, alt, kaynak, kredi }
-function ilkFoto(fotolar) {
-  return Array.isArray(fotolar) && fotolar.length ? fotolar[0] : null;
-}
-
-function fotoKredisi(f) {
-  if (!f.kredi && !f.kaynak) return '';
-  const kaynak = f.kaynak
-    ? ` · <a href="${f.kaynak}" target="_blank" rel="noopener">source</a>`
-    : '';
-  return `<figcaption class="foto-kredi silik">${f.kredi || '—'}${kaynak}</figcaption>`;
-}
-
 // Kullanıcıdan gelen metinler (yorum, kullanıcı adı, mekân adı) HTML'e ham
 // gömülmez — innerHTML'e girmeden önce bu fonksiyondan geçirilir (XSS önlemi).
 function kacis(metin) {

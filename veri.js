@@ -457,14 +457,7 @@ const RESTORANLAR = [
       "tiktok": null,
       "diger": "Gault&Millau Turkey 2026 (1 toque, 12.5/20), the restaurant's official website and July 2026 menu, the Gurme Rehber and Müdavim reviews of the Etiler branch, the Ekşi Sözlük 'da mario' thread, the Şikayetvar record, meyhankoli, RestaurantGuru, and the OpenStreetMap POI record were also included in the assessment."
     },
-    "fotolar": [
-      {
-        "dosya": "fotolar/da-mario-etiler-1.jpg",
-        "alt": "Spaghetti with capers, olives, and tomatoes, served with a basket of olives and bread",
-        "kaynak": "https://www.damario.com.tr/static/uploads/2026/01/bg-1.webp",
-        "kredi": "Da Mario"
-      }
-    ],
+    "fotolar": [],
     "sonGuncelleme": "2026-08-08"
   },
   {
@@ -819,14 +812,7 @@ const RESTORANLAR = [
       "tiktok": null,
       "diger": "The MICHELIN Guide Istanbul selection and 2023 Service Award announcement, the Michelin Turkey press page, Gault&Millau Turkey 2026 (2 toques), the restaurant's official website and July 2026 menu pages, Voggia's review dated March 23, 2026, the top25restaurants review, the 7 complaints on Şikayetvar (including two dated October 19, 2025), Zomato (4.4/5, 723 reviews), Foursquare (9.1/10, 3,979 reviews), Yandex Maps (4.3/5, 49 reviews), RestaurantGuru, and the OpenStreetMap POI record were also included in the assessment."
     },
-    "fotolar": [
-      {
-        "dosya": "fotolar/sunset-grill-bar-1.jpg",
-        "alt": "A cocktail served over crushed ice at the bar counter",
-        "kaynak": "https://www.sunsetgrillbar.com/assets/upload/images/bar-2535f1.jpg",
-        "kredi": "Sunset Grill & Bar"
-      }
-    ],
+    "fotolar": [],
     "sonGuncelleme": "2026-08-08"
   },
   {
@@ -1071,14 +1057,7 @@ const RESTORANLAR = [
       "tiktok": null,
       "diger": "Anadolu Ajansı, Türkiye Today, yemek.com, and OGGUSTO roundups on the MICHELIN Guide Turkey 2026 selection; the Gault & Millau Turkey 2026 award page; the restaurant's own menu, reservation, and reservation-rules pages; Vedat Milor's 2018 Mikla piece in Hürriyet; the ET Food Voyage review; the Ekşi Sözlük 'mikla' thread; Wanderlog and restaurantguru roundups; Gazete Oksijen's and 10Haber's 2023 ownership-change news coverage; and the OpenStreetMap POI record were also included in the assessment."
     },
-    "fotolar": [
-      {
-        "dosya": "fotolar/mikla-1.jpg",
-        "alt": "A single-portion signature dish presented on a white plate",
-        "kaynak": "https://www.miklarestaurant.com/media/n03p2lla/4.webp",
-        "kredi": "Mikla"
-      }
-    ],
+    "fotolar": [],
     "sonGuncelleme": "2026-08-08"
   },
   {
@@ -1204,14 +1183,7 @@ const RESTORANLAR = [
       "tiktok": null,
       "diger": "The restaurant's official Turkish and English websites, its Pre-Information Form and Distance Sales Agreement, the tasting-menu PDF dated July 22, 2026, and the Rezervem reservation page; Anadolu Ajansı, Türkiye Today, yemek.com, and OGGUSTO roundups on the MICHELIN Guide Turkey 2026 selection; the Gault & Millau Turkey 2026 award page; the Ekşi Sözlük 'neolokal' thread; the restaurantguru roundup; and the Foodle record were also included in the assessment."
     },
-    "fotolar": [
-      {
-        "dosya": "fotolar/neolokal-1.jpg",
-        "alt": "Fresh spinach leaves arranged on parchment paper",
-        "kaynak": "https://www.neolokal.com/wp-content/uploads/2023/01/11.01.2023_Neolokal-22820-copy.jpg",
-        "kredi": "Neolokal"
-      }
-    ],
+    "fotolar": [],
     "sonGuncelleme": "2026-08-08"
   },
   {
@@ -1570,14 +1542,7 @@ const RESTORANLAR = [
       "tiktok": null,
       "diger": "Gault&Millau (fr.gaultmillau.com) — listed, no numeric score; RestaurantGuru — aggregation page citing the above Google figure and the €40-90/person range; Palais de Tokyo official venue page (palaisdetokyo.com/en/bambini) — address, phone, hours."
     },
-    "fotolar": [
-      {
-        "dosya": "fotolar/bambini-paris-1.jpg",
-        "alt": "Interior dining room of Bambini restaurant at the Palais de Tokyo, Paris, with terracotta decor and a tall arched window",
-        "kaynak": "https://commons.wikimedia.org/wiki/File:Restaurant_bambini.jpg",
-        "kredi": "Morgzinzin, CC0, via Wikimedia Commons"
-      }
-    ],
+    "fotolar": [],
     "sonGuncelleme": "2026-08-10"
   },
   {
@@ -1796,14 +1761,7 @@ const RESTORANLAR = [
       "tiktok": null,
       "diger": "Owner-curated entry (Aug 2026): MICHELIN Guide, official DiverXO/Dabiz Muñoz sources, TripAdvisor, selected recent fine-dining reviews. Coordinates verified by name on OpenStreetMap/Nominatim."
     },
-    "fotolar": [
-      {
-        "dosya": "fotolar/diverxo-1.jpg",
-        "alt": "Illuminated DiverXO entrance sign at night at its location inside the NH Collection Eurobuilding hotel, Madrid",
-        "kaynak": "https://commons.wikimedia.org/wiki/File:DiverXO_AV4A3445-Edit_(27539833998).jpg",
-        "kredi": "City Foodsters, CC BY 2.0, via Wikimedia Commons"
-      }
-    ],
+    "fotolar": [],
     "sonGuncelleme": "2026-08-11"
   },
   {
@@ -1910,14 +1868,7 @@ const RESTORANLAR = [
       "tiktok": null,
       "diger": "Owner-curated entry (Aug 2026): official Botín sources, TripAdvisor, recent Madrid traveler reviews, historical restaurant references. Coordinates verified by name on OpenStreetMap/Nominatim."
     },
-    "fotolar": [
-      {
-        "dosya": "fotolar/botin-1.jpg",
-        "alt": "Facade and entrance of Sobrino de Botín (Casa Botín) on Calle de Cuchilleros, Madrid, the world's oldest continuously operating restaurant",
-        "kaynak": "https://commons.wikimedia.org/wiki/File:Casa_Bot%C3%ADn_1.jpg",
-        "kredi": "Esetena, Public Domain, via Wikimedia Commons"
-      }
-    ],
+    "fotolar": [],
     "sonGuncelleme": "2026-08-11"
   },
   {
@@ -2021,14 +1972,7 @@ const RESTORANLAR = [
       "tiktok": null,
       "diger": "Owner-curated entry (Aug 2026): official restaurant sources, TripAdvisor, recent Madrid dining reviews, selected food-media references. Note: OpenStreetMap pins 'Sala de Despiece' at Calle de Ponzano 11 (the original); this entry uses the owner-provided Alonso Cano 28 address, so coordinates are left null pending branch confirmation."
     },
-    "fotolar": [
-      {
-        "dosya": "fotolar/sala-de-despiece-1-1.jpg",
-        "alt": "Interior view of Sala de Despiece restaurant, Madrid",
-        "kaynak": "https://commons.wikimedia.org/wiki/File:Sala_de_Despiece_Restaurant_(28895584653).jpg",
-        "kredi": "Nan Palmero, CC BY 2.0, via Wikimedia Commons"
-      }
-    ],
+    "fotolar": [],
     "sonGuncelleme": "2026-08-11"
   },
   {
@@ -2137,14 +2081,7 @@ const RESTORANLAR = [
       "tiktok": null,
       "diger": "Owner-curated entry (Aug 2026): MICHELIN Guide, official Disfrutar sources, TripAdvisor, recent fine-dining reviews. Coordinates verified by name on OpenStreetMap/Nominatim."
     },
-    "fotolar": [
-      {
-        "dosya": "fotolar/disfrutar-1.jpg",
-        "alt": "Storefront window of Disfrutar restaurant at night, showing its distinctive colorful checkerboard tile facade, Carrer de Villarroel, Barcelona",
-        "kaynak": "https://commons.wikimedia.org/wiki/File:Disfrutar.jpg",
-        "kredi": "Pere prlpz, CC BY-SA 3.0, via Wikimedia Commons"
-      }
-    ],
+    "fotolar": [],
     "sonGuncelleme": "2026-08-11"
   },
   {
@@ -2358,14 +2295,7 @@ const RESTORANLAR = [
       "tiktok": null,
       "diger": "Owner-curated entry (Aug 2026): official Can Culleretes sources, TripAdvisor, recent Barcelona dining reviews, historical references. Coordinates verified by name on OpenStreetMap/Nominatim."
     },
-    "fotolar": [
-      {
-        "dosya": "fotolar/can-culleretes-1.jpg",
-        "alt": "Entrance of Can Culleretes on Carrer d'en Quintana, Barcelona, the oldest restaurant in Barcelona (established 1786)",
-        "kaynak": "https://commons.wikimedia.org/wiki/File:Barcelona_-_entrance_of_Can_Culleretes_01.jpg",
-        "kredi": "Joe Mabel, CC BY-SA 4.0, via Wikimedia Commons"
-      }
-    ],
+    "fotolar": [],
     "sonGuncelleme": "2026-08-11"
   },
   {
@@ -2584,14 +2514,7 @@ const RESTORANLAR = [
       "tiktok": null,
       "diger": "Owner-curated EATER editorial entry (Aug 2026): official Girafe, Paris Society, TripAdvisor, selected recent reviews. Coordinates verified by name on OpenStreetMap/Nominatim."
     },
-    "fotolar": [
-      {
-        "dosya": "fotolar/girafe-paris-1.jpg",
-        "alt": "Palais de Chaillot, the building in the Trocadéro complex housing Girafe restaurant (building exterior, not restaurant interior)",
-        "kaynak": "https://commons.wikimedia.org/wiki/File:Palais_de_Chaillot_(July_2022).jpg",
-        "kredi": "DiscoA340, CC BY-SA 4.0, via Wikimedia Commons"
-      }
-    ],
+    "fotolar": [],
     "sonGuncelleme": "2026-08-11"
   },
   {
@@ -2700,14 +2623,7 @@ const RESTORANLAR = [
       "tiktok": null,
       "diger": "Owner-curated EATER editorial entry (Aug 2026): official Loulou Paris, TripAdvisor, recent diner reviews. Coordinates verified by name on OpenStreetMap/Nominatim."
     },
-    "fotolar": [
-      {
-        "dosya": "fotolar/loulou-paris-1.jpg",
-        "alt": "South facade of the Pavillon de Marsan at the Musée des Arts Décoratifs, 107 Rue de Rivoli, the building complex housing Loulou (building exterior, not restaurant interior)",
-        "kaynak": "https://commons.wikimedia.org/wiki/File:South_facade_of_the_Pavillon_de_Marsan_(PA00085992).jpg",
-        "kredi": "Thesupermat, CC BY-SA 3.0, via Wikimedia Commons"
-      }
-    ],
+    "fotolar": [],
     "sonGuncelleme": "2026-08-11"
   },
   {
@@ -2810,14 +2726,7 @@ const RESTORANLAR = [
       "tiktok": null,
       "diger": "Owner-curated EATER editorial entry (Aug 2026): official Baronne / Paris Society, TripAdvisor, recent diner reviews. No name-pinned OpenStreetMap POI found, so coordinates are left null."
     },
-    "fotolar": [
-      {
-        "dosya": "fotolar/baronne-paris-1.jpg",
-        "alt": "Hôtel Salomon de Rothschild, 11 Rue Berryer, the mansion housing Baronne restaurant (building exterior, not restaurant interior)",
-        "kaynak": "https://commons.wikimedia.org/wiki/File:H%C3%B4tel_Salomon_de_Rothschild_(Paris).jpg",
-        "kredi": "Ricardalovesmonuments, CC BY-SA 4.0, via Wikimedia Commons"
-      }
-    ],
+    "fotolar": [],
     "sonGuncelleme": "2026-08-11"
   },
   {
@@ -3032,14 +2941,7 @@ const RESTORANLAR = [
       "tiktok": null,
       "diger": "Owner-curated EATER editorial entry (Aug 2026): official Hôtel Costes, TripAdvisor, fashion/travel media, recent diner reviews. Coordinates verified by name on OpenStreetMap/Nominatim."
     },
-    "fotolar": [
-      {
-        "dosya": "fotolar/hotel-costes-restaurant-1.jpg",
-        "alt": "Facade of the historic building at 239-241 rue Saint-Honore, Paris, now housing Hotel Costes",
-        "kaynak": "https://commons.wikimedia.org/wiki/File:Paris_H%C3%B4tel_de_France_et_de_Choiseul_1.jpg",
-        "kredi": "Lionel Allorge, CC BY-SA 3.0, via Wikimedia Commons"
-      }
-    ],
+    "fotolar": [],
     "sonGuncelleme": "2026-08-11"
   },
   {
@@ -3144,14 +3046,7 @@ const RESTORANLAR = [
       "tiktok": null,
       "diger": "Owner-curated EATER editorial entry (Aug 2026): official L'Avenue, TripAdvisor, selected fashion and travel references. No verified phone number recorded. Coordinates verified by name on OpenStreetMap/Nominatim."
     },
-    "fotolar": [
-      {
-        "dosya": "fotolar/lavenue-paris-1.jpg",
-        "alt": "L'Avenue restaurant storefront at the corner of Avenue Montaigne and Rue François 1er, Paris",
-        "kaynak": "https://commons.wikimedia.org/wiki/File:Avenue_Montaigne_Rue_Francois_1er_-_L%27Avenue_(3769587423).jpg",
-        "kredi": "Elliott Brown, CC BY 2.0, via Wikimedia Commons"
-      }
-    ],
+    "fotolar": [],
     "sonGuncelleme": "2026-08-11"
   },
   {
@@ -3252,14 +3147,7 @@ const RESTORANLAR = [
       "tiktok": null,
       "diger": "Owner-curated EATER editorial entry (Aug 2026): official Maxim's, Paris Society, TripAdvisor, recent reviews. Coordinates verified by name on OpenStreetMap/Nominatim."
     },
-    "fotolar": [
-      {
-        "dosya": "fotolar/maxims-paris-1.jpg",
-        "alt": "Maxim's Art Nouveau restaurant facade, Rue Royale, Paris",
-        "kaynak": "https://commons.wikimedia.org/wiki/File:Maxim%27s_Restaurant,_Rue_Royale,_Paris.jpg",
-        "kredi": "Britchi Mirela, CC BY-SA 3.0, via Wikimedia Commons"
-      }
-    ],
+    "fotolar": [],
     "sonGuncelleme": "2026-08-11"
   },
   {
@@ -3362,14 +3250,7 @@ const RESTORANLAR = [
       "tiktok": null,
       "diger": "Owner-curated EATER editorial entry (Aug 2026): official The Madrid EDITION, official Oroya, Vogue, recent reviews. Coordinates are the hotel's name-pinned OpenStreetMap POI (the restaurant is on its 4th floor)."
     },
-    "fotolar": [
-      {
-        "dosya": "fotolar/oroya-madrid-edition-1.jpg",
-        "alt": "The Madrid EDITION hotel building, Plaza de Celenque, the hotel housing Oroya (building exterior, not restaurant interior)",
-        "kaynak": "https://commons.wikimedia.org/wiki/File:The_Madrid_EDITION_September_2022.jpg",
-        "kredi": "MainlyTwelve, CC BY-SA 4.0, via Wikimedia Commons"
-      }
-    ],
+    "fotolar": [],
     "sonGuncelleme": "2026-08-11"
   },
   {
@@ -4015,14 +3896,7 @@ const RESTORANLAR = [
       "tiktok": null,
       "diger": "Owner-curated EATER editorial entry (Aug 2026): official GALLADA, The Peninsula Istanbul, MICHELIN Guide 2026, TripAdvisor, Fatih Tutak references. Coordinates are the hotel's name-pinned OpenStreetMap POI (the restaurant is on its roof). No verified direct phone number recorded."
     },
-    "fotolar": [
-      {
-        "dosya": "fotolar/gallada-1.jpg",
-        "alt": "The Peninsula Istanbul hotel building in Karaköy, home to the GALLADA rooftop restaurant (building exterior, not restaurant interior)",
-        "kaynak": "https://commons.wikimedia.org/wiki/File:The_Peninsula_Istanbul.jpg",
-        "kredi": "Antoloji, CC0, via Wikimedia Commons"
-      }
-    ],
+    "fotolar": [],
     "sonGuncelleme": "2026-08-11"
   },
   {
@@ -4227,14 +4101,7 @@ const RESTORANLAR = [
       "tiktok": null,
       "diger": "Owner-curated EATER editorial entry (Aug 2026): official ICHIRAN, TableCheck where applicable, recent Tokyo dining references. ICHIRAN has many Tokyo branches, so no single address or coordinate is recorded — the catalog does not yet support per-branch entries."
     },
-    "fotolar": [
-      {
-        "dosya": "fotolar/ichiran-ramen-tokyo-1.jpg",
-        "alt": "Ichiran ramen restaurant storefront in Shinjuku Kabukicho, Tokyo",
-        "kaynak": "https://commons.wikimedia.org/wiki/File:Ichiran_in_Shinjuku_Kabukicho_2018.jpg",
-        "kredi": "Wpcpey, CC BY-SA 4.0, via Wikimedia Commons"
-      }
-    ],
+    "fotolar": [],
     "sonGuncelleme": "2026-08-11"
   },
   {

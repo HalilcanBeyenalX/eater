@@ -47,7 +47,7 @@ Yeni bir **ülkeden** ilk restoran eklenirken `kure.js` içindeki `ULKE_KODLARI`
 
 - **Supabase kurulumu** — `docs/supabase-kurulum.md` izlenerek yapılır; yapılana dek günlük sayfaları "yapılandırılmadı" uyarısı gösterir.
 - **Yayınlama** — çok kullanıcılı günlük için sitenin bir adreste yayınlanması gerekir (GitHub Pages/Netlify).
-- **Fotoğraflar** — şemadaki `fotolar` alanı ve kart/detay sayfasındaki yer tutucular hazır; 7 restoranın fotoğrafı eklenmedi.
+- **Fotoğraflar** — katalog fotoğrafları bilinçli olarak kaldırıldı (telif + tutarlılık); şemadaki `fotolar` alanı ileride gerekirse diye duruyor, arayüz artık okumuyor. Mekân konumu kart yerine şehir haritasında gösteriliyor.
 - **Öneri sihirbazı (quiz)** — anlamlı bir öneri üretebilmek için veri setinde daha fazla restoran birikmesi bekleniyor, bu yüzden ertelendi.
 - **Veri toplama otomasyonu** — `veri.js`'i üretecek bir script; `SEMA.md` bu scriptin sözleşmesi olarak yazıldı.
 

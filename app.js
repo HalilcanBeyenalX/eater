@@ -11,14 +11,9 @@ function kartHTML(r) {
   const mesafe = (konum && r.koordinat)
     ? `<span class="mesafe">${mesafeMetni(mesafeKm(konum, r.koordinat))}</span>`
     : '';
-  const foto = ilkFoto(r.fotolar);
-  const fotoBlok = foto
-    ? `<div class="kart-foto"><img src="${foto.dosya}" alt="${foto.alt}" loading="lazy"></div>`
-    : '<div class="kart-foto kart-foto-bos" aria-hidden="true"><span>photo coming soon</span></div>';
 
   return `
     <a class="kart" href="detay.html?id=${encodeURIComponent(r.id)}">
-      ${fotoBlok}
       <div class="kart-govde">
         <div class="kart-ust">
           <h2 class="kart-isim">${r.isim}</h2>
@@ -196,6 +191,9 @@ function render() {
 
   document.getElementById('sonucSayisi').textContent =
     `${liste.length} restaurant${liste.length === 1 ? '' : 's'}${liste.length !== RESTORANLAR.length ? ` (of ${RESTORANLAR.length})` : ''}`;
+
+  // Şehir haritası ülke seçimini izler (harita.js; yüklü değilse sessizce atlanır).
+  window.eaterHarita?.guncelle(filtreDurumu.ulke, filtreDurumu.sehir);
 }
 
 // kure.js ülkeye tıklanınca çağırır; '' filtreyi temizler.

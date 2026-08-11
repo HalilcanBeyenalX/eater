@@ -117,23 +117,6 @@ body {
   border-color: var(--altin);
 }
 
-.kart-foto {
-  height: 150px;
-  display: grid;
-  place-items: center;
-  background: repeating-linear-gradient(
-    45deg,
-    var(--kirmizi-derin),
-    var(--kirmizi-derin) 12px,
-    var(--kirmizi-derin-desen) 12px,
-    var(--kirmizi-derin-desen) 24px
-  );
-  color: var(--krem-silik);
-  font-size: 12px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
 .kart-govde { padding: 16px 18px 18px; }
 
 .kart-ust {
@@ -393,55 +376,6 @@ body {
 .kaynak th { color: var(--krem-silik); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; }
 .kaynak td.silik { color: var(--krem-silik); }
 
-/* --- Fotoğraflar --- */
-
-.kart-foto { overflow: hidden; }
-
-.kart-foto img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* Yer tutucu desen yalnızca fotoğrafı olmayan kartta kalsın */
-.kart-foto:not(.kart-foto-bos) { background: var(--yuzey-oyuk); }
-
-.fotolar {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 14px;
-  margin: 26px 0 0;
-}
-
-.foto {
-  margin: 0;
-  border: 1px solid var(--kenar);
-  border-radius: var(--yuvarlak);
-  overflow: hidden;
-  background: var(--yuzey-oyuk);
-}
-
-.foto-bas { grid-column: 1 / -1; }
-
-.foto img {
-  width: 100%;
-  aspect-ratio: 3 / 2;
-  object-fit: cover;
-  display: block;
-}
-
-.foto-bas img { aspect-ratio: 16 / 9; }
-
-.foto-kredi {
-  margin: 0;
-  padding: 7px 11px;
-  font-size: 11px;
-  line-height: 1.4;
-}
-
-.foto-kredi a { color: var(--altin-koyu); }
-
 @media (max-width: 640px) {
   .ust { padding: 34px 18px 20px; }
   .govde { padding: 0 18px 44px; }
@@ -464,8 +398,6 @@ body {
   .kaynak { font-size: 13px; }
   .kaynak th, .kaynak td { padding: 7px 6px; }
 
-  .fotolar { grid-template-columns: 1fr; gap: 12px; }
-  .foto-bas img { aspect-ratio: 3 / 2; }
 }
 
 /* --- Gezinme sekmeleri ve hesap kutusu --- */
@@ -561,6 +493,24 @@ body {
   display: flex; align-items: center; justify-content: center;
 }
 .foto-buyutme img { max-width: 92vw; max-height: 92vh; border-radius: var(--yuvarlak); }
+
+/* --- Şehir haritası --- */
+.harita-bolumu {
+  margin-bottom: 1rem; border-radius: var(--yuvarlak);
+  background: var(--yuzey-derin); box-shadow: var(--golge);
+  padding: .5rem; overflow: hidden;
+}
+#harita {
+  height: 380px; border-radius: calc(var(--yuvarlak) - 4px);
+}
+.harita-notu { margin: .45rem .4rem .15rem; font-size: .8rem; }
+/* Leaflet balonları temaya uysun */
+.leaflet-popup-content-wrapper {
+  background: var(--yuzey-derin); color: var(--krem);
+  border-radius: 10px;
+}
+.leaflet-popup-content a { color: var(--altin); font-weight: 600; }
+.leaflet-popup-tip { background: var(--yuzey-derin); }
 
 /* --- Dünya küresi --- */
 .kure-bolumu {
