@@ -2367,5 +2367,1713 @@ const RESTORANLAR = [
       }
     ],
     "sonGuncelleme": "2026-08-11"
+  },
+  {
+    "id": "gigi-rigolatto-paris",
+    "isim": "Gigi Rigolatto Paris",
+    "ulke": "France",
+    "sehir": "Paris",
+    "semt": "8th Arr. / Avenue Montaigne",
+    "mutfak": [
+      "Italian",
+      "Mediterranean",
+      "Luxury Dining"
+    ],
+    "adres": "15 Avenue Montaigne, 75008 Paris, France",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Gigi%20Rigolatto%2C%2015%20Avenue%20Montaigne%2C%2075008%20Paris",
+    "koordinat": {
+      "lat": 48.86555,
+      "lng": 2.30302
+    },
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": null,
+      "not": "Very expensive / luxury Paris dining (EATER editorial note, Aug 2026); no verified per-person range recorded."
+    },
+    "yemek": {
+      "puan": 8.4,
+      "ozet": "EATER editorial score. Built around polished Italian comfort food rather than experimental gastronomy: arancini, ossobuco, linguine alle vongole, carpaccio and Milanese-style preparations. Reviews suggest the food is enjoyable and well presented, but the reputation is driven as much by location, atmosphere and the social scene as by pure culinary ambition — a strong luxury lifestyle restaurant rather than one of Paris's highest-scoring gastronomic destinations."
+    },
+    "neYenir": [
+      {
+        "yemek": "Linguine alle vongole",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Ossobuco",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Arancini",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Beef carpaccio",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Milanese-style veal",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Tiramisu",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 9.7,
+      "ozet": "The major reason to visit: high above Avenue Montaigne with Eiffel Tower views and a glamorous Italian-palazzo aesthetic — golden Sienna marble, travertine, elegant lighting and the Bellini Bar. Live music and a fashionable crowd make it lively rather than intimate.",
+      "etiketler": [
+        "eiffel-view",
+        "luxury",
+        "fashionable",
+        "live-music",
+        "date-night",
+        "special-occasion"
+      ],
+      "dressCode": "Smart elegant / upscale",
+      "uygun": [
+        "couples",
+        "groups"
+      ]
+    },
+    "servis": {
+      "puan": 7.8,
+      "ozet": "EATER editorial score. Experiences are mixed: many guests describe polished, attentive service, while recurring reviews mention long waits and inconsistencies on busy evenings. Expectations run especially high given the premium pricing and location.",
+      "artilar": [
+        "Polished luxury presentation",
+        "International clientele handled comfortably",
+        "Good cocktail and wine guidance",
+        "Strong special-occasion experience"
+      ],
+      "eksiler": [
+        "Busy evenings can create delays",
+        "Some reports of inconsistent attentiveness",
+        "High pricing creates very high service expectations"
+      ]
+    },
+    "oduller": [],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "phone"
+      ],
+      "telefon": "+33 1 47 23 55 99",
+      "link": null,
+      "beklemeSuresi": "Strongly recommended, especially for dinner and terrace/view tables.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated EATER editorial entry (Aug 2026): official Gigi Rigolatto / Paris Society, TripAdvisor, recent diner reviews. Coordinates verified by name on OpenStreetMap/Nominatim."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-11"
+  },
+  {
+    "id": "girafe-paris",
+    "isim": "Girafe",
+    "ulke": "France",
+    "sehir": "Paris",
+    "semt": "Trocadéro / 16th Arr.",
+    "mutfak": [
+      "French",
+      "Seafood",
+      "Mediterranean",
+      "Luxury Dining"
+    ],
+    "adres": "1 Place du Trocadéro et du 11 Novembre, 75016 Paris, France",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Girafe%2C%201%20Place%20du%20Trocad%C3%A9ro%2C%2075016%20Paris",
+    "koordinat": {
+      "lat": 48.86256,
+      "lng": 2.28876
+    },
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": null,
+      "not": "Very expensive (EATER editorial note, Aug 2026); no verified per-person range recorded."
+    },
+    "yemek": {
+      "puan": 8.5,
+      "ozet": "EATER editorial score. Primarily a modern seafood restaurant: platters, ceviche, sashimi, lobster, sole and turbot. Reviews are mixed at dish level — raw seafood and shellfish are often praised while some cooked mains draw more moderate reactions. The kitchen is strong, but the extraordinary location and view are an equally important part of the appeal."
+    },
+    "neYenir": [
+      {
+        "yemek": "Seafood platter",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Ceviche",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Sashimi",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Lobster",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Turbot",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Sole",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 9.8,
+      "ozet": "Direct Eiffel Tower view from the Trocadéro; Joseph Dirand's interior channels elegant 1930s Paris in cream tones, wood and marble with a sophisticated maritime feeling. Terrace seating is particularly sought after — one of Paris's most recognizable social-media dining locations.",
+      "etiketler": [
+        "eiffel-view",
+        "terrace",
+        "luxury",
+        "romantic",
+        "art-deco",
+        "fashionable"
+      ],
+      "dressCode": "Smart elegant",
+      "uygun": [
+        "couples"
+      ]
+    },
+    "servis": {
+      "puan": 7.8,
+      "ozet": "EATER editorial score — deliberately not inflated by the prestige of the location. When operating well the service is polished; peak-time reviews repeatedly mention delays, reservation friction and uneven attentiveness.",
+      "artilar": [
+        "Experienced with international diners",
+        "Professional presentation",
+        "Strong wine and seafood service"
+      ],
+      "eksiler": [
+        "Can become extremely busy",
+        "Reports of slow or inconsistent attention",
+        "High demand for terrace tables can complicate expectations"
+      ]
+    },
+    "oduller": [],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "phone"
+      ],
+      "telefon": "+33 1 40 62 70 61",
+      "link": null,
+      "beklemeSuresi": "Strongly recommended; for Eiffel Tower / terrace seating, booking ahead is particularly important.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated EATER editorial entry (Aug 2026): official Girafe, Paris Society, TripAdvisor, selected recent reviews. Coordinates verified by name on OpenStreetMap/Nominatim."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-11"
+  },
+  {
+    "id": "loulou-paris",
+    "isim": "Loulou Paris",
+    "ulke": "France",
+    "sehir": "Paris",
+    "semt": "Louvre / Tuileries",
+    "mutfak": [
+      "Italian",
+      "French",
+      "Mediterranean"
+    ],
+    "adres": "107 Rue de Rivoli, 75001 Paris, France",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Loulou%2C%20107%20Rue%20de%20Rivoli%2C%2075001%20Paris",
+    "koordinat": {
+      "lat": 48.86276,
+      "lng": 2.33339
+    },
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": null,
+      "not": "Expensive to very expensive (EATER editorial note, Aug 2026); no verified per-person range recorded."
+    },
+    "yemek": {
+      "puan": 8.7,
+      "ozet": "EATER editorial score. Italian and Mediterranean influences with the polish expected from its setting beside the Musée des Arts Décoratifs and the Tuileries — pastas, vegetables, seafood, grilled meats and Italian-inspired desserts, more relaxed than haute cuisine. Strong reviews praise the simplicity and ingredient quality; some recent diners report inconsistencies during extremely busy service."
+    },
+    "neYenir": [
+      {
+        "yemek": "Truffle pizza",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Linguine or seasonal pasta",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Vitello tonnato",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Grilled fish",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Artichoke preparations",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Tiramisu",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 9.6,
+      "ozet": "The garden and terrace setting is the defining feature — elegant but less theatrical than Gigi or Girafe, with a relaxed Mediterranean style overlooking one of the most beautiful corners of central Paris. Long lunches and warm-weather dinners are where it works best.",
+      "etiketler": [
+        "garden",
+        "terrace",
+        "elegant",
+        "romantic",
+        "fashionable"
+      ],
+      "dressCode": "Smart casual / elegant",
+      "uygun": [
+        "couples",
+        "groups"
+      ]
+    },
+    "servis": {
+      "puan": 8.2,
+      "ozet": "EATER editorial score. Many reviews praise friendly, professional service, but busy terrace periods generate complaints about pacing and forgotten items — quality can depend heavily on time and season.",
+      "artilar": [
+        "Friendly upscale style",
+        "Good for long lunches",
+        "Strong international guest experience"
+      ],
+      "eksiler": [
+        "Peak terrace service can be hectic",
+        "Some recent reports of long waits",
+        "Demand can make the experience feel crowded"
+      ]
+    },
+    "oduller": [],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "online",
+        "phone"
+      ],
+      "telefon": "+33 1 42 60 41 96",
+      "link": null,
+      "beklemeSuresi": "Recommended. Online reservations for smaller groups generally open close to the dining date according to the restaurant's booking system.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated EATER editorial entry (Aug 2026): official Loulou Paris, TripAdvisor, recent diner reviews. Coordinates verified by name on OpenStreetMap/Nominatim."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-11"
+  },
+  {
+    "id": "baronne-paris",
+    "isim": "Baronne",
+    "ulke": "France",
+    "sehir": "Paris",
+    "semt": "8th Arr.",
+    "mutfak": [
+      "French",
+      "Contemporary",
+      "Grill",
+      "Luxury Dining"
+    ],
+    "adres": "11 Rue Berryer, 75008 Paris, France",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Baronne%2C%2011%20Rue%20Berryer%2C%2075008%20Paris",
+    "koordinat": null,
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": null,
+      "not": "Very expensive (EATER editorial note, Aug 2026); no verified per-person range recorded."
+    },
+    "yemek": {
+      "puan": 8.5,
+      "ozet": "EATER editorial score. Modern French luxury dining through high-quality products: grilled meats, fish and polished sharing dishes. Reviews generally describe the food as well executed, but the experience is not purely chef-driven gastronomy — as with several Paris Society venues, design, atmosphere and clientele are fundamental to the proposition."
+    },
+    "neYenir": [
+      {
+        "yemek": "Premium grilled meat",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Seasonal fish",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Beef tartare",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Vegetable sides",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Signature desserts",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 9.7,
+      "ozet": "Occupies the historic Hôtel Salomon de Rothschild — one of the most dramatic restaurant settings on this list. Grand architectural details, luxury interiors and a large terrace feel closer to dining inside a private mansion than a conventional restaurant.",
+      "etiketler": [
+        "historic-building",
+        "luxury",
+        "glamorous",
+        "fashionable",
+        "terrace",
+        "special-occasion"
+      ],
+      "dressCode": "Smart elegant",
+      "uygun": [
+        "couples",
+        "groups",
+        "business dinner"
+      ]
+    },
+    "servis": {
+      "puan": 7.9,
+      "ozet": "EATER editorial score. Generally stylish and professional, though reviews show more inconsistency than the surroundings suggest — supporting service on crowded evenings and the perceived value of extras such as wine draw particular criticism.",
+      "artilar": [
+        "Professional front-of-house presentation",
+        "Luxury dining experience",
+        "Suitable for business and special occasions"
+      ],
+      "eksiler": [
+        "Service consistency can vary",
+        "Very high expectations because of pricing",
+        "Some reports of weaker support service at peak periods"
+      ]
+    },
+    "oduller": [],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "phone"
+      ],
+      "telefon": "+33 1 42 25 73 35",
+      "link": null,
+      "beklemeSuresi": "Strongly recommended.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated EATER editorial entry (Aug 2026): official Baronne / Paris Society, TripAdvisor, recent diner reviews. No name-pinned OpenStreetMap POI found, so coordinates are left null."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-11"
+  },
+  {
+    "id": "siena-paris",
+    "isim": "Siena Paris",
+    "ulke": "France",
+    "sehir": "Paris",
+    "semt": "Marché Saint-Honoré / 1st Arr.",
+    "mutfak": [
+      "Italian",
+      "Mediterranean"
+    ],
+    "adres": "35 Place du Marché Saint-Honoré, 75001 Paris, France",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Siena%2C%2035%20Place%20du%20March%C3%A9%20Saint-Honor%C3%A9%2C%2075001%20Paris",
+    "koordinat": {
+      "lat": 48.86759,
+      "lng": 2.332
+    },
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": null,
+      "not": "Expensive (EATER editorial note, Aug 2026); no verified per-person range recorded."
+    },
+    "yemek": {
+      "puan": 8.0,
+      "ozet": "EATER editorial score, kept notably below the ambiance score by design. A fashionable Italian restaurant built on familiar contemporary dishes — pasta, seafood, meat, comfort-driven plates — rather than highly technical gastronomy. Guest reviews are unusually divided: some praise the food, others question value and consistency."
+    },
+    "neYenir": [
+      {
+        "yemek": "Fresh pasta",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Truffle pasta",
+        "kacKisiOnerdi": null,
+        "not": "When available."
+      },
+      {
+        "yemek": "Beef carpaccio",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Burrata",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Grilled seafood",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Tiramisu",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 9.0,
+      "ozet": "Warm colors, greenery and a polished contemporary interior create a lively, highly social atmosphere — particularly good for dinner with friends and later evenings, supported by the speakeasy concept and late opening hours.",
+      "etiketler": [
+        "lively",
+        "fashionable",
+        "late-night",
+        "date-night"
+      ],
+      "dressCode": "Smart / fashionable",
+      "uygun": [
+        "groups",
+        "couples"
+      ]
+    },
+    "servis": {
+      "puan": 7.7,
+      "ozet": "EATER editorial score. Opinions are mixed: positive reviews describe an organized, professional team even when busy, while critical reviews report uneven attention and value-related frustration.",
+      "artilar": [
+        "Comfortable with busy evening service",
+        "Lively hospitality style",
+        "Suitable for groups"
+      ],
+      "eksiler": [
+        "Inconsistency reported in guest reviews",
+        "Peak evenings may feel rushed",
+        "Premium positioning raises expectations"
+      ]
+    },
+    "oduller": [],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "phone"
+      ],
+      "telefon": "+33 1 88 83 00 88",
+      "link": null,
+      "beklemeSuresi": "Recommended, especially in the evening.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated EATER editorial entry (Aug 2026): official Siena Paris, TripAdvisor, recent diner reviews. Coordinates verified by name on OpenStreetMap/Nominatim."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-11"
+  },
+  {
+    "id": "hotel-costes-restaurant",
+    "isim": "Hôtel Costes Restaurant",
+    "ulke": "France",
+    "sehir": "Paris",
+    "semt": "Place Vendôme / 1st Arr.",
+    "mutfak": [
+      "French",
+      "International",
+      "Luxury Dining"
+    ],
+    "adres": "7 Rue de Castiglione, 75001 Paris, France",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=H%C3%B4tel%20Costes%2C%207%20Rue%20de%20Castiglione%2C%2075001%20Paris",
+    "koordinat": {
+      "lat": 48.86628,
+      "lng": 2.32801
+    },
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": null,
+      "not": "Very expensive (EATER editorial note, Aug 2026); no verified per-person range recorded."
+    },
+    "yemek": {
+      "puan": 8.2,
+      "ozet": "EATER editorial score — deliberately not inflated by the venue's reputation. Not primarily a destination for experimental gastronomy: the menu is polished luxury comfort food and long-standing house favorites. The food can be very good, but the cultural importance comes from the complete Costes experience: music, fashion, design, crowd and location."
+    },
+    "neYenir": [
+      {
+        "yemek": "Tuna tartare",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Club-style classics",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Seasonal fish",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Steak and fries",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Salads",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Signature desserts and cocktails",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 9.8,
+      "ozet": "Few Paris restaurants are as closely tied to the city's fashion scene. Dark lighting, the famous courtyard, carefully curated music and an intensely fashionable crowd create a seductive atmosphere that belongs more to Paris nightlife culture than to conventional hotel dining.",
+      "etiketler": [
+        "fashionable",
+        "iconic",
+        "dim",
+        "courtyard",
+        "luxury",
+        "people-watching",
+        "romantic"
+      ],
+      "dressCode": "Smart fashionable / upscale",
+      "uygun": [
+        "couples"
+      ]
+    },
+    "servis": {
+      "puan": 7.5,
+      "ozet": "EATER editorial score. Probably the most controversial part of the Costes experience: some guests report excellent, polished attention, while others repeatedly describe the staff as aloof or unwelcoming — the contrast is preserved here rather than presenting service as uniformly excellent.",
+      "artilar": [
+        "Experienced luxury hospitality",
+        "Strong cocktail service",
+        "Handles high-profile international clientele"
+      ],
+      "eksiler": [
+        "Repeated criticism of attitude",
+        "Can feel exclusive or pretentious",
+        "Service experience varies significantly"
+      ]
+    },
+    "oduller": [],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "phone"
+      ],
+      "telefon": "+33 1 42 44 50 00",
+      "link": null,
+      "beklemeSuresi": "Strongly recommended.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated EATER editorial entry (Aug 2026): official Hôtel Costes, TripAdvisor, fashion/travel media, recent diner reviews. Coordinates verified by name on OpenStreetMap/Nominatim."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-11"
+  },
+  {
+    "id": "lavenue-paris",
+    "isim": "L'Avenue",
+    "ulke": "France",
+    "sehir": "Paris",
+    "semt": "Avenue Montaigne / 8th Arr.",
+    "mutfak": [
+      "French",
+      "International",
+      "Luxury Bistro"
+    ],
+    "adres": "41 Avenue Montaigne, 75008 Paris, France",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=L%27Avenue%2C%2041%20Avenue%20Montaigne%2C%2075008%20Paris",
+    "koordinat": {
+      "lat": 48.86728,
+      "lng": 2.30628
+    },
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": null,
+      "not": "Very expensive (EATER editorial note, Aug 2026); no verified per-person range recorded."
+    },
+    "yemek": {
+      "puan": 8.4,
+      "ozet": "EATER editorial score. A luxury Parisian social restaurant mixing French classics with international dishes — tuna tartare, burrata, matchstick fries, soups, seafood and the well-known sea bass curry. The kitchen is reliably appealing, but the main identity is the fashionable Avenue Montaigne clientele and the outdoor people-watching scene."
+    },
+    "neYenir": [
+      {
+        "yemek": "Tuna tartare",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Sea bass curry",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Burrata",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Matchstick fries",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Seasonal soup",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Escargots",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 9.2,
+      "ozet": "The terrace on Avenue Montaigne is central: fashion designers, luxury shoppers, local regulars and international visitors make it one of the city's classic people-watching restaurants. Fashionable and Parisian rather than formal fine dining.",
+      "etiketler": [
+        "fashionable",
+        "people-watching",
+        "terrace",
+        "luxury"
+      ],
+      "dressCode": "Smart fashionable",
+      "uygun": [
+        "groups",
+        "business dinner"
+      ]
+    },
+    "servis": {
+      "puan": 7.8,
+      "ozet": "EATER editorial score. Long-term popularity means service can be extremely efficient when everything runs smoothly, but reviews also mention reservation pressure and inconsistent warmth; walk-ins can be difficult on busy weekends.",
+      "artilar": [
+        "Experienced staff",
+        "Fast-paced professional operation",
+        "Familiar with international clientele"
+      ],
+      "eksiler": [
+        "Busy periods can feel impersonal",
+        "Reservation access can be difficult",
+        "Mixed feedback on warmth and attentiveness"
+      ]
+    },
+    "oduller": [],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [],
+      "telefon": null,
+      "link": null,
+      "beklemeSuresi": "Strongly recommended, especially at weekends.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated EATER editorial entry (Aug 2026): official L'Avenue, TripAdvisor, selected fashion and travel references. No verified phone number recorded. Coordinates verified by name on OpenStreetMap/Nominatim."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-11"
+  },
+  {
+    "id": "maxims-paris",
+    "isim": "Maxim's",
+    "ulke": "France",
+    "sehir": "Paris",
+    "semt": "Rue Royale / 8th Arr.",
+    "mutfak": [
+      "French",
+      "Luxury Dining"
+    ],
+    "adres": "3 Rue Royale, 75008 Paris, France",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Maxim%27s%2C%203%20Rue%20Royale%2C%2075008%20Paris",
+    "koordinat": {
+      "lat": 48.86731,
+      "lng": 2.32223
+    },
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": null,
+      "not": "Very expensive (EATER editorial note, Aug 2026); no verified per-person range recorded."
+    },
+    "yemek": {
+      "puan": 7.9,
+      "ozet": "EATER editorial score — it deliberately separates Maxim's extraordinary historical weight from the consistency of the contemporary kitchen. The current concept focuses on classic French luxury dining; some dishes are well received, others criticized as underwhelming relative to price and reputation."
+    },
+    "neYenir": [
+      {
+        "yemek": "French classic starters",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Fish or seafood dishes",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Beef preparations",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Seasonal French mains",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Classic desserts",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 9.6,
+      "ozet": "The preserved Art Nouveau interiors are the main reason Maxim's remains significant: ornate decoration, live music and Belle Époque history create an atmosphere unlike almost any modern restaurant. For guests interested in old Paris, the room itself is the experience.",
+      "etiketler": [
+        "historic-building",
+        "art-nouveau",
+        "live-music",
+        "luxury",
+        "iconic"
+      ],
+      "dressCode": "Elegant attire expected",
+      "uygun": [
+        "couples"
+      ]
+    },
+    "servis": {
+      "puan": 7.4,
+      "ozet": "EATER editorial score, kept conservative despite the prestige of the name. Contemporary feedback is inconsistent: some visitors receive attentive classic service, while recurring reviews criticize inattentiveness and a tourist-oriented feeling.",
+      "artilar": [
+        "Traditional restaurant presentation",
+        "Historic special-occasion feeling",
+        "Live entertainment adds to the experience"
+      ],
+      "eksiler": [
+        "Inconsistent guest feedback",
+        "Some complaints about inattentiveness",
+        "Price and historical reputation create very high expectations"
+      ]
+    },
+    "oduller": [],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "phone"
+      ],
+      "telefon": "+33 1 42 65 27 94",
+      "link": null,
+      "beklemeSuresi": "Required / strongly recommended.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated EATER editorial entry (Aug 2026): official Maxim's, Paris Society, TripAdvisor, recent reviews. Coordinates verified by name on OpenStreetMap/Nominatim."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-11"
+  },
+  {
+    "id": "oroya-madrid-edition",
+    "isim": "Oroya & The Roof",
+    "ulke": "Spain",
+    "sehir": "Madrid",
+    "semt": "Centro / Puerta del Sol",
+    "mutfak": [
+      "Peruvian",
+      "Latin American",
+      "Rooftop"
+    ],
+    "adres": "The Madrid EDITION, Plaza de Celenque 2, 28013 Madrid, Spain",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Oroya%2C%20The%20Madrid%20EDITION%2C%20Plaza%20de%20Celenque%202%2C%2028013%20Madrid",
+    "koordinat": {
+      "lat": 40.41778,
+      "lng": -3.70631
+    },
+    "fiyat": {
+      "segment": "orta",
+      "kisiBasi": null,
+      "not": "Expensive but below Madrid's luxury tasting-menu tier (EATER editorial note, Aug 2026); no verified per-person range recorded."
+    },
+    "yemek": {
+      "puan": 8.6,
+      "ozet": "EATER editorial score. The Peruvian restaurant and rooftop concept at The Madrid EDITION, led by chef Diego Muñoz: an informal, sharing-driven menu combining Peruvian ingredients and techniques with a modern international approach. Ceviche, causa-style dishes, grilled plates and small plates work particularly well alongside the pisco-focused cocktail program."
+    },
+    "neYenir": [
+      {
+        "yemek": "Sea bass ceviche",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Peruvian sharing plates",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Papas rellenas",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Seasonal grilled dishes",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Pisco-based cocktails",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 9.5,
+      "ozet": "Fourth floor of The Madrid EDITION: rooftop terrace, abundant greenery and views across central Madrid. The neighboring rooftop pool and greenhouse-like interior create one of the city's strongest hotel-restaurant atmospheres, especially around sunset.",
+      "etiketler": [
+        "rooftop",
+        "view",
+        "sunset",
+        "lively",
+        "luxury"
+      ],
+      "dressCode": "Casual per the hotel; smart casual works best for dinner",
+      "uygun": [
+        "groups",
+        "couples"
+      ]
+    },
+    "servis": {
+      "puan": 8.5,
+      "ozet": "EATER editorial score. Contemporary luxury-hotel style rather than formal fine dining; staff matter especially for navigating sharing portions and the extensive cocktail program.",
+      "artilar": [
+        "Strong cocktail knowledge",
+        "Luxury hotel hospitality",
+        "Good for international guests",
+        "Relaxed rather than formal"
+      ],
+      "eksiler": [
+        "Rooftop demand can slow service",
+        "Atmosphere may take priority over a quiet dining experience"
+      ]
+    },
+    "oduller": [],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "phone"
+      ],
+      "telefon": "+34 919 54 54 50",
+      "link": null,
+      "beklemeSuresi": "Recommended, especially evenings and rooftop periods.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated EATER editorial entry (Aug 2026): official The Madrid EDITION, official Oroya, Vogue, recent reviews. Coordinates are the hotel's name-pinned OpenStreetMap POI (the restaurant is on its 4th floor)."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-11"
+  },
+  {
+    "id": "lana-madrid",
+    "isim": "Lana",
+    "ulke": "Spain",
+    "sehir": "Madrid",
+    "semt": "Chamberí / Ponzano",
+    "mutfak": [
+      "Argentinian",
+      "Steakhouse",
+      "Grill"
+    ],
+    "adres": "Calle de Ponzano 59, 28003 Madrid, Spain",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Restaurante%20Lana%2C%20Calle%20de%20Ponzano%2059%2C%2028003%20Madrid",
+    "koordinat": {
+      "lat": 40.44129,
+      "lng": -3.6992
+    },
+    "fiyat": {
+      "segment": "orta",
+      "kisiBasi": null,
+      "not": "High-end steakhouse pricing; the final bill varies significantly by cut and weight (EATER editorial note, Aug 2026)."
+    },
+    "yemek": {
+      "puan": 9.5,
+      "ozet": "EATER editorial score. One of Madrid's strongest modern steakhouses: brothers Martín and Joaquín Narvaiz approach Argentine grilling with a strong focus on sourcing, maturation and precise fire cooking. The meat program is the main attraction, but starters and vegetable dishes receive similar attention. Included in the MICHELIN Guide's Madrid selection (no star) and recognized in international steakhouse rankings."
+    },
+    "neYenir": [
+      {
+        "yemek": "Chuleta / premium aged beef",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Entraña",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Wagyu cecina",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Empanadas",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Grilled seasonal mushrooms",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Grilled vegetables",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 8.5,
+      "ozet": "Serious about food without being formal: a warm, intimate, contemporary room that keeps attention on the grill and the meat rather than theatrical decoration. Well suited to a high-end steak experience without a nightclub atmosphere.",
+      "etiketler": [
+        "steakhouse",
+        "intimate",
+        "modern",
+        "date-night"
+      ],
+      "dressCode": "Smart casual",
+      "uygun": [
+        "couples",
+        "groups"
+      ]
+    },
+    "servis": {
+      "puan": 9.1,
+      "ozet": "EATER editorial score. An important part of Lana's reputation: staff explain cuts, origins and preparation styles and help guests order to preferred fat level and doneness. Limited seating and a controlled service structure allow more personal attention than many fashionable Madrid hotspots.",
+      "artilar": [
+        "Excellent meat knowledge",
+        "Detailed explanation of cuts",
+        "Personal attention",
+        "Strong wine guidance"
+      ],
+      "eksiler": [
+        "High demand makes reservations difficult",
+        "Less suitable for diners uninterested in meat"
+      ]
+    },
+    "oduller": [
+      {
+        "tip": "michelin-secilmis",
+        "detay": "Listed in the MICHELIN Guide Madrid selection (no star — recorded per the owner's curated notes citing the MICHELIN Guide 2026); also referenced in Guía Repsol and international steakhouse rankings."
+      }
+    ],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "phone"
+      ],
+      "telefon": "+34 626 86 98 55",
+      "link": null,
+      "beklemeSuresi": "Strongly recommended.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated EATER editorial entry (Aug 2026): official Lana, MICHELIN Guide 2026, Guía Repsol, recent restaurant reviews. Coordinates verified by name on OpenStreetMap/Nominatim (Restaurante Lana, Ponzano 59)."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-11"
+  },
+  {
+    "id": "charrua-madrid",
+    "isim": "Charrúa Madrid",
+    "ulke": "Spain",
+    "sehir": "Madrid",
+    "semt": "Salesas / Justicia",
+    "mutfak": [
+      "Uruguayan",
+      "Steakhouse",
+      "Grill"
+    ],
+    "adres": "C. del Conde de Xiquena, 4, 28004 Madrid, Spain",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Charr%C3%BAa%2C%20C.%20del%20Conde%20de%20Xiquena%204%2C%2028004%20Madrid",
+    "koordinat": {
+      "lat": 40.42235,
+      "lng": -3.69397
+    },
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": null,
+      "not": "Expensive, especially premium cuts (EATER editorial note, Aug 2026); no verified per-person range recorded."
+    },
+    "yemek": {
+      "puan": 9.2,
+      "ozet": "EATER editorial score. A meat-driven restaurant built around Uruguayan fire cooking: premium cuts over oak and vine wood give the menu a clear identity centered on smoke and live fire. Grilled vegetables, sweetbreads, empanadas and desserts round out the experience. Popular among chefs and Madrid diners looking for a serious grill without the scale of a large steakhouse."
+    },
+    "neYenir": [
+      {
+        "yemek": "Chuletón",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Premium beef cuts",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Mollejas",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Empanadas",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Grilled artichokes",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Lemon pie / seasonal dessert",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 8.8,
+      "ozet": "Small, dark and rustic-chic — a more intimate experience than many high-profile Madrid restaurants. Warm lighting and the presence of live-fire cooking make it especially suitable for dinner and date nights.",
+      "etiketler": [
+        "rustic",
+        "dim",
+        "romantic",
+        "steakhouse",
+        "intimate",
+        "live-fire"
+      ],
+      "dressCode": "Smart casual",
+      "uygun": [
+        "couples",
+        "groups"
+      ]
+    },
+    "servis": {
+      "puan": 9.0,
+      "ozet": "EATER editorial score. Recent reviews repeatedly praise staff knowledge and warmth: the team can explain meat sourcing, cuts and preparation — particularly valuable where ordering the right piece of beef is central to the experience.",
+      "artilar": [
+        "Strong product knowledge",
+        "Warm and attentive",
+        "Good explanation of cuts",
+        "Intimate scale allows personal service"
+      ],
+      "eksiler": [
+        "Limited space",
+        "High demand",
+        "Not ideal for large groups"
+      ]
+    },
+    "oduller": [],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [],
+      "telefon": null,
+      "link": null,
+      "beklemeSuresi": "Strongly recommended.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated EATER editorial entry (Aug 2026): official Charrúa Madrid, recent Madrid restaurant reviews, Guía Repsol references, chef/dining media. Address and coordinates from the name-pinned OpenStreetMap POI at Conde de Xiquena 4 (matches the stated Salesas/Justicia location). No verified phone number recorded."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-11"
+  },
+  {
+    "id": "petra-roasting-co",
+    "isim": "Petra Roasting Co.",
+    "ulke": "Turkey",
+    "sehir": "Istanbul",
+    "semt": "Gayrettepe",
+    "mutfak": [
+      "Specialty Coffee",
+      "Cafe",
+      "Breakfast"
+    ],
+    "adres": "Gayrettepe, Hoşsohbet Sk. Selenium Residence Mağaza 1, 34349 Beşiktaş, Istanbul, Türkiye",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Petra%20Roasting%20Co.%20Gayrettepe%2C%20Ho%C5%9Fsohbet%20Sk.%2C%20Be%C5%9Fikta%C5%9F%2C%20Istanbul",
+    "koordinat": {
+      "lat": 41.06209,
+      "lng": 29.00948
+    },
+    "fiyat": {
+      "segment": "orta",
+      "kisiBasi": null,
+      "not": "Moderate café/brunch pricing (EATER editorial note, Aug 2026); no verified per-person range recorded."
+    },
+    "yemek": {
+      "puan": 8.5,
+      "ozet": "EATER editorial score. First and foremost one of Istanbul's best-known specialty coffee brands; the larger locations pair serious coffee with a compact breakfast, brunch and casual-food menu. Not fine dining — the attraction is strong ingredients, well-prepared café dishes and one of the city's most established specialty-coffee programs. Adds useful diversity next to Istanbul's luxury restaurants."
+    },
+    "neYenir": [
+      {
+        "yemek": "Seasonal breakfast dishes",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Eggs / brunch plates",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Sandwiches",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Pastries",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Filter coffee / espresso",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 8.7,
+      "ozet": "Industrial design with a relaxed modern café atmosphere. The Gayrettepe HQ is closely connected to the roasting operation, which appeals to visitors interested in coffee rather than simply another brunch spot.",
+      "etiketler": [
+        "coffee",
+        "industrial",
+        "casual",
+        "brunch",
+        "daytime"
+      ],
+      "dressCode": null,
+      "uygun": [
+        "solo",
+        "groups",
+        "family"
+      ]
+    },
+    "servis": {
+      "puan": 8.2,
+      "ozet": "EATER editorial score. Café-style rather than formal table service: coffee knowledge is a major strength, while food service can feel more functional during busy brunch periods. Experience varies by branch.",
+      "artilar": [
+        "Strong specialty-coffee knowledge",
+        "Casual and approachable",
+        "Good daytime experience"
+      ],
+      "eksiler": [
+        "Busy periods can create waits",
+        "Food selection is smaller than a full restaurant",
+        "Experience varies by branch"
+      ]
+    },
+    "oduller": [],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [],
+      "telefon": "+90 212 356 10 57",
+      "link": null,
+      "beklemeSuresi": "Usually not essential; depends on the branch.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated EATER editorial entry (Aug 2026): official Petra Roasting Co. (petracoffee.com), TripAdvisor, specialty coffee and travel references; the Gayrettepe HQ address corroborated by Gault&Millau Türkiye and the official cafés page. Coordinates from the name-pinned OpenStreetMap POI in Gayrettepe."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-11"
+  },
+  {
+    "id": "arkestra-istanbul",
+    "isim": "Arkestra",
+    "ulke": "Turkey",
+    "sehir": "Istanbul",
+    "semt": "Etiler",
+    "mutfak": [
+      "Contemporary",
+      "Modern European",
+      "Fine Dining"
+    ],
+    "adres": "Etiler, Dilhayat Sk. No:28, 34337 Beşiktaş, Istanbul, Türkiye",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Arkestra%2C%20Dilhayat%20Sk.%20No%3A28%2C%20Etiler%2C%20Istanbul",
+    "koordinat": null,
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": null,
+      "not": "Very expensive (EATER editorial note, Aug 2026); no verified per-person range recorded."
+    },
+    "yemek": {
+      "puan": 9.4,
+      "ozet": "EATER editorial score. Chef Cenk Debensason combines contemporary European technique with a personal, cosmopolitan style, moving comfortably between seafood, pasta, meat and modern interpretations of familiar flavors rather than defining itself as strictly Turkish. Tuna preparations and duck-filled pasta are frequently highlighted by guests. The 2026 MICHELIN Guide awards Arkestra one star."
+    },
+    "neYenir": [
+      {
+        "yemek": "Tuna sashimi / seasonal tuna preparation",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Duck-filled pansotti or current pasta course",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Seasonal seafood",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Chef's meat course",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Signature dessert",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 9.4,
+      "ozet": "More than one restaurant room: the property combines the Michelin-starred main restaurant with Ritmo and a music-focused nightlife identity — sophisticated but playful. Low lighting and carefully designed interiors make it one of Istanbul's strongest date-night restaurants.",
+      "etiketler": [
+        "dim",
+        "romantic",
+        "live-music",
+        "modern",
+        "date-night",
+        "creative"
+      ],
+      "dressCode": "Smart casual / elegant",
+      "uygun": [
+        "couples"
+      ]
+    },
+    "servis": {
+      "puan": 9.2,
+      "ozet": "EATER editorial score. Reviews consistently emphasize friendly, knowledgeable service and a strong wine program — polished without becoming stiff, matching the combination of fine dining and contemporary nightlife culture.",
+      "artilar": [
+        "Excellent menu knowledge",
+        "Strong wine guidance",
+        "Friendly rather than overly formal",
+        "Fine-dining precision"
+      ],
+      "eksiler": [
+        "Long dining experience",
+        "Higher expectations due to Michelin status"
+      ]
+    },
+    "oduller": [
+      {
+        "tip": "michelin-yildiz",
+        "detay": "One MICHELIN star — MICHELIN Guide 2026 (guide.michelin.com Istanbul selection); recorded from the site owner's curated notes and the guide listing (Aug 2026)."
+      }
+    ],
+    "rezervasyon": {
+      "gerekiyor": true,
+      "yontem": [
+        "online",
+        "phone"
+      ],
+      "telefon": "+90 212 970 72 73",
+      "link": null,
+      "beklemeSuresi": "Required / strongly recommended.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated EATER editorial entry (Aug 2026): official Arkestra (arkestra.com.tr), MICHELIN Guide 2026, TripAdvisor, recent restaurant reviews. Address corroborated by the MICHELIN Guide and TripAdvisor listings; no name-pinned OpenStreetMap POI found, so coordinates are left null."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-11"
+  },
+  {
+    "id": "ulus-29",
+    "isim": "Ulus 29",
+    "ulke": "Turkey",
+    "sehir": "Istanbul",
+    "semt": "Ulus",
+    "mutfak": [
+      "Turkish",
+      "Mediterranean",
+      "International",
+      "Grill"
+    ],
+    "adres": "A. Adnan Saygun Caddesi, Ulus Parkı İçi No:71/1, Ulus, Istanbul, Türkiye",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Ulus%2029%2C%20A.%20Adnan%20Saygun%20Caddesi%20No%3A71%2F1%2C%20Ulus%2C%20Istanbul",
+    "koordinat": {
+      "lat": 41.06451,
+      "lng": 29.03193
+    },
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": null,
+      "not": "Very expensive (EATER editorial note, Aug 2026); no verified per-person range recorded."
+    },
+    "yemek": {
+      "puan": 8.6,
+      "ozet": "EATER editorial score. One of Istanbul's long-running luxury dining institutions: modern Turkish and Mediterranean influences with premium seafood, sushi-inspired dishes, grills and international classics. The food is consistently strong, but the location, clientele and social atmosphere are as important to the identity as the kitchen itself."
+    },
+    "neYenir": [
+      {
+        "yemek": "Seasonal seafood",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Grilled meat",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Meze-style starters",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Sushi / raw seafood selections",
+        "kacKisiOnerdi": null,
+        "not": "Where available."
+      },
+      {
+        "yemek": "Signature desserts",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 9.7,
+      "ozet": "An elevated position above the Bosphorus, particularly known for panoramic evening views. For decades it has been both a restaurant and a social destination for Istanbul's business, fashion and nightlife crowd; the atmosphere gets livelier as the evening progresses.",
+      "etiketler": [
+        "bosphorus-view",
+        "luxury",
+        "nightlife",
+        "classic",
+        "romantic",
+        "lively"
+      ],
+      "dressCode": "Smart elegant",
+      "uygun": [
+        "couples",
+        "groups",
+        "business dinner"
+      ]
+    },
+    "servis": {
+      "puan": 8.8,
+      "ozet": "EATER editorial score. Generally experienced and professional, reflecting a long history with high-end local and international guests. Independent reviews often highlight friendly staff and good English-language service, though busy nights can feel more nightlife-oriented.",
+      "artilar": [
+        "Experienced team",
+        "Strong international guest handling",
+        "Professional table service",
+        "Good knowledge of the menu"
+      ],
+      "eksiler": [
+        "Busy evenings can become loud",
+        "The social/nightlife character may reduce intimacy"
+      ]
+    },
+    "oduller": [],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "phone"
+      ],
+      "telefon": "+90 212 358 29 29",
+      "link": null,
+      "beklemeSuresi": "Strongly recommended, particularly for view tables.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated EATER editorial entry (Aug 2026): official Ulus 29, TripAdvisor, recent Istanbul dining reviews. Coordinates verified by name on OpenStreetMap/Nominatim."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-11"
+  },
+  {
+    "id": "gallada",
+    "isim": "GALLADA by Fatih Tutak",
+    "ulke": "Turkey",
+    "sehir": "Istanbul",
+    "semt": "Karaköy / Galataport",
+    "mutfak": [
+      "Turk-Asian",
+      "Contemporary"
+    ],
+    "adres": "The Peninsula Istanbul, Kemankeş Caddesi No:34, Karaköy, Beyoğlu, Istanbul, Türkiye",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=GALLADA%2C%20The%20Peninsula%20Istanbul%2C%20Kemanke%C5%9F%20Caddesi%20No%3A34%2C%20Karak%C3%B6y%2C%20Istanbul",
+    "koordinat": {
+      "lat": 41.02295,
+      "lng": 28.97816
+    },
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": null,
+      "not": "Very expensive (EATER editorial note, Aug 2026); no verified per-person range recorded."
+    },
+    "yemek": {
+      "puan": 9.1,
+      "ozet": "EATER editorial score. Chef Fatih Tutak's more relaxed Turk-Asian restaurant at The Peninsula Istanbul: inspired by cuisines connected by the historic Silk Road — Turkish, Central Asian and East Asian flavors. Wood-fired dishes, spices, manti-inspired preparations and seafood create a menu that feels ambitious yet remains designed for sharing and social dining. Included in the MICHELIN Guide (no star)."
+    },
+    "neYenir": [
+      {
+        "yemek": "Tomato plate",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Potato bread",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Manti-style seasonal dishes",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Wood-fired fish",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Artichoke preparations",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Silk Road-inspired sharing dishes",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 9.7,
+      "ozet": "On the roof of The Peninsula Istanbul, combining luxury hotel design with wide Bosphorus and Historic Peninsula views — the terrace is one of the strongest restaurant settings in the city. Deliberately positioned closer to 'fun dining' than formal fine dining despite the sophistication of the food.",
+      "etiketler": [
+        "bosphorus-view",
+        "rooftop",
+        "luxury",
+        "terrace",
+        "special-occasion"
+      ],
+      "dressCode": "Smart elegant",
+      "uygun": [
+        "couples",
+        "groups"
+      ]
+    },
+    "servis": {
+      "puan": 9.2,
+      "ozet": "EATER editorial score. The Peninsula's luxury hospitality standards are clearly visible; reviews frequently praise staff for explaining an unfamiliar menu and recommending the right progression of sharing dishes.",
+      "artilar": [
+        "Luxury hotel hospitality",
+        "Detailed menu guidance",
+        "International service standard",
+        "Strong cocktail and wine program"
+      ],
+      "eksiler": [
+        "Premium pricing",
+        "The large restaurant size may feel less intimate than TURK"
+      ]
+    },
+    "oduller": [
+      {
+        "tip": "michelin-secilmis",
+        "detay": "Included in the MICHELIN Guide (no star — recorded per the owner's curated notes citing the MICHELIN Guide 2026)."
+      }
+    ],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "phone"
+      ],
+      "telefon": null,
+      "link": null,
+      "beklemeSuresi": "Strongly recommended.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated EATER editorial entry (Aug 2026): official GALLADA, The Peninsula Istanbul, MICHELIN Guide 2026, TripAdvisor, Fatih Tutak references. Coordinates are the hotel's name-pinned OpenStreetMap POI (the restaurant is on its roof). No verified direct phone number recorded."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-11"
+  },
+  {
+    "id": "turk-fatih-tutak",
+    "isim": "TURK FATİH TUTAK",
+    "ulke": "Turkey",
+    "sehir": "Istanbul",
+    "semt": "Bomonti / Şişli",
+    "mutfak": [
+      "Modern Turkish",
+      "Contemporary",
+      "Fine Dining"
+    ],
+    "adres": "Bomonti, Silahşör Cd. Yeniyol Sk. No:2, Şişli, 34440 Istanbul, Türkiye",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=TURK%20FATIH%20TUTAK%2C%20Bomonti%2C%20Yeniyol%20Sk.%20No%3A2%2C%20%C5%9Ei%C5%9Fli%2C%20Istanbul",
+    "koordinat": null,
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": null,
+      "not": "Very expensive / destination fine dining (EATER editorial note, Aug 2026); current official tasting-menu price not recorded because it was not verified."
+    },
+    "yemek": {
+      "puan": 9.8,
+      "ozet": "EATER editorial score. One of the most important restaurants in contemporary Turkish gastronomy: Fatih Tutak interprets Turkish ingredients, childhood memories and regional culinary traditions through modern fine-dining technique. Many courses are built around stories, regional products and Tutak's international experience rather than simply modernizing familiar recipes. The 2026 MICHELIN Guide continues to award two stars. The tasting menu changes seasonally, so no permanent dish names are recorded here."
+    },
+    "neYenir": [
+      {
+        "yemek": "Current tasting menu",
+        "kacKisiOnerdi": null,
+        "not": "Changes seasonally — specific courses are not listed to avoid stale or unverifiable dish names."
+      },
+      {
+        "yemek": "Signature bread course",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Modern mantı-style preparations",
+        "kacKisiOnerdi": null,
+        "not": "When featured on the current menu."
+      },
+      {
+        "yemek": "Seasonal seafood course",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Signature dessert sequence",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 9.1,
+      "ozet": "Refined and contemporary but intentionally places food ahead of spectacle. Quieter and more serious than Gallada, Ulus 29 or Sunset — designed for guests who want to focus on the tasting menu rather than views or nightlife.",
+      "etiketler": [
+        "fine-dining",
+        "simple",
+        "modern",
+        "special-occasion",
+        "calm"
+      ],
+      "dressCode": "Smart elegant",
+      "uygun": [
+        "couples"
+      ]
+    },
+    "servis": {
+      "puan": 9.7,
+      "ozet": "EATER editorial score. One of the restaurant's strongest elements: the team explains the origin, memory or regional reference behind many courses — critical to understanding Tutak's cuisine. Recent reviews regularly describe the service as precise, warm and deeply connected to the chef's narrative.",
+      "artilar": [
+        "Exceptional tasting-menu pacing",
+        "Detailed explanations",
+        "Strong wine and beverage knowledge",
+        "Highly personalized service",
+        "Fine-dining precision without excessive stiffness"
+      ],
+      "eksiler": [
+        "Long tasting-menu experience",
+        "Not suitable for quick or casual dining",
+        "Very high price"
+      ]
+    },
+    "oduller": [
+      {
+        "tip": "michelin-yildiz",
+        "detay": "Two MICHELIN stars — MICHELIN Guide 2026; recorded from the site owner's curated notes citing the guide (Aug 2026)."
+      }
+    ],
+    "rezervasyon": {
+      "gerekiyor": true,
+      "yontem": [
+        "online",
+        "phone"
+      ],
+      "telefon": null,
+      "link": null,
+      "beklemeSuresi": "Required; booking well in advance is recommended.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated EATER editorial entry (Aug 2026): official TURK FATİH TUTAK, MICHELIN Guide 2026, TripAdvisor, chef Fatih Tutak sources, recent fine-dining reviews. No name-pinned OpenStreetMap POI found, so coordinates are left null; no verified phone number recorded."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-11"
   }
 ];
