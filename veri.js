@@ -1570,7 +1570,14 @@ const RESTORANLAR = [
       "tiktok": null,
       "diger": "Gault&Millau (fr.gaultmillau.com) — listed, no numeric score; RestaurantGuru — aggregation page citing the above Google figure and the €40-90/person range; Palais de Tokyo official venue page (palaisdetokyo.com/en/bambini) — address, phone, hours."
     },
-    "fotolar": [],
+    "fotolar": [
+      {
+        "dosya": "fotolar/bambini-paris-1.jpg",
+        "alt": "Interior dining room of Bambini restaurant at the Palais de Tokyo, Paris, with terracotta decor and a tall arched window",
+        "kaynak": "https://commons.wikimedia.org/wiki/File:Restaurant_bambini.jpg",
+        "kredi": "Morgzinzin, CC0, via Wikimedia Commons"
+      }
+    ],
     "sonGuncelleme": "2026-08-10"
   },
   {
@@ -1789,7 +1796,14 @@ const RESTORANLAR = [
       "tiktok": null,
       "diger": "Owner-curated entry (Aug 2026): MICHELIN Guide, official DiverXO/Dabiz Muñoz sources, TripAdvisor, selected recent fine-dining reviews. Coordinates verified by name on OpenStreetMap/Nominatim."
     },
-    "fotolar": [],
+    "fotolar": [
+      {
+        "dosya": "fotolar/diverxo-1.jpg",
+        "alt": "Illuminated DiverXO entrance sign at night at its location inside the NH Collection Eurobuilding hotel, Madrid",
+        "kaynak": "https://commons.wikimedia.org/wiki/File:DiverXO_AV4A3445-Edit_(27539833998).jpg",
+        "kredi": "City Foodsters, CC BY 2.0, via Wikimedia Commons"
+      }
+    ],
     "sonGuncelleme": "2026-08-11"
   },
   {
@@ -1896,7 +1910,14 @@ const RESTORANLAR = [
       "tiktok": null,
       "diger": "Owner-curated entry (Aug 2026): official Botín sources, TripAdvisor, recent Madrid traveler reviews, historical restaurant references. Coordinates verified by name on OpenStreetMap/Nominatim."
     },
-    "fotolar": [],
+    "fotolar": [
+      {
+        "dosya": "fotolar/botin-1.jpg",
+        "alt": "Facade and entrance of Sobrino de Botín (Casa Botín) on Calle de Cuchilleros, Madrid, the world's oldest continuously operating restaurant",
+        "kaynak": "https://commons.wikimedia.org/wiki/File:Casa_Bot%C3%ADn_1.jpg",
+        "kredi": "Esetena, Public Domain, via Wikimedia Commons"
+      }
+    ],
     "sonGuncelleme": "2026-08-11"
   },
   {
@@ -2000,7 +2021,14 @@ const RESTORANLAR = [
       "tiktok": null,
       "diger": "Owner-curated entry (Aug 2026): official restaurant sources, TripAdvisor, recent Madrid dining reviews, selected food-media references. Note: OpenStreetMap pins 'Sala de Despiece' at Calle de Ponzano 11 (the original); this entry uses the owner-provided Alonso Cano 28 address, so coordinates are left null pending branch confirmation."
     },
-    "fotolar": [],
+    "fotolar": [
+      {
+        "dosya": "fotolar/sala-de-despiece-1-1.jpg",
+        "alt": "Interior view of Sala de Despiece restaurant, Madrid",
+        "kaynak": "https://commons.wikimedia.org/wiki/File:Sala_de_Despiece_Restaurant_(28895584653).jpg",
+        "kredi": "Nan Palmero, CC BY 2.0, via Wikimedia Commons"
+      }
+    ],
     "sonGuncelleme": "2026-08-11"
   },
   {
@@ -2109,7 +2137,14 @@ const RESTORANLAR = [
       "tiktok": null,
       "diger": "Owner-curated entry (Aug 2026): MICHELIN Guide, official Disfrutar sources, TripAdvisor, recent fine-dining reviews. Coordinates verified by name on OpenStreetMap/Nominatim."
     },
-    "fotolar": [],
+    "fotolar": [
+      {
+        "dosya": "fotolar/disfrutar-1.jpg",
+        "alt": "Storefront window of Disfrutar restaurant at night, showing its distinctive colorful checkerboard tile facade, Carrer de Villarroel, Barcelona",
+        "kaynak": "https://commons.wikimedia.org/wiki/File:Disfrutar.jpg",
+        "kredi": "Pere prlpz, CC BY-SA 3.0, via Wikimedia Commons"
+      }
+    ],
     "sonGuncelleme": "2026-08-11"
   },
   {
@@ -2323,7 +2358,14 @@ const RESTORANLAR = [
       "tiktok": null,
       "diger": "Owner-curated entry (Aug 2026): official Can Culleretes sources, TripAdvisor, recent Barcelona dining reviews, historical references. Coordinates verified by name on OpenStreetMap/Nominatim."
     },
-    "fotolar": [],
+    "fotolar": [
+      {
+        "dosya": "fotolar/can-culleretes-1.jpg",
+        "alt": "Entrance of Can Culleretes on Carrer d'en Quintana, Barcelona, the oldest restaurant in Barcelona (established 1786)",
+        "kaynak": "https://commons.wikimedia.org/wiki/File:Barcelona_-_entrance_of_Can_Culleretes_01.jpg",
+        "kredi": "Joe Mabel, CC BY-SA 4.0, via Wikimedia Commons"
+      }
+    ],
     "sonGuncelleme": "2026-08-11"
   }
 ];
