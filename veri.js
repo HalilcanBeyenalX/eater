@@ -4124,5 +4124,975 @@ const RESTORANLAR = [
     },
     "fotolar": [],
     "sonGuncelleme": "2026-08-11"
+  },
+  {
+    "id": "ichiran-ramen-tokyo",
+    "isim": "ICHIRAN Ramen",
+    "ulke": "Japan",
+    "sehir": "Tokyo",
+    "semt": "Multiple branches",
+    "mutfak": [
+      "Ramen",
+      "Tonkotsu",
+      "Japanese",
+      "Casual"
+    ],
+    "adres": null,
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=ICHIRAN%20Ramen%20Tokyo",
+    "koordinat": null,
+    "fiyat": {
+      "segment": "ucuz",
+      "kisiBasi": {
+        "min": 1000,
+        "max": 2000,
+        "paraBirimi": "JPY"
+      },
+      "not": "Affordable; typical spend roughly ¥1,000–2,000 depending on toppings and extras (EATER editorial note, Aug 2026)."
+    },
+    "yemek": {
+      "puan": 8.8,
+      "ozet": "EATER editorial score (owner-curated entry, Aug 2026). The famous tonkotsu ramen chain built around solo dining booths and a single perfected bowl; order the classic tonkotsu and customize richness, noodle firmness and toppings."
+    },
+    "neYenir": [
+      {
+        "yemek": "Classic Tonkotsu Ramen",
+        "kacKisiOnerdi": null,
+        "not": "The signature and essentially only main dish."
+      },
+      {
+        "yemek": "Extra noodles (kaedama)",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Soft-boiled egg",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Extra chashu",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Kikurage mushrooms",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Matcha almond pudding",
+        "kacKisiOnerdi": null,
+        "not": "If available."
+      }
+    ],
+    "ambiyans": {
+      "puan": 8.1,
+      "ozet": "EATER editorial score. Individual solo-dining booths, ordering by ticket machine and paper form — an iconic, purely food-focused format rather than a social restaurant. Many branches run late or around the clock.",
+      "etiketler": [
+        "solo-dining",
+        "casual",
+        "iconic",
+        "late-night"
+      ],
+      "dressCode": null,
+      "uygun": [
+        "solo"
+      ]
+    },
+    "servis": {
+      "puan": 8.4,
+      "ozet": "EATER editorial score. Fast, systemized counter service designed around the booth format; interaction is minimal by design.",
+      "artilar": [],
+      "eksiler": []
+    },
+    "oduller": [],
+    "rezervasyon": {
+      "gerekiyor": false,
+      "yontem": [],
+      "telefon": null,
+      "link": null,
+      "beklemeSuresi": "No traditional reservations; queue and branch-specific systems. Expect lines at peak hours.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated EATER editorial entry (Aug 2026): official ICHIRAN, TableCheck where applicable, recent Tokyo dining references. ICHIRAN has many Tokyo branches, so no single address or coordinate is recorded — the catalog does not yet support per-branch entries."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-11"
+  },
+  {
+    "id": "the-sg-club",
+    "isim": "The SG Club",
+    "ulke": "Japan",
+    "sehir": "Tokyo",
+    "semt": "Shibuya / Jinnan",
+    "mutfak": [
+      "Cocktail Bar",
+      "Mixology"
+    ],
+    "adres": "1-7-8 Jinnan, Shibuya-ku, Tokyo, Japan",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=The%20SG%20Club%2C%201-7-8%20Jinnan%2C%20Shibuya%2C%20Tokyo",
+    "koordinat": {
+      "lat": 35.66425,
+      "lng": 139.69924
+    },
+    "fiyat": {
+      "segment": "orta",
+      "kisiBasi": null,
+      "not": "Premium cocktail-bar pricing (EATER editorial note, Aug 2026); no verified per-person range recorded."
+    },
+    "yemek": {
+      "puan": 7.5,
+      "ozet": "EATER editorial score (owner-curated entry, Aug 2026). A bar first: the score reflects light bar food; the reason to come is the cocktail program — signature SG creations, seasonal drinks and shochu- and Japanese-spirit-based cocktails across the venue's different floors."
+    },
+    "neYenir": [
+      {
+        "yemek": "Signature SG cocktails",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Seasonal cocktails",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Japanese spirit-based cocktails",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Shochu cocktails",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Bartender recommendations",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 9.5,
+      "ozet": "EATER editorial score. One of Japan's most awarded cocktail bars: creative, intimate and energetic, with distinct concepts on different floors in the middle of Shibuya's Jinnan district.",
+      "etiketler": [
+        "cocktail-bar",
+        "speakeasy",
+        "creative",
+        "nightlife",
+        "intimate"
+      ],
+      "dressCode": "Smart casual",
+      "uygun": [
+        "couples",
+        "groups"
+      ]
+    },
+    "servis": {
+      "puan": 9.4,
+      "ozet": "EATER editorial score. World-class bartending with warm, knowledgeable guidance through the menu.",
+      "artilar": [],
+      "eksiler": []
+    },
+    "oduller": [
+      {
+        "tip": "50best",
+        "detay": "The World's 50 Best Bars No.10 (2020); Asia's 50 Best Bars No.3 (2021); named Best Bar in Japan in 2020 and 2021 — recorded from the site owner's curated notes citing the 50 Best organization (Aug 2026)."
+      }
+    ],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "phone"
+      ],
+      "telefon": "+81 50 3138 2618",
+      "link": null,
+      "beklemeSuresi": "Recommended depending on floor/concept and time.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated EATER editorial entry (Aug 2026): official SG Group, The World's 50 Best Bars / Asia's 50 Best Bars, recent bar reviews. Coordinates verified by name on OpenStreetMap/Nominatim."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-11"
+  },
+  {
+    "id": "gonpachi-nishiazabu",
+    "isim": "Gonpachi Nishiazabu",
+    "ulke": "Japan",
+    "sehir": "Tokyo",
+    "semt": "Nishi-Azabu / Minato",
+    "mutfak": [
+      "Izakaya",
+      "Japanese",
+      "Soba",
+      "Yakitori"
+    ],
+    "adres": "1-13-11 Nishiazabu, Minato City, Tokyo 106-0031, Japan",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Gonpachi%20Nishiazabu%2C%201-13-11%20Nishiazabu%2C%20Minato%2C%20Tokyo",
+    "koordinat": {
+      "lat": 35.66016,
+      "lng": 139.72359
+    },
+    "fiyat": {
+      "segment": "orta",
+      "kisiBasi": null,
+      "not": "Mid-range izakaya pricing (EATER editorial note, Aug 2026); no verified per-person range recorded."
+    },
+    "yemek": {
+      "puan": 8.3,
+      "ozet": "EATER editorial score (owner-curated entry, Aug 2026). A grand izakaya serving handmade soba, yakitori, tempura, grilled wagyu and stone-grilled rice dishes. The food is solid, but the cinematic hall — famous as the inspiration for the Kill Bill fight scene — is what makes the visit."
+    },
+    "neYenir": [
+      {
+        "yemek": "Handmade soba",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Yakitori / grilled skewers",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Tempura",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Grilled black wagyu",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Silver cod with Saikyo miso",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Stone-grilled rice dishes",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 9.5,
+      "ozet": "EATER editorial score. A huge multi-level wooden hall with balconies and lanterns — lively, theatrical old-Japan atmosphere famously associated with Kill Bill; welcoming to first-time Tokyo visitors late into the night.",
+      "etiketler": [
+        "izakaya",
+        "cinematic",
+        "lively",
+        "late-night"
+      ],
+      "dressCode": "Casual / smart casual",
+      "uygun": [
+        "groups"
+      ]
+    },
+    "servis": {
+      "puan": 8.5,
+      "ozet": "EATER editorial score. High-volume but organized izakaya service accustomed to international guests.",
+      "artilar": [],
+      "eksiler": []
+    },
+    "oduller": [],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [],
+      "telefon": null,
+      "link": null,
+      "beklemeSuresi": "Recommended for dinner.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated EATER editorial entry (Aug 2026): official Gonpachi, Tabelog, TripAdvisor, recent Tokyo dining reviews. Coordinates verified by name on OpenStreetMap/Nominatim (権八 西麻布)."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-11"
+  },
+  {
+    "id": "bar-centifolia",
+    "isim": "BAR CENTIFOLIA",
+    "ulke": "Japan",
+    "sehir": "Tokyo",
+    "semt": "Azabu-Juban / Minato",
+    "mutfak": [
+      "Cocktail Bar",
+      "Mixology"
+    ],
+    "adres": "La Muse Azabu-Juban Bldg. 6F, 1-6-5 Azabu-Juban, Minato-ku, Tokyo 106-0045, Japan",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=BAR%20CENTIFOLIA%2C%201-6-5%20Azabu-Juban%2C%20Minato%2C%20Tokyo",
+    "koordinat": {
+      "lat": 35.65635,
+      "lng": 139.73422
+    },
+    "fiyat": {
+      "segment": "orta",
+      "kisiBasi": null,
+      "not": "Premium cocktail bar (EATER editorial note, Aug 2026); no verified per-person range recorded."
+    },
+    "yemek": {
+      "puan": 7.0,
+      "ozet": "EATER editorial score (owner-curated entry, Aug 2026). A bar, not a restaurant — the score reflects minimal food; the draw is seasonal fruit cocktails and theatrical signature drinks built with Japanese ingredients."
+    },
+    "neYenir": [
+      {
+        "yemek": "Seasonal fruit cocktails",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Signature theatrical cocktails",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Bartender's choice",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Classic cocktails",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Japanese ingredient cocktails",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 9.7,
+      "ozet": "EATER editorial score. An intimate Azabu-Juban room where cocktail-making becomes performance — theatrical presentations in a small, late-night setting.",
+      "etiketler": [
+        "cocktail-bar",
+        "theatrical",
+        "intimate",
+        "creative",
+        "late-night"
+      ],
+      "dressCode": "Smart casual",
+      "uygun": [
+        "couples",
+        "groups"
+      ]
+    },
+    "servis": {
+      "puan": 9.5,
+      "ozet": "EATER editorial score. Personal, performance-driven bartending with limited seats.",
+      "artilar": [],
+      "eksiler": []
+    },
+    "oduller": [],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "phone"
+      ],
+      "telefon": "+81 3 3478 6228",
+      "link": null,
+      "beklemeSuresi": "Reservations available and strongly recommended due to limited seating.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated EATER editorial entry (Aug 2026): TableCheck, Tabelog, TripAdvisor, recent cocktail-bar reviews. Coordinates verified by name on OpenStreetMap/Nominatim (バー センティフォリア)."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-11"
+  },
+  {
+    "id": "ginza-tenryu",
+    "isim": "Ginza Tenryu",
+    "ulke": "Japan",
+    "sehir": "Tokyo",
+    "semt": "Ginza / Chuo",
+    "mutfak": [
+      "Chinese",
+      "Gyoza",
+      "Casual"
+    ],
+    "adres": "PUZZLE GINZA 4F, 2-5-19 Ginza, Chuo City, Tokyo 104-0061, Japan",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Ginza%20Tenryu%2C%202-5-19%20Ginza%2C%20Chuo%2C%20Tokyo",
+    "koordinat": null,
+    "fiyat": {
+      "segment": "ucuz",
+      "kisiBasi": null,
+      "not": "Affordable to moderate (EATER editorial note, Aug 2026); no verified per-person range recorded."
+    },
+    "yemek": {
+      "puan": 8.8,
+      "ozet": "EATER editorial score (owner-curated entry, Aug 2026). A Ginza institution famous for its jumbo pan-fried gyoza, alongside shrimp noodle soup, fried rice and Chinese-style noodle dishes."
+    },
+    "neYenir": [
+      {
+        "yemek": "Signature jumbo gyoza",
+        "kacKisiOnerdi": null,
+        "not": "The house speciality."
+      },
+      {
+        "yemek": "Shrimp noodle soup",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Fried rice",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Chinese-style noodle dishes",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Seasonal side dishes",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 7.7,
+      "ozet": "EATER editorial score. A busy, no-frills local classic in the middle of Ginza — the point is the gyoza, not the décor.",
+      "etiketler": [
+        "casual",
+        "classic",
+        "crowded",
+        "simple"
+      ],
+      "dressCode": null,
+      "uygun": [
+        "family",
+        "solo",
+        "groups"
+      ]
+    },
+    "servis": {
+      "puan": 8.0,
+      "ozet": "EATER editorial score. Quick, functional service suited to a high-turnover lunch and dinner crowd.",
+      "artilar": [],
+      "eksiler": []
+    },
+    "oduller": [],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [],
+      "telefon": null,
+      "link": null,
+      "beklemeSuresi": "Usually walk-in / queue-oriented; no verified current reservation policy recorded.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated EATER editorial entry (Aug 2026): recent Tokyo restaurant guides, Tabelog and local references, recent diner reviews. No name-pinned OpenStreetMap POI found, so coordinates are left null."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-11"
+  },
+  {
+    "id": "mon-cher-ton-ton-roppongi",
+    "isim": "Mon cher ton ton Roppongi",
+    "ulke": "Japan",
+    "sehir": "Tokyo",
+    "semt": "Roppongi / Minato",
+    "mutfak": [
+      "Teppanyaki",
+      "Kobe Beef",
+      "Wagyu",
+      "Seafood"
+    ],
+    "adres": "B1 Seryna Bldg., 3-12-2 Roppongi, Minato-ku, Tokyo 106-0032, Japan",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Mon%20cher%20ton%20ton%2C%20Seryna%20Bldg.%2C%203-12-2%20Roppongi%2C%20Minato%2C%20Tokyo",
+    "koordinat": null,
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": null,
+      "not": "Luxury teppanyaki pricing (EATER editorial note, Aug 2026); no verified per-person range recorded."
+    },
+    "yemek": {
+      "puan": 9.3,
+      "ozet": "EATER editorial score (owner-curated entry, Aug 2026). Seryna's long-standing Roppongi teppanyaki room: Kobe beef and premium wagyu, teppanyaki seafood and seasonal vegetables grilled at the counter, finished with garlic rice."
+    },
+    "neYenir": [
+      {
+        "yemek": "Kobe beef steak",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Premium Japanese wagyu",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Teppanyaki seafood",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Seasonal vegetables",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Chef's course menu",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Garlic rice",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 9.0,
+      "ozet": "EATER editorial score. Counter-focused luxury teppanyaki with private rooms — intimate and celebratory rather than showy.",
+      "etiketler": [
+        "luxury",
+        "counter",
+        "intimate",
+        "special-occasion"
+      ],
+      "dressCode": "Smart casual / elegant",
+      "uygun": [
+        "couples",
+        "business dinner"
+      ]
+    },
+    "servis": {
+      "puan": 9.4,
+      "ozet": "EATER editorial score. Classic chef-at-the-counter hospitality in the Seryna tradition.",
+      "artilar": [],
+      "eksiler": []
+    },
+    "oduller": [],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "phone"
+      ],
+      "telefon": "+81 3 3402 1055",
+      "link": null,
+      "beklemeSuresi": "Strongly recommended.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated EATER editorial entry (Aug 2026): official Seryna / Mon cher ton ton (seryna.co.jp), TableCheck, TripAdvisor, recent Tokyo dining reviews. Address verified from the official Seryna site and TableCheck; no name-pinned OpenStreetMap POI found, so coordinates are left null."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-11"
+  },
+  {
+    "id": "udon-shin",
+    "isim": "Udon Shin",
+    "ulke": "Japan",
+    "sehir": "Tokyo",
+    "semt": "Yoyogi / Shinjuku area",
+    "mutfak": [
+      "Udon",
+      "Japanese Noodles",
+      "Casual"
+    ],
+    "adres": "2-20-16 Yoyogi, Shibuya, Tokyo 151-0053, Japan",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Udon%20Shin%2C%202-20-16%20Yoyogi%2C%20Shibuya%2C%20Tokyo",
+    "koordinat": {
+      "lat": 35.68648,
+      "lng": 139.697
+    },
+    "fiyat": {
+      "segment": "ucuz",
+      "kisiBasi": null,
+      "not": "Typical base spend around ¥1,500 depending on the dish (EATER editorial note, Aug 2026); given as a single figure rather than a verified range."
+    },
+    "yemek": {
+      "puan": 9.4,
+      "ozet": "EATER editorial score (owner-curated entry, Aug 2026). One of Tokyo's most sought-after udon shops: fresh handmade noodles — hot, cold, beef or tempura variations — made to order in a tiny food-first room."
+    },
+    "neYenir": [
+      {
+        "yemek": "Fresh handmade udon",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Tempura udon",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Cold udon",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Beef udon",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Seasonal udon specials",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Tempura sides",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 8.1,
+      "ozet": "EATER editorial score. Small, minimal and entirely food-focused — the queue outside is part of the experience.",
+      "etiketler": [
+        "small",
+        "casual",
+        "queue",
+        "simple"
+      ],
+      "dressCode": null,
+      "uygun": [
+        "solo"
+      ]
+    },
+    "servis": {
+      "puan": 8.5,
+      "ozet": "EATER editorial score. Compact counter operation; noodles are cooked to order, so pacing follows the kitchen.",
+      "artilar": [],
+      "eksiler": []
+    },
+    "oduller": [],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [],
+      "telefon": null,
+      "link": null,
+      "beklemeSuresi": "Queue-based; a priority/queue system may be available through supported reservation services — not a conventional reservation.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated EATER editorial entry (Aug 2026): official Udon Shin, TableCheck, recent Tokyo food guides. Coordinates verified by name on OpenStreetMap/Nominatim (うどん 慎)."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-11"
+  },
+  {
+    "id": "chao-chao-gyoza-kyoto",
+    "isim": "Chao Chao Gyoza",
+    "ulke": "Japan",
+    "sehir": "Kyoto",
+    "semt": "Sanjo Kiyamachi / Shijo Kawaramachi",
+    "mutfak": [
+      "Gyoza",
+      "Japanese",
+      "Izakaya",
+      "Casual"
+    ],
+    "adres": null,
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Chao%20Chao%20Gyoza%20Kyoto",
+    "koordinat": null,
+    "fiyat": {
+      "segment": "ucuz",
+      "kisiBasi": null,
+      "not": "Affordable (EATER editorial note, Aug 2026); no verified per-person range recorded."
+    },
+    "yemek": {
+      "puan": 9.0,
+      "ozet": "EATER editorial score (owner-curated entry, Aug 2026). Kyoto's beloved gyoza specialist: the signature Chao Chao stick-style gyoza plus shrimp, chicken-cheese, Kujo green onion and ume-shiso variations, best sampled as an assorted set."
+    },
+    "neYenir": [
+      {
+        "yemek": "Chao Chao signature gyoza",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Shrimp gyoza",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Chicken cheese gyoza",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Kujo green onion gyoza",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Ume shiso gyoza",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Assorted gyoza set",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 8.5,
+      "ozet": "EATER editorial score. Small, lively counter rooms in the Kiyamachi/Kawaramachi nightlife area — busy, local-style and fun.",
+      "etiketler": [
+        "casual",
+        "lively",
+        "small",
+        "counter",
+        "crowded"
+      ],
+      "dressCode": null,
+      "uygun": [
+        "groups",
+        "family"
+      ]
+    },
+    "servis": {
+      "puan": 8.8,
+      "ozet": "EATER editorial score. Quick, friendly counter service; expect waits at popular hours.",
+      "artilar": [],
+      "eksiler": []
+    },
+    "oduller": [],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [],
+      "telefon": null,
+      "link": null,
+      "beklemeSuresi": "Mostly queue-oriented; expect waiting at popular hours.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated EATER editorial entry (Aug 2026): official Chao Chao, TripAdvisor, Tabelog, recent diner reviews. The Sanjo Kiyamachi and Shijo Kawaramachi branches are distinct venues; per the owner's instruction no single merged address is recorded — the catalog does not yet support per-branch entries."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-11"
+  },
+  {
+    "id": "mouriya-gion",
+    "isim": "Kobe Beef Steak Mouriya Gion",
+    "ulke": "Japan",
+    "sehir": "Kyoto",
+    "semt": "Gion",
+    "mutfak": [
+      "Kobe Beef",
+      "Teppanyaki",
+      "Steakhouse",
+      "Japanese"
+    ],
+    "adres": "Gion Mouriya Bldg., 7-1 Tokiwacho, Yamatooji-dori Shijo-sagaru, Higashiyama-ku, Kyoto 605-0802, Japan",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Mouriya%20Gion%2C%20Tokiwacho%2C%20Higashiyama%2C%20Kyoto",
+    "koordinat": {
+      "lat": 35.00335,
+      "lng": 135.77275
+    },
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": null,
+      "not": "Very expensive; current special course examples can exceed ¥30,000 per person (EATER editorial note, Aug 2026). No single promotional menu is recorded as a permanent average price."
+    },
+    "yemek": {
+      "puan": 9.5,
+      "ozet": "EATER editorial score (owner-curated entry, Aug 2026). The Mouriya group's Gion teppanyaki room, built around certified A5 Kobe beef: sirloin, filet and three-cut tasting courses cooked at the counter, with seasonal fish and teppanyaki vegetables completing the course structure. The Mouriya name has been associated with Kobe beef since 1885."
+    },
+    "neYenir": [
+      {
+        "yemek": "A5 Kobe beef course",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Sirloin",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Filet / tenderloin",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Three-cut Kobe beef tasting course",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Seasonal fish course",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Teppanyaki vegetables",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 9.2,
+      "ozet": "EATER editorial score. Counter-focused luxury teppanyaki steps from Gion's historic streets — intimate and special-occasion by nature.",
+      "etiketler": [
+        "luxury",
+        "counter",
+        "intimate",
+        "special-occasion"
+      ],
+      "dressCode": "Smart casual / elegant",
+      "uygun": [
+        "couples"
+      ]
+    },
+    "servis": {
+      "puan": 9.6,
+      "ozet": "EATER editorial score. Chef-at-the-counter service guiding guests through cuts and courses.",
+      "artilar": [],
+      "eksiler": []
+    },
+    "oduller": [],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "phone"
+      ],
+      "telefon": "+81 75 532 4129",
+      "link": null,
+      "beklemeSuresi": "Strongly recommended.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated EATER editorial entry (Aug 2026): official Mouriya (mouriya.co.jp/en/gion), TableCheck, TripAdvisor, recent Kyoto steakhouse reviews. Address verified from the official Mouriya site and TableCheck; coordinates verified by name on OpenStreetMap/Nominatim (モーリヤ祇園)."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-11"
+  },
+  {
+    "id": "lescamoteur-kyoto",
+    "isim": "L'Escamoteur Bar",
+    "ulke": "Japan",
+    "sehir": "Kyoto",
+    "semt": "Kiyamachi / Shimogyo",
+    "mutfak": [
+      "Cocktail Bar",
+      "Mixology"
+    ],
+    "adres": "138-9 Saitocho, Shimogyo Ward, Kyoto 600-8012, Japan",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=L%27Escamoteur%20Bar%2C%20138-9%20Saitocho%2C%20Shimogyo%2C%20Kyoto",
+    "koordinat": {
+      "lat": 35.00182,
+      "lng": 135.76999
+    },
+    "fiyat": {
+      "segment": "orta",
+      "kisiBasi": {
+        "min": 5000,
+        "max": 5999,
+        "paraBirimi": "JPY"
+      },
+      "not": "Tabelog review-spend range approximately ¥5,000–5,999; 50 Best Discovery lists average cocktails around US$14 (owner-curated, Aug 2026)."
+    },
+    "yemek": {
+      "puan": 7.0,
+      "ozet": "EATER editorial score (owner-curated entry, Aug 2026). A bar, not a restaurant — the score reflects minimal food; the point is the drinks: house 'elixirs', flaming and alchemy-style experimental cocktails alongside seasonal and classic drinks."
+    },
+    "neYenir": [
+      {
+        "yemek": "House signature elixirs",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Seasonal cocktails",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Flaming cocktails",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Bartender's choice",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Classic cocktails",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Experimental / alchemy-style drinks",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 9.8,
+      "ozet": "EATER editorial score. A tiny apothecary-like room above the Kiyamachi canal: magic, alchemy and steampunk details make it one of Kyoto's most atmospheric bars.",
+      "etiketler": [
+        "cocktail-bar",
+        "theatrical",
+        "intimate",
+        "speakeasy",
+        "steampunk",
+        "nightlife"
+      ],
+      "dressCode": "Casual / smart casual",
+      "uygun": [
+        "couples",
+        "groups"
+      ]
+    },
+    "servis": {
+      "puan": 9.5,
+      "ozet": "EATER editorial score. Showmanship-driven, friendly bartending in a very small space.",
+      "artilar": [],
+      "eksiler": []
+    },
+    "oduller": [],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "phone"
+      ],
+      "telefon": "+81 75 708 8511",
+      "link": null,
+      "beklemeSuresi": "Limited capacity; arriving early is recommended. No verified current booking policy recorded.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated EATER editorial entry (Aug 2026): 50 Best Discovery listing, TripAdvisor, Tabelog, official L'Escamoteur social channels, recent Kyoto bar reviews. Coordinates verified by name on OpenStreetMap/Nominatim (レスカモトゥール バー)."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-11"
   }
 ];
