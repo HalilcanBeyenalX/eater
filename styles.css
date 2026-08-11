@@ -570,16 +570,29 @@ body {
 }
 #kure { display: flex; justify-content: center; }
 #kure canvas { max-width: 100%; }
-.konum-cubugu { display: flex; gap: .5rem; flex-wrap: wrap; margin-top: .4rem; }
-.konum-cubugu input {
-  flex: 1; min-width: 160px; padding: .5rem .7rem;
-  border: 1px solid var(--kenar); border-radius: 10px;
-  background: var(--yuzey-oyuk); color: var(--krem);
+/* Hap biçimli arama çubuğu: ikon + kutu + düğmeler tek kapta. */
+.konum-cubugu {
+  display: flex; align-items: center; gap: .4rem; flex-wrap: wrap;
+  margin-top: .55rem; padding: .35rem .4rem .35rem .85rem;
+  background: var(--yuzey-oyuk); border: 1px solid var(--kenar);
+  border-radius: 999px; transition: border-color .15s, box-shadow .15s;
 }
+.konum-cubugu:focus-within {
+  border-color: var(--altin);
+  box-shadow: 0 0 0 4px var(--altin-hale);
+}
+.arama-ikon { opacity: .65; font-size: .95rem; flex: none; }
+.konum-cubugu input {
+  flex: 1; min-width: 150px; padding: .45rem .3rem;
+  border: none; background: transparent; color: var(--krem);
+  font: inherit; font-size: 1rem;
+}
+.konum-cubugu input::placeholder { color: var(--krem-silik); }
+.konum-cubugu input:focus { outline: none; }
 .konum-cubugu button {
-  padding: .5rem .8rem; border: none; border-radius: 10px;
+  padding: .5rem .95rem; border: none; border-radius: 999px;
   background: var(--altin); color: var(--kirmizi-derin);
-  font-weight: 600; cursor: pointer;
+  font-weight: 600; cursor: pointer; flex: none;
 }
 .konum-cubugu button:hover { background: var(--altin-koyu); }
 .konum-mesaj { margin: .35rem 0 0; }

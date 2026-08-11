@@ -16,8 +16,11 @@
     <section id="kureBolumu" class="kure-bolumu" hidden aria-label="World globe">
       <div id="kure"></div>
       <div class="konum-cubugu">
-        <input id="konumArama" type="search" placeholder="Type a district, city or country…"
-               aria-label="Search location">
+        <span class="arama-ikon" aria-hidden="true">🔍</span>
+        <input id="konumArama" type="search" list="ulkeListesi"
+               placeholder="Type a district, city or country…"
+               aria-label="Search location" autocomplete="off">
+        <datalist id="ulkeListesi"></datalist>
         <button id="btnKonumAra" type="button">Search</button>
         <button id="btnKonumum" type="button">📍 Use my location</button>
       </div>

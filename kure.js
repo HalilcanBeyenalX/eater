@@ -62,16 +62,31 @@ function kureyiKur() {
     .polygonStrokeColor(() => 'rgba(255, 243, 228, 0.35)')
     .polygonLabel(p => kacis(KOD_ULKE[p.id] || p.properties.name))
     .onPolygonClick(p => {
-      if (!kureKatalogKodlari().has(p.id)) return; // restoranı olmayan ülke: tıklama yok
-      const ad = KOD_ULKE[p.id];
-      ulkeFiltresiUygula(kureSeciliKod === p.id ? '' : ad); // app.js ulkeSec ile geri döner
+      // Tıklanan ülkenin adı arama kutusuna yazılır — kullanıcı elle yazmasın.
+      const arama = document.getElementById('konumArama');
+      if (arama) arama.value = KOD_ULKE[p.id] || p.properties.name;
+      if (!kureKatalogKodlari().has(p.id)) return; // restoranı olmayan ülke: filtre kurulmaz
+      ulkeFiltresiUygula(kureSeciliKod === p.id ? '' : KOD_ULKE[p.id]); // app.js ulkeSec ile geri döner
     });
 
   kure.controls().autoRotate = true;
   kure.controls().autoRotateSpeed = 0.6;
   kure.pointOfView({ lat: 39, lng: 35, altitude: 2.2 }, 0); // açılışta Türkiye görünür
   window.addEventListener('resize', () => kure.width(kap.clientWidth));
+  ulkeTamamlamaKur();
   konumCubuguKur(); // konum çubuğu bağları
+}
+
+// Arama kutusuna tarayıcının yerel otomatik tamamlaması: sınır verisindeki
+// 180 ülkenin İngilizce adı datalist'e dökülür ("Sp" yazınca Spain önerilir).
+function ulkeTamamlamaKur() {
+  const liste = document.getElementById('ulkeListesi');
+  if (!liste) return;
+  liste.innerHTML = DUNYA_ULKELER.features
+    .map(f => f.properties.name)
+    .sort((a, b) => a.localeCompare(b, 'en'))
+    .map(ad => `<option value="${kacis(ad)}"></option>`)
+    .join('');
 }
 
 // app.js her ülke filtresi değişiminde çağırır — vurgu senkron kalır.
