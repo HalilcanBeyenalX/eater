@@ -14,6 +14,7 @@ function kartHTML(r) {
 
   return `
     <a class="kart" href="detay.html?id=${encodeURIComponent(r.id)}">
+      <div class="kart-gorsel" aria-hidden="true">${mutfakGorseli(r)}</div>
       <div class="kart-govde">
         <div class="kart-ust">
           <h2 class="kart-isim">${r.isim}</h2>

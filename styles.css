@@ -117,6 +117,22 @@ body {
   border-color: var(--altin);
 }
 
+/* Mutfak çizimi bandı — fotoğraf değil, stilize tür ikonu. */
+.kart-gorsel {
+  height: 116px;
+  display: grid;
+  place-items: center;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--kirmizi-derin),
+    var(--kirmizi-derin) 12px,
+    var(--kirmizi-derin-desen) 12px,
+    var(--kirmizi-derin-desen) 24px
+  );
+}
+.kart-gorsel svg { width: 96px; height: 72px; opacity: .92; }
+.kart:hover .kart-gorsel svg { opacity: 1; }
+
 .kart-govde { padding: 16px 18px 18px; }
 
 .kart-ust {
