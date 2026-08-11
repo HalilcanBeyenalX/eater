@@ -7,28 +7,11 @@ function maddeListesi(dizi, bosMetin) {
   return `<ul class="madde">${dizi.map(x => `<li>${x}</li>`).join('')}</ul>`;
 }
 
-function etiketler(dizi) {
-  if (!Array.isArray(dizi) || dizi.length === 0) return '';
-  return `<div class="etiketler">${dizi.map(e => `<span class="etiket">${e}</span>`).join('')}</div>`;
-}
-
 function fiyatMetni(fiyat) {
   if (!fiyat.kisiBasi) return 'No verified per-person price data';
   const { min, max, paraBirimi } = fiyat.kisiBasi;
   const birim = paraBirimi === 'TRY' ? '₺' : ` ${paraBirimi}`;
   return `Roughly ${min.toLocaleString('en-US')}${birim} – ${max.toLocaleString('en-US')}${birim} per person`;
-}
-
-function kaynakSatiri(ad, k) {
-  if (!k) return `<tr><td>${ad}</td><td class="silik" colspan="2">${BOS_ISARET}</td></tr>`;
-  if (ad === 'TikTok') {
-    return `<tr><td>TikTok</td><td>—</td><td>${k.incelenenVideo} videos reviewed</td></tr>`;
-  }
-  return `<tr>
-    <td>${ad}</td>
-    <td>${ondalikTR(k.puan)} / 5</td>
-    <td>${k.yorumSayisi.toLocaleString('en-US')} reviews — ${k.incelenen} read</td>
-  </tr>`;
 }
 
 function metrikKarti(baslik, metrik) {
@@ -68,26 +51,29 @@ function detayHTML(r) {
       ${metrikKarti('Service', r.servis)}
     </section>
 
-    <section class="blok">
-      <h2>What to eat</h2>
-      <ol class="yemekler">
-        ${r.neYenir.map(y => `
-          <li>
-            <span class="yemek-ad">${y.yemek}</span>
-            ${typeof y.kacKisiOnerdi === 'number' ? `<span class="yemek-sayi">recommended in ${y.kacKisiOnerdi} reviews</span>` : ''}
-            ${y.not ? `<span class="yemek-not">${y.not}</span>` : ''}
-          </li>`).join('')}
-      </ol>
-    </section>
-
-    <section class="blok">
-      <h2>Ambiance</h2>
-      ${etiketler(r.ambiyans.etiketler)}
-      <dl class="cift">
-        <dt>Dress code</dt><dd>${veyaYok(r.ambiyans.dressCode, 'No stated dress code')}</dd>
-        <dt>Good for</dt><dd>${r.ambiyans.uygun.length ? r.ambiyans.uygun.join(', ') : BOS_ISARET}</dd>
-      </dl>
-    </section>
+    <div class="satir-ikili">
+      <section class="blok">
+        <h2>What to eat</h2>
+        <ol class="yemekler">
+          ${r.neYenir.map(y => `
+            <li>
+              <span class="yemek-ad">${y.yemek}</span>
+              ${typeof y.kacKisiOnerdi === 'number' ? `<span class="yemek-sayi">recommended in ${y.kacKisiOnerdi} reviews</span>` : ''}
+              ${y.not ? `<span class="yemek-not">${y.not}</span>` : ''}
+            </li>`).join('')}
+        </ol>
+      </section>
+      <section class="blok">
+        <h2>Ambiance</h2>
+        <ul class="ambiyans-listesi">
+          ${r.ambiyans.etiketler.map(e => `<li class="etiket">${e}</li>`).join('')}
+        </ul>
+        <dl class="cift">
+          <dt>Dress code</dt><dd>${veyaYok(r.ambiyans.dressCode, 'No stated dress code')}</dd>
+          <dt>Good for</dt><dd>${r.ambiyans.uygun.length ? r.ambiyans.uygun.join(', ') : BOS_ISARET}</dd>
+        </dl>
+      </section>
+    </div>
 
     <section class="blok ikili">
       <div>
@@ -100,36 +86,22 @@ function detayHTML(r) {
       </div>
     </section>
 
-    <section class="blok">
-      <h2>Price</h2>
-      <p>${fiyatMetni(r.fiyat)}</p>
-      ${r.fiyat.not ? `<p class="silik">${r.fiyat.not}</p>` : ''}
-    </section>
-
-    <section class="blok">
-      <h2>Reservation</h2>
-      ${rezSatirlari}
-    </section>
+    <div class="satir-ikili">
+      <section class="blok">
+        <h2>Price</h2>
+        <p class="fiyat-ozet">${fiyatMetni(r.fiyat)}</p>
+        ${r.fiyat.not ? `<p class="silik fiyat-not">${r.fiyat.not}</p>` : ''}
+      </section>
+      <section class="blok">
+        <h2>Reservation</h2>
+        ${rezSatirlari}
+      </section>
+    </div>
 
     <section class="blok">
       <h2>Address</h2>
       <p>${veyaYok(r.adres, 'No verified address')}</p>
       ${r.mapsUrl ? `<p><a class="harita" href="${r.mapsUrl}" target="_blank" rel="noopener">Open in Google Maps &rarr;</a></p>` : ''}
-    </section>
-
-    <section class="blok">
-      <h2>Sources</h2>
-      <table class="kaynak">
-        <thead><tr><th>Platform</th><th>Score</th><th>Read</th></tr></thead>
-        <tbody>
-          ${kaynakSatiri('Google', r.kaynaklar.google)}
-          ${kaynakSatiri('TripAdvisor', r.kaynaklar.tripadvisor)}
-          ${kaynakSatiri('TikTok', r.kaynaklar.tiktok)}
-          ${r.kaynaklar.diger ? `<tr><td>Other sources</td><td colspan="2">${r.kaynaklar.diger}</td></tr>` : ''}
-        </tbody>
-      </table>
-      <p class="silik">Last updated: ${r.sonGuncelleme}. Scores are subjective assessments drawn from this sample.</p>
-      <p class="silik">The — mark means no verified data was found for that field.</p>
     </section>`;
 }
 
@@ -161,7 +133,7 @@ function bulVeCiz() {
 async function gunlukBaglantisiniEkle(r) {
   const kutu = document.createElement('div');
   kutu.className = 'panel';
-  kutu.innerHTML = `<a class="sekme sekme-aktif" href="gunluk.html?restoran=${encodeURIComponent(r.id)}">+ Add to my diary</a>
+  kutu.innerHTML = `<a class="sekme sekme-aktif" href="gunluk.html?restoran=${encodeURIComponent(r.id)}">+ Add to Eat Book</a>
     <span id="senPuanlarin"></span>
     <div id="yiyiciFavorileri"></div>`;
   document.querySelector('main').appendChild(kutu);

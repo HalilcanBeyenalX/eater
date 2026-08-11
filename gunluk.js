@@ -173,10 +173,10 @@ function ziyaretFormuHTML() {
         <input type="file" id="fotoInput1" accept="image/*" capture="environment" hidden>
         <input type="file" id="fotoInput2" accept="image/*" capture="environment" hidden>
         <textarea id="zYorum" placeholder="Your notes (optional)" rows="3"></textarea>
-        <button type="submit">Add to diary</button>
+        <button type="submit">Add to Eat Book</button>
       </form>
       <p id="ziyaretHata" class="hata" aria-live="polite"></p>
-      <h2>ATE — My visits</h2>
+      <h2>ATE — Eat Book</h2>
       <div id="ziyaretListesi"></div>
     </div>`;
 }
@@ -308,7 +308,7 @@ async function ziyaretKaydet(kullaniciId) {
 async function sayfayiKur() {
   const kap = document.getElementById('icerik');
   if (!eaterHesap.hazir()) {
-    kap.innerHTML = '<p class="panel">The diary is not configured yet (Supabase settings are empty). The catalog is open on the <a href="index.html">Explore</a> page.</p>';
+    kap.innerHTML = '<p class="panel">The Eat Book is not configured yet (Supabase settings are empty). The catalog is open on the <a href="index.html">Explore</a> page.</p>';
     return;
   }
   const o = await eaterHesap.oturum();
