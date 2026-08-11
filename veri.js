@@ -3032,7 +3032,14 @@ const RESTORANLAR = [
       "tiktok": null,
       "diger": "Owner-curated EATER editorial entry (Aug 2026): official Hôtel Costes, TripAdvisor, fashion/travel media, recent diner reviews. Coordinates verified by name on OpenStreetMap/Nominatim."
     },
-    "fotolar": [],
+    "fotolar": [
+      {
+        "dosya": "fotolar/hotel-costes-restaurant-1.jpg",
+        "alt": "Facade of the historic building at 239-241 rue Saint-Honore, Paris, now housing Hotel Costes",
+        "kaynak": "https://commons.wikimedia.org/wiki/File:Paris_H%C3%B4tel_de_France_et_de_Choiseul_1.jpg",
+        "kredi": "Lionel Allorge, CC BY-SA 3.0, via Wikimedia Commons"
+      }
+    ],
     "sonGuncelleme": "2026-08-11"
   },
   {
@@ -4220,7 +4227,14 @@ const RESTORANLAR = [
       "tiktok": null,
       "diger": "Owner-curated EATER editorial entry (Aug 2026): official ICHIRAN, TableCheck where applicable, recent Tokyo dining references. ICHIRAN has many Tokyo branches, so no single address or coordinate is recorded — the catalog does not yet support per-branch entries."
     },
-    "fotolar": [],
+    "fotolar": [
+      {
+        "dosya": "fotolar/ichiran-ramen-tokyo-1.jpg",
+        "alt": "Ichiran ramen restaurant storefront in Shinjuku Kabukicho, Tokyo",
+        "kaynak": "https://commons.wikimedia.org/wiki/File:Ichiran_in_Shinjuku_Kabukicho_2018.jpg",
+        "kredi": "Wpcpey, CC BY-SA 4.0, via Wikimedia Commons"
+      }
+    ],
     "sonGuncelleme": "2026-08-11"
   },
   {
