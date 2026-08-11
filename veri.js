@@ -1682,5 +1682,648 @@ const RESTORANLAR = [
     },
     "fotolar": [],
     "sonGuncelleme": "2026-08-10"
+  },
+  {
+    "id": "diverxo",
+    "isim": "DiverXO",
+    "ulke": "Spain",
+    "sehir": "Madrid",
+    "semt": "Chamartín",
+    "mutfak": [
+      "Creative",
+      "Fine Dining",
+      "Asian Fusion",
+      "Spanish"
+    ],
+    "adres": "C. del Padre Damián, 23, Chamartín, 28036 Madrid, Spain",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=DiverXO%2C%20C.%20del%20Padre%20Dami%C3%A1n%2023%2C%2028036%20Madrid",
+    "koordinat": {
+      "lat": 40.4578,
+      "lng": -3.68595
+    },
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": null,
+      "not": "Luxury tasting-menu restaurant at the very top of Madrid's price range. No verified current menu price was recorded, so no exact amount is given (owner-curated entry, Aug 2026)."
+    },
+    "yemek": {
+      "puan": 9.8,
+      "ozet": "Dabiz Muñoz's three-MICHELIN-star restaurant is one of Madrid's most unusual gastronomic experiences. The MICHELIN Guide describes a highly creative cuisine combining Spanish ingredients with techniques and influences from Asia, Mexico and beyond. Guest reviews praise not only flavor but creativity, surprise and theatrical presentation; the tasting menu is designed as a progression of unexpected combinations, textures and ideas rather than familiar comfort dishes. Owner-curated summary (Aug 2026) based on the MICHELIN Guide, official sources and recent fine-dining reviews."
+    },
+    "neYenir": [
+      {
+        "yemek": "Flying Pigs Cuisine tasting menu",
+        "kacKisiOnerdi": null,
+        "not": "The restaurant's single long-format tasting experience."
+      },
+      {
+        "yemek": "Galician lobster",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Drunken crabs",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Minutejo del Agus",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Seasonal seafood preparations",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 9.3,
+      "ozet": "Rather than a traditional white-tablecloth Michelin dining room, DiverXO feels theatrical, provocative and experience-driven; the visual language follows the food — exaggerated, playful and unconventional. Works for a romantic dinner, but its strongest category is a full gastronomic experience or major special occasion.",
+      "etiketler": [
+        "avant-garde",
+        "theatrical",
+        "luxury",
+        "creative",
+        "special-occasion"
+      ],
+      "dressCode": "Smart / upscale recommended",
+      "uygun": [
+        "couples"
+      ]
+    },
+    "servis": {
+      "puan": 9.5,
+      "ozet": "Service is part of the tasting-menu experience rather than plain table service: the team guides guests through a long sequence of dishes and presentations. Fine-dining reviews describe the staff as professional, warm and playful while keeping the precision expected at this level.",
+      "artilar": [
+        "Highly coordinated tasting-menu service",
+        "Detailed explanations of dishes",
+        "Professional but less rigid than traditional luxury restaurants",
+        "Staff interaction contributes to the theatrical experience"
+      ],
+      "eksiler": [
+        "Very long dining experience",
+        "Not ideal for guests looking for a quick or casual dinner",
+        "The highly choreographed style may feel excessive to diners who prefer simplicity"
+      ]
+    },
+    "oduller": [
+      {
+        "tip": "michelin-yildiz",
+        "detay": "Three MICHELIN stars — per the MICHELIN Guide's current selection; recorded from the site owner's curated notes citing the MICHELIN Guide (Aug 2026)."
+      }
+    ],
+    "rezervasyon": {
+      "gerekiyor": true,
+      "yontem": [
+        "online"
+      ],
+      "telefon": "+34 915 70 07 66",
+      "link": null,
+      "beklemeSuresi": "Booking well in advance through the official online reservation system is strongly recommended.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated entry (Aug 2026): MICHELIN Guide, official DiverXO/Dabiz Muñoz sources, TripAdvisor, selected recent fine-dining reviews. Coordinates verified by name on OpenStreetMap/Nominatim."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-11"
+  },
+  {
+    "id": "botin",
+    "isim": "Botín",
+    "ulke": "Spain",
+    "sehir": "Madrid",
+    "semt": "Centro",
+    "mutfak": [
+      "Traditional Spanish",
+      "Castilian"
+    ],
+    "adres": "C. de Cuchilleros, 17, Centro, 28005 Madrid, Spain",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Restaurante%20Bot%C3%ADn%2C%20C.%20de%20Cuchilleros%2017%2C%2028005%20Madrid",
+    "koordinat": {
+      "lat": 40.41417,
+      "lng": -3.70798
+    },
+    "fiyat": {
+      "segment": "orta",
+      "kisiBasi": {
+        "min": 30,
+        "max": 70,
+        "paraBirimi": "EUR"
+      },
+      "not": "Approximately €30–70 per person depending on dishes and drinks (owner-curated estimate, Aug 2026)."
+    },
+    "yemek": {
+      "puan": 8.5,
+      "ozet": "Botín's food identity is traditional Castilian oven cooking: the signature cochinillo asado (roast suckling pig) comes from the restaurant's historic wood-fired oven, with roast lamb as the other core specialty. Reviews are more divided than at Madrid's top fine-dining rooms — many visitors consider the roasts excellent, while others feel the global fame owes as much to history and atmosphere as to the food. Included as a Madrid institution, not presented as the city's best plate of food. Owner-curated summary (Aug 2026)."
+    },
+    "neYenir": [
+      {
+        "yemek": "Cochinillo asado",
+        "kacKisiOnerdi": null,
+        "not": "The signature dish — roast suckling pig from the historic wood-fired oven."
+      },
+      {
+        "yemek": "Cordero asado",
+        "kacKisiOnerdi": null,
+        "not": "Roast lamb, the other core specialty."
+      },
+      {
+        "yemek": "Sopa de ajo",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Jamón Ibérico",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Traditional Spanish desserts",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 9.4,
+      "ozet": "Atmosphere is one of Botín's biggest strengths: historic dining rooms, stone walls, the old oven and cellar-like spaces create a strong sense of traditional Madrid. It feels like a historic institution rather than a contemporary restaurant — a major part of why travelers seek it out.",
+      "etiketler": [
+        "historic-building",
+        "traditional",
+        "rustic",
+        "touristic",
+        "classic"
+      ],
+      "dressCode": "No strict formal dress code; smart casual works well",
+      "uygun": [
+        "family",
+        "groups"
+      ]
+    },
+    "servis": {
+      "puan": 8.3,
+      "ozet": "Botín handles a very high volume of international visitors, so service is less personal than at a small fine-dining restaurant. Many guests still describe the team as experienced and friendly, and staff may explain parts of the restaurant's history; at peak periods the experience can feel more structured and touristic.",
+      "artilar": [
+        "Experienced staff",
+        "Strong familiarity with international guests",
+        "Helpful explanations of traditional dishes",
+        "The historic-restaurant experience is woven into the service"
+      ],
+      "eksiler": [
+        "Can feel busy and tourist-oriented",
+        "Less personal during peak hours",
+        "Table turnover and crowd levels may affect the experience"
+      ]
+    },
+    "oduller": [],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "phone"
+      ],
+      "telefon": "+34 913 66 42 17",
+      "link": null,
+      "beklemeSuresi": "Reservation recommended, especially for dinner and busy travel periods.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated entry (Aug 2026): official Botín sources, TripAdvisor, recent Madrid traveler reviews, historical restaurant references. Coordinates verified by name on OpenStreetMap/Nominatim."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-11"
+  },
+  {
+    "id": "sala-de-despiece-1",
+    "isim": "Sala de Despiece 1",
+    "ulke": "Spain",
+    "sehir": "Madrid",
+    "semt": "Chamberí",
+    "mutfak": [
+      "Modern Spanish",
+      "Seafood",
+      "Meat"
+    ],
+    "adres": "C. de Alonso Cano, 28, Chamberí, 28003 Madrid, Spain",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Sala%20de%20Despiece%2C%20C.%20de%20Alonso%20Cano%2028%2C%2028003%20Madrid",
+    "koordinat": null,
+    "fiyat": {
+      "segment": "orta",
+      "kisiBasi": {
+        "min": 40,
+        "max": 90,
+        "paraBirimi": "EUR"
+      },
+      "not": "Approximately €40–90 per person depending on dishes and drinks (owner-curated estimate, Aug 2026). The top of the range reaches into high-end territory; 'orta' chosen for the typical order."
+    },
+    "yemek": {
+      "puan": 9.0,
+      "ozet": "A strong choice for Spanish ingredients presented in a much more modern, playful format: seafood, meat, raw or minimally manipulated products and sharing plates. It sits usefully between traditional Madrid restaurants and tasting-menu destinations — more contemporary than Botín, less formal and far less expensive than DiverXO. Presentation and ingredient quality are a major part of the appeal. Owner-curated summary (Aug 2026)."
+    },
+    "neYenir": [
+      {
+        "yemek": "Tuna preparations",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Beef / steak preparations",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Seafood dishes",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Tomato-based dishes",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Signature sharing plates",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 8.8,
+      "ozet": "Industrial visual language inspired by a butcher's cutting room: stainless surfaces, packaging references and a lively counter-style atmosphere make the space feel deliberately unconventional — trendy and energetic rather than romantic or formal.",
+      "etiketler": [
+        "industrial",
+        "trendy",
+        "lively",
+        "experimental"
+      ],
+      "dressCode": "Casual / smart casual",
+      "uygun": [
+        "groups",
+        "couples"
+      ]
+    },
+    "servis": {
+      "puan": 8.5,
+      "ozet": "Energetic, informal service matching the sharing concept: staff focus on explaining the unusual preparations and keeping dishes moving at a lively pace. Intentionally social rather than ceremonial.",
+      "artilar": [
+        "Energetic service style",
+        "Good fit for sharing dishes",
+        "Staff can explain unusual preparations",
+        "Less formal and intimidating than Michelin-style dining"
+      ],
+      "eksiler": [
+        "Busy atmosphere can make service feel fast",
+        "Not ideal for a quiet or highly formal meal",
+        "Peak periods may feel crowded"
+      ]
+    },
+    "oduller": [],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "phone"
+      ],
+      "telefon": "+34 919 59 06 03",
+      "link": null,
+      "beklemeSuresi": "Reservation recommended.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated entry (Aug 2026): official restaurant sources, TripAdvisor, recent Madrid dining reviews, selected food-media references. Note: OpenStreetMap pins 'Sala de Despiece' at Calle de Ponzano 11 (the original); this entry uses the owner-provided Alonso Cano 28 address, so coordinates are left null pending branch confirmation."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-11"
+  },
+  {
+    "id": "disfrutar",
+    "isim": "Disfrutar",
+    "ulke": "Spain",
+    "sehir": "Barcelona",
+    "semt": "Eixample",
+    "mutfak": [
+      "Creative",
+      "Mediterranean",
+      "Fine Dining",
+      "Spanish"
+    ],
+    "adres": "Carrer de Villarroel, 163, Eixample, 08036 Barcelona, Spain",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Disfrutar%2C%20Carrer%20de%20Villarroel%20163%2C%2008036%20Barcelona",
+    "koordinat": {
+      "lat": 41.38776,
+      "lng": 2.15317
+    },
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": null,
+      "not": "Very expensive tasting-menu restaurant. No verified current official menu price was recorded, so no exact amount is given (owner-curated entry, Aug 2026)."
+    },
+    "yemek": {
+      "puan": 9.9,
+      "ozet": "Run by Oriol Castro, Eduard Xatruch and Mateu Casañas — all former members of Ferran Adrià's elBulli team — Disfrutar holds three MICHELIN stars and builds on highly technical, creative Mediterranean cuisine. Dishes play with shape, texture, temperature and expectation while preserving recognizable flavors; tasting-menu formats include Classic and Festival. Reviews consistently emphasize creativity, precision and the sense of a carefully designed progression. Owner-curated summary (Aug 2026)."
+    },
+    "neYenir": [
+      {
+        "yemek": "Classic tasting menu",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Multi-spherical pesto with smoked eel and pistachio",
+        "kacKisiOnerdi": null,
+        "not": "One of the restaurant's signature technical dishes."
+      },
+      {
+        "yemek": "Signature solid bubbles",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Seasonal Festival menu",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Living Table Experience",
+        "kacKisiOnerdi": null,
+        "not": "Only if separately available and reserved."
+      }
+    ],
+    "ambiyans": {
+      "puan": 9.4,
+      "ozet": "The dining room is more restrained than the food: modern, Mediterranean, bright and relatively minimal, letting the dishes remain the main visual focus. Compared with DiverXO it feels calmer and more architectural rather than theatrical.",
+      "etiketler": [
+        "modern",
+        "simple",
+        "creative",
+        "fine-dining",
+        "special-occasion"
+      ],
+      "dressCode": "Smart casual / upscale recommended",
+      "uygun": [
+        "couples"
+      ]
+    },
+    "servis": {
+      "puan": 9.6,
+      "ozet": "Highly polished service carefully synchronized with the tasting menu; guests are guided through technical dishes without excessive formality. Reviews frequently praise the team's knowledge, warmth and precision — timing and explanation matter especially in a meal with this many courses.",
+      "artilar": [
+        "Excellent knowledge of the menu",
+        "Precise tasting-menu pacing",
+        "Clear explanation of complex preparations",
+        "Warm service despite the restaurant's elite status"
+      ],
+      "eksiler": [
+        "Very long meal",
+        "The price creates very high expectations",
+        "Not suitable for a spontaneous or casual meal"
+      ]
+    },
+    "oduller": [
+      {
+        "tip": "michelin-yildiz",
+        "detay": "Three MICHELIN stars — per the MICHELIN Guide's current selection; recorded from the site owner's curated notes citing the MICHELIN Guide (Aug 2026)."
+      }
+    ],
+    "rezervasyon": {
+      "gerekiyor": true,
+      "yontem": [
+        "online"
+      ],
+      "telefon": "+34 933 48 68 96",
+      "link": null,
+      "beklemeSuresi": "Booking far in advance is strongly recommended; a waitlist may be necessary.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated entry (Aug 2026): MICHELIN Guide, official Disfrutar sources, TripAdvisor, recent fine-dining reviews. Coordinates verified by name on OpenStreetMap/Nominatim."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-11"
+  },
+  {
+    "id": "compartir-barcelona",
+    "isim": "Compartir Barcelona",
+    "ulke": "Spain",
+    "sehir": "Barcelona",
+    "semt": "Eixample",
+    "mutfak": [
+      "Mediterranean",
+      "Spanish",
+      "Creative"
+    ],
+    "adres": "Carrer de València, 225, Eixample, 08007 Barcelona, Spain",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Compartir%20Barcelona%2C%20Carrer%20de%20Val%C3%A8ncia%20225%2C%2008007%20Barcelona",
+    "koordinat": {
+      "lat": 41.3912,
+      "lng": 2.16109
+    },
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": null,
+      "not": "Expensive (owner-curated entry, Aug 2026); no verified per-person range recorded."
+    },
+    "yemek": {
+      "puan": 9.0,
+      "ozet": "From the same chef team behind Disfrutar — Oriol Castro, Eduard Xatruch and Mateu Casañas — but considerably more relaxed. 'Compartir' means 'to share': the menu is structured around dishes designed for the table rather than a formal tasting sequence, combining modern technique with Mediterranean and Spanish flavors. Guest reviews frequently highlight the seafood, tuna and brioche preparations. Owner-curated summary (Aug 2026)."
+    },
+    "neYenir": [
+      {
+        "yemek": "Tuna cannelloni",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Razor clams",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Brioche / tartare preparations",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Whole fish or sea bass",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Lobster",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Sharing-style desserts",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 8.8,
+      "ozet": "Modern, spacious Mediterranean look, noticeably more social than Disfrutar. The design supports the sharing concept: stylish enough for a special dinner, but less formal and well suited to a lively meal with friends.",
+      "etiketler": [
+        "modern",
+        "sharing",
+        "elegant"
+      ],
+      "dressCode": "Smart casual",
+      "uygun": [
+        "groups",
+        "couples"
+      ]
+    },
+    "servis": {
+      "puan": 8.6,
+      "ozet": "Generally warm and professional, but reviews are somewhat more mixed than at Disfrutar: some guests report excellent guidance through the sharing menu, others mention pacing or table-management inconsistencies at busy times — which is why the service score sits slightly below the food score.",
+      "artilar": [
+        "Good guidance on how much food to order",
+        "Friendly and professional style",
+        "Works well with the sharing concept",
+        "Knowledgeable about the menu"
+      ],
+      "eksiler": [
+        "Some reports of inconsistent pacing",
+        "Busy periods can affect table management",
+        "Expectations run high relative to the price"
+      ]
+    },
+    "oduller": [],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "phone"
+      ],
+      "telefon": "+34 936 24 78 86",
+      "link": null,
+      "beklemeSuresi": "Reservation recommended — often effectively required during popular dinner periods.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated entry (Aug 2026): official Compartir Barcelona sources, TripAdvisor, chef-team references, recent diner reviews. Coordinates verified by name on OpenStreetMap/Nominatim."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-11"
+  },
+  {
+    "id": "can-culleretes",
+    "isim": "Can Culleretes",
+    "ulke": "Spain",
+    "sehir": "Barcelona",
+    "semt": "Ciutat Vella",
+    "mutfak": [
+      "Catalan",
+      "Traditional Spanish",
+      "Mediterranean"
+    ],
+    "adres": "Carrer d'en Quintana, 5, Ciutat Vella, 08002 Barcelona, Spain",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Can%20Culleretes%2C%20Carrer%20d%27en%20Quintana%205%2C%2008002%20Barcelona",
+    "koordinat": {
+      "lat": 41.38121,
+      "lng": 2.17442
+    },
+    "fiyat": {
+      "segment": "ucuz",
+      "kisiBasi": {
+        "min": 20,
+        "max": 30,
+        "paraBirimi": "EUR"
+      },
+      "not": "Approximately €20–30 per person depending on dishes and drinks (owner-curated estimate, Aug 2026)."
+    },
+    "yemek": {
+      "puan": 8.1,
+      "ozet": "Represents the traditional side of Barcelona — classic Catalan cooking rather than modern gastronomy: traditional stews, cannelloni, roast meats, fish dishes and Catalan desserts form the core. Reviews are noticeably more divided than at Barcelona's elite restaurants, so it is presented as a historic local experience rather than one of the city's strongest purely gastronomic destinations. Owner-curated summary (Aug 2026)."
+    },
+    "neYenir": [
+      {
+        "yemek": "Escudella catalana",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Canelons",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Roast meats",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Catalan-style fish dishes",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Crema Catalana",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 9.0,
+      "ozet": "History and atmosphere are among the restaurant's strongest qualities: traditional dining rooms and an old-Barcelona aesthetic give a sense of continuity newer restaurants cannot reproduce — which is why the ambiance score is intentionally higher than the food score.",
+      "etiketler": [
+        "historic-building",
+        "traditional",
+        "classic",
+        "local"
+      ],
+      "dressCode": "No strict dress code; casual / smart casual",
+      "uygun": [
+        "family",
+        "groups"
+      ]
+    },
+    "servis": {
+      "puan": 7.9,
+      "ozet": "Service reviews are mixed: some diners appreciate the traditional, straightforward style and experienced staff, while others report inconsistencies at busy times. Presented realistically rather than romanticized for its history.",
+      "artilar": [
+        "Traditional restaurant service",
+        "Staff familiar with classic Catalan dishes",
+        "Suitable for families and groups",
+        "Straightforward, non-formal experience"
+      ],
+      "eksiler": [
+        "Service quality can vary during busy periods",
+        "Some reviews mention slow or inconsistent attention",
+        "Less polished than contemporary fine-dining restaurants"
+      ]
+    },
+    "oduller": [],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "phone"
+      ],
+      "telefon": "+34 933 17 30 22",
+      "link": null,
+      "beklemeSuresi": "Reservation recommended.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated entry (Aug 2026): official Can Culleretes sources, TripAdvisor, recent Barcelona dining reviews, historical references. Coordinates verified by name on OpenStreetMap/Nominatim."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-11"
   }
 ];
