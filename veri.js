@@ -2584,7 +2584,14 @@ const RESTORANLAR = [
       "tiktok": null,
       "diger": "Owner-curated EATER editorial entry (Aug 2026): official Girafe, Paris Society, TripAdvisor, selected recent reviews. Coordinates verified by name on OpenStreetMap/Nominatim."
     },
-    "fotolar": [],
+    "fotolar": [
+      {
+        "dosya": "fotolar/girafe-paris-1.jpg",
+        "alt": "Palais de Chaillot, the building in the Trocadéro complex housing Girafe restaurant (building exterior, not restaurant interior)",
+        "kaynak": "https://commons.wikimedia.org/wiki/File:Palais_de_Chaillot_(July_2022).jpg",
+        "kredi": "DiscoA340, CC BY-SA 4.0, via Wikimedia Commons"
+      }
+    ],
     "sonGuncelleme": "2026-08-11"
   },
   {
@@ -2693,7 +2700,14 @@ const RESTORANLAR = [
       "tiktok": null,
       "diger": "Owner-curated EATER editorial entry (Aug 2026): official Loulou Paris, TripAdvisor, recent diner reviews. Coordinates verified by name on OpenStreetMap/Nominatim."
     },
-    "fotolar": [],
+    "fotolar": [
+      {
+        "dosya": "fotolar/loulou-paris-1.jpg",
+        "alt": "South facade of the Pavillon de Marsan at the Musée des Arts Décoratifs, 107 Rue de Rivoli, the building complex housing Loulou (building exterior, not restaurant interior)",
+        "kaynak": "https://commons.wikimedia.org/wiki/File:South_facade_of_the_Pavillon_de_Marsan_(PA00085992).jpg",
+        "kredi": "Thesupermat, CC BY-SA 3.0, via Wikimedia Commons"
+      }
+    ],
     "sonGuncelleme": "2026-08-11"
   },
   {
@@ -2796,7 +2810,14 @@ const RESTORANLAR = [
       "tiktok": null,
       "diger": "Owner-curated EATER editorial entry (Aug 2026): official Baronne / Paris Society, TripAdvisor, recent diner reviews. No name-pinned OpenStreetMap POI found, so coordinates are left null."
     },
-    "fotolar": [],
+    "fotolar": [
+      {
+        "dosya": "fotolar/baronne-paris-1.jpg",
+        "alt": "Hôtel Salomon de Rothschild, 11 Rue Berryer, the mansion housing Baronne restaurant (building exterior, not restaurant interior)",
+        "kaynak": "https://commons.wikimedia.org/wiki/File:H%C3%B4tel_Salomon_de_Rothschild_(Paris).jpg",
+        "kredi": "Ricardalovesmonuments, CC BY-SA 4.0, via Wikimedia Commons"
+      }
+    ],
     "sonGuncelleme": "2026-08-11"
   },
   {
@@ -3116,7 +3137,14 @@ const RESTORANLAR = [
       "tiktok": null,
       "diger": "Owner-curated EATER editorial entry (Aug 2026): official L'Avenue, TripAdvisor, selected fashion and travel references. No verified phone number recorded. Coordinates verified by name on OpenStreetMap/Nominatim."
     },
-    "fotolar": [],
+    "fotolar": [
+      {
+        "dosya": "fotolar/lavenue-paris-1.jpg",
+        "alt": "L'Avenue restaurant storefront at the corner of Avenue Montaigne and Rue François 1er, Paris",
+        "kaynak": "https://commons.wikimedia.org/wiki/File:Avenue_Montaigne_Rue_Francois_1er_-_L%27Avenue_(3769587423).jpg",
+        "kredi": "Elliott Brown, CC BY 2.0, via Wikimedia Commons"
+      }
+    ],
     "sonGuncelleme": "2026-08-11"
   },
   {
@@ -3217,7 +3245,14 @@ const RESTORANLAR = [
       "tiktok": null,
       "diger": "Owner-curated EATER editorial entry (Aug 2026): official Maxim's, Paris Society, TripAdvisor, recent reviews. Coordinates verified by name on OpenStreetMap/Nominatim."
     },
-    "fotolar": [],
+    "fotolar": [
+      {
+        "dosya": "fotolar/maxims-paris-1.jpg",
+        "alt": "Maxim's Art Nouveau restaurant facade, Rue Royale, Paris",
+        "kaynak": "https://commons.wikimedia.org/wiki/File:Maxim%27s_Restaurant,_Rue_Royale,_Paris.jpg",
+        "kredi": "Britchi Mirela, CC BY-SA 3.0, via Wikimedia Commons"
+      }
+    ],
     "sonGuncelleme": "2026-08-11"
   },
   {
@@ -3320,7 +3355,14 @@ const RESTORANLAR = [
       "tiktok": null,
       "diger": "Owner-curated EATER editorial entry (Aug 2026): official The Madrid EDITION, official Oroya, Vogue, recent reviews. Coordinates are the hotel's name-pinned OpenStreetMap POI (the restaurant is on its 4th floor)."
     },
-    "fotolar": [],
+    "fotolar": [
+      {
+        "dosya": "fotolar/oroya-madrid-edition-1.jpg",
+        "alt": "The Madrid EDITION hotel building, Plaza de Celenque, the hotel housing Oroya (building exterior, not restaurant interior)",
+        "kaynak": "https://commons.wikimedia.org/wiki/File:The_Madrid_EDITION_September_2022.jpg",
+        "kredi": "MainlyTwelve, CC BY-SA 4.0, via Wikimedia Commons"
+      }
+    ],
     "sonGuncelleme": "2026-08-11"
   },
   {
@@ -3966,7 +4008,14 @@ const RESTORANLAR = [
       "tiktok": null,
       "diger": "Owner-curated EATER editorial entry (Aug 2026): official GALLADA, The Peninsula Istanbul, MICHELIN Guide 2026, TripAdvisor, Fatih Tutak references. Coordinates are the hotel's name-pinned OpenStreetMap POI (the restaurant is on its roof). No verified direct phone number recorded."
     },
-    "fotolar": [],
+    "fotolar": [
+      {
+        "dosya": "fotolar/gallada-1.jpg",
+        "alt": "The Peninsula Istanbul hotel building in Karaköy, home to the GALLADA rooftop restaurant (building exterior, not restaurant interior)",
+        "kaynak": "https://commons.wikimedia.org/wiki/File:The_Peninsula_Istanbul.jpg",
+        "kredi": "Antoloji, CC0, via Wikimedia Commons"
+      }
+    ],
     "sonGuncelleme": "2026-08-11"
   },
   {
