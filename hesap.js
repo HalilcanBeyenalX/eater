@@ -14,11 +14,23 @@ const eaterHesap = (() => {
   }
 
   async function kayitOl(eposta, sifre, kullaniciAdi) {
+    // Kullanıcı adı benzersiz olmalı (veritabanında unique kısıt var; burada
+    // önden kontrol edip anlaşılır bir mesaj veriyoruz — büyük/küçük harf dahil).
+    const { data: ayni } = await istemci.from('profiller')
+      .select('id').ilike('kullanici_adi', kullaniciAdi).limit(1);
+    if (ayni && ayni.length > 0) {
+      return { hata: 'This username is already taken — try another one.' };
+    }
     const { data, error } = await istemci.auth.signUp({ email: eposta, password: sifre });
     if (error) return { hata: error.message };
     const { error: pHata } = await istemci.from('profiller')
       .insert({ id: data.user.id, kullanici_adi: kullaniciAdi });
-    return { hata: pHata ? pHata.message : null };
+    if (pHata) {
+      return { hata: pHata.code === '23505'
+        ? 'This username is already taken — try another one.'
+        : pHata.message };
+    }
+    return { hata: null };
   }
 
   async function girisYap(eposta, sifre) {
@@ -58,37 +70,89 @@ const eaterHesap = (() => {
     return istemci.storage.from('yemek-fotolari').getPublicUrl(yol).data.publicUrl;
   }
 
-  // --- Takip (Eater ekle) ---
+  // --- Profil fotoğrafı ---
 
-  // Girişli kullanıcının takip ettiği kişilerin id kümesi; girişsizse null.
+  // Avatar her seferinde yeni adla yüklenir (önbellek eskimesin), eski dosya
+  // silinir, profiller.avatar yeni yolu gösterir. Ek 4 gerektirir.
+  async function avatarKaydet(dosyaBlob, eskiYol) {
+    const o = await oturum();
+    if (!o) return { hata: 'not signed in' };
+    const yol = `${o.user.id}/avatar-${crypto.randomUUID()}.jpg`;
+    const { error } = await istemci.storage.from('yemek-fotolari')
+      .upload(yol, dosyaBlob, { contentType: 'image/jpeg' });
+    if (error) return { hata: error.message };
+    const { error: pHata } = await istemci.from('profiller')
+      .update({ avatar: yol }).eq('id', o.user.id);
+    if (pHata) return { hata: pHata.message };
+    if (eskiYol) await istemci.storage.from('yemek-fotolari').remove([eskiYol]);
+    return { yol };
+  }
+
+  // --- Takip / arkadaşlık istekleri (Ek 4: takipler.durum) ---
+
+  // Girişli kullanıcının ilişki kümeleri: kume = kabul edilmiş takipler,
+  // bekleyen = gönderilmiş ama henüz yanıtlanmamış istekler. Girişsizse null.
   async function takipEttiklerim() {
     const o = await oturum();
     if (!o) return null;
     const { data } = await istemci.from('takipler')
-      .select('takip_edilen').eq('takip_eden', o.user.id);
-    return { benimId: o.user.id, kume: new Set((data || []).map(t => t.takip_edilen)) };
+      .select('takip_edilen, durum').eq('takip_eden', o.user.id);
+    const kume = new Set(), bekleyen = new Set();
+    (data || []).forEach(t =>
+      (t.durum === 'kabul' ? kume : bekleyen).add(t.takip_edilen));
+    return { benimId: o.user.id, kume, bekleyen };
   }
 
-  // Takibi aç/kapat. Girişsizse giriş sayfasına yollar, false döner.
-  async function takipDegistir(hedefId, suAnTakipte) {
+  // İstek gönder / geri çek / arkadaşlıktan çık. Girişsizse giriş sayfasına yollar.
+  async function takipDegistir(hedefId, suAnIliskili) {
     const o = await oturum();
     if (!o) { window.location.href = 'gunluk.html'; return false; }
-    if (suAnTakipte) {
+    if (suAnIliskili) {
       await istemci.from('takipler').delete()
         .eq('takip_eden', o.user.id).eq('takip_edilen', hedefId);
     } else {
-      await istemci.from('takipler').insert({ takip_eden: o.user.id, takip_edilen: hedefId });
+      await istemci.from('takipler').insert(
+        { takip_eden: o.user.id, takip_edilen: hedefId, durum: 'bekliyor' });
     }
     return true;
   }
 
+  // Bana gelen bekleyen istekler (gönderenlerin profilleriyle).
+  async function gelenIstekler() {
+    const o = await oturum();
+    if (!o) return [];
+    const { data: istekler } = await istemci.from('takipler')
+      .select('takip_eden').eq('takip_edilen', o.user.id).eq('durum', 'bekliyor');
+    const idler = (istekler || []).map(i => i.takip_eden);
+    if (idler.length === 0) return [];
+    const { data: profiller } = await istemci.from('profiller')
+      .select('id, kullanici_adi, avatar').in('id', idler);
+    return profiller || [];
+  }
+
+  // Gelen isteği yanıtla: kabul → durum 'kabul'; ret → satır silinir.
+  async function istekYanitla(gonderenId, kabulMu) {
+    const o = await oturum();
+    if (!o) return false;
+    if (kabulMu) {
+      const { error } = await istemci.from('takipler')
+        .update({ durum: 'kabul' })
+        .eq('takip_eden', gonderenId).eq('takip_edilen', o.user.id);
+      return !error;
+    }
+    const { error } = await istemci.from('takipler').delete()
+      .eq('takip_eden', gonderenId).eq('takip_edilen', o.user.id);
+    return !error;
+  }
+
   async function takipciSayisi(hedefId) {
     const { count } = await istemci.from('takipler')
-      .select('*', { count: 'exact', head: true }).eq('takip_edilen', hedefId);
+      .select('*', { count: 'exact', head: true })
+      .eq('takip_edilen', hedefId).eq('durum', 'kabul');
     return count ?? 0;
   }
 
   return { hazir: () => kuruldu, istemci, oturum, kayitOl, girisYap, cikisYap,
     hesapKutusunuCiz, takipEttiklerim, takipDegistir, takipciSayisi,
-    fotoYukle, fotoUrl };
+    gelenIstekler, istekYanitla, avatarKaydet, fotoYukle, fotoUrl };
 })();

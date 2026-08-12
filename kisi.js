@@ -1,4 +1,5 @@
-// EATER — herkese açık profil: bir kullanıcının günlüğü (salt okunur) + takip.
+// EATER — herkese açık profil: avatar, gelen arkadaşlık istekleri (kendi
+// profilinde), kabul edilmiş eater sayısı ve kişinin ATE dökümü.
 
 // Ziyaret kartı. mekanAdi/yer/yorum/favoriler kullanıcı üretimi olabilir — kacis() şart.
 function profilZiyaretHTML(z, mekanAdi, yer) {
@@ -18,6 +19,39 @@ function profilZiyaretHTML(z, mekanAdi, yer) {
       ${ziyaretFotolariHTML(z)}
       ${z.yorum ? `<p>${kacis(z.yorum)}</p>` : ''}
     </article>`;
+}
+
+function avatarHTML(profil, kendim) {
+  const gorsel = profil.avatar
+    ? `<img src="${kacis(eaterHesap.fotoUrl(profil.avatar))}" alt="Profile photo">`
+    : '<span class="avatar-bos" aria-hidden="true">👤</span>';
+  if (!kendim) return `<div class="avatar">${gorsel}</div>`;
+  return `
+    <button type="button" class="avatar avatar-tikla" id="btnAvatar"
+      title="Change profile photo" aria-label="Change profile photo">
+      ${gorsel}<span class="avatar-ipucu">📷</span>
+    </button>
+    <input type="file" id="avatarInput" accept="image/*" hidden>`;
+}
+
+function istekPaneliHTML(istekler) {
+  const satirlar = istekler.length === 0
+    ? '<p class="silik">No requests right now.</p>'
+    : istekler.map(k => `
+        <div class="istek-satir">
+          <a class="kisi-ad" href="kisi.html?id=${encodeURIComponent(k.id)}">${kacis(k.kullanici_adi)}</a>
+          <span class="istek-butonlar">
+            <button type="button" class="istek-kabul" data-id="${kacis(k.id)}"
+              title="Accept" aria-label="Accept">✓</button>
+            <button type="button" class="istek-ret" data-id="${kacis(k.id)}"
+              title="Decline" aria-label="Decline">✕</button>
+          </span>
+        </div>`).join('');
+  return `
+    <div class="istek-paneli">
+      <h3>Requests${istekler.length ? ` <span class="istek-sayi">${istekler.length}</span>` : ''}</h3>
+      ${satirlar}
+    </div>`;
 }
 
 async function profiliGoster() {
@@ -56,28 +90,63 @@ async function profiliGoster() {
 
   const kendim = takip && takip.benimId === id;
   const takipte = takip ? takip.kume.has(id) : false;
+  const istekte = takip ? takip.bekleyen.has(id) : false;
   const dugme = kendim ? '' : `
     <button type="button" id="btnTakip" class="takip-btn${takipte ? ' takipte' : ''}">
-      ${takipte ? '✓ Added' : 'Add Eaters'}
+      ${takipte ? '✓ Added' : (istekte ? 'Requested ✕' : 'Add Eaters')}
     </button>`;
+
+  const istekler = kendim ? await eaterHesap.gelenIstekler() : [];
 
   document.title = `${profil.kullanici_adi} — EATER`;
   kap.innerHTML = `
     <div class="panel">
-      <div class="kisi-satir">
-        <h2 class="profil-ad">${kacis(profil.kullanici_adi)}</h2>
-        ${dugme}
+      <div class="profil-ust">
+        <div class="avatar-alan">${avatarHTML(profil, kendim)}</div>
+        <div class="profil-bilgi">
+          <h2 class="profil-ad">${kacis(profil.kullanici_adi)}</h2>
+          ${profil.tanitim ? `<p>${kacis(profil.tanitim)}</p>` : ''}
+          <p class="silik">${takipciler} eater${takipciler === 1 ? '' : 's'} · ${ziyaretler.length} visit${ziyaretler.length === 1 ? '' : 's'}</p>
+        </div>
+        <div class="profil-sag">
+          ${kendim ? istekPaneliHTML(istekler) : dugme}
+        </div>
       </div>
-      ${profil.tanitim ? `<p>${kacis(profil.tanitim)}</p>` : ''}
-      <p class="silik">${takipciler} eater${takipciler === 1 ? '' : 's'} · ${ziyaretler.length} visit${ziyaretler.length === 1 ? '' : 's'}</p>
       ${ziyaretler.map(z => profilZiyaretHTML(z, ...isimYer(z))).join('') ||
         '<p class="silik">No entries yet.</p>'}
     </div>`;
 
+  // Takip / istek düğmesi: kabul edilmişse çıkar, bekliyorsa geri çeker, yoksa istek yollar.
   document.getElementById('btnTakip')?.addEventListener('click', async e => {
     e.target.disabled = true;
-    const oldu = await eaterHesap.takipDegistir(id, takipte);
+    const oldu = await eaterHesap.takipDegistir(id, takipte || istekte);
     if (oldu) profiliGoster();
+  });
+
+  // Gelen istekler: ✓ kabul, ✕ ret.
+  kap.querySelectorAll('.istek-kabul, .istek-ret').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      btn.disabled = true;
+      await eaterHesap.istekYanitla(btn.dataset.id, btn.classList.contains('istek-kabul'));
+      profiliGoster();
+    });
+  });
+
+  // Avatar yükleme (yalnız kendi profilinde).
+  const avatarBtn = document.getElementById('btnAvatar');
+  const avatarGirdi = document.getElementById('avatarInput');
+  avatarBtn?.addEventListener('click', () => avatarGirdi.click());
+  avatarGirdi?.addEventListener('change', async () => {
+    const dosya = avatarGirdi.files[0];
+    if (!dosya) return;
+    try {
+      const kucuk = await fotoKucult(dosya, 512, 0.85);
+      const { hata } = await eaterHesap.avatarKaydet(kucuk, profil.avatar);
+      if (hata) alert('Could not save the photo: ' + hata);
+      profiliGoster();
+    } catch {
+      alert("Couldn't process the image — try another one (HEIC isn't supported in every browser).");
+    }
   });
 }
 

@@ -58,11 +58,7 @@ function detayHTML(r) {
           ${r.neYenir.map((y, i) => `
             <li>
               <span class="yemek-no">${i + 1}</span>
-              <div class="yemek-icerik">
-                <span class="yemek-ad">${y.yemek}</span>
-                ${typeof y.kacKisiOnerdi === 'number' ? `<span class="yemek-sayi">recommended in ${y.kacKisiOnerdi} reviews</span>` : ''}
-                ${y.not ? `<span class="yemek-not">${y.not}</span>` : ''}
-              </div>
+              <span class="yemek-ad">${y.yemek}</span>
             </li>`).join('')}
         </ol>
       </section>

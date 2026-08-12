@@ -3,9 +3,10 @@
   "configurations": [
     {
       "name": "eater",
-      "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "8123"],
-      "port": 8123
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["-c", "cd /Users/halilcanbeyenal/Downloads/PROJELER/eater && python3 -m http.server ${PORT:-8123}"],
+      "port": 8123,
+      "autoPort": true
     }
   ]
 }

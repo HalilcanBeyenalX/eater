@@ -17,3 +17,9 @@ değildir; asıl koruma veritabanındaki satır seviyesi güvenlik (RLS) kuralla
 `docs/supabase-sema.sql` dosyasındaki "Ek 3" bloğunu SQL Editor'a yapıştırıp Run deyin.
 Blok idempotenttir; yanlışlıkla iki kez çalıştırmak hata vermez. Bu blok `yemek-fotolari`
 adında herkese açık bir Storage bucket'ı oluşturur — Dashboard → Storage altında görünür.
+
+## Ek 4 — Profil fotoğrafı ve arkadaşlık istekleri (11 Ağustos 2026)
+
+`docs/supabase-sema.sql` dosyasındaki "Ek 4" bloğunu SQL Editor'a yapıştırıp Run deyin.
+İdempotenttir. Bu ek çalıştırılmadan profil/Eaters sayfalarındaki istek akışı ve
+avatar yükleme hata verir (durum ve avatar sütunları eksik kalır).

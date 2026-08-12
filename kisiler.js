@@ -47,7 +47,7 @@ async function kisileriGoster() {
     return;
   }
   const { data: profiller, error } = await eaterHesap.istemci
-    .from('profiller').select('id, kullanici_adi, tanitim')
+    .from('profiller').select('id, kullanici_adi, tanitim, avatar')
     .order('created_at', { ascending: false }).limit(100);
   if (error) { kap.innerHTML = `<p class="panel hata">Could not load the list: ${kacis(error.message)}</p>`; return; }
 
@@ -56,16 +56,23 @@ async function kisileriGoster() {
   const satir = p => {
     const kendim = takip && takip.benimId === p.id;
     const takipte = takip ? takip.kume.has(p.id) : false;
+    const istekte = takip ? takip.bekleyen.has(p.id) : false;
     const dugme = kendim ? '' : `
       <button type="button" class="takip-btn${takipte ? ' takipte' : ''}"
-        data-id="${kacis(p.id)}" data-takipte="${takipte ? '1' : ''}">
-        ${takipte ? '✓ Added' : 'Add Eaters'}
+        data-id="${kacis(p.id)}" data-iliskili="${takipte || istekte ? '1' : ''}">
+        ${takipte ? '✓ Added' : (istekte ? 'Requested ✕' : 'Add Eaters')}
       </button>`;
+    const avatar = p.avatar
+      ? `<img class="avatar-mini" src="${kacis(eaterHesap.fotoUrl(p.avatar))}" alt="">`
+      : '<span class="avatar-mini avatar-bos" aria-hidden="true">👤</span>';
     return `
       <article class="ziyaret kisi-satir">
-        <div>
-          <a class="kisi-ad" href="kisi.html?id=${encodeURIComponent(p.id)}">${kacis(p.kullanici_adi)}</a>
-          ${p.tanitim ? `<p class="silik">${kacis(p.tanitim)}</p>` : ''}
+        <div class="kisi-sol">
+          ${avatar}
+          <div>
+            <a class="kisi-ad" href="kisi.html?id=${encodeURIComponent(p.id)}">${kacis(p.kullanici_adi)}</a>
+            ${p.tanitim ? `<p class="silik">${kacis(p.tanitim)}</p>` : ''}
+          </div>
         </div>
         <div class="kisi-butonlar">
           <button type="button" class="ozet-btn" data-id="${kacis(p.id)}"
@@ -76,17 +83,47 @@ async function kisileriGoster() {
       <div class="kisi-ozet" data-kisi="${kacis(p.id)}" hidden></div>`;
   };
 
+  const arama = (document.getElementById('eaterArama')?.value ?? '').trim();
+  let liste = profiller;
+  if (arama) {
+    const { data: bulunan } = await eaterHesap.istemci
+      .from('profiller').select('id, kullanici_adi, tanitim, avatar')
+      .ilike('kullanici_adi', `%${arama}%`).order('kullanici_adi').limit(50);
+    liste = bulunan || [];
+  }
+
   kap.innerHTML = `
     <div class="panel">
       <h2>Eaters</h2>
-      ${profiller.length === 0 ? '<p class="silik">Nobody here yet — be the first.</p>' : ''}
-      ${profiller.map(satir).join('')}
+      <div class="eater-arama">
+        <span class="arama-ikon" aria-hidden="true">🔍</span>
+        <input id="eaterArama" type="search" placeholder="Find Eaters by username…"
+          aria-label="Find Eaters" value="${kacis(arama)}">
+      </div>
+      ${liste.length === 0
+        ? `<p class="silik">${arama ? 'No Eaters match that name.' : 'Nobody here yet — be the first.'}</p>` : ''}
+      ${liste.map(satir).join('')}
     </div>`;
+
+  // Arama kutusu: yazdıkça (kısa bir beklemeyle) listeyi süzer.
+  const aramaKutusu = document.getElementById('eaterArama');
+  let aramaZamanlayici = null;
+  aramaKutusu.addEventListener('input', () => {
+    clearTimeout(aramaZamanlayici);
+    aramaZamanlayici = setTimeout(() => {
+      const imlec = aramaKutusu.value;
+      kisileriGoster().then(() => {
+        const yeni = document.getElementById('eaterArama');
+        yeni.focus();
+        yeni.setSelectionRange(imlec.length, imlec.length);
+      });
+    }, 350);
+  });
 
   kap.querySelectorAll('.takip-btn').forEach(btn => {
     btn.addEventListener('click', async () => {
       btn.disabled = true;
-      const oldu = await eaterHesap.takipDegistir(btn.dataset.id, btn.dataset.takipte === '1');
+      const oldu = await eaterHesap.takipDegistir(btn.dataset.id, btn.dataset.iliskili === '1');
       if (oldu) kisileriGoster();
     });
   });

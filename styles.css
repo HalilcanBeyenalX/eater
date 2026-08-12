@@ -383,7 +383,6 @@ body {
   border-radius: 50%; background: var(--altin);
   color: var(--kirmizi-derin); font-weight: 700; font-size: 12px;
 }
-.yemek-icerik { min-width: 0; }
 .yemek-ad { font-weight: 700; }
 .yemek-sayi { display: block; color: var(--altin-koyu); font-size: 12px; }
 .yemek-not { display: block; color: var(--krem-sonuk); font-size: 12.5px; }
@@ -402,12 +401,20 @@ body {
 /* Yan yana bloklarda etiket kolonunu daralt — değerler tek satıra sığsın */
 .satir-ikili .cift { grid-template-columns: 92px 1fr; gap: 10px 12px; font-size: 14px; }
 
-/* Ambiyans etiketleri dikey sırayla, eşit aralıklı */
+/* Ambiyans etiketleri — ortalanmış, sıkı ve düzenli rozet ızgarası */
 .ambiyans-listesi {
-  list-style: none; margin: 0 0 14px; padding: 0;
-  display: flex; flex-direction: column; align-items: flex-start; gap: 8px;
+  list-style: none; margin: 0 0 16px; padding: 0;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;
 }
-.ambiyans-listesi .etiket { width: auto; }
+.ambiyans-listesi .etiket { text-align: center; }
+
+/* Servis artı/eksi maddeleri kutucuk içinde */
+.blok.ikili .madde { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.blok.ikili .madde li {
+  padding: 9px 12px; font-size: 14px; line-height: 1.45;
+  border: 1px solid var(--kenar); border-radius: 10px;
+  background: var(--ortu-koyu);
+}
 
 /* Detay altındaki ATE paneli — sayfanın ortasında */
 .ate-panel { text-align: center; }
@@ -554,6 +561,72 @@ body {
   display: flex; align-items: center; justify-content: center;
 }
 .foto-buyutme img { max-width: 92vw; max-height: 92vh; border-radius: var(--yuvarlak); }
+
+/* --- Profil: avatar + istekler --- */
+.profil-ust {
+  display: flex; align-items: flex-start; gap: 16px;
+  padding-bottom: 16px; margin-bottom: 14px;
+  border-bottom: 1px solid var(--kenar);
+}
+.avatar, .avatar-mini {
+  display: grid; place-items: center; overflow: hidden; flex: none;
+  border: 2px solid var(--kenar); border-radius: 50%;
+  background: var(--yuzey-oyuk);
+}
+.avatar { width: 76px; height: 76px; position: relative; padding: 0; }
+.avatar img { width: 100%; height: 100%; object-fit: cover; }
+.avatar-bos { font-size: 30px; opacity: .6; }
+.avatar-tikla { cursor: pointer; }
+.avatar-tikla:hover { border-color: var(--altin); }
+.avatar-ipucu {
+  position: absolute; right: -2px; bottom: -2px;
+  width: 26px; height: 26px; display: grid; place-items: center;
+  border-radius: 50%; background: var(--altin); font-size: 13px;
+}
+.profil-bilgi { flex: 1; min-width: 0; }
+.profil-bilgi .profil-ad { margin: 0 0 4px; }
+.profil-sag { flex: none; max-width: 260px; }
+.istek-paneli {
+  padding: 10px 14px; border: 1px solid var(--kenar);
+  border-radius: var(--yuvarlak); background: var(--ortu-koyu);
+}
+.istek-paneli h3 { margin: 0 0 8px; font-size: 14px; color: var(--altin); }
+.istek-sayi {
+  display: inline-grid; place-items: center; min-width: 20px; height: 20px;
+  border-radius: 999px; background: var(--altin); color: var(--kirmizi-derin);
+  font-size: 12px; padding: 0 5px; margin-left: 4px;
+}
+.istek-satir {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 10px; padding: 5px 0; font-size: 14px;
+}
+.istek-butonlar { display: flex; gap: 6px; }
+.istek-kabul, .istek-ret {
+  width: 28px; height: 28px; padding: 0; line-height: 1;
+  border: none; border-radius: 50%; font-weight: 700; cursor: pointer;
+}
+.istek-kabul { background: var(--altin); color: var(--kirmizi-derin); }
+.istek-ret { background: var(--ortu-koyu); color: var(--krem-sonuk); border: 1px solid var(--kenar); }
+.istek-ret:hover { color: var(--krem); border-color: var(--krem-sonuk); }
+
+/* Eaters arama kutusu */
+.eater-arama {
+  display: flex; align-items: center; gap: 8px;
+  margin: 0 0 14px; padding: .35rem .9rem;
+  background: var(--yuzey-derin); border: 1px solid var(--kenar);
+  border-radius: 999px;
+}
+.eater-arama:focus-within { border-color: var(--altin); box-shadow: 0 0 0 4px var(--altin-hale); }
+.eater-arama input {
+  flex: 1; min-width: 0; padding: .4rem .2rem;
+  border: none; background: transparent; color: var(--krem); font: inherit;
+}
+.eater-arama input:focus { outline: none; }
+.eater-arama input::placeholder { color: var(--krem-silik); }
+.kisi-sol { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.avatar-mini { width: 40px; height: 40px; font-size: 17px; }
+.avatar-mini img { width: 100%; height: 100%; object-fit: cover; }
+img.avatar-mini { object-fit: cover; }
 
 /* --- Eaters: satır düğmeleri ve açılır ATE özeti --- */
 .kisi-butonlar { display: flex; align-items: center; gap: 8px; flex: none; }

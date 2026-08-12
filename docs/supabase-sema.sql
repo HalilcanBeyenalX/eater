@@ -95,3 +95,22 @@ create policy "yemek foto silme" on storage.objects
     bucket_id = 'yemek-fotolari'
     and auth.uid()::text = (storage.foldername(name))[1]
   );
+
+-- Ek 4 (11 Ağustos 2026): profil fotoğrafı + arkadaşlık istekleri.
+-- avatar: yemek-fotolari bucket'ındaki dosya yolu ({kullanici_id}/avatar-*.jpg).
+alter table profiller add column if not exists avatar text;
+
+-- Takip artık istek/kabul akışı: yeni satır 'bekliyor' başlar, hedef kabul edince 'kabul'.
+-- (Önce 'kabul' varsayılanıyla eklenir ki mevcut takipler arkadaş olarak kalsın.)
+alter table takipler add column if not exists durum text not null default 'kabul'
+  check (durum in ('bekliyor', 'kabul'));
+alter table takipler alter column durum set default 'bekliyor';
+
+-- İsteği yalnız hedef kişi yanıtlar; silmeyi (ret / geri çekme / çıkarma) iki taraf da yapabilir.
+drop policy if exists "takip guncelleme" on takipler;
+create policy "takip guncelleme" on takipler
+  for update using (auth.uid() = takip_edilen);
+
+drop policy if exists "takip silme" on takipler;
+create policy "takip silme" on takipler
+  for delete using (auth.uid() = takip_eden or auth.uid() = takip_edilen);
