@@ -139,3 +139,67 @@ function mesafeKm(a, b) {
 function mesafeMetni(km) {
   return km < 10 ? `~${ondalikTR(km)} km` : `~${Math.round(km).toLocaleString('en-US')} km`;
 }
+
+// --- Ate Points + kutlama ---
+
+// Her ziyaret 10 puan; yemek fotoğrafı eklendiyse +5. Puan veritabanında
+// tutulmaz, ziyaretlerden türetilir — böylece her yerde tutarlı kalır.
+function ziyaretAtePuani(z) {
+  return 10 + ((z.sevilen_yemek1_foto || z.sevilen_yemek2_foto) ? 5 : 0);
+}
+
+// Tam ekran "YOU ATE THAT" + konfeti. Tıklayınca ya da ~2,6 sn sonra kapanır.
+function kutlamaGoster(puan) {
+  const ortu = document.createElement('div');
+  ortu.className = 'kutlama';
+  ortu.innerHTML = `
+    <canvas class="kutlama-konfeti" aria-hidden="true"></canvas>
+    <div class="kutlama-metin">
+      <div class="kutlama-baslik">YOU ATE THAT</div>
+      <div class="kutlama-puan">+${puan} Ate Points</div>
+    </div>`;
+  document.body.appendChild(ortu);
+
+  const tuval = ortu.querySelector('canvas');
+  tuval.width = window.innerWidth;
+  tuval.height = window.innerHeight;
+  const ctx = tuval.getContext('2d');
+  const renkler = ['#F5B700', '#FFF3E4', '#C1121F', '#FFD966', '#FFFFFF'];
+  const parcalar = Array.from({ length: 150 }, () => ({
+    x: Math.random() * tuval.width,
+    y: -30 - Math.random() * tuval.height * 0.6,
+    en: 6 + Math.random() * 6, boy: 8 + Math.random() * 9,
+    hiz: 2.5 + Math.random() * 4,
+    don: Math.random() * Math.PI, donHiz: (Math.random() - 0.5) * 0.25,
+    salinim: Math.random() * 2 * Math.PI,
+    renk: renkler[(Math.random() * renkler.length) | 0]
+  }));
+  const baslangic = performance.now();
+  function ciz(t) {
+    if (!ortu.isConnected) return;
+    const gecen = t - baslangic;
+    ctx.clearRect(0, 0, tuval.width, tuval.height);
+    parcalar.forEach(p => {
+      p.y += p.hiz;
+      p.x += Math.sin(gecen / 300 + p.salinim) * 1.3;
+      p.don += p.donHiz;
+      ctx.save();
+      ctx.translate(p.x, p.y);
+      ctx.rotate(p.don);
+      ctx.fillStyle = p.renk;
+      ctx.fillRect(-p.en / 2, -p.boy / 2, p.en, p.boy);
+      ctx.restore();
+    });
+    if (gecen < 2600) requestAnimationFrame(ciz);
+    else { ortu.classList.add('kutlama-kapan'); setTimeout(() => ortu.remove(), 450); }
+  }
+  requestAnimationFrame(ciz);
+  ortu.addEventListener('click', () => ortu.remove());
+  // Emniyet: sekme arka planda kalıp animasyon duraklasa bile kutlama kapanır.
+  setTimeout(() => {
+    if (ortu.isConnected) {
+      ortu.classList.add('kutlama-kapan');
+      setTimeout(() => ortu.remove(), 450);
+    }
+  }, 3200);
+}

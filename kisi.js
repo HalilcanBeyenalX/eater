@@ -106,7 +106,8 @@ async function profiliGoster() {
         <div class="profil-bilgi">
           <h2 class="profil-ad">${kacis(profil.kullanici_adi)}</h2>
           ${profil.tanitim ? `<p>${kacis(profil.tanitim)}</p>` : ''}
-          <p class="silik">${takipciler} eater${takipciler === 1 ? '' : 's'} · ${ziyaretler.length} visit${ziyaretler.length === 1 ? '' : 's'}</p>
+          <p class="silik">${takipciler} eater${takipciler === 1 ? '' : 's'} · ${ziyaretler.length} visit${ziyaretler.length === 1 ? '' : 's'} ·
+            <span class="ate-puan">⭐ ${ziyaretler.reduce((t, z) => t + ziyaretAtePuani(z), 0)} Ate Points</span></p>
         </div>
         <div class="profil-sag">
           ${kendim ? istekPaneliHTML(istekler) : dugme}

@@ -294,6 +294,7 @@ async function ziyaretKaydet(kullaniciId) {
       yorum: alanDegeri('zYorum') || null
     });
     if (error) { hataKutusu.textContent = error.message; return; }
+    kutlamaGoster(10 + ((fotoYollari[1] || fotoYollari[2]) ? 5 : 0)); // 🎉 YOU ATE THAT
     document.getElementById('fZiyaret').reset();
     fotoTemizle(1); fotoTemizle(2);
     formSecim.ulke = ''; formSecim.sehir = ''; formSecim.mekan = '';

@@ -562,6 +562,33 @@ body {
 }
 .foto-buyutme img { max-width: 92vw; max-height: 92vh; border-radius: var(--yuvarlak); }
 
+/* --- Kutlama: YOU ATE THAT + konfeti --- */
+.kutlama {
+  position: fixed; inset: 0; z-index: 90;
+  display: grid; place-items: center;
+  background: rgba(0, 0, 0, .55);
+  transition: opacity .4s;
+}
+.kutlama-kapan { opacity: 0; }
+.kutlama-konfeti { position: absolute; inset: 0; width: 100%; height: 100%; }
+.kutlama-metin { position: relative; text-align: center; animation: kutlamaGiris .45s cubic-bezier(.2, 1.4, .4, 1); }
+.kutlama-baslik {
+  font-family: var(--serif); font-weight: 800;
+  font-size: clamp(38px, 9vw, 84px); letter-spacing: .06em;
+  color: var(--altin); text-shadow: 0 4px 24px rgba(0, 0, 0, .6);
+}
+.kutlama-puan {
+  margin-top: 10px; font-size: clamp(18px, 3.4vw, 28px);
+  font-weight: 700; color: var(--krem);
+}
+@keyframes kutlamaGiris {
+  from { transform: scale(.55); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Profildeki Ate Points vurgusu */
+.ate-puan { color: var(--altin); font-weight: 700; }
+
 /* --- Profil: avatar + istekler --- */
 .profil-ust {
   display: flex; align-items: flex-start; gap: 16px;
@@ -676,6 +703,18 @@ img.avatar-mini { object-fit: cover; }
   height: 380px; border-radius: calc(var(--yuvarlak) - 4px);
 }
 .harita-notu { margin: .45rem .4rem .15rem; font-size: .8rem; }
+.harita-arac {
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  margin: .55rem .2rem 0;
+}
+.harita-arac button {
+  padding: .5rem .95rem; border: none; border-radius: 999px;
+  background: var(--altin); color: var(--kirmizi-derin);
+  font-weight: 600; cursor: pointer; flex: none;
+}
+.harita-arac button:hover { background: var(--altin-koyu); }
+#rotaBilgi { font-size: .85rem; }
+.benim-pin { font-size: 26px; text-shadow: 0 2px 6px rgba(0, 0, 0, .5); }
 /* Leaflet balonları temaya uysun */
 .leaflet-popup-content-wrapper {
   background: var(--yuzey-derin); color: var(--krem);
