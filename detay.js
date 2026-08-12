@@ -54,12 +54,15 @@ function detayHTML(r) {
     <div class="satir-ikili">
       <section class="blok">
         <h2>What to eat</h2>
-        <ol class="yemekler">
-          ${r.neYenir.map(y => `
+        <ol class="yemek-kutulari">
+          ${r.neYenir.map((y, i) => `
             <li>
-              <span class="yemek-ad">${y.yemek}</span>
-              ${typeof y.kacKisiOnerdi === 'number' ? `<span class="yemek-sayi">recommended in ${y.kacKisiOnerdi} reviews</span>` : ''}
-              ${y.not ? `<span class="yemek-not">${y.not}</span>` : ''}
+              <span class="yemek-no">${i + 1}</span>
+              <div class="yemek-icerik">
+                <span class="yemek-ad">${y.yemek}</span>
+                ${typeof y.kacKisiOnerdi === 'number' ? `<span class="yemek-sayi">recommended in ${y.kacKisiOnerdi} reviews</span>` : ''}
+                ${y.not ? `<span class="yemek-not">${y.not}</span>` : ''}
+              </div>
             </li>`).join('')}
         </ol>
       </section>
@@ -69,7 +72,7 @@ function detayHTML(r) {
           ${r.ambiyans.etiketler.map(e => `<li class="etiket">${e}</li>`).join('')}
         </ul>
         <dl class="cift">
-          <dt>Dress code</dt><dd>${veyaYok(r.ambiyans.dressCode, 'No stated dress code')}</dd>
+          <dt>Dress code</dt><dd>${veyaYok(r.ambiyans.dressCode, 'None stated')}</dd>
           <dt>Good for</dt><dd>${r.ambiyans.uygun.length ? r.ambiyans.uygun.join(', ') : BOS_ISARET}</dd>
         </dl>
       </section>
@@ -133,7 +136,8 @@ function bulVeCiz() {
 async function gunlukBaglantisiniEkle(r) {
   const kutu = document.createElement('div');
   kutu.className = 'panel';
-  kutu.innerHTML = `<a class="sekme sekme-aktif" href="gunluk.html?restoran=${encodeURIComponent(r.id)}">+ Add to Eat Book</a>
+  kutu.className = 'panel ate-panel';
+  kutu.innerHTML = `<a class="sekme sekme-aktif ate-btn" href="gunluk.html?restoran=${encodeURIComponent(r.id)}">+ Add to ATE</a>
     <span id="senPuanlarin"></span>
     <div id="yiyiciFavorileri"></div>`;
   document.querySelector('main').appendChild(kutu);

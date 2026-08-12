@@ -141,7 +141,7 @@ function fotoTemizle(n) {
 function ziyaretFormuHTML() {
   return `
     <div class="panel">
-      <h2>Add a visit</h2>
+      <h2>WHAT I ATE</h2>
       <form id="fZiyaret" class="dikey-form">
         <div id="mekanSecimi">${mekanSecimHTML()}</div>
         <label>Date <input type="date" id="zTarih" required></label>

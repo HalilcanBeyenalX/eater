@@ -58,7 +58,7 @@ async function profiliGoster() {
   const takipte = takip ? takip.kume.has(id) : false;
   const dugme = kendim ? '' : `
     <button type="button" id="btnTakip" class="takip-btn${takipte ? ' takipte' : ''}">
-      ${takipte ? '✓ Your Eater' : '+ Add Eater'}
+      ${takipte ? '✓ Added' : 'Add Eaters'}
     </button>`;
 
   document.title = `${profil.kullanici_adi} — EATER`;
