@@ -1,7 +1,7 @@
 // EATER — app.js ve detay.js tarafından paylaşılan çizim yardımcıları.
 
-// Site globale açıldı: fiyat simgesi para biriminden bağımsız $ ölçeği.
-const FIYAT_SEMBOLLERI = { ucuz: '$', orta: '$$', pahali: '$$$' };
+// Fiyat rozeti ülkenin para birimiyle yazılır: ₺₺, €€€, ¥ gibi.
+const PARA_BIRIMLERI = { 'Turkey': '₺', 'Japan': '¥', 'France': '€', 'Spain': '€' };
 const FIYAT_ADLARI = { ucuz: 'Budget', orta: 'Mid-range', pahali: 'High-end' };
 
 // oduller[].tip -> kısa, rozete uygun etiket. Tanınmayan bir tip
@@ -49,10 +49,11 @@ function puanRozeti(etiket, puan) {
   </span>`;
 }
 
-function fiyatEtiketi(segment) {
-  const sembol = FIYAT_SEMBOLLERI[segment];
-  if (!sembol) return '<span class="fiyat fiyat-yok">—</span>';
-  return `<span class="fiyat" title="${FIYAT_ADLARI[segment]} price range">${sembol}</span>`;
+function fiyatEtiketi(segment, ulke) {
+  const seviye = { ucuz: 1, orta: 2, pahali: 3 }[segment];
+  if (!seviye) return '<span class="fiyat fiyat-yok">—</span>';
+  const birim = PARA_BIRIMLERI[ulke] || '$';
+  return `<span class="fiyat" title="${FIYAT_ADLARI[segment]} price range">${birim.repeat(seviye)}</span>`;
 }
 
 // Kullanıcıdan gelen metinler (yorum, kullanıcı adı, mekân adı) HTML'e ham
@@ -71,7 +72,7 @@ function gezinmeHTML(aktif) {
     `<a class="sekme${aktif === anahtar ? ' sekme-aktif' : ''}" href="${href}">${ad}</a>`;
   return `
     <nav class="gezinme">
-      ${sekme('index.html', 'Explore', 'kesfet')}
+      ${sekme('index.html', 'EATPLORE', 'kesfet')}
       ${sekme('gunluk.html', 'ATE', 'gunluk')}
       ${sekme('kisiler.html', 'Eaters', 'kisiler')}
       <span id="hesapKutusu" class="hesap-kutusu"></span>

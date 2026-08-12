@@ -26,11 +26,33 @@ function girisFormuHTML() {
     </div>`;
 }
 
+// Puanlar kaydıraçla verilir; kullanıcı dokunmadıysa puan null kalır ("—").
 function puanAlani(id, etiket) {
   return `
-    <label class="puan-alani">${etiket}
-      <input type="number" id="${id}" min="0" max="10" step="0.1" placeholder="—">
+    <label class="puan-alani">
+      <span class="puan-ust">${etiket} <output id="${id}Deger" class="puan-deger">—</output></span>
+      <input type="range" id="${id}" min="0" max="10" step="0.1" value="5">
     </label>`;
+}
+
+function kaydiraclariKur() {
+  ['zYemek', 'zAmbiyans', 'zServis'].forEach(id => {
+    const kaydirac = document.getElementById(id);
+    kaydirac?.addEventListener('input', () => {
+      kaydirac.dataset.dokunuldu = '1';
+      document.getElementById(id + 'Deger').textContent = Number(kaydirac.value).toFixed(1);
+    });
+  });
+}
+
+function puanlariSifirla() {
+  ['zYemek', 'zAmbiyans', 'zServis'].forEach(id => {
+    const kaydirac = document.getElementById(id);
+    if (!kaydirac) return;
+    kaydirac.value = 5;
+    delete kaydirac.dataset.dokunuldu;
+    document.getElementById(id + 'Deger').textContent = '—';
+  });
 }
 
 function secenekHTML(deger, metin, secili) {
@@ -232,8 +254,8 @@ function alanDegeri(id) {
 }
 
 function sayiVeyaNull(id) {
-  const ham = document.getElementById(id).value;
-  return ham === '' ? null : Number(ham);
+  const kaydirac = document.getElementById(id);
+  return kaydirac.dataset.dokunuldu ? Number(kaydirac.value) : null;
 }
 
 async function ziyaretKaydet(kullaniciId) {
@@ -296,6 +318,7 @@ async function ziyaretKaydet(kullaniciId) {
     if (error) { hataKutusu.textContent = error.message; return; }
     kutlamaGoster(10 + ((fotoYollari[1] || fotoYollari[2]) ? 5 : 0)); // 🎉 YOU ATE THAT
     document.getElementById('fZiyaret').reset();
+    puanlariSifirla();
     fotoTemizle(1); fotoTemizle(2);
     formSecim.ulke = ''; formSecim.sehir = ''; formSecim.mekan = '';
     document.getElementById('mekanSecimi').innerHTML = mekanSecimHTML();
@@ -345,6 +368,7 @@ async function sayfayiKur() {
   kap.innerHTML = ziyaretFormuHTML();
   mekanSecimBagla();
   fotoBaglariniKur();
+  kaydiraclariKur();
   document.getElementById('fZiyaret').addEventListener('submit', e => {
     e.preventDefault();
     ziyaretKaydet(o.user.id);

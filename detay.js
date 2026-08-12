@@ -40,7 +40,7 @@ function detayHTML(r) {
   return `
     <div class="detay-basi">
       <h1 class="detay-isim">${r.isim}</h1>
-      <p class="detay-yer">${r.semt}, ${r.sehir} · ${r.mutfak.join(', ')} · ${fiyatEtiketi(r.fiyat.segment)}</p>
+      <p class="detay-yer">${r.semt}, ${r.sehir} · ${r.mutfak.join(', ')} · ${fiyatEtiketi(r.fiyat.segment, r.ulke)}</p>
       <div class="isaretler">${r.oduller.map(o => `<span class="odul">★ ${odulEtiketi(o.tip)}</span>`).join('')}</div>
       ${r.oduller.length ? `<ul class="odul-detaylari silik">${r.oduller.map(o => `<li>${o.detay}</li>`).join('')}</ul>` : ''}
     </div>
@@ -139,13 +139,13 @@ async function kalbiKur(r) {
   btn.className = 'kalp-btn';
   btn.title = 'Save to Want to go';
   btn.setAttribute('aria-label', 'Save to Want to go');
-  btn.textContent = '♡';
+  btn.textContent = '🤍';
   bas.appendChild(btn);
 
   const durum = await eaterHesap.favoriMi(r.id); // girişsizse null
   let favori = durum?.favori ?? false;
   const boya = () => {
-    btn.textContent = favori ? '❤' : '♡';
+    btn.textContent = favori ? '❤️' : '🤍';
     btn.classList.toggle('kalpli', favori);
   };
   boya();
@@ -163,7 +163,7 @@ async function gunlukBaglantisiniEkle(r) {
   const kutu = document.createElement('div');
   kutu.className = 'panel';
   kutu.className = 'panel ate-panel';
-  kutu.innerHTML = `<a class="sekme sekme-aktif ate-btn" href="gunluk.html?restoran=${encodeURIComponent(r.id)}">+ Add to ATE</a>
+  kutu.innerHTML = `<a class="sekme sekme-aktif ate-btn" href="gunluk.html?restoran=${encodeURIComponent(r.id)}">I ATE</a>
     <span id="senPuanlarin"></span>
     <div id="yiyiciFavorileri"></div>`;
   document.querySelector('main').appendChild(kutu);

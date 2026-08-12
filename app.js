@@ -18,7 +18,7 @@ function kartHTML(r) {
       <div class="kart-govde">
         <div class="kart-ust">
           <h2 class="kart-isim">${r.isim}</h2>
-          ${fiyatEtiketi(r.fiyat.segment)}
+          ${fiyatEtiketi(r.fiyat.segment, r.ulke)}
         </div>
         <p class="kart-yer">${r.semt} · ${r.mutfak.join(', ')}${mesafe}</p>
         <div class="rozetler">

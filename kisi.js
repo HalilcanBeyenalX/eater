@@ -207,7 +207,7 @@ async function profiliGoster() {
           .map(fid => RESTORANLAR.find(x => x.id === fid))
           .filter(Boolean);
         return kalpliler.length ? `
-          <h3 class="favori-baslik">❤ Want to go</h3>
+          <h3 class="favori-baslik">Want to go</h3>
           <div class="favori-listesi">
             ${kalpliler.map(r => `
               <a class="favori-cip" href="detay.html?id=${encodeURIComponent(r.id)}">
