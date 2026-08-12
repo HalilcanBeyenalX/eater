@@ -114,3 +114,18 @@ create policy "takip guncelleme" on takipler
 drop policy if exists "takip silme" on takipler;
 create policy "takip silme" on takipler
   for delete using (auth.uid() = takip_eden or auth.uid() = takip_edilen);
+
+-- Ek 5 (12 Ağustos 2026): "Want to go" — gitmek istenen restoranlar (kalp).
+create table if not exists favoriler (
+  kullanici uuid not null references auth.users(id) on delete cascade,
+  restoran_id text not null,
+  created_at timestamptz not null default now(),
+  primary key (kullanici, restoran_id)
+);
+alter table favoriler enable row level security;
+drop policy if exists "favori okuma" on favoriler;
+create policy "favori okuma" on favoriler for select using (true);
+drop policy if exists "favori ekleme" on favoriler;
+create policy "favori ekleme" on favoriler for insert with check (auth.uid() = kullanici);
+drop policy if exists "favori silme" on favoriler;
+create policy "favori silme" on favoriler for delete using (auth.uid() = kullanici);

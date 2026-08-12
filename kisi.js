@@ -21,6 +21,91 @@ function profilZiyaretHTML(z, mekanAdi, yer) {
     </article>`;
 }
 
+// Top cuisines satırındaki emoji eşlemesi; listede olmayan mutfak 🍴 alır.
+const MUTFAK_EMOJI = {
+  'Steakhouse': '🥩', 'Meat': '🥩', 'Grill': '🥩', 'Kobe Beef': '🥩', 'Wagyu': '🥩', 'Teppanyaki': '🥩',
+  'Japanese': '🍣', 'Sushi': '🍣', 'Ramen': '🍜', 'Udon': '🍜', 'Tonkotsu': '🍜', 'Japanese Noodles': '🍜',
+  'Gyoza': '🥟', 'Izakaya': '🏮', 'Yakitori': '🍢',
+  'Italian': '🍝', 'Pizza': '🍕', 'French': '🍷', 'Brasserie': '🍷', 'Luxury Bistro': '🍷',
+  'Turkish': '🇹🇷', 'Modern Turkish': '🇹🇷', 'Meyhane': '🥂', 'Anatolian': '🇹🇷', 'Modern Anatolian': '🇹🇷',
+  'Spanish': '🥘', 'Traditional Spanish': '🥘', 'Modern Spanish': '🥘', 'Catalan': '🥘', 'Castilian': '🥘',
+  'Seafood': '🐟', 'Black Sea': '🐟', 'Mediterranean': '🫒',
+  'Fine Dining': '🍽️', 'Creative': '✨', 'Contemporary': '✨', 'Luxury Dining': '🍽️',
+  'Cocktail Bar': '🍸', 'Mixology': '🍸', 'Specialty Coffee': '☕', 'Cafe': '☕',
+  'Patisserie': '🥐', 'Breakfast': '🍳', 'Peruvian': '🐙', 'Latin American': '🌎',
+  'Chinese': '🥢', 'Turk-Asian': '🏮', 'Asian Fusion': '🥢'
+};
+
+// İstatistik paneli: kaç yer/şehir/ülke, üyelik tarihi, en çok tercih edilen
+// mutfaklar (ziyaret payı yüzdesi) ve kişinin verdiği ortalama puanlar.
+function profilIstatistikHTML(ziyaretler, mekanlar, profil) {
+  const uyeTarihi = profil.created_at
+    ? new Date(profil.created_at).toLocaleDateString('en-US',
+        { year: 'numeric', month: 'long', day: 'numeric' })
+    : null;
+  if (ziyaretler.length === 0) {
+    return uyeTarihi ? `<p class="silik ist-uye">Member since ${uyeTarihi}</p>` : '';
+  }
+
+  const yerler = new Set(), sehirler = new Set(), ulkeler = new Set();
+  ziyaretler.forEach(z => {
+    if (z.restoran_id) {
+      const r = RESTORANLAR.find(x => x.id === z.restoran_id);
+      yerler.add('r:' + z.restoran_id);
+      if (r) { sehirler.add(r.sehir); ulkeler.add(r.ulke); }
+    } else if (z.mekan_id) {
+      const m = mekanlar.find(x => x.id === z.mekan_id);
+      yerler.add('m:' + z.mekan_id);
+      if (m) { sehirler.add(m.sehir); ulkeler.add(m.ulke); }
+    }
+  });
+
+  // Mutfak payları: yalnız katalog ziyaretleri (kendi eklenen mekânların mutfağı yok).
+  const sayim = new Map();
+  let katalogZiyaret = 0;
+  ziyaretler.forEach(z => {
+    if (!z.restoran_id) return;
+    const r = RESTORANLAR.find(x => x.id === z.restoran_id);
+    if (!r) return;
+    katalogZiyaret++;
+    new Set(r.mutfak).forEach(m => sayim.set(m, (sayim.get(m) || 0) + 1));
+  });
+  const enCokTercih = [...sayim.entries()]
+    .sort((a, b) => b[1] - a[1]).slice(0, 3)
+    .map(([mutfak, adet]) => `
+      <div class="ist-satir">
+        <span>${MUTFAK_EMOJI[mutfak] || '🍴'} ${kacis(mutfak)}</span>
+        <strong>${Math.round(adet / katalogZiyaret * 100)}%</strong>
+      </div>`).join('');
+
+  const ortalama = alan => {
+    const degerler = ziyaretler.map(z => z[alan]).filter(x => typeof x === 'number');
+    return degerler.length
+      ? (degerler.reduce((a, b) => a + b, 0) / degerler.length).toFixed(1) : '—';
+  };
+
+  const yerMetni = `${yerler.size} restaurant${yerler.size === 1 ? '' : 's'}`;
+  const sehirMetni = `${sehirler.size} ${sehirler.size === 1 ? 'city' : 'cities'}`;
+  const ulkeMetni = `${ulkeler.size} ${ulkeler.size === 1 ? 'country' : 'countries'}`;
+  return `
+    <div class="profil-istatistik">
+      <p class="ist-ozet">${yerMetni} · ${sehirMetni} · ${ulkeMetni}</p>
+      ${uyeTarihi ? `<p class="silik ist-uye">Member since ${uyeTarihi}</p>` : ''}
+      <div class="ist-cift">
+        <div class="ist-blok">
+          <h3>Top cuisines</h3>
+          ${enCokTercih || '<p class="silik">No catalog visits yet.</p>'}
+        </div>
+        <div class="ist-blok">
+          <h3>Average scores</h3>
+          <div class="ist-satir"><span>Food</span><strong>${ortalama('yemek_puan')}</strong></div>
+          <div class="ist-satir"><span>Ambiance</span><strong>${ortalama('ambiyans_puan')}</strong></div>
+          <div class="ist-satir"><span>Service</span><strong>${ortalama('servis_puan')}</strong></div>
+        </div>
+      </div>
+    </div>`;
+}
+
 function avatarHTML(profil, kendim) {
   const gorsel = profil.avatar
     ? `<img src="${kacis(eaterHesap.fotoUrl(profil.avatar))}" alt="Profile photo">`
@@ -67,11 +152,12 @@ async function profiliGoster() {
     .from('profiller').select('*').eq('id', id).single();
   if (error || !profil) { kap.innerHTML = '<p class="panel">Profile not found.</p>'; return; }
 
-  const [{ data: ziyaretler = [] }, takipciler, takip] = await Promise.all([
+  const [{ data: ziyaretler = [] }, takipciler, takip, favoriIdler] = await Promise.all([
     eaterHesap.istemci.from('ziyaretler').select('*')
       .eq('kullanici', id).order('tarih', { ascending: false }),
     eaterHesap.takipciSayisi(id),
-    eaterHesap.takipEttiklerim()
+    eaterHesap.takipEttiklerim(),
+    eaterHesap.favorilerim(id)
   ]);
   const mekanIdler = ziyaretler.filter(z => z.mekan_id).map(z => z.mekan_id);
   let mekanlar = [];
@@ -113,8 +199,22 @@ async function profiliGoster() {
           ${kendim ? istekPaneliHTML(istekler) : dugme}
         </div>
       </div>
+      ${profilIstatistikHTML(ziyaretler, mekanlar, profil)}
       ${ziyaretler.map(z => profilZiyaretHTML(z, ...isimYer(z))).join('') ||
         '<p class="silik">No entries yet.</p>'}
+      ${(() => {
+        const kalpliler = favoriIdler
+          .map(fid => RESTORANLAR.find(x => x.id === fid))
+          .filter(Boolean);
+        return kalpliler.length ? `
+          <h3 class="favori-baslik">❤ Want to go</h3>
+          <div class="favori-listesi">
+            ${kalpliler.map(r => `
+              <a class="favori-cip" href="detay.html?id=${encodeURIComponent(r.id)}">
+                ${kacis(r.isim)} <span class="silik">· ${kacis(r.sehir)}</span>
+              </a>`).join('')}
+          </div>` : '';
+      })()}
     </div>`;
 
   // Takip / istek düğmesi: kabul edilmişse çıkar, bekliyorsa geri çeker, yoksa istek yollar.

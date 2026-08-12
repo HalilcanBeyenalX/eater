@@ -124,7 +124,37 @@ function bulVeCiz() {
 
   document.title = `${r.isim} — EATER`;
   kap.innerHTML = detayHTML(r);
+  kalbiKur(r);
   gunlukBaglantisiniEkle(r);
+}
+
+// Sağ üstteki kalp: "Want to go" listesine ekler/çıkarır (Ek 5). Girişsiz
+// tıklamada giriş sayfasına gider; Supabase yoksa kalp hiç görünmez.
+async function kalbiKur(r) {
+  if (!eaterHesap.hazir()) return;
+  const bas = document.querySelector('.detay-basi');
+  if (!bas) return;
+  const btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'kalp-btn';
+  btn.title = 'Save to Want to go';
+  btn.setAttribute('aria-label', 'Save to Want to go');
+  btn.textContent = '♡';
+  bas.appendChild(btn);
+
+  const durum = await eaterHesap.favoriMi(r.id); // girişsizse null
+  let favori = durum?.favori ?? false;
+  const boya = () => {
+    btn.textContent = favori ? '❤' : '♡';
+    btn.classList.toggle('kalpli', favori);
+  };
+  boya();
+  btn.addEventListener('click', async () => {
+    btn.disabled = true;
+    const oldu = await eaterHesap.favoriDegistir(r.id, favori);
+    if (oldu) { favori = !favori; boya(); }
+    btn.disabled = false;
+  });
 }
 
 // Detaydan günlüğe geçiş + girişli kullanıcıya son ziyaretinin puanlarını

@@ -88,6 +88,34 @@ const eaterHesap = (() => {
     return { yol };
   }
 
+  // --- Want to go / kalp listesi (Ek 5: favoriler) ---
+
+  async function favorilerim(kullaniciId) {
+    const { data } = await istemci.from('favoriler').select('restoran_id')
+      .eq('kullanici', kullaniciId).order('created_at', { ascending: false });
+    return (data || []).map(f => f.restoran_id);
+  }
+
+  // Girişli kullanıcı bu restoranı kalplemiş mi; girişsizse null.
+  async function favoriMi(restoranId) {
+    const o = await oturum();
+    if (!o) return null;
+    const { data } = await istemci.from('favoriler').select('restoran_id')
+      .eq('kullanici', o.user.id).eq('restoran_id', restoranId).limit(1);
+    return { favori: !!(data && data.length) };
+  }
+
+  async function favoriDegistir(restoranId, suAnFavori) {
+    const o = await oturum();
+    if (!o) { window.location.href = 'gunluk.html'; return false; }
+    const { error } = suAnFavori
+      ? await istemci.from('favoriler').delete()
+          .eq('kullanici', o.user.id).eq('restoran_id', restoranId)
+      : await istemci.from('favoriler').insert(
+          { kullanici: o.user.id, restoran_id: restoranId });
+    return !error;
+  }
+
   // --- Takip / arkadaşlık istekleri (Ek 4: takipler.durum) ---
 
   // Girişli kullanıcının ilişki kümeleri: kume = kabul edilmiş takipler,
@@ -154,5 +182,6 @@ const eaterHesap = (() => {
 
   return { hazir: () => kuruldu, istemci, oturum, kayitOl, girisYap, cikisYap,
     hesapKutusunuCiz, takipEttiklerim, takipDegistir, takipciSayisi,
-    gelenIstekler, istekYanitla, avatarKaydet, fotoYukle, fotoUrl };
+    gelenIstekler, istekYanitla, avatarKaydet, fotoYukle, fotoUrl,
+    favorilerim, favoriMi, favoriDegistir };
 })();

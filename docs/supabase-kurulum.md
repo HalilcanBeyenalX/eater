@@ -23,3 +23,8 @@ adında herkese açık bir Storage bucket'ı oluşturur — Dashboard → Storag
 `docs/supabase-sema.sql` dosyasındaki "Ek 4" bloğunu SQL Editor'a yapıştırıp Run deyin.
 İdempotenttir. Bu ek çalıştırılmadan profil/Eaters sayfalarındaki istek akışı ve
 avatar yükleme hata verir (durum ve avatar sütunları eksik kalır).
+
+## Ek 5 — Want to go / kalp listesi (12 Ağustos 2026)
+
+`docs/supabase-sema.sql` dosyasındaki "Ek 5" bloğunu SQL Editor'a yapıştırıp Run deyin.
+İdempotenttir. Çalıştırılmadan detay sayfasındaki kalp kaydetmez.
