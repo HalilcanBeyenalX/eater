@@ -643,15 +643,28 @@ img.avatar-mini { object-fit: cover; }
   border-radius: 0 0 var(--yuvarlak) var(--yuvarlak);
   background: var(--ortu-koyu);
 }
-.ozet-ziyaret { padding: 8px 0; border-bottom: 1px solid var(--kenar); }
-.ozet-ziyaret:last-child { border-bottom: none; }
-.ozet-ust { display: flex; justify-content: space-between; gap: 10px; font-size: 14px; }
-.ozet-puanlar { display: flex; gap: 6px; margin-top: 4px; flex-wrap: wrap; }
-.mini-puan {
-  font-size: 11.5px; padding: 2px 8px; border-radius: 999px;
-  border: 1px solid var(--kenar); color: var(--altin);
+/* Tek satır: foto · mekân adı · puan rozetleri · tarih — dikeyde ortalı, simetrik. */
+.ozet-ziyaret {
+  display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+  padding: 10px 0; border-bottom: 1px solid var(--kenar);
 }
-.kisi-ozet .ziyaret-foto { width: 64px; height: 64px; }
+.ozet-ziyaret:last-child { border-bottom: none; }
+.ozet-foto {
+  width: 64px; height: 64px; flex: none;
+  border-radius: 12px; border: 1px solid var(--kenar);
+  object-fit: cover; cursor: zoom-in;
+}
+.ozet-foto-bos {
+  display: grid; place-items: center;
+  background: var(--ortu-koyu); font-size: 26px; cursor: default;
+}
+.ozet-ad { flex: 1; min-width: 140px; font-size: 15px; }
+.ozet-puanlar { display: flex; gap: 6px; flex-wrap: wrap; flex: none; }
+.ozet-tarih { flex: none; font-size: 12.5px; }
+.mini-puan {
+  font-size: 11.5px; padding: 3px 9px; border-radius: 999px;
+  border: 1px solid var(--kenar); color: var(--altin); white-space: nowrap;
+}
 
 /* --- Şehir haritası --- */
 .harita-bolumu {

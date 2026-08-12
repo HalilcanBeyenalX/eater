@@ -90,7 +90,7 @@ async function profiliGoster() {
 
   const kendim = takip && takip.benimId === id;
   const takipte = takip ? takip.kume.has(id) : false;
-  const istekte = takip ? takip.bekleyen.has(id) : false;
+  const istekte = takip?.bekleyen?.has(id) ?? false; // eski önbellekli hesap.js'te bekleyen olmayabilir
   const dugme = kendim ? '' : `
     <button type="button" id="btnTakip" class="takip-btn${takipte ? ' takipte' : ''}">
       ${takipte ? '✓ Added' : (istekte ? 'Requested ✕' : 'Add Eaters')}

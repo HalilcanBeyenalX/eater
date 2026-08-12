@@ -1,20 +1,23 @@
 // EATER — Eaters: herkese açık profil listesi + takip ("Add Eaters") +
 // satır başına açılır ATE özeti (gittiği yerler, puanlar, fotoğraflar).
 
-// Bir kişinin son ziyaretlerinin kompakt satırı. Tüm metinler kacis()ten geçer.
+// Bir kişinin son ziyaretlerinin tek satırlık özeti: foto · mekân · puanlar · tarih.
 function ozetZiyaretHTML(z, mekanAdi) {
   const puan = (etiket, deger) =>
     typeof deger === 'number' ? `<span class="mini-puan">${etiket} ${ondalikTR(deger)}</span>` : '';
+  const yol = z.sevilen_yemek1_foto || z.sevilen_yemek2_foto;
+  const foto = yol
+    ? `<img class="ozet-foto ziyaret-foto" src="${kacis(eaterHesap.fotoUrl(yol))}"
+         alt="Food photo" loading="lazy">`
+    : '<span class="ozet-foto ozet-foto-bos" aria-hidden="true">🍽️</span>';
   return `
     <div class="ozet-ziyaret">
-      <div class="ozet-ust">
-        <strong>${kacis(mekanAdi)}</strong>
-        <span class="silik">${kacis(z.tarih)}</span>
-      </div>
-      <div class="ozet-puanlar">
+      ${foto}
+      <strong class="ozet-ad">${kacis(mekanAdi)}</strong>
+      <span class="ozet-puanlar">
         ${puan('Food', z.yemek_puan)}${puan('Ambiance', z.ambiyans_puan)}${puan('Service', z.servis_puan)}
-      </div>
-      ${ziyaretFotolariHTML(z)}
+      </span>
+      <span class="silik ozet-tarih">${kacis(z.tarih)}</span>
     </div>`;
 }
 
@@ -56,7 +59,7 @@ async function kisileriGoster() {
   const satir = p => {
     const kendim = takip && takip.benimId === p.id;
     const takipte = takip ? takip.kume.has(p.id) : false;
-    const istekte = takip ? takip.bekleyen.has(p.id) : false;
+    const istekte = takip?.bekleyen?.has(p.id) ?? false; // eski önbellekli hesap.js'te bekleyen olmayabilir
     const dugme = kendim ? '' : `
       <button type="button" class="takip-btn${takipte ? ' takipte' : ''}"
         data-id="${kacis(p.id)}" data-iliskili="${takipte || istekte ? '1' : ''}">
