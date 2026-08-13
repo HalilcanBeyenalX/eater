@@ -760,6 +760,11 @@ img.avatar-mini { object-fit: cover; }
 .akis-ust { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
 .akis-kim { display: flex; flex-direction: column; min-width: 0; }
 .akis-kim .silik { font-size: 13px; }
+.akis-nerede { display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap; }
+.akis-mekan {
+  font-family: var(--serif); font-weight: 700; font-size: 18px;
+  color: var(--altin); text-transform: uppercase; letter-spacing: .03em;
+}
 .akis-fotolar { display: grid; gap: 6px; }
 .akis-iki { grid-template-columns: 1fr 1fr; }
 .akis-foto {
@@ -767,7 +772,14 @@ img.avatar-mini { object-fit: cover; }
   object-fit: cover; border-radius: 14px;
   border: 1px solid var(--kenar); cursor: zoom-in;
 }
-.akis-puanlar { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+.akis-puanlar {
+  display: flex; gap: 10px; flex-wrap: wrap;
+  justify-content: center; margin-top: 12px;
+}
+.akis-puanlar .mini-puan {
+  font-size: 13.5px; padding: 6px 14px; font-weight: 700;
+  letter-spacing: .04em; text-transform: uppercase;
+}
 .akis-yorum { margin: 8px 0 0; font-size: 14.5px; line-height: 1.5; }
 
 /* Rota süre balonu (Google Maps usulü) */

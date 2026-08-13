@@ -97,7 +97,7 @@ async function kisileriGoster() {
 
   kap.innerHTML = `
     <div class="panel">
-      <h2>Eaters</h2>
+      <h2>Find Eaters</h2>
       <div class="eater-arama">
         <span class="arama-ikon" aria-hidden="true">🔍</span>
         <input id="eaterArama" type="search" placeholder="Find Eaters by username…"
@@ -171,7 +171,9 @@ function akisKartiHTML(z, profil, mekanAdi) {
         ${avatar}
         <div class="akis-kim">
           ${profilBaglanti}
-          <span class="silik">ate at <strong>${kacis(mekanAdi)}</strong> · ${kacis(z.tarih)}</span>
+          <span class="akis-nerede"><span class="silik">ate at</span>
+            <span class="akis-mekan">${kacis(mekanAdi)}</span>
+            <span class="silik">· ${kacis(z.tarih)}</span></span>
         </div>
       </div>
       ${fotoHTML}
@@ -208,7 +210,7 @@ async function akisiGoster() {
 
   kap.innerHTML = `
     <div class="panel akis-paneli">
-      <h2 class="akis-baslik">Feed</h2>
+      <h2 class="akis-baslik">EATGRAM</h2>
       ${ziyaretler.map(z =>
         akisKartiHTML(z, profiller.find(p => p.id === z.kullanici), mekanAdi(z))).join('')}
     </div>`;
