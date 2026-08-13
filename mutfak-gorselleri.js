@@ -2,8 +2,8 @@
 // Fotoğraf değildir ve fotoğraf iddiası taşımaz; kartta "bu bir ramen
 // mekânı" gibi anında okunan bir görsel kimlik sağlar. Telif: özgün çizim.
 
-const IKON_ALTIN = '#F5B700';
-const IKON_KREM = '#FFF3E4';
+const IKON_ALTIN = '#9A0E19';  // bej bant üstünde okunan koyu kırmızı ana çizgi
+const IKON_KREM = '#C99400';   // ikincil vurgu: koyu altın
 
 // Ortak sarmalayıcı: 120x90 tuval, kalın uçları yuvarlak altın çizgi.
 function ikonSar(icerik) {

@@ -29,13 +29,18 @@ let kure = null;
 let kureSeciliKod = '';
 let kullaniciKonumu = null; // {lat, lng} | null — Task 6 doldurur
 
+// Katalog ülkelerinin kod kümesi bir kez hesaplanır: her yeniden boyamada
+// 87 restoranı yeniden taramak boşuna işti (ve uyarıları tekrarlıyordu).
+let katalogKodlariOnbellek = null;
 function kureKatalogKodlari() {
+  if (katalogKodlariOnbellek) return katalogKodlariOnbellek;
   const kodlar = new Set();
   RESTORANLAR.forEach(r => {
     const kod = ULKE_KODLARI[r.ulke];
     if (kod) kodlar.add(kod);
     else console.warn(`kure.js: "${r.ulke}" için ULKE_KODLARI'nda kod yok — küreyle eşleşmez.`);
   });
+  katalogKodlariOnbellek = kodlar;
   return kodlar;
 }
 
@@ -57,7 +62,10 @@ function kureyiKur() {
     .backgroundColor('rgba(0,0,0,0)')
     .globeImageUrl('https://cdn.jsdelivr.net/npm/three-globe@2.45.2/example/img/earth-blue-marble.jpg')
     .polygonsData(DUNYA_ULKELER.features)
-    .polygonAltitude(0.008)
+    // 0.008'de büyük ülkeler (ABD gibi) küre yüzeyiyle z-fighting yapıp
+    // altlarındaki bulut dokusunu titretiyordu; bu yükseklik ayırıyor.
+    .polygonAltitude(0.02)
+    .polygonsTransitionDuration(0)
     .polygonCapColor(kureUlkeRengi)
     .polygonSideColor(() => 'rgba(0, 0, 0, 0)')
     .polygonStrokeColor(() => 'rgba(255, 243, 228, 0.35)')
