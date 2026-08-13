@@ -7,9 +7,9 @@ function profilZiyaretHTML(z, mekanAdi, yer) {
     typeof deger === 'number' ? puanRozeti(etiket, deger) : '';
   const favoriler = [z.sevilen_yemek1, z.sevilen_yemek2].filter(Boolean);
   return `
-    <article class="ziyaret">
+    <article class="ziyaret profil-kart">
       <div class="ziyaret-ust">
-        <strong>${kacis(mekanAdi)}</strong>
+        <span class="profil-mekan">${kacis(mekanAdi)}</span>
         <span class="silik">${kacis(yer)} · ${kacis(z.tarih)}</span>
       </div>
       <div class="rozetler">
@@ -17,7 +17,7 @@ function profilZiyaretHTML(z, mekanAdi, yer) {
       </div>
       ${favoriler.length ? `<p class="silik">Favorites: ${kacis(favoriler.join(', '))}</p>` : ''}
       ${ziyaretFotolariHTML(z)}
-      ${z.yorum ? `<p>${kacis(z.yorum)}</p>` : ''}
+      ${z.yorum ? `<p class="profil-yorum">${kacis(z.yorum)}</p>` : ''}
     </article>`;
 }
 
@@ -207,13 +207,15 @@ async function profiliGoster() {
           .map(fid => RESTORANLAR.find(x => x.id === fid))
           .filter(Boolean);
         return kalpliler.length ? `
-          <h3 class="favori-baslik">Want to go</h3>
-          <div class="favori-listesi">
-            ${kalpliler.map(r => `
-              <a class="favori-cip" href="detay.html?id=${encodeURIComponent(r.id)}">
-                ${kacis(r.isim)} <span class="silik">· ${kacis(r.sehir)}</span>
-              </a>`).join('')}
-          </div>` : '';
+          <section class="hope-kutu">
+            <h3 class="favori-baslik">Hope to EAT</h3>
+            <div class="favori-listesi">
+              ${kalpliler.map(r => `
+                <a class="favori-cip" href="detay.html?id=${encodeURIComponent(r.id)}">
+                  ${kacis(r.isim)} <span class="silik">· ${kacis(r.sehir)}</span>
+                </a>`).join('')}
+            </div>
+          </section>` : '';
       })()}
     </div>`;
 

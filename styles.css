@@ -631,11 +631,33 @@ body {
 }
 .kalp-btn:hover { transform: scale(1.15); }
 .favori-baslik {
-  margin: 26px 0 12px; text-align: center;
+  margin: 0 0 12px; text-align: center;
   font-family: var(--serif); font-size: 21px;
   color: var(--altin); letter-spacing: .04em;
 }
 .favori-listesi { justify-content: center; }
+
+/* Hope to EAT — kendi kutusunda */
+.hope-kutu {
+  margin-top: 24px; padding: 18px 20px;
+  border: 1px solid var(--kenar); border-radius: var(--yuvarlak);
+  background: var(--yuzey-yukseltilmis);
+}
+
+/* Profildeki ziyaretler — ayrı kutular */
+.profil-kart {
+  border: 1px solid var(--kenar); border-radius: 14px;
+  background: var(--ortu-koyu);
+  padding: 16px 18px; margin-bottom: 14px;
+}
+.profil-mekan {
+  font-family: var(--serif); font-weight: 700; font-size: 21px;
+  color: var(--altin); text-transform: uppercase; letter-spacing: .03em;
+}
+.profil-kart .ziyaret-ust { align-items: baseline; gap: 10px; }
+.profil-kart .ziyaret-fotolar { justify-content: center; margin: 10px 0; }
+.profil-kart .ziyaret-foto { width: 132px; height: 132px; }
+.profil-yorum { margin: 8px 0 0; font-size: 14.5px; line-height: 1.5; }
 .favori-listesi { display: flex; flex-wrap: wrap; gap: 8px; }
 .favori-cip {
   display: inline-block; padding: 7px 13px;

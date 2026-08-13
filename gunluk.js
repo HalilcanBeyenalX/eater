@@ -266,6 +266,12 @@ async function ziyaretKaydet(kullaniciId) {
   const gonderButonu = document.querySelector('#fZiyaret button[type="submit"]');
   if (gonderButonu) gonderButonu.disabled = true;
   try {
+    // 0) Puanlar zorunlu — puansız kayıt profilde ve akışta boş görünüyor.
+    if (['zYemek', 'zAmbiyans', 'zServis'].some(id => sayiVeyaNull(id) === null)) {
+      hataKutusu.textContent = 'Please rate Food, Ambiance and Service before adding.';
+      return;
+    }
+
     // 1) Mekân seçimini doğrula (henüz hiçbir şey yazmadan).
     let restoranId = null;
     let yeniMekan = null; // katalog dışı mekân: foto yüklemesinden sonra insert edilir
