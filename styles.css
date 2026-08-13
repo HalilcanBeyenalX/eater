@@ -416,9 +416,9 @@ body {
   background: var(--ortu-koyu);
 }
 
-/* Detay altındaki ATE paneli — sayfanın ortasında */
-.ate-panel { text-align: center; }
-.ate-panel .ate-btn { display: inline-block; margin: 0 auto; padding: 12px 34px; font-size: 16px; }
+/* Detay altındaki ATE paneli — ortalı ve kompakt */
+.ate-panel { text-align: center; padding: 14px 16px; }
+.ate-panel .ate-btn { display: inline-block; margin: 0 auto; padding: 10px 30px; font-size: 15px; }
 .ate-panel #senPuanlarin, .ate-panel #yiyiciFavorileri { display: block; margin-top: 10px; }
 
 /* Fiyat bloğu kompakt */
@@ -805,9 +805,16 @@ img.avatar-mini { object-fit: cover; }
 }
 .harita-notu { margin: .45rem .4rem .15rem; font-size: .8rem; }
 .harita-arac {
-  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  display: flex; align-items: center; justify-content: center;
+  gap: 12px; flex-wrap: wrap;
   margin: .55rem .2rem 0;
 }
+.harita-arac .arac-ikincil {
+  background: var(--yuzey-oyuk); color: var(--krem-sonuk);
+  border: 1px solid var(--kenar);
+}
+.harita-arac .arac-ikincil:hover { background: var(--yuzey-oyuk); color: var(--krem); border-color: var(--krem-sonuk); }
+.rota-bilgi { margin: .4rem 0 0; text-align: center; font-size: .85rem; }
 .harita-arac button {
   padding: .5rem .95rem; border: none; border-radius: 999px;
   background: var(--altin); color: var(--kirmizi-derin);

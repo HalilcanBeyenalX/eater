@@ -30,7 +30,6 @@
                aria-label="Search location" autocomplete="off">
         <datalist id="ulkeListesi"></datalist>
         <button id="btnKonumAra" type="button">Search</button>
-        <button id="btnKonumum" type="button">📍 Use my location</button>
       </div>
       <p id="konumMesaj" class="silik konum-mesaj" aria-live="polite"></p>
       <p class="silik osm-kredi">Location search: © OpenStreetMap contributors</p>
@@ -39,8 +38,9 @@
       <div id="harita"></div>
       <div class="harita-arac">
         <button id="btnKonumYerlestir" type="button">📍 Place your location</button>
-        <span id="rotaBilgi" class="silik" aria-live="polite"></span>
+        <button id="btnKonumKaldir" type="button" class="arac-ikincil">Remove</button>
       </div>
+      <p id="rotaBilgi" class="silik rota-bilgi" aria-live="polite"></p>
       <p id="haritaNotu" class="silik harita-notu"></p>
     </section>
     <section id="filtreler" class="filtreler" aria-label="Filters"></section>

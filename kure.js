@@ -146,24 +146,11 @@ function aramaUlkesineSuz(adres) {
   }
 }
 
-function konumumuKullan() {
-  const mesaj = document.getElementById('konumMesaj');
-  if (!navigator.geolocation) {
-    mesaj.textContent = "Your browser doesn't support location — you can search by typing.";
-    return;
-  }
-  mesaj.textContent = 'Getting your location…';
-  navigator.geolocation.getCurrentPosition(
-    p => konumBelirle(p.coords.latitude, p.coords.longitude, '📍 Your location'),
-    () => { mesaj.textContent = 'Location permission denied — you can search by typing.'; });
-}
-
 function konumCubuguKur() {
   document.getElementById('btnKonumAra').addEventListener('click', konumAra);
   document.getElementById('konumArama').addEventListener('keydown', e => {
     if (e.key === 'Enter') { e.preventDefault(); konumAra(); }
   });
-  document.getElementById('btnKonumum').addEventListener('click', konumumuKullan);
 }
 
 window.eaterKure = { ulkeSec: kureUlkeSec, konumAl: kureKonumAl };

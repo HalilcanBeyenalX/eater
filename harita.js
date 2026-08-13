@@ -43,6 +43,14 @@ function konumYerlestirmeKur() {
     harita.getContainer().style.cursor = 'crosshair';
     bilgi.textContent = 'Click anywhere on the map to place your location.';
   });
+  // Remove: pini, rotayı ve bilgiyi temizler.
+  document.getElementById('btnKonumKaldir')?.addEventListener('click', () => {
+    yerlestirModu = false;
+    harita.getContainer().style.cursor = '';
+    if (benimIsaret) { benimIsaret.remove(); benimIsaret = null; }
+    rotayiTemizle();
+    bilgi.textContent = '';
+  });
   harita.on('click', e => {
     if (!yerlestirModu) return;
     yerlestirModu = false;
