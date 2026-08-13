@@ -41,7 +41,7 @@ function detayHTML(r) {
     <div class="detay-basi">
       <h1 class="detay-isim">${r.isim}</h1>
       <p class="detay-yer">${r.semt}, ${r.sehir} · ${r.mutfak.join(', ')} · ${fiyatEtiketi(r.fiyat.segment, r.ulke)}</p>
-      <div class="isaretler">${r.oduller.map(o => `<span class="odul">★ ${odulEtiketi(o.tip)}</span>`).join('')}</div>
+      <div class="isaretler">${asya50Rozeti(r)}${r.oduller.map(o => `<span class="odul">★ ${odulEtiketi(o.tip)}</span>`).join('')}</div>
       ${r.oduller.length ? `<ul class="odul-detaylari silik">${r.oduller.map(o => `<li>${o.detay}</li>`).join('')}</ul>` : ''}
     </div>
 

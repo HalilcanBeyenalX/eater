@@ -1,13 +1,15 @@
 // EATER — app.js ve detay.js tarafından paylaşılan çizim yardımcıları.
 
 // Fiyat rozeti ülkenin para birimiyle yazılır: ₺₺, €€€, ¥ gibi.
-const PARA_BIRIMLERI = { 'Turkey': '₺', 'Japan': '¥', 'France': '€', 'Spain': '€', 'Italy': '€' };
+const PARA_BIRIMLERI = { 'Turkey': '₺', 'Japan': '¥', 'France': '€', 'Spain': '€', 'Italy': '€', 'Thailand': '฿' };
 const FIYAT_ADLARI = { ucuz: 'Budget', orta: 'Mid-range', pahali: 'High-end' };
 
 // oduller[].tip -> kısa, rozete uygun etiket. Tanınmayan bir tip
 // asla ham `detay` metnine düşmez; "Award-winning" ile karşılanır.
 const ODUL_ETIKETLERI = {
-  'michelin-yildiz': 'Michelin star',
+  'michelin-yildiz': 'Michelin Star',
+  'michelin-2-yildiz': 'Michelin 2 Stars',
+  'michelin-3-yildiz': 'Michelin 3 Stars',
   'michelin-bib': 'Michelin Bib Gourmand',
   'michelin-secilmis': 'Michelin Guide selection',
   'michelin-yesil': 'Michelin Green Star',
@@ -23,6 +25,13 @@ const BOS_ISARET = '<span class="deger-yok">—</span>';
 
 function odulEtiketi(tip) {
   return ODUL_ETIKETLERI[tip] || 'Award-winning';
+}
+
+// Asia's 50 Best sıra rozeti: puanlara karışmaz, ayrı bir işaret olarak durur.
+function asya50Rozeti(r) {
+  return typeof r.asia50Sira === 'number'
+    ? `<span class="odul odul-50best">🏆 Asia's 50 Best — No.${r.asia50Sira}</span>`
+    : '';
 }
 
 function veyaYok(deger, bosMetin = BOS_ISARET) {

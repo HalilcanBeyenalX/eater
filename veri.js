@@ -1741,7 +1741,7 @@ const RESTORANLAR = [
     },
     "oduller": [
       {
-        "tip": "michelin-yildiz",
+        "tip": "michelin-3-yildiz",
         "detay": "Three MICHELIN stars."
       }
     ],
@@ -2061,7 +2061,7 @@ const RESTORANLAR = [
     },
     "oduller": [
       {
-        "tip": "michelin-yildiz",
+        "tip": "michelin-3-yildiz",
         "detay": "Three MICHELIN stars."
       }
     ],
@@ -3982,7 +3982,7 @@ const RESTORANLAR = [
     },
     "oduller": [
       {
-        "tip": "michelin-yildiz",
+        "tip": "michelin-2-yildiz",
         "detay": "Two MICHELIN stars — MICHELIN Guide 2026."
       }
     ],
@@ -6189,6 +6189,944 @@ const RESTORANLAR = [
       "tripadvisor": null,
       "tiktok": null,
       "diger": "Owner-curated entry (Aug 2026): official Dongiò, MICHELIN Guide, TripAdvisor. Coordinates verified by name on OpenStreetMap."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-13"
+  },
+  {
+    "id": "gaggan-bangkok",
+    "isim": "Gaggan",
+    "ulke": "Thailand",
+    "sehir": "Bangkok",
+    "semt": "Sukhumvit / Watthana",
+    "mutfak": [
+      "Progressive Indian",
+      "Creative",
+      "Fine Dining",
+      "Asian Fusion"
+    ],
+    "asia50Sira": 3,
+    "adres": "68 Sukhumvit 31, Khlong Tan Nuea, Watthana, Bangkok 10110, Thailand",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Gaggan+68+Sukhumvit+31+Bangkok+Thailand",
+    "koordinat": {
+      "lat": 13.74076,
+      "lng": 100.56757
+    },
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": null,
+      "not": "Very expensive tasting-menu experience."
+    },
+    "yemek": {
+      "puan": 9.9,
+      "ozet": "Gaggan Anand's progressive Indian tasting menu is one of the world's most talked-about meals — playful, provocative and eaten partly with your hands, from the Yoghurt Explosion to Lick It Up. Holds a Michelin star and was named the best restaurant in Thailand."
+    },
+    "neYenir": [
+      {
+        "yemek": "Current Gaggan tasting experience",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Yoghurt Explosion",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Lick It Up",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Progressive Indian courses",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Hand-eaten interactive courses",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Seasonal chef creations",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 9.7,
+      "ozet": "A chef's-table show with music, energy and theatre — dinner as performance, not ceremony.",
+      "etiketler": [
+        "theatrical",
+        "creative",
+        "avant-garde",
+        "lively",
+        "special-occasion"
+      ],
+      "dressCode": "Smart casual / elegant",
+      "uygun": [
+        "couples"
+      ]
+    },
+    "servis": {
+      "puan": 9.6,
+      "ozet": "The team is part of the performance — precise, funny and completely in sync with the menu.",
+      "artilar": [],
+      "eksiler": []
+    },
+    "oduller": [
+      {
+        "tip": "michelin-yildiz",
+        "detay": "One MICHELIN star — MICHELIN Guide Thailand 2026."
+      }
+    ],
+    "rezervasyon": {
+      "gerekiyor": true,
+      "yontem": [
+        "online",
+        "phone"
+      ],
+      "telefon": "+66 98 883 1022",
+      "link": null,
+      "beklemeSuresi": "Required — book well in advance.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated entry (Aug 2026): Asia's 50 Best Restaurants 2026 (No.3, Best Restaurant in Thailand), official Gaggan, MICHELIN Guide Thailand 2026. Coordinates verified by name on OpenStreetMap."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-13"
+  },
+  {
+    "id": "nusara-bangkok",
+    "isim": "Nusara",
+    "ulke": "Thailand",
+    "sehir": "Bangkok",
+    "semt": "Phra Nakhon / Old Town",
+    "mutfak": [
+      "Contemporary Thai",
+      "Fine Dining"
+    ],
+    "asia50Sira": 5,
+    "adres": "336 Maha Rat Road, Phra Borom Maha Ratchawang, Phra Nakhon, Bangkok 10200, Thailand",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Nusara+336+Maha+Rat+Road+Bangkok+Thailand",
+    "koordinat": null,
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": null,
+      "not": "Luxury Thai fine dining."
+    },
+    "yemek": {
+      "puan": 9.7,
+      "ozet": "Brothers Ton and Tam Tassanakajohn cook refined family-recipe Thai — blue swimming crab curry, panang with brisket and holy-basil Wagyu — in a Michelin-starred jewel box across from Wat Pho."
+    },
+    "neYenir": [
+      {
+        "yemek": "Blue swimming crab curry",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Yum tua plu with river prawn",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Panang curry with brisket",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Thai Wagyu with holy basil",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Regional Thai relishes",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Thai ice cream sandwich",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 9.7,
+      "ozet": "Intimate rooms with a rooftop view of Wat Pho's spires — old Bangkok romance at its most concentrated.",
+      "etiketler": [
+        "intimate",
+        "rooftop",
+        "elegant",
+        "romantic",
+        "view",
+        "special-occasion"
+      ],
+      "dressCode": "Smart elegant",
+      "uygun": [
+        "couples"
+      ]
+    },
+    "servis": {
+      "puan": 9.8,
+      "ozet": "Gracious, personal and quietly perfect — a tiny room served like a private dinner.",
+      "artilar": [],
+      "eksiler": []
+    },
+    "oduller": [
+      {
+        "tip": "michelin-yildiz",
+        "detay": "One MICHELIN star — MICHELIN Guide Thailand 2026."
+      }
+    ],
+    "rezervasyon": {
+      "gerekiyor": true,
+      "yontem": [
+        "online",
+        "phone"
+      ],
+      "telefon": "+66 97 293 5549",
+      "link": null,
+      "beklemeSuresi": "Required — very limited seating; book far ahead.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated entry (Aug 2026): Asia's 50 Best Restaurants 2026 (No.5), official Nusara, MICHELIN Guide Thailand 2026. No name-pinned OpenStreetMap POI found; coordinates left null."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-13"
+  },
+  {
+    "id": "gaggan-at-louis-vuitton",
+    "isim": "Gaggan at Louis Vuitton",
+    "ulke": "Thailand",
+    "sehir": "Bangkok",
+    "semt": "Pathum Wan / Phloen Chit",
+    "mutfak": [
+      "Creative",
+      "Asian Fusion",
+      "Fine Dining"
+    ],
+    "asia50Sira": 8,
+    "adres": "LV The Place Bangkok, 2F, 502 Phloen Chit Road, Bangkok 10330, Thailand",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Gaggan+at+Louis+Vuitton+502+Phloen+Chit+Road+Bangkok+Thailand",
+    "koordinat": null,
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": null,
+      "not": "Very expensive."
+    },
+    "yemek": {
+      "puan": 9.6,
+      "ozet": "Gaggan Anand's concept inside Louis Vuitton's Bangkok flagship, with Vix Rathour on the pass and Dej Kewkacha on desserts: Indian, Thai, Japanese and French ideas folded into one gleaming tasting menu."
+    },
+    "neYenir": [
+      {
+        "yemek": "Seasonal tasting menu",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Lick It Up",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Yoghurt Explosion",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Progressive Asian courses",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "French-influenced Gaggan creations",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Dej Kewkacha dessert courses",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 9.9,
+      "ozet": "Fashion-house glamour taken to the extreme — immersive, exclusive and unlike anywhere else in Bangkok.",
+      "etiketler": [
+        "luxury",
+        "fashionable",
+        "glamorous",
+        "fine-dining",
+        "special-occasion"
+      ],
+      "dressCode": "Smart elegant",
+      "uygun": [
+        "couples"
+      ]
+    },
+    "servis": {
+      "puan": 9.7,
+      "ozet": "Couture-level attention from arrival to the last dessert.",
+      "artilar": [],
+      "eksiler": []
+    },
+    "oduller": [
+      {
+        "tip": "michelin-secilmis",
+        "detay": "Included in the MICHELIN Guide Thailand 2026."
+      }
+    ],
+    "rezervasyon": {
+      "gerekiyor": true,
+      "yontem": [
+        "online",
+        "phone"
+      ],
+      "telefon": "+66 61 413 6295",
+      "link": null,
+      "beklemeSuresi": "Required / strongly recommended.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated entry (Aug 2026): Asia's 50 Best Restaurants 2026 (No.8), Louis Vuitton, MICHELIN Guide Thailand 2026 (selection, no star per owner instruction). No name-pinned OSM POI; coordinates left null."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-13"
+  },
+  {
+    "id": "sorn-bangkok",
+    "isim": "Sorn",
+    "ulke": "Thailand",
+    "sehir": "Bangkok",
+    "semt": "Sukhumvit / Khlong Toei",
+    "mutfak": [
+      "Southern Thai",
+      "Thai",
+      "Fine Dining"
+    ],
+    "asia50Sira": 12,
+    "adres": "56 Soi Sukhumvit 26, Klongton, Khlong Toei, Bangkok 10110, Thailand",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Sorn+56+Soi+Sukhumvit+26+Bangkok+Thailand",
+    "koordinat": null,
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": null,
+      "not": "Very expensive; one of Bangkok's hardest tables."
+    },
+    "yemek": {
+      "puan": 10.0,
+      "ozet": "Supaksorn 'Ice' Jongsiri's three-Michelin-star temple of Southern Thai cooking — crab roe kan chu piang, fierce curries and seafood of startling purity. For many, the single most essential meal in Thailand."
+    },
+    "neYenir": [
+      {
+        "yemek": "Current Southern Thai tasting menu",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Kan Chu Piang — crab roe and blue swimmer crab leg",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Southern seafood courses",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Spice-driven curry courses",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Regional Southern Thai dishes",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Seasonal dessert sequence",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 9.5,
+      "ozet": "An intimate Thai house where tradition and luxury sit side by side — destination dining in the truest sense.",
+      "etiketler": [
+        "intimate",
+        "luxury",
+        "traditional",
+        "special-occasion"
+      ],
+      "dressCode": "Smart elegant",
+      "uygun": [
+        "couples"
+      ]
+    },
+    "servis": {
+      "puan": 9.9,
+      "ozet": "Deeply knowledgeable and proud of every region on the plate.",
+      "artilar": [],
+      "eksiler": []
+    },
+    "oduller": [
+      {
+        "tip": "michelin-3-yildiz",
+        "detay": "Three MICHELIN stars — MICHELIN Guide Thailand 2026."
+      }
+    ],
+    "rezervasyon": {
+      "gerekiyor": true,
+      "yontem": [
+        "online",
+        "phone"
+      ],
+      "telefon": "+66 99 081 1119",
+      "link": null,
+      "beklemeSuresi": "Required — extremely difficult reservation; book far in advance.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated entry (Aug 2026): Asia's 50 Best Restaurants 2026 (No.12), official Sorn, MICHELIN Guide Thailand 2026. No name-pinned OSM POI; coordinates left null."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-13"
+  },
+  {
+    "id": "suhring-bangkok",
+    "isim": "Sühring",
+    "ulke": "Thailand",
+    "sehir": "Bangkok",
+    "semt": "Yen Akat / Yan Nawa",
+    "mutfak": [
+      "German",
+      "Contemporary European",
+      "Fine Dining"
+    ],
+    "asia50Sira": 18,
+    "adres": "10 Soi Yen Akat 3, Chong Nonsi, Yan Nawa, Bangkok 10120, Thailand",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Suhring+10+Soi+Yen+Akat+3+Bangkok+Thailand",
+    "koordinat": {
+      "lat": 13.71082,
+      "lng": 100.54552
+    },
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": null,
+      "not": "Very expensive."
+    },
+    "yemek": {
+      "puan": 9.8,
+      "ozet": "Twin brothers Thomas and Mathias Sühring cook modern German food of three-Michelin-star finesse — truffle spätzle, lobster, A5 Wagyu and childhood classics reimagined with wit."
+    },
+    "neYenir": [
+      {
+        "yemek": "Seasonal German tasting menu",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Spätzle with Périgord truffle",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Lobster with seasonal accompaniments",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Scallop preparations",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "A5 Wagyu",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Modern interpretations of German classics",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 9.7,
+      "ozet": "A garden villa of unusual calm — romantic, unhurried and green, far from Bangkok's noise.",
+      "etiketler": [
+        "villa",
+        "garden",
+        "calm",
+        "romantic",
+        "luxury",
+        "special-occasion"
+      ],
+      "dressCode": "Smart elegant",
+      "uygun": [
+        "couples"
+      ]
+    },
+    "servis": {
+      "puan": 9.8,
+      "ozet": "Relais & Châteaux polish with real warmth; the wine service is a highlight.",
+      "artilar": [],
+      "eksiler": []
+    },
+    "oduller": [
+      {
+        "tip": "michelin-3-yildiz",
+        "detay": "Three MICHELIN stars — MICHELIN Guide Thailand 2026."
+      }
+    ],
+    "rezervasyon": {
+      "gerekiyor": true,
+      "yontem": [
+        "online",
+        "phone"
+      ],
+      "telefon": "+66 2 107 2777",
+      "link": null,
+      "beklemeSuresi": "Required / strongly recommended.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated entry (Aug 2026): Asia's 50 Best Restaurants 2026 (No.18), official Sühring, MICHELIN Guide Thailand 2026. Coordinates verified by name on OpenStreetMap."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-13"
+  },
+  {
+    "id": "potong-bangkok",
+    "isim": "Potong",
+    "ulke": "Thailand",
+    "sehir": "Bangkok",
+    "semt": "Chinatown / Samphanthawong",
+    "mutfak": [
+      "Thai-Chinese",
+      "Contemporary",
+      "Fine Dining"
+    ],
+    "asia50Sira": 25,
+    "adres": "422 Vanich Road, Samphanthawong, Bangkok 10100, Thailand",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Potong+422+Vanich+Road+Bangkok+Thailand",
+    "koordinat": {
+      "lat": 13.73928,
+      "lng": 100.50844
+    },
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": null,
+      "not": "Very expensive."
+    },
+    "yemek": {
+      "puan": 9.7,
+      "ozet": "Chef Pam Soontornyanakij tells her family's Thai-Chinese story through a Michelin-starred tasting menu in their ancestral Chinatown pharmacy — aged duck, crab-roe brioche and heritage flavors reborn."
+    },
+    "neYenir": [
+      {
+        "yemek": "Current tasting menu",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Historical Stories — crab roe, blue crab and brioche",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Aged duck",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "House-made charcuterie",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Thai-Chinese heritage courses",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Pandan, peanut and tamarind dessert sequence",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 9.8,
+      "ozet": "Five dramatic floors of a century-old Chinatown apothecary — one of the most atmospheric dining rooms in Asia.",
+      "etiketler": [
+        "historic-building",
+        "glamorous",
+        "intimate",
+        "special-occasion"
+      ],
+      "dressCode": "Smart elegant",
+      "uygun": [
+        "couples"
+      ]
+    },
+    "servis": {
+      "puan": 9.6,
+      "ozet": "Storytelling service that carries the family history course by course.",
+      "artilar": [],
+      "eksiler": []
+    },
+    "oduller": [
+      {
+        "tip": "michelin-yildiz",
+        "detay": "One MICHELIN star — MICHELIN Guide Thailand 2026."
+      }
+    ],
+    "rezervasyon": {
+      "gerekiyor": true,
+      "yontem": [
+        "online",
+        "phone"
+      ],
+      "telefon": "+66 82 979 3950",
+      "link": null,
+      "beklemeSuresi": "Required — book ahead.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated entry (Aug 2026): Asia's 50 Best Restaurants 2026 (No.25), official Potong, MICHELIN Guide Thailand 2026. Coordinates verified by name on OpenStreetMap."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-13"
+  },
+  {
+    "id": "ms-maria-mr-singh-bangkok",
+    "isim": "Ms. Maria & Mr. Singh",
+    "ulke": "Thailand",
+    "sehir": "Bangkok",
+    "semt": "Sukhumvit / Watthana",
+    "mutfak": [
+      "Indian",
+      "Mexican",
+      "Asian Fusion"
+    ],
+    "asia50Sira": 27,
+    "adres": "2nd Floor, 68 Sukhumvit 31, Klongton-Neu, Watthana, Bangkok 10110, Thailand",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Ms+Maria+Mr+Singh+68+Sukhumvit+31+Bangkok+Thailand",
+    "koordinat": {
+      "lat": 13.74076,
+      "lng": 100.56757
+    },
+    "fiyat": {
+      "segment": "orta",
+      "kisiBasi": null,
+      "not": "Expensive, but far more casual than Bangkok's big tasting menus."
+    },
+    "yemek": {
+      "puan": 9.3,
+      "ozet": "Gaggan Anand's joyful Indian-Mexican mashup: vindaloo tacos, butter-chicken enchiladas and keema quesadillas, finished with cardamom churros and rose-pistachio tres leches."
+    },
+    "neYenir": [
+      {
+        "yemek": "Pork vindaloo tacos",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Butter chicken enchiladas",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Keema quesadillas",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Indian-Mexican sharing dishes",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Churros with cardamom chocolate",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Rose and pistachio tres leches",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 9.5,
+      "ozet": "Color, kitsch and mariachi-meets-Bollywood energy — the fun side of the Gaggan universe.",
+      "etiketler": [
+        "colorful",
+        "lively",
+        "casual",
+        "fun",
+        "sharing"
+      ],
+      "dressCode": "Casual / smart casual",
+      "uygun": [
+        "groups",
+        "couples"
+      ]
+    },
+    "servis": {
+      "puan": 9.1,
+      "ozet": "Playful and quick, built for sharing tables.",
+      "artilar": [],
+      "eksiler": []
+    },
+    "oduller": [],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "online",
+        "phone"
+      ],
+      "telefon": "+66 91 698 6688",
+      "link": null,
+      "beklemeSuresi": "Recommended.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated entry (Aug 2026): Asia's 50 Best Restaurants 2026 (No.27), official Ms. Maria & Mr. Singh, Gaggan Anand. Same building as Gaggan (2nd floor) — shares its verified coordinates."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-13"
+  },
+  {
+    "id": "le-du-bangkok",
+    "isim": "Le Du",
+    "ulke": "Thailand",
+    "sehir": "Bangkok",
+    "semt": "Silom / Bang Rak",
+    "mutfak": [
+      "Modern Thai",
+      "Contemporary Thai",
+      "Fine Dining"
+    ],
+    "asia50Sira": 36,
+    "adres": "399/3 Silom 7 Alley, Silom, Bang Rak, Bangkok 10500, Thailand",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Le+Du+399%2F3+Silom+7+Alley+Bangkok+Thailand",
+    "koordinat": {
+      "lat": 13.72506,
+      "lng": 100.5293
+    },
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": null,
+      "not": "Luxury fine dining."
+    },
+    "yemek": {
+      "puan": 9.6,
+      "ozet": "Chef Ton's Michelin-starred ode to Thai produce — the giant river prawn is legend, and the seasonal menu once carried this room to the top of Asia's dining map."
+    },
+    "neYenir": [
+      {
+        "yemek": "Current seasonal tasting menu",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Signature river prawn",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Grouper with ant eggs",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Seasonal Thai produce",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Contemporary Thai curry courses",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Seasonal desserts",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 9.1,
+      "ozet": "Understated and contemporary — the plates carry the drama, not the room.",
+      "etiketler": [
+        "modern",
+        "intimate",
+        "fine-dining",
+        "special-occasion"
+      ],
+      "dressCode": "Smart elegant",
+      "uygun": [
+        "couples"
+      ]
+    },
+    "servis": {
+      "puan": 9.5,
+      "ozet": "Precise, warm and deeply fluent in Thai ingredients.",
+      "artilar": [],
+      "eksiler": []
+    },
+    "oduller": [
+      {
+        "tip": "michelin-yildiz",
+        "detay": "One MICHELIN star — MICHELIN Guide Thailand 2026."
+      }
+    ],
+    "rezervasyon": {
+      "gerekiyor": true,
+      "yontem": [
+        "online",
+        "phone"
+      ],
+      "telefon": "+66 92 919 9969",
+      "link": null,
+      "beklemeSuresi": "Required / strongly recommended.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated entry (Aug 2026): Asia's 50 Best Restaurants 2026 (No.36, former Asia's No.1), official Le Du, MICHELIN Guide Thailand 2026. Coordinates verified by name on OpenStreetMap."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-13"
+  },
+  {
+    "id": "wana-yook-bangkok",
+    "isim": "Wana Yook",
+    "ulke": "Thailand",
+    "sehir": "Bangkok",
+    "semt": "Ratchathewi",
+    "mutfak": [
+      "Thai",
+      "Contemporary Thai",
+      "Fine Dining"
+    ],
+    "asia50Sira": 47,
+    "adres": "5/15 Phaya Thai Road, Thanon Phaya Thai, Ratchathewi, Bangkok 10400, Thailand",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Wana+Yook+5%2F15+Phaya+Thai+Road+Bangkok+Thailand",
+    "koordinat": null,
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": null,
+      "not": "Fine dining."
+    },
+    "yemek": {
+      "puan": 9.4,
+      "ozet": "Chalee Kader elevates khao gaeng — Thailand's humble curry-over-rice — into a Michelin-starred tasting menu of regional rices, tai pla curry with crab and prawns, and a modern piak poon to finish."
+    },
+    "neYenir": [
+      {
+        "yemek": "Seasonal tasting menu",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Reimagined khao gaeng",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Tod man pla",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Crab and tiger prawns with tai pla curry",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Regional Thai rice varieties",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Modern piak poon dessert",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 9.7,
+      "ozet": "A restored colonial house of quiet elegance — art, wood and soft light making the meal feel like a private visit.",
+      "etiketler": [
+        "historic-building",
+        "elegant",
+        "intimate",
+        "art",
+        "romantic",
+        "special-occasion"
+      ],
+      "dressCode": "Smart elegant",
+      "uygun": [
+        "couples"
+      ]
+    },
+    "servis": {
+      "puan": 9.4,
+      "ozet": "Composed and generous with the stories behind each region.",
+      "artilar": [],
+      "eksiler": []
+    },
+    "oduller": [
+      {
+        "tip": "michelin-yildiz",
+        "detay": "One MICHELIN star — MICHELIN Guide Thailand 2026."
+      }
+    ],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "online",
+        "phone"
+      ],
+      "telefon": "+66 63 662 3598",
+      "link": null,
+      "beklemeSuresi": "Strongly recommended.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated entry (Aug 2026): Asia's 50 Best Restaurants 2026 (No.47), official Wana Yook, MICHELIN Guide Thailand 2026. No name-pinned OSM POI; coordinates left null."
     },
     "fotolar": [],
     "sonGuncelleme": "2026-08-13"

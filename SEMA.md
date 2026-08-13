@@ -124,6 +124,7 @@ Puan verilirken hangi yorum örüntüsüne dayandığı ilgili `ozet` alanında 
 | `semt` | `string` | Hayır | Restoranın bulunduğu semt. Kaynak: doğrulanmış adres. Filtrede kullanılır, yazımı tutarlı olmalı. |
 | `mutfak` | `string[]` | Hayır (boş olabilir) | Mutfak/konsept etiketleri. Kaynak: Michelin Guide açıklaması, resmî site, yemek yazıları. Filtrede kullanılır. |
 | `adres` | `string \| null` | Evet | Tam açık adres. **Yalnızca** resmî site veya birbirini doğrulayan en az iki bağımsız kaynaktan yazılır. Örüntüden adres türetilmez. |
+| `asia50Sira` | `number` (opsiyonel) | Evet (alan hiç olmayabilir) | Asia's 50 Best Restaurants resmî sıralamasındaki yeri. Yalnızca listedeki restoranlarda bulunur; arayüzde "🏆 Asia's 50 Best — No.X" rozeti üretir, hiçbir puana karışmaz. |
 | `mapsUrl` | `string \| null` | Evet | Haritada açma bağlantısı. Ya bulunmuş gerçek bir yer bağlantısı olur, ya da **doğrulanmış** `isim + adres` metninden kurulan `https://www.google.com/maps/search/?api=1&query=...` biçiminde bir arama bağlantısı olur. İkinci durumda bağlantı bir olgu iddiası değil, doğrulanmış metinden üretilmiş deterministik bir bağlantıdır. Adres doğrulanmamışsa `null`. |
 | `koordinat` | `{lat:number, lng:number} \| null` | Evet | Restoranın konumu. Yalnızca restoranı **adıyla** işaretleyen bir kaynaktan (ör. OpenStreetMap/Nominatim POI kaydı) alınır. Yalnızca cadde/sokak merkezine düşen geokod sonucu **kullanılmaz** — `null` bırakılır. |
 
@@ -174,7 +175,8 @@ doğrulama betiği boş `neYenir` dizisini hata sayar.
 
 ### 4.7 `oduller`
 
-Dizi; **boş olabilir ve boş olması normaldir**.
+Dizi; **boş olabilir ve boş olması normaldir**. Michelin yıldız sayısı rozete yansır:
+`michelin-yildiz` (1 yıldız), `michelin-2-yildiz`, `michelin-3-yildiz`.
 
 | Alan | Tip | `null` olabilir | Anlamı ve kaynağı |
 |---|---|---|---|

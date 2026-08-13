@@ -7,7 +7,8 @@
 const ULKE_KODLARI = {
   'Turkey': 'TUR', 'Italy': 'ITA', 'France': 'FRA', 'Spain': 'ESP',
   'Greece': 'GRC', 'Germany': 'DEU', 'United Kingdom': 'GBR', 'Netherlands': 'NLD',
-  'Portugal': 'PRT', 'USA': 'USA', 'Japan': 'JPN', 'South Korea': 'KOR'
+  'Portugal': 'PRT', 'USA': 'USA', 'Japan': 'JPN', 'South Korea': 'KOR',
+  'Thailand': 'THA'
 };
 const KOD_ULKE = Object.fromEntries(
   Object.entries(ULKE_KODLARI).map(([ad, kod]) => [kod, ad]));
@@ -17,7 +18,7 @@ const KOD_ULKE = Object.fromEntries(
 const ULKE_ISO2 = {
   tr: 'Turkey', it: 'Italy', fr: 'France', es: 'Spain',
   gr: 'Greece', de: 'Germany', gb: 'United Kingdom', nl: 'Netherlands',
-  pt: 'Portugal', us: 'USA', jp: 'Japan', kr: 'South Korea'
+  pt: 'Portugal', us: 'USA', jp: 'Japan', kr: 'South Korea', th: 'Thailand'
 };
 
 const KURE_RENK_KATALOG = 'rgba(245, 183, 0, 0.65)';   // --altin ailesi

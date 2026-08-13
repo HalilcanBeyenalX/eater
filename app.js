@@ -26,7 +26,7 @@ function kartHTML(r) {
           ${puanRozeti('Ambiance', r.ambiyans.puan)}
           ${puanRozeti('Service', r.servis.puan)}
         </div>
-        <div class="isaretler">${oduller}${rezUyari}</div>
+        <div class="isaretler">${asya50Rozeti(r)}${oduller}${rezUyari}</div>
       </div>
     </a>`;
 }

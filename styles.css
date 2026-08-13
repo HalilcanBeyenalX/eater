@@ -593,6 +593,14 @@ body {
   to { transform: scale(1); opacity: 1; }
 }
 
+/* Asia's 50 Best rozeti — ödüllerden hafifçe ayrışsın */
+.odul-50best {
+  background: var(--altin-hale);
+  border: 1px solid var(--altin-koyu);
+  border-radius: 999px;
+  padding: 3px 10px;
+}
+
 /* Profildeki Ate Points vurgusu */
 .ate-puan { color: var(--altin); font-weight: 700; }
 
