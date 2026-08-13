@@ -7130,5 +7130,2055 @@ const RESTORANLAR = [
     },
     "fotolar": [],
     "sonGuncelleme": "2026-08-13"
+  },
+  {
+    "id": "smyth-chicago",
+    "isim": "Smyth",
+    "ulke": "USA",
+    "sehir": "Chicago",
+    "semt": "West Loop",
+    "mutfak": [
+      "Contemporary American",
+      "New American",
+      "Tasting Menu"
+    ],
+    "adres": "177 N Ada St #101, Chicago, IL 60607, United States",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Smyth+177+N+Ada+St+Chicago+IL+60607",
+    "koordinat": {
+      "lat": 41.8852803,
+      "lng": -87.6605832
+    },
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": {
+        "min": 420,
+        "max": 420,
+        "paraBirimi": "USD"
+      },
+      "not": "Single tasting menu priced at $420 per person, exclusive of beverage, tax and gratuity; optional wine pairings run $245-475 more. From November 5, 2026 the reservation system moves from a $100 deposit to full prepayment."
+    },
+    "yemek": {
+      "puan": 9.3,
+      "ozet": "Chicago's only three-Michelin-starred kitchen, built around a daily-changing farm-to-table tasting menu that leans into bold, unexpected pairings — a crab course and a wagyu-and-truffle-doughnut plate are the ones reviewers keep returning to. Praise for the cooking is close to unanimous. A smaller but recurring thread of opinion argues the ambition occasionally outpaces coherence, especially since the third star arrived."
+    },
+    "neYenir": [
+      {
+        "yemek": "Dungeness crab course",
+        "kacKisiOnerdi": null,
+        "not": "Singled out repeatedly for its inventive, unexpected composition."
+      },
+      {
+        "yemek": "Wagyu with truffle doughnut and marrow glaze",
+        "kacKisiOnerdi": null,
+        "not": "Called one of the standout courses on the current tasting menu."
+      },
+      {
+        "yemek": "Rainbow trout & pineapple",
+        "kacKisiOnerdi": null,
+        "not": "Cited as a seasonal highlight on the current menu."
+      },
+      {
+        "yemek": "Bittersweet chocolate and maitake mushroom tart",
+        "kacKisiOnerdi": null,
+        "not": "A frequently mentioned dessert course blending savory and sweet."
+      }
+    ],
+    "ambiyans": {
+      "puan": 8.8,
+      "ozet": "An open kitchen anchors a warm, understated dining room that reads as refined without stiffness — closer to relaxed than the Michelin pedigree might suggest.",
+      "etiketler": [
+        "fine-dining",
+        "tasting-menu",
+        "open-kitchen",
+        "refined",
+        "farm-to-table"
+      ],
+      "dressCode": "Smart and Elegant",
+      "uygun": [
+        "couples",
+        "business dinner"
+      ]
+    },
+    "servis": {
+      "puan": 8.3,
+      "ozet": "Staff are generally described as technically precise and attentive to individual guest needs. A recurring minority complaint is that dish explanations can lean jargon-heavy rather than illuminating for less experienced diners.",
+      "artilar": [
+        "Attentive, well-paced service",
+        "Staff described as empathetic to guest needs"
+      ],
+      "eksiler": [
+        "Dish explanations sometimes seen as overly technical rather than clarifying"
+      ]
+    },
+    "oduller": [
+      {
+        "tip": "michelin-3-yildiz",
+        "detay": "Three MICHELIN stars — 2025 MICHELIN Guide Chicago, maintained into 2026; currently the only three-star restaurant in the city."
+      },
+      {
+        "tip": "50best",
+        "detay": "No. 1, North America's 50 Best Restaurants 2026."
+      }
+    ],
+    "rezervasyon": {
+      "gerekiyor": true,
+      "yontem": [
+        "online"
+      ],
+      "telefon": "+1 773-913-3773",
+      "link": null,
+      "beklemeSuresi": "Reservations released on a rolling 90-day basis at 12:00 PM CST via Tock.",
+      "kapora": {
+        "var": true,
+        "detay": "$100 per-person deposit under the current system; from November 5, 2026 reservations require full prepayment at booking."
+      }
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Compiled from MICHELIN Guide ceremony coverage, North America's 50 Best Restaurants announcement, Chicago Sun-Times/NBC Chicago news coverage, official Smyth/Tock booking pages, and aggregated review commentary (Chicago magazine, travel and food blogs)."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-13"
+  },
+  {
+    "id": "dakar-nola",
+    "isim": "Dakar NOLA",
+    "ulke": "USA",
+    "sehir": "New Orleans",
+    "semt": "Leonidas",
+    "mutfak": [
+      "Senegalese",
+      "Creole",
+      "West African",
+      "Tasting Menu",
+      "Pescatarian"
+    ],
+    "adres": "937 Leonidas St, New Orleans, LA 70118, United States",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Dakar+NOLA+937+Leonidas+St+New+Orleans+LA+70118",
+    "koordinat": null,
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": {
+        "min": 175,
+        "max": 175,
+        "paraBirimi": "USD"
+      },
+      "not": "Seven-course tasting menu at $175 per person; wine pairing adds $120 and a 20% service charge applies to beverages. A separate three-course Wednesday chef's menu is offered at $55."
+    },
+    "yemek": {
+      "puan": 8.9,
+      "ozet": "A pescatarian, Senegalese-rooted tasting menu that threads Louisiana ingredients through West African technique and family-style courses; the concept won a James Beard Award for Best New Restaurant in 2024. The cooking draws consistent praise for depth of flavor and its personal, storytelling structure, with the seafood and rice courses singled out most often. Portions run intentionally small given the multi-course format."
+    },
+    "neYenir": [
+      {
+        "yemek": "Fonio salad",
+        "kacKisiOnerdi": null,
+        "not": "West African millet with citrus, beets and lemon vinaigrette."
+      },
+      {
+        "yemek": "Grilled head-on Gulf shrimp",
+        "kacKisiOnerdi": null,
+        "not": "Served over tamarind syrup with a New Orleans-style barbecue-shrimp influence."
+      },
+      {
+        "yemek": "Louisiana rice course",
+        "kacKisiOnerdi": null,
+        "not": "Jollof-style, citrus- and spice-seasoned rice closing the family-style portion of the meal."
+      }
+    ],
+    "ambiyans": {
+      "puan": 8.6,
+      "ozet": "Set inside a traditional New Orleans house turned intimate dining room, with some courses served family-style around a shared table. Reviewers consistently describe the room as warm and inviting rather than formal.",
+      "etiketler": [
+        "intimate",
+        "historic-building",
+        "tasting-menu",
+        "warm"
+      ],
+      "dressCode": null,
+      "uygun": [
+        "couples",
+        "solo",
+        "groups"
+      ]
+    },
+    "servis": {
+      "puan": 8.8,
+      "ozet": "Staff are repeatedly described as affable and professional, guiding guests through the multi-course, partly communal format without feeling rushed despite tight seating turns.",
+      "artilar": [
+        "Warm, professional front-of-house staff",
+        "Clear explanation of dishes and format"
+      ],
+      "eksiler": []
+    },
+    "oduller": [
+      {
+        "tip": "michelin-secilmis",
+        "detay": "Included in the inaugural 2025 MICHELIN Guide American South (New Orleans) with a Recommended designation — no star or Bib Gourmand."
+      }
+    ],
+    "rezervasyon": {
+      "gerekiyor": true,
+      "yontem": [
+        "online"
+      ],
+      "telefon": "+1 504-493-9396",
+      "link": "https://www.dakarnola.com/reservations",
+      "beklemeSuresi": "Booking window opens 21 days in advance at 10:00 AM Central.",
+      "kapora": {
+        "var": true,
+        "detay": "Full tasting-menu payment is taken at booking; the restaurant states all sales are final."
+      }
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Compiled from the official Dakar NOLA site (menu, reservations), MICHELIN Guide American South 2025 coverage, the James Beard Foundation award record, and aggregated review commentary (Tripadvisor, Yelp, The Local Palate, Eater)."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-13"
+  },
+  {
+    "id": "albi-dc",
+    "isim": "Albi",
+    "ulke": "USA",
+    "sehir": "Washington, D.C.",
+    "semt": "Navy Yard",
+    "mutfak": [
+      "Levantine",
+      "Palestinian",
+      "Middle Eastern",
+      "Wood-Fired"
+    ],
+    "adres": "1346 4th St SE, Washington, DC 20003, United States",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Albi+1346+4th+St+SE+Washington+DC+20003",
+    "koordinat": {
+      "lat": 38.8740554,
+      "lng": -77.0003218
+    },
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": {
+        "min": 150,
+        "max": 200,
+        "paraBirimi": "USD"
+      },
+      "not": "Estimated $150-200 per person for the Sofra tasting menu before drinks, tax and tip, based on aggregated coverage rather than a published menu price; with wine pairings two diners should expect roughly $300-450 total."
+    },
+    "yemek": {
+      "puan": 9.1,
+      "ozet": "Progressive Levantine, live-fire cooking rooted in the chef's Palestinian heritage — crisped kibbeh, fresh-baked pita and a duck-and-foie maqluba are the dishes reviewers return to most. The chef holds a national Outstanding Chef honor, and the restaurant's Michelin star has held every year since it first arrived. Complaints are rare and center more on how hard the room is to book than on the food itself."
+    },
+    "neYenir": [
+      {
+        "yemek": "Crispy kibbeh with pine nuts",
+        "kacKisiOnerdi": null,
+        "not": "A recurring opening-course favorite."
+      },
+      {
+        "yemek": "Fresh-baked pita with hummus",
+        "kacKisiOnerdi": null,
+        "not": "Called a must-try bread course."
+      },
+      {
+        "yemek": "BBQ'd warak dawali (stuffed grape leaves)",
+        "kacKisiOnerdi": null,
+        "not": "Live-fire preparation highlighted in menu coverage."
+      },
+      {
+        "yemek": "Duck and foie gras kefta maqluba",
+        "kacKisiOnerdi": null,
+        "not": "A skillet dish of rice, lentils and golden onions folded with duck breast, foie gras and kefta."
+      },
+      {
+        "yemek": "Brown butter knafeh",
+        "kacKisiOnerdi": null,
+        "not": "Signature dessert combining sweet and savory, buttery layers."
+      }
+    ],
+    "ambiyans": {
+      "puan": 8.8,
+      "ozet": "Floor-to-ceiling windows open the dining room onto the hearth-powered kitchen on a busy Navy Yard corner, giving the space an energetic, see-and-be-seen quality rather than hushed formality.",
+      "etiketler": [
+        "lively",
+        "open-kitchen",
+        "modern",
+        "wood-fired",
+        "special-occasion"
+      ],
+      "dressCode": null,
+      "uygun": [
+        "couples",
+        "groups",
+        "business dinner"
+      ]
+    },
+    "servis": {
+      "puan": null,
+      "ozet": null,
+      "artilar": [],
+      "eksiler": []
+    },
+    "oduller": [
+      {
+        "tip": "michelin-yildiz",
+        "detay": "One MICHELIN star, held continuously since 2022 — maintained in the 2025 MICHELIN Guide Washington, D.C."
+      }
+    ],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "online"
+      ],
+      "telefon": "+1 202-921-9592",
+      "link": null,
+      "beklemeSuresi": "Reservations strongly recommended; limited à la carte walk-in seating sometimes available.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Compiled from the official Albi site, MICHELIN Guide Washington, D.C. pages and ceremony articles, James Beard Foundation record, Washingtonian/Washington Post recognitions, and aggregated review commentary (The Infatuation, Tripadvisor, Resto Mojo)."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-13"
+  },
+  {
+    "id": "atomix-nyc",
+    "isim": "Atomix",
+    "ulke": "USA",
+    "sehir": "New York",
+    "semt": "NoMad",
+    "mutfak": [
+      "Korean",
+      "Tasting Menu",
+      "Contemporary"
+    ],
+    "adres": "104 E 30th St, New York, NY 10016, United States",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Atomix+104+E+30th+St+New+York+NY+10016",
+    "koordinat": null,
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": {
+        "min": 375,
+        "max": 375,
+        "paraBirimi": "USD"
+      },
+      "not": "Tasting menu (course count reported between 10 and 15 depending on source) priced at $375 per person, prepaid and nonrefundable at booking; optional beverage pairing adds $175."
+    },
+    "yemek": {
+      "puan": 9.6,
+      "ozet": "A globally recognized tasting-menu destination for contemporary Korean cooking, built around banchan-inspired ideas and precise, seasonal technique. It is consistently cited as one of the hardest reservations in the city, and the cooking is treated as a genuine reference point rather than a passing trend. Criticism is rare and mostly directed at the rigidity of the nonrefundable booking system rather than the food."
+    },
+    "neYenir": [
+      {
+        "yemek": "Jeju abalone in soy reduction",
+        "kacKisiOnerdi": null,
+        "not": "A recurring highlight of the tasting menu."
+      },
+      {
+        "yemek": "Korean wagyu with truffle sauce",
+        "kacKisiOnerdi": null,
+        "not": "Cited among the menu's standout protein courses."
+      },
+      {
+        "yemek": "Ganjang gejang (soy-marinated crab) with rice cake",
+        "kacKisiOnerdi": null,
+        "not": "Described as melting in the mouth."
+      },
+      {
+        "yemek": "Ssamjang-glazed Iberico pork",
+        "kacKisiOnerdi": null,
+        "not": "Noted for the ssamjang sauce pairing."
+      },
+      {
+        "yemek": "Osetra caviar with turbot and green sorrel apple",
+        "kacKisiOnerdi": null,
+        "not": "A recurring luxury course on the current menu."
+      }
+    ],
+    "ambiyans": {
+      "puan": 9.0,
+      "ozet": "A stylish, lounge-like dining room built around an open counter, described consistently as sophisticated without feeling cold or overly formal.",
+      "etiketler": [
+        "fine-dining",
+        "lounge",
+        "modern",
+        "tasting-menu",
+        "romantic"
+      ],
+      "dressCode": null,
+      "uygun": [
+        "couples",
+        "business dinner"
+      ]
+    },
+    "servis": {
+      "puan": 9.0,
+      "ozet": "Warm, hospitality-forward service is repeatedly praised as matching the ambition of the cooking, with the husband-and-wife team's presence often cited as central to the experience.",
+      "artilar": [
+        "Warm, hospitality-forward service style"
+      ],
+      "eksiler": []
+    },
+    "oduller": [
+      {
+        "tip": "michelin-2-yildiz",
+        "detay": "Two MICHELIN stars — 2025 MICHELIN Guide New York City, maintained into 2026."
+      }
+    ],
+    "rezervasyon": {
+      "gerekiyor": true,
+      "yontem": [
+        "online"
+      ],
+      "telefon": null,
+      "link": "https://www.exploretock.com/atomixnyc/",
+      "beklemeSuresi": "Following month's reservations open on the 1st at 3PM ET via Tock.",
+      "kapora": {
+        "var": true,
+        "detay": "Full tasting-menu price ($375+ per person) charged at time of booking; nonrefundable but transferable via Tock."
+      }
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Compiled from MICHELIN Guide New York coverage, official Atomix/Tock booking pages, and aggregated review commentary (travel and food blogs, Tripadvisor)."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-13"
+  },
+  {
+    "id": "cesar-nyc",
+    "isim": "César",
+    "ulke": "USA",
+    "sehir": "New York",
+    "semt": "Hudson Square",
+    "mutfak": [
+      "Seafood",
+      "Contemporary",
+      "Tasting Menu"
+    ],
+    "adres": "333 Hudson St, New York, NY 10013, United States",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Cesar+333+Hudson+St+New+York+NY+10013",
+    "koordinat": null,
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": {
+        "min": 365,
+        "max": 368,
+        "paraBirimi": "USD"
+      },
+      "not": "Single-format tasting menu (12-13 courses depending on source), reported between $365 and $368 per person across different check dates; all guests at a table must order the same menu."
+    },
+    "yemek": {
+      "puan": 9.5,
+      "ozet": "Chef César Ramirez's first solo project after leaving a three-Michelin-starred kitchen behind, built around exceptionally sourced, seafood-forward tasting courses. It earned two Michelin stars within five months of opening, a remarkably fast turnaround for the Guide. The consensus across coverage is near-uniform praise for ingredient quality and precision, with little in the way of recurring criticism yet on record."
+    },
+    "neYenir": [
+      {
+        "yemek": "Abalone chawanmushi with truffle, ramp and hon-shimeji mushroom",
+        "kacKisiOnerdi": null,
+        "not": "Cited as a standout seasonal course."
+      },
+      {
+        "yemek": "Seared North Sea turbot with Spanish cuttlefish and spring peas",
+        "kacKisiOnerdi": null,
+        "not": "A recurring highlight on the tasting menu."
+      },
+      {
+        "yemek": "Aji nigiri",
+        "kacKisiOnerdi": null,
+        "not": "Named among the menu's signature bites."
+      },
+      {
+        "yemek": "Uni on brioche",
+        "kacKisiOnerdi": null,
+        "not": "Named among the menu's signature bites."
+      }
+    ],
+    "ambiyans": {
+      "puan": 8.9,
+      "ozet": "Housed in a century-old former printing-press building with 16-foot ceilings, the room is described as understated and modern rather than stuffy, with every seat given a kitchen view.",
+      "etiketler": [
+        "fine-dining",
+        "intimate",
+        "modern",
+        "historic-building",
+        "counter"
+      ],
+      "dressCode": null,
+      "uygun": [
+        "couples",
+        "solo",
+        "business dinner"
+      ]
+    },
+    "servis": {
+      "puan": 9.2,
+      "ozet": "The chef himself works the kitchen every service, and coverage consistently describes the execution and presentation as close to flawless.",
+      "artilar": [
+        "Chef present and directly involved every service",
+        "Widely described as highly polished, precise execution"
+      ],
+      "eksiler": []
+    },
+    "oduller": [
+      {
+        "tip": "michelin-2-yildiz",
+        "detay": "Two MICHELIN stars, awarded within five months of opening — 2024 MICHELIN Guide New York City, maintained in the 2025 edition."
+      }
+    ],
+    "rezervasyon": {
+      "gerekiyor": true,
+      "yontem": [
+        "online",
+        "phone"
+      ],
+      "telefon": "+1 212-220-5152",
+      "link": "https://www.cesar.restaurant/",
+      "beklemeSuresi": null,
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Compiled from the official César site, MICHELIN Guide New York coverage and ceremony articles, Resy editorial coverage, and aggregated review commentary (Tripadvisor, Yelp, travel/food blogs)."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-13"
+  },
+  {
+    "id": "kalaya-philadelphia",
+    "isim": "Kalaya",
+    "ulke": "USA",
+    "sehir": "Philadelphia",
+    "semt": "Fishtown",
+    "mutfak": [
+      "Thai",
+      "Southern Thai"
+    ],
+    "adres": "4 W Palmer St, Philadelphia, PA 19125, United States",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Kalaya+4+W+Palmer+St+Philadelphia+PA+19125",
+    "koordinat": {
+      "lat": 39.975633,
+      "lng": -75.133092
+    },
+    "fiyat": {
+      "segment": "orta",
+      "kisiBasi": {
+        "min": 85,
+        "max": 85,
+        "paraBirimi": "USD"
+      },
+      "not": "The 'Taste of Kalaya' family-style tasting menu is $85 per guest. À la carte, shared-plate dinners have been estimated by outside coverage at roughly $80-130 per person including drinks, though that reflects shared dishes rather than a fixed per-person menu price."
+    },
+    "yemek": {
+      "puan": 9.0,
+      "ozet": "Southern Thai cooking built around the chef's own family recipes, named for her mother; the kitchen has won a national Best Chef award and remains a nominee for the country's top restaurant honor. Coverage consistently highlights bold, layered spicing and dishes rarely found on other Thai menus in the city. There is little recurring criticism in the coverage reviewed."
+    },
+    "neYenir": [
+      {
+        "yemek": "Khao pad pu (crab fried rice)",
+        "kacKisiOnerdi": null,
+        "not": "A weekend-lunch signature with colossal crab, onion, egg and scallion."
+      },
+      {
+        "yemek": "Khao soi nua (beef curry noodle soup)",
+        "kacKisiOnerdi": null,
+        "not": "Egg noodles in coconut curry with chili crisp and crispy noodles."
+      },
+      {
+        "yemek": "Kanon jeen gaeng pu (crab curry with rice vermicelli)",
+        "kacKisiOnerdi": null,
+        "not": "Colossal lump crab curry over rice vermicelli with soft-boiled egg."
+      },
+      {
+        "yemek": "Shaw muang dumplings",
+        "kacKisiOnerdi": null,
+        "not": "Flower-shaped dumplings with ground chicken, cucumber and Thai chili."
+      },
+      {
+        "yemek": "Gui chai cakes",
+        "kacKisiOnerdi": null,
+        "not": "Crisply fried mustard-chive cakes."
+      }
+    ],
+    "ambiyans": {
+      "puan": 7.8,
+      "ozet": "A converted warehouse space in Fishtown with a casual, high-energy feel rather than fine-dining formality; valet or street parking is the main practical note in coverage.",
+      "etiketler": [
+        "casual",
+        "lively",
+        "neighborhood",
+        "warehouse-conversion"
+      ],
+      "dressCode": null,
+      "uygun": [
+        "couples",
+        "groups",
+        "family"
+      ]
+    },
+    "servis": {
+      "puan": null,
+      "ozet": null,
+      "artilar": [],
+      "eksiler": []
+    },
+    "oduller": [
+      {
+        "tip": "michelin-secilmis",
+        "detay": "Included in the inaugural 2025 MICHELIN Guide Philadelphia with a Recommended designation — no star or Bib Gourmand."
+      }
+    ],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "online",
+        "phone"
+      ],
+      "telefon": "+1 215-545-2535",
+      "link": "https://resy.com/cities/philadelphia-pa/venues/kalaya",
+      "beklemeSuresi": "Bookable via Resy for parties up to 12; larger groups by email.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Compiled from the official Kalaya site, MICHELIN Guide Philadelphia 2025 coverage, James Beard Foundation record, Philadelphia Inquirer coverage, and aggregated review commentary (Tripadvisor, Yelp)."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-13"
+  },
+  {
+    "id": "le-veau-dor-nyc",
+    "isim": "Le Veau d'Or",
+    "ulke": "USA",
+    "sehir": "New York",
+    "semt": "Upper East Side",
+    "mutfak": [
+      "French",
+      "French Bistro",
+      "Classic French"
+    ],
+    "adres": "129 E 60th St, New York, NY 10022, United States",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Le+Veau+d%27Or+129+E+60th+St+New+York+NY+10022",
+    "koordinat": null,
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": {
+        "min": 125,
+        "max": 125,
+        "paraBirimi": "USD"
+      },
+      "not": "$125 three-course prix fixe with roughly ten choices per course; no confirmed separate à la carte pricing was found."
+    },
+    "yemek": {
+      "puan": 8.8,
+      "ozet": "A 1937 bistro revived by the founding chefs of Balthazar and Minetta Tavern, serving Escoffier-era classics played straight rather than reinvented; the revival won a 2025 James Beard Award for Outstanding Restaurateur. Reviewers describe the frog legs as having reached cult status, alongside praise for the onion soup and duck. Coverage skews strongly positive, with little recurring criticism found."
+    },
+    "neYenir": [
+      {
+        "yemek": "Soupe à l'oignon (French onion soup)",
+        "kacKisiOnerdi": null,
+        "not": "Served bubbling under a blanket of gruyère."
+      },
+      {
+        "yemek": "Cuisses de grenouille (frog legs)",
+        "kacKisiOnerdi": null,
+        "not": "Described in coverage as having achieved cult status."
+      },
+      {
+        "yemek": "Pommes soufflées with red caviar and crème",
+        "kacKisiOnerdi": null,
+        "not": "A signature potato course."
+      },
+      {
+        "yemek": "Duck magret aux cerises (duck breast with cherries)",
+        "kacKisiOnerdi": null,
+        "not": "Praised for its classic preparation."
+      },
+      {
+        "yemek": "Tripes à la mode",
+        "kacKisiOnerdi": null,
+        "not": "Cited as a classic, rarely-seen-elsewhere dish on the menu."
+      }
+    ],
+    "ambiyans": {
+      "puan": 8.9,
+      "ozet": "A small, throwback dining room with dark wood, red accents and a mirror-map of France, praised as cozy and unmistakably historic rather than a modern pastiche of a bistro.",
+      "etiketler": [
+        "historic",
+        "intimate",
+        "romantic",
+        "classic"
+      ],
+      "dressCode": "Smart casual to business casual; no strict enforcement, but sneakers are discouraged.",
+      "uygun": [
+        "couples",
+        "business dinner"
+      ]
+    },
+    "servis": {
+      "puan": 8.7,
+      "ozet": "Classic tableside French service, with pink-jacketed waiters pouring wine, is consistently described as polished and geared toward long, unhurried dinners rather than fast turns.",
+      "artilar": [
+        "Classic, attentive tableside French service style",
+        "Encourages long, unhurried dinners"
+      ],
+      "eksiler": []
+    },
+    "oduller": [],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "online"
+      ],
+      "telefon": "+1 212-838-8133",
+      "link": null,
+      "beklemeSuresi": "Reservations released via SevenRooms at 9:00 AM, fourteen days in advance.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Compiled from the official Le Veau d'Or site, James Beard Foundation award record, and aggregated review commentary (The Infatuation, Resto Mojo, Tripadvisor, Yelp). Coverage on a specific MICHELIN star or Bib Gourmand designation for this restaurant was inconsistent across sources and could not be independently confirmed, so no MICHELIN award is listed."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-13"
+  },
+  {
+    "id": "le-bernardin-nyc",
+    "isim": "Le Bernardin",
+    "ulke": "USA",
+    "sehir": "New York",
+    "semt": "Midtown",
+    "mutfak": [
+      "Seafood",
+      "French",
+      "Fine Dining"
+    ],
+    "adres": "155 W 51st St, New York, NY 10019, United States",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Le+Bernardin+155+W+51st+St+New+York+NY+10019",
+    "koordinat": {
+      "lat": 40.7613945,
+      "lng": -73.981691
+    },
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": {
+        "min": 218,
+        "max": 350,
+        "paraBirimi": "USD"
+      },
+      "not": "Four-course prix fixe dinner $218; eight-course Chef's Tasting $350; three-course lunch prix fixe around $135. All before wine, tax and tip."
+    },
+    "yemek": {
+      "puan": 9.7,
+      "ozet": "A three-Michelin-star seafood institution built on a 'unilateral cooking method' that treats fish with exacting, minimal-intervention technique. The tuna carpaccio with foie gras has stayed on the menu for decades and remains the dish most cited by reviewers. Praise is close to universal; the cooking is treated as a benchmark rather than a matter of debate."
+    },
+    "neYenir": [
+      {
+        "yemek": "Tuna carpaccio with foie gras and toasted baguette",
+        "kacKisiOnerdi": null,
+        "not": "On the menu for decades and the most frequently cited dish."
+      },
+      {
+        "yemek": "Barely-warmed scallop in caviar beurre blanc",
+        "kacKisiOnerdi": null,
+        "not": "Cited as a signature preparation of the unilateral cooking method."
+      },
+      {
+        "yemek": "Salmon with Royal Osetra caviar and horseradish emulsion",
+        "kacKisiOnerdi": null,
+        "not": "A recurring tasting-menu highlight."
+      },
+      {
+        "yemek": "Wild salmon with lacquered crust",
+        "kacKisiOnerdi": null,
+        "not": "Noted for its crust technique."
+      }
+    ],
+    "ambiyans": {
+      "puan": 8.9,
+      "ozet": "A hushed, formal dining room that some reviewers compare to a boardroom rather than a buzzy restaurant — elegant and controlled, but not for guests seeking a livelier atmosphere.",
+      "etiketler": [
+        "formal",
+        "elegant",
+        "fine-dining",
+        "luxury"
+      ],
+      "dressCode": "Elegant/formal; jackets strongly preferred for men, no shorts, athletic wear or flip-flops.",
+      "uygun": [
+        "couples",
+        "business dinner"
+      ]
+    },
+    "servis": {
+      "puan": 9.3,
+      "ozet": "Service is consistently held up as among the most polished and formally trained in the city, with no recurring complaints found in the coverage reviewed.",
+      "artilar": [
+        "Renowned, highly polished formal service"
+      ],
+      "eksiler": []
+    },
+    "oduller": [
+      {
+        "tip": "michelin-3-yildiz",
+        "detay": "Three MICHELIN stars, held continuously since 2005 — one of only five three-star restaurants in New York City in the 2025 MICHELIN Guide, maintained into 2026."
+      }
+    ],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "online",
+        "phone"
+      ],
+      "telefon": "+1 212-554-1515",
+      "link": null,
+      "beklemeSuresi": null,
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Compiled from MICHELIN Guide New York coverage and ceremony articles, the official Le Bernardin site, and aggregated review commentary (Forbes Travel Guide, Tripadvisor, Yelp, travel/food blogs)."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-13"
+  },
+  {
+    "id": "kabawa-nyc",
+    "isim": "Kabawa",
+    "ulke": "USA",
+    "sehir": "New York",
+    "semt": "East Village",
+    "mutfak": [
+      "Caribbean",
+      "Tasting Menu",
+      "Contemporary"
+    ],
+    "adres": "8 Extra Pl, New York, NY 10003, United States",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Kabawa+8+Extra+Pl+New+York+NY+10003",
+    "koordinat": {
+      "lat": 40.7249557,
+      "lng": -73.9913634
+    },
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": {
+        "min": 145,
+        "max": 150,
+        "paraBirimi": "USD"
+      },
+      "not": "Three-course tasting menu reported at $145-150 per person across sources, exclusive of beverage, tax and gratuity."
+    },
+    "yemek": {
+      "puan": 9.0,
+      "ozet": "Chef Paul Carmichael's personal take on Caribbean cuisine, served as a tasting menu in the former Momofuku Ko space; the restaurant has been named a top new-restaurant pick in multiple year-end lists. Dishes like the goat curry and plantain-and-caviar course are cited most consistently across coverage. No recurring criticism emerged from the sources reviewed."
+    },
+    "neYenir": [
+      {
+        "yemek": "Roti with curry chickpeas and eggplant",
+        "kacKisiOnerdi": null,
+        "not": "Opening bread course."
+      },
+      {
+        "yemek": "Fried sweet plantain with crispy salt cod and scrambled eggs with caviar",
+        "kacKisiOnerdi": null,
+        "not": "Named repeatedly as a standout early course."
+      },
+      {
+        "yemek": "Seared black bass with yellow curry",
+        "kacKisiOnerdi": null,
+        "not": "A recurring main course."
+      },
+      {
+        "yemek": "Chuleta can can with recaíto",
+        "kacKisiOnerdi": null,
+        "not": "Puerto Rican-influenced pork chop course."
+      },
+      {
+        "yemek": "Goat curry",
+        "kacKisiOnerdi": null,
+        "not": "Described in coverage as rich, tender and deeply satisfying."
+      },
+      {
+        "yemek": "Coconut turnover",
+        "kacKisiOnerdi": null,
+        "not": "Dessert course meant to be shared."
+      }
+    ],
+    "ambiyans": {
+      "puan": 8.8,
+      "ozet": "A 30-seat, elegant dark-green dining room with subtle regional design references, consistently described as sophisticated rather than casual for the neighborhood.",
+      "etiketler": [
+        "elegant",
+        "intimate",
+        "modern",
+        "tasting-menu"
+      ],
+      "dressCode": null,
+      "uygun": [
+        "couples",
+        "business dinner"
+      ]
+    },
+    "servis": {
+      "puan": null,
+      "ozet": null,
+      "artilar": [],
+      "eksiler": []
+    },
+    "oduller": [
+      {
+        "tip": "michelin-secilmis",
+        "detay": "Included in the MICHELIN Guide New York City selection and recommended by Michelin inspectors; no star confirmed as of the 2025 guide."
+      }
+    ],
+    "rezervasyon": {
+      "gerekiyor": true,
+      "yontem": [
+        "online",
+        "phone"
+      ],
+      "telefon": "+1 212-203-8095",
+      "link": null,
+      "beklemeSuresi": null,
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Compiled from MICHELIN Guide New York coverage, official Kabawa/Momofuku site, North America's 50 Best Restaurants listing, and aggregated review commentary (Resto Mojo, Yelp, Tripadvisor)."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-13"
+  },
+  {
+    "id": "singlethread-healdsburg",
+    "isim": "SingleThread",
+    "ulke": "USA",
+    "sehir": "Healdsburg",
+    "semt": "Sonoma County",
+    "mutfak": [
+      "Contemporary American",
+      "Japanese-influenced",
+      "Kaiseki",
+      "Farm-to-Table",
+      "Tasting Menu"
+    ],
+    "adres": "131 North St, Healdsburg, CA 95448, United States",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=SingleThread+131+North+St+Healdsburg+CA+95448",
+    "koordinat": {
+      "lat": 38.6123379,
+      "lng": -122.8696919
+    },
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": {
+        "min": 540,
+        "max": 541,
+        "paraBirimi": "USD"
+      },
+      "not": "Ten-course kaiseki-inspired tasting menu reported at roughly $540.75 per person before wine pairings; a service charge is added, with gratuity noted as additional in fine print, which some guests find unclear."
+    },
+    "yemek": {
+      "puan": 9.6,
+      "ozet": "A kaiseki-framed tasting menu built almost entirely from the restaurant's own 24-acre farm, changing daily based on what is harvested rather than a fixed seasonal plan. Reviewers consistently rank the cooking among the most refined in the country, with the recurring hassun course singled out as a highlight. The main critical thread in coverage concerns cost rather than execution."
+    },
+    "neYenir": [
+      {
+        "yemek": "Hassun course — aged whole yuzu stuffed with walnut miso",
+        "kacKisiOnerdi": null,
+        "not": "The seasonal-theme-setting course of the kaiseki structure."
+      },
+      {
+        "yemek": "Cured, aged, grilled dried spear squid with salted plum dip",
+        "kacKisiOnerdi": null,
+        "not": "Part of the hassun course, aged for one year before serving."
+      },
+      {
+        "yemek": "Seasonal mushroom donabe",
+        "kacKisiOnerdi": null,
+        "not": "Closes the savory portion of the tasting menu."
+      },
+      {
+        "yemek": "Corn sablé cookie with lemon-thyme ganache",
+        "kacKisiOnerdi": null,
+        "not": "A recurring dessert course."
+      }
+    ],
+    "ambiyans": {
+      "puan": 9.4,
+      "ozet": "A serene, floral-forward dining room paired with a rooftop terrace for pre-dinner cocktails; reviewers describe the setting and pacing as close to flawless.",
+      "etiketler": [
+        "luxury",
+        "romantic",
+        "farm-to-table",
+        "serene",
+        "special-occasion"
+      ],
+      "dressCode": null,
+      "uygun": [
+        "couples",
+        "business dinner"
+      ]
+    },
+    "servis": {
+      "puan": 9.5,
+      "ozet": "Staff are described as warm, knowledgeable and extremely professional throughout the entire stay, without exception in the coverage reviewed. The one recurring complaint concerns the clarity of service-charge and gratuity disclosures rather than staff behavior.",
+      "artilar": [
+        "Warm, highly professional, knowledgeable staff throughout the stay"
+      ],
+      "eksiler": [
+        "Service-charge and gratuity structure criticized as unclear"
+      ]
+    },
+    "oduller": [
+      {
+        "tip": "michelin-3-yildiz",
+        "detay": "Three MICHELIN stars — 2025 MICHELIN Guide California, maintained into 2026; the first three-star restaurant in Sonoma County."
+      }
+    ],
+    "rezervasyon": {
+      "gerekiyor": true,
+      "yontem": [
+        "online"
+      ],
+      "telefon": "+1 707-723-4646",
+      "link": "https://singlethreadfarms.com/restaurant/",
+      "beklemeSuresi": "Bookings released online at 9:00 AM PST on the 1st of each month for the following month.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Compiled from MICHELIN Guide California coverage, the official SingleThread site, and aggregated review commentary (Tripadvisor, Forbes, travel/food blogs)."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-13"
+  },
+  {
+    "id": "jungsik-nyc",
+    "isim": "Jungsik",
+    "ulke": "USA",
+    "sehir": "New York",
+    "semt": "Tribeca",
+    "mutfak": [
+      "Korean",
+      "Contemporary",
+      "Tasting Menu"
+    ],
+    "adres": "2 Harrison St, New York, NY 10013, United States",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Jungsik+2+Harrison+St+New+York+NY+10013",
+    "koordinat": {
+      "lat": 40.7187884,
+      "lng": -74.0090911
+    },
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": {
+        "min": 325,
+        "max": 325,
+        "paraBirimi": "USD"
+      },
+      "not": "Tasting menu priced around $325 per person; wine pairing $200, non-alcoholic pairing $115."
+    },
+    "yemek": {
+      "puan": 9.4,
+      "ozet": "The first Korean restaurant outside South Korea to hold three Michelin stars, opening with an elaborate banchan presentation before moving into modern Korean courses. Reviewers consistently praise the creativity and technical precision of the cooking. Service is called professional and largely error-free, with only isolated pacing hiccups noted."
+    },
+    "neYenir": [
+      {
+        "yemek": "Raw striped jack with white kimchi and chilled fish bone broth",
+        "kacKisiOnerdi": null,
+        "not": "A recurring opening course."
+      },
+      {
+        "yemek": "Crisped octopus with gochujang aioli",
+        "kacKisiOnerdi": null,
+        "not": "Cited as a standout texture-driven course."
+      },
+      {
+        "yemek": "Dry-aged Arctic char with kimchi and red curry sauce",
+        "kacKisiOnerdi": null,
+        "not": "A recurring main course on the tasting menu."
+      }
+    ],
+    "ambiyans": {
+      "puan": 8.3,
+      "ozet": "The main dining room's decor draws mixed reactions — some find it spectacular and relaxing, while others note the beige palette has looked largely unchanged for a decade; guests seated in the darker rear annex have described the room as noticeably dimmer.",
+      "etiketler": [
+        "modern",
+        "fine-dining",
+        "tasting-menu"
+      ],
+      "dressCode": "Smart casual recommended; no strict enforcement.",
+      "uygun": [
+        "couples",
+        "business dinner"
+      ]
+    },
+    "servis": {
+      "puan": 9.0,
+      "ozet": "Service is consistently described as professional and outstanding, with isolated exceptions such as a delayed amuse-bouche that was addressed with an extra pour by the sommelier.",
+      "artilar": [
+        "Consistently described as professional and largely error-free"
+      ],
+      "eksiler": [
+        "Occasional pacing issues (e.g. delayed amuse-bouche) noted in isolated reviews"
+      ]
+    },
+    "oduller": [
+      {
+        "tip": "michelin-3-yildiz",
+        "detay": "Three MICHELIN stars since 2024 — the first Korean restaurant outside South Korea to hold three stars; maintained in the 2025 MICHELIN Guide New York City."
+      }
+    ],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "online"
+      ],
+      "telefon": "+1 212-219-0900",
+      "link": null,
+      "beklemeSuresi": null,
+      "kapora": {
+        "var": true,
+        "detay": "$50 per-person deposit for bar seating reservations (parties of 1-5)."
+      }
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Compiled from MICHELIN Guide New York coverage and ceremony articles, the official Jungsik site, and aggregated review commentary (Tripadvisor, Yelp, travel/food blogs)."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-13"
+  },
+  {
+    "id": "penny-nyc",
+    "isim": "Penny",
+    "ulke": "USA",
+    "sehir": "New York",
+    "semt": "East Village",
+    "mutfak": [
+      "Seafood",
+      "Wine Bar",
+      "Raw Bar"
+    ],
+    "adres": "90 E 10th St, 1st Floor, New York, NY 10003, United States",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Penny+90+E+10th+St+New+York+NY+10003",
+    "koordinat": {
+      "lat": 40.7308231,
+      "lng": -73.989714
+    },
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": {
+        "min": 100,
+        "max": 150,
+        "paraBirimi": "USD"
+      },
+      "not": "No fixed tasting menu; à la carte seafood counter with typical per-person spend around $100 or more depending on wine and shared plates (e.g. $26 for five cocktail shrimp)."
+    },
+    "yemek": {
+      "puan": 9.1,
+      "ozet": "A 31-seat seafood counter above sister restaurant Claud, built around a raw-bar 'Ice Box' and a short, technique-driven menu; it has been a finalist for the country's top new-restaurant honor. Ingredient quality draws consistent, strong praise across coverage, with the whole lobster and oyster confit mentioned most often. No significant recurring food criticism was found."
+    },
+    "neYenir": [
+      {
+        "yemek": "Ice Box raw bar (oysters, clams, shrimp, mussels escabeche, crudo)",
+        "kacKisiOnerdi": null,
+        "not": "The restaurant's signature raw-bar presentation."
+      },
+      {
+        "yemek": "Sesame brioche with Cantabrian anchovies",
+        "kacKisiOnerdi": null,
+        "not": "Named a standout starter."
+      },
+      {
+        "yemek": "Tuna carpaccio with Manzanilla olives and cipollini onion",
+        "kacKisiOnerdi": null,
+        "not": "A recurring starter course."
+      },
+      {
+        "yemek": "Oyster confit in chicken fat",
+        "kacKisiOnerdi": null,
+        "not": "Described as a simple, surprisingly rich snack."
+      },
+      {
+        "yemek": "Whole 1.5lb live lobster",
+        "kacKisiOnerdi": null,
+        "not": "Praised for its sauce work and precise cooking."
+      }
+    ],
+    "ambiyans": {
+      "puan": 8.2,
+      "ozet": "Every seat sits along one long marble bar facing an open, fast-moving kitchen — reviewers describe the seats as comfortable but note the room's only-counter layout means waits are common even with reservations.",
+      "etiketler": [
+        "counter",
+        "casual",
+        "wine-bar",
+        "lively"
+      ],
+      "dressCode": null,
+      "uygun": [
+        "couples",
+        "solo",
+        "groups"
+      ]
+    },
+    "servis": {
+      "puan": 9.0,
+      "ozet": "Servers are consistently described as friendly, efficient and deeply knowledgeable about the seafood program, able to describe dishes in detail.",
+      "artilar": [
+        "Friendly, efficient counter service",
+        "Staff deeply knowledgeable about the seafood program"
+      ],
+      "eksiler": [
+        "Walk-in-heavy seating model can mean a wait even with a reservation"
+      ]
+    },
+    "oduller": [
+      {
+        "tip": "michelin-secilmis",
+        "detay": "Included in the MICHELIN Guide New York City selection (2025 edition) — no star or Bib Gourmand confirmed."
+      }
+    ],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "online"
+      ],
+      "telefon": null,
+      "link": null,
+      "beklemeSuresi": "Most seats are reserved for walk-ins; standing room is available at the front while waiting.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Compiled from MICHELIN Guide New York coverage, Robb Report and Michelin editorial features, and aggregated review commentary (The Infatuation, Tripadvisor, Yelp)."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-13"
+  },
+  {
+    "id": "emerils-nola",
+    "isim": "Emeril's",
+    "ulke": "USA",
+    "sehir": "New Orleans",
+    "semt": "Warehouse District",
+    "mutfak": [
+      "Contemporary Creole",
+      "New Orleans",
+      "Contemporary American"
+    ],
+    "adres": "800 Tchoupitoulas St, New Orleans, LA 70130, United States",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Emerils+800+Tchoupitoulas+St+New+Orleans+LA+70130",
+    "koordinat": {
+      "lat": 29.9446386,
+      "lng": -90.0673486
+    },
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": {
+        "min": 295,
+        "max": 295,
+        "paraBirimi": "USD"
+      },
+      "not": "The dining room now runs exclusively on a $295 chef's tasting menu; à la carte ordering is only available at the adjoining Wine Bar at Emeril's."
+    },
+    "yemek": {
+      "puan": 9.0,
+      "ozet": "Opened by Emeril Lagasse in 1990 and now led by his son E.J. Lagasse, the kitchen reinterprets New Orleans Creole flavor at a global fine-dining level while keeping two dishes that have run since opening night: a smoked salmon cheesecake starter and a banana pudding finish. The chef was named the region's top young chef by Michelin in the inaugural American South guide. Coverage is strongly positive with no significant recurring complaints found."
+    },
+    "neYenir": [
+      {
+        "yemek": "Smoked salmon cheesecake",
+        "kacKisiOnerdi": null,
+        "not": "On the menu since the restaurant opened in 1990."
+      },
+      {
+        "yemek": "Banana pudding",
+        "kacKisiOnerdi": null,
+        "not": "The tasting menu's closing course since 1990."
+      },
+      {
+        "yemek": "BBQ shrimp po'boy (tasting bite)",
+        "kacKisiOnerdi": null,
+        "not": "A miniature version of a New Orleans classic."
+      },
+      {
+        "yemek": "Shrimp tartlets with rosemary biscuits",
+        "kacKisiOnerdi": null,
+        "not": "A recurring bite-sized course."
+      },
+      {
+        "yemek": "Gumbo",
+        "kacKisiOnerdi": null,
+        "not": "Served in a small-bowl tasting-menu format."
+      },
+      {
+        "yemek": "Mississippi trout with slivered almonds",
+        "kacKisiOnerdi": null,
+        "not": "Lightly dredged, pan-fried and finished with almonds."
+      }
+    ],
+    "ambiyans": {
+      "puan": 8.5,
+      "ozet": "A renovated pharmacy warehouse with exposed brick, glass walls and a wine wall — a long-established, classic Warehouse District dining room rather than a newly designed space.",
+      "etiketler": [
+        "classic",
+        "historic-building",
+        "fine-dining",
+        "warehouse-conversion"
+      ],
+      "dressCode": "Dining Room formal — collared shirts required for men, jackets recommended; the adjoining Salon is more relaxed.",
+      "uygun": [
+        "couples",
+        "business dinner",
+        "groups"
+      ]
+    },
+    "servis": {
+      "puan": null,
+      "ozet": null,
+      "artilar": [],
+      "eksiler": []
+    },
+    "oduller": [
+      {
+        "tip": "michelin-2-yildiz",
+        "detay": "Two MICHELIN stars — inaugural 2025 MICHELIN Guide American South; the only two-star restaurant in that edition."
+      }
+    ],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "online",
+        "phone"
+      ],
+      "telefon": "+1 504-528-9393",
+      "link": null,
+      "beklemeSuresi": "Reservations highly recommended, especially at peak times and around special events.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Compiled from MICHELIN Guide American South ceremony coverage, the official Emeril's Restaurants site, nola.com and Post and Courier restaurant coverage, and aggregated review commentary (Tripadvisor, Feastio)."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-13"
+  },
+  {
+    "id": "chubby-fish-charleston",
+    "isim": "Chubby Fish",
+    "ulke": "USA",
+    "sehir": "Charleston",
+    "semt": "Cannonborough",
+    "mutfak": [
+      "Seafood",
+      "Lowcountry"
+    ],
+    "adres": "252 Coming St, Charleston, SC 29403, United States",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Chubby+Fish+252+Coming+St+Charleston+SC+29403",
+    "koordinat": null,
+    "fiyat": {
+      "segment": "orta",
+      "kisiBasi": {
+        "min": 70,
+        "max": 80,
+        "paraBirimi": "USD"
+      },
+      "not": "Average spend estimated at $70-80 per person; the menu changes daily and is handwritten over the kitchen, so exact per-dish pricing varies night to night."
+    },
+    "yemek": {
+      "puan": 9.0,
+      "ozet": "A walk-in-only seafood spot built on daily-changing raw bar, starter and entree offerings sourced directly from local fishermen and farmers; it is a national semifinalist for the country's top restaurant honor. Reviewers describe nearly every dish as a highlight, with fresh, boldly seasoned Lowcountry seafood as the consistent throughline. The main friction point in coverage is the wait to get a table, not the food itself."
+    },
+    "neYenir": [
+      {
+        "yemek": "North Carolina yellowtail tuna crudo",
+        "kacKisiOnerdi": null,
+        "not": "A recurring raw-bar starter."
+      },
+      {
+        "yemek": "Steamboat Creek oysters with crab fat curry",
+        "kacKisiOnerdi": null,
+        "not": "Named a standout starter in local coverage."
+      },
+      {
+        "yemek": "Smoked sheepshead curry over rice",
+        "kacKisiOnerdi": null,
+        "not": "A recurring entree highlight."
+      }
+    ],
+    "ambiyans": {
+      "puan": 8.3,
+      "ozet": "A small room centered on a communal table with an open kitchen and a hip, no-frills feel; the space itself draws praise, though the long pre-opening line is the dominant experience many guests describe.",
+      "etiketler": [
+        "casual",
+        "lively",
+        "communal",
+        "no-reservations"
+      ],
+      "dressCode": null,
+      "uygun": [
+        "couples",
+        "groups",
+        "solo"
+      ]
+    },
+    "servis": {
+      "puan": null,
+      "ozet": null,
+      "artilar": [],
+      "eksiler": []
+    },
+    "oduller": [
+      {
+        "tip": "michelin-secilmis",
+        "detay": "Included in the inaugural 2025 MICHELIN Guide American South (Charleston) with a Recommended designation — no star or Bib Gourmand."
+      }
+    ],
+    "rezervasyon": {
+      "gerekiyor": false,
+      "yontem": [],
+      "telefon": "+1 854-222-3949",
+      "link": null,
+      "beklemeSuresi": "Walk-in only; the queue commonly forms 1-2.5 hours before the 5:00 PM opening. Walk-in parties are limited to six; groups of seven or more must email to inquire about availability.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Compiled from MICHELIN Guide American South (Charleston) coverage, the official Chubby Fish site, Post and Courier reporting on the restaurant's walk-in line, and aggregated review commentary (Tripadvisor, Yelp)."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-13"
+  },
+  {
+    "id": "saison-sf",
+    "isim": "Saison",
+    "ulke": "USA",
+    "sehir": "San Francisco",
+    "semt": "SoMa",
+    "mutfak": [
+      "Contemporary American",
+      "Californian",
+      "Tasting Menu"
+    ],
+    "adres": "178 Townsend St, San Francisco, CA 94107, United States",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Saison+178+Townsend+St+San+Francisco+CA+94107",
+    "koordinat": {
+      "lat": 37.7794954,
+      "lng": -122.3922179
+    },
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": {
+        "min": 368,
+        "max": 538,
+        "paraBirimi": "USD"
+      },
+      "not": "Dining-room tasting menu from $368 per person; private kitchen-table experience $398-538; a separate, lower-priced bar experience runs $58-78. Wine pairings start at $198."
+    },
+    "yemek": {
+      "puan": 9.5,
+      "ozet": "A two-Michelin-star tasting menu built around live-fire technique and the chef's own blend of Chinese heritage and premium California ingredients, from caviar and seaweed courses to a dry-aged duck with salted cherry leaf sauce. Reviewers consistently describe the execution as exacting and the overall experience as a well-run fine-dining machine. Little recurring criticism was found in the coverage reviewed."
+    },
+    "neYenir": [
+      {
+        "yemek": "Saison caviar with coastal seaweeds",
+        "kacKisiOnerdi": null,
+        "not": "A recurring opening course."
+      },
+      {
+        "yemek": "Uni toast",
+        "kacKisiOnerdi": null,
+        "not": "Combines uni, sourdough and butter."
+      },
+      {
+        "yemek": "Pacific king salmon with heart of palm",
+        "kacKisiOnerdi": null,
+        "not": "A recurring seasonal course."
+      },
+      {
+        "yemek": "Santa Barbara spot prawn with finger lime and mustard flower",
+        "kacKisiOnerdi": null,
+        "not": "Noted for its bright, acid-forward pairing."
+      },
+      {
+        "yemek": "Dry-aged Sonoma duck with salted cherry leaf sauce",
+        "kacKisiOnerdi": null,
+        "not": "Cited among the dishes that earned the restaurant its Michelin stars."
+      }
+    ],
+    "ambiyans": {
+      "puan": 8.9,
+      "ozet": "An upscale open-kitchen dining room with tableside pours and a choreographed feel, described by reviewers as polished and precise, if slightly formal in its pacing.",
+      "etiketler": [
+        "fine-dining",
+        "luxury",
+        "open-kitchen",
+        "tasting-menu"
+      ],
+      "dressCode": null,
+      "uygun": [
+        "couples",
+        "business dinner"
+      ]
+    },
+    "servis": {
+      "puan": 9.0,
+      "ozet": "Service is described as a well-oiled, precise fine-dining operation, with tableside touches like caviar service and knife selection called out as strengths.",
+      "artilar": [
+        "Polished, precise, well-choreographed fine-dining service"
+      ],
+      "eksiler": []
+    },
+    "oduller": [
+      {
+        "tip": "michelin-2-yildiz",
+        "detay": "Two MICHELIN stars — 2025 MICHELIN Guide California, maintained into 2026."
+      }
+    ],
+    "rezervasyon": {
+      "gerekiyor": true,
+      "yontem": [
+        "online"
+      ],
+      "telefon": "+1 415-828-7990",
+      "link": null,
+      "beklemeSuresi": "Dinner reservations released roughly one month out, on the 1st of the prior month, via OpenTable.",
+      "kapora": {
+        "var": true,
+        "detay": "Credit card held on file; cancellations inside 30 days are charged $98/person as rebooking credit; cancellations inside 48 hours or no-shows are charged the full menu price."
+      }
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Compiled from MICHELIN Guide California coverage, the official Saison site, and aggregated review commentary (The Infatuation, Tripadvisor, Yelp, travel/food blogs)."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-13"
+  },
+  {
+    "id": "aska-brooklyn",
+    "isim": "Aska",
+    "ulke": "USA",
+    "sehir": "New York",
+    "semt": "Williamsburg / Brooklyn",
+    "mutfak": [
+      "Scandinavian",
+      "New Nordic",
+      "Tasting Menu"
+    ],
+    "adres": "47 S 5th St, Brooklyn, NY 11249, United States",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Aska+47+S+5th+St+Brooklyn+NY+11249",
+    "koordinat": null,
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": {
+        "min": 375,
+        "max": 375,
+        "paraBirimi": "USD"
+      },
+      "not": "12-14 course tasting menu at $375 per person; optional wine pairing from $250 per guest. Full prepayment is required to hold a reservation."
+    },
+    "yemek": {
+      "puan": 9.5,
+      "ozet": "Brooklyn's only two-Michelin-star kitchen, drawing on the chef's Swedish heritage and Northeastern-US foraging to build a highly personal tasting menu centered on preservation, smoke and seasonality. A raw kingfish course wrapped in seaweed with caviar is the dish most often singled out as the best bite of the meal. Reviews are consistently strong with essentially no recurring criticism found."
+    },
+    "neYenir": [
+      {
+        "yemek": "Raw king fish wrapped in seaweed with caviar",
+        "kacKisiOnerdi": null,
+        "not": "Repeatedly named the best bite of the tasting menu."
+      },
+      {
+        "yemek": "Caviar course with grilled onions",
+        "kacKisiOnerdi": null,
+        "not": "Uses sustainably farmed Finnish caviar."
+      },
+      {
+        "yemek": "Norwegian langoustine cooked in its own shell sauce",
+        "kacKisiOnerdi": null,
+        "not": "A recurring highlight course."
+      },
+      {
+        "yemek": "Rye pancake with vendace roe in lilac vinegar",
+        "kacKisiOnerdi": null,
+        "not": "Cited as a distinctive Nordic-technique course."
+      },
+      {
+        "yemek": "Brown crab with crab-brain custard",
+        "kacKisiOnerdi": null,
+        "not": "A recurring course showcasing whole-ingredient use."
+      }
+    ],
+    "ambiyans": {
+      "puan": 8.8,
+      "ozet": "A dark, intimate room built around an open kitchen, with just ten tables; reviewers describe the presentation and setting as artistic rather than austere.",
+      "etiketler": [
+        "intimate",
+        "dark",
+        "open-kitchen",
+        "tasting-menu",
+        "romantic"
+      ],
+      "dressCode": null,
+      "uygun": [
+        "couples"
+      ]
+    },
+    "servis": {
+      "puan": 9.0,
+      "ozet": "Service is consistently praised as outstanding, attentive and knowledgeable about the foraged and Nordic ingredients on the menu, with beautiful presentation called out repeatedly.",
+      "artilar": [
+        "Outstanding, attentive service consistently praised",
+        "Staff knowledgeable about foraged and Nordic ingredients"
+      ],
+      "eksiler": []
+    },
+    "oduller": [
+      {
+        "tip": "michelin-2-yildiz",
+        "detay": "Two MICHELIN stars — Brooklyn's only two-star restaurant in the 2025 MICHELIN Guide New York City, maintained into 2026."
+      }
+    ],
+    "rezervasyon": {
+      "gerekiyor": true,
+      "yontem": [
+        "online"
+      ],
+      "telefon": "+1 929-337-6792",
+      "link": "https://www.askanyc.com/",
+      "beklemeSuresi": null,
+      "kapora": {
+        "var": true,
+        "detay": "Full $375-per-person prepayment required to hold a reservation."
+      }
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Compiled from MICHELIN Guide New York coverage, the official Aska site, and aggregated review commentary (Tripadvisor, Yelp, travelsort, travel/food blogs)."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-13"
+  },
+  {
+    "id": "moon-rabbit-dc",
+    "isim": "Moon Rabbit",
+    "ulke": "USA",
+    "sehir": "Washington, D.C.",
+    "semt": "Penn Quarter",
+    "mutfak": [
+      "Vietnamese",
+      "Contemporary"
+    ],
+    "adres": "927 F St NW, Washington, DC 20004, United States",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Moon+Rabbit+927+F+St+NW+Washington+DC+20004",
+    "koordinat": {
+      "lat": 38.8975293,
+      "lng": -77.0252444
+    },
+    "fiyat": {
+      "segment": "orta",
+      "kisiBasi": {
+        "min": 95,
+        "max": 115,
+        "paraBirimi": "USD"
+      },
+      "not": "Tasting-format menu reported around $95-115 per person across sources (one source cites a five-course option at $85); à la carte mains are also available, roughly $32-42."
+    },
+    "yemek": {
+      "puan": 8.8,
+      "ozet": "Chef Kevin Tien channels his Vietnamese heritage and Cajun Louisiana upbringing into a modern, contemporary-technique menu at this Penn Quarter dining room. Dishes like the fried quail over Viet-Cajun tomato rice and mochi eel draw consistent praise for creativity without feeling overly formal. Coverage is strongly positive with no significant recurring criticism found."
+    },
+    "neYenir": [
+      {
+        "yemek": "Water fern rice cake with caramelized king trumpet mushroom",
+        "kacKisiOnerdi": null,
+        "not": "Praised for its comforting flavor."
+      },
+      {
+        "yemek": "Fried quail stuffed with duck sausage over Viet-Cajun tomato rice",
+        "kacKisiOnerdi": null,
+        "not": "Served with bright clementine mustard."
+      },
+      {
+        "yemek": "Mochi eel",
+        "kacKisiOnerdi": null,
+        "not": "Cited as a unique, beautifully presented dish."
+      },
+      {
+        "yemek": "Kanpachi crudo with sweet potato and Maryland crab",
+        "kacKisiOnerdi": null,
+        "not": "A recurring starter course."
+      },
+      {
+        "yemek": "Green curry sponge cake",
+        "kacKisiOnerdi": null,
+        "not": "A dessert course blending Vietnamese flavor with Western technique."
+      }
+    ],
+    "ambiyans": {
+      "puan": 8.4,
+      "ozet": "A bright, contemporary dining room at the restaurant's current F Street location, described consistently as modern and inviting rather than themed or overly casual.",
+      "etiketler": [
+        "modern",
+        "contemporary",
+        "lively"
+      ],
+      "dressCode": null,
+      "uygun": [
+        "couples",
+        "groups"
+      ]
+    },
+    "servis": {
+      "puan": null,
+      "ozet": null,
+      "artilar": [],
+      "eksiler": []
+    },
+    "oduller": [
+      {
+        "tip": "michelin-secilmis",
+        "detay": "Held a MICHELIN Bib Gourmand in 2022-2023 at the restaurant's prior Wharf location; the current Penn Quarter location appears in the MICHELIN Guide Washington, D.C. selection without a confirmed star or Bib Gourmand as of the 2025 guide."
+      }
+    ],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "online"
+      ],
+      "telefon": "+1 202-525-1446",
+      "link": null,
+      "beklemeSuresi": null,
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Compiled from MICHELIN Guide Washington, D.C. coverage, the official Moon Rabbit site, North America's 50 Best Restaurants listing, and aggregated review commentary (Washingtonian, Tripadvisor)."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-13"
+  },
+  {
+    "id": "holbox-la",
+    "isim": "Holbox",
+    "ulke": "USA",
+    "sehir": "Los Angeles",
+    "semt": "Historic South-Central",
+    "mutfak": [
+      "Mexican",
+      "Seafood",
+      "Yucatecan"
+    ],
+    "adres": "Mercado La Paloma, 3655 S Grand Ave C9, Los Angeles, CA 90007, United States",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Holbox+3655+S+Grand+Ave+C9+Los+Angeles+CA+90007",
+    "koordinat": {
+      "lat": 34.0173172,
+      "lng": -118.278365
+    },
+    "fiyat": {
+      "segment": "orta",
+      "kisiBasi": {
+        "min": 60,
+        "max": 70,
+        "paraBirimi": "USD"
+      },
+      "not": "Regular à la carte spend estimated around $60-70 per person; individual tacos are roughly $6 and tostadas run under $20. A separate reservation-only 8-course tasting menu is offered Wednesday and Thursday evenings for $130."
+    },
+    "yemek": {
+      "puan": 9.3,
+      "ozet": "A Yucatecan-style seafood counter inside a South Los Angeles food hall, and the first Mexican marisquería in the country to hold a Michelin star. Its heirloom-corn tostadas and ceviches draw consistently strong praise, and it remains one of the only food-court restaurants recognized on a global best-restaurants list. No significant recurring food criticism was found in the coverage reviewed."
+    },
+    "neYenir": [
+      {
+        "yemek": "Baja shrimp taco",
+        "kacKisiOnerdi": null,
+        "not": "Named among the six essential dishes in coverage."
+      },
+      {
+        "yemek": "Smoked kanpachi tostada",
+        "kacKisiOnerdi": null,
+        "not": "A recurring highlight on nixtamalized heirloom-corn tostadas."
+      },
+      {
+        "yemek": "Scallop aguachile",
+        "kacKisiOnerdi": null,
+        "not": "Cited as a standout raw preparation."
+      },
+      {
+        "yemek": "Bluefin tuna tostada with avocado purée and chile de árbol peanut sauce",
+        "kacKisiOnerdi": null,
+        "not": "Called a favorite by multiple reviewers."
+      }
+    ],
+    "ambiyans": {
+      "puan": 7.2,
+      "ozet": "A bustling counter inside a shared food hall rather than a standalone dining room — functional and lively, with the main recurring friction being long weekend lines rather than the space itself.",
+      "etiketler": [
+        "casual",
+        "food-hall",
+        "counter",
+        "lively"
+      ],
+      "dressCode": null,
+      "uygun": [
+        "solo",
+        "groups",
+        "family"
+      ]
+    },
+    "servis": {
+      "puan": null,
+      "ozet": null,
+      "artilar": [],
+      "eksiler": []
+    },
+    "oduller": [
+      {
+        "tip": "michelin-yildiz",
+        "detay": "One MICHELIN star, awarded August 2024 and maintained since — the first Mexican marisquería in the US to hold a Michelin star (2025 MICHELIN Guide California)."
+      }
+    ],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "online"
+      ],
+      "telefon": "+1 213-986-9972",
+      "link": null,
+      "beklemeSuresi": "No reservations for regular counter service; order at the counter and wait for food, with weekend waits running 30-45 minutes. A separate 8-course tasting menu is reservation-only, released monthly.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Compiled from MICHELIN Guide California coverage, L.A. Taco and Resy editorial features, and aggregated review commentary (Tripadvisor, Yelp, kevinEats)."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-13"
+  },
+  {
+    "id": "avize-atlanta",
+    "isim": "Avize",
+    "ulke": "USA",
+    "sehir": "Atlanta",
+    "semt": "West Midtown",
+    "mutfak": [
+      "Alpine",
+      "French",
+      "European",
+      "Modern European"
+    ],
+    "adres": "956 Brady Ave NW, Atlanta, GA 30318, United States",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Avize+956+Brady+Ave+NW+Atlanta+GA+30318",
+    "koordinat": null,
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": {
+        "min": 195,
+        "max": 195,
+        "paraBirimi": "USD"
+      },
+      "not": "Seasonal prix fixe at $195 per person without pairings; base wine pairings bring the total to about $300, elevated pairings to about $400."
+    },
+    "yemek": {
+      "puan": 8.9,
+      "ozet": "A mountain-lodge-themed dining room drawing on French, Northern Italian, Swiss, Austrian and German traditions, sourced heavily from the restaurant's own partner farm. Reviewers highlight the lemon-pepper frog legs and Milanese schnitzel most consistently, and it is the only Georgia restaurant named to a major national best-restaurants list. No significant recurring criticism was found in the coverage reviewed."
+    },
+    "neYenir": [
+      {
+        "yemek": "Lemon pepper wet frog legs",
+        "kacKisiOnerdi": null,
+        "not": "The dish most frequently cited in coverage."
+      },
+      {
+        "yemek": "Venison tartare",
+        "kacKisiOnerdi": null,
+        "not": "A recurring starter course."
+      },
+      {
+        "yemek": "Foie gras parfait",
+        "kacKisiOnerdi": null,
+        "not": "Paired with a caviar-and-berliner service."
+      },
+      {
+        "yemek": "Fermented carrot Bolognese",
+        "kacKisiOnerdi": null,
+        "not": "A vegetable-forward main course."
+      },
+      {
+        "yemek": "Milanese schnitzel with green goddess sauce",
+        "kacKisiOnerdi": null,
+        "not": "Topped with mizuna salad and furikake breadcrumbs."
+      },
+      {
+        "yemek": "Black sesame tiramisu",
+        "kacKisiOnerdi": null,
+        "not": "A recurring dessert course."
+      }
+    ],
+    "ambiyans": {
+      "puan": 8.6,
+      "ozet": "A mountain-lodge-styled dining room, complete with a dry-aged duck display case, that reviewers describe as distinctive and immersive rather than generic fine dining.",
+      "etiketler": [
+        "modern",
+        "alpine",
+        "intimate",
+        "special-occasion"
+      ],
+      "dressCode": "Business casual.",
+      "uygun": [
+        "couples",
+        "business dinner"
+      ]
+    },
+    "servis": {
+      "puan": null,
+      "ozet": null,
+      "artilar": [],
+      "eksiler": []
+    },
+    "oduller": [
+      {
+        "tip": "michelin-secilmis",
+        "detay": "Included in the 2025 MICHELIN Guide American South (Atlanta) with a Recommended designation — no star or Bib Gourmand."
+      }
+    ],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "online"
+      ],
+      "telefon": "+1 404-879-1713",
+      "link": "https://resy.com/cities/atlanta-ga/venues/avize",
+      "beklemeSuresi": null,
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Compiled from MICHELIN Guide American South (Atlanta) coverage, the official Avize site, North America's 50 Best Restaurants and NYT 50 Best listings, and aggregated review commentary (Tripadvisor, Yelp)."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-13"
+  },
+  {
+    "id": "acamaya-nola",
+    "isim": "Acamaya",
+    "ulke": "USA",
+    "sehir": "New Orleans",
+    "semt": "Bywater",
+    "mutfak": [
+      "Mexican",
+      "Seafood"
+    ],
+    "adres": "3070 Dauphine St, New Orleans, LA 70117, United States",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Acamaya+3070+Dauphine+St+New+Orleans+LA+70117",
+    "koordinat": null,
+    "fiyat": {
+      "segment": "orta",
+      "kisiBasi": {
+        "min": 50,
+        "max": 100,
+        "paraBirimi": "USD"
+      },
+      "not": "À la carte Mexican-seafood menu; estimated per-person spend of $50-100 depending on how many dishes are ordered."
+    },
+    "yemek": {
+      "puan": 9.0,
+      "ozet": "A Bywater restaurant bridging the chef's Mexico City upbringing with Gulf seafood, earning a Bib Gourmand in the region's first Michelin guide. The al pastor hamachi tostada and crab-and-mushroom masa dumplings are the dishes most cited in coverage, and the restaurant has been named a best-new-restaurant pick by multiple national outlets. No significant recurring criticism was found."
+    },
+    "neYenir": [
+      {
+        "yemek": "Al pastor hamachi tostada",
+        "kacKisiOnerdi": null,
+        "not": "Made with in-house nixtamalized corn tostadas."
+      },
+      {
+        "yemek": "Masa dumplings with Higgins crab, oyster mushroom and corn beurre blanc",
+        "kacKisiOnerdi": null,
+        "not": "Described as warm and refined."
+      }
+    ],
+    "ambiyans": {
+      "puan": 8.7,
+      "ozet": "Pastel-pink tile, stonework and breeze walls set a stylish, design-forward stage that reviewers describe as dramatic without feeling stiff.",
+      "etiketler": [
+        "stylish",
+        "modern",
+        "casual"
+      ],
+      "dressCode": null,
+      "uygun": [
+        "couples",
+        "groups"
+      ]
+    },
+    "servis": {
+      "puan": null,
+      "ozet": null,
+      "artilar": [],
+      "eksiler": []
+    },
+    "oduller": [
+      {
+        "tip": "michelin-bib",
+        "detay": "MICHELIN Bib Gourmand — inaugural 2025 MICHELIN Guide American South (New Orleans)."
+      }
+    ],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "online",
+        "phone"
+      ],
+      "telefon": "+1 504-299-3477",
+      "link": null,
+      "beklemeSuresi": "Reservations recommended; some seats are held for walk-ins.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Compiled from MICHELIN Guide American South (New Orleans) coverage via neworleans.com, the official Acamaya site, and aggregated review commentary (nola.com, The Infatuation, Tripadvisor)."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-13"
   }
 ];
