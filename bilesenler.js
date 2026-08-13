@@ -74,7 +74,7 @@ function gezinmeHTML(aktif) {
     <nav class="gezinme">
       ${sekme('index.html', 'EATPLORE', 'kesfet')}
       ${sekme('gunluk.html', 'ATE', 'gunluk')}
-      ${sekme('kisiler.html', 'EATERS', 'kisiler')}
+      ${sekme('kisiler.html', 'EATGRAM', 'kisiler')}
       <span id="hesapKutusu" class="hesap-kutusu"></span>
     </nav>`;
 }

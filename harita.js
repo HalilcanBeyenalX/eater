@@ -7,7 +7,13 @@ let harita = null;
 let haritaIsaretKatmani = null;
 let benimIsaret = null;      // "Place your location" ile konan kullanıcı pini
 let rotaCizgi = null;        // çizili rota (OSRM)
+let rotaBalonu = null;       // rotanın ortasındaki süre/mesafe balonu
 let yerlestirModu = false;   // düğmeye basıldı, sıradaki harita tıklaması pini koyar
+
+function rotayiTemizle() {
+  if (rotaCizgi) { rotaCizgi.remove(); rotaCizgi = null; }
+  if (rotaBalonu) { rotaBalonu.remove(); rotaBalonu = null; }
+}
 
 function haritayiKur() {
   if (typeof L === 'undefined') return false;
@@ -45,7 +51,7 @@ function konumYerlestirmeKur() {
     benimIsaret = L.marker(e.latlng, {
       icon: L.divIcon({ className: 'benim-pin', html: '📍', iconSize: [30, 30], iconAnchor: [15, 28] })
     }).addTo(harita);
-    if (rotaCizgi) { rotaCizgi.remove(); rotaCizgi = null; }
+    rotayiTemizle();
     bilgi.textContent = 'Location placed — now click a restaurant pin to get the route.';
   });
 }
@@ -66,15 +72,27 @@ async function rotaCiz(hedef, isim) {
     const veri = await yanit.json();
     if (veri.code !== 'Ok' || !veri.routes?.length) throw new Error('rota yok');
     const rota = veri.routes[0];
-    if (rotaCizgi) rotaCizgi.remove();
+    rotayiTemizle();
     rotaCizgi = L.geoJSON(rota.geometry, {
       style: { color: '#F5B700', weight: 5, opacity: 0.9 }
     }).addTo(harita);
     harita.fitBounds(rotaCizgi.getBounds(), { padding: [40, 40] });
     const km = rota.distance / 1000;
+    const kmMetin = km < 10 ? km.toFixed(1) : String(Math.round(km));
     const dakika = Math.max(1, Math.round(rota.duration / 60));
+    // Google Maps usulü: sürenin yazdığı balon rotanın ortasına oturur.
+    const noktalar = rota.geometry.coordinates;
+    const orta = noktalar[Math.floor(noktalar.length / 2)];
+    rotaBalonu = L.marker([orta[1], orta[0]], {
+      interactive: false,
+      icon: L.divIcon({
+        className: 'rota-balon-kap',
+        html: `<span class="rota-balon">🚗 ~${dakika} min · ${kmMetin} km</span>`,
+        iconSize: [0, 0]
+      })
+    }).addTo(harita);
     bilgi.textContent =
-      `🚗 ${km < 10 ? km.toFixed(1) : Math.round(km)} km · ~${dakika} min drive to ${isim}`;
+      `🚗 ${kmMetin} km · ~${dakika} min drive to ${isim}`;
   } catch {
     // Rota servisi yanıt vermezse en azından kuş uçuşu mesafe söylenir.
     bilgi.textContent =
@@ -109,7 +127,7 @@ function haritayiGuncelle(ulke, sehir) {
   if (gizliydi) harita.invalidateSize(); // gizliyken kurulan harita boyutunu tazele
 
   haritaIsaretKatmani.clearLayers();
-  if (rotaCizgi) { rotaCizgi.remove(); rotaCizgi = null; } // ülke/şehir değişti, eski rota kalksın
+  rotayiTemizle(); // ülke/şehir değişti, eski rota ve balonu kalksın
   konumlular.forEach(r => {
     L.circleMarker([r.koordinat.lat, r.koordinat.lng], {
       radius: 9, color: '#6E0A12', weight: 2,

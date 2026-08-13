@@ -146,9 +146,78 @@ async function kisileriGoster() {
   });
 }
 
+// --- EATGRAM akışı: herkesin son ziyaretleri, Instagram usulü tek kolon ---
+
+function akisKartiHTML(z, profil, mekanAdi) {
+  const avatar = profil?.avatar
+    ? `<img class="avatar-mini" src="${kacis(eaterHesap.fotoUrl(profil.avatar))}" alt="">`
+    : '<span class="avatar-mini avatar-bos" aria-hidden="true">👤</span>';
+  const ad = profil ? profil.kullanici_adi : '(deleted account)';
+  const profilBaglanti = profil
+    ? `<a class="kisi-ad" href="kisi.html?id=${encodeURIComponent(profil.id)}">${kacis(ad)}</a>`
+    : `<span class="kisi-ad">${kacis(ad)}</span>`;
+  const puan = (etiket, deger) =>
+    typeof deger === 'number' ? `<span class="mini-puan">${etiket} ${ondalikTR(deger)}</span>` : '';
+  const fotolar = [z.sevilen_yemek1_foto, z.sevilen_yemek2_foto].filter(Boolean);
+  const fotoHTML = fotolar.length
+    ? `<div class="akis-fotolar${fotolar.length > 1 ? ' akis-iki' : ''}">
+        ${fotolar.map(y => `<img class="ziyaret-foto akis-foto"
+          src="${kacis(eaterHesap.fotoUrl(y))}" alt="Food photo" loading="lazy">`).join('')}
+      </div>`
+    : '';
+  return `
+    <article class="akis-kart">
+      <div class="akis-ust">
+        ${avatar}
+        <div class="akis-kim">
+          ${profilBaglanti}
+          <span class="silik">ate at <strong>${kacis(mekanAdi)}</strong> · ${kacis(z.tarih)}</span>
+        </div>
+      </div>
+      ${fotoHTML}
+      <div class="akis-puanlar">
+        ${puan('Food', z.yemek_puan)}${puan('Ambiance', z.ambiyans_puan)}${puan('Service', z.servis_puan)}
+      </div>
+      ${z.yorum ? `<p class="akis-yorum">${kacis(z.yorum)}</p>` : ''}
+    </article>`;
+}
+
+async function akisiGoster() {
+  const kap = document.getElementById('akis');
+  if (!kap || !eaterHesap.hazir()) return;
+  const { data: ziyaretler, error } = await eaterHesap.istemci
+    .from('ziyaretler').select('*')
+    .order('created_at', { ascending: false }).limit(20);
+  if (error || !ziyaretler || ziyaretler.length === 0) return;
+
+  const kullaniciIdler = [...new Set(ziyaretler.map(z => z.kullanici))];
+  const mekanIdler = [...new Set(ziyaretler.filter(z => z.mekan_id).map(z => z.mekan_id))];
+  const [profilY, mekanY] = await Promise.all([
+    eaterHesap.istemci.from('profiller')
+      .select('id, kullanici_adi, avatar').in('id', kullaniciIdler),
+    mekanIdler.length
+      ? eaterHesap.istemci.from('mekanlar').select('id, isim').in('id', mekanIdler)
+      : Promise.resolve({ data: [] })
+  ]);
+  const profiller = profilY.data || [];
+  const mekanlar = mekanY.data || [];
+  const mekanAdi = z => {
+    if (z.restoran_id) return RESTORANLAR.find(x => x.id === z.restoran_id)?.isim ?? z.restoran_id;
+    return mekanlar.find(x => x.id === z.mekan_id)?.isim ?? '(deleted place)';
+  };
+
+  kap.innerHTML = `
+    <div class="panel akis-paneli">
+      <h2 class="akis-baslik">Feed</h2>
+      ${ziyaretler.map(z =>
+        akisKartiHTML(z, profiller.find(p => p.id === z.kullanici), mekanAdi(z))).join('')}
+    </div>`;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('gezinme').innerHTML = gezinmeHTML('kisiler');
   eaterHesap.hesapKutusunuCiz();
   kisileriGoster();
+  akisiGoster();
   fotoBuyutmeKur(document.body);
 });
