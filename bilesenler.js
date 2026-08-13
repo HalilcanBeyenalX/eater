@@ -1,7 +1,7 @@
 // EATER — app.js ve detay.js tarafından paylaşılan çizim yardımcıları.
 
 // Fiyat rozeti ülkenin para birimiyle yazılır: ₺₺, €€€, ¥ gibi.
-const PARA_BIRIMLERI = { 'Turkey': '₺', 'Japan': '¥', 'France': '€', 'Spain': '€' };
+const PARA_BIRIMLERI = { 'Turkey': '₺', 'Japan': '¥', 'France': '€', 'Spain': '€', 'Italy': '€' };
 const FIYAT_ADLARI = { ucuz: 'Budget', orta: 'Mid-range', pahali: 'High-end' };
 
 // oduller[].tip -> kısa, rozete uygun etiket. Tanınmayan bir tip

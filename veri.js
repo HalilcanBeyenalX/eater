@@ -4975,5 +4975,1222 @@ const RESTORANLAR = [
     },
     "fotolar": [],
     "sonGuncelleme": "2026-08-11"
+  },
+  {
+    "id": "da-oscar-milano",
+    "isim": "Ristorante Da Oscar",
+    "ulke": "Italy",
+    "sehir": "Milan",
+    "semt": "Porta Venezia",
+    "mutfak": [
+      "Italian",
+      "Milanese",
+      "Pasta",
+      "Traditional Italian"
+    ],
+    "adres": "Via Lazzaro Palazzi 4, 20124 Milano, Italy",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Ristorante%20Da%20Oscar%2C%20Via%20Lazzaro%20Palazzi%204%2C%20Milano",
+    "koordinat": {
+      "lat": 45.47644,
+      "lng": 9.20597
+    },
+    "fiyat": {
+      "segment": "orta",
+      "kisiBasi": null,
+      "not": "Mid-range Milanese trattoria pricing."
+    },
+    "yemek": {
+      "puan": 9.0,
+      "ozet": "An old-school Porta Venezia favorite famous for enormous portions of rich, buttery pasta — the Oscar-style carbonara and penne are the calling cards, backed by cotoletta and Voronoff-style fillet."
+    },
+    "neYenir": [
+      {
+        "yemek": "Carbonara alla Oscar",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Penne alla Oscar",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Filetto Voronoff",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Cotoletta",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Gnocchi",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Ravioli",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 8.2,
+      "ozet": "Lively, unpretentious and proudly old-fashioned — a neighborhood classic rather than a design statement.",
+      "etiketler": [
+        "traditional",
+        "classic",
+        "lively",
+        "local",
+        "casual"
+      ],
+      "dressCode": "Casual / smart casual",
+      "uygun": [
+        "groups",
+        "family"
+      ]
+    },
+    "servis": {
+      "puan": 8.4,
+      "ozet": "Fast, familiar trattoria service that keeps the big plates coming.",
+      "artilar": [],
+      "eksiler": []
+    },
+    "oduller": [],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "phone"
+      ],
+      "telefon": "+39 02 2951 8806",
+      "link": null,
+      "beklemeSuresi": "Recommended.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated entry (Aug 2026): official Da Oscar, TripAdvisor. Porta Venezia location. Coordinates verified by name on OpenStreetMap."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-13"
+  },
+  {
+    "id": "le-specialita-milano",
+    "isim": "Le Specialità",
+    "ulke": "Italy",
+    "sehir": "Milan",
+    "semt": "Porta Vittoria",
+    "mutfak": [
+      "Pizza",
+      "Italian",
+      "Milanese",
+      "Seafood"
+    ],
+    "adres": "Via Pietro Calvi 29, 20129 Milano, Italy",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Le%20Specialit%C3%A0%2C%20Via%20Pietro%20Calvi%2029%2C%20Milano",
+    "koordinat": {
+      "lat": 45.46268,
+      "lng": 9.21048
+    },
+    "fiyat": {
+      "segment": "orta",
+      "kisiBasi": {
+        "min": 31,
+        "max": 50,
+        "paraBirimi": "EUR"
+      },
+      "not": "Roughly €31–50 per person depending on order."
+    },
+    "yemek": {
+      "puan": 9.1,
+      "ozet": "A Milan pizza institution since 1977: thin, blistered wood-fired pies from the classic Margherita to seasonal specials, plus pasta and seafood. Gluten-free pizza is a house strength."
+    },
+    "neYenir": [
+      {
+        "yemek": "Wood-fired thin pizza",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Pizza Margherita",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Seasonal specialty pizzas",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Pasta",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Seafood",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Gluten-free pizza",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 8.2,
+      "ozet": "Classic, family-friendly and reliably busy — the feel of a beloved local institution rather than a trend spot.",
+      "etiketler": [
+        "classic",
+        "casual",
+        "family",
+        "local",
+        "traditional"
+      ],
+      "dressCode": "Casual / smart casual",
+      "uygun": [
+        "family",
+        "groups"
+      ]
+    },
+    "servis": {
+      "puan": 8.3,
+      "ozet": "Practiced, high-volume pizzeria service.",
+      "artilar": [],
+      "eksiler": []
+    },
+    "oduller": [],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "phone"
+      ],
+      "telefon": "+39 02 738 8235",
+      "link": null,
+      "beklemeSuresi": "Recommended.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated entry (Aug 2026): official Le Specialità, TripAdvisor, OpenTable. Coordinates verified by name on OpenStreetMap."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-13"
+  },
+  {
+    "id": "la-bullona-milano",
+    "isim": "La Bullona",
+    "ulke": "Italy",
+    "sehir": "Milan",
+    "semt": "Bullona / Sempione",
+    "mutfak": [
+      "Italian",
+      "Seafood",
+      "Mediterranean",
+      "Contemporary"
+    ],
+    "adres": "Via Piero della Francesca 64, 20154 Milano, Italy",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=La%20Bullona%2C%20Via%20Piero%20della%20Francesca%2064%2C%20Milano",
+    "koordinat": null,
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": null,
+      "not": "Expensive dinner-and-scene pricing."
+    },
+    "yemek": {
+      "puan": 8.3,
+      "ozet": "Homemade pasta, raw fish and Mediterranean seafood served to one of Milan's most fashionable dinner crowds. The kitchen is solid, but the night itself is the main course."
+    },
+    "neYenir": [
+      {
+        "yemek": "Homemade pasta",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Seafood",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Raw fish",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Mediterranean fish dishes",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Signature desserts",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Cocktails",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 9.5,
+      "ozet": "Music, glamour and a see-and-be-seen energy that builds as the evening goes on — dinner sliding into nightlife.",
+      "etiketler": [
+        "nightlife",
+        "fashionable",
+        "luxury",
+        "lively",
+        "live-music",
+        "late-night",
+        "people-watching"
+      ],
+      "dressCode": "Smart elegant",
+      "uygun": [
+        "groups"
+      ]
+    },
+    "servis": {
+      "puan": 8.0,
+      "ozet": "Stylish but busy — on packed nights the show can outpace the service.",
+      "artilar": [],
+      "eksiler": []
+    },
+    "oduller": [],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "phone"
+      ],
+      "telefon": "+39 344 084 1891",
+      "link": null,
+      "beklemeSuresi": "Strongly recommended.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated entry (Aug 2026): official La Bullona, TripAdvisor. No name-pinned OpenStreetMap POI found (only the Bullona district), so coordinates are left null."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-13"
+  },
+  {
+    "id": "langosteria-milano",
+    "isim": "Langosteria",
+    "ulke": "Italy",
+    "sehir": "Milan",
+    "semt": "Navigli / Via Savona",
+    "mutfak": [
+      "Seafood",
+      "Italian",
+      "Mediterranean",
+      "Fine Dining"
+    ],
+    "adres": "Via Savona 10, 20144 Milano, Italy",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Langosteria%2C%20Via%20Savona%2010%2C%20Milano",
+    "koordinat": {
+      "lat": 45.45563,
+      "lng": 9.16863
+    },
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": null,
+      "not": "Top-tier seafood pricing."
+    },
+    "yemek": {
+      "puan": 9.5,
+      "ozet": "Milan's reference point for luxury seafood: pristine raw selections, langoustines and oysters, then shellfish pasta and whole grilled fish. This is the Via Savona flagship that started it all."
+    },
+    "neYenir": [
+      {
+        "yemek": "Raw seafood selection",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Langoustines",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Oysters",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Warm seafood salad",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Grilled fish",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Lobster / shellfish pasta",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 9.2,
+      "ozet": "Elegant, romantic and quietly fashionable — dressed-up dining without stiffness.",
+      "etiketler": [
+        "luxury",
+        "elegant",
+        "romantic",
+        "fashionable",
+        "special-occasion"
+      ],
+      "dressCode": "Smart elegant",
+      "uygun": [
+        "couples",
+        "business dinner"
+      ]
+    },
+    "servis": {
+      "puan": 9.3,
+      "ozet": "Polished, knowledgeable seafood service at pace with the room.",
+      "artilar": [],
+      "eksiler": []
+    },
+    "oduller": [
+      {
+        "tip": "michelin-secilmis",
+        "detay": "Included in the MICHELIN Guide selection."
+      }
+    ],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "phone"
+      ],
+      "telefon": "+39 02 5811 1649",
+      "link": null,
+      "beklemeSuresi": "Strongly recommended.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated entry (Aug 2026): official Langosteria, TripAdvisor, MICHELIN Guide. Via Savona flagship (not Montenapoleone). Coordinates verified by name on OpenStreetMap."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-13"
+  },
+  {
+    "id": "dal-milanese",
+    "isim": "Dal Milanese",
+    "ulke": "Italy",
+    "sehir": "Milan",
+    "semt": "Porta Monforte",
+    "mutfak": [
+      "Milanese",
+      "Italian",
+      "Traditional Italian",
+      "Contemporary"
+    ],
+    "adres": "Viale Premuda 16, 20129 Milano, Italy",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Dal%20Milanese%2C%20Viale%20Premuda%2016%2C%20Milano",
+    "koordinat": {
+      "lat": 45.46448,
+      "lng": 9.20766
+    },
+    "fiyat": {
+      "segment": "orta",
+      "kisiBasi": {
+        "min": 31,
+        "max": 50,
+        "paraBirimi": "EUR"
+      },
+      "not": "Roughly €31–50 per person."
+    },
+    "yemek": {
+      "puan": 8.5,
+      "ozet": "Milanese classics done with a modern hand: saffron risotto, ossobuco and a properly crisp cotoletta alla Milanese are the reasons to come."
+    },
+    "neYenir": [
+      {
+        "yemek": "Cotoletta alla Milanese",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Risotto alla Milanese",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Ossobuco",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Pasta",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Traditional Milanese starters",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Tiramisu",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 9.0,
+      "ozet": "Retro-styled and social — traditional Milan wrapped in a stylish, modern room.",
+      "etiketler": [
+        "retro",
+        "elegant",
+        "lively",
+        "traditional",
+        "modern"
+      ],
+      "dressCode": "Business casual / smart casual",
+      "uygun": [
+        "groups",
+        "couples"
+      ]
+    },
+    "servis": {
+      "puan": 8.1,
+      "ozet": "Friendly and stylish, though busy evenings can stretch the pacing.",
+      "artilar": [],
+      "eksiler": []
+    },
+    "oduller": [],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "phone"
+      ],
+      "telefon": "+39 02 7628 0457",
+      "link": null,
+      "beklemeSuresi": "Recommended.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated entry (Aug 2026): official Dal Milanese, OpenTable, TripAdvisor. Coordinates verified by name on OpenStreetMap."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-13"
+  },
+  {
+    "id": "da-giacomo-milano",
+    "isim": "Da Giacomo Milano",
+    "ulke": "Italy",
+    "sehir": "Milan",
+    "semt": "Porta Vittoria",
+    "mutfak": [
+      "Italian",
+      "Seafood",
+      "Milanese",
+      "Fine Dining"
+    ],
+    "adres": "Via Pasquale Sottocorno 6, 20129 Milano, Italy",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Da%20Giacomo%2C%20Via%20Pasquale%20Sottocorno%206%2C%20Milano",
+    "koordinat": null,
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": null,
+      "not": "Classic fine-dining seafood pricing."
+    },
+    "yemek": {
+      "puan": 9.2,
+      "ozet": "A historic Milanese dining room where seafood is the family trade: spaghetti with shellfish, seafood carpaccio, langoustines and whole fresh fish, finished with the house desserts."
+    },
+    "neYenir": [
+      {
+        "yemek": "Spaghetti with seafood",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Fresh fish",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Langoustines",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Seafood carpaccio",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Pasta",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Giacomo's desserts",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 9.1,
+      "ozet": "Old-world elegance — wood panels, soft light and a room that feels like classic Milan itself.",
+      "etiketler": [
+        "classic",
+        "elegant",
+        "romantic",
+        "luxury",
+        "historic-building"
+      ],
+      "dressCode": "Smart elegant",
+      "uygun": [
+        "couples",
+        "business dinner"
+      ]
+    },
+    "servis": {
+      "puan": 8.8,
+      "ozet": "Courtly, experienced service in the old style.",
+      "artilar": [],
+      "eksiler": []
+    },
+    "oduller": [],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "phone"
+      ],
+      "telefon": "+39 02 7602 3313",
+      "link": null,
+      "beklemeSuresi": "Strongly recommended.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated entry (Aug 2026): official Giacomo Milano, TripAdvisor, SevenRooms. Historic Via Sottocorno restaurant (not Giacomo Arengario). No name-pinned OpenStreetMap POI found, coordinates left null."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-13"
+  },
+  {
+    "id": "veramente-milano",
+    "isim": "Veramente",
+    "ulke": "Italy",
+    "sehir": "Milan",
+    "semt": "Brera",
+    "mutfak": [
+      "Italian",
+      "Milanese",
+      "Contemporary"
+    ],
+    "adres": "Via Palermo 11, 20121 Milano, Italy",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Veramente%2C%20Via%20Palermo%2011%2C%20Milano",
+    "koordinat": {
+      "lat": 45.47527,
+      "lng": 9.18497
+    },
+    "fiyat": {
+      "segment": "orta",
+      "kisiBasi": null,
+      "not": "Mid-range Brera pricing."
+    },
+    "yemek": {
+      "puan": 8.9,
+      "ozet": "New-generation Milanese cooking in Brera: risotto, fresh pasta and seasonal Italian plates that respect the classics without feeling stuck in them."
+    },
+    "neYenir": [
+      {
+        "yemek": "Risotto",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Fresh pasta",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Milanese classics",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Seasonal Italian dishes",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Meat dishes",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Tiramisu",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 8.9,
+      "ozet": "Warm, stylish and social — a Brera room that works as easily for a date as for dinner with friends.",
+      "etiketler": [
+        "elegant",
+        "warm",
+        "modern",
+        "date-night",
+        "lively"
+      ],
+      "dressCode": "Smart casual",
+      "uygun": [
+        "couples",
+        "groups"
+      ]
+    },
+    "servis": {
+      "puan": 8.8,
+      "ozet": "Attentive and easy-going.",
+      "artilar": [],
+      "eksiler": []
+    },
+    "oduller": [],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [],
+      "telefon": null,
+      "link": null,
+      "beklemeSuresi": "Recommended.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated entry (Aug 2026): official Veramente, TripAdvisor, recent Milan dining guides. Brera location at Via Palermo 11. Coordinates verified by name on OpenStreetMap. No verified phone recorded."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-13"
+  },
+  {
+    "id": "gloria-osteria-milano",
+    "isim": "Gloria Osteria Milano",
+    "ulke": "Italy",
+    "sehir": "Milan",
+    "semt": "Brera",
+    "mutfak": [
+      "Italian",
+      "Osteria",
+      "Contemporary"
+    ],
+    "adres": "Via Tivoli 3, 20121 Milano, Italy",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Gloria%20Osteria%2C%20Via%20Tivoli%203%2C%20Milano",
+    "koordinat": {
+      "lat": 45.47179,
+      "lng": 9.18324
+    },
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": null,
+      "not": "Expensive, scene-driven Brera pricing."
+    },
+    "yemek": {
+      "puan": 9.0,
+      "ozet": "Crowd-pleasing Italian done well: homemade pasta, burrata and truffle dishes leading into seasonal mains and a proper tiramisu."
+    },
+    "neYenir": [
+      {
+        "yemek": "Homemade pasta",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Burrata",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Truffle dishes",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Italian starters",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Seasonal mains",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Tiramisu",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 9.6,
+      "ozet": "Maximalist, flower-drenched glamour — one of Milan's most photographed dining rooms, romantic and buzzing at once.",
+      "etiketler": [
+        "glamorous",
+        "romantic",
+        "lively",
+        "fashionable"
+      ],
+      "dressCode": "Smart elegant",
+      "uygun": [
+        "couples",
+        "groups"
+      ]
+    },
+    "servis": {
+      "puan": 9.1,
+      "ozet": "Energetic and polished for a room this busy.",
+      "artilar": [],
+      "eksiler": []
+    },
+    "oduller": [],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "phone"
+      ],
+      "telefon": "+39 344 073 9345",
+      "link": null,
+      "beklemeSuresi": "Strongly recommended; walk-ins subject to availability.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated entry (Aug 2026): official Gloria Osteria, TripAdvisor. Coordinates verified by name on OpenStreetMap (Osteria Gloria, Via Tivoli)."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-13"
+  },
+  {
+    "id": "la-gioia-san-marco",
+    "isim": "La Gioia San Marco",
+    "ulke": "Italy",
+    "sehir": "Milan",
+    "semt": "Brera / San Marco",
+    "mutfak": [
+      "Italian",
+      "Seafood",
+      "Fine Dining"
+    ],
+    "adres": "Via San Marco 38, 20121 Milano, Italy",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=La%20Gioia%2C%20Via%20San%20Marco%2038%2C%20Milano",
+    "koordinat": {
+      "lat": 45.47818,
+      "lng": 9.18909
+    },
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": null,
+      "not": "Fine-dining pricing."
+    },
+    "yemek": {
+      "puan": 9.0,
+      "ozet": "Refined Italian seafood in San Marco: raw fish, seafood pasta and delicate seasonal starters built around the day's catch."
+    },
+    "neYenir": [
+      {
+        "yemek": "Seafood pasta",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Raw fish",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Seasonal Italian starters",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Fresh fish",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Pasta",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Signature desserts",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 9.5,
+      "ozet": "Elegant, intimate and romantic — a jewel-box room made for slow, special dinners.",
+      "etiketler": [
+        "elegant",
+        "romantic",
+        "luxury",
+        "intimate",
+        "fine-dining"
+      ],
+      "dressCode": "Elegant / business casual",
+      "uygun": [
+        "couples"
+      ]
+    },
+    "servis": {
+      "puan": 9.1,
+      "ozet": "Warm, precise and unhurried.",
+      "artilar": [],
+      "eksiler": []
+    },
+    "oduller": [],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "phone"
+      ],
+      "telefon": "+39 388 883 9951",
+      "link": null,
+      "beklemeSuresi": "Strongly recommended.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated entry (Aug 2026): official La Gioia San Marco, TripAdvisor (Travelers' Choice 2025), SevenRooms. Coordinates verified by name on OpenStreetMap."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-13"
+  },
+  {
+    "id": "al-baretto-san-marco",
+    "isim": "Al Baretto San Marco",
+    "ulke": "Italy",
+    "sehir": "Milan",
+    "semt": "San Marco / Brera",
+    "mutfak": [
+      "Italian",
+      "Seafood",
+      "Fine Dining"
+    ],
+    "adres": "Via Marsala 2, 20121 Milano, Italy",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Al%20Baretto%20San%20Marco%2C%20Via%20Marsala%202%2C%20Milano",
+    "koordinat": {
+      "lat": 45.47839,
+      "lng": 9.18793
+    },
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": null,
+      "not": "Usually upwards of €51 per person depending on order."
+    },
+    "yemek": {
+      "puan": 9.0,
+      "ozet": "Understated classic Italian seafood — the lobster linguine is the signature, alongside pristine raw fish and simply treated seasonal catches."
+    },
+    "neYenir": [
+      {
+        "yemek": "Linguine all'Astice",
+        "kacKisiOnerdi": null,
+        "not": "The signature lobster linguine."
+      },
+      {
+        "yemek": "Fresh seafood",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Raw fish",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Pasta",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Seasonal fish",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Traditional Italian desserts",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 9.3,
+      "ozet": "Understated luxury in the old Milanese manner — intimate, classic and quietly romantic.",
+      "etiketler": [
+        "classic",
+        "elegant",
+        "intimate",
+        "romantic",
+        "luxury"
+      ],
+      "dressCode": "Business casual / elegant",
+      "uygun": [
+        "couples",
+        "business dinner"
+      ]
+    },
+    "servis": {
+      "puan": 9.1,
+      "ozet": "Discreet, attentive service in step with the room.",
+      "artilar": [],
+      "eksiler": []
+    },
+    "oduller": [],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "phone"
+      ],
+      "telefon": "+39 334 352 9882",
+      "link": null,
+      "beklemeSuresi": "Strongly recommended.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated entry (Aug 2026): official Al Baretto San Marco, TripAdvisor, SevenRooms, OpenTable. Coordinates verified by name on OpenStreetMap."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-13"
+  },
+  {
+    "id": "il-salumaio-di-montenapoleone",
+    "isim": "Il Salumaio di Montenapoleone",
+    "ulke": "Italy",
+    "sehir": "Milan",
+    "semt": "Quadrilatero della Moda",
+    "mutfak": [
+      "Italian",
+      "Milanese",
+      "Mediterranean"
+    ],
+    "adres": "Via Santo Spirito 10 / Via Gesù 5, Palazzo Bagatti Valsecchi, 20121 Milano, Italy",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Il%20Salumaio%20di%20Montenapoleone%2C%20Via%20Santo%20Spirito%2010%2C%20Milano",
+    "koordinat": {
+      "lat": 45.46969,
+      "lng": 9.19459
+    },
+    "fiyat": {
+      "segment": "pahali",
+      "kisiBasi": null,
+      "not": "Fashion-district pricing."
+    },
+    "yemek": {
+      "puan": 8.7,
+      "ozet": "A fashion-district legend since 1957: burrata, fresh pasta, tortellini and porcini dishes served in one of Milan's most beautiful settings."
+    },
+    "neYenir": [
+      {
+        "yemek": "Burrata",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Milanese dishes",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Fresh pasta",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Tortellini",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Porcini mushroom pasta",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Steak",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 9.7,
+      "ozet": "The ivy-clad courtyard of Palazzo Bagatti Valsecchi is one of Milan's dreamiest places to sit — old Milan elegance in the middle of the fashion district.",
+      "etiketler": [
+        "historic-building",
+        "courtyard",
+        "luxury",
+        "elegant",
+        "terrace",
+        "fashionable"
+      ],
+      "dressCode": "Smart elegant",
+      "uygun": [
+        "couples",
+        "business dinner"
+      ]
+    },
+    "servis": {
+      "puan": 8.5,
+      "ozet": "Elegant and practiced, though prime hours keep the team stretched.",
+      "artilar": [],
+      "eksiler": []
+    },
+    "oduller": [],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "phone"
+      ],
+      "telefon": "+39 02 7600 1123",
+      "link": null,
+      "beklemeSuresi": "Strongly recommended, especially for courtyard seating.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated entry (Aug 2026): official Il Salumaio di Montenapoleone, TripAdvisor. Coordinates verified by name on OpenStreetMap."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-13"
+  },
+  {
+    "id": "dongio-milano",
+    "isim": "Dongiò",
+    "ulke": "Italy",
+    "sehir": "Milan",
+    "semt": "Porta Romana",
+    "mutfak": [
+      "Calabrian",
+      "Southern Italian",
+      "Traditional Italian"
+    ],
+    "adres": "Via Bernardino Corio 3, 20135 Milano, Italy",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Dongi%C3%B2%2C%20Via%20Bernardino%20Corio%203%2C%20Milano",
+    "koordinat": {
+      "lat": 45.45164,
+      "lng": 9.20491
+    },
+    "fiyat": {
+      "segment": "ucuz",
+      "kisiBasi": null,
+      "not": "One of the best-value tables in Milan."
+    },
+    "yemek": {
+      "puan": 9.2,
+      "ozet": "Fiery, generous Calabrian cooking in Porta Romana: 'nduja-spiked pastas like the spaghetti alla Tamarro, melting caciocavallo and the spice-loving south on every plate."
+    },
+    "neYenir": [
+      {
+        "yemek": "Spaghetti alla Tamarro",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Maccheroncini alla Disperata",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Calabrian pasta",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Caciocavallo",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Traditional spicy Calabrian dishes",
+        "kacKisiOnerdi": null,
+        "not": null
+      },
+      {
+        "yemek": "Seasonal southern Italian dishes",
+        "kacKisiOnerdi": null,
+        "not": null
+      }
+    ],
+    "ambiyans": {
+      "puan": 8.0,
+      "ozet": "Small, no-frills and genuinely local — the charm is the food and the welcome, not the décor.",
+      "etiketler": [
+        "traditional",
+        "local",
+        "casual",
+        "small",
+        "simple"
+      ],
+      "dressCode": null,
+      "uygun": [
+        "family",
+        "groups",
+        "solo"
+      ]
+    },
+    "servis": {
+      "puan": 8.7,
+      "ozet": "Warm, family-style hospitality.",
+      "artilar": [],
+      "eksiler": []
+    },
+    "oduller": [
+      {
+        "tip": "michelin-secilmis",
+        "detay": "Included in the MICHELIN Guide selection."
+      }
+    ],
+    "rezervasyon": {
+      "gerekiyor": null,
+      "yontem": [
+        "phone"
+      ],
+      "telefon": "+39 349 276 1011",
+      "link": null,
+      "beklemeSuresi": "Recommended; the restaurant manages bookings directly.",
+      "kapora": null
+    },
+    "kaynaklar": {
+      "google": null,
+      "tripadvisor": null,
+      "tiktok": null,
+      "diger": "Owner-curated entry (Aug 2026): official Dongiò, MICHELIN Guide, TripAdvisor. Coordinates verified by name on OpenStreetMap."
+    },
+    "fotolar": [],
+    "sonGuncelleme": "2026-08-13"
   }
 ];
