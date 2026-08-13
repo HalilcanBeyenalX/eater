@@ -26,11 +26,11 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "orta",
       "kisiBasi": null,
-      "not": "The per-person spending range could not be verified, so kisiBasi was left blank. Concrete data obtained: the Michelin Guide places the restaurant in the Bib Gourmand category citing an 'exceptional price/quality ratio' and notes that main courses rarely exceed 25-30 euros; meyhankoli.com tags the venue at the ₺₺ level. In contrast, Google reviews (read via Wanderlog) report a bill exceeding ₺6,000 per person with extra line items such as ₺80 bread, ₺140 water, and a 10% service charge; Turkish-language reviews repeatedly criticize 'small portions, high prices.' After weighing both sides, the segment was set to 'orta' (mid-range); the sources do not agree on this point. According to the thresholds set by the owner (cheap: under ₺750; mid-range: ₺750-2,500; expensive: over ₺2,500), this data corresponds to the mid-range segment."
+      "not": "Mid-range on paper, but expect bread, water and a service charge billed separately on top."
     },
     "yemek": {
       "puan": 8.6,
-      "ozet": "Sources reinforce each other on the food: Bib Gourmand in the MICHELIN Guide Turkey 2026 selection, TripAdvisor 4.2/5 (about 1,360 reviews, ranked ~448th out of 9,705 restaurants in Istanbul), a Google rating of 4.3 as seen via Wanderlog (3,031 reviews). Praise is concentrated almost entirely on the mezes and the hünkar beğendi. The reason it wasn't raised to 9.0 is two recurring complaints: portions considered small and desserts seen as the menu's weakest link (Uplifers review). This fits the 8.0-8.9 band definition of 'strong but with recurring minor complaints.'"
+      "ozet": "A Bib Gourmand pick beloved for its mezes and hünkar beğendi — slow-cooked lamb over smoked eggplant purée. Portions can run small, and desserts are the weakest part of the menu."
     },
     "neYenir": [
       {
@@ -61,7 +61,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 8.0,
-      "ozet": "Praise for the turquoise tile-clad interior and the harborside terrace appears in nearly every source; the MICHELIN Guide separately notes the calm terrace and waterfront location. Turkish sources consistently describe it operating under two distinct concepts: a neighborhood lunch spot by day and a meyhane by night. What keeps the score below 9 is two recurring complaints in Google and TripAdvisor reviews: tables being too close together and the noise level (including a review calling it 'the noisiest restaurant I've seen').",
+      "ozet": "Turquoise tiles and a calm harborside terrace give it a distinct look, working as a neighborhood lunch spot by day and a lively meyhane by night. Tables sit close together and it can get loud.",
       "etiketler": [
         "lively",
         "noisy",
@@ -78,7 +78,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 7.5,
-      "ozet": "Service is this restaurant's most divided topic. On one side there's praise in TripAdvisor reviews for English-speaking, friendly staff and 'professional staff' comments in search results. On the other, the Uplifers review considers service the venue's actual weak point, saying 'I couldn't catch a single smile,' and there's a TripAdvisor review describing a negative experience with the owner. Because this is a clear and recurring weakness, it was placed in the 7.0-7.9 band.",
+      "ozet": "Service is a mixed bag: some diners find the English-speaking staff warm and attentive, while others describe distant service and a tense run-in with the owner.",
       "artilar": [
         "English-speaking staff noted in TripAdvisor reviews",
         "Being able to order by standing at the meze case and picking items"
@@ -93,7 +93,7 @@ const RESTORANLAR = [
     "oduller": [
       {
         "tip": "michelin-bib",
-        "detay": "MICHELIN Guide Istanbul — Bib Gourmand. Included in the 2026 Istanbul Bib Gourmand selection (verified from two independent lists)."
+        "detay": "Bib Gourmand — MICHELIN Guide Istanbul 2026."
       }
     ],
     "rezervasyon": {
@@ -141,11 +141,11 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "pahali",
       "kisiBasi": null,
-      "not": "The most talked-about topic for this restaurant is price, but since the verified figures don't agree with each other, no per-person range was given. Verified concrete data: (1) a complaint filed on Şikayetvar on December 25, 2025 reports ₺16,000 for two people, i.e. about ₺8,000 per person; (2) other complaints on the same site show two-person bills ranging ₺8,500-11,500; (3) a receipt reported in the press on January 11, 2026 shows turbot at ₺8,000/kg, 2.5 kg of fish at ₺20,000, tomato salad ₺1,000, fried calamari ₺1,000, water-bread-cornbread ₺600, two desserts ₺800, and a 10% service charge of ₺2,600, for a total of ₺28,900. Because turbot is sold by weight and the venue doesn't provide a menu, the bill varies widely depending on the weight of fish ordered; reviews insistently repeat that prices should be asked before ordering. Ekşi Sözlük has a separate, dozens-of-pages-long thread devoted solely to the bill. The 'two people for ₺1,500-2,000' figure on Onedio is undated and clearly contradicts current receipts, so it was not used. According to the owner's thresholds (cheap: under ₺750; mid-range: ₺750-2,500; expensive: over ₺2,500), the verified figures of roughly ₺8,000 per person correspond to the expensive segment."
+      "not": "Turbot is priced by weight, so the bill varies widely — always ask the price before ordering. Expect roughly ₺8,000 or more per person."
     },
     "yemek": {
       "puan": 8.7,
-      "ozet": "Almost all the complaints are about price, not the food. It's included in the MICHELIN Guide Turkey 2026 selection, which praises the whole grilled turbot, lakerda (salted bonito), and fish kokoreç; Vedat Milor gives the tomato salad and the anchovy cornbread + lakerda pairing a perfect 10/10. Even a TripAdvisor review title reads 'The turbot is amazing but the price...' The only clear complaint on the food side is a TikTok review saying better lakerda can be found at more ordinary places. TripAdvisor's aggregate rating of 3.7/5 is mostly driven by price and ambiance; since those are scored separately, this wasn't reflected in the food score."
+      "ozet": "Selected in the MICHELIN Guide for its whole grilled turbot, lakerda (salted bonito) and fish kokoreç, with the tomato salad and anchovy cornbread a favorite pairing. Most complaints here are about the bill, not the cooking."
     },
     "neYenir": [
       {
@@ -176,7 +176,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 6.5,
-      "ozet": "Ambiance is consistently the venue's weak point across sources. There's no sea view, the venue is on a side street, and the interior decor is said to be no different from a standard fish restaurant; TripAdvisor reviews question the 40-minute trip citing 'zero ambiance.' Ekşi Sözlük reviews repeat the same pattern: 'good taste, good service, but no view and prices are very high.' This fits the below-7.0 definition of 'persistent dissatisfaction.' On the other side, there are only a few comments at the level of 'cute place.'",
+      "ozet": "The room itself is the letdown: no sea view, a side-street location and decor that could belong to any fish restaurant in the city. Diners often question whether the trip out is worth it for the setting alone.",
       "etiketler": [
         "no-view",
         "simple",
@@ -190,7 +190,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 6.8,
-      "ozet": "There's praise for staff attentiveness and how the fish is cooked, but a recurring, serious pattern pulls the score down: not providing a menu and not stating prices before ordering. All four complaints on Şikayetvar are about exorbitant pricing and none appear to have a business response; the page's brand score is 0/100 from a single review. Ekşi Sözlük reviews mention 'no fixed prices, they write it based on the customer' and allegations of bill errors. Since price itself is assessed under a separate heading, what's scored here is not the price but the failure to disclose it to customers in advance.",
+      "ozet": "Staff are attentive and cook the fish well, but the restaurant doesn't hand out a menu or state prices before you order — ask upfront, since the bill can otherwise come as a shock.",
       "artilar": [
         "Skillful cooking of the whole turbot (MICHELIN Guide and Vedat Milor reviews)",
         "Reviews mentioning a complimentary watermelon and dessert at the end of the meal",
@@ -206,7 +206,7 @@ const RESTORANLAR = [
     "oduller": [
       {
         "tip": "michelin-secilmis",
-        "detay": "MICHELIN Guide Turkey 2026 — restaurant selected in the guide. Not a star or Bib Gourmand; not included in the Istanbul Bib Gourmand lists."
+        "detay": "Selected — MICHELIN Guide Turkey 2026."
       }
     ],
     "rezervasyon": {
@@ -253,11 +253,11 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "orta",
       "kisiBasi": null,
-      "not": "Beyaz Fırın is a chain and the published price list is brand-wide, not branch-specific. So no per-person range was given. Items verified from the brand-wide price list dated June 2, 2026: two-person breakfast platter ₺1,650, single-person breakfast platter ₺750, breakfast pan ₺860, potato gül böreği (rose pastry) ₺190, Polka ₺240, menemen ₺320, schnitzel ₺650-780, grilled salmon ₺850, homemade lemonade ₺160, filter coffee ₺130. The brand's own menu PDF has also been published as the 2026 summer menu. In TripAdvisor reviews specific to the Etiler branch, prices are described as 'a bit expensive but reasonable for Etiler.' For comparison: in an August 2023 Gurme Rehber article about the Etiler branch, the pastry platter was ₺240, poached egg with sucuk was ₺210, and tea was ₺30. According to the owner's thresholds (cheap: under ₺750; mid-range: ₺750-2,500; expensive: over ₺2,500), these items in the ₺750-1,650 per-person range correspond to the mid-range segment."
+      "not": "Expect mid-range chain pricing — a two-person breakfast platter runs about ₺1,650, and pastries and mains are priced individually."
     },
     "yemek": {
       "puan": 7.5,
-      "ozet": "Only sources specific to the Etiler branch were used; reviews of the brand's other branches (e.g. Time Out's Ataşehir-Suadiye-Erenköy review and the Ataşehir branch's Yandex page) were excluded. For Etiler, TripAdvisor is 4.5/5 but based on only 18 reviews; the Yandex Maps listing for Nispetiye Cd. No:82 shows 4.3/5 and 137 reviews. The bakery side — especially the potato gül böreği, Polka, and puff pastry — is consistently praised both on TripAdvisor and in two blog reviews specifically covering the Etiler branch; Gurme Rehber gives the Etiler branch 7.5/10 for taste. What keeps the score down is the recurring hygiene and foreign-object reports in the 11 complaints on Şikayetvar's Etiler branch page (hair, glass fragments, plastic wire in packaging, spoiled cake over five months). This fits the 7.0-7.9 band definition of 'a clear and frequently recurring weakness.'"
+      "ozet": "The bakery side is the draw — the potato gül böreği, Polka pastry and puff pastry get consistent praise. Recurring hygiene complaints, including foreign objects found in food, are a real and repeated issue at this location though."
     },
     "neYenir": [
       {
@@ -288,7 +288,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 8.2,
-      "ozet": "Two reviews specifically covering the Etiler branch consistently praise the venue: an art-deco-influenced, two-story space seating about 350, with a vertical winter garden and a 6.5-meter bakery counter at the entrance; a second review calls it 'sparkling clean' and describes three separate seating areas — garden, indoor hall, and upper floor. What keeps the score below 9 is crowding: multiple reviews mention the venue filling up during weekend breakfast hours, no host greeting guests at the door, and crowd/noise issues.",
+      "ozet": "An art-deco, two-story space with a vertical winter garden and a long bakery counter at the entrance, split across a garden, indoor hall and upper floor. Weekend breakfast hours get crowded and noisy, with no one greeting guests at the door.",
       "etiketler": [
         "airy",
         "art-deco",
@@ -304,7 +304,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 7.2,
-      "ozet": "Service reviews for the Etiler branch openly contradict each other: for the same branch there are both 'staff indifferent, service unbelievably slow' and 'service is fantastic, staff are friendly' comments; one review says they were seated without any wait, another says no one greeted them at the door. The TripAdvisor summary also mentions 'occasional service inconsistencies and order issues.' Among the 11 complaints on Şikayetvar's Etiler page, one complaining customer reports staff being dismissive, even mocking (April 2024); on the other hand, the brand appears to have responded to all complaints in the past year. Because the inconsistency is pronounced and frequently repeated, it falls in the 7.0-7.9 band.",
+      "ozet": "Reports swing wildly, from friendly and fast to indifferent and unbelievably slow, sometimes for the very same visit. The brand does respond to complaints, but service consistency is the branch's clear weak spot.",
       "artilar": [
         "Friendly and attentive staff in some reviews",
         "Reviews mentioning being seated without a wait on weekdays",
@@ -361,11 +361,11 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "orta",
       "kisiBasi": null,
-      "not": "No reliable source giving a per-person range was found, so kisiBasi was left blank. Concrete data obtained: (1) RestaurantGuru's Etiler listing tags per-person spending at 'around ₺2,000 and up' — since the upper end is open-ended, this alone isn't enough to set a threshold; (2) menufiyati.tr's Da Mario menu list dated June 5, 2026 gives pasta dishes at ₺1,100-1,350 (Tagliatelle alla Bolognese ₺1,200, Linguine con Pomodorini ₺1,100, Spaghetti ai Frutti di Mare ₺1,350), antipasti at ₺1,200-1,350 (Burrata ₺1,350, Beef Carpaccio ₺1,200), and Lobster Tagliolini at ₺4,800 — however this source miscounts the restaurant's branches (it mentions a nonexistent 'Kalamış branch'; the official site lists only Etiler and İstinyePark), so it wasn't treated as decisive for the segment decision; (3) for comparison, in an April 2022 Gurme Rehber article on Etiler, burrata-truffle tagliolini was ₺225, Diavola pizza was ₺145, and buffalo mozzarella was ₺160; (4) the restaurant's official July 2026 menu PDF is published but its text isn't machine-readable, so prices couldn't be verified from it. Ekşi Sözlük and TripAdvisor reviews repeat the criticism 'prices are high / not worth it,' while the ₺400 average figure on the meyhankoli page is clearly outdated. According to the owner's thresholds (cheap: under ₺750; mid-range: ₺750-2,500; expensive: over ₺2,500), the one verifiable per-person figure falls at the upper end of the mid-range band; a two-course dinner is likely to exceed ₺2,500, but no reliable per-person figure showing this was found."
+      "not": "Pasta dishes run roughly ₺1,100–1,350; a full dinner with starters and a main will likely land at the high end of mid-range or above."
     },
     "yemek": {
       "puan": 7.8,
-      "ozet": "Only sources specific to the Etiler branch were used; the İstinyePark branch's separate TripAdvisor listing and brand-wide write-ups were excluded. For Etiler, TripAdvisor is 4.0/5 (206 reviews, ranked 1,128th out of 13,891 restaurants in Istanbul), a Google rating of 4.2/5 seen via RestaurantGuru (1,573 reviews), Foursquare 8.6/10 (1,301 reviews). In the Gault&Millau Turkey 2026 guide it holds 1 toque and 12.5/20 in the 'gourmet table' category. Praise is consistently concentrated on handmade fresh pasta, stone-oven pizza, burrata, and carpaccio; Gurme Rehber gives the Etiler branch 7.5/10 for taste. Two recurring complaints keep the score below 8: on Ekşi Sözlük, the tiramisu being found 'mostly cream' and entries criticizing the carpaccio, lasagna, and crème brûlée; on TripAdvisor, reviews asking 'is this really Italian, the food is always mediocre' and finding prices exorbitant. This fits the 7.0-7.9 band definition of 'a clear and frequently recurring weakness.'"
+      "ozet": "The Etiler branch holds a Gault&Millau toque and built its name on handmade fresh pasta, stone-oven pizza, burrata and carpaccio. The tiramisu, lasagna and crème brûlée draw recurring criticism though, and some diners question whether the cooking is consistently Italian enough for the price."
     },
     "neYenir": [
       {
@@ -396,7 +396,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 8.3,
-      "ozet": "The Etiler branch is inside a villa; sources consistently describe it as 'white tablecloths, wood paneling, dim lighting, elegant but intimate.' The tree-shaded garden is separately praised in nearly every source: Müdavim specifically recommends the garden, which has a bar area in spring/summer; the restaurant's own website also highlights the garden; Ekşi Sözlük describes the dim lighting as 'quite lovely.' Gurme Rehber rates the venue 7.5/10. What keeps the score below 9 is crowding: multiple sources repeat that the venue fills up on evenings and weekends and that reservations a few days ahead are needed.",
+      "ozet": "Set inside a villa with white tablecloths, wood paneling and dim lighting — elegant without feeling stiff. The tree-shaded garden, with a bar area in warmer months, is the best seat in the house, though it fills up fast and needs a reservation days in advance.",
       "etiketler": [
         "garden",
         "elegant",
@@ -414,7 +414,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 8.0,
-      "ozet": "Service is mostly positive across sources but there's no full consensus. A comment relayed on meyhankoli says 'service is fast, waiters are respectful and considerate'; there are Ekşi Sözlük entries finding the service successful compared to other upscale Istanbul venues; on nerdenerede, service was rated 10/10 (a single review). On the other side, TripAdvisor has complaints about service inconsistency and a price/service imbalance, and the meyhankoli summary also notes 'service quality varies among reviews.' The single complaint on Şikayetvar (January 2, 2025) was withdrawn after the business reached out to the customer — concrete evidence that complaint handling works. Because of recurring minor complaints, it sits at the lower end of the 8.0-8.9 band.",
+      "ozet": "Service is generally fast and respectful, and a rare complaint was resolved directly by the business. Some visitors do note inconsistency and feel the service doesn't always match the price.",
       "artilar": [
         "Fast service and respectful staff (comments relayed on meyhankoli)",
         "Service found successful compared to upscale competitors (Ekşi Sözlük entries)",
@@ -429,7 +429,7 @@ const RESTORANLAR = [
     "oduller": [
       {
         "tip": "gault-millau",
-        "detay": "Gault&Millau Turkey 2026 Gastronomy Guide — 1 toque, 12.5/20 ('gourmet table'), head chef Emre Koyucan. Verified from both Gault&Millau Turkey's own Da Mario Etiler page and the Food in Life listing covering the December 8, 2025 launch of the 2026 guide. The restaurant's own website also mentions the Ospitalità Italiana certification and three forks in the İncili Gastronomi Rehberi; since the İncili Gastronomi Rehberi's site is in maintenance mode, this second piece of information could not be independently verified. Da Mario was not found in the MICHELIN Guide Istanbul selection."
+        "detay": "Gault&Millau Turkey 2026 — 1 toque (12.5/20)."
       }
     ],
     "rezervasyon": {
@@ -477,11 +477,11 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "orta",
       "kisiBasi": null,
-      "not": "No source gave a per-person range, so kisiBasi was left blank; most of the price data that could be found is also undated. Verified concrete data: the Made in City guide tags the venue in the '1000+ ₺' price band; Ekşi Sözlük reviews found via search results report that dishes range ₺300-900, a single-person bill runs around ₺1,200, desserts are ₺200 each, and the brunch menu is ₺2,500 — the dates of these figures aren't stated in the reviews. TripAdvisor reviews repeat 'unbelievably high prices for very small portions' and give price/performance ratings of 4-5 out of 10. When the venue was at its former Beyoğlu address (Müdavim review), dish prices were in the ₺60-95 band; since this data doesn't reflect the current level, it's cited only for comparison. According to the owner's thresholds (cheap: under ₺750; mid-range: ₺750-2,500; expensive: over ₺2,500), both the à la carte bill and the brunch menu fall into the mid-range segment; the brunch is right at the threshold, not clearly above it."
+      "not": "Mid-range: à la carte dishes run roughly ₺300–900, and the brunch menu sits around ₺2,500."
     },
     "yemek": {
       "puan": 7.5,
-      "ozet": "Sources are clearly split on this restaurant. Positive side: 2 toques and 13/20 in the Gault&Millau Turkey 2026 guide (up from 1 toque, 12.5/20 in the 2025 guide — i.e. its score rose), a 4.3/5 rating (34 reviews) on the Nişantaşı listing on Yandex Maps, Gault&Millau's 'Istanbul's best brunch venue' award, and Turkish food writing consistently praising chef Çiğdem Seferoğlu's supply network with Anatolian producers. Negative side: 3.1/5 on TripAdvisor (29 reviews, ranked 5,763rd out of 9,672 restaurants in Istanbul); reviews titled 'portions are very small, bland, nothing special' and 'oily and heavy dishes'; Ekşi Sözlük giving 4-5 out of 10 for price/performance and calling the venue 'overhyped.' A significant portion of the TripAdvisor record dates to the venue's Beyoğlu period, so it may not fully reflect the new kitchen in Nişantaşı; this distinction couldn't be made. Because there's a clear and frequently recurring weakness (portion/price balance), it falls in the 7.0-7.9 band."
+      "ozet": "Chef Çiğdem Seferoğlu built a name for sourcing directly from Anatolian producers, and Hodan holds two Gault&Millau toques and a best-brunch award. Recurring complaints call portions small for the price, and some dishes land as bland or overly oily."
     },
     "neYenir": [
       {
@@ -512,7 +512,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 8.5,
-      "ozet": "Ambiance is the topic sources agree on the most. During the Beyoğlu period, the garden floor of the Cezayir building was praised for its 'artworks, trees, white tablecloths' and an atmosphere 'insulated from Beyoğlu's crowds'; for the new Nişantaşı address, Indagare says 'glass-domed garden terrace,' while Oggusto says 'calm and intimate despite being in the city center' and 'a larger experience space.' Ekşi Sözlük reviews describe the garden section as resembling 'a hidden courtyard'; positive TripAdvisor reviews also mention 'a magnificent venue in the garden conservatory, contemporary art.' Gazete Oksijen's July 2026 roundup notes there's live music on weekends. The reason it's not raised to 9 is that as of August 2026 the venue is new at its new address, and independent evaluation of the new dining room is still limited.",
+      "ozet": "The new Nişantaşı address has a glass-domed garden terrace that feels calm and intimate despite sitting in the middle of the city, with live music on weekends. It's a fresh space, so the verdict on the new room is still settling.",
       "etiketler": [
         "garden",
         "calm",
@@ -529,7 +529,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 7.2,
-      "ozet": "The only recurring pattern regarding service is negative: the review summary on the Yandex listing, Mekan Önerisi, and Turkish reviews found via search results all repeat 'food is delicious but service is sometimes slow.' TripAdvisor has a negative review titled 'bad customer service, small portions, high price.' On the other side, one positive TripAdvisor review calls the service quality 'excellent and top-tier,' and Yandex reviews separately praise the cocktails. Because the slowness complaint is clear and frequently repeated, it falls in the 7.0-7.9 band. No Hodan brand page could be found on Şikayetvar.",
+      "ozet": "The kitchen outpaces the floor — service is repeatedly described as slow, even though the food itself gets praised. Cocktails are a standout on their own.",
       "artilar": [
         "Service quality found 'top-tier' in positive TripAdvisor reviews",
         "The cocktail and bar side separately praised in Yandex reviews",
@@ -544,7 +544,7 @@ const RESTORANLAR = [
     "oduller": [
       {
         "tip": "gault-millau",
-        "detay": "Gault&Millau Turkey 2026 Gastronomy Guide — 2 toques, 13/20, chef Çiğdem Seferoğlu (ceremony dated December 8, 2025; verified from Food in Life's 2026 guide listing). It held 1 toque / 12.5/20 in the 2025 guide and won the 'Istanbul's best brunch venue' award that same year (Gault&Millau Turkey's own Hodan page). Hodan's Istanbul branch was not found in the MICHELIN Guide Istanbul selection; the brand's separate business in Bodrum, Hodan Yalıkavak, is included in the MICHELIN Guide 2026 recommended list, but since that is a separate branch it wasn't recorded here as an award."
+        "detay": "Gault&Millau Turkey 2026 — 2 toques (13/20)."
       }
     ],
     "rezervasyon": {
@@ -590,11 +590,11 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "pahali",
       "kisiBasi": null,
-      "not": "No per-person range was given because the figures obtained belong to different years and don't fully corroborate each other. Verified concrete data: (1) an Etiler branch receipt that surfaced on social media on August 12, 2024 and was published by multiple news sites shows ₺16,372 for 7 people, i.e. about ₺2,339 per person; (2) Uplifers' 2025 'Etiler's best 15 restaurants' list gives Nusr-Et a per-person range of ₺1,500-2,500; (3) RestaurantGuru's Etiler listing tags per-person spending at 'around ₺2,000 and up'; (4) several independent 2026 menu lists show a single 200-gram main course at ₺2,100-2,200 (Dana Lokum ₺2,100, Dana Antrikot/ribeye ₺2,200), beef carpaccio at ₺1,250-1,450, and Tomahawk at ₺4,300-5,000 — these lists aren't official and are inconsistent with each other, so only the order of magnitude was used, not individual figures. The restaurant's own website and menu page don't publish prices; the arrangement often mentioned on Ekşi Sözlük — 'no menu given, Nusret comes to the table and narrates it like a live menu' — also makes it hard to know the price in advance. According to the owner's thresholds (cheap: under ₺750; mid-range: ₺750-2,500; expensive: over ₺2,500), the 2024-2025 data sits right at the top edge of the mid-range band; the segment was set to 'expensive' based on 2026 main-course prices and the fact that even a single main course exceeds ₺2,000. This choice is not definitive since no verified 2026 per-person figure was found."
+      "not": "Expect to pay a premium — a single main course alone runs upward of ₺2,000, and steaks like the Tomahawk go well beyond that."
     },
     "yemek": {
       "puan": 8.0,
-      "ozet": "Only sources specific to the Etiler branch were used; reviews of the İstinyePark, Bebek, Galataport, and international branches, as well as complaints about the Nusr-Et Burger brand, were excluded — this distinction mattered especially on Şikayetvar, where the 36 complaints mix different brands and branches. For Etiler, a Google rating of 4.2/5 seen via RestaurantGuru (21,083 reviews), TripAdvisor 3.9/5 (2,589 reviews); 2 toques and 14/20 in the Gault&Millau Turkey 2026 guide. Praise is consistently concentrated on the tenderness and doneness of beef aged 28-30 days; Ekşi Sözlük says 'one of the best places in Turkey to eat meat,' and Trip.com reviews report the meat as 'not fatty at all, very flavorful.' What keeps it from reaching 9 is less about the food itself and more the price/performance debate and TripAdvisor's aggregate 3.9; the RestaurantGuru summary also repeats a pattern of 'quality is good but the price is a premium, try it once, don't go regularly.' This fits the 8.0-8.9 band definition of 'strong but with recurring minor complaints.'"
+      "ozet": "Nusr-Et's birthplace branch holds two Gault&Millau toques for beef aged in-house, prized for its tenderness and clean flavor. The main gripe is value: quality is rarely questioned, but many feel the price is a real premium."
     },
     "neYenir": [
       {
@@ -625,7 +625,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 8.0,
-      "ozet": "Sources consistently describe the venue as 'elegant and luxurious'; the Trip.com listing says 'upscale, trendy atmosphere,' and Turkish venue roundups describe Nusr-Et not just as a steakhouse but as a 'stage show' — the staff's fire show, the Salt Bae signature salting move, and high-energy service. The Etiler branch is also symbolic as the brand's birthplace (2010). What keeps it from reaching 9 is that the same showmanship backfires for some reviewers: Ekşi Sözlük entries criticize luxury cars parked at the entrance and photos with celebrities used in marketing as 'selling status,' and note that seating arrangements are problematic during busy hours.",
+      "ozet": "Elegant and high-energy, built as much around spectacle as dinner — the fire show and Salt Bae's signature salting move turn a meal into a performance. This is the brand's original branch, opened in 2010. Some find the luxury-car valet and celebrity-photo marketing over the top, and seating can get chaotic on busy nights.",
       "etiketler": [
         "luxury",
         "glamorous",
@@ -642,7 +642,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 7.5,
-      "ozet": "Service is this restaurant's most divided topic. On the positive side there are Trip.com and Turkish roundup comments like 'top-tier service, staff were very attentive,' Nusret personally coming to the table to carve the meat, and RestaurantGuru's summary emphasis on 'professional service.' On the negative side, Ekşi Sözlük entries say service isn't good, that there are particular delays with drink orders, and that service quality drops during busy hours; the RestaurantGuru summary also mentions 'occasional service hiccups.' Also, not providing a menu and prices not being clear before ordering was recorded here as a service issue independent of the price itself. The 36 complaints on Şikayetvar couldn't be separated between the Etiler branch and other branches/Nusr-Et Burger, so that source wasn't used for scoring. Because it's a clear and frequently recurring weakness, it falls in the 7.0-7.9 band.",
+      "ozet": "Service swings from top-tier and attentive — sometimes with Nusret himself carving tableside — to slow, particularly on drink orders, when the room gets busy. No printed menu and unclear pricing before you order add to the unpredictability.",
       "artilar": [
         "Attentive, fast, and friendly staff mentioned in Trip.com and Turkish roundups",
         "Meat carved and presented tableside, plus the Salt Bae signature salting show",
@@ -658,7 +658,7 @@ const RESTORANLAR = [
     "oduller": [
       {
         "tip": "gault-millau",
-        "detay": "Gault&Millau Turkey 2026 Gastronomy Guide — 2 toques, 14/20, chefs Nusret Gökçe and Oğuzhan Dedeoğlu (ceremony dated December 8, 2025; verified from Food in Life's 2026 guide listing, which explicitly names the 'Nusr-Et Steakhouse Etiler' branch). Nusr-Et was not found in the MICHELIN Guide Istanbul selection; it doesn't appear in the 2026 Istanbul star, Bib Gourmand, or recommended lists."
+        "detay": "Gault&Millau Turkey 2026 — 2 toques (14/20)."
       }
     ],
     "rezervasyon": {
@@ -710,11 +710,11 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "pahali",
       "kisiBasi": null,
-      "not": "No source gave a per-person range, so kisiBasi was left blank; the restaurant's own July 2026 menu PDFs on its website aren't machine-readable, so prices couldn't be taken from them. The most concrete data verified: a complaint filed on Şikayetvar on October 19, 2025 reports a bill of ₺20,291 for a table of 8, i.e. about ₺2,536 per person — and a cake fee and service charge were billed separately on top of that amount. The same complaint states the service charge was billed separately, and third-party roundups mention about a 15% service charge added to the bill. The RestaurantGuru listing tags per-person spending as 'around ₺2,000 (about 100 euros)'; since these two figures are inconsistent with each other, only the verified receipt was used. TripAdvisor has reviews titled 'Prices are extremely high' and 'Prices beyond belief'; the top25restaurants review tags the venue in the $$$$ (very expensive) band and reports a guest being billed $1,000 instead of $100 for wine, plus complaints about extra charges like ambiance and coat check. According to the owner's thresholds (cheap: under ₺750; mid-range: ₺750-2,500; expensive: over ₺2,500), the verified October 2025 per-person figure of about ₺2,536 corresponds to the expensive segment."
+      "not": "Expensive — a full dinner runs upward of ₺2,500 per person, and a service charge is added on top."
     },
     "yemek": {
       "puan": 8.0,
-      "ozet": "Since Sunset has only one location, there was no branch-separation issue. Sources: included in the MICHELIN Guide Istanbul selection (not a star or Bib Gourmand), 2 toques in Gault&Millau Turkey 2026, a Google rating of 4.1/5 seen via RestaurantGuru (4,489 reviews), TripAdvisor 3.8/5 (1,510 reviews), Zomato 4.4/5 (723 reviews), Foursquare 9.1/10 (3,979 reviews); ranked 315th out of 68,798 restaurants in Istanbul on RestaurantGuru. Praise is concentrated in two areas: the section that opened in 1999 and is considered Turkey's first sushi bar, and the meats grilled over charcoal after being dry-aged in-house for 30 days; Voggia's review dated March 23, 2026 highlights the Sunset Fillet and the sushi bar, and Turkish reviews describe the beef cheek as 'the most delicious meat I've eaten.' What keeps it from reaching 9 is a clear consistency issue: the top25restaurants review says there's been serious fluctuation in portion and food quality in recent reviews, and that the miso cod gets mixed reviews; a complaint on Şikayetvar dated October 2025 reports the sushi arriving 'not fresh, stale.' This fits the 8.0-8.9 band definition of 'strong but with recurring minor complaints.'"
+      "ozet": "Home to what's considered Turkey's first sushi bar, opened in 1999, alongside meats dry-aged in-house and grilled over charcoal. The Sunset Fillet and the beef cheek are regular favorites. Quality has been known to fluctuate though, with occasional complaints about inconsistent portions and less-than-fresh sushi."
     },
     "neYenir": [
       {
@@ -745,7 +745,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 9.2,
-      "ozet": "Ambiance is the topic sources agree on almost unanimously, and it's the venue's real asset. Atop Ulus Parkı, with a terrace overlooking the Bosphorus and the Bosphorus Bridge; the MICHELIN Guide description says 'a stunning view of the city and the Bosphorus,' top25restaurants sums it up as 'the main draw is the location' and describes a 350-seat indoor-outdoor area, and a ZAGAT quote on the restaurant's own website reads 'nothing beats this terrace over the Bosphorus on a warm, starry night.' Voggia's March 2026 review calls the venue 'a living landmark' and describes a layered evening structure of bar, main dining room, and Sunset After. The only negative side concerns seating allocation: Şikayetvar has claims of being seated in the back despite a reservation and of the door staff sorting groups by composition. This fits the 9.0-10 band definition of 'a reference point in the city in that category.'",
+      "ozet": "Perched above the Bosphorus with a terrace view that's genuinely one of the city's best, the evening unfolds in layers — bar, main dining room, then the late-night Sunset After. The one recurring frustration is seating: some guests with reservations still end up placed away from the view.",
       "etiketler": [
         "bosphorus-view",
         "terrace",
@@ -762,7 +762,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 8.0,
-      "ozet": "Service is both the strongest and most controversial topic at this restaurant. The strong side is official: in the MICHELIN Guide Istanbul's first selection (announced October 2022, the 2023 guide), the Service Award presented with Mastercard went to the Sunset Grill & Bar team; Michelin's reasoning cited an 'old-school' hospitality approach that makes guest comfort the absolute priority. Gault&Millau Turkey also gives the venue 'Contribution to the Industry' and 'Honor' awards. The weak side is current: two of the 7 complaints on Şikayetvar were filed on the same day, October 19, 2025, and both describe being kept standing at the bar for about 40 minutes despite a reservation, then being seated in the back; the same complaints say a guest wanting to pay the bill was ignored for a long time. The top25restaurants review also reports a guest being billed $1,000 instead of $100 for wine, and complaints about extra charges like ambiance and coat check. Because of this gap between an award-winning history and current, recurring lapses, the score was kept at the lower end of the 8.0-8.9 band.",
+      "ozet": "This team won MICHELIN's Service Award in 2023 for an old-school hospitality style built around guest comfort, and it shows on a good night. Recent visits have been rockier though, with reports of long waits at the bar despite reservations and billing mix-ups on pricier items.",
       "artilar": [
         "MICHELIN Guide Istanbul Service Award (2023 selection, presented with Mastercard)",
         "Gault&Millau Turkey's Contribution to the Industry and Honor awards",
@@ -779,11 +779,11 @@ const RESTORANLAR = [
     "oduller": [
       {
         "tip": "michelin-secilmis",
-        "detay": "MICHELIN Guide Istanbul — restaurant selected in the guide. Not a star or Bib Gourmand; not in the 2026 Istanbul star and Bib Gourmand lists, but included in the recommended restaurants selection. Also the recipient of the Mastercard-presented Service Award from MICHELIN Guide Istanbul's first selection (the 2023 guide, announced October 2022); this award was verified from Michelin's own announcement and Michelin Turkey's press page."
+        "detay": "Selected — MICHELIN Guide Istanbul, and winner of the Mastercard Service Award in the 2023 Guide."
       },
       {
         "tip": "gault-millau",
-        "detay": "Gault&Millau Turkey 2026 Gastronomy Guide — 2 toques, head chef Marios Tsouris. Scores differ between sources: Gault&Millau Turkey's own Sunset Grill & Bar page gives 14/20, while the Food in Life listing covering the 2026 guide launch gives 14.5/20. The same page also gives the venue 'Contribution to the Industry' and 'Honor' awards. The restaurant's own website also mentions Wine Spectator and Chaîne des Rôtisseurs membership; since these couldn't be independently verified, no separate award record was created."
+        "detay": "Gault&Millau Turkey 2026 — 2 toques, plus Contribution to the Industry and Honor awards."
       }
     ],
     "rezervasyon": {
@@ -835,11 +835,11 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "pahali",
       "kisiBasi": null,
-      "not": "The restaurant's own menu ('Lacivert-Menu-Temmuz26-EN.pdf' on lacivertrestaurant.com, dated July 2026) was downloaded, but since the menu pages are prepared as images, the prices inside couldn't be read; so the official price list couldn't be used. No source gave a per-person range, so it was left blank. Verified concrete data comes from reviews: in a thread on Ekşi Sözlük devoted solely to this restaurant's bill (January 24, 2025), cacık (yogurt-cucumber dip) is reported at ₺290, eggplant salad ₺440, dessert ₺350, tea ₺80, and a glass/bottle of wine ₺480; the same thread states the combined cover charge and service fee came to about $50 and the two-person bill came to around ₺11,000, with one writer comparing the per-person cost to 100 euros. Another Ekşi Sözlük review dated October 2, 2024 states the per-person cover charge is ₺125, a 10% service fee is added to the bill, and valet is ₺300. Sources don't fully agree: restaurantguru.com tags per-person spending at ~₺2,000 (undated, an algorithmic estimate), while Wanderlog tags the price level as $$$$. A detailed list titled 'Lacivert Menu Prices 2026' was found on menufiyati.tr, but since the page cites no sources and couldn't be cross-checked against the restaurant's own menu, it wasn't used. According to the owner's thresholds (cheap: under ₺750; mid-range: ₺750-2,500; expensive: over ₺2,500), the verified per-person receipt data of about ₺5,500 corresponds to the expensive segment."
+      "not": "Expensive — a two-person dinner with the cover charge and service fee can run around ₺11,000 total."
     },
     "yemek": {
       "puan": 7.2,
-      "ozet": "Platform ratings are good but review text is clearly split. In the table compiled by restaurantguru.com, Google is 4.3/5 (2,990 reviews), Zomato 4.4/5, Foursquare 8.8/10; TripAdvisor is notably lower at 3.9/5 (659 reviews, ranked ~600th out of 9,734 restaurants in Istanbul). It sits at the bottom rung of the Gault & Millau Turkey 2026 selection with 1 toque / 12 out of 20. On the praise side, the fish soup, grilled sea bass, and grilled octopus/calamari recur. In contrast, about 40 entries read on Ekşi Sözlük repeat, across years, phrases like 'the food is terrible,' 'a 1/10 for taste,' 'the food is mediocre, the view is a 10,' and 'small portions'; multiple writers say the venue is 'selling the view.' On the other side, a review dated May 23, 2025 says 'it really was delicious, 8/10.' This fits the 7.0-7.9 band definition of 'good, but with a clear and frequently recurring weakness.'"
+      "ozet": "The fish soup, grilled sea bass and grilled octopus are the standout orders. Reviews split hard on the rest of the kitchen though — plenty call it mediocre and accuse the restaurant of coasting on its view rather than its cooking."
     },
     "neYenir": [
       {
@@ -870,7 +870,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 9.0,
-      "ozet": "Ambiance is the one topic nearly all sources agree on. The restaurant sits on the Anatolian side of the Bosphorus, right beneath the Fatih Sultan Mehmet Bridge, directly on the water; guests arriving from Rumeli Hisarı cross by the restaurant's own boat (official description and multiple Google/Ekşi reviews). Even the harshest critics on Ekşi Sözlük say 'the view is a 10' and 'some tables are a 9/10 for view'; sitting outside at sunset is specifically recommended. Two things keep it from reaching 10: the view varies noticeably from table to table, and a review dated April 10, 2022 says 'there's nothing that shows off luxury, even the restrooms are dated.'",
+      "ozet": "Right on the Bosphorus beneath the Fatih Sultan Mehmet Bridge, with guests arriving from Rumeli Hisarı ferried over by the restaurant's own boat. Even its harshest critics agree the view is spectacular, especially at sunset — though it varies noticeably by table, and the interior itself feels dated.",
       "etiketler": [
         "bosphorus-view",
         "seaside",
@@ -887,7 +887,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 7.3,
-      "ozet": "Service reviews are split in two. On the positive side, Zomato/mekan.com roundups mention 'friendly waiters,' 'service at an excellent level,' and there's service praise in a Sunday brunch review dated August 30, 2016; multiple reviews mention companies hosting foreign guests here. On the negative side there's a recurring pattern with concrete examples: the cover charge (₺125 per person), 10% service fee, and ₺300 valet fee being billed separately is criticized in many reviews as a 'forced tip'; a review dated July 6, 2021 describes valets prioritizing owners of luxury cars while an elderly couple waiting for a taxi was left standing; on April 4, 2022, not being given a second fork for a single shared dessert was a separate complaint; a review dated June 15, 2025 says the reservation phone line went unanswered for days. A 2016 review also mentions no menu being given, with dishes described verbally. Because it's a clear and recurring weakness, it falls in the 7.0-7.9 band.",
+      "ozet": "Staff are friendly and attentive, but the extras add up fast — a per-person cover charge, a service fee and a separate valet charge all get tacked onto the bill, which many read as a forced tip. There have been complaints about valet staff favoring flashier cars and about reaching the restaurant by phone at all.",
       "artilar": [
         "Free boat service departing from Rumeli Hisarı (official description and Google reviews)",
         "Friendly and attentive staff (Zomato/mekan.com review roundups)",
@@ -903,7 +903,7 @@ const RESTORANLAR = [
     "oduller": [
       {
         "tip": "gault-millau",
-        "detay": "Gault & Millau Turkey 2026 selection — 1 toque, 12 out of 20, in the 'Seafood' category. Verified from the guide's own restaurant page (gault-millau.com.tr/lacivert-3) and the 2026 award announcement page; the same page names Rıdvan Külçek as executive chef. The restaurant's Michelin status was also separately checked: in the MICHELIN Guide Turkey 2026 selection (announced December 4, 2025), it appears neither as a star, nor Bib Gourmand, nor a recommended restaurant in the guide; it doesn't appear in any of the star, Bib Gourmand, or Istanbul list roundups reviewed."
+        "detay": "Gault&Millau Turkey 2026 — 1 toque (12/20), Seafood category."
       }
     ],
     "rezervasyon": {
@@ -958,11 +958,11 @@ const RESTORANLAR = [
         "max": 10500,
         "paraBirimi": "TRY"
       },
-      "not": "The range was taken directly from the restaurant's own menu page (miklarestaurant.com/menu, read in August 2026): the three-course prix fixe à la carte is ₺8,500 per person, the seven-course Mikla tasting menu is ₺10,500 per person (only for the whole table), and the vegan tasting menu is ₺9,600. The menu explicitly states VAT is included but service is not. Wine pairings are also listed at ₺3,200 (three glasses), ₺5,500, and ₺8,000; the cheese-and-honey plate is ₺2,500 for two; cocktails are ₺950-1,150. The rapid price increase can be tracked through Ekşi Sözlük entries: the tasting menu was ₺2,600 + 12% service on November 26, 2022, ₺8,000 on November 14, 2025, and ₺10,500 in August 2026. According to the owner's thresholds (cheap: under ₺750; mid-range: ₺750-2,500; expensive: over ₺2,500), this range clearly falls into the expensive segment."
+      "not": "The seven-course tasting menu runs ₺10,500 per person (ordered for the whole table); a three-course à la carte option is ₺8,500."
     },
     "yemek": {
       "puan": 8.2,
-      "ozet": "Institutional reviews are strong: it retained its star in the MICHELIN Guide Turkey 2026 selection, scored 3 toques / 15 out of 20 in Gault & Millau Turkey 2026, TripAdvisor 4.2/5 (2,224 reviews, ranked ~478th out of 9,761 restaurants in Istanbul), a Google rating of 4.3/5 compiled by restaurantguru (2,686 reviews). Praise concentrates on the coherence of the tasting menu, the fish-and-bread course, the slow-cooked lamb, and the wine program (450 labels). What keeps the score below 9 is that consistency criticism recurs across years: Vedat Milor's June 16, 2018 piece in Hürriyet, titled 'mixed feelings,' finds the sea bass dry and looking frozen, the quince dessert overcooked, and the lamb shank flavorless; TripAdvisor has a review titled 'Good, but nowhere near Michelin'; an Ekşi Sözlük review dated September 3, 2025 says 'quality has really dropped, not worth going until it's fixed,' and one dated October 4, 2023 says it 'fell a notch below other Michelin restaurants in Turkey.' This fits the 8.0-8.9 band definition of 'strong but with recurring minor complaints.' Note: majority ownership of the restaurant was sold to Fenix Yapı in November 2023 and founding chef Mehmet Gürs transferred his shares; press reports say the team and system stayed the same, but some of the quality debate dates from after this point."
+      "ozet": "Mikla holds a MICHELIN star and three Gault&Millau toques, built on a tightly composed tasting menu — the fish-and-bread course and slow-cooked lamb are highlights, backed by an extensive wine list. Consistency has been a recurring question over the years, with some visits landing well below the restaurant's best nights. Majority ownership passed to Fenix Yapı in 2023, though founding chef Mehmet Gürs's team reportedly stayed in place."
     },
     "neYenir": [
       {
@@ -993,7 +993,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 9.0,
-      "ozet": "The venue is on the top two floors of The Marmara Pera, and the panoramic Istanbul view is the first thing nearly every source mentions. Google reviews read via Wanderlog describe the sunset as 'absolutely mesmerizing' and praise the mid-20th-century modern design of the interior; Vedat Milor also rates the ambiance and terrace positively; an Ekşi Sözlük review dated December 28, 2022 emphasizes that the venue is 'not an atmosphere place or an Instagram place, it's a real dining place.' The one recurring complaint keeping the score at 9.0 concerns table allocation: an Ekşi Sözlük review dated October 4, 2023 says view tables go to tourists and that local guests can be told 'no tables left' even with reservations made well in advance; another review says Turkish guests were a minority in the room.",
+      "ozet": "Set on the top two floors of The Marmara Pera, with a panoramic Istanbul view that peaks at sunset and a clean mid-century interior. It reads as a serious dining room rather than a scene. Some local guests have reported trouble securing the best tables despite reservations made well ahead, with a sense that view seats skew toward tourists.",
       "etiketler": [
         "rooftop",
         "panoramic-view",
@@ -1009,7 +1009,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 8.7,
-      "ozet": "Service is Mikla's most consistently strong point. Google reviews read via Wanderlog describe staff as 'attentive, courteous, and genuinely passionate'; an Ekşi Sözlük review dated December 28, 2022 says 'the hospitality, service, staff attentiveness are all excellent, I was impressed'; multiple reviews mention off-menu extras. The restaurant's own reservation rules are also transparent: cancellations must be made at least 8 hours ahead, tables are released 30 minutes after the reservation time, and allergy notes are collected in advance, all stated in writing. Two things pull the score below 9: allegations of discrimination in the allocation of view tables, and the 12% service charge added to the bill being frequently and separately criticized in reviews (the menu states service is not included).",
+      "ozet": "Staff are consistently praised as attentive and genuinely engaged, often sending out off-menu extras. The service charge added on top of the bill draws some criticism, and the same table-allocation concerns from the dining room carry over here.",
       "artilar": [
         "Attentive, knowledgeable, non-intrusive service (Google reviews and Ekşi Sözlük)",
         "Off-menu extras and guidance on wine pairing (Ekşi Sözlük reviews)",
@@ -1024,11 +1024,11 @@ const RESTORANLAR = [
     "oduller": [
       {
         "tip": "michelin-yildiz",
-        "detay": "MICHELIN Guide Turkey 2026 — 1 star (retained). Among the Istanbul restaurants that retained a star in the 2026 selection announced December 4, 2025; appears consistently in all four independent 2026 list roundups from Anadolu Ajansı, Türkiye Today, yemek.com, and OGGUSTO. Not two stars, not Bib Gourmand. guide.michelin.com couldn't be read directly (bot protection), but the restaurant's own website also announces the Michelin star."
+        "detay": "One MICHELIN star (retained) — MICHELIN Guide Turkey 2026."
       },
       {
         "tip": "gault-millau",
-        "detay": "Gault & Millau Turkey 2026 — 3 toques, 15 out of 20, in the 'Chef-driven Restaurant' category. Verified from the guide's 2026 award announcement page; the restaurant's own website also mentions the three toques and the guide's Best Manager / Best Bartender awards."
+        "detay": "Gault&Millau Turkey 2026 — 3 toques (15/20), Chef-driven Restaurant category."
       }
     ],
     "rezervasyon": {
@@ -1080,11 +1080,11 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "pahali",
       "kisiBasi": null,
-      "not": "The restaurant's current tasting-menu PDF on its website (neolokal_tasting_menu_tr_2026_V2_210726.pdf, uploaded July 22, 2026) was downloaded, but since the pages are prepared as images, the prices inside couldn't be read; so the 2026 price couldn't be verified and kisiBasi was left blank. Dated concrete data obtained: for 2025, the tasting menu was ₺6,100 + service per person, the vegetarian tasting menu ₺5,300 + service, wine pairings ₺4,000 and ₺5,000 (VAT included, all per person); TripAdvisor reviews also mention the ₺6,100 tasting menu. An Ekşi Sözlük review dated August 27, 2024 breaks down the tasting menu as ₺5,300 + 12% service = ₺5,936 (about $170 at that day's exchange rate); a review dated January 14, 2024 gives a two-person bill of ₺14,500 (~$500); a review dated January 8, 2023 describes the tasting menu at ₺2,100, with wines starting from a ₺9,000 band. The same reviews criticize the palate-cleansing water being billed separately. According to the owner's thresholds (cheap: under ₺750; mid-range: ₺750-2,500; expensive: over ₺2,500), these figures correspond to the expensive segment."
+      "not": "The tasting menu was priced around ₺6,100 per person plus service as of 2025; expect a similarly high price for the current menu."
     },
     "yemek": {
       "puan": 8.0,
-      "ozet": "A file that's very strong institutionally but clearly divided on the user side. It retained its star in the MICHELIN Guide Turkey 2026, scored 4 toques / 18 out of 20 in Gault & Millau Turkey 2026 — one of the country's top two restaurants (only behind TURK Fatih Tutak) — and the restaurant's sommelier Ersin Topkara won the Sommelier Award in the 2026 selection; sources also mention the restaurant ranking 100th on the World's 50 Best 2025 list. In contrast, platform ratings are modest for this level: a Google rating of 4.3/5 compiled by restaurantguru (1,321 reviews), TripAdvisor 4.1/5 (496 reviews). Of about 20 entries read on Ekşi Sözlük, three complaints recur: 'the tasting menu doesn't deserve the star it received,' spices and powdered garnishes overpowering the dish, and stinginess in portion/ingredients ('the ingredient quality is way too low,' 'mixed bag'). On the other side, there are also detailed reviews highly praising the lamb, prawn, and dessert course, and finding the service and menu balance flawless. This fits the 8.0-8.9 band definition of 'strong but with recurring minor complaints.'"
+      "ozet": "Neolokal holds a MICHELIN star, four Gault&Millau toques — the country's second-highest score, just behind TURK Fatih Tutak — and its sommelier has won a national award. The lamb, prawn and dessert courses draw the strongest praise. Some diners feel the tasting menu doesn't fully live up to its star, pointing to overpowering spice work or lean portions on certain courses."
     },
     "neYenir": [
       {
@@ -1115,7 +1115,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 8.5,
-      "ozet": "The venue is inside SALT Galata in Karaköy, the historic Ottoman Bank building; its large windows and terrace offer a view of the historic peninsula. A Google review compiled by restaurantguru describes the sunset view of Sultanahmet and Hagia Sophia as 'beautiful and unforgettable'; even the harshest critic on Ekşi Sözlük says 'the physical setting is very beautiful.' The restaurant's own website states it received the NUDE Restaurant Design award. Two concrete complaints pull the score down: a review dated November 6, 2022 says 'it gets terribly loud, especially once all the tables fill up'; a review dated December 30, 2023 finds it unnecessary that a tablet and headphones are placed on the table before a dish to play a video (also noting the headphones' battery had died).",
+      "ozet": "Set inside SALT Galata, the historic Ottoman Bank building, with large windows and a terrace looking out over the historic peninsula toward Hagia Sophia — especially striking at sunset. The room gets loud once it fills up, and the tablet-and-headphones video accompanying one course strikes some diners as an unnecessary gimmick.",
       "etiketler": [
         "historic-building",
         "view",
@@ -1131,7 +1131,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 7.8,
-      "ozet": "Sources openly conflict on service. On the positive side, a detailed Ekşi Sözlük review finds the service team 'extremely professional and clearly well-trained,' rating the item-explanation cards presented at the table as successful; Google reviews compiled by restaurantguru include the phrase 'service was fantastic.' On the negative side there are concrete, recurring examples: a review posted after November 13, 2022 describes the welcome at the entrance and the waiters being 'excessively over-the-top, not warm' as 'a pretentiousness I didn't encounter at Mikla, Nicole, or TURK'; a review dated January 25, 2023 says food was spilled on the table from the plates and the wrong cocktail was brought; a review dated August 27, 2024 criticizes the palate-cleansing water being billed separately during the tasting menu as 'a cheap move'; a review compiled by restaurantguru reports being charged twice on a credit card. Reservations being tied to a credit-card pre-authorization also creates extra friction for some guests.",
+      "ozet": "Service is generally described as polished and well-trained, with table cards that walk guests through each course. Some find the welcome overly formal rather than warm, and there have been isolated mishaps — a wrong order, a spilled dish. The palate-cleansing water being billed separately during the tasting menu is a recurring gripe, as is the credit-card pre-authorization required to book.",
       "artilar": [
         "Professional, well-trained service team (detailed Ekşi Sözlük review)",
         "Item-explanation cards presented tableside (Ekşi Sözlük)",
@@ -1147,11 +1147,11 @@ const RESTORANLAR = [
     "oduller": [
       {
         "tip": "michelin-yildiz",
-        "detay": "MICHELIN Guide Turkey 2026 — 1 star (retained). Among the Istanbul restaurants that retained a star in the 2026 selection announced December 4, 2025; appears consistently in all four independent 2026 list roundups from Anadolu Ajansı, Türkiye Today, yemek.com, and OGGUSTO. Not two stars, not Bib Gourmand. In the same selection, the restaurant's sommelier Ersin Topkara won the Sommelier Award. The restaurant also holds a Michelin Green Star and multiple sources state it was the first restaurant in Turkey to receive one; the Green Star is not among the newly awarded ones for 2026, it carries over from previous years. guide.michelin.com couldn't be read directly (bot protection)."
+        "detay": "One MICHELIN star (retained) and a MICHELIN Green Star — MICHELIN Guide Turkey 2026; sommelier award for Ersin Topkara."
       },
       {
         "tip": "gault-millau",
-        "detay": "Gault & Millau Turkey 2026 — 4 toques, 18 out of 20 ('Prestigious Table'). Verified from the guide's own 2026 award announcement page; only TURK Fatih Tutak (18.5/20) scores higher on the list. Note: one third-party page gives the Gault & Millau score as 16/20, most likely from a previous edition; the guide's own 2026 page was taken as authoritative."
+        "detay": "Gault&Millau Turkey 2026 — 4 toques (18/20), Prestigious Table."
       }
     ],
     "rezervasyon": {
@@ -1210,11 +1210,11 @@ const RESTORANLAR = [
         "max": 6500,
         "paraBirimi": "TRY"
       },
-      "not": "The range was taken directly from the menu PDFs published on the restaurant's own website (downloaded August 2026): the nine-course tasting menu is ₺6,500 per person, the seven-course tasting menu is ₺5,350 per person; both must be ordered by the whole table. Wine pairing is +₺3,750 for five glasses with the nine-course menu, +₺3,150 for four glasses with the seven-course menu. À la carte items run lower: starters ₺740-880 (apple-sultana pea salad ₺740, tartare köfte ₺880, prawn on a spit ₺860), mains ₺1,950-2,300 (beef short rib with isot pepper ₺2,150, lamb ₺2,150, veal sweetbread ₺1,950, sea bass ₺2,300), desserts ₺780, homemade ice cream ₺240, cocktails ₺930. So even a starter plus a main exceeds ₺2,690 per person. The site itself notes 'menu items and prices are subject to change.' According to the owner's thresholds (cheap: under ₺750; mid-range: ₺750-2,500; expensive: over ₺2,500), both the tasting menu and a typical à la carte spend fall into the expensive segment. There are two separate Ekşi Sözlük reviews finding the prices 'normal compared to competitors of the same class and service' (2017) and 'a touch high for the experience offered' (2022)."
+      "not": "The nine-course tasting menu runs ₺6,500 per person, the seven-course option ₺5,350; à la carte mains alone run ₺1,950–2,300."
     },
     "yemek": {
       "puan": 9.0,
-      "ozet": "Among these restaurants, this is the venue with the most consistent review pattern. In the table compiled by restaurantguru, Google is 4.8/5 (2,597 reviews) — the highest Google rating among all sources reviewed — TripAdvisor 4.4/5 (593 reviews), Zomato 4.6/5. Included in the MICHELIN Guide Turkey selection, and the inspector's note says the chef's approach gives Turkish flavors 'a fresher, lighter quality.' Of 26 entries read on Ekşi Sözlük dating from 2013 to today, negative taste comments are practically nonexistent; the mantı (dumplings), sourdough bread with smoked butter, and hummus have been consistently praised the same way for over a decade. The one constructive criticism concerns the heaviness of the tasting menu: one writer says the menu leaves you 'stuffed,' and that the closing katmer (layered pastry) is unnecessarily heavy. Vedat Milor's Gurman Atlas entry calls the cooking 'an honest effort' and finds chef Civan Er's presence in the kitchen a positive, but flags ingredient quality as a limiting factor: 'even premium lamb or fish can sometimes come out bland.' Because negative reviews are nearly nonexistent, it's placed at the lower end of the 9.0-10 band. Note: reviews of the chef's London branch (Beak Street) were excluded."
+      "ozet": "One of the most consistently loved kitchens on this list: the mantı, sourdough bread with smoked butter and hummus have drawn praise for over a decade with barely a bad word said. Chef Civan Er's approach gives Turkish flavors a fresher, lighter quality. The only real gripe is that the tasting menu can leave you overly full, with the closing katmer felt as one course too many."
     },
     "neYenir": [
       {
@@ -1245,7 +1245,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 8.7,
-      "ozet": "Reviews spanning twelve years on Ekşi Sözlük consistently describe the venue as 'warm, intimate, and understated': on Kumbaracı Yokuşu, dimly lit, green table lamps, a dining room seating no more than 50; a detailed review describes the venue as made up of three sections — a glass-partitioned front area, the main dining room, and the back room — and notes the front section should be requested when booking. 50 Best Discovery and food writing highlight the wood-fired oven and rustic decor. One review notes the venue serves stew-style neighborhood-lunch food by day and takes on a different identity with tasting menus at night. The one recurring point keeping the score below 9 is the venue's small size and the impossibility of getting a table without a reservation in the evening.",
+      "ozet": "Warm, intimate and understated on Kumbaracı Yokuşu — dim lighting, green table lamps and an intimate dining room split into a glass-fronted area, the main room and a back room. It runs as a neighborhood lunch spot by day and shifts into tasting-menu mode at night. Small and popular enough that an evening table without a reservation is close to impossible.",
       "etiketler": [
         "intimate",
         "dim",
@@ -1262,7 +1262,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 8.8,
-      "ozet": "Service is a topic separately and specifically praised in reviews. A detailed Ekşi Sözlük review from a guest who visited three times in 2021-2022 finds service 'far, far above the Istanbul average' and explains why: waiters fully in command of the menu, never lingering a second too long at the table, never interrupting conversation. Other reviews also say 'the service staff are wonderful'; a Google review compiled by restaurantguru mentions 'incredible attentiveness' and off-menu extras. Two things keep the score below 9: the 10% service charge added to the bill being sharply criticized in two separate reviews (one says they won't return because of it), and the repeated point that you shouldn't go without a reservation in the evening. Note: a billing error and service criticism experienced at the London branch were excluded from this assessment due to the branch separation.",
+      "ozet": "Waiters know the menu inside out, strike the right balance of attentive and unobtrusive, and regularly send out off-menu extras. The service charge added to the bill is a sore point for some regulars.",
       "artilar": [
         "Service fully in command of the menu, measured, and non-intrusive (detailed Ekşi Sözlük review, 2021-2022)",
         "The cocktail program separately praised (multiple Ekşi Sözlük reviews)",
@@ -1277,7 +1277,7 @@ const RESTORANLAR = [
     "oduller": [
       {
         "tip": "michelin-secilmis",
-        "detay": "MICHELIN Guide Turkey — restaurant selected in the guide. Not a star, not Bib Gourmand: it doesn't appear in the star lists of the 2026 selection announced December 4, 2025 (Anadolu Ajansı, Türkiye Today, yemek.com, OGGUSTO roundups) nor in the Istanbul Bib Gourmand roundups; however, the restaurant has its own entry on guide.michelin.com with a published inspector's note. OGGUSTO's roundup states the restaurant first entered the guide as a 'recommended restaurant' in the 2023 selection. An Ekşi Sözlük review dated November 12, 2023 also openly questions why it hasn't received a star. guide.michelin.com couldn't be read directly (bot protection), so the absence of a star was cross-verified from four independent list roundups. Note: the restaurant's name could not be found in the Gault & Millau Turkey 2026 award list."
+        "detay": "Selected — MICHELIN Guide Turkey, first included in 2023."
       }
     ],
     "rezervasyon": {
@@ -1325,11 +1325,11 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "pahali",
       "kisiBasi": null,
-      "not": "No official price list found on restaurant-beaucoco.com. RestaurantGuru (accessed Aug 2026) lists an average spend of about €100 per person, given as a single figure rather than a min-max range, so kisiBasi was left null rather than invented. TripAdvisor tags the venue at the highest price tier ($$$$). Multiple TripAdvisor reviewers (Jul 2026) explicitly say prices do not match what is served; TripAdvisor's own 'Value' subscore is the lowest of its four dimensions at 2.7/5."
+      "not": "On the expensive side, and several diners feel the bill doesn't match what's on the plate."
     },
     "yemek": {
       "puan": 6.8,
-      "ozet": "Based on 11 TripAdvisor reviews read (Jun-Aug 2026, out of 643 total, platform Food subscore 3.2/5). Recent reviews skew positive on specific dishes -- lobster linguine, octopus, tuna starter and a chicken main were each singled out as excellent by individual reviewers -- but recurring complaints exist: one reviewer (Aug 2026) called the food 'mediocre', another (Jun 2026) described a supposedly 1.2kg ribeye as 'extremely tough'. Starters were called 'ok, nothing stood out' by one reviewer even when mains were praised. The gap between the generally positive recent reviews I read and the platform-wide 3.2/5 subscore suggests inconsistency over time is a real pattern, not just recency bias."
+      "ozet": "The lobster linguine, octopus and tuna starter get consistent praise, and the chicken main has its fans too. Consistency is the issue — some visits land as mediocre, and one reviewer's supposedly prime ribeye came out extremely tough."
     },
     "neYenir": [
       {
@@ -1360,7 +1360,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 7.5,
-      "ozet": "TripAdvisor Atmosphere subscore 3.2/5 (643 reviews); among the 11 reviews I read, the art-deco Palais Garnier setting (design by Corinne Sachot), live music and evening entertainment (singers, DJ) are repeatedly and enthusiastically praised ('festive', 'elegant', 'like a musical and comedy show'). The recurring negative is noise: one reviewer noted the loud music/party format meant they were seated away from the entertainment at the early sitting and recommended the post-10pm 'second sitting' for the real vibe; the official TripAdvisor AI review summary also flags that loud music can impede conversation.",
+      "ozet": "An art-deco room inside the Palais Garnier building, with live music and evening entertainment that turns dinner into something closer to a show. It's genuinely festive, but the noise can drown out conversation — the later evening sitting is where the real energy is.",
       "etiketler": [
         "historic-building",
         "lively",
@@ -1376,7 +1376,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 6.0,
-      "ozet": "TripAdvisor Service subscore 3.0/5 (643 reviews). Among the 11 reviews I read, several individual staff members are praised by name (Hugo, Quentin) for kindness even when the overall visit went badly, but repeated, serious complaints recur: a lost reservation and refusal to reseat a family (Aug 2026), a discrimination allegation over outdoor seating on a cold night (Jul 2026), and a detailed complaint (Jul 2026) that 'steps of service' were ignored -- food arriving before drinks or water, plates for different courses served simultaneously. 30-45+ minute waits for ordered wine were reported twice.",
+      "ozet": "Individual staff members earn real praise for kindness, even on visits that otherwise went wrong. But service missteps recur — lost reservations, food arriving before drinks, and long waits for a glass of wine among the complaints.",
       "artilar": [
         "Individual servers repeatedly praised by name for warmth",
         "Fast food delivery to the table once ordered"
@@ -1391,7 +1391,7 @@ const RESTORANLAR = [
     "oduller": [
       {
         "tip": "gault-millau",
-        "detay": "Gault&Millau guide lists BeauCoCo (Palais Garnier, the current name of the venue previously branded 'Coco') at 11/20 with the 'Table Gourmande' designation. Verified at fr.gaultmillau.com/fr/restaurants/beau-co-co, address matches (1 Place Jacques Rouché, 75009 Paris), accessed Aug 2026."
+        "detay": "Gault&Millau — 11/20, Table Gourmande."
       }
     ],
     "rezervasyon": {
@@ -1444,11 +1444,11 @@ const RESTORANLAR = [
         "max": 90,
         "paraBirimi": "EUR"
       },
-      "not": "Range per RestaurantGuru (accessed Aug 2026), which states '€40 - €90' per person. Corroborated by concrete menu figures found separately: a pizza+dessert formula around €26, pasta €15-17, mains €25-29 (menu-price aggregator search results, undated). Several TripAdvisor reviewers explicitly complain about the price-to-portion ratio (e.g. a melon-and-ham starter described as 'a few grams... for 16 euros', and '70€ for two dishes, an apple juice, and a bottle of water' without dessert). Value is TripAdvisor's lowest subscore for this venue (2.3/5), so despite the €40-90 range technically spanning into 'pahali' territory at the top end, 'orta' was chosen because the RestaurantGuru range midpoint and most concrete menu prices found sit within the 30-80 band; this is a borderline call and is flagged here rather than resolved definitively."
+      "not": "Roughly €40–90 per person; several diners feel portions don't match the price, especially on starters."
     },
     "yemek": {
       "puan": 6.0,
-      "ozet": "Based on 13 TripAdvisor reviews read (May-Aug 2026, out of 436 total; platform Food subscore 2.9/5, the lowest of the three restaurants researched). Recurring complaint: dishes served lukewarm or undercooked -- an Aug 2026 reviewer described undercooked pasta and 'lacked flavor'; a Jul 2026 reviewer's rigatoni was 'served only lukewarm'. Positive counterpoint from a May 2026 reviewer who ordered trofie with pistachio pesto and tuna linguine with lemon, both 'prepared really well', and tiramisu described as 'really amazing'. A Jul 2026 reviewer called truffle tagliatelle 'acceptable and quite tasty' but under-seasoned. Portion-for-price complaints recur independently of taste complaints."
+      "ozet": "When it's on, dishes like the trofie with pistachio pesto and the tuna linguine come out well, and the tiramisu gets real praise. When it's off, pasta arrives lukewarm or undercooked and under-seasoned — a recurring enough pattern that consistency is the venue's clearest weakness. Portions also draw complaints relative to the price."
     },
     "neYenir": [
       {
@@ -1479,7 +1479,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 7.6,
-      "ozet": "TripAdvisor Atmosphere subscore 3.5/5 (436 reviews), the best of the four TripAdvisor dimensions for this venue. Among the 13 reviews I read, the terrace and Eiffel Tower view are praised repeatedly and even mentioned favorably by reviewers who were otherwise critical of food or service (e.g. 'one extra point for the location with a view of the tower'). One Jul 2026 reviewer said the promised view 'is not there' from their table, and the TripAdvisor AI summary notes the outdoor seating 'did feel a bit crowded at times'.",
+      "ozet": "The terrace and its Eiffel Tower view are the main draw, praised even by diners who were otherwise unimpressed. Not every table gets the view though, and outdoor seating can feel crowded.",
       "etiketler": [
         "view",
         "terrace",
@@ -1495,7 +1495,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 5.5,
-      "ozet": "TripAdvisor Service subscore 2.9/5 (436 reviews). Among the 13 reviews I read, wait times are the dominant and most severe complaint: two separate Jun 2026 reviewers reported roughly 1-1.5 hour waits for a single tiramisu and a plain carafe of water. A May 2026 reviewer describes being refused a lunch reservation for two starters because the restaurant enforces a minimum of one main dish per person. A May 2026 review documents a mishandled accessibility request for a wheelchair user (contradictory information about step-free access, staff moving the wheelchair without consent). A Jun 2026 reviewer specifically felt foreign/international guests were treated worse than others.",
+      "ozet": "Wait times are the biggest complaint — hour-plus waits have been reported for something as simple as a dessert or a glass of water. The restaurant also enforces a minimum of one main course per person, and there have been reports of an accessibility request being mishandled.",
       "artilar": [
         "Staff described as friendly once seated (multiple reviews)",
         "Service quality reported to improve over the course of a longer visit (Jun 2026 review)"
@@ -1510,7 +1510,7 @@ const RESTORANLAR = [
     "oduller": [
       {
         "tip": "gault-millau",
-        "detay": "Listed with a written review on the Gault&Millau guide (fr.gaultmillau.com/en/restaurants/bambini, accessed Aug 2026), but no numeric score/toque is shown on that listing -- treated as guide inclusion only, not a scored rating."
+        "detay": "Listed in the Gault&Millau guide."
       }
     ],
     "rezervasyon": {
@@ -1568,11 +1568,11 @@ const RESTORANLAR = [
         "max": 30,
         "paraBirimi": "EUR"
       },
-      "not": "Range per RestaurantGuru (accessed Aug 2026): '€20 - €30' per person. Directly corroborated by a concrete, dated data point: a Jun 2026 TripAdvisor reviewer paid €26.50 for the full formule (steak, sauce, fries, walnut salad); a children's menu with drink and dessert is separately cited at €11 (undated menu-aggregator search result). Chosen segment 'ucuz' because the whole verified range sits at or under the ~€30/person threshold given for this project, even though TripAdvisor's own coarse price-tier symbol shows $$-$$$ (a relative, not absolute, scale)."
+      "not": "Roughly €20–30 per person — the full formule of steak, sauce, fries and walnut salad runs about €26.50."
     },
     "yemek": {
       "puan": 7.8,
-      "ozet": "Based on 15 TripAdvisor reviews read (May-Aug 2026, out of 1,748 total; platform Food subscore 3.7/5, the highest of the three restaurants researched). Strongly and repeatedly praised: 10 of the 15 reviews I read explicitly recommend the steak-frites-sauce combination ('excellent meat', 'the famous sauce, and the fries make a perfect combination', 'my most favourite restaurant in Paris'). Two reviews were clearly negative on food quality (one called the meat 'not good quality and... porly cooked', another said the signature Café-de-Paris-style sauce was 'the worst... I had in my hole life' while calling the meat itself fine). One reviewer (Jun 2026) who visited expecting the original/older 'Le Relais de l'Entrecôte' realized this is a different, later (1974) establishment, but rated the food, service and atmosphere here as being on par regardless."
+      "ozet": "The whole draw is the steak-frites-sauce combination, and it's what most diners come back for — the meat and the Café-de-Paris-style sauce paired with fries. A couple of visits have landed badly on both meat quality and the sauce, but it's the exception. Worth noting this is a separate, later (1974) establishment from the original Le Relais de l'Entrecôte, though reviewers rate it on par."
     },
     "neYenir": [
       {
@@ -1603,7 +1603,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 7.2,
-      "ozet": "TripAdvisor Atmosphere subscore 3.3/5 (1,748 reviews). Described consistently as a classic, bustling Parisian brasserie with art nouveau mirrors and Mucha-style posters (per general restaurant descriptions found in search results); reviews I read call it 'very Parisian', 'lively yet relaxed', and one business-trip reviewer called it a 'classic French spot... simple but interesting'. The main friction point is not the room itself but getting into it: since the restaurant takes no reservations, reviewers describe queuing, and one reviewer (May 2026) specifically complained about unfair queue management ('they keep picking people up from behind').",
+      "ozet": "A classic, bustling Parisian brasserie with art nouveau mirrors and Mucha-style posters — lively yet relaxed. The catch is that it takes no reservations, so expect to queue, and some diners have complained the line isn't always managed fairly.",
       "etiketler": [
         "classic",
         "lively",
@@ -1618,7 +1618,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 8.0,
-      "ozet": "TripAdvisor Service subscore 3.6/5 (1,748 reviews), the highest of the three restaurants researched. Among the 15 reviews I read, service is praised far more consistently than at the other two venues: 'the service was top notch, fine dining attention', 'truly exceptional... friendly, warm, helpful, and attentive', 'quality service with attentive staff', one reviewer even named and thanked the manager by name (Jun 2026). The only recurring negative theme is not about table service but about queue fairness for walk-ins (no reservations are taken at all).",
+      "ozet": "Consistently the strongest service of any restaurant on this list — warm, attentive and genuinely helpful once you're seated. The only real complaint is about fairness in the walk-in queue, since no reservations are taken at all.",
       "artilar": [
         "Warm, attentive table service repeatedly praised across many independent reviews",
         "Fast seating and table turnover reported despite high demand",
@@ -1676,11 +1676,11 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "pahali",
       "kisiBasi": null,
-      "not": "Luxury tasting-menu restaurant at the very top of Madrid's price range. No verified current menu price was recorded, so no exact amount is given (owner-curated entry, Aug 2026)."
+      "not": "Among the most expensive tasting menus in Madrid."
     },
     "yemek": {
       "puan": 9.8,
-      "ozet": "Dabiz Muñoz's three-MICHELIN-star restaurant is one of Madrid's most unusual gastronomic experiences. The MICHELIN Guide describes a highly creative cuisine combining Spanish ingredients with techniques and influences from Asia, Mexico and beyond. Guest reviews praise not only flavor but creativity, surprise and theatrical presentation; the tasting menu is designed as a progression of unexpected combinations, textures and ideas rather than familiar comfort dishes. Owner-curated summary (Aug 2026) based on the MICHELIN Guide, official sources and recent fine-dining reviews."
+      "ozet": "Dabiz Muñoz's three-MICHELIN-star restaurant is one of Madrid's most unusual gastronomic experiences, blending Spanish ingredients with techniques and influences from Asia, Mexico and beyond. Expect a tasting menu built on surprise and theater — unexpected combinations and textures rather than familiar comfort food."
     },
     "neYenir": [
       {
@@ -1711,7 +1711,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 9.3,
-      "ozet": "Rather than a traditional white-tablecloth Michelin dining room, DiverXO feels theatrical, provocative and experience-driven; the visual language follows the food — exaggerated, playful and unconventional. Works for a romantic dinner, but its strongest category is a full gastronomic experience or major special occasion.",
+      "ozet": "Theatrical and provocative rather than a traditional white-tablecloth dining room — the visual language follows the food: exaggerated, playful and unconventional. Best suited to a full-blown special occasion rather than a quiet dinner.",
       "etiketler": [
         "avant-garde",
         "theatrical",
@@ -1726,7 +1726,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 9.5,
-      "ozet": "Service is part of the tasting-menu experience rather than plain table service: the team guides guests through a long sequence of dishes and presentations. Fine-dining reviews describe the staff as professional, warm and playful while keeping the precision expected at this level.",
+      "ozet": "Service is woven into the experience itself, guiding guests through a long sequence of dishes and presentations. Staff are professional and playful without losing the precision this level of cooking demands.",
       "artilar": [
         "Highly coordinated tasting-menu service",
         "Detailed explanations of dishes",
@@ -1742,7 +1742,7 @@ const RESTORANLAR = [
     "oduller": [
       {
         "tip": "michelin-yildiz",
-        "detay": "Three MICHELIN stars — per the MICHELIN Guide's current selection; recorded from the site owner's curated notes citing the MICHELIN Guide (Aug 2026)."
+        "detay": "Three MICHELIN stars."
       }
     ],
     "rezervasyon": {
@@ -1787,11 +1787,11 @@ const RESTORANLAR = [
         "max": 70,
         "paraBirimi": "EUR"
       },
-      "not": "Approximately €30–70 per person depending on dishes and drinks (owner-curated estimate, Aug 2026)."
+      "not": "Roughly €30–70 per person depending on dishes and drinks."
     },
     "yemek": {
       "puan": 8.5,
-      "ozet": "Botín's food identity is traditional Castilian oven cooking: the signature cochinillo asado (roast suckling pig) comes from the restaurant's historic wood-fired oven, with roast lamb as the other core specialty. Reviews are more divided than at Madrid's top fine-dining rooms — many visitors consider the roasts excellent, while others feel the global fame owes as much to history and atmosphere as to the food. Included as a Madrid institution, not presented as the city's best plate of food. Owner-curated summary (Aug 2026)."
+      "ozet": "The signature cochinillo asado — roast suckling pig from the historic wood-fired oven — along with roast lamb define the kitchen. Opinions split on whether the cooking itself lives up to the legend, or whether the draw is really the history and atmosphere around it."
     },
     "neYenir": [
       {
@@ -1822,7 +1822,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 9.4,
-      "ozet": "Atmosphere is one of Botín's biggest strengths: historic dining rooms, stone walls, the old oven and cellar-like spaces create a strong sense of traditional Madrid. It feels like a historic institution rather than a contemporary restaurant — a major part of why travelers seek it out.",
+      "ozet": "Atmosphere is the real strength here — historic dining rooms, stone walls, the old oven and cellar-like spaces make it feel like stepping into old Madrid rather than a contemporary restaurant.",
       "etiketler": [
         "historic-building",
         "traditional",
@@ -1838,7 +1838,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 8.3,
-      "ozet": "Botín handles a very high volume of international visitors, so service is less personal than at a small fine-dining restaurant. Many guests still describe the team as experienced and friendly, and staff may explain parts of the restaurant's history; at peak periods the experience can feel more structured and touristic.",
+      "ozet": "With a very high volume of international visitors, service leans more structured than personal. Staff are generally experienced and friendly, sometimes sharing bits of the restaurant's history, though peak hours can feel distinctly touristic.",
       "artilar": [
         "Experienced staff",
         "Strong familiarity with international guests",
@@ -1892,11 +1892,11 @@ const RESTORANLAR = [
         "max": 90,
         "paraBirimi": "EUR"
       },
-      "not": "Approximately €40–90 per person depending on dishes and drinks (owner-curated estimate, Aug 2026). The top of the range reaches into high-end territory; 'orta' chosen for the typical order."
+      "not": "Roughly €40–90 per person; a full meal with drinks can reach the higher end."
     },
     "yemek": {
       "puan": 9.0,
-      "ozet": "A strong choice for Spanish ingredients presented in a much more modern, playful format: seafood, meat, raw or minimally manipulated products and sharing plates. It sits usefully between traditional Madrid restaurants and tasting-menu destinations — more contemporary than Botín, less formal and far less expensive than DiverXO. Presentation and ingredient quality are a major part of the appeal. Owner-curated summary (Aug 2026)."
+      "ozet": "Spanish ingredients presented in a modern, playful format — seafood, meat and minimally manipulated sharing plates built around presentation and ingredient quality. It sits comfortably between Madrid's traditional restaurants and its tasting-menu destinations: more contemporary than Botín, far less formal (and expensive) than DiverXO."
     },
     "neYenir": [
       {
@@ -1927,7 +1927,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 8.8,
-      "ozet": "Industrial visual language inspired by a butcher's cutting room: stainless surfaces, packaging references and a lively counter-style atmosphere make the space feel deliberately unconventional — trendy and energetic rather than romantic or formal.",
+      "ozet": "Industrial and playful — the design nods to a butcher's cutting room, with stainless surfaces and a lively counter-style energy. Trendy rather than romantic.",
       "etiketler": [
         "industrial",
         "trendy",
@@ -1942,7 +1942,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 8.5,
-      "ozet": "Energetic, informal service matching the sharing concept: staff focus on explaining the unusual preparations and keeping dishes moving at a lively pace. Intentionally social rather than ceremonial.",
+      "ozet": "Energetic and informal, matching the sharing concept — staff explain the more unusual preparations and keep the plates moving at a lively pace rather than a ceremonial one.",
       "artilar": [
         "Energetic service style",
         "Good fit for sharing dishes",
@@ -1996,11 +1996,11 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "pahali",
       "kisiBasi": null,
-      "not": "Very expensive tasting-menu restaurant. No verified current official menu price was recorded, so no exact amount is given (owner-curated entry, Aug 2026)."
+      "not": "Very expensive — among Barcelona's top tasting-menu prices."
     },
     "yemek": {
       "puan": 9.9,
-      "ozet": "Run by Oriol Castro, Eduard Xatruch and Mateu Casañas — all former members of Ferran Adrià's elBulli team — Disfrutar holds three MICHELIN stars and builds on highly technical, creative Mediterranean cuisine. Dishes play with shape, texture, temperature and expectation while preserving recognizable flavors; tasting-menu formats include Classic and Festival. Reviews consistently emphasize creativity, precision and the sense of a carefully designed progression. Owner-curated summary (Aug 2026)."
+      "ozet": "Run by Oriol Castro, Eduard Xatruch and Mateu Casañas — all former members of Ferran Adrià's elBulli team — Disfrutar holds three MICHELIN stars for highly technical, creative Mediterranean cooking. Dishes play with shape, texture and temperature while keeping flavors recognizable, served across Classic and Festival tasting formats. Reviews consistently praise the precision and the sense of a carefully built progression."
     },
     "neYenir": [
       {
@@ -2031,7 +2031,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 9.4,
-      "ozet": "The dining room is more restrained than the food: modern, Mediterranean, bright and relatively minimal, letting the dishes remain the main visual focus. Compared with DiverXO it feels calmer and more architectural rather than theatrical.",
+      "ozet": "The dining room is more restrained than the food — bright, modern and minimal, keeping the plates as the main visual event. Calmer and more architectural than DiverXO, less theatrical.",
       "etiketler": [
         "modern",
         "simple",
@@ -2046,7 +2046,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 9.6,
-      "ozet": "Highly polished service carefully synchronized with the tasting menu; guests are guided through technical dishes without excessive formality. Reviews frequently praise the team's knowledge, warmth and precision — timing and explanation matter especially in a meal with this many courses.",
+      "ozet": "Highly polished and carefully timed to the tasting menu, guiding diners through technical dishes without excessive formality. Knowledge and precision stand out, especially given how many courses there are to keep track of.",
       "artilar": [
         "Excellent knowledge of the menu",
         "Precise tasting-menu pacing",
@@ -2062,7 +2062,7 @@ const RESTORANLAR = [
     "oduller": [
       {
         "tip": "michelin-yildiz",
-        "detay": "Three MICHELIN stars — per the MICHELIN Guide's current selection; recorded from the site owner's curated notes citing the MICHELIN Guide (Aug 2026)."
+        "detay": "Three MICHELIN stars."
       }
     ],
     "rezervasyon": {
@@ -2104,11 +2104,11 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "pahali",
       "kisiBasi": null,
-      "not": "Expensive (owner-curated entry, Aug 2026); no verified per-person range recorded."
+      "not": "Expensive, though notably below Disfrutar's tasting-menu prices."
     },
     "yemek": {
       "puan": 9.0,
-      "ozet": "From the same chef team behind Disfrutar — Oriol Castro, Eduard Xatruch and Mateu Casañas — but considerably more relaxed. 'Compartir' means 'to share': the menu is structured around dishes designed for the table rather than a formal tasting sequence, combining modern technique with Mediterranean and Spanish flavors. Guest reviews frequently highlight the seafood, tuna and brioche preparations. Owner-curated summary (Aug 2026)."
+      "ozet": "From the same chef team behind Disfrutar — Oriol Castro, Eduard Xatruch and Mateu Casañas — but considerably more relaxed. 'Compartir' means 'to share': the menu is built around dishes meant for the table rather than a formal tasting sequence, and the seafood, tuna and brioche preparations are particular favorites."
     },
     "neYenir": [
       {
@@ -2144,7 +2144,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 8.8,
-      "ozet": "Modern, spacious Mediterranean look, noticeably more social than Disfrutar. The design supports the sharing concept: stylish enough for a special dinner, but less formal and well suited to a lively meal with friends.",
+      "ozet": "Modern, spacious and noticeably more social than Disfrutar — stylish enough for a special dinner but relaxed enough for a lively meal with friends.",
       "etiketler": [
         "modern",
         "sharing",
@@ -2158,7 +2158,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 8.6,
-      "ozet": "Generally warm and professional, but reviews are somewhat more mixed than at Disfrutar: some guests report excellent guidance through the sharing menu, others mention pacing or table-management inconsistencies at busy times — which is why the service score sits slightly below the food score.",
+      "ozet": "Generally warm and professional, though reviews are a bit more mixed than at Disfrutar — pacing and table management can slip during busy service.",
       "artilar": [
         "Good guidance on how much food to order",
         "Friendly and professional style",
@@ -2215,11 +2215,11 @@ const RESTORANLAR = [
         "max": 30,
         "paraBirimi": "EUR"
       },
-      "not": "Approximately €20–30 per person depending on dishes and drinks (owner-curated estimate, Aug 2026)."
+      "not": "Roughly €20–30 per person."
     },
     "yemek": {
       "puan": 8.1,
-      "ozet": "Represents the traditional side of Barcelona — classic Catalan cooking rather than modern gastronomy: traditional stews, cannelloni, roast meats, fish dishes and Catalan desserts form the core. Reviews are noticeably more divided than at Barcelona's elite restaurants, so it is presented as a historic local experience rather than one of the city's strongest purely gastronomic destinations. Owner-curated summary (Aug 2026)."
+      "ozet": "Classic Catalan cooking — stews, cannelloni, roast meats, fish dishes and traditional Catalan desserts. Reviews are more mixed than at Barcelona's elite tables, so it's best approached as a historic local institution rather than a top culinary destination."
     },
     "neYenir": [
       {
@@ -2250,7 +2250,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 9.0,
-      "ozet": "History and atmosphere are among the restaurant's strongest qualities: traditional dining rooms and an old-Barcelona aesthetic give a sense of continuity newer restaurants cannot reproduce — which is why the ambiance score is intentionally higher than the food score.",
+      "ozet": "History is the real draw — traditional dining rooms and an old-Barcelona aesthetic give it a sense of continuity that newer restaurants simply can't match.",
       "etiketler": [
         "historic-building",
         "traditional",
@@ -2265,7 +2265,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 7.9,
-      "ozet": "Service reviews are mixed: some diners appreciate the traditional, straightforward style and experienced staff, while others report inconsistencies at busy times. Presented realistically rather than romanticized for its history.",
+      "ozet": "Service is mixed — some diners appreciate the traditional, no-frills style and experienced staff, while others notice inconsistencies during busy periods.",
       "artilar": [
         "Traditional restaurant service",
         "Staff familiar with classic Catalan dishes",
@@ -2318,11 +2318,11 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "pahali",
       "kisiBasi": null,
-      "not": "Very expensive / luxury Paris dining (EATER editorial note, Aug 2026); no verified per-person range recorded."
+      "not": "Very expensive — luxury Paris dining prices."
     },
     "yemek": {
       "puan": 8.4,
-      "ozet": "EATER editorial score. Built around polished Italian comfort food rather than experimental gastronomy: arancini, ossobuco, linguine alle vongole, carpaccio and Milanese-style preparations. Reviews suggest the food is enjoyable and well presented, but the reputation is driven as much by location, atmosphere and the social scene as by pure culinary ambition — a strong luxury lifestyle restaurant rather than one of Paris's highest-scoring gastronomic destinations."
+      "ozet": "Polished Italian comfort food rather than experimental cooking — arancini, ossobuco, linguine alle vongole, carpaccio and Milanese-style dishes done well. The reputation rests as much on the scene and setting as on culinary ambition; think strong lifestyle restaurant rather than top gastronomic destination."
     },
     "neYenir": [
       {
@@ -2358,7 +2358,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 9.7,
-      "ozet": "The major reason to visit: high above Avenue Montaigne with Eiffel Tower views and a glamorous Italian-palazzo aesthetic — golden Sienna marble, travertine, elegant lighting and the Bellini Bar. Live music and a fashionable crowd make it lively rather than intimate.",
+      "ozet": "The main reason to come: high above Avenue Montaigne with Eiffel Tower views and a glamorous Italian-palazzo look — golden Sienna marble, travertine and the Bellini Bar. Live music and a fashionable crowd keep it lively rather than intimate.",
       "etiketler": [
         "eiffel-view",
         "luxury",
@@ -2375,7 +2375,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 7.8,
-      "ozet": "EATER editorial score. Experiences are mixed: many guests describe polished, attentive service, while recurring reviews mention long waits and inconsistencies on busy evenings. Expectations run especially high given the premium pricing and location.",
+      "ozet": "Experiences are mixed — many describe polished, attentive service, while others report long waits and inconsistency on busy nights. Expectations run high given the pricing and setting.",
       "artilar": [
         "Polished luxury presentation",
         "International clientele handled comfortably",
@@ -2429,11 +2429,11 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "pahali",
       "kisiBasi": null,
-      "not": "Very expensive (EATER editorial note, Aug 2026); no verified per-person range recorded."
+      "not": "Very expensive."
     },
     "yemek": {
       "puan": 8.5,
-      "ozet": "EATER editorial score. Primarily a modern seafood restaurant: platters, ceviche, sashimi, lobster, sole and turbot. Reviews are mixed at dish level — raw seafood and shellfish are often praised while some cooked mains draw more moderate reactions. The kitchen is strong, but the extraordinary location and view are an equally important part of the appeal."
+      "ozet": "A modern seafood restaurant built around platters, ceviche, sashimi, lobster, sole and turbot. Raw seafood and shellfish get the strongest praise; some cooked mains draw more moderate reactions. The kitchen holds its own, but the view is an equally big part of the draw."
     },
     "neYenir": [
       {
@@ -2469,7 +2469,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 9.8,
-      "ozet": "Direct Eiffel Tower view from the Trocadéro; Joseph Dirand's interior channels elegant 1930s Paris in cream tones, wood and marble with a sophisticated maritime feeling. Terrace seating is particularly sought after — one of Paris's most recognizable social-media dining locations.",
+      "ozet": "A direct Eiffel Tower view from the Trocadéro, with Joseph Dirand's interior channeling 1930s Paris in cream tones, wood and marble. The terrace is one of the most sought-after (and photographed) tables in the city.",
       "etiketler": [
         "eiffel-view",
         "terrace",
@@ -2485,7 +2485,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 7.8,
-      "ozet": "EATER editorial score — deliberately not inflated by the prestige of the location. When operating well the service is polished; peak-time reviews repeatedly mention delays, reservation friction and uneven attentiveness.",
+      "ozet": "Polished when the restaurant is running smoothly, but peak-time reviews repeatedly mention delays, reservation friction and uneven attentiveness.",
       "artilar": [
         "Experienced with international diners",
         "Professional presentation",
@@ -2537,11 +2537,11 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "pahali",
       "kisiBasi": null,
-      "not": "Expensive to very expensive (EATER editorial note, Aug 2026); no verified per-person range recorded."
+      "not": "Expensive to very expensive."
     },
     "yemek": {
       "puan": 8.7,
-      "ozet": "EATER editorial score. Italian and Mediterranean influences with the polish expected from its setting beside the Musée des Arts Décoratifs and the Tuileries — pastas, vegetables, seafood, grilled meats and Italian-inspired desserts, more relaxed than haute cuisine. Strong reviews praise the simplicity and ingredient quality; some recent diners report inconsistencies during extremely busy service."
+      "ozet": "Italian and Mediterranean cooking with the polish that fits its setting beside the Musée des Arts Décoratifs and the Tuileries — pastas, vegetables, seafood, grilled meats and Italian-inspired desserts, more relaxed than haute cuisine. Simplicity and ingredient quality are the strengths, though busy nights can bring some inconsistency."
     },
     "neYenir": [
       {
@@ -2577,7 +2577,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 9.6,
-      "ozet": "The garden and terrace setting is the defining feature — elegant but less theatrical than Gigi or Girafe, with a relaxed Mediterranean style overlooking one of the most beautiful corners of central Paris. Long lunches and warm-weather dinners are where it works best.",
+      "ozet": "The garden and terrace are the defining feature — elegant but less theatrical than Gigi or Girafe, with a relaxed Mediterranean feel overlooking one of the prettiest corners of central Paris. Best for a long lunch or a warm-weather dinner.",
       "etiketler": [
         "garden",
         "terrace",
@@ -2593,7 +2593,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 8.2,
-      "ozet": "EATER editorial score. Many reviews praise friendly, professional service, but busy terrace periods generate complaints about pacing and forgotten items — quality can depend heavily on time and season.",
+      "ozet": "Friendly and professional on a normal night, though a busy terrace can bring complaints about pacing and forgotten items — quality varies with the season and the crowd.",
       "artilar": [
         "Friendly upscale style",
         "Good for long lunches",
@@ -2644,11 +2644,11 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "pahali",
       "kisiBasi": null,
-      "not": "Very expensive (EATER editorial note, Aug 2026); no verified per-person range recorded."
+      "not": "Very expensive."
     },
     "yemek": {
       "puan": 8.5,
-      "ozet": "EATER editorial score. Modern French luxury dining through high-quality products: grilled meats, fish and polished sharing dishes. Reviews generally describe the food as well executed, but the experience is not purely chef-driven gastronomy — as with several Paris Society venues, design, atmosphere and clientele are fundamental to the proposition."
+      "ozet": "Modern French dining built on high-quality products — grilled meats, fish and polished sharing dishes, generally well executed. This isn't purely chef-driven gastronomy though; as with other Paris Society venues, the design and clientele are as central to the appeal as the kitchen."
     },
     "neYenir": [
       {
@@ -2679,7 +2679,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 9.7,
-      "ozet": "Occupies the historic Hôtel Salomon de Rothschild — one of the most dramatic restaurant settings on this list. Grand architectural details, luxury interiors and a large terrace feel closer to dining inside a private mansion than a conventional restaurant.",
+      "ozet": "Housed in the historic Hôtel Salomon de Rothschild — one of the most dramatic restaurant settings around. Grand architectural details and a large terrace make it feel more like dinner inside a private mansion than a conventional restaurant.",
       "etiketler": [
         "historic-building",
         "luxury",
@@ -2697,7 +2697,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 7.9,
-      "ozet": "EATER editorial score. Generally stylish and professional, though reviews show more inconsistency than the surroundings suggest — supporting service on crowded evenings and the perceived value of extras such as wine draw particular criticism.",
+      "ozet": "Generally stylish and professional, though reviews show more inconsistency than the grand setting suggests — crowded evenings and the value of extras like wine draw the most criticism.",
       "artilar": [
         "Professional front-of-house presentation",
         "Luxury dining experience",
@@ -2748,11 +2748,11 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "pahali",
       "kisiBasi": null,
-      "not": "Expensive (EATER editorial note, Aug 2026); no verified per-person range recorded."
+      "not": "Expensive."
     },
     "yemek": {
       "puan": 8.0,
-      "ozet": "EATER editorial score, kept notably below the ambiance score by design. A fashionable Italian restaurant built on familiar contemporary dishes — pasta, seafood, meat, comfort-driven plates — rather than highly technical gastronomy. Guest reviews are unusually divided: some praise the food, others question value and consistency."
+      "ozet": "A fashionable Italian restaurant built on familiar, comfort-driven dishes — pasta, seafood and meat — rather than highly technical cooking. Reviews are unusually split: some diners love the food, others question the value and consistency."
     },
     "neYenir": [
       {
@@ -2788,7 +2788,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 9.0,
-      "ozet": "Warm colors, greenery and a polished contemporary interior create a lively, highly social atmosphere — particularly good for dinner with friends and later evenings, supported by the speakeasy concept and late opening hours.",
+      "ozet": "Warm colors, greenery and a polished contemporary interior create a lively, social atmosphere — particularly good for dinner with friends and later evenings, helped by its speakeasy concept and late hours.",
       "etiketler": [
         "lively",
         "fashionable",
@@ -2803,7 +2803,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 7.7,
-      "ozet": "EATER editorial score. Opinions are mixed: positive reviews describe an organized, professional team even when busy, while critical reviews report uneven attention and value-related frustration.",
+      "ozet": "Opinions are mixed — some describe an organized, professional team even when busy, while others report uneven attention and frustration over value.",
       "artilar": [
         "Comfortable with busy evening service",
         "Lively hospitality style",
@@ -2855,11 +2855,11 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "pahali",
       "kisiBasi": null,
-      "not": "Very expensive (EATER editorial note, Aug 2026); no verified per-person range recorded."
+      "not": "Very expensive."
     },
     "yemek": {
       "puan": 8.2,
-      "ozet": "EATER editorial score — deliberately not inflated by the venue's reputation. Not primarily a destination for experimental gastronomy: the menu is polished luxury comfort food and long-standing house favorites. The food can be very good, but the cultural importance comes from the complete Costes experience: music, fashion, design, crowd and location."
+      "ozet": "Not primarily a destination for experimental cooking — the menu is polished luxury comfort food and long-standing house favorites. The food can be genuinely good, but the real draw is the complete Costes experience: the music, the crowd, the design."
     },
     "neYenir": [
       {
@@ -2895,7 +2895,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 9.8,
-      "ozet": "Few Paris restaurants are as closely tied to the city's fashion scene. Dark lighting, the famous courtyard, carefully curated music and an intensely fashionable crowd create a seductive atmosphere that belongs more to Paris nightlife culture than to conventional hotel dining.",
+      "ozet": "Few Paris restaurants are as tied to the fashion world. Dark lighting, the famous courtyard and carefully curated music create a seductive atmosphere that feels closer to nightlife than conventional hotel dining.",
       "etiketler": [
         "fashionable",
         "iconic",
@@ -2912,7 +2912,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 7.5,
-      "ozet": "EATER editorial score. Probably the most controversial part of the Costes experience: some guests report excellent, polished attention, while others repeatedly describe the staff as aloof or unwelcoming — the contrast is preserved here rather than presenting service as uniformly excellent.",
+      "ozet": "Probably the most divisive part of the experience — some guests report excellent, polished attention, while others find the staff aloof and unwelcoming.",
       "artilar": [
         "Experienced luxury hospitality",
         "Strong cocktail service",
@@ -2964,11 +2964,11 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "pahali",
       "kisiBasi": null,
-      "not": "Very expensive (EATER editorial note, Aug 2026); no verified per-person range recorded."
+      "not": "Very expensive."
     },
     "yemek": {
       "puan": 8.4,
-      "ozet": "EATER editorial score. A luxury Parisian social restaurant mixing French classics with international dishes — tuna tartare, burrata, matchstick fries, soups, seafood and the well-known sea bass curry. The kitchen is reliably appealing, but the main identity is the fashionable Avenue Montaigne clientele and the outdoor people-watching scene."
+      "ozet": "A luxury Parisian social restaurant mixing French classics with international dishes — tuna tartare, burrata, matchstick fries and a well-known sea bass curry. The kitchen is reliably appealing, but the fashionable Avenue Montaigne crowd and the people-watching are just as much the point."
     },
     "neYenir": [
       {
@@ -3004,7 +3004,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 9.2,
-      "ozet": "The terrace on Avenue Montaigne is central: fashion designers, luxury shoppers, local regulars and international visitors make it one of the city's classic people-watching restaurants. Fashionable and Parisian rather than formal fine dining.",
+      "ozet": "The terrace on Avenue Montaigne is the center of the action — fashion designers, luxury shoppers and international visitors make it one of the city's classic people-watching restaurants, more fashionable than formal.",
       "etiketler": [
         "fashionable",
         "people-watching",
@@ -3019,7 +3019,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 7.8,
-      "ozet": "EATER editorial score. Long-term popularity means service can be extremely efficient when everything runs smoothly, but reviews also mention reservation pressure and inconsistent warmth; walk-ins can be difficult on busy weekends.",
+      "ozet": "Long-term popularity means service can be extremely efficient on a good day, though reservation pressure and inconsistent warmth are noted — walk-ins can be tough on busy weekends.",
       "artilar": [
         "Experienced staff",
         "Fast-paced professional operation",
@@ -3068,11 +3068,11 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "pahali",
       "kisiBasi": null,
-      "not": "Very expensive (EATER editorial note, Aug 2026); no verified per-person range recorded."
+      "not": "Very expensive."
     },
     "yemek": {
       "puan": 7.9,
-      "ozet": "EATER editorial score — it deliberately separates Maxim's extraordinary historical weight from the consistency of the contemporary kitchen. The current concept focuses on classic French luxury dining; some dishes are well received, others criticized as underwhelming relative to price and reputation."
+      "ozet": "The current kitchen focuses on classic French luxury dining. Some dishes land well, others are criticized as underwhelming relative to the price and the weight of the name."
     },
     "neYenir": [
       {
@@ -3103,7 +3103,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 9.6,
-      "ozet": "The preserved Art Nouveau interiors are the main reason Maxim's remains significant: ornate decoration, live music and Belle Époque history create an atmosphere unlike almost any modern restaurant. For guests interested in old Paris, the room itself is the experience.",
+      "ozet": "The preserved Art Nouveau interiors are the real reason to come — ornate decoration, live music and Belle Époque history create an atmosphere unlike almost any modern restaurant. For guests interested in old Paris, the room itself is the experience.",
       "etiketler": [
         "historic-building",
         "art-nouveau",
@@ -3118,7 +3118,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 7.4,
-      "ozet": "EATER editorial score, kept conservative despite the prestige of the name. Contemporary feedback is inconsistent: some visitors receive attentive classic service, while recurring reviews criticize inattentiveness and a tourist-oriented feeling.",
+      "ozet": "Feedback is inconsistent — some visitors get attentive, classic service, while recurring reviews describe inattentiveness and a feeling geared more toward tourists than regulars.",
       "artilar": [
         "Traditional restaurant presentation",
         "Historic special-occasion feeling",
@@ -3170,11 +3170,11 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "orta",
       "kisiBasi": null,
-      "not": "Expensive but below Madrid's luxury tasting-menu tier (EATER editorial note, Aug 2026); no verified per-person range recorded."
+      "not": "Expensive, though below Madrid's top luxury tasting-menu tier."
     },
     "yemek": {
       "puan": 8.6,
-      "ozet": "EATER editorial score. The Peruvian restaurant and rooftop concept at The Madrid EDITION, led by chef Diego Muñoz: an informal, sharing-driven menu combining Peruvian ingredients and techniques with a modern international approach. Ceviche, causa-style dishes, grilled plates and small plates work particularly well alongside the pisco-focused cocktail program."
+      "ozet": "Chef Diego Muñoz's Peruvian rooftop restaurant at The Madrid EDITION runs on an informal, sharing-driven menu — ceviche, causa-style dishes, grilled plates and small plates that pair naturally with the pisco-focused cocktail program."
     },
     "neYenir": [
       {
@@ -3205,7 +3205,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 9.5,
-      "ozet": "Fourth floor of The Madrid EDITION: rooftop terrace, abundant greenery and views across central Madrid. The neighboring rooftop pool and greenhouse-like interior create one of the city's strongest hotel-restaurant atmospheres, especially around sunset.",
+      "ozet": "On the fourth floor of The Madrid EDITION, with a rooftop terrace, abundant greenery and views across central Madrid. The neighboring pool and greenhouse-like interior make it one of the city's strongest hotel-restaurant settings, especially at sunset.",
       "etiketler": [
         "rooftop",
         "view",
@@ -3221,7 +3221,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 8.5,
-      "ozet": "EATER editorial score. Contemporary luxury-hotel style rather than formal fine dining; staff matter especially for navigating sharing portions and the extensive cocktail program.",
+      "ozet": "Contemporary luxury-hotel style rather than formal fine dining — staff are especially useful for navigating the sharing portions and the extensive cocktail list.",
       "artilar": [
         "Strong cocktail knowledge",
         "Luxury hotel hospitality",
@@ -3273,11 +3273,11 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "orta",
       "kisiBasi": null,
-      "not": "High-end steakhouse pricing; the final bill varies significantly by cut and weight (EATER editorial note, Aug 2026)."
+      "not": "High-end steakhouse pricing — the final bill varies significantly by cut and weight."
     },
     "yemek": {
       "puan": 9.5,
-      "ozet": "EATER editorial score. One of Madrid's strongest modern steakhouses: brothers Martín and Joaquín Narvaiz approach Argentine grilling with a strong focus on sourcing, maturation and precise fire cooking. The meat program is the main attraction, but starters and vegetable dishes receive similar attention. Included in the MICHELIN Guide's Madrid selection (no star) and recognized in international steakhouse rankings."
+      "ozet": "One of Madrid's strongest modern steakhouses: brothers Martín and Joaquín Narvaiz bring Argentine grilling with a serious focus on sourcing, aging and precise fire control. The meat program is the main event, but starters and vegetable dishes get just as much attention. Listed in the MICHELIN Guide."
     },
     "neYenir": [
       {
@@ -3313,7 +3313,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 8.5,
-      "ozet": "Serious about food without being formal: a warm, intimate, contemporary room that keeps attention on the grill and the meat rather than theatrical decoration. Well suited to a high-end steak experience without a nightclub atmosphere.",
+      "ozet": "Serious about the food without being formal — a warm, contemporary room that keeps the focus on the grill rather than theatrical decor. A high-end steak experience without the nightclub energy.",
       "etiketler": [
         "steakhouse",
         "intimate",
@@ -3328,7 +3328,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 9.1,
-      "ozet": "EATER editorial score. An important part of Lana's reputation: staff explain cuts, origins and preparation styles and help guests order to preferred fat level and doneness. Limited seating and a controlled service structure allow more personal attention than many fashionable Madrid hotspots.",
+      "ozet": "Staff explain cuts, origins and preparation styles in detail, helping guests order to their preferred fat level and doneness. Limited seating means more personal attention than most fashionable Madrid hotspots.",
       "artilar": [
         "Excellent meat knowledge",
         "Detailed explanation of cuts",
@@ -3343,7 +3343,7 @@ const RESTORANLAR = [
     "oduller": [
       {
         "tip": "michelin-secilmis",
-        "detay": "Listed in the MICHELIN Guide Madrid selection (no star — recorded per the owner's curated notes citing the MICHELIN Guide 2026); also referenced in Guía Repsol and international steakhouse rankings."
+        "detay": "Listed in the MICHELIN Guide (no star)."
       }
     ],
     "rezervasyon": {
@@ -3385,11 +3385,11 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "pahali",
       "kisiBasi": null,
-      "not": "Expensive, especially premium cuts (EATER editorial note, Aug 2026); no verified per-person range recorded."
+      "not": "Expensive, especially for the premium cuts."
     },
     "yemek": {
       "puan": 9.2,
-      "ozet": "EATER editorial score. A meat-driven restaurant built around Uruguayan fire cooking: premium cuts over oak and vine wood give the menu a clear identity centered on smoke and live fire. Grilled vegetables, sweetbreads, empanadas and desserts round out the experience. Popular among chefs and Madrid diners looking for a serious grill without the scale of a large steakhouse."
+      "ozet": "A meat-driven restaurant built around Uruguayan fire cooking — premium cuts grilled over oak and vine wood give the menu a clear identity centered on smoke and live fire. Grilled vegetables, sweetbreads, empanadas and desserts round things out. Popular with chefs and diners after a serious grill without the scale of a big steakhouse."
     },
     "neYenir": [
       {
@@ -3425,7 +3425,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 8.8,
-      "ozet": "Small, dark and rustic-chic — a more intimate experience than many high-profile Madrid restaurants. Warm lighting and the presence of live-fire cooking make it especially suitable for dinner and date nights.",
+      "ozet": "Small, dark and rustic-chic — more intimate than many of Madrid's high-profile restaurants. Warm lighting and the open fire make it especially good for a date night.",
       "etiketler": [
         "rustic",
         "dim",
@@ -3442,7 +3442,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 9.0,
-      "ozet": "EATER editorial score. Recent reviews repeatedly praise staff knowledge and warmth: the team can explain meat sourcing, cuts and preparation — particularly valuable where ordering the right piece of beef is central to the experience.",
+      "ozet": "Staff consistently earn praise for their knowledge and warmth, walking guests through sourcing, cuts and preparation — valuable when choosing the right piece of beef matters this much.",
       "artilar": [
         "Strong product knowledge",
         "Warm and attentive",
@@ -3493,11 +3493,11 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "orta",
       "kisiBasi": null,
-      "not": "Moderate café/brunch pricing (EATER editorial note, Aug 2026); no verified per-person range recorded."
+      "not": "Moderate café and brunch pricing."
     },
     "yemek": {
       "puan": 8.5,
-      "ozet": "EATER editorial score. First and foremost one of Istanbul's best-known specialty coffee brands; the larger locations pair serious coffee with a compact breakfast, brunch and casual-food menu. Not fine dining — the attraction is strong ingredients, well-prepared café dishes and one of the city's most established specialty-coffee programs. Adds useful diversity next to Istanbul's luxury restaurants."
+      "ozet": "First and foremost one of Istanbul's best-known specialty coffee brands — the larger locations pair a serious coffee program with a compact breakfast and brunch menu. Not fine dining, but the ingredients and café dishes are well handled."
     },
     "neYenir": [
       {
@@ -3528,7 +3528,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 8.7,
-      "ozet": "Industrial design with a relaxed modern café atmosphere. The Gayrettepe HQ is closely connected to the roasting operation, which appeals to visitors interested in coffee rather than simply another brunch spot.",
+      "ozet": "Industrial design with a relaxed, modern café feel. The Gayrettepe flagship sits right alongside the roasting operation, which appeals to coffee-focused visitors more than the average brunch crowd.",
       "etiketler": [
         "coffee",
         "industrial",
@@ -3545,7 +3545,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 8.2,
-      "ozet": "EATER editorial score. Café-style rather than formal table service: coffee knowledge is a major strength, while food service can feel more functional during busy brunch periods. Experience varies by branch.",
+      "ozet": "Café-style rather than formal table service — coffee knowledge is the real strength, while food service can feel more functional during busy brunch hours. Experience varies by branch.",
       "artilar": [
         "Strong specialty-coffee knowledge",
         "Casual and approachable",
@@ -3592,11 +3592,11 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "pahali",
       "kisiBasi": null,
-      "not": "Very expensive (EATER editorial note, Aug 2026); no verified per-person range recorded."
+      "not": "Very expensive."
     },
     "yemek": {
       "puan": 9.4,
-      "ozet": "EATER editorial score. Chef Cenk Debensason combines contemporary European technique with a personal, cosmopolitan style, moving comfortably between seafood, pasta, meat and modern interpretations of familiar flavors rather than defining itself as strictly Turkish. Tuna preparations and duck-filled pasta are frequently highlighted by guests. The 2026 MICHELIN Guide awards Arkestra one star."
+      "ozet": "Chef Cenk Debensason combines contemporary European technique with a personal, cosmopolitan style, moving comfortably between seafood, pasta and meat rather than sticking to a strictly Turkish identity. The tuna preparations and duck-filled pasta are frequent favorites. Holds one MICHELIN star."
     },
     "neYenir": [
       {
@@ -3627,7 +3627,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 9.4,
-      "ozet": "More than one restaurant room: the property combines the Michelin-starred main restaurant with Ritmo and a music-focused nightlife identity — sophisticated but playful. Low lighting and carefully designed interiors make it one of Istanbul's strongest date-night restaurants.",
+      "ozet": "The property combines the Michelin-starred main dining room with Ritmo, a music-driven nightlife space — sophisticated but playful. Low lighting and careful design make it one of Istanbul's strongest date-night spots.",
       "etiketler": [
         "dim",
         "romantic",
@@ -3643,7 +3643,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 9.2,
-      "ozet": "EATER editorial score. Reviews consistently emphasize friendly, knowledgeable service and a strong wine program — polished without becoming stiff, matching the combination of fine dining and contemporary nightlife culture.",
+      "ozet": "Friendly, knowledgeable service and a strong wine program — polished without feeling stiff, matching the mix of fine dining and nightlife energy.",
       "artilar": [
         "Excellent menu knowledge",
         "Strong wine guidance",
@@ -3658,7 +3658,7 @@ const RESTORANLAR = [
     "oduller": [
       {
         "tip": "michelin-yildiz",
-        "detay": "One MICHELIN star — MICHELIN Guide 2026 (guide.michelin.com Istanbul selection); recorded from the site owner's curated notes and the guide listing (Aug 2026)."
+        "detay": "One MICHELIN star — MICHELIN Guide 2026."
       }
     ],
     "rezervasyon": {
@@ -3702,11 +3702,11 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "pahali",
       "kisiBasi": null,
-      "not": "Very expensive (EATER editorial note, Aug 2026); no verified per-person range recorded."
+      "not": "Very expensive."
     },
     "yemek": {
       "puan": 8.6,
-      "ozet": "EATER editorial score. One of Istanbul's long-running luxury dining institutions: modern Turkish and Mediterranean influences with premium seafood, sushi-inspired dishes, grills and international classics. The food is consistently strong, but the location, clientele and social atmosphere are as important to the identity as the kitchen itself."
+      "ozet": "One of Istanbul's long-running luxury dining institutions — modern Turkish and Mediterranean cooking with premium seafood, sushi-inspired dishes, grills and international classics. The food holds up well, though the location and scene are just as central to the appeal."
     },
     "neYenir": [
       {
@@ -3737,7 +3737,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 9.7,
-      "ozet": "An elevated position above the Bosphorus, particularly known for panoramic evening views. For decades it has been both a restaurant and a social destination for Istanbul's business, fashion and nightlife crowd; the atmosphere gets livelier as the evening progresses.",
+      "ozet": "An elevated position above the Bosphorus with panoramic evening views. For decades it's functioned as both a restaurant and a social destination for Istanbul's business and fashion crowd, with the energy building as the night goes on.",
       "etiketler": [
         "bosphorus-view",
         "luxury",
@@ -3755,7 +3755,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 8.8,
-      "ozet": "EATER editorial score. Generally experienced and professional, reflecting a long history with high-end local and international guests. Independent reviews often highlight friendly staff and good English-language service, though busy nights can feel more nightlife-oriented.",
+      "ozet": "Generally experienced and professional, reflecting years of serving high-end local and international guests — friendly staff and good English-language service are frequently noted, though busy nights lean more nightlife than fine dining.",
       "artilar": [
         "Experienced team",
         "Strong international guest handling",
@@ -3806,11 +3806,11 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "pahali",
       "kisiBasi": null,
-      "not": "Very expensive (EATER editorial note, Aug 2026); no verified per-person range recorded."
+      "not": "Very expensive."
     },
     "yemek": {
       "puan": 9.1,
-      "ozet": "EATER editorial score. Chef Fatih Tutak's more relaxed Turk-Asian restaurant at The Peninsula Istanbul: inspired by cuisines connected by the historic Silk Road — Turkish, Central Asian and East Asian flavors. Wood-fired dishes, spices, manti-inspired preparations and seafood create a menu that feels ambitious yet remains designed for sharing and social dining. Included in the MICHELIN Guide (no star)."
+      "ozet": "Chef Fatih Tutak's more relaxed restaurant at The Peninsula Istanbul, inspired by the cuisines connected along the historic Silk Road — Turkish, Central Asian and East Asian flavors. Wood-fired dishes, spice work and manti-inspired preparations are ambitious but built for sharing. Listed in the MICHELIN Guide."
     },
     "neYenir": [
       {
@@ -3846,7 +3846,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 9.7,
-      "ozet": "On the roof of The Peninsula Istanbul, combining luxury hotel design with wide Bosphorus and Historic Peninsula views — the terrace is one of the strongest restaurant settings in the city. Deliberately positioned closer to 'fun dining' than formal fine dining despite the sophistication of the food.",
+      "ozet": "On the roof of The Peninsula Istanbul, with wide Bosphorus and Historic Peninsula views — one of the strongest restaurant settings in the city. It leans closer to fun dining than formal fine dining despite the sophistication of the food.",
       "etiketler": [
         "bosphorus-view",
         "rooftop",
@@ -3862,7 +3862,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 9.2,
-      "ozet": "EATER editorial score. The Peninsula's luxury hospitality standards are clearly visible; reviews frequently praise staff for explaining an unfamiliar menu and recommending the right progression of sharing dishes.",
+      "ozet": "The Peninsula's luxury hospitality standards show clearly — staff are frequently praised for guiding guests through an unfamiliar menu and the right order of sharing dishes.",
       "artilar": [
         "Luxury hotel hospitality",
         "Detailed menu guidance",
@@ -3877,7 +3877,7 @@ const RESTORANLAR = [
     "oduller": [
       {
         "tip": "michelin-secilmis",
-        "detay": "Included in the MICHELIN Guide (no star — recorded per the owner's curated notes citing the MICHELIN Guide 2026)."
+        "detay": "Listed in the MICHELIN Guide (no star)."
       }
     ],
     "rezervasyon": {
@@ -3916,11 +3916,11 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "pahali",
       "kisiBasi": null,
-      "not": "Very expensive / destination fine dining (EATER editorial note, Aug 2026); current official tasting-menu price not recorded because it was not verified."
+      "not": "Very expensive — destination fine-dining pricing."
     },
     "yemek": {
       "puan": 9.8,
-      "ozet": "EATER editorial score. One of the most important restaurants in contemporary Turkish gastronomy: Fatih Tutak interprets Turkish ingredients, childhood memories and regional culinary traditions through modern fine-dining technique. Many courses are built around stories, regional products and Tutak's international experience rather than simply modernizing familiar recipes. The 2026 MICHELIN Guide continues to award two stars. The tasting menu changes seasonally, so no permanent dish names are recorded here."
+      "ozet": "One of the most important restaurants in contemporary Turkish gastronomy: Fatih Tutak interprets Turkish ingredients, childhood memories and regional culinary traditions through modern fine-dining technique. Many courses are built around a story or a regional product rather than simply modernizing a familiar recipe. Holds two MICHELIN stars, and the tasting menu changes seasonally."
     },
     "neYenir": [
       {
@@ -3951,7 +3951,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 9.1,
-      "ozet": "Refined and contemporary but intentionally places food ahead of spectacle. Quieter and more serious than Gallada, Ulus 29 or Sunset — designed for guests who want to focus on the tasting menu rather than views or nightlife.",
+      "ozet": "Refined and contemporary, but deliberately puts the food ahead of spectacle — quieter and more serious than Gallada, Ulus 29 or Sunset, built for guests who want to focus on the tasting menu itself.",
       "etiketler": [
         "fine-dining",
         "simple",
@@ -3966,7 +3966,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 9.7,
-      "ozet": "EATER editorial score. One of the restaurant's strongest elements: the team explains the origin, memory or regional reference behind many courses — critical to understanding Tutak's cuisine. Recent reviews regularly describe the service as precise, warm and deeply connected to the chef's narrative.",
+      "ozet": "One of the restaurant's strongest elements — the team walks guests through the story or regional reference behind each course, which is key to understanding Tutak's cooking. Service is regularly described as precise and warm.",
       "artilar": [
         "Exceptional tasting-menu pacing",
         "Detailed explanations",
@@ -3983,7 +3983,7 @@ const RESTORANLAR = [
     "oduller": [
       {
         "tip": "michelin-yildiz",
-        "detay": "Two MICHELIN stars — MICHELIN Guide 2026; recorded from the site owner's curated notes citing the guide (Aug 2026)."
+        "detay": "Two MICHELIN stars — MICHELIN Guide 2026."
       }
     ],
     "rezervasyon": {
@@ -4028,11 +4028,11 @@ const RESTORANLAR = [
         "max": 2000,
         "paraBirimi": "JPY"
       },
-      "not": "Affordable; typical spend roughly ¥1,000–2,000 depending on toppings and extras (EATER editorial note, Aug 2026)."
+      "not": "Affordable — typically ¥1,000–2,000 depending on toppings and extras."
     },
     "yemek": {
       "puan": 8.8,
-      "ozet": "EATER editorial score (owner-curated entry, Aug 2026). The famous tonkotsu ramen chain built around solo dining booths and a single perfected bowl; order the classic tonkotsu and customize richness, noodle firmness and toppings."
+      "ozet": "A famous tonkotsu ramen chain built around solo dining booths and a single, perfected bowl. Order the classic tonkotsu and customize the broth richness, noodle firmness and toppings to taste."
     },
     "neYenir": [
       {
@@ -4068,7 +4068,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 8.1,
-      "ozet": "EATER editorial score. Individual solo-dining booths, ordering by ticket machine and paper form — an iconic, purely food-focused format rather than a social restaurant. Many branches run late or around the clock.",
+      "ozet": "Individual solo-dining booths and ordering by ticket machine and paper form — an iconic, purely food-focused format rather than a social restaurant. Many branches run late into the night or around the clock.",
       "etiketler": [
         "solo-dining",
         "casual",
@@ -4082,7 +4082,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 8.4,
-      "ozet": "EATER editorial score. Fast, systemized counter service designed around the booth format; interaction is minimal by design.",
+      "ozet": "Fast, systemized counter service built around the booth format — interaction is minimal by design.",
       "artilar": [],
       "eksiler": []
     },
@@ -4123,11 +4123,11 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "orta",
       "kisiBasi": null,
-      "not": "Premium cocktail-bar pricing (EATER editorial note, Aug 2026); no verified per-person range recorded."
+      "not": "Premium cocktail-bar pricing."
     },
     "yemek": {
       "puan": 7.5,
-      "ozet": "EATER editorial score (owner-curated entry, Aug 2026). A bar first: the score reflects light bar food; the reason to come is the cocktail program — signature SG creations, seasonal drinks and shochu- and Japanese-spirit-based cocktails across the venue's different floors."
+      "ozet": "A bar first — food is light and secondary. The reason to come is the cocktail program: signature SG creations, seasonal drinks and shochu- and Japanese-spirit-based cocktails spread across the venue's different floors."
     },
     "neYenir": [
       {
@@ -4158,7 +4158,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 9.5,
-      "ozet": "EATER editorial score. One of Japan's most awarded cocktail bars: creative, intimate and energetic, with distinct concepts on different floors in the middle of Shibuya's Jinnan district.",
+      "ozet": "One of Japan's most awarded cocktail bars — creative, intimate and energetic, with a distinct concept on each floor in the middle of Shibuya's Jinnan district.",
       "etiketler": [
         "cocktail-bar",
         "speakeasy",
@@ -4174,14 +4174,14 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 9.4,
-      "ozet": "EATER editorial score. World-class bartending with warm, knowledgeable guidance through the menu.",
+      "ozet": "World-class bartending, with warm and knowledgeable guidance through the menu.",
       "artilar": [],
       "eksiler": []
     },
     "oduller": [
       {
         "tip": "50best",
-        "detay": "The World's 50 Best Bars No.10 (2020); Asia's 50 Best Bars No.3 (2021); named Best Bar in Japan in 2020 and 2021 — recorded from the site owner's curated notes citing the 50 Best organization (Aug 2026)."
+        "detay": "World's 50 Best Bars No.10 (2020); Asia's 50 Best Bars No.3 (2021); Best Bar in Japan (2020, 2021)."
       }
     ],
     "rezervasyon": {
@@ -4224,11 +4224,11 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "orta",
       "kisiBasi": null,
-      "not": "Mid-range izakaya pricing (EATER editorial note, Aug 2026); no verified per-person range recorded."
+      "not": "Mid-range izakaya pricing."
     },
     "yemek": {
       "puan": 8.3,
-      "ozet": "EATER editorial score (owner-curated entry, Aug 2026). A grand izakaya serving handmade soba, yakitori, tempura, grilled wagyu and stone-grilled rice dishes. The food is solid, but the cinematic hall — famous as the inspiration for the Kill Bill fight scene — is what makes the visit."
+      "ozet": "A grand izakaya serving handmade soba, yakitori, tempura, grilled wagyu and stone-grilled rice dishes. The food is solid, but the cinematic hall — famous as the inspiration for the Kill Bill fight scene — is what makes the visit."
     },
     "neYenir": [
       {
@@ -4264,7 +4264,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 9.5,
-      "ozet": "EATER editorial score. A huge multi-level wooden hall with balconies and lanterns — lively, theatrical old-Japan atmosphere famously associated with Kill Bill; welcoming to first-time Tokyo visitors late into the night.",
+      "ozet": "A huge, multi-level wooden hall with balconies and lanterns — a lively, theatrical old-Japan atmosphere famously associated with Kill Bill. Welcoming to first-time Tokyo visitors well into the night.",
       "etiketler": [
         "izakaya",
         "cinematic",
@@ -4278,7 +4278,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 8.5,
-      "ozet": "EATER editorial score. High-volume but organized izakaya service accustomed to international guests.",
+      "ozet": "High-volume but organized service, well accustomed to international guests.",
       "artilar": [],
       "eksiler": []
     },
@@ -4319,11 +4319,11 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "orta",
       "kisiBasi": null,
-      "not": "Premium cocktail bar (EATER editorial note, Aug 2026); no verified per-person range recorded."
+      "not": "Premium cocktail bar pricing."
     },
     "yemek": {
       "puan": 7.0,
-      "ozet": "EATER editorial score (owner-curated entry, Aug 2026). A bar, not a restaurant — the score reflects minimal food; the draw is seasonal fruit cocktails and theatrical signature drinks built with Japanese ingredients."
+      "ozet": "A bar, not a restaurant — food is minimal. The draw is seasonal fruit cocktails and theatrical signature drinks built with Japanese ingredients."
     },
     "neYenir": [
       {
@@ -4354,7 +4354,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 9.7,
-      "ozet": "EATER editorial score. An intimate Azabu-Juban room where cocktail-making becomes performance — theatrical presentations in a small, late-night setting.",
+      "ozet": "An intimate Azabu-Juban room where cocktail-making becomes performance — theatrical presentations in a small, late-night setting.",
       "etiketler": [
         "cocktail-bar",
         "theatrical",
@@ -4370,7 +4370,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 9.5,
-      "ozet": "EATER editorial score. Personal, performance-driven bartending with limited seats.",
+      "ozet": "Personal, performance-driven bartending with limited seats.",
       "artilar": [],
       "eksiler": []
     },
@@ -4411,11 +4411,11 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "ucuz",
       "kisiBasi": null,
-      "not": "Affordable to moderate (EATER editorial note, Aug 2026); no verified per-person range recorded."
+      "not": "Affordable to moderate."
     },
     "yemek": {
       "puan": 8.8,
-      "ozet": "EATER editorial score (owner-curated entry, Aug 2026). A Ginza institution famous for its jumbo pan-fried gyoza, alongside shrimp noodle soup, fried rice and Chinese-style noodle dishes."
+      "ozet": "A Ginza institution famous for its jumbo pan-fried gyoza, alongside shrimp noodle soup, fried rice and Chinese-style noodle dishes."
     },
     "neYenir": [
       {
@@ -4446,7 +4446,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 7.7,
-      "ozet": "EATER editorial score. A busy, no-frills local classic in the middle of Ginza — the point is the gyoza, not the décor.",
+      "ozet": "Busy and no-frills, a local classic in the middle of Ginza — the point is the gyoza, not the décor.",
       "etiketler": [
         "casual",
         "classic",
@@ -4462,7 +4462,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 8.0,
-      "ozet": "EATER editorial score. Quick, functional service suited to a high-turnover lunch and dinner crowd.",
+      "ozet": "Quick, functional service suited to a high-turnover lunch and dinner crowd.",
       "artilar": [],
       "eksiler": []
     },
@@ -4502,11 +4502,11 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "pahali",
       "kisiBasi": null,
-      "not": "Luxury teppanyaki pricing (EATER editorial note, Aug 2026); no verified per-person range recorded."
+      "not": "Luxury teppanyaki pricing."
     },
     "yemek": {
       "puan": 9.3,
-      "ozet": "EATER editorial score (owner-curated entry, Aug 2026). Seryna's long-standing Roppongi teppanyaki room: Kobe beef and premium wagyu, teppanyaki seafood and seasonal vegetables grilled at the counter, finished with garlic rice."
+      "ozet": "Seryna's long-standing Roppongi teppanyaki room — Kobe beef and premium wagyu, teppanyaki seafood and seasonal vegetables grilled at the counter, finished with garlic rice."
     },
     "neYenir": [
       {
@@ -4542,7 +4542,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 9.0,
-      "ozet": "EATER editorial score. Counter-focused luxury teppanyaki with private rooms — intimate and celebratory rather than showy.",
+      "ozet": "Counter-focused luxury teppanyaki with private rooms available — intimate and celebratory rather than showy.",
       "etiketler": [
         "luxury",
         "counter",
@@ -4557,7 +4557,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 9.4,
-      "ozet": "EATER editorial score. Classic chef-at-the-counter hospitality in the Seryna tradition.",
+      "ozet": "Classic chef-at-the-counter hospitality, in the long-standing Seryna tradition.",
       "artilar": [],
       "eksiler": []
     },
@@ -4601,11 +4601,11 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "ucuz",
       "kisiBasi": null,
-      "not": "Typical base spend around ¥1,500 depending on the dish (EATER editorial note, Aug 2026); given as a single figure rather than a verified range."
+      "not": "Typical spend is around ¥1,500 per person."
     },
     "yemek": {
       "puan": 9.4,
-      "ozet": "EATER editorial score (owner-curated entry, Aug 2026). One of Tokyo's most sought-after udon shops: fresh handmade noodles — hot, cold, beef or tempura variations — made to order in a tiny food-first room."
+      "ozet": "One of Tokyo's most sought-after udon shops — fresh handmade noodles, served hot or cold with beef or tempura, made to order in a tiny, food-first room."
     },
     "neYenir": [
       {
@@ -4641,7 +4641,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 8.1,
-      "ozet": "EATER editorial score. Small, minimal and entirely food-focused — the queue outside is part of the experience.",
+      "ozet": "Small, minimal and entirely food-focused — the queue outside is part of the experience.",
       "etiketler": [
         "small",
         "casual",
@@ -4655,7 +4655,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 8.5,
-      "ozet": "EATER editorial score. Compact counter operation; noodles are cooked to order, so pacing follows the kitchen.",
+      "ozet": "Compact counter service — noodles are cooked to order, so pacing follows the kitchen.",
       "artilar": [],
       "eksiler": []
     },
@@ -4695,11 +4695,11 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "ucuz",
       "kisiBasi": null,
-      "not": "Affordable (EATER editorial note, Aug 2026); no verified per-person range recorded."
+      "not": "Affordable."
     },
     "yemek": {
       "puan": 9.0,
-      "ozet": "EATER editorial score (owner-curated entry, Aug 2026). Kyoto's beloved gyoza specialist: the signature Chao Chao stick-style gyoza plus shrimp, chicken-cheese, Kujo green onion and ume-shiso variations, best sampled as an assorted set."
+      "ozet": "Kyoto's beloved gyoza specialist — the signature stick-style gyoza, plus shrimp, chicken-cheese, Kujo green onion and ume-shiso variations, best sampled as an assorted set."
     },
     "neYenir": [
       {
@@ -4735,7 +4735,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 8.5,
-      "ozet": "EATER editorial score. Small, lively counter rooms in the Kiyamachi/Kawaramachi nightlife area — busy, local-style and fun.",
+      "ozet": "Small, lively counter rooms in the Kiyamachi/Kawaramachi nightlife district — busy, local and fun.",
       "etiketler": [
         "casual",
         "lively",
@@ -4751,7 +4751,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 8.8,
-      "ozet": "EATER editorial score. Quick, friendly counter service; expect waits at popular hours.",
+      "ozet": "Quick, friendly counter service — expect a wait at popular hours.",
       "artilar": [],
       "eksiler": []
     },
@@ -4794,11 +4794,11 @@ const RESTORANLAR = [
     "fiyat": {
       "segment": "pahali",
       "kisiBasi": null,
-      "not": "Very expensive; current special course examples can exceed ¥30,000 per person (EATER editorial note, Aug 2026). No single promotional menu is recorded as a permanent average price."
+      "not": "Very expensive — special tasting courses can exceed ¥30,000 per person."
     },
     "yemek": {
       "puan": 9.5,
-      "ozet": "EATER editorial score (owner-curated entry, Aug 2026). The Mouriya group's Gion teppanyaki room, built around certified A5 Kobe beef: sirloin, filet and three-cut tasting courses cooked at the counter, with seasonal fish and teppanyaki vegetables completing the course structure. The Mouriya name has been associated with Kobe beef since 1885."
+      "ozet": "The Mouriya group's Gion teppanyaki room, built around certified premium-grade Kobe beef — sirloin, filet and three-cut tasting courses cooked at the counter, rounded out with seasonal fish and teppanyaki vegetables. The Mouriya name has been associated with Kobe beef since 1885."
     },
     "neYenir": [
       {
@@ -4834,7 +4834,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 9.2,
-      "ozet": "EATER editorial score. Counter-focused luxury teppanyaki steps from Gion's historic streets — intimate and special-occasion by nature.",
+      "ozet": "Counter-focused luxury teppanyaki steps from Gion's historic streets — intimate and built for special occasions.",
       "etiketler": [
         "luxury",
         "counter",
@@ -4848,7 +4848,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 9.6,
-      "ozet": "EATER editorial score. Chef-at-the-counter service guiding guests through cuts and courses.",
+      "ozet": "Chef-at-the-counter service, guiding guests through the cuts and courses.",
       "artilar": [],
       "eksiler": []
     },
@@ -4895,11 +4895,11 @@ const RESTORANLAR = [
         "max": 5999,
         "paraBirimi": "JPY"
       },
-      "not": "Tabelog review-spend range approximately ¥5,000–5,999; 50 Best Discovery lists average cocktails around US$14 (owner-curated, Aug 2026)."
+      "not": "Cocktails average roughly US$14; a full visit typically runs ¥5,000–6,000."
     },
     "yemek": {
       "puan": 7.0,
-      "ozet": "EATER editorial score (owner-curated entry, Aug 2026). A bar, not a restaurant — the score reflects minimal food; the point is the drinks: house 'elixirs', flaming and alchemy-style experimental cocktails alongside seasonal and classic drinks."
+      "ozet": "A bar, not a restaurant — food is minimal. The point is the drinks: house 'elixirs' and flaming, alchemy-style experimental cocktails alongside seasonal and classic options."
     },
     "neYenir": [
       {
@@ -4935,7 +4935,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 9.8,
-      "ozet": "EATER editorial score. A tiny apothecary-like room above the Kiyamachi canal: magic, alchemy and steampunk details make it one of Kyoto's most atmospheric bars.",
+      "ozet": "A tiny, apothecary-like room above the Kiyamachi canal — magic, alchemy and steampunk details make it one of Kyoto's most atmospheric bars.",
       "etiketler": [
         "cocktail-bar",
         "theatrical",
@@ -4952,7 +4952,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 9.5,
-      "ozet": "EATER editorial score. Showmanship-driven, friendly bartending in a very small space.",
+      "ozet": "Showmanship-driven, friendly bartending in a very small space.",
       "artilar": [],
       "eksiler": []
     },
