@@ -723,6 +723,42 @@ body {
 }
 .favori-listesi { justify-content: center; }
 
+/* Best Eats — kompakt kutu: "MEKÂN : yemek" satırları + gidilen yerden seçme formu */
+.best-kutu {
+  margin: 0 0 18px; padding: 14px 16px;
+  border: 1px solid var(--kenar); border-radius: var(--yuvarlak);
+  background: var(--ortu-koyu);
+}
+.best-kutu h3 { margin: 0; font-family: var(--serif); font-size: 17px; color: var(--vurgu); }
+.best-alt {
+  margin: 1px 0 8px; font-size: 12px; color: var(--krem-silik);
+  letter-spacing: .05em; text-transform: lowercase;
+}
+.best-satir { display: flex; align-items: baseline; gap: 7px; padding: 2.5px 0; font-size: 14.5px; }
+.best-mekan {
+  font-family: var(--serif); font-weight: 700; font-size: 14px;
+  color: var(--vurgu); text-transform: uppercase; letter-spacing: .02em;
+}
+.best-ayrac { color: var(--krem-silik); }
+.best-sil {
+  margin-left: 4px; width: 20px; height: 20px; padding: 0; line-height: 1;
+  border: none; border-radius: 50%; background: var(--ortu-koyu);
+  color: var(--krem-sonuk); font-size: .75rem; cursor: pointer;
+}
+.best-sil:hover { color: var(--vurgu); }
+.best-form { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+.best-form select, .best-form input {
+  padding: 7px 10px; border: 1px solid var(--kenar); border-radius: 8px;
+  background: var(--yuzey-derin); color: var(--krem); font: inherit; font-size: 13.5px;
+}
+.best-form select { flex: 1 1 170px; min-width: 0; }
+.best-form input { flex: 1 1 150px; min-width: 0; }
+.best-ekle {
+  padding: 7px 16px; border: none; border-radius: 8px; cursor: pointer;
+  background: var(--altin); color: var(--kirmizi-derin); font: inherit; font-weight: 700;
+}
+.best-ekle:hover { background: var(--altin-koyu); }
+
 /* Hope to EAT — kendi kutusunda */
 .hope-kutu {
   margin-top: 24px; padding: 18px 20px;

@@ -106,6 +106,63 @@ function profilIstatistikHTML(ziyaretler, mekanlar, profil) {
     </div>`;
 }
 
+// Best Eats: kişinin en çok önerdiği yemekler — "MEKÂN : yemek" satırları.
+// Seçenekler yalnız gidilen yerlerdir (Eatory kayıtlarından türetilir).
+function bestEatsHTML(bestEats, kendim, ziyaretler, mekanlar) {
+  if (bestEats === null) {
+    // Tablo henüz yok (Ek 6 SQL'i çalıştırılmamış) — yalnız sahibine not göster.
+    return kendim
+      ? '<section class="best-kutu"><h3>Best Eats</h3><p class="silik">Not set up yet — run the Ek 6 SQL in Supabase.</p></section>'
+      : '';
+  }
+
+  // Gidilen yerler: "r:<katalogId>" / "m:<uuid>" → görünen ad.
+  const gidilenler = new Map();
+  ziyaretler.forEach(z => {
+    if (z.restoran_id) {
+      const r = RESTORANLAR.find(x => x.id === z.restoran_id);
+      if (r) gidilenler.set('r:' + r.id, r.isim);
+    } else if (z.mekan_id) {
+      const m = mekanlar.find(x => x.id === z.mekan_id);
+      if (m) gidilenler.set('m:' + m.id, m.isim);
+    }
+  });
+  const adiniBul = k =>
+    gidilenler.get(k.restoran_id ? 'r:' + k.restoran_id : 'm:' + k.mekan_id)
+      ?? (k.restoran_id ? RESTORANLAR.find(x => x.id === k.restoran_id)?.isim : null)
+      ?? '(deleted place)';
+
+  const satirlar = bestEats.map(k => `
+    <div class="best-satir">
+      <span class="best-mekan">${kacis(adiniBul(k))}</span>
+      <span class="best-ayrac">:</span>
+      <span class="best-yemek">${kacis(k.yemek)}</span>
+      ${kendim ? `<button type="button" class="best-sil" data-id="${kacis(k.id)}"
+        title="Remove" aria-label="Remove">✕</button>` : ''}
+    </div>`).join('');
+
+  if (!kendim && bestEats.length === 0) return '';
+  const form = (kendim && gidilenler.size > 0) ? `
+    <div class="best-form">
+      <select id="bestMekan">
+        <option value="">Pick a place you ate…</option>
+        ${[...gidilenler].map(([deger, ad]) =>
+          `<option value="${kacis(deger)}">${kacis(ad)}</option>`).join('')}
+      </select>
+      <input type="text" id="bestYemek" placeholder="Best dish there" maxlength="80">
+      <button type="button" id="btnBestEkle" class="best-ekle">Add</button>
+    </div>
+    <p id="bestHata" class="hata" aria-live="polite"></p>` : '';
+
+  return `
+    <section class="best-kutu">
+      <h3>Best Eats</h3>
+      <p class="best-alt">most recommended eats</p>
+      ${satirlar || (kendim ? '<p class="silik">Nothing here yet — pick a place below.</p>' : '')}
+      ${form}
+    </section>`;
+}
+
 function avatarHTML(profil, kendim) {
   const gorsel = profil.avatar
     ? `<img src="${kacis(eaterHesap.fotoUrl(profil.avatar))}" alt="Profile photo">`
@@ -155,12 +212,13 @@ async function profiliGoster() {
     .from('profiller').select('*').eq('id', id).single();
   if (error || !profil) { kap.innerHTML = '<p class="panel">Profile not found.</p>'; return; }
 
-  const [{ data: ziyaretler = [] }, takipciler, takip, favoriIdler] = await Promise.all([
+  const [{ data: ziyaretler = [] }, takipciler, takip, favoriIdler, bestEats] = await Promise.all([
     eaterHesap.istemci.from('ziyaretler').select('*')
       .eq('kullanici', id).order('tarih', { ascending: false }),
     eaterHesap.takipciSayisi(id),
     eaterHesap.takipEttiklerim(),
-    eaterHesap.favorilerim(id)
+    eaterHesap.favorilerim(id),
+    eaterHesap.bestEatsListesi(id)
   ]);
   const mekanIdler = ziyaretler.filter(z => z.mekan_id).map(z => z.mekan_id);
   let mekanlar = [];
@@ -203,6 +261,7 @@ async function profiliGoster() {
         </div>
       </div>
       ${profilIstatistikHTML(ziyaretler, mekanlar, profil)}
+      ${bestEatsHTML(bestEats, kendim, ziyaretler, mekanlar)}
       ${ziyaretler.map(z => profilZiyaretHTML(z, ...isimYer(z))).join('') ||
         '<p class="silik">No entries yet.</p>'}
       ${(() => {
@@ -234,6 +293,29 @@ async function profiliGoster() {
     btn.addEventListener('click', async () => {
       btn.disabled = true;
       await eaterHesap.istekYanitla(btn.dataset.id, btn.classList.contains('istek-kabul'));
+      profiliGoster();
+    });
+  });
+
+  // Best Eats: ekleme (yalnız kendi profilinde) ve silme.
+  document.getElementById('btnBestEkle')?.addEventListener('click', async e => {
+    const secim = document.getElementById('bestMekan').value;
+    const yemek = document.getElementById('bestYemek').value.trim();
+    const hataKutu = document.getElementById('bestHata');
+    if (!secim) { hataKutu.textContent = 'Pick a place first.'; return; }
+    if (!yemek) { hataKutu.textContent = 'Type the dish name.'; return; }
+    e.target.disabled = true;
+    const kayit = secim.startsWith('r:')
+      ? { restoran_id: secim.slice(2), yemek }
+      : { mekan_id: secim.slice(2), yemek };
+    const hata = await eaterHesap.bestEatsEkle(kayit);
+    if (hata) { hataKutu.textContent = 'Could not add: ' + hata; e.target.disabled = false; return; }
+    profiliGoster();
+  });
+  kap.querySelectorAll('.best-sil').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      btn.disabled = true;
+      await eaterHesap.bestEatsSil(btn.dataset.id);
       profiliGoster();
     });
   });

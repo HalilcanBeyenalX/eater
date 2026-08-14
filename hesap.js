@@ -116,6 +116,29 @@ const eaterHesap = (() => {
     return !error;
   }
 
+  // --- Best Eats (Ek 6: en_iyi_yemekler) ---
+
+  // null dönerse tablo yok demektir (Ek 6 SQL'i henüz çalıştırılmamış).
+  async function bestEatsListesi(kullaniciId) {
+    const { data, error } = await istemci.from('en_iyi_yemekler').select('*')
+      .eq('kullanici', kullaniciId).order('created_at', { ascending: true });
+    return error ? null : (data || []);
+  }
+
+  // kayit: { restoran_id } veya { mekan_id } + yemek. Hata mesajı ya da null döner.
+  async function bestEatsEkle(kayit) {
+    const o = await oturum();
+    if (!o) return 'Not signed in.';
+    const { error } = await istemci.from('en_iyi_yemekler')
+      .insert({ ...kayit, kullanici: o.user.id });
+    return error ? error.message : null;
+  }
+
+  async function bestEatsSil(id) {
+    const { error } = await istemci.from('en_iyi_yemekler').delete().eq('id', id);
+    return !error;
+  }
+
   // --- Takip / arkadaşlık istekleri (Ek 4: takipler.durum) ---
 
   // Girişli kullanıcının ilişki kümeleri: kume = kabul edilmiş takipler,
@@ -183,5 +206,6 @@ const eaterHesap = (() => {
   return { hazir: () => kuruldu, istemci, oturum, kayitOl, girisYap, cikisYap,
     hesapKutusunuCiz, takipEttiklerim, takipDegistir, takipciSayisi,
     gelenIstekler, istekYanitla, avatarKaydet, fotoYukle, fotoUrl,
-    favorilerim, favoriMi, favoriDegistir };
+    favorilerim, favoriMi, favoriDegistir,
+    bestEatsListesi, bestEatsEkle, bestEatsSil };
 })();

@@ -129,3 +129,24 @@ drop policy if exists "favori ekleme" on favoriler;
 create policy "favori ekleme" on favoriler for insert with check (auth.uid() = kullanici);
 drop policy if exists "favori silme" on favoriler;
 create policy "favori silme" on favoriler for delete using (auth.uid() = kullanici);
+
+-- Ek 6 (14 Ağustos 2026): "Best Eats" — profilde en çok önerilen yemekler.
+-- Kişi yalnız GİTTİĞİ yerlerden seçer (arayüz kısıtlar); her satır bir
+-- mekân + elle yazılmış yemek adıdır. Katalog restoranı restoran_id ile,
+-- kullanıcının kendi eklediği mekân mekan_id ile bağlanır (ikisinden tam biri dolu).
+create table if not exists en_iyi_yemekler (
+  id uuid primary key default gen_random_uuid(),
+  kullanici uuid not null references auth.users(id) on delete cascade,
+  restoran_id text,
+  mekan_id uuid references mekanlar(id) on delete cascade,
+  yemek text not null check (char_length(yemek) between 1 and 80),
+  created_at timestamptz not null default now(),
+  check ((restoran_id is null) <> (mekan_id is null))
+);
+alter table en_iyi_yemekler enable row level security;
+drop policy if exists "besteats okuma" on en_iyi_yemekler;
+create policy "besteats okuma" on en_iyi_yemekler for select using (true);
+drop policy if exists "besteats ekleme" on en_iyi_yemekler;
+create policy "besteats ekleme" on en_iyi_yemekler for insert with check (auth.uid() = kullanici);
+drop policy if exists "besteats silme" on en_iyi_yemekler;
+create policy "besteats silme" on en_iyi_yemekler for delete using (auth.uid() = kullanici);
