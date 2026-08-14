@@ -455,7 +455,7 @@ body {
 /* Bej kutuda gezinmenin yarı saydam beyazı okunmuyor — düğme altın dolgulu. */
 .ate-panel .ate-btn {
   display: inline-block; margin: 0; padding: 10px 30px; font-size: 15px;
-  background: var(--altin); color: var(--kirmizi-derin); font-weight: 700;
+  background: var(--altin); color: #fff; font-weight: 700;
 }
 .ate-panel #senPuanlarin, .ate-panel #yiyiciFavorileri {
   display: block; margin-top: 10px; color: var(--fildisi-sonuk);
