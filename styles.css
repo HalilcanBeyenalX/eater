@@ -951,9 +951,15 @@ img.avatar-mini { object-fit: cover; }
 .leaflet-popup-tip { background: var(--yuzey-derin); }
 
 /* --- Dünya küresi --- */
+/* Yemek deseni yalnız kürenin arkasında; üstteki yarı saydam krem örtü
+   deseni soluklaştırır ki küre önde kalsın (desenin dosyası canlı renkli). */
 .kure-bolumu {
   margin-bottom: 1rem; border-radius: var(--yuvarlak);
-  background: var(--yuzey-derin); box-shadow: var(--golge);
+  background:
+    linear-gradient(rgba(255, 246, 227, 0.78), rgba(255, 246, 227, 0.78)),
+    url('gorseller/yemek-deseni.svg') center / 560px repeat;
+  background-color: var(--yuzey-derin);
+  box-shadow: var(--golge);
   padding: .5rem .9rem .9rem; overflow: hidden;
 }
 #kure { display: flex; justify-content: center; }
