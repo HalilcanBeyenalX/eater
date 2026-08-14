@@ -31,7 +31,7 @@ function kartHTML(r) {
     </a>`;
 }
 
-const filtreDurumu = { segment: '', ulke: '', sehir: '', etiket: '', rezervasyon: '' };
+const filtreDurumu = { segment: '', ulke: '', sehir: '', rezervasyon: '' };
 
 let siralamaOlcutu = 'yemek';
 
@@ -40,7 +40,6 @@ function filtrele(liste, f) {
     if (f.segment && r.fiyat.segment !== f.segment) return false;
     if (f.ulke && r.ulke !== f.ulke) return false;
     if (f.sehir && r.sehir !== f.sehir) return false;
-    if (f.etiket && !r.ambiyans.etiketler.includes(f.etiket)) return false;
     if (f.rezervasyon === 'gerekli' && r.rezervasyon.gerekiyor !== true) return false;
     if (f.rezervasyon === 'gerekmiyor' && r.rezervasyon.gerekiyor !== false) return false;
     return true;
@@ -109,8 +108,6 @@ function filtreleriCiz() {
   const sehirler = benzersiz(RESTORANLAR
     .filter(r => !filtreDurumu.ulke || r.ulke === filtreDurumu.ulke)
     .map(r => r.sehir));
-  const etiketler = benzersiz(RESTORANLAR.flatMap(r => r.ambiyans.etiketler));
-
   document.getElementById('filtreler').innerHTML =
     secimKutusu('fSegment', 'Price', [
       { deger: '', metin: 'All' },
@@ -122,8 +119,6 @@ function filtreleriCiz() {
       [{ deger: '', metin: 'All' }, ...ulkeler.map(u => ({ deger: u, metin: u }))]) +
     secimKutusu('fSehir', 'City',
       [{ deger: '', metin: 'All' }, ...sehirler.map(s => ({ deger: s, metin: s }))]) +
-    secimKutusu('fEtiket', 'Ambiance',
-      [{ deger: '', metin: 'All' }, ...etiketler.map(e => ({ deger: e, metin: e }))]) +
     secimKutusu('fRezervasyon', 'Reservation', [
       { deger: '', metin: 'Any' },
       { deger: 'gerekli', metin: 'Required' },
@@ -154,14 +149,12 @@ function filtreleriCiz() {
     render();
   });
   bagla('fSehir', 'sehir');
-  bagla('fEtiket', 'etiket');
   bagla('fRezervasyon', 'rezervasyon');
 
   // filtreleriCiz yeniden çağrıldığında mevcut seçimler korunur.
   document.getElementById('fSegment').value = filtreDurumu.segment;
   document.getElementById('fUlke').value = filtreDurumu.ulke;
   document.getElementById('fSehir').value = filtreDurumu.sehir;
-  document.getElementById('fEtiket').value = filtreDurumu.etiket;
   document.getElementById('fRezervasyon').value = filtreDurumu.rezervasyon;
 
   const sSecim = document.getElementById('fSiralama');
@@ -173,7 +166,7 @@ function filtreleriCiz() {
 
   document.getElementById('fSifirla').addEventListener('click', () => {
     Object.keys(filtreDurumu).forEach(k => { filtreDurumu[k] = ''; });
-    ['fSegment', 'fUlke', 'fSehir', 'fEtiket', 'fRezervasyon']
+    ['fSegment', 'fUlke', 'fSehir', 'fRezervasyon']
       .forEach(id => { document.getElementById(id).value = ''; });
     window.eaterKure?.ulkeSec(filtreDurumu.ulke);
     render();

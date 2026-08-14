@@ -251,7 +251,9 @@ body {
   background: var(--yuzey-yukseltilmis);
 }
 
-.filtre { display: flex; flex-direction: column; gap: 5px; }
+/* Dört seçici + sıralama + temizle düğmesi tek satıra sığsın: seçiciler
+   kalan genişliği eşit paylaşır, düğme kendi boyunda kalır. */
+.filtre { display: flex; flex-direction: column; gap: 5px; flex: 1 1 110px; min-width: 0; }
 
 .filtre-etiket {
   color: var(--krem-silik);
@@ -261,7 +263,8 @@ body {
 }
 
 .filtreler select {
-  min-width: 148px;
+  width: 100%;
+  min-width: 0;
   padding: 8px 10px;
   border: 1px solid var(--kenar);
   border-radius: 9px;
@@ -276,7 +279,7 @@ body {
 #fSiralama { border-color: var(--vurgu); }
 
 .sifirla {
-  margin-left: auto;
+  flex: none;
   padding: 9px 15px;
   border: 1px solid var(--kenar);
   border-radius: 9px;
