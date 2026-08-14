@@ -84,9 +84,9 @@ function profilIstatistikHTML(ziyaretler, mekanlar, profil) {
       ? (degerler.reduce((a, b) => a + b, 0) / degerler.length).toFixed(1) : '—';
   };
 
-  const yerMetni = `${yerler.size} restaurant${yerler.size === 1 ? '' : 's'}`;
-  const sehirMetni = `${sehirler.size} ${sehirler.size === 1 ? 'city' : 'cities'}`;
-  const ulkeMetni = `${ulkeler.size} ${ulkeler.size === 1 ? 'country' : 'countries'}`;
+  const yerMetni = `${yerler.size} Restaurant${yerler.size === 1 ? '' : 's'}`;
+  const sehirMetni = `${sehirler.size} ${sehirler.size === 1 ? 'City' : 'Cities'}`;
+  const ulkeMetni = `${ulkeler.size} ${ulkeler.size === 1 ? 'Country' : 'Countries'}`;
   return `
     <div class="profil-istatistik">
       <p class="ist-ozet">${yerMetni} · ${sehirMetni} · ${ulkeMetni}</p>
@@ -131,12 +131,19 @@ function bestEatsHTML(bestEats, kendim, ziyaretler, mekanlar) {
     gidilenler.get(k.restoran_id ? 'r:' + k.restoran_id : 'm:' + k.mekan_id)
       ?? (k.restoran_id ? RESTORANLAR.find(x => x.id === k.restoran_id)?.isim : null)
       ?? '(deleted place)';
+  const yeriniBul = k => {
+    const y = k.restoran_id
+      ? RESTORANLAR.find(x => x.id === k.restoran_id)
+      : mekanlar.find(x => x.id === k.mekan_id);
+    return y ? `${y.sehir}, ${y.ulke}` : '';
+  };
 
   const satirlar = bestEats.map(k => `
     <div class="best-satir">
       <span class="best-mekan">${kacis(adiniBul(k))}</span>
       <span class="best-ayrac">:</span>
       <span class="best-yemek">${kacis(k.yemek)}</span>
+      ${yeriniBul(k) ? `<span class="best-yer">${kacis(yeriniBul(k))}</span>` : ''}
       ${kendim ? `<button type="button" class="best-sil" data-id="${kacis(k.id)}"
         title="Remove" aria-label="Remove">✕</button>` : ''}
     </div>`).join('');
