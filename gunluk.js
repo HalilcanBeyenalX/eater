@@ -198,6 +198,8 @@ function ziyaretFormuHTML() {
         <button type="submit">Add to Eat Book</button>
       </form>
       <p id="ziyaretHata" class="hata" aria-live="polite"></p>
+    </div>
+    <div class="panel">
       <h2>ATE — Eat Book</h2>
       <div id="ziyaretListesi"></div>
     </div>`;

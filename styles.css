@@ -543,6 +543,26 @@ body {
 .ziyaret { border-top: 1px solid var(--kenar); padding: 1rem 0; }
 .ziyaret-ust { display: flex; justify-content: space-between; gap: .75rem; flex-wrap: wrap; }
 
+/* Eat Book listesi (gunluk.html) — ziyaretler ortalanmış simetrik kutular:
+   büyük serif mekân adı, altında yer·tarih, ortalanan rozet ve fotoğraflar. */
+#ziyaretListesi { display: flex; flex-direction: column; gap: 10px; }
+#ziyaretListesi .ziyaret {
+  border: 1px solid var(--kenar); border-radius: 14px;
+  background: var(--ortu-koyu);
+  padding: 16px 18px;
+  text-align: center;
+}
+#ziyaretListesi .ziyaret-ust {
+  flex-direction: column; align-items: center; gap: 2px;
+  margin-bottom: 10px;
+}
+#ziyaretListesi .ziyaret-ust strong {
+  font-family: var(--serif); font-weight: 700; font-size: 22px;
+  color: var(--vurgu); text-transform: uppercase; letter-spacing: .03em;
+}
+#ziyaretListesi .ziyaret-fotolar { justify-content: center; }
+#ziyaretListesi .ziyaret p { margin: 8px 0 0; }
+
 /* --- Kişiler ve takip (Eater ekle) --- */
 .kisi-satir { display: flex; justify-content: space-between; align-items: center;
   gap: 1rem; flex-wrap: wrap; }
@@ -708,8 +728,11 @@ body {
   border: 2px solid var(--kenar); border-radius: 50%;
   background: var(--yuzey-oyuk);
 }
-.avatar { width: 76px; height: 76px; position: relative; padding: 0; }
-.avatar img { width: 100%; height: 100%; object-fit: cover; }
+/* overflow: visible şart — köşedeki 📷 rozeti dairenin dışına taşar,
+   ortak kuraldaki overflow: hidden onu kırpıp kaymış gösteriyordu.
+   Yuvarlak kırpma bu yüzden görselin kendisine taşındı. */
+.avatar { width: 76px; height: 76px; position: relative; padding: 0; overflow: visible; }
+.avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
 .avatar-bos { font-size: 30px; opacity: .6; }
 .avatar-tikla { cursor: pointer; }
 .avatar-tikla:hover { border-color: var(--vurgu); }
