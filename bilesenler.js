@@ -213,3 +213,12 @@ function kutlamaGoster(puan) {
     }
   }, 3200);
 }
+
+// PWA: ana ekrana kurulabilirlik için service worker kaydı (sw.js hiçbir şeyi
+// önbelleğe almaz — her push telefonda da anında görünür). localhost'ta ve
+// https'te çalışır; desteklenmeyen tarayıcıda sessizce atlanır.
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js').catch(() => {});
+  });
+}
