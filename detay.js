@@ -161,9 +161,8 @@ async function kalbiKur(r) {
 // site puanının yanında gösterir. Kişisel puanlar katalog puanına karışmaz.
 async function gunlukBaglantisiniEkle(r) {
   const kutu = document.createElement('div');
-  kutu.className = 'panel';
-  kutu.className = 'panel ate-panel';
-  kutu.innerHTML = `<a class="sekme sekme-aktif ate-btn" href="gunluk.html?restoran=${encodeURIComponent(r.id)}">I ATE</a>
+  kutu.className = 'ate-panel';
+  kutu.innerHTML = `<span class="ate-kutu"><a class="sekme sekme-aktif ate-btn" href="gunluk.html?restoran=${encodeURIComponent(r.id)}">I ATE</a></span>
     <span id="senPuanlarin"></span>
     <div id="yiyiciFavorileri"></div>`;
   document.querySelector('main').appendChild(kutu);

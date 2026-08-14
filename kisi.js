@@ -111,10 +111,13 @@ function avatarHTML(profil, kendim) {
     ? `<img src="${kacis(eaterHesap.fotoUrl(profil.avatar))}" alt="Profile photo">`
     : '<span class="avatar-bos" aria-hidden="true">👤</span>';
   if (!kendim) return `<div class="avatar">${gorsel}</div>`;
+  // Rozet dairenin İÇİNDE olamaz: daire taşanı kırpar (foto düzgün yuvarlak
+  // kalsın diye şart) ve rozet fotoyla üst üste biner. Bu yüzden düğme bir
+  // sarmalayıcıdır; daire ile rozet kardeş elemanlardır.
   return `
-    <button type="button" class="avatar avatar-tikla" id="btnAvatar"
+    <button type="button" class="avatar-kap avatar-tikla" id="btnAvatar"
       title="Change profile photo" aria-label="Change profile photo">
-      ${gorsel}<span class="avatar-ipucu">📷</span>
+      <span class="avatar">${gorsel}</span><span class="avatar-ipucu">📷</span>
     </button>
     <input type="file" id="avatarInput" accept="image/*" hidden>`;
 }

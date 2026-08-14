@@ -163,7 +163,7 @@ function fotoTemizle(n) {
 function ziyaretFormuHTML() {
   return `
     <div class="panel">
-      <h2>WHAT I ATE</h2>
+      <h2 class="panel-baslik">WHAT I ATE</h2>
       <form id="fZiyaret" class="dikey-form">
         <div id="mekanSecimi">${mekanSecimHTML()}</div>
         <label>Date <input type="date" id="zTarih" required></label>
@@ -195,12 +195,12 @@ function ziyaretFormuHTML() {
         <input type="file" id="fotoInput1" accept="image/*" capture="environment" hidden>
         <input type="file" id="fotoInput2" accept="image/*" capture="environment" hidden>
         <textarea id="zYorum" placeholder="Your notes (optional)" rows="3"></textarea>
-        <button type="submit">Add to Eat Book</button>
+        <button type="submit">Add to Eatory</button>
       </form>
       <p id="ziyaretHata" class="hata" aria-live="polite"></p>
     </div>
     <div class="panel">
-      <h2>ATE — Eat Book</h2>
+      <h2 class="panel-baslik">ATE — Eatory</h2>
       <div id="ziyaretListesi"></div>
     </div>`;
 }
@@ -340,7 +340,7 @@ async function ziyaretKaydet(kullaniciId) {
 async function sayfayiKur() {
   const kap = document.getElementById('icerik');
   if (!eaterHesap.hazir()) {
-    kap.innerHTML = '<p class="panel">The Eat Book is not configured yet (Supabase settings are empty). The catalog is open on the <a href="index.html">Explore</a> page.</p>';
+    kap.innerHTML = '<p class="panel">The Eatory is not configured yet (Supabase settings are empty). The catalog is open on the <a href="index.html">Explore</a> page.</p>';
     return;
   }
   const o = await eaterHesap.oturum();
