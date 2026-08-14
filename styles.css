@@ -137,10 +137,10 @@ body {
   place-items: center;
   background: repeating-linear-gradient(
     45deg,
-    #EFE1CD,
-    #EFE1CD 12px,
-    #E7D6BE 12px,
-    #E7D6BE 24px
+    var(--yuzey-oyuk),
+    var(--yuzey-oyuk) 12px,
+    var(--yuzey-derin) 12px,
+    var(--yuzey-derin) 24px
   );
   border-bottom: 1px solid var(--kenar);
 }
