@@ -49,14 +49,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Başlık ve alt bilgi kırmızı kalır; içlerindeki metin fildişidir. */
+/* Başlığın kendi zemini yoktur — doğrudan sayfa arka planında durur. */
 .ust {
   padding: 56px 24px 28px;
   text-align: center;
   color: var(--fildisi);
-  background-color: var(--kirmizi-koyu);
-  background-image:
-    radial-gradient(1200px 600px at 50% -10%, var(--altin-hale), transparent 65%);
 }
 
 .logo {

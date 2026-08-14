@@ -173,7 +173,7 @@ const TEMA_PANEL_CSS = `
 
 const TEMA_RENK_SATIRLARI = [
   ['kirmizi', 'Page background'],
-  ['ust', 'Header & footer'],
+  ['ust', 'Footer'],
   ['fildisi', 'Header text'],
   ['kutu', 'Boxes'],
   ['metin', 'Box text'],
