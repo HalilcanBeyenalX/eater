@@ -747,9 +747,11 @@ body {
   padding: 8px 12px; font-size: 14.5px;
 }
 .best-satir + .best-satir { margin-top: 8px; }
-.best-ust { display: flex; align-items: baseline; gap: 7px; }
+/* Mekân adı sabit genişlikte sütun: ':' tüm kutularda aynı noktada durur ve
+   ad iki satıra sarsa bile dikeyde ortalanır. */
+.best-ust { display: flex; align-items: center; gap: 7px; }
 .best-mekan {
-  min-width: 0;
+  flex: 0 0 42%; min-width: 0;
   font-family: var(--serif); font-weight: 700; font-size: 15px;
   color: var(--vurgu); text-transform: uppercase; letter-spacing: .02em;
 }
@@ -870,6 +872,11 @@ body {
 .istek-ret:hover { color: var(--krem); border-color: var(--krem-sonuk); }
 
 /* Eaters arama kutusu */
+/* FEAT — başlık ile arama hapı tek satırda (eskiz). */
+.feat-baslik { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
+.feat-baslik h2 { margin: 0; }
+.feat-baslik .eater-arama { flex: 1; margin: 0; }
+
 .eater-arama {
   display: flex; align-items: center; gap: 8px;
   margin: 0 0 14px; padding: .35rem .9rem;
@@ -937,10 +944,16 @@ img.avatar-mini { object-fit: cover; }
   background: var(--ortu-koyu);
 }
 .akis-kart + .akis-kart { margin-top: 10px; }
-.akis-ust { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
-.akis-kim { display: flex; flex-direction: column; min-width: 0; }
-.akis-kim .silik { font-size: 13px; }
-.akis-nerede { display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap; }
+/* Eskiz: solda avatar + isim; "ate at" ve mekân sağ kenarda üst üste. */
+.akis-ust { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.akis-ust .kisi-ad { flex: 1 1 0; min-width: 0; font-size: 1.25rem; }
+.akis-nerede {
+  margin-left: auto; padding-left: 10px; flex: 0 0 auto; max-width: 52%;
+  display: flex; flex-direction: column;
+  align-items: flex-end; line-height: 1.25; text-align: right; min-width: 0;
+}
+.akis-nerede .silik { font-size: 12px; }
+.akis-tarih { margin-top: 1px; }
 .akis-mekan {
   font-family: var(--serif); font-weight: 700; font-size: 18px;
   color: var(--vurgu); text-transform: uppercase; letter-spacing: .03em;
@@ -952,13 +965,14 @@ img.avatar-mini { object-fit: cover; }
   object-fit: cover; border-radius: 14px;
   border: 1px solid var(--kenar); cursor: zoom-in;
 }
+/* Eskiz: puanlar fotoğrafın üstünde, kutu değil düz tek çizgi metin. */
 .akis-puanlar {
   display: flex; gap: 10px; flex-wrap: wrap;
-  justify-content: center; margin-top: 12px;
+  justify-content: space-between; margin: 0 2px 10px;
 }
 .akis-puanlar .mini-puan {
-  font-size: 13.5px; padding: 6px 14px; font-weight: 700;
-  letter-spacing: .04em; text-transform: uppercase;
+  border: none; padding: 0; font-size: 13px; font-weight: 700;
+  color: var(--krem);
 }
 .akis-yorum { margin: 8px 0 0; font-size: 14.5px; line-height: 1.5; }
 
@@ -1059,8 +1073,10 @@ img.avatar-mini { object-fit: cover; }
    — yukarıdaki temel .profil-bilgi/.profil-sag kuralları aynı özgüllükte,
    sonra gelen kazanır. */
 @media (max-width: 640px) {
-  .profil-ust { flex-wrap: wrap; }
+  /* row-gap küçük: Requests paneli isim bloğunun hemen altına otursun. */
+  .profil-ust { flex-wrap: wrap; row-gap: 6px; padding-bottom: 10px; margin-bottom: 10px; }
   .profil-bilgi { flex: 1 1 0; min-width: 55%; }
+  .profil-bilgi p { margin-bottom: 0; }
   .profil-sag { flex: 1 1 100%; max-width: none; }
 
   /* Detay başlığı dar ekranda: logo üstte tam satır, altında geri bağlantısı,

@@ -97,11 +97,13 @@ async function kisileriGoster() {
 
   kap.innerHTML = `
     <div class="panel">
-      <h2>Find Eaters</h2>
-      <div class="eater-arama">
-        <span class="arama-ikon" aria-hidden="true">🔍</span>
-        <input id="eaterArama" type="search" placeholder="Find Eaters by username…"
-          aria-label="Find Eaters" value="${kacis(arama)}">
+      <div class="feat-baslik">
+        <h2>FEAT</h2>
+        <div class="eater-arama">
+          <span class="arama-ikon" aria-hidden="true">🔍</span>
+          <input id="eaterArama" type="search" placeholder="Find eaters by username…"
+            aria-label="Find eaters" value="${kacis(arama)}">
+        </div>
       </div>
       ${liste.length === 0
         ? `<p class="silik">${arama ? 'No Eaters match that name.' : 'Nobody here yet — be the first.'}</p>` : ''}
@@ -165,21 +167,23 @@ function akisKartiHTML(z, profil, mekanAdi) {
           src="${kacis(eaterHesap.fotoUrl(y))}" alt="Food photo" loading="lazy">`).join('')}
       </div>`
     : '';
+  // Eskizdeki düzen: solda avatar + isim, sağda küçük "ate at" ve altında
+  // mekân; puan satırı fotoğrafın ÜSTÜNDE tek çizgi; en altta yorum.
   return `
     <article class="akis-kart">
       <div class="akis-ust">
         ${avatar}
-        <div class="akis-kim">
-          ${profilBaglanti}
-          <span class="akis-nerede"><span class="silik">ate at</span>
-            <span class="akis-mekan">${kacis(mekanAdi)}</span>
-            <span class="silik">· ${kacis(z.tarih)}</span></span>
-        </div>
+        ${profilBaglanti}
+        <span class="akis-nerede">
+          <span class="silik">ate at</span>
+          <span class="akis-mekan">${kacis(mekanAdi)}</span>
+          <span class="silik akis-tarih">${kacis(z.tarih)}</span>
+        </span>
       </div>
-      ${fotoHTML}
       <div class="akis-puanlar">
         ${puan('Food', z.yemek_puan)}${puan('Ambiance', z.ambiyans_puan)}${puan('Service', z.servis_puan)}
       </div>
+      ${fotoHTML}
       ${z.yorum ? `<p class="akis-yorum">${kacis(z.yorum)}</p>` : ''}
     </article>`;
 }
