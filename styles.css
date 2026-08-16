@@ -737,14 +737,18 @@ body {
   margin: 1px 0 8px; font-size: 12px; color: var(--krem-silik);
   letter-spacing: .05em; text-transform: lowercase;
 }
+/* Satırlar hizalı: mekân adı sabit genişlikte sütun, ':' hepsinde aynı
+   noktada, ✕ sağ kenara yaslı. Uzun ad kendi sütununda alta sarar. */
 .best-satir { display: flex; align-items: baseline; gap: 7px; padding: 2.5px 0; font-size: 14.5px; }
 .best-mekan {
+  flex: 0 0 38%; min-width: 0;
   font-family: var(--serif); font-weight: 700; font-size: 14px;
   color: var(--vurgu); text-transform: uppercase; letter-spacing: .02em;
 }
+.best-sil { margin-left: auto; }
 .best-ayrac { color: var(--krem-silik); }
 .best-sil {
-  margin-left: 4px; width: 20px; height: 20px; padding: 0; line-height: 1;
+  width: 20px; height: 20px; padding: 0; line-height: 1;
   border: none; border-radius: 50%; background: var(--ortu-koyu);
   color: var(--krem-sonuk); font-size: .75rem; cursor: pointer;
 }
@@ -824,11 +828,16 @@ body {
 .profil-bilgi { flex: 1; min-width: 0; }
 .profil-bilgi .profil-ad { margin: 0 0 4px; }
 .profil-sag { flex: none; max-width: 260px; }
+/* Kompakt: boşken başlık ve "No requests" tek satırda durur. */
 .istek-paneli {
-  padding: 10px 14px; border: 1px solid var(--kenar);
-  border-radius: var(--yuvarlak); background: var(--ortu-koyu);
+  padding: 7px 12px; border: 1px solid var(--kenar);
+  border-radius: 10px; background: var(--ortu-koyu);
+  display: flex; align-items: center; flex-wrap: wrap; gap: 4px 8px;
 }
-.istek-paneli h3 { margin: 0 0 8px; font-size: 14px; color: var(--vurgu); }
+.istek-paneli h3 { margin: 0; font-size: 13px; color: var(--vurgu); }
+.istek-paneli p { margin: 0; }
+.istek-paneli .silik { font-size: 12px; }
+.istek-paneli .istek-satir { flex: 1 1 100%; }
 .istek-sayi {
   display: inline-grid; place-items: center; min-width: 20px; height: 20px;
   border-radius: 999px; background: var(--altin); color: var(--kirmizi-derin);
@@ -1052,16 +1061,22 @@ img.avatar-mini { object-fit: cover; }
   .detay-basi { padding-right: 88px; }
 }
 
+/* Profil bölüm başlığı (EAT — Eatory) */
+.bolum-baslik { margin: 4px 0 12px; font-family: var(--serif); font-size: 22px; color: var(--vurgu); }
+
 /* EATER Passport — profildeki damga kutuları */
 .pasaport-baslik { margin: 0; font-family: var(--serif); font-size: 22px; color: var(--vurgu); }
 .pasaport-satiri { display: flex; gap: 10px; margin: 10px 0 14px; }
 .pasaport-kutu {
-  flex: 1; display: flex; flex-direction: column; align-items: center; gap: 1px;
-  padding: 12px 8px; border: 1.5px dashed var(--vurgu); border-radius: 12px;
+  /* min-width: 0 şart — "RESTAURANTS" gibi uzun etiketin taban genişliği
+     kutuları eşit paylaşımdan çıkarıyordu. */
+  flex: 1 1 0; min-width: 0; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 1px;
+  padding: 12px 4px; border: 1.5px solid var(--vurgu); border-radius: 12px;
   background: var(--ortu-koyu);
 }
 .pasaport-kutu strong { font-family: var(--serif); font-size: 27px; color: var(--vurgu); line-height: 1.15; }
 .pasaport-kutu span {
-  font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase;
+  font-size: 10px; letter-spacing: .05em; text-transform: uppercase;
   color: var(--krem-sonuk); text-align: center;
 }

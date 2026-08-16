@@ -92,13 +92,13 @@ function profilIstatistikHTML(ziyaretler, mekanlar, profil) {
       <h3 class="pasaport-baslik">EATER Passport</h3>
       ${uyeTarihi ? `<p class="silik ist-uye">Member since ${uyeTarihi}</p>` : ''}
       <div class="pasaport-satiri">
-        ${damga(sehirler.size, sehirler.size === 1 ? 'City Explored' : 'Cities Explored')}
+        ${damga(sehirler.size, sehirler.size === 1 ? 'City' : 'Cities')}
         ${damga(ulkeler.size, ulkeler.size === 1 ? 'Country' : 'Countries')}
         ${damga(yerler.size, yerler.size === 1 ? 'Restaurant' : 'Restaurants')}
       </div>
       <div class="ist-cift">
         <div class="ist-blok">
-          <h3>Your Taste DNA</h3>
+          <h3>Taste DNA</h3>
           ${enCokTercih || '<p class="silik">No catalog visits yet.</p>'}
         </div>
         <div class="ist-blok">
@@ -168,8 +168,8 @@ function bestEatsHTML(bestEats, kendim, ziyaretler, mekanlar) {
 
   return `
     <section class="best-kutu">
-      <h3>Best Eats</h3>
-      <p class="best-alt">most recommended eats</p>
+      <h3>BEAST</h3>
+      <p class="best-alt">best eats and most recommended eats</p>
       ${satirlar || (kendim ? '<p class="silik">Nothing here yet — pick a place below.</p>' : '')}
       ${form}
     </section>`;
@@ -274,6 +274,7 @@ async function profiliGoster() {
       </div>
       ${profilIstatistikHTML(ziyaretler, mekanlar, profil)}
       ${bestEatsHTML(bestEats, kendim, ziyaretler, mekanlar)}
+      <h3 class="bolum-baslik">EAT — Eatory</h3>
       ${ziyaretler.map(z => profilZiyaretHTML(z, ...isimYer(z))).join('') ||
         '<p class="silik">No entries yet.</p>'}
       ${(() => {
