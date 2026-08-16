@@ -143,33 +143,36 @@ function bestEatsHTML(bestEats, kendim, ziyaretler, mekanlar) {
     return y ? `${y.sehir}, ${y.ulke}` : '';
   };
 
+  // Eskizdeki düzen: her kayıt kendi kutusunda; üst satırda "MEKÂN : yemek ✕",
+  // altında küçük noktalı-altçizgili şehir/ülke.
   const satirlar = bestEats.map(k => `
     <div class="best-satir">
-      <span class="best-mekan">${kacis(adiniBul(k))}</span>
-      <span class="best-ayrac">:</span>
-      <span class="best-yemek">${kacis(k.yemek)}</span>
+      <div class="best-ust">
+        <span class="best-mekan">${kacis(adiniBul(k))}</span>
+        <span class="best-ayrac">:</span>
+        <span class="best-yemek">${kacis(k.yemek)}</span>
+        ${kendim ? `<button type="button" class="best-sil" data-id="${kacis(k.id)}"
+          title="Remove" aria-label="Remove">✕</button>` : ''}
+      </div>
       ${yeriniBul(k) ? `<span class="best-yer">${kacis(yeriniBul(k))}</span>` : ''}
-      ${kendim ? `<button type="button" class="best-sil" data-id="${kacis(k.id)}"
-        title="Remove" aria-label="Remove">✕</button>` : ''}
     </div>`).join('');
 
   if (!kendim && bestEats.length === 0) return '';
   const form = (kendim && gidilenler.size > 0) ? `
     <div class="best-form">
-      <select id="bestMekan">
-        <option value="">Pick a place you ate…</option>
+      <select id="bestMekan" aria-label="Pick a place you ate">
+        <option value="">ATE</option>
         ${[...gidilenler].map(([deger, ad]) =>
           `<option value="${kacis(deger)}">${kacis(ad)}</option>`).join('')}
       </select>
       <input type="text" id="bestYemek" placeholder="Best dish there" maxlength="80">
-      <button type="button" id="btnBestEkle" class="best-ekle">Add</button>
+      <button type="button" id="btnBestEkle" class="best-ekle">ADD</button>
     </div>
     <p id="bestHata" class="hata" aria-live="polite"></p>` : '';
 
   return `
     <section class="best-kutu">
-      <h3>BEAST</h3>
-      <p class="best-alt">best eats and most recommended eats</p>
+      <h3>BEAST <span class="best-alt">best eats</span></h3>
       ${satirlar || (kendim ? '<p class="silik">Nothing here yet — pick a place below.</p>' : '')}
       ${form}
     </section>`;

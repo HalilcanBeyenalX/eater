@@ -729,37 +729,50 @@ body {
   border: 1px solid var(--kenar); border-radius: var(--yuvarlak);
   background: var(--ortu-koyu);
 }
-.best-kutu h3 { margin: 0; font-family: var(--serif); font-size: 22px; color: var(--vurgu); }
+.best-kutu h3 { margin: 0 0 8px; font-family: var(--serif); font-size: 22px; color: var(--vurgu); }
 .best-yer { font-size: 12px; color: var(--krem-silik); }
 /* Formun altındaki hata satırı boşken yer kaplamasın — kutu dolu görünsün. */
 .best-kutu .hata { min-height: 0; margin: 2px 0 0; }
+/* "best eats" başlığın hemen yanında, küçük ve noktalı altçizgili (eskiz). */
 .best-alt {
-  margin: 1px 0 8px; font-size: 12px; color: var(--krem-silik);
-  letter-spacing: .05em; text-transform: lowercase;
+  margin-left: 8px; font-family: var(--sans); font-weight: 400;
+  font-size: 13px; color: var(--krem-sonuk); letter-spacing: .05em;
+  text-transform: lowercase;
+  text-decoration: underline dotted var(--vurgu); text-underline-offset: 5px;
 }
-/* Satırlar hizalı: mekân adı sabit genişlikte sütun, ':' hepsinde aynı
-   noktada, ✕ sağ kenara yaslı. Uzun ad kendi sütununda alta sarar. */
-.best-satir { display: flex; align-items: baseline; gap: 7px; padding: 2.5px 0; font-size: 14.5px; }
+/* Eskizdeki düzen: her kayıt kendi ince kırmızı çerçeveli kutusunda;
+   üstte "MEKÂN : yemek ✕", altında noktalı altçizgili şehir/ülke. */
+.best-satir {
+  border: 1px solid var(--vurgu); border-radius: 10px;
+  padding: 8px 12px; font-size: 14.5px;
+}
+.best-satir + .best-satir { margin-top: 8px; }
+.best-ust { display: flex; align-items: baseline; gap: 7px; }
 .best-mekan {
-  flex: 0 0 38%; min-width: 0;
-  font-family: var(--serif); font-weight: 700; font-size: 14px;
+  min-width: 0;
+  font-family: var(--serif); font-weight: 700; font-size: 15px;
   color: var(--vurgu); text-transform: uppercase; letter-spacing: .02em;
 }
 .best-sil { margin-left: auto; }
 .best-ayrac { color: var(--krem-silik); }
+.best-yer {
+  display: inline-block; margin-top: 3px;
+  text-decoration: underline dotted var(--vurgu); text-underline-offset: 4px;
+}
 .best-sil {
   width: 20px; height: 20px; padding: 0; line-height: 1;
   border: none; border-radius: 50%; background: var(--ortu-koyu);
   color: var(--krem-sonuk); font-size: .75rem; cursor: pointer;
 }
 .best-sil:hover { color: var(--vurgu); }
-.best-form { display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
+/* Eskizde tek satır: kompakt ATE seçici + yemek kutusu + ADD. */
+.best-form { display: flex; gap: 8px; margin-top: 8px; flex-wrap: nowrap; }
 .best-form select, .best-form input {
   padding: 7px 10px; border: 1px solid var(--kenar); border-radius: 8px;
   background: var(--yuzey-derin); color: var(--krem); font: inherit; font-size: 13.5px;
 }
-.best-form select { flex: 1 1 170px; min-width: 0; }
-.best-form input { flex: 1 1 150px; min-width: 0; }
+.best-form select { flex: 0 1 96px; min-width: 76px; }
+.best-form input { flex: 1 1 auto; min-width: 0; }
 .best-ekle {
   padding: 7px 16px; border: none; border-radius: 8px; cursor: pointer;
   background: var(--altin); color: #fff; font: inherit; font-weight: 700;
