@@ -1,8 +1,7 @@
-// EATER — asgari service worker. Amaç yalnız "ana ekrana kur"ulabilirlik;
-// BİLEREK hiçbir şey önbelleğe alınmaz ki her git push telefonda da anında
-// görünsün (agresif önbellek, güncellemeleri günlerce gizleyebilirdi).
+// EATER — asgari service worker. Amaç yalnız "ana ekrana kur"ulabilirlik.
+// fetch dinleyicisi BİLEREK boş: respondWith çağrılmayınca tarayıcı isteği
+// normal yoldan yükler (araya girip iletmek, tek ağ hıçkırığında sayfayı
+// karartabiliyordu). Önbellek de yok — her git push telefonda anında görünür.
 self.addEventListener('install', () => self.skipWaiting());
 self.addEventListener('activate', e => e.waitUntil(self.clients.claim()));
-self.addEventListener('fetch', e => {
-  e.respondWith(fetch(e.request));
-});
+self.addEventListener('fetch', () => {});

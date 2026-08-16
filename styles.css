@@ -1031,3 +1031,13 @@ img.avatar-mini { object-fit: cover; }
 .konum-mesaj { margin: .35rem 0 0; }
 .osm-kredi { margin: .15rem 0 0; font-size: .75rem; }
 .mesafe { color: var(--vurgu); font-weight: 600; margin-left: .4rem; }
+
+/* Dar ekranda profil üstü: avatar + isim yan yana kalır, Requests paneli /
+   Add Eaters düğmesi tam genişlikte alt satıra iner. Dosyanın SONUNDA durmalı
+   — yukarıdaki temel .profil-bilgi/.profil-sag kuralları aynı özgüllükte,
+   sonra gelen kazanır. */
+@media (max-width: 640px) {
+  .profil-ust { flex-wrap: wrap; }
+  .profil-bilgi { flex: 1 1 0; min-width: 55%; }
+  .profil-sag { flex: 1 1 100%; max-width: none; }
+}
