@@ -139,6 +139,57 @@ const eaterHesap = (() => {
     return !error;
   }
 
+  // --- EATGRAM beğeni + yorum (Ek 7) ---
+
+  // Verilen ziyaretlerin beğeni sayıları + benim beğendiklerim.
+  // null dönerse tablo yok demektir (Ek 7 SQL'i çalıştırılmamış) — arayüz saklar.
+  async function begeniOzeti(ziyaretIdler) {
+    const { data, error } = await istemci.from('akis_begeniler')
+      .select('ziyaret, kullanici').in('ziyaret', ziyaretIdler);
+    if (error) return null;
+    const o = await oturum();
+    const sayilar = new Map(), benimkiler = new Set();
+    (data || []).forEach(b => {
+      sayilar.set(b.ziyaret, (sayilar.get(b.ziyaret) || 0) + 1);
+      if (o && b.kullanici === o.user.id) benimkiler.add(b.ziyaret);
+    });
+    return { sayilar, benimkiler };
+  }
+
+  async function begeniDegistir(ziyaretId, suAnVar) {
+    const o = await oturum();
+    if (!o) { window.location.href = 'gunluk.html'; return false; }
+    const { error } = suAnVar
+      ? await istemci.from('akis_begeniler').delete()
+          .eq('ziyaret', ziyaretId).eq('kullanici', o.user.id)
+      : await istemci.from('akis_begeniler').insert(
+          { ziyaret: ziyaretId, kullanici: o.user.id });
+    return !error;
+  }
+
+  async function yorumSayilari(ziyaretIdler) {
+    const { data, error } = await istemci.from('akis_yorumlar')
+      .select('ziyaret').in('ziyaret', ziyaretIdler);
+    if (error) return null;
+    const sayilar = new Map();
+    (data || []).forEach(y => sayilar.set(y.ziyaret, (sayilar.get(y.ziyaret) || 0) + 1));
+    return sayilar;
+  }
+
+  async function yorumlariGetir(ziyaretId) {
+    const { data } = await istemci.from('akis_yorumlar').select('*')
+      .eq('ziyaret', ziyaretId).order('created_at', { ascending: true });
+    return data || [];
+  }
+
+  async function yorumEkle(ziyaretId, metin) {
+    const o = await oturum();
+    if (!o) { window.location.href = 'gunluk.html'; return 'Not signed in.'; }
+    const { error } = await istemci.from('akis_yorumlar')
+      .insert({ ziyaret: ziyaretId, kullanici: o.user.id, metin });
+    return error ? error.message : null;
+  }
+
   // --- Takip / arkadaşlık istekleri (Ek 4: takipler.durum) ---
 
   // Girişli kullanıcının ilişki kümeleri: kume = kabul edilmiş takipler,
@@ -207,5 +258,6 @@ const eaterHesap = (() => {
     hesapKutusunuCiz, takipEttiklerim, takipDegistir, takipciSayisi,
     gelenIstekler, istekYanitla, avatarKaydet, fotoYukle, fotoUrl,
     favorilerim, favoriMi, favoriDegistir,
-    bestEatsListesi, bestEatsEkle, bestEatsSil };
+    bestEatsListesi, bestEatsEkle, bestEatsSil,
+    begeniOzeti, begeniDegistir, yorumSayilari, yorumlariGetir, yorumEkle };
 })();

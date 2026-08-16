@@ -18,8 +18,83 @@ const TEMA_VARSAYILAN = {
   vurgu: '#9A0E19',     // puanlar ve vurgular
   altin: '#F5B700',     // düğmeler ve rozetler
   serif: 'georgia',
-  sans: 'nunito'
+  sans: 'nunito',
+  // Boyut ölçekleri (%): 100 = bugünkü tasarım.
+  bBaslik: 100,   // başlıklar
+  bMetin: 100,    // gövde metni
+  bKutu: 100,     // kutu iç dolguları
+  bBosluk: 100,   // kutular arası boşluklar
+  bKose: 100      // köşe yuvarlaklığı
 };
+
+const TEMA_BOYUT_ALANLARI = [
+  ['bBaslik', 'Headings', 60, 160],
+  ['bMetin', 'Text', 60, 160],
+  ['bKutu', 'Box padding', 50, 180],
+  ['bBosluk', 'Spacing', 40, 200],
+  ['bKose', 'Corners', 0, 220]
+];
+
+// Boyut ölçeklerinden üretilen ek stil. styles.css'teki bugünkü taban
+// değerler buraya sabitlendi; kaydıraç %100'deyken sonuç birebir aynıdır.
+function temaBoyutCSS(t) {
+  const oran = alan => (t[alan] ?? 100) / 100;
+  const px = (taban, alan) => (taban * oran(alan)).toFixed(1) + 'px';
+  return `
+  .logo { font-size: calc(clamp(44px, 9vw, 88px) * ${oran('bBaslik')}); }
+  .detay-isim { font-size: calc(clamp(30px, 5vw, 46px) * ${oran('bBaslik')}); }
+  .panel h2 { font-size: ${px(25.6, 'bBaslik')}; }
+  .kart-isim, .profil-mekan { font-size: ${px(21, 'bBaslik')}; }
+  .pasaport-baslik, .best-kutu h3, .bolum-baslik, .akis-baslik { font-size: ${px(22, 'bBaslik')}; }
+  .akis-mekan { font-size: ${px(18, 'bBaslik')}; }
+  .kisi-ad { font-size: ${px(24, 'bBaslik')}; }
+  .akis-ust .kisi-ad { font-size: ${px(20, 'bBaslik')}; }
+
+  body { font-size: ${px(16, 'bMetin')}; }
+  .kart-yer, .silik { font-size: ${px(13, 'bMetin')}; }
+  .rozet-puan { font-size: ${px(20, 'bMetin')}; }
+  .best-satir, .akis-yorum { font-size: ${px(14.5, 'bMetin')}; }
+  .mini-puan, .akis-eylem { font-size: ${px(13, 'bMetin')}; }
+  .filtreler select { font-size: ${px(14, 'bMetin')}; }
+  .yorum-satir { font-size: ${px(13.5, 'bMetin')}; }
+
+  .panel { padding: ${px(32, 'bKutu')} ${px(28, 'bKutu')}; }
+  .kart-govde { padding: ${px(16, 'bKutu')} ${px(18, 'bKutu')}; }
+  .kart-gorsel { height: ${px(116, 'bKutu')}; }
+  .akis-kart, .best-kutu { padding: ${px(14, 'bKutu')} ${px(16, 'bKutu')}; }
+  .detay-basi { padding: ${px(22, 'bKutu')} ${px(24, 'bKutu')}; }
+  .rozet { padding: ${px(8, 'bKutu')} ${px(4, 'bKutu')}; }
+  .pasaport-kutu { padding: ${px(12, 'bKutu')} ${px(4, 'bKutu')}; }
+  .filtreler { padding: ${px(16, 'bKutu')} ${px(18, 'bKutu')}; }
+  .best-satir { padding: ${px(8, 'bKutu')} ${px(12, 'bKutu')}; }
+
+  .liste { gap: ${px(22, 'bBosluk')}; }
+  .panel { margin: ${px(24, 'bBosluk')} auto; }
+  .akis-kart + .akis-kart { margin-top: ${px(10, 'bBosluk')}; }
+  .best-satir + .best-satir { margin-top: ${px(8, 'bBosluk')}; }
+  .rozetler { gap: ${px(8, 'bBosluk')}; }
+  .pasaport-satiri { gap: ${px(10, 'bBosluk')}; }
+  .isaretler { gap: ${px(6, 'bBosluk')}; }
+  .filtreler { gap: ${px(14, 'bBosluk')}; }
+  .dikey-form { gap: ${px(13.6, 'bBosluk')}; }
+  .metrikler { gap: ${px(14, 'bBosluk')}; }
+
+  :root { --yuvarlak: ${px(14, 'bKose')}; }
+  .akis-kart { border-radius: ${px(12, 'bKose')}; }
+  .best-satir, .rozet, .pasaport-kutu { border-radius: ${px(10, 'bKose')}; }
+  .akis-foto, .ziyaret-foto { border-radius: ${px(12, 'bKose')}; }
+  `;
+}
+
+function temaBoyutUygula(t) {
+  let stil = document.getElementById('temaBoyutStil');
+  if (!stil) {
+    stil = document.createElement('style');
+    stil.id = 'temaBoyutStil';
+    document.head.appendChild(stil);
+  }
+  stil.textContent = temaBoyutCSS(t);
+}
 
 const TEMA_SERIFLER = {
   georgia:   { ad: 'Georgia (current)', deger: 'Georgia, "Times New Roman", serif', google: null },
@@ -101,11 +176,13 @@ function temaUygula(t) {
   temaFontYukle(TEMA_SANSLAR[t.sans]?.google);
   const kok = document.documentElement.style;
   Object.entries(temaDegiskenleri(t)).forEach(([k, v]) => kok.setProperty(k, v));
+  temaBoyutUygula(t);
 }
 
 function temaSifirla() {
   const kok = document.documentElement.style;
   Object.keys(temaDegiskenleri(TEMA_VARSAYILAN)).forEach(k => kok.removeProperty(k));
+  document.getElementById('temaBoyutStil')?.remove();
 }
 
 // Kayıttan dönen her değer doğrulanır: renk alanları #rrggbb, font alanları
@@ -121,6 +198,10 @@ function temaOku() {
     }
     if (TEMA_SERIFLER[ham.serif]) t.serif = ham.serif;
     if (TEMA_SANSLAR[ham.sans]) t.sans = ham.sans;
+    for (const [alan, , enAz, enCok] of TEMA_BOYUT_ALANLARI) {
+      const deger = Number(ham[alan]);
+      if (Number.isFinite(deger) && deger >= enAz && deger <= enCok) t[alan] = deger;
+    }
     return t;
   } catch { return null; }
 }
@@ -163,6 +244,15 @@ const TEMA_PANEL_CSS = `
     margin: 12px 0 6px; font-size: 11px; letter-spacing: .1em;
     text-transform: uppercase; color: #9a9a9a;
   }
+  #temaPanel input[type="range"] {
+    width: 108px; accent-color: #e0a030; cursor: pointer;
+  }
+  #temaPanel .tema-satir output {
+    min-width: 38px; text-align: right; font-variant-numeric: tabular-nums;
+    color: #cfcfcf; font-size: 12px;
+  }
+  #temaPanel .tema-kaydirac { justify-content: flex-start; }
+  #temaPanel .tema-kaydirac > span { flex: 1; }
   #temaPanel .tema-alt { display: flex; gap: 8px; margin-top: 14px; }
   #temaPanel .tema-alt button {
     flex: 1; padding: 7px 0; border-radius: 8px; border: 1px solid #555;
@@ -211,6 +301,12 @@ function temaPanelKur() {
       <label class="tema-satir">${etiket}
         <input type="color" data-alan="${alan}" value="${t[alan]}">
       </label>`).join('')}
+    <div class="tema-bolum">Sizes</div>
+    ${TEMA_BOYUT_ALANLARI.map(([alan, etiket, enAz, enCok]) => `
+      <label class="tema-satir tema-kaydirac"><span>${etiket}</span>
+        <input type="range" data-alan="${alan}" min="${enAz}" max="${enCok}" step="5" value="${t[alan]}">
+        <output>${t[alan]}%</output>
+      </label>`).join('')}
     <div class="tema-bolum">Fonts</div>
     <label class="tema-satir">Headings
       <select data-alan="serif">${temaSecenekler(TEMA_SERIFLER, t.serif)}</select>
@@ -226,9 +322,10 @@ function temaPanelKur() {
 
   dugme.addEventListener('click', () => { panel.hidden = !panel.hidden; });
 
-  panel.querySelectorAll('input[type="color"], select').forEach(giris => {
+  panel.querySelectorAll('input[type="color"], select, input[type="range"]').forEach(giris => {
     giris.addEventListener('input', () => {
-      t[giris.dataset.alan] = giris.value;
+      t[giris.dataset.alan] = giris.type === 'range' ? Number(giris.value) : giris.value;
+      if (giris.type === 'range') giris.nextElementSibling.textContent = giris.value + '%';
       temaUygula(t);
       localStorage.setItem(TEMA_ANAHTAR, JSON.stringify(t));
     });
@@ -238,8 +335,9 @@ function temaPanelKur() {
     localStorage.removeItem(TEMA_ANAHTAR);
     temaSifirla();
     Object.assign(t, TEMA_VARSAYILAN);
-    panel.querySelectorAll('input[type="color"], select').forEach(giris => {
+    panel.querySelectorAll('input[type="color"], select, input[type="range"]').forEach(giris => {
       giris.value = t[giris.dataset.alan];
+      if (giris.type === 'range') giris.nextElementSibling.textContent = giris.value + '%';
     });
   });
 
@@ -248,8 +346,11 @@ function temaPanelKur() {
   panel.querySelector('#temaKopyala').addEventListener('click', async e => {
     const satirlar = Object.entries(temaDegiskenleri(t))
       .map(([k, v]) => `  ${k}: ${v};`).join('\n');
+    // Boyut kaydıraçlarından biri oynadıysa üretilen kuralları da ekle.
+    const boyutOynadi = TEMA_BOYUT_ALANLARI.some(([alan]) => t[alan] !== 100);
+    const boyutCSS = boyutOynadi ? `\n\n/* Sizes */${temaBoyutCSS(t)}` : '';
     try {
-      await navigator.clipboard.writeText(`:root {\n${satirlar}\n}\n`);
+      await navigator.clipboard.writeText(`:root {\n${satirlar}\n}\n${boyutCSS}`);
       e.target.textContent = 'Copied ✓';
     } catch {
       e.target.textContent = 'Copy failed';

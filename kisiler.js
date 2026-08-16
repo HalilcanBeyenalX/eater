@@ -150,7 +150,7 @@ async function kisileriGoster() {
 
 // --- EATGRAM akışı: herkesin son ziyaretleri, Instagram usulü tek kolon ---
 
-function akisKartiHTML(z, profil, mekanAdi) {
+function akisKartiHTML(z, profil, mekanAdi, sosyal) {
   const avatar = profil?.avatar
     ? `<img class="avatar-mini" src="${kacis(eaterHesap.fotoUrl(profil.avatar))}" alt="">`
     : '<span class="avatar-mini avatar-bos" aria-hidden="true">👤</span>';
@@ -185,7 +185,59 @@ function akisKartiHTML(z, profil, mekanAdi) {
       </div>
       ${fotoHTML}
       ${z.yorum ? `<p class="akis-yorum">${kacis(z.yorum)}</p>` : ''}
+      ${sosyal ? `
+        <div class="akis-eylemler">
+          <button type="button" class="akis-eylem akis-begen"
+            data-id="${kacis(z.id)}" data-var="${sosyal.benimkiler.has(z.id) ? 1 : 0}">
+            ${sosyal.benimkiler.has(z.id) ? '❤️' : '🤍'}
+            <span class="eylem-sayi">${sosyal.sayilar.get(z.id) || 0}</span>
+          </button>
+          <button type="button" class="akis-eylem akis-yorumla" data-id="${kacis(z.id)}">
+            💬 <span class="eylem-sayi">${sosyal.yorumlar.get(z.id) || 0}</span>
+          </button>
+        </div>
+        <div class="akis-yorum-kutu" id="yorumKutu-${kacis(z.id)}" hidden></div>` : ''}
     </article>`;
+}
+
+// Yorum kutusunu doldurur: mevcut yorumlar + yazma satırı. Yazar adları
+// profiller tablosundan toplu çekilir; yorum metni kullanıcı üretimi — kacis() şart.
+async function yorumKutusunuDoldur(ziyaretId) {
+  const kutu = document.getElementById('yorumKutu-' + ziyaretId);
+  const yorumlar = await eaterHesap.yorumlariGetir(ziyaretId);
+  const yazarIdler = [...new Set(yorumlar.map(y => y.kullanici))];
+  let yazarlar = [];
+  if (yazarIdler.length > 0) {
+    ({ data: yazarlar = [] } = await eaterHesap.istemci
+      .from('profiller').select('id, kullanici_adi').in('id', yazarIdler));
+  }
+  const adiniBul = id => yazarlar.find(p => p.id === id)?.kullanici_adi ?? '(deleted account)';
+  kutu.innerHTML = `
+    ${yorumlar.map(y => `
+      <p class="yorum-satir"><strong>${kacis(adiniBul(y.kullanici))}</strong> ${kacis(y.metin)}</p>`).join('')
+      || '<p class="silik">No comments yet.</p>'}
+    <div class="yorum-form">
+      <input type="text" maxlength="300" placeholder="Add a comment…"
+        id="yorumGirdi-${kacis(ziyaretId)}">
+      <button type="button" class="yorum-gonder" data-id="${kacis(ziyaretId)}">Send</button>
+    </div>`;
+  kutu.querySelector('.yorum-gonder').addEventListener('click', async e => {
+    const girdi = document.getElementById('yorumGirdi-' + ziyaretId);
+    const metin = girdi.value.trim();
+    if (!metin) return;
+    e.target.disabled = true;
+    const hata = await eaterHesap.yorumEkle(ziyaretId, metin);
+    if (!hata) {
+      // sayacı da güncelle
+      const sayac = document.querySelector(`.akis-yorumla[data-id="${ziyaretId}"] .eylem-sayi`);
+      if (sayac) sayac.textContent = Number(sayac.textContent) + 1;
+      await yorumKutusunuDoldur(ziyaretId);
+    } else { e.target.disabled = false; }
+  });
+  const girdi = kutu.querySelector('input');
+  girdi.addEventListener('keydown', e => {
+    if (e.key === 'Enter') { e.preventDefault(); kutu.querySelector('.yorum-gonder').click(); }
+  });
 }
 
 async function akisiGoster() {
@@ -207,6 +259,16 @@ async function akisiGoster() {
   ]);
   const profiller = profilY.data || [];
   const mekanlar = mekanY.data || [];
+
+  // Beğeni ve yorum sayıları (Ek 7). Tablolar kurulmamışsa sosyal = null
+  // ve butonlar hiç çizilmez — akış eskisi gibi çalışır.
+  const ziyaretIdler = ziyaretler.map(z => z.id);
+  const [begeniler, yorumlar] = await Promise.all([
+    eaterHesap.begeniOzeti(ziyaretIdler),
+    eaterHesap.yorumSayilari(ziyaretIdler)
+  ]);
+  const sosyal = (begeniler && yorumlar)
+    ? { ...begeniler, yorumlar } : null;
   const mekanAdi = z => {
     if (z.restoran_id) return RESTORANLAR.find(x => x.id === z.restoran_id)?.isim ?? z.restoran_id;
     return mekanlar.find(x => x.id === z.mekan_id)?.isim ?? '(deleted place)';
@@ -216,8 +278,37 @@ async function akisiGoster() {
     <div class="panel akis-paneli">
       <h2 class="akis-baslik">EATGRAM</h2>
       ${ziyaretler.map(z =>
-        akisKartiHTML(z, profiller.find(p => p.id === z.kullanici), mekanAdi(z))).join('')}
+        akisKartiHTML(z, profiller.find(p => p.id === z.kullanici), mekanAdi(z), sosyal)).join('')}
     </div>`;
+
+  // Beğeni: tıklayınca ekle/çıkar; kalp ve sayı yerinde güncellenir (akış
+  // yeniden çizilmez ki kaydırma konumu bozulmasın).
+  kap.querySelectorAll('.akis-begen').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      btn.disabled = true;
+      const vardi = btn.dataset.var === '1';
+      const oldu = await eaterHesap.begeniDegistir(btn.dataset.id, vardi);
+      if (oldu) {
+        btn.dataset.var = vardi ? '0' : '1';
+        const sayac = btn.querySelector('.eylem-sayi');
+        sayac.textContent = Number(sayac.textContent) + (vardi ? -1 : 1);
+        btn.childNodes[0].textContent = (vardi ? '🤍' : '❤️') + ' ';
+      }
+      btn.disabled = false;
+    });
+  });
+
+  // Yorum: buton kutuyu açar/kapar; ilk açılışta yorumlar yüklenir.
+  kap.querySelectorAll('.akis-yorumla').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const kutu = document.getElementById('yorumKutu-' + btn.dataset.id);
+      if (kutu.hidden && !kutu.dataset.yuklu) {
+        kutu.dataset.yuklu = '1';
+        await yorumKutusunuDoldur(btn.dataset.id);
+      }
+      kutu.hidden = !kutu.hidden;
+    });
+  });
 }
 
 document.addEventListener('DOMContentLoaded', () => {

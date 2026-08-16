@@ -150,3 +150,35 @@ drop policy if exists "besteats ekleme" on en_iyi_yemekler;
 create policy "besteats ekleme" on en_iyi_yemekler for insert with check (auth.uid() = kullanici);
 drop policy if exists "besteats silme" on en_iyi_yemekler;
 create policy "besteats silme" on en_iyi_yemekler for delete using (auth.uid() = kullanici);
+
+-- Ek 7 (14 Ağustos 2026): EATGRAM beğeni + yorum.
+-- Beğeni: kişi başına ziyaret başına bir satır (tekrar tıklayınca silinir).
+-- Yorum: kısa metin (300 karakter); herkes okur, yalnız sahibi ekler/siler.
+create table if not exists akis_begeniler (
+  ziyaret uuid not null references ziyaretler(id) on delete cascade,
+  kullanici uuid not null references auth.users(id) on delete cascade,
+  created_at timestamptz not null default now(),
+  primary key (ziyaret, kullanici)
+);
+alter table akis_begeniler enable row level security;
+drop policy if exists "begeni okuma" on akis_begeniler;
+create policy "begeni okuma" on akis_begeniler for select using (true);
+drop policy if exists "begeni ekleme" on akis_begeniler;
+create policy "begeni ekleme" on akis_begeniler for insert with check (auth.uid() = kullanici);
+drop policy if exists "begeni silme" on akis_begeniler;
+create policy "begeni silme" on akis_begeniler for delete using (auth.uid() = kullanici);
+
+create table if not exists akis_yorumlar (
+  id uuid primary key default gen_random_uuid(),
+  ziyaret uuid not null references ziyaretler(id) on delete cascade,
+  kullanici uuid not null references auth.users(id) on delete cascade,
+  metin text not null check (char_length(metin) between 1 and 300),
+  created_at timestamptz not null default now()
+);
+alter table akis_yorumlar enable row level security;
+drop policy if exists "akisyorum okuma" on akis_yorumlar;
+create policy "akisyorum okuma" on akis_yorumlar for select using (true);
+drop policy if exists "akisyorum ekleme" on akis_yorumlar;
+create policy "akisyorum ekleme" on akis_yorumlar for insert with check (auth.uid() = kullanici);
+drop policy if exists "akisyorum silme" on akis_yorumlar;
+create policy "akisyorum silme" on akis_yorumlar for delete using (auth.uid() = kullanici);

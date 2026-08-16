@@ -976,6 +976,30 @@ img.avatar-mini { object-fit: cover; }
 }
 .akis-yorum { margin: 8px 0 0; font-size: 14.5px; line-height: 1.5; }
 
+/* Beğeni + yorum: kartın altında minik hap butonlar, yanlarında sayılar. */
+.akis-eylemler { display: flex; gap: 8px; margin-top: 10px; }
+.akis-eylem {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 4px 12px; border: 1px solid var(--kenar); border-radius: 999px;
+  background: transparent; color: var(--krem); font: inherit; font-size: 13px;
+  cursor: pointer;
+}
+.akis-eylem:hover { border-color: var(--vurgu); }
+.eylem-sayi { font-weight: 700; }
+.akis-yorum-kutu { margin-top: 8px; border-top: 1px solid var(--kenar); padding-top: 8px; }
+.yorum-satir { margin: 0 0 5px; font-size: 13.5px; line-height: 1.45; }
+.yorum-satir strong { color: var(--vurgu); }
+.yorum-form { display: flex; gap: 6px; margin-top: 7px; }
+.yorum-form input {
+  flex: 1; min-width: 0; padding: 7px 11px;
+  border: 1px solid var(--kenar); border-radius: 999px;
+  background: var(--yuzey-derin); color: var(--krem); font: inherit; font-size: 13.5px;
+}
+.yorum-gonder {
+  padding: 6px 15px; border: none; border-radius: 999px; cursor: pointer;
+  background: var(--altin); color: #fff; font: inherit; font-size: 13px; font-weight: 700;
+}
+
 /* Rota süre balonu (Google Maps usulü) */
 .rota-balon-kap { overflow: visible; }
 .rota-balon {
