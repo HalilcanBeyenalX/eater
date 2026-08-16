@@ -1040,4 +1040,28 @@ img.avatar-mini { object-fit: cover; }
   .profil-ust { flex-wrap: wrap; }
   .profil-bilgi { flex: 1 1 0; min-width: 55%; }
   .profil-sag { flex: 1 1 100%; max-width: none; }
+
+  /* Detay başlığı dar ekranda: logo üstte tam satır, altında geri bağlantısı,
+     en altta gezinme — sağa sıkışıp üst üste binmesin. */
+  .ust-ince { flex-wrap: wrap; justify-content: center; row-gap: 2px; }
+  .ust-ince .logo { order: -1; flex: 1 1 100%; text-align: center; }
+  .ust-ince .geri { flex: 1 1 100%; text-align: center; }
+  .ust-ince #gezinme { flex: 1 1 100%; }
+
+  /* Kalp dairesi dar ekranda metnin üstüne binmesin. */
+  .detay-basi { padding-right: 88px; }
+}
+
+/* EATER Passport — profildeki damga kutuları */
+.pasaport-baslik { margin: 0; font-family: var(--serif); font-size: 22px; color: var(--vurgu); }
+.pasaport-satiri { display: flex; gap: 10px; margin: 10px 0 14px; }
+.pasaport-kutu {
+  flex: 1; display: flex; flex-direction: column; align-items: center; gap: 1px;
+  padding: 12px 8px; border: 1.5px dashed var(--vurgu); border-radius: 12px;
+  background: var(--ortu-koyu);
+}
+.pasaport-kutu strong { font-family: var(--serif); font-size: 27px; color: var(--vurgu); line-height: 1.15; }
+.pasaport-kutu span {
+  font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--krem-sonuk); text-align: center;
 }

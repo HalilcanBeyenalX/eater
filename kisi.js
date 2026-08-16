@@ -84,16 +84,21 @@ function profilIstatistikHTML(ziyaretler, mekanlar, profil) {
       ? (degerler.reduce((a, b) => a + b, 0) / degerler.length).toFixed(1) : '—';
   };
 
-  const yerMetni = `${yerler.size} Restaurant${yerler.size === 1 ? '' : 's'}`;
-  const sehirMetni = `${sehirler.size} ${sehirler.size === 1 ? 'City' : 'Cities'}`;
-  const ulkeMetni = `${ulkeler.size} ${ulkeler.size === 1 ? 'Country' : 'Countries'}`;
+  // EATER Passport: gezilen dünyanın oyunlaştırılmış özeti — damga görünümlü kutular.
+  const damga = (sayi, etiket) => `
+    <div class="pasaport-kutu"><strong>${sayi}</strong><span>${etiket}</span></div>`;
   return `
     <div class="profil-istatistik">
-      <p class="ist-ozet">${yerMetni} · ${sehirMetni} · ${ulkeMetni}</p>
+      <h3 class="pasaport-baslik">EATER Passport</h3>
       ${uyeTarihi ? `<p class="silik ist-uye">Member since ${uyeTarihi}</p>` : ''}
+      <div class="pasaport-satiri">
+        ${damga(sehirler.size, sehirler.size === 1 ? 'City Explored' : 'Cities Explored')}
+        ${damga(ulkeler.size, ulkeler.size === 1 ? 'Country' : 'Countries')}
+        ${damga(yerler.size, yerler.size === 1 ? 'Restaurant' : 'Restaurants')}
+      </div>
       <div class="ist-cift">
         <div class="ist-blok">
-          <h3>Top cuisines</h3>
+          <h3>Your Taste DNA</h3>
           ${enCokTercih || '<p class="silik">No catalog visits yet.</p>'}
         </div>
         <div class="ist-blok">
