@@ -36,7 +36,7 @@ function puanAlani(id, etiket) {
 }
 
 function kaydiraclariKur() {
-  ['zYemek', 'zAmbiyans', 'zServis'].forEach(id => {
+  ['zYemek', 'zAmbiyans', 'zServis', 'zGenel'].forEach(id => {
     const kaydirac = document.getElementById(id);
     kaydirac?.addEventListener('input', () => {
       kaydirac.dataset.dokunuldu = '1';
@@ -46,7 +46,7 @@ function kaydiraclariKur() {
 }
 
 function puanlariSifirla() {
-  ['zYemek', 'zAmbiyans', 'zServis'].forEach(id => {
+  ['zYemek', 'zAmbiyans', 'zServis', 'zGenel'].forEach(id => {
     const kaydirac = document.getElementById(id);
     if (!kaydirac) return;
     kaydirac.value = 5;
@@ -168,7 +168,7 @@ function ziyaretFormuHTML() {
         <div id="mekanSecimi">${mekanSecimHTML()}</div>
         <label>Date <input type="date" id="zTarih" required></label>
         <div class="puan-satiri">
-          ${puanAlani('zYemek', 'Food')}${puanAlani('zAmbiyans', 'Ambiance')}${puanAlani('zServis', 'Service')}
+          ${puanAlani('zYemek', 'Food')}${puanAlani('zAmbiyans', 'Ambiance')}${puanAlani('zServis', 'Service')}${puanAlani('zGenel', 'EATER Point')}
         </div>
         <div class="form-satir">
           <label>Favorite dish
@@ -217,7 +217,7 @@ function ziyaretKartHTML(z, mekanAdi, yer) {
         <span class="silik">${kacis(yer)} · ${kacis(z.tarih)}</span>
       </div>
       <div class="rozetler">
-        ${puan('Food', z.yemek_puan)}${puan('Ambiance', z.ambiyans_puan)}${puan('Service', z.servis_puan)}
+        ${puan('Food', z.yemek_puan)}${puan('Ambiance', z.ambiyans_puan)}${puan('Service', z.servis_puan)}${puan('EATER', z.genel_puan)}
       </div>
       ${favoriler.length ? `<p class="silik">Favorites: ${kacis(favoriler.join(', '))}</p>` : ''}
       ${ziyaretFotolariHTML(z)}
@@ -269,8 +269,8 @@ async function ziyaretKaydet(kullaniciId) {
   if (gonderButonu) gonderButonu.disabled = true;
   try {
     // 0) Puanlar zorunlu — puansız kayıt profilde ve akışta boş görünüyor.
-    if (['zYemek', 'zAmbiyans', 'zServis'].some(id => sayiVeyaNull(id) === null)) {
-      hataKutusu.textContent = 'Please rate Food, Ambiance and Service before adding.';
+    if (['zYemek', 'zAmbiyans', 'zServis', 'zGenel'].some(id => sayiVeyaNull(id) === null)) {
+      hataKutusu.textContent = 'Please rate Food, Ambiance, Service and EATER Point before adding.';
       return;
     }
 
@@ -315,6 +315,7 @@ async function ziyaretKaydet(kullaniciId) {
       mekan_id: mekanId,
       tarih: document.getElementById('zTarih').value,
       yemek_puan: sayiVeyaNull('zYemek'),
+      genel_puan: sayiVeyaNull('zGenel'),
       ambiyans_puan: sayiVeyaNull('zAmbiyans'),
       servis_puan: sayiVeyaNull('zServis'),
       sevilen_yemek1: alanDegeri('zFav1') || null,

@@ -182,3 +182,10 @@ drop policy if exists "akisyorum ekleme" on akis_yorumlar;
 create policy "akisyorum ekleme" on akis_yorumlar for insert with check (auth.uid() = kullanici);
 drop policy if exists "akisyorum silme" on akis_yorumlar;
 create policy "akisyorum silme" on akis_yorumlar for delete using (auth.uid() = kullanici);
+
+-- Ek 8 (14 Ağustos 2026): EATER Point — ziyaret başına 10 üzerinden genel puan.
+-- Food/Ambiance/Service'in yanında kişinin mekâna verdiği tek genel not;
+-- restoran sayfasında topluluk ortalaması olarak da gösterilir.
+alter table ziyaretler add column if not exists genel_puan numeric
+  check (genel_puan is null or (genel_puan between 0 and 10));
+notify pgrst, 'reload schema';

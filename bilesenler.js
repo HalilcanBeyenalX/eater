@@ -216,6 +216,95 @@ function kutlamaGoster(puan) {
   }, 3200);
 }
 
+// --- Sosyal eylemler (beğeni + yorum + EATER Point) — akışta ve profilde ortak ---
+
+// sosyal: { sayilar, benimkiler, yorumlar } (hesap.js begeniOzeti + yorumSayilari).
+// null ise (Ek 7 kurulmamış) hiçbir şey çizilmez. EATER Point sağda altın hapta.
+function sosyalEylemlerHTML(z, sosyal) {
+  if (!sosyal) return '';
+  const genel = typeof z.genel_puan === 'number'
+    ? `<span class="eater-puan">EATER ${ondalikTR(z.genel_puan)}</span>` : '';
+  return `
+    <div class="akis-eylemler">
+      <button type="button" class="akis-eylem akis-begen"
+        data-id="${kacis(z.id)}" data-var="${sosyal.benimkiler.has(z.id) ? 1 : 0}">
+        ${sosyal.benimkiler.has(z.id) ? '❤️' : '🤍'}
+        <span class="eylem-sayi">${sosyal.sayilar.get(z.id) || 0}</span>
+      </button>
+      <button type="button" class="akis-eylem akis-yorumla" data-id="${kacis(z.id)}">
+        💬 <span class="eylem-sayi">${sosyal.yorumlar.get(z.id) || 0}</span>
+      </button>
+      ${genel}
+    </div>
+    <div class="akis-yorum-kutu" id="yorumKutu-${kacis(z.id)}" hidden></div>`;
+}
+
+// Yorum kutusunu doldurur: mevcut yorumlar + yazma satırı. Yazar adları
+// profiller tablosundan toplu çekilir; yorum metni kullanıcı üretimi — kacis() şart.
+async function yorumKutusunuDoldur(ziyaretId) {
+  const kutu = document.getElementById('yorumKutu-' + ziyaretId);
+  const yorumlar = await eaterHesap.yorumlariGetir(ziyaretId);
+  const yazarIdler = [...new Set(yorumlar.map(y => y.kullanici))];
+  let yazarlar = [];
+  if (yazarIdler.length > 0) {
+    ({ data: yazarlar = [] } = await eaterHesap.istemci
+      .from('profiller').select('id, kullanici_adi').in('id', yazarIdler));
+  }
+  const adiniBul = id => yazarlar.find(p => p.id === id)?.kullanici_adi ?? '(deleted account)';
+  kutu.innerHTML = `
+    ${yorumlar.map(y => `
+      <p class="yorum-satir"><strong>${kacis(adiniBul(y.kullanici))}</strong> ${kacis(y.metin)}</p>`).join('')
+      || '<p class="silik">No comments yet.</p>'}
+    <div class="yorum-form">
+      <input type="text" maxlength="300" placeholder="Add a comment…"
+        id="yorumGirdi-${kacis(ziyaretId)}">
+      <button type="button" class="yorum-gonder" data-id="${kacis(ziyaretId)}">Send</button>
+    </div>`;
+  kutu.querySelector('.yorum-gonder').addEventListener('click', async e => {
+    const girdi = document.getElementById('yorumGirdi-' + ziyaretId);
+    const metin = girdi.value.trim();
+    if (!metin) return;
+    e.target.disabled = true;
+    const hata = await eaterHesap.yorumEkle(ziyaretId, metin);
+    if (!hata) {
+      const sayac = document.querySelector(`.akis-yorumla[data-id="${ziyaretId}"] .eylem-sayi`);
+      if (sayac) sayac.textContent = Number(sayac.textContent) + 1;
+      await yorumKutusunuDoldur(ziyaretId);
+    } else { e.target.disabled = false; }
+  });
+  kutu.querySelector('input').addEventListener('keydown', e => {
+    if (e.key === 'Enter') { e.preventDefault(); kutu.querySelector('.yorum-gonder').click(); }
+  });
+}
+
+// Beğeni ve yorum düğmelerini bağlar; kart yerinde güncellenir (yeniden çizim yok).
+function sosyalEylemleriBagla(kap) {
+  kap.querySelectorAll('.akis-begen').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      btn.disabled = true;
+      const vardi = btn.dataset.var === '1';
+      const oldu = await eaterHesap.begeniDegistir(btn.dataset.id, vardi);
+      if (oldu) {
+        btn.dataset.var = vardi ? '0' : '1';
+        const sayac = btn.querySelector('.eylem-sayi');
+        sayac.textContent = Number(sayac.textContent) + (vardi ? -1 : 1);
+        btn.childNodes[0].textContent = (vardi ? '🤍' : '❤️') + ' ';
+      }
+      btn.disabled = false;
+    });
+  });
+  kap.querySelectorAll('.akis-yorumla').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const kutu = document.getElementById('yorumKutu-' + btn.dataset.id);
+      if (kutu.hidden && !kutu.dataset.yuklu) {
+        kutu.dataset.yuklu = '1';
+        await yorumKutusunuDoldur(btn.dataset.id);
+      }
+      kutu.hidden = !kutu.hidden;
+    });
+  });
+}
+
 // PWA: ana ekrana kurulabilirlik için service worker kaydı (sw.js hiçbir şeyi
 // önbelleğe almaz — her push telefonda da anında görünür). localhost'ta ve
 // https'te çalışır; desteklenmeyen tarayıcıda sessizce atlanır.

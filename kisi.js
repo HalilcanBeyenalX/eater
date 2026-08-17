@@ -2,7 +2,7 @@
 // profilinde), kabul edilmiş eater sayısı ve kişinin ATE dökümü.
 
 // Ziyaret kartı. mekanAdi/yer/yorum/favoriler kullanıcı üretimi olabilir — kacis() şart.
-function profilZiyaretHTML(z, mekanAdi, yer) {
+function profilZiyaretHTML(z, mekanAdi, yer, sosyal) {
   const puan = (etiket, deger) =>
     typeof deger === 'number' ? puanRozeti(etiket, deger) : '';
   const favoriler = [z.sevilen_yemek1, z.sevilen_yemek2].filter(Boolean);
@@ -13,11 +13,12 @@ function profilZiyaretHTML(z, mekanAdi, yer) {
         <span class="silik">${kacis(yer)} · ${kacis(z.tarih)}</span>
       </div>
       <div class="rozetler">
-        ${puan('Food', z.yemek_puan)}${puan('Ambiance', z.ambiyans_puan)}${puan('Service', z.servis_puan)}
+        ${puan('Food', z.yemek_puan)}${puan('Ambiance', z.ambiyans_puan)}${puan('Service', z.servis_puan)}${puan('EATER', z.genel_puan)}
       </div>
       ${favoriler.length ? `<p class="silik">Favorites: ${kacis(favoriler.join(', '))}</p>` : ''}
       ${ziyaretFotolariHTML(z)}
       ${z.yorum ? `<p class="profil-yorum">${kacis(z.yorum)}</p>` : ''}
+      ${sosyalEylemlerHTML(z, sosyal)}
     </article>`;
 }
 
@@ -145,12 +146,22 @@ function bestEatsHTML(bestEats, kendim, ziyaretler, mekanlar) {
 
   // Eskizdeki düzen: her kayıt kendi kutusunda; üst satırda "MEKÂN : yemek ✕",
   // altında küçük noktalı-altçizgili şehir/ülke.
+  // Satırın sağında kişinin o mekâna verdiği EATER Point (ziyaretlerinin ortalaması).
+  const eaterPuani = k => {
+    const puanlar = ziyaretler
+      .filter(z => k.restoran_id ? z.restoran_id === k.restoran_id : z.mekan_id === k.mekan_id)
+      .map(z => z.genel_puan).filter(x => typeof x === 'number');
+    return puanlar.length
+      ? puanlar.reduce((a, b) => a + b, 0) / puanlar.length : null;
+  };
+
   const satirlar = bestEats.map(k => `
     <div class="best-satir">
       <div class="best-ust">
         <span class="best-mekan">${kacis(adiniBul(k))}</span>
         <span class="best-ayrac">:</span>
         <span class="best-yemek">${kacis(k.yemek)}</span>
+        ${eaterPuani(k) !== null ? `<span class="eater-puan best-eater">EATER ${ondalikTR(eaterPuani(k))}</span>` : ''}
         ${kendim ? `<button type="button" class="best-sil" data-id="${kacis(k.id)}"
           title="Remove" aria-label="Remove">✕</button>` : ''}
       </div>
@@ -260,6 +271,17 @@ async function profiliGoster() {
 
   const istekler = kendim ? await eaterHesap.gelenIstekler() : [];
 
+  // Beğeni + yorum sayıları (Ek 7); tablolar yoksa null → butonlar çizilmez.
+  const ziyaretIdler = ziyaretler.map(z => z.id);
+  let sosyal = null;
+  if (ziyaretIdler.length > 0) {
+    const [begeniler, yorumlar] = await Promise.all([
+      eaterHesap.begeniOzeti(ziyaretIdler),
+      eaterHesap.yorumSayilari(ziyaretIdler)
+    ]);
+    if (begeniler && yorumlar) sosyal = { ...begeniler, yorumlar };
+  }
+
   document.title = `${profil.kullanici_adi} — EATER`;
   kap.innerHTML = `
     <div class="panel">
@@ -278,7 +300,7 @@ async function profiliGoster() {
       ${profilIstatistikHTML(ziyaretler, mekanlar, profil)}
       ${bestEatsHTML(bestEats, kendim, ziyaretler, mekanlar)}
       <h3 class="bolum-baslik">EAT — Eatory</h3>
-      ${ziyaretler.map(z => profilZiyaretHTML(z, ...isimYer(z))).join('') ||
+      ${ziyaretler.map(z => profilZiyaretHTML(z, ...isimYer(z), sosyal)).join('') ||
         '<p class="silik">No entries yet.</p>'}
       ${(() => {
         const kalpliler = favoriIdler
@@ -312,6 +334,8 @@ async function profiliGoster() {
       profiliGoster();
     });
   });
+
+  sosyalEylemleriBagla(kap);
 
   // Best Eats: ekleme (yalnız kendi profilinde) ve silme.
   document.getElementById('btnBestEkle')?.addEventListener('click', async e => {

@@ -169,10 +169,31 @@ async function gunlukBaglantisiniEkle(r) {
 
   if (!eaterHesap.hazir()) return;
 
-  // Tüm kullanıcıların bu restorandaki favori yemekleri (girişsiz de görünür).
-  const { data: favVeri } = await eaterHesap.istemci
-    .from('ziyaretler').select('sevilen_yemek1, sevilen_yemek2')
+  // Tüm kullanıcıların bu restorandaki favori yemekleri + EATER Point'leri
+  // (girişsiz de görünür).
+  let { data: favVeri, error: favHata } = await eaterHesap.istemci
+    .from('ziyaretler').select('sevilen_yemek1, sevilen_yemek2, genel_puan')
     .eq('restoran_id', r.id);
+  if (favHata) {
+    // genel_puan sütunu henüz yok (Ek 8 çalıştırılmamış) — favoriler puansız sürsün.
+    ({ data: favVeri } = await eaterHesap.istemci
+      .from('ziyaretler').select('sevilen_yemek1, sevilen_yemek2')
+      .eq('restoran_id', r.id));
+  }
+
+  // Topluluk EATER Point ortalaması — Food/Ambiance/Service kutularının
+  // hemen altında durur; hiç puan yoksa satır hiç çizilmez.
+  const eaterPuanlari = (favVeri || [])
+    .map(v => v.genel_puan).filter(x => typeof x === 'number');
+  if (eaterPuanlari.length > 0) {
+    const ortalama = eaterPuanlari.reduce((a, b) => a + b, 0) / eaterPuanlari.length;
+    const ozet = document.createElement('section');
+    ozet.className = 'eater-ozet';
+    ozet.innerHTML = `
+      <span class="eater-puan eater-buyuk">⭐ EATER Point — ${ondalikTR(ortalama)}</span>
+      <span class="eater-not">${eaterPuanlari.length} Eater rating${eaterPuanlari.length === 1 ? '' : 's'}</span>`;
+    document.querySelector('.metrikler')?.after(ozet);
+  }
   const sayim = new Map();
   (favVeri || []).forEach(v => [v.sevilen_yemek1, v.sevilen_yemek2].forEach(y => {
     const ad = (y || '').trim();

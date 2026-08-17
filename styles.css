@@ -995,15 +995,36 @@ img.avatar-mini { object-fit: cover; }
   object-fit: cover; border-radius: 14px;
   border: 1px solid var(--kenar); cursor: zoom-in;
 }
-/* Eskiz: puanlar fotoğrafın üstünde, kutu değil düz tek çizgi metin. */
+/* Puanlar fotoğrafın üstünde, her biri kendi kutusunda (hap). */
 .akis-puanlar {
-  display: flex; gap: 10px; flex-wrap: wrap;
-  justify-content: space-between; margin: 0 2px 10px;
+  display: flex; gap: 8px; flex-wrap: wrap;
+  justify-content: space-between; margin: 0 0 10px;
 }
 .akis-puanlar .mini-puan {
-  border: none; padding: 0; font-size: 13px; font-weight: 700;
-  color: var(--krem);
+  border: 1px solid var(--kenar); border-radius: 999px;
+  padding: 5px 13px; font-size: 13px; font-weight: 700;
+  background: var(--ortu-koyu); color: var(--vurgu);
 }
+
+/* EATER Point — altın hap; akışta ve profil kartlarında eylem satırının sağında. */
+.eater-puan {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 4px 12px; border-radius: 999px;
+  background: var(--altin); color: #fff;
+  font-size: 13px; font-weight: 800; letter-spacing: .03em;
+  white-space: nowrap;
+}
+.akis-eylemler .eater-puan { margin-left: auto; }
+.best-ust .eater-puan { margin-left: auto; font-size: 12px; padding: 3px 10px; }
+.best-ust .eater-puan + .best-sil { margin-left: 8px; }
+
+/* Detay: topluluk EATER Point ortalaması — metrik kutularının altında. */
+.eater-ozet {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  margin: 16px 0 0;
+}
+.eater-ozet .eater-buyuk { font-size: 16px; padding: 8px 18px; }
+.eater-not { color: var(--fildisi-sonuk); font-size: 13px; }
 .akis-yorum { margin: 8px 0 0; font-size: 14.5px; line-height: 1.5; }
 
 /* Beğeni + yorum: kartın altında minik hap butonlar, yanlarında sayılar. */
