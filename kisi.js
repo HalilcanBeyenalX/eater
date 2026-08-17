@@ -3,8 +3,6 @@
 
 // Ziyaret kartı. mekanAdi/yer/yorum/favoriler kullanıcı üretimi olabilir — kacis() şart.
 function profilZiyaretHTML(z, mekanAdi, yer, sosyal) {
-  const puan = (etiket, deger) =>
-    typeof deger === 'number' ? puanRozeti(etiket, deger) : '';
   const favoriler = [z.sevilen_yemek1, z.sevilen_yemek2].filter(Boolean);
   return `
     <article class="ziyaret profil-kart">
@@ -12,11 +10,9 @@ function profilZiyaretHTML(z, mekanAdi, yer, sosyal) {
         <span class="profil-mekan">${kacis(mekanAdi)}</span>
         <span class="silik">${kacis(yer)} · ${kacis(z.tarih)}</span>
       </div>
-      <div class="rozetler">
-        ${puan('Food', z.yemek_puan)}${puan('Ambiance', z.ambiyans_puan)}${puan('Service', z.servis_puan)}${puan('EATER', z.genel_puan)}
-      </div>
+      ${puanPilleriHTML(z)}
       ${favoriler.length ? `<p class="silik">Favorites: ${kacis(favoriler.join(', '))}</p>` : ''}
-      ${ziyaretFotolariHTML(z)}
+      ${ziyaretFotolarGenisHTML(z)}
       ${z.yorum ? `<p class="profil-yorum">${kacis(z.yorum)}</p>` : ''}
       ${sosyalEylemlerHTML(z, sosyal)}
     </article>`;

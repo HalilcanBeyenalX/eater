@@ -513,10 +513,12 @@ body {
 
   .blok { padding: 18px; margin-top: 14px; }
 
-  .filtreler { gap: 11px; padding: 14px; }
-  .filtre { flex: 1 1 100%; }
-  .filtreler select { width: 100%; min-width: 0; }
-  .sifirla { width: 100%; margin-left: 0; }
+  /* Filtreler telefonda 2 sütun — kompakt ve simetrik (3 satır × 2). */
+  .filtreler { gap: 9px 10px; padding: 12px; }
+  .filtre { flex: 1 1 42%; gap: 3px; }
+  .filtre-etiket { font-size: 10px; }
+  .filtreler select { width: 100%; min-width: 0; padding: 6px 8px; font-size: 13px; }
+  .sifirla { flex: 1 1 42%; width: auto; margin-left: 0; padding: 7px 10px; align-self: flex-end; }
 
   .liste { grid-template-columns: 1fr; }
 
@@ -599,24 +601,19 @@ body {
 .ziyaret { border-top: 1px solid var(--kenar); padding: 1rem 0; }
 .ziyaret-ust { display: flex; justify-content: space-between; gap: .75rem; flex-wrap: wrap; }
 
-/* Eat Book listesi (gunluk.html) — ziyaretler ortalanmış simetrik kutular:
-   büyük serif mekân adı, altında yer·tarih, ortalanan rozet ve fotoğraflar. */
+/* Eatory listesi (gunluk.html) — EATGRAM kartıyla aynı yapı: üstte mekân +
+   tarih, hap puanlar, geniş fotoğraf, yorum, altta beğeni/yorum + EATER hapı. */
 #ziyaretListesi { display: flex; flex-direction: column; gap: 10px; }
 #ziyaretListesi .ziyaret {
   border: 1px solid var(--kenar); border-radius: 14px;
   background: #fff;
   padding: 16px 18px;
-  text-align: center;
 }
-#ziyaretListesi .ziyaret-ust {
-  flex-direction: column; align-items: center; gap: 2px;
-  margin-bottom: 10px;
-}
+#ziyaretListesi .ziyaret-ust { align-items: baseline; margin-bottom: 10px; }
 #ziyaretListesi .ziyaret-ust strong {
   font-family: var(--serif); font-weight: 700; font-size: 22px;
   color: var(--vurgu); text-transform: uppercase; letter-spacing: .03em;
 }
-#ziyaretListesi .ziyaret-fotolar { justify-content: center; }
 #ziyaretListesi .ziyaret p { margin: 8px 0 0; }
 
 /* --- Kişiler ve takip (Eater ekle) --- */

@@ -205,10 +205,10 @@ function ziyaretFormuHTML() {
     </div>`;
 }
 
-// Ziyaret kartı. mekanAdi/yer/yorum/favoriler kullanıcı üretimi olabilir — kacis() şart.
-function ziyaretKartHTML(z, mekanAdi, yer) {
-  const puan = (etiket, deger) =>
-    typeof deger === 'number' ? puanRozeti(etiket, deger) : '';
+// Ziyaret kartı — EATGRAM kartıyla aynı yapı: hap puanlar, geniş fotoğraf,
+// yorum, altta beğeni/yorum + sağda EATER hapı.
+// mekanAdi/yer/yorum/favoriler kullanıcı üretimi olabilir — kacis() şart.
+function ziyaretKartHTML(z, mekanAdi, yer, sosyal) {
   const favoriler = [z.sevilen_yemek1, z.sevilen_yemek2].filter(Boolean);
   return `
     <article class="ziyaret">
@@ -216,12 +216,11 @@ function ziyaretKartHTML(z, mekanAdi, yer) {
         <strong>${kacis(mekanAdi)}</strong>
         <span class="silik">${kacis(yer)} · ${kacis(z.tarih)}</span>
       </div>
-      <div class="rozetler">
-        ${puan('Food', z.yemek_puan)}${puan('Ambiance', z.ambiyans_puan)}${puan('Service', z.servis_puan)}${puan('EATER', z.genel_puan)}
-      </div>
+      ${puanPilleriHTML(z)}
       ${favoriler.length ? `<p class="silik">Favorites: ${kacis(favoriler.join(', '))}</p>` : ''}
-      ${ziyaretFotolariHTML(z)}
-      ${z.yorum ? `<p>${kacis(z.yorum)}</p>` : ''}
+      ${ziyaretFotolarGenisHTML(z)}
+      ${z.yorum ? `<p class="akis-yorum">${kacis(z.yorum)}</p>` : ''}
+      ${sosyalEylemlerHTML(z, sosyal)}
     </article>`;
 }
 
@@ -246,9 +245,20 @@ async function ziyaretleriGoster(kullaniciId) {
     ({ data: mekanlar = [] } = await eaterHesap.istemci
       .from('mekanlar').select('*').in('id', mekanIdler));
   }
+  // Beğeni + yorum sayıları (Ek 7); tablolar yoksa null → butonlar çizilmez.
+  let sosyal = null;
+  if (ziyaretler.length > 0) {
+    const idler = ziyaretler.map(z => z.id);
+    const [begeniler, yorumlar] = await Promise.all([
+      eaterHesap.begeniOzeti(idler),
+      eaterHesap.yorumSayilari(idler)
+    ]);
+    if (begeniler && yorumlar) sosyal = { ...begeniler, yorumlar };
+  }
   kap.innerHTML = ziyaretler.length === 0
     ? '<p class="silik">No entries yet — add your first visit above.</p>'
-    : ziyaretler.map(z => ziyaretKartHTML(z, ...ziyaretIsimYer(z, mekanlar))).join('');
+    : ziyaretler.map(z => ziyaretKartHTML(z, ...ziyaretIsimYer(z, mekanlar), sosyal)).join('');
+  sosyalEylemleriBagla(kap);
 }
 
 function alanDegeri(id) {

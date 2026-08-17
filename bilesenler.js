@@ -216,6 +216,24 @@ function kutlamaGoster(puan) {
   }, 3200);
 }
 
+// Ziyaret kartlarının ortak parçaları: hap puanlar + geniş fotoğraflar.
+// EATGRAM, ATE (Eatory) ve profil aynı kart yapısını kullanır.
+function puanPilleriHTML(z) {
+  const p = (etiket, deger) => typeof deger === 'number'
+    ? `<span class="mini-puan">${etiket} ${ondalikTR(deger)}</span>` : '';
+  const icerik = p('Food', z.yemek_puan) + p('Ambiance', z.ambiyans_puan) + p('Service', z.servis_puan);
+  return icerik ? `<div class="akis-puanlar">${icerik}</div>` : '';
+}
+
+function ziyaretFotolarGenisHTML(z) {
+  const fotolar = [z.sevilen_yemek1_foto, z.sevilen_yemek2_foto].filter(Boolean);
+  if (fotolar.length === 0) return '';
+  return `<div class="akis-fotolar${fotolar.length > 1 ? ' akis-iki' : ''}">
+    ${fotolar.map(y => `<img class="ziyaret-foto akis-foto"
+      src="${kacis(eaterHesap.fotoUrl(y))}" alt="Food photo" loading="lazy">`).join('')}
+  </div>`;
+}
+
 // --- Sosyal eylemler (beğeni + yorum + EATER Point) — akışta ve profilde ortak ---
 
 // sosyal: { sayilar, benimkiler, yorumlar } (hesap.js begeniOzeti + yorumSayilari).
