@@ -266,10 +266,11 @@ function temaOku() {
     }
     // Öğeye özel kurallar: seçici stil etiketi içine yazıldığından sıkı
     // doğrulanır — küme işareti/noktalı virgül içeren seçici reddedilir.
-    // ozelV2 bayrağı olmayan eski kayıtların kuralları BİLEREK atılır:
-    // ilk sürümdeki denemeler gezinmeyi kaydırıp tasarımı bozmuştu.
+    // ozelV3 bayrağı olmayan eski kayıtların kuralları BİLEREK atılır:
+    // önceki denemeler panellere sabit yükseklik yazıp sayfaları üst üste
+    // bindirmişti. Panel/govde gibi yapısal kutulara yükseklik artık yazılmaz.
     t.ozel = {};
-    if (ham.ozelV2 && ham.ozel && typeof ham.ozel === 'object') {
+    if (ham.ozelV3 && ham.ozel && typeof ham.ozel === 'object') {
       for (const [sec, ham2] of Object.entries(ham.ozel)) {
         if (typeof sec !== 'string' || sec.length > 250 || /[{};<>@]/.test(sec)) continue;
         if (!ham2 || typeof ham2 !== 'object') continue;
@@ -420,7 +421,7 @@ function temaSecenekler(sozluk, secili) {
 function temaPanelKur() {
   const t = { ...TEMA_VARSAYILAN, ...(temaOku() ?? {}) };
   if (!t.ozel || typeof t.ozel !== 'object') t.ozel = {};
-  t.ozelV2 = true; // bundan sonraki kayıtlar temizlenmez
+  t.ozelV3 = true; // bundan sonraki kayıtlar temizlenmez
 
   const stil = document.createElement('style');
   stil.textContent = TEMA_PANEL_CSS;
@@ -600,7 +601,10 @@ function temaPanelKur() {
       const k = t.ozel[seciliSec];
       if (surukleme.yon !== 'alt')
         k.gen = Math.max(24, Math.round(surukleme.bw + e.clientX - surukleme.bx));
-      if (surukleme.yon !== 'sag')
+      // Yapısal kaplara (panel, gövde, ana bölümler) sabit yükseklik yazılmaz:
+      // içerik taşar ve sayfalar üst üste biner. Genişlik serbesttir.
+      const yapisalMi = /\.panel\b|\.govde\b|^main\b|^section\b|\.liste\b/.test(seciliSec);
+      if (surukleme.yon !== 'sag' && !yapisalMi)
         k.yuk = Math.max(12, Math.round(surukleme.bh + e.clientY - surukleme.by));
       temaUygula(t);
       kutuKonumla(secim, seciliEl);

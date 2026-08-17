@@ -322,13 +322,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2px;
+  gap: 8px;
   padding: 22px 24px;
   max-width: 1100px;
   margin: 0 auto;
   text-align: center;
 }
 .ust-ince .logo { order: -1; }
+.ust-ince .geri { display: inline-block; padding: 2px 0 4px; }
 
 .logo-kucuk { font-size: 24px; letter-spacing: 0.2em; }
 
@@ -603,7 +604,7 @@ body {
 #ziyaretListesi { display: flex; flex-direction: column; gap: 10px; }
 #ziyaretListesi .ziyaret {
   border: 1px solid var(--kenar); border-radius: 14px;
-  background: var(--ortu-koyu);
+  background: #fff;
   padding: 16px 18px;
   text-align: center;
 }
@@ -962,12 +963,13 @@ img.avatar-mini { object-fit: cover; }
 /* --- EATGRAM akışı --- */
 .akis-paneli { max-width: 560px; margin-left: auto; margin-right: auto; }
 .akis-baslik { text-align: center; font-size: 22px; letter-spacing: .05em; }
-/* Akış kartları ayrı kutular; aralarında küçük boşluk. */
+/* Akış kartları ayrı kutular; aralarında küçük boşluk. Zemin beyaz —
+   fotoğraflar ve puanlar temiz beyaz kart üstünde durur. */
 .akis-kart {
   padding: 14px 16px 16px;
   border: 1px solid var(--kenar);
   border-radius: 12px;
-  background: var(--ortu-koyu);
+  background: #fff;
 }
 .akis-kart + .akis-kart { margin-top: 10px; }
 /* Eskiz: solda avatar + isim; "ate at" ve mekân sağ kenarda üst üste. */
@@ -986,8 +988,10 @@ img.avatar-mini { object-fit: cover; }
 }
 .akis-fotolar { display: grid; gap: 6px; }
 .akis-iki { grid-template-columns: 1fr 1fr; }
+/* Akış fotoğrafları HEP aynı boyda: sabit yükseklik + cover — dikey/yatay
+   fark etmez, kutuyu doldurur, kartlar arasında boy farkı olmaz. */
 .akis-foto {
-  width: 100%; height: auto; aspect-ratio: 4 / 3;
+  width: 100%; height: 300px;
   object-fit: cover; border-radius: 14px;
   border: 1px solid var(--kenar); cursor: zoom-in;
 }
