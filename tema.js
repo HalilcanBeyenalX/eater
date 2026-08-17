@@ -96,6 +96,60 @@ function temaBoyutUygula(t) {
   stil.textContent = temaBoyutCSS(t);
 }
 
+// ---- Tasarım kipi: seçilen öğeye özel kurallar --------------------------
+
+// t.ozel = { "seçici": { fs, ta, pad, my, tx, ty, w, br } } — yalnız
+// kullanıcının oynadığı alanlar saklanır. !important şart: tek amaç deneme
+// olduğundan var olan bütün kuralları ezmesi istenen davranıştır.
+function temaTasarimCSS(t) {
+  return Object.entries(t.ozel || {}).map(([sec, k]) => {
+    const s = [];
+    if (k.fs != null) s.push(`font-size: ${k.fs}px !important`);
+    if (k.ta) s.push(`text-align: ${k.ta} !important`);
+    if (k.pad != null) s.push(`padding: ${k.pad}px !important`);
+    if (k.my != null) s.push(`margin-top: ${k.my}px !important`, `margin-bottom: ${k.my}px !important`);
+    if ((k.tx || 0) !== 0 || (k.ty || 0) !== 0)
+      s.push(`transform: translate(${k.tx || 0}px, ${k.ty || 0}px) !important`);
+    if (k.w > 0) s.push(`width: ${k.w}% !important`);
+    if (k.br != null) s.push(`border-radius: ${k.br}px !important`);
+    return s.length ? `${sec} { ${s.join('; ')}; }` : '';
+  }).join('\n');
+}
+
+function temaTasarimUygula(t) {
+  let stil = document.getElementById('temaTasarimStil');
+  if (!stil) {
+    stil = document.createElement('style');
+    stil.id = 'temaTasarimStil';
+    document.head.appendChild(stil);
+  }
+  stil.textContent = temaTasarimCSS(t);
+}
+
+// Öğe için kalıcı seçici: id > sınıflar > ebeveyn zinciri. Sınıf tabanlı
+// seçici bilinçli: "Sorn" kartının başlığını ayarlamak TÜM kart başlıklarını
+// ayarlar — kartlar veriden üretildiği için istenen davranış budur.
+function temaSecici(el) {
+  if (el.id) return '#' + CSS.escape(el.id);
+  if (el.classList.length > 0)
+    return el.tagName.toLowerCase() + '.' + [...el.classList].map(CSS.escape).join('.');
+  const ebeveyn = el.parentElement;
+  if (!ebeveyn || ebeveyn === document.documentElement) return el.tagName.toLowerCase();
+  const esler = [...ebeveyn.children].filter(c => c.tagName === el.tagName);
+  return `${temaSecici(ebeveyn)} > ${el.tagName.toLowerCase()}:nth-of-type(${esler.indexOf(el) + 1})`;
+}
+
+const TEMA_TASARIM_KONTROLLER = [
+  // [alan, etiket, en az, en çok] — 'w' için 0 = auto (kural yazılmaz)
+  ['fs', 'Font size (px)', 6, 72],
+  ['pad', 'Padding (px)', 0, 64],
+  ['my', 'Margin ↑↓ (px)', -20, 80],
+  ['tx', 'Move ⇄ (px)', -150, 150],
+  ['ty', 'Move ⇅ (px)', -150, 150],
+  ['w', 'Width (%)', 0, 100],
+  ['br', 'Corners (px)', 0, 48]
+];
+
 const TEMA_SERIFLER = {
   georgia:   { ad: 'Georgia (current)', deger: 'Georgia, "Times New Roman", serif', google: null },
   playfair:  { ad: 'Playfair Display', deger: '"Playfair Display", Georgia, serif', google: 'Playfair+Display:wght@500;700' },
@@ -177,12 +231,14 @@ function temaUygula(t) {
   const kok = document.documentElement.style;
   Object.entries(temaDegiskenleri(t)).forEach(([k, v]) => kok.setProperty(k, v));
   temaBoyutUygula(t);
+  temaTasarimUygula(t);
 }
 
 function temaSifirla() {
   const kok = document.documentElement.style;
   Object.keys(temaDegiskenleri(TEMA_VARSAYILAN)).forEach(k => kok.removeProperty(k));
   document.getElementById('temaBoyutStil')?.remove();
+  document.getElementById('temaTasarimStil')?.remove();
 }
 
 // Kayıttan dönen her değer doğrulanır: renk alanları #rrggbb, font alanları
@@ -201,6 +257,22 @@ function temaOku() {
     for (const [alan, , enAz, enCok] of TEMA_BOYUT_ALANLARI) {
       const deger = Number(ham[alan]);
       if (Number.isFinite(deger) && deger >= enAz && deger <= enCok) t[alan] = deger;
+    }
+    // Öğeye özel kurallar: seçici stil etiketi içine yazıldığından sıkı
+    // doğrulanır — küme işareti/noktalı virgül içeren seçici reddedilir.
+    t.ozel = {};
+    if (ham.ozel && typeof ham.ozel === 'object') {
+      for (const [sec, ham2] of Object.entries(ham.ozel)) {
+        if (typeof sec !== 'string' || sec.length > 250 || /[{};<>@]/.test(sec)) continue;
+        if (!ham2 || typeof ham2 !== 'object') continue;
+        const k = {};
+        for (const [alan, , enAz, enCok] of TEMA_TASARIM_KONTROLLER) {
+          const deger = Number(ham2[alan]);
+          if (Number.isFinite(deger) && deger >= enAz && deger <= enCok) k[alan] = deger;
+        }
+        if (['left', 'center', 'right'].includes(ham2.ta)) k.ta = ham2.ta;
+        if (Object.keys(k).length > 0) t.ozel[sec] = k;
+      }
     }
     return t;
   } catch { return null; }
@@ -259,6 +331,52 @@ const TEMA_PANEL_CSS = `
     background: #2b2b2d; color: #f2f2f2; font: inherit; cursor: pointer;
   }
   #temaPanel .tema-alt button:hover { background: #3a3a3d; }
+  .tema-genis {
+    width: 100%; padding: 8px 0; border-radius: 8px; border: 1px solid #555;
+    background: #2b2b2d; color: #f2f2f2; font: inherit; cursor: pointer;
+  }
+  .tema-genis:hover { background: #3a3a3d; }
+
+  /* Tasarım kipi: vurgular + denetçi paneli. Panel tema değişkenlerinden
+     bağımsız sabittir — tasarım ne kadar bozulursa bozulsun okunur kalır. */
+  #tasarimVurgu, #tasarimSecim {
+    position: fixed; z-index: 3998; pointer-events: none;
+    border-radius: 4px; display: none;
+  }
+  #tasarimVurgu { border: 2px dashed #4da3ff; }
+  #tasarimSecim { border: 2px solid #ffd457; box-shadow: 0 0 0 3px rgba(255,212,87,.25); }
+  #tasarimPanel {
+    position: fixed; bottom: 14px; right: 14px; z-index: 4001;
+    width: min(300px, calc(100vw - 28px)); max-height: 60vh; overflow-y: auto;
+    padding: 12px 16px 14px; border-radius: 12px;
+    background: #1d1d1f; color: #f2f2f2;
+    font: 13px/1.4 -apple-system, "Segoe UI", Roboto, sans-serif;
+    box-shadow: 0 10px 34px rgba(0,0,0,.5);
+  }
+  #tasarimPanel h3 { margin: 0 0 2px; font-size: 14px; }
+  #tasarimPanel .tasarim-hedef {
+    font-size: 11px; color: #9a9a9a; word-break: break-all; margin-bottom: 8px;
+  }
+  #tasarimPanel .tema-satir { display: flex; align-items: center; gap: 10px; margin-bottom: 7px; }
+  #tasarimPanel .tema-satir > span { flex: 1; }
+  #tasarimPanel input[type="range"] { width: 104px; accent-color: #e0a030; cursor: pointer; }
+  #tasarimPanel output {
+    min-width: 42px; text-align: right; font-variant-numeric: tabular-nums;
+    color: #cfcfcf; font-size: 12px;
+  }
+  #tasarimPanel .hiza-grup { display: flex; gap: 5px; }
+  #tasarimPanel .hiza-grup button {
+    flex: 1; padding: 4px 0; border-radius: 6px; border: 1px solid #555;
+    background: #2b2b2d; color: #f2f2f2; font: inherit; cursor: pointer;
+  }
+  #tasarimPanel .hiza-grup button.hiza-secili { background: #e0a030; color: #1d1d1f; }
+  #tasarimPanel .tasarim-alt { display: flex; gap: 6px; margin-top: 10px; flex-wrap: wrap; }
+  #tasarimPanel .tasarim-alt button {
+    flex: 1 1 30%; padding: 6px 0; border-radius: 8px; border: 1px solid #555;
+    background: #2b2b2d; color: #f2f2f2; font: inherit; font-size: 12px; cursor: pointer;
+  }
+  #tasarimPanel .tasarim-alt button:hover { background: #3a3a3d; }
+  #tasarimPanel .tasarim-ipucu { color: #9a9a9a; font-size: 12px; margin: 4px 0 2px; }
 `;
 
 const TEMA_RENK_SATIRLARI = [
@@ -279,6 +397,7 @@ function temaSecenekler(sozluk, secili) {
 
 function temaPanelKur() {
   const t = { ...TEMA_VARSAYILAN, ...(temaOku() ?? {}) };
+  if (!t.ozel || typeof t.ozel !== 'object') t.ozel = {};
 
   const stil = document.createElement('style');
   stil.textContent = TEMA_PANEL_CSS;
@@ -314,6 +433,8 @@ function temaPanelKur() {
     <label class="tema-satir">Body
       <select data-alan="sans">${temaSecenekler(TEMA_SANSLAR, t.sans)}</select>
     </label>
+    <div class="tema-bolum">Design mode</div>
+    <button type="button" id="temaTasarimAc" class="tema-genis">🎯 Edit elements one by one</button>
     <div class="tema-alt">
       <button type="button" id="temaSifirla">Reset</button>
       <button type="button" id="temaKopyala">Copy CSS</button>
@@ -335,11 +456,144 @@ function temaPanelKur() {
     localStorage.removeItem(TEMA_ANAHTAR);
     temaSifirla();
     Object.assign(t, TEMA_VARSAYILAN);
+    t.ozel = {};
     panel.querySelectorAll('input[type="color"], select, input[type="range"]').forEach(giris => {
       giris.value = t[giris.dataset.alan];
       if (giris.type === 'range') giris.nextElementSibling.textContent = giris.value + '%';
     });
   });
+
+  // ---- Tasarım kipi kurulumu ----------------------------------------------
+
+  const kaydet = () => localStorage.setItem(TEMA_ANAHTAR, JSON.stringify(t));
+  let tasarimAcik = false;
+  let seciliEl = null, seciliSec = '';
+
+  const vurgu = document.createElement('div'); vurgu.id = 'tasarimVurgu';
+  const secim = document.createElement('div'); secim.id = 'tasarimSecim';
+  const denetci = document.createElement('div'); denetci.id = 'tasarimPanel';
+  denetci.hidden = true;
+  document.body.append(vurgu, secim, denetci);
+
+  const kutuKonumla = (kutu, el) => {
+    if (!el || !el.isConnected) { kutu.style.display = 'none'; return; }
+    const r = el.getBoundingClientRect();
+    Object.assign(kutu.style, {
+      display: 'block', left: (r.left - 3) + 'px', top: (r.top - 3) + 'px',
+      width: (r.width + 2) + 'px', height: (r.height + 2) + 'px'
+    });
+  };
+
+  // Araç öğeleri seçilemez; body/html de anlamsız.
+  const aracMi = el => !el || el === document.body || el === document.documentElement ||
+    el.closest('#temaPanel, #temaDugme, #tasarimPanel, #tasarimVurgu, #tasarimSecim');
+
+  function denetciyiCiz() {
+    const kural = t.ozel[seciliSec] ?? {};
+    const stil = getComputedStyle(seciliEl);
+    const varsayilanlar = {
+      fs: Math.round(parseFloat(stil.fontSize)) || 16,
+      pad: Math.round(parseFloat(stil.paddingTop)) || 0,
+      my: 0, tx: 0, ty: 0, w: 0,
+      br: Math.round(parseFloat(stil.borderTopLeftRadius)) || 0
+    };
+    const adet = document.querySelectorAll(seciliSec).length;
+    const hiza = kural.ta ?? '';
+    denetci.innerHTML = `
+      <h3>🎯 Element editor</h3>
+      <div class="tasarim-hedef">${seciliSec} — ${adet} element${adet === 1 ? '' : 's'}</div>
+      ${TEMA_TASARIM_KONTROLLER.map(([alan, etiket, enAz, enCok]) => `
+        <label class="tema-satir"><span>${etiket}</span>
+          <input type="range" data-alan="${alan}" min="${enAz}" max="${enCok}" step="1"
+            value="${kural[alan] ?? varsayilanlar[alan]}">
+          <output>${(kural[alan] ?? varsayilanlar[alan])}${alan === 'w' ? '%' : 'px'}</output>
+        </label>`).join('')}
+      <div class="tema-satir"><span>Align</span>
+        <span class="hiza-grup">
+          ${['left', 'center', 'right'].map(y => `
+            <button type="button" data-hiza="${y}"
+              class="${hiza === y ? 'hiza-secili' : ''}">${{ left: '⇤', center: '↔', right: '⇥' }[y]}</button>`).join('')}
+        </span>
+      </div>
+      <div class="tasarim-alt">
+        <button type="button" id="tasUst">⬆ Parent</button>
+        <button type="button" id="tasTemizle">Clear this</button>
+        <button type="button" id="tasBitti">Done ✕</button>
+      </div>
+      <p class="tasarim-ipucu">Click any element on the page to edit it.</p>`;
+
+    const kuralYaz = (alan, deger) => {
+      if (!t.ozel[seciliSec]) t.ozel[seciliSec] = {};
+      t.ozel[seciliSec][alan] = deger;
+      temaUygula(t); kaydet();
+      requestAnimationFrame(() => kutuKonumla(secim, seciliEl));
+    };
+    denetci.querySelectorAll('input[type="range"]').forEach(giris => {
+      giris.addEventListener('input', () => {
+        giris.nextElementSibling.textContent = giris.value + (giris.dataset.alan === 'w' ? '%' : 'px');
+        kuralYaz(giris.dataset.alan, Number(giris.value));
+      });
+    });
+    denetci.querySelectorAll('[data-hiza]').forEach(btn => {
+      btn.addEventListener('click', () => { kuralYaz('ta', btn.dataset.hiza); denetciyiCiz(); });
+    });
+    denetci.querySelector('#tasUst').addEventListener('click', () => {
+      const ust = seciliEl.parentElement;
+      if (ust && !aracMi(ust)) ogeSec(ust);
+    });
+    denetci.querySelector('#tasTemizle').addEventListener('click', () => {
+      delete t.ozel[seciliSec];
+      temaUygula(t); kaydet(); denetciyiCiz();
+      requestAnimationFrame(() => kutuKonumla(secim, seciliEl));
+    });
+    denetci.querySelector('#tasBitti').addEventListener('click', tasarimKapat);
+  }
+
+  function ogeSec(el) {
+    seciliEl = el;
+    seciliSec = temaSecici(el);
+    kutuKonumla(secim, el);
+    denetciyiCiz();
+  }
+
+  function tasarimAc() {
+    tasarimAcik = true;
+    panel.hidden = true;
+    denetci.hidden = false;
+    denetci.innerHTML = `
+      <h3>🎯 Element editor</h3>
+      <p class="tasarim-ipucu">Click any element on the page to edit it.<br>
+      Esc or Done closes design mode.</p>
+      <div class="tasarim-alt"><button type="button" id="tasBitti">Done ✕</button></div>`;
+    denetci.querySelector('#tasBitti').addEventListener('click', tasarimKapat);
+  }
+
+  function tasarimKapat() {
+    tasarimAcik = false;
+    seciliEl = null;
+    denetci.hidden = true;
+    vurgu.style.display = 'none';
+    secim.style.display = 'none';
+  }
+
+  document.addEventListener('click', e => {
+    if (!tasarimAcik || aracMi(e.target)) return;
+    e.preventDefault(); e.stopPropagation();
+    ogeSec(e.target);
+  }, true);
+  document.addEventListener('mouseover', e => {
+    if (!tasarimAcik || aracMi(e.target)) { vurgu.style.display = 'none'; return; }
+    kutuKonumla(vurgu, e.target);
+  }, true);
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && tasarimAcik) tasarimKapat();
+  });
+  window.addEventListener('scroll', () => {
+    if (tasarimAcik && seciliEl) kutuKonumla(secim, seciliEl);
+    vurgu.style.display = 'none';
+  }, { passive: true });
+
+  panel.querySelector('#temaTasarimAc').addEventListener('click', tasarimAc);
 
   // Beğenilen temanın :root bloğu panoya kopyalanır — kalıcı yapmak için
   // styles.css'e yapıştırılabilir (fontlar dahil).
@@ -349,8 +603,10 @@ function temaPanelKur() {
     // Boyut kaydıraçlarından biri oynadıysa üretilen kuralları da ekle.
     const boyutOynadi = TEMA_BOYUT_ALANLARI.some(([alan]) => t[alan] !== 100);
     const boyutCSS = boyutOynadi ? `\n\n/* Sizes */${temaBoyutCSS(t)}` : '';
+    const ozelCSS = Object.keys(t.ozel).length
+      ? `\n\n/* Element rules */\n${temaTasarimCSS(t)}\n` : '';
     try {
-      await navigator.clipboard.writeText(`:root {\n${satirlar}\n}\n${boyutCSS}`);
+      await navigator.clipboard.writeText(`:root {\n${satirlar}\n}\n${boyutCSS}${ozelCSS}`);
       e.target.textContent = 'Copied ✓';
     } catch {
       e.target.textContent = 'Copy failed';
