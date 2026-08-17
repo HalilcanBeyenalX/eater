@@ -2,7 +2,7 @@
 
 function kartHTML(r) {
   const oduller = r.oduller
-    .map(o => `<span class="odul">★ ${odulEtiketi(o.tip)}</span>`)
+    .map(o => `<span class="odul">${odulEtiketi(o.tip)}</span>`)
     .join('');
   const rezUyari = r.rezervasyon.gerekiyor
     ? '<span class="rez-uyari">Reservation required</span>'
@@ -17,7 +17,7 @@ function kartHTML(r) {
       <div class="kart-gorsel" aria-hidden="true">${mutfakGorseli(r)}</div>
       <div class="kart-govde">
         <div class="kart-ust">
-          <h2 class="kart-isim">${r.isim}</h2>
+          <h2 class="kart-isim${r.isim.length > 14 ? ' kart-isim-kucuk' : ''}">${r.isim}</h2>
           ${fiyatEtiketi(r.fiyat.segment, r.ulke)}
         </div>
         <p class="kart-yer">${r.semt} · ${r.mutfak.join(', ')}${mesafe}</p>

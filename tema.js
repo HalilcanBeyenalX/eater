@@ -44,7 +44,10 @@ function temaBoyutCSS(t) {
   .logo { font-size: calc(clamp(44px, 9vw, 88px) * ${oran('bBaslik')}); }
   .detay-isim { font-size: calc(clamp(30px, 5vw, 46px) * ${oran('bBaslik')}); }
   .panel h2 { font-size: ${px(25.6, 'bBaslik')}; }
-  .kart-isim, .profil-mekan { font-size: ${px(21, 'bBaslik')}; }
+  .kart-isim { font-size: ${px(30, 'bBaslik')}; }
+  .kart-isim-kucuk { font-size: ${px(22, 'bBaslik')}; }
+  .profil-mekan { font-size: ${px(21, 'bBaslik')}; }
+  .sekme, .hesap-kutusu a, .hesap-kutusu button { font-size: ${px(27, 'bBaslik')}; }
   .pasaport-baslik, .best-kutu h3, .bolum-baslik, .akis-baslik { font-size: ${px(22, 'bBaslik')}; }
   .akis-mekan { font-size: ${px(18, 'bBaslik')}; }
   .kisi-ad { font-size: ${px(24, 'bBaslik')}; }

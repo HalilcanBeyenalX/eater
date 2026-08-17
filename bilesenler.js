@@ -6,10 +6,12 @@ const FIYAT_ADLARI = { ucuz: 'Budget', orta: 'Mid-range', pahali: 'High-end' };
 
 // oduller[].tip -> kısa, rozete uygun etiket. Tanınmayan bir tip
 // asla ham `detay` metnine düşmez; "Award-winning" ile karşılanır.
+// Yıldızlar rehberdeki gibi sembolle gösterilir ("★★★ Michelin");
+// "Stars" kelimesi bilerek yok. Yıldızsız ödüller yıldız işareti almaz.
 const ODUL_ETIKETLERI = {
-  'michelin-yildiz': 'Michelin Star',
-  'michelin-2-yildiz': 'Michelin 2 Stars',
-  'michelin-3-yildiz': 'Michelin 3 Stars',
+  'michelin-yildiz': '★ Michelin',
+  'michelin-2-yildiz': '★★ Michelin',
+  'michelin-3-yildiz': '★★★ Michelin',
   'michelin-bib': 'Michelin Bib Gourmand',
   'michelin-secilmis': 'Michelin Guide selection',
   'michelin-yesil': 'Michelin Green Star',

@@ -144,7 +144,7 @@ body {
 .kart-gorsel svg { width: 96px; height: 72px; opacity: .92; }
 .kart:hover .kart-gorsel svg { opacity: 1; }
 
-.kart-govde { padding: 16px 18px 18px; }
+.kart-govde { padding: 16px 18px 13px; }
 
 .kart-ust {
   display: flex;
@@ -156,9 +156,14 @@ body {
 .kart-isim {
   margin: 0;
   font-family: var(--serif);
-  font-size: 21px;
+  font-size: 30px;
   font-weight: 700;
+  line-height: 1.15;
+  min-width: 0;
+  overflow-wrap: break-word;
 }
+/* Uzun isimler (14+ harf) küçük boyda kalır ki kart düzeni kaymasın. */
+.kart-isim-kucuk { font-size: 22px; }
 
 .kart-yer {
   margin: 4px 0 14px;
@@ -211,6 +216,17 @@ body {
 
 .rozet-yok .rozet-puan { color: var(--krem-silik); }
 
+/* Kartta işaretler tek satır: ödüller yan yana, rezervasyon uyarısı yer
+   kalmazsa üç noktayla kısalır (ödül asla kısalmaz). */
+.kart .isaretler {
+  flex-wrap: nowrap;
+  gap: 5px;
+}
+.kart .odul { flex: none; white-space: nowrap; }
+.kart .rez-uyari {
+  flex: 0 1 auto; min-width: 0;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
 .isaretler {
   display: flex;
   flex-wrap: wrap;
@@ -509,15 +525,17 @@ body {
 
 }
 
-/* --- Gezinme sekmeleri ve hesap kutusu --- */
+/* --- Gezinme sekmeleri ve hesap kutusu ---
+   Tüm gezinme yazıları aynı: 27px kalın (My profile / Log out dahil). */
 .gezinme { display: flex; gap: .25rem; justify-content: center; align-items: center;
   flex-wrap: wrap; margin-top: 1rem; }
 .sekme { padding: .45rem 1rem; border-radius: 999px; text-decoration: none;
-  color: inherit; opacity: .75; }
+  color: inherit; opacity: .75; font-size: 27px; font-weight: 700; }
 .sekme:hover { opacity: 1; }
-.sekme-aktif { background: rgba(255,255,255,.12); opacity: 1; font-weight: 600; }
+.sekme-aktif { background: rgba(255,255,255,.12); opacity: 1; }
 .hesap-kutusu { margin-left: .75rem; }
 .hesap-kutusu a, .hesap-kutusu button { font: inherit; color: inherit; background: none;
+  font-size: 27px; font-weight: 700;
   border: 1px solid rgba(255,255,255,.35); border-radius: 999px; padding: .4rem .9rem;
   cursor: pointer; text-decoration: none; }
 
