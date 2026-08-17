@@ -112,7 +112,11 @@ function temaTasarimCSS(t) {
     if (k.my != null) s.push(`margin-top: ${k.my}px !important`, `margin-bottom: ${k.my}px !important`);
     if ((k.tx || 0) !== 0 || (k.ty || 0) !== 0)
       s.push(`transform: translate(${k.tx || 0}px, ${k.ty || 0}px) !important`);
-    if (k.w > 0) s.push(`width: ${k.w}% !important`);
+    // Tutamaçla sürüklenen piksel boyutları yüzde genişliğe baskındır.
+    // flex: none şart — esnek kutularda (flex: 1) taban değer width'i ezer.
+    if (k.gen != null) s.push(`width: ${k.gen}px !important`, 'max-width: none !important', 'flex: 0 0 auto !important');
+    else if (k.w > 0) s.push(`width: ${k.w}% !important`);
+    if (k.yuk != null) s.push(`height: ${k.yuk}px !important`);
     if (k.br != null) s.push(`border-radius: ${k.br}px !important`);
     return s.length ? `${sec} { ${s.join('; ')}; }` : '';
   }).join('\n');
@@ -275,6 +279,10 @@ function temaOku() {
           if (Number.isFinite(deger) && deger >= enAz && deger <= enCok) k[alan] = deger;
         }
         if (['left', 'center', 'right'].includes(ham2.ta)) k.ta = ham2.ta;
+        // Sürükleme boyutları (piksel)
+        const gen = Number(ham2.gen), yuk = Number(ham2.yuk);
+        if (Number.isFinite(gen) && gen >= 24 && gen <= 2000) k.gen = Math.round(gen);
+        if (Number.isFinite(yuk) && yuk >= 12 && yuk <= 2000) k.yuk = Math.round(yuk);
         if (Object.keys(k).length > 0) t.ozel[sec] = k;
       }
     }
@@ -349,6 +357,16 @@ const TEMA_PANEL_CSS = `
   }
   #tasarimVurgu { border: 2px dashed #4da3ff; }
   #tasarimSecim { border: 2px solid #ffd457; box-shadow: 0 0 0 3px rgba(255,212,87,.25); }
+  /* Word usulü boyutlandırma tutamaçları — kutu tıklama geçirmez ama
+     tutamaçlar geçirir. */
+  #tasarimSecim .tutamac {
+    position: absolute; width: 14px; height: 14px;
+    background: #ffd457; border: 2px solid #1d1d1f; border-radius: 3px;
+    pointer-events: auto; touch-action: none;
+  }
+  #tasarimSecim .tutamac-sag { right: -9px; top: 50%; margin-top: -7px; cursor: ew-resize; }
+  #tasarimSecim .tutamac-alt { bottom: -9px; left: 50%; margin-left: -7px; cursor: ns-resize; }
+  #tasarimSecim .tutamac-kose { right: -9px; bottom: -9px; cursor: nwse-resize; }
   #tasarimPanel {
     position: fixed; bottom: 14px; right: 14px; z-index: 4001;
     width: min(300px, calc(100vw - 28px)); max-height: 60vh; overflow-y: auto;
@@ -476,6 +494,10 @@ function temaPanelKur() {
 
   const vurgu = document.createElement('div'); vurgu.id = 'tasarimVurgu';
   const secim = document.createElement('div'); secim.id = 'tasarimSecim';
+  secim.innerHTML = `
+    <span class="tutamac tutamac-sag" data-yon="sag" title="Drag to resize width"></span>
+    <span class="tutamac tutamac-alt" data-yon="alt" title="Drag to resize height"></span>
+    <span class="tutamac tutamac-kose" data-yon="kose" title="Drag to resize"></span>`;
   const denetci = document.createElement('div'); denetci.id = 'tasarimPanel';
   denetci.hidden = true;
   document.body.append(vurgu, secim, denetci);
@@ -560,6 +582,37 @@ function temaPanelKur() {
     kutuKonumla(secim, el);
     denetciyiCiz();
   }
+
+  // Word usulü sürükleyerek boyutlandırma: sağ tutamaç genişlik, alt tutamaç
+  // yükseklik, köşe ikisini birden. Değer, kuralın gen/yuk alanına piksel yazar.
+  let surukleme = null;
+  secim.querySelectorAll('.tutamac').forEach(tutamac => {
+    tutamac.addEventListener('pointerdown', e => {
+      if (!seciliEl) return;
+      e.preventDefault(); e.stopPropagation();
+      const r = seciliEl.getBoundingClientRect();
+      surukleme = { yon: tutamac.dataset.yon, bx: e.clientX, by: e.clientY, bw: r.width, bh: r.height };
+      try { tutamac.setPointerCapture(e.pointerId); } catch { /* sentetik olay */ }
+    });
+    tutamac.addEventListener('pointermove', e => {
+      if (!surukleme) return;
+      if (!t.ozel[seciliSec]) t.ozel[seciliSec] = {};
+      const k = t.ozel[seciliSec];
+      if (surukleme.yon !== 'alt')
+        k.gen = Math.max(24, Math.round(surukleme.bw + e.clientX - surukleme.bx));
+      if (surukleme.yon !== 'sag')
+        k.yuk = Math.max(12, Math.round(surukleme.bh + e.clientY - surukleme.by));
+      temaUygula(t);
+      kutuKonumla(secim, seciliEl);
+    });
+    const birak = () => {
+      if (!surukleme) return;
+      surukleme = null;
+      kaydet();
+    };
+    tutamac.addEventListener('pointerup', birak);
+    tutamac.addEventListener('pointercancel', birak);
+  });
 
   function tasarimAc() {
     tasarimAcik = true;
