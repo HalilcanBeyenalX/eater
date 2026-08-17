@@ -87,9 +87,11 @@ body {
   text-transform: uppercase;
 }
 
+/* Satırda 2 geniş kart: büyük isimler tek satıra rahat sığar, kutular
+   birebir eşit genişlikte (grid eşit paylaştırır). Dar ekranda tek sütun. */
 .liste {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(430px, 1fr));
   gap: 22px;
 }
 
@@ -153,17 +155,16 @@ body {
   gap: 12px;
 }
 
+/* TEK boy başlık — kartlar arasında fark olmaz; geniş kartta uzun isimler
+   de tek satıra sığar. break-word yok: kelime asla ortadan kırılmaz. */
 .kart-isim {
   margin: 0;
   font-family: var(--serif);
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 700;
   line-height: 1.15;
   min-width: 0;
-  overflow-wrap: break-word;
 }
-/* Uzun isimler (14+ harf) küçük boyda kalır ki kart düzeni kaymasın. */
-.kart-isim-kucuk { font-size: 22px; }
 
 .kart-yer {
   margin: 4px 0 14px;
@@ -525,19 +526,23 @@ body {
 
 }
 
-/* --- Gezinme sekmeleri ve hesap kutusu ---
-   Tüm gezinme yazıları aynı: 27px kalın (My profile / Log out dahil). */
-.gezinme { display: flex; gap: .25rem; justify-content: center; align-items: center;
+/* --- Gezinme ---
+   BEŞ öğe de (EATPLORE, ATE, EATGRAM, My profile, Log out) birebir aynı
+   kutu: EATPLORE hapı gibi yarı saydam zemin, 27px kalın, eşit aralık.
+   .hesap-kutusu display:contents ile çocuklarını doğrudan gezinme
+   flex'ine katar — aralıklar tek gap'ten gelir, fark oluşmaz. */
+.gezinme { display: flex; gap: 10px; justify-content: center; align-items: center;
   flex-wrap: wrap; margin-top: 1rem; }
-.sekme { padding: .45rem 1rem; border-radius: 999px; text-decoration: none;
-  color: inherit; opacity: .75; font-size: 27px; font-weight: 700; }
-.sekme:hover { opacity: 1; }
-.sekme-aktif { background: rgba(255,255,255,.12); opacity: 1; }
-.hesap-kutusu { margin-left: .75rem; }
-.hesap-kutusu a, .hesap-kutusu button { font: inherit; color: inherit; background: none;
-  font-size: 27px; font-weight: 700;
-  border: 1px solid rgba(255,255,255,.35); border-radius: 999px; padding: .4rem .9rem;
-  cursor: pointer; text-decoration: none; }
+.sekme,
+.hesap-kutusu a, .hesap-kutusu button {
+  font: inherit; font-size: 27px; font-weight: 700;
+  padding: .4rem 1.1rem; border: none; border-radius: 999px;
+  background: rgba(255, 255, 255, .10); color: inherit;
+  text-decoration: none; cursor: pointer; opacity: .9;
+}
+.sekme:hover, .hesap-kutusu a:hover, .hesap-kutusu button:hover { opacity: 1; }
+.sekme-aktif { background: rgba(255, 255, 255, .22); opacity: 1; }
+.hesap-kutusu { display: contents; }
 
 /* --- Panel, formlar ve ziyaret kartları (günlük/profil sayfaları) --- */
 .panel {

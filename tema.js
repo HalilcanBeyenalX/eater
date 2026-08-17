@@ -44,8 +44,7 @@ function temaBoyutCSS(t) {
   .logo { font-size: calc(clamp(44px, 9vw, 88px) * ${oran('bBaslik')}); }
   .detay-isim { font-size: calc(clamp(30px, 5vw, 46px) * ${oran('bBaslik')}); }
   .panel h2 { font-size: ${px(25.6, 'bBaslik')}; }
-  .kart-isim { font-size: ${px(30, 'bBaslik')}; }
-  .kart-isim-kucuk { font-size: ${px(22, 'bBaslik')}; }
+  .kart-isim { font-size: ${px(28, 'bBaslik')}; }
   .profil-mekan { font-size: ${px(21, 'bBaslik')}; }
   .sekme, .hesap-kutusu a, .hesap-kutusu button { font-size: ${px(27, 'bBaslik')}; }
   .pasaport-baslik, .best-kutu h3, .bolum-baslik, .akis-baslik { font-size: ${px(22, 'bBaslik')}; }
@@ -263,8 +262,10 @@ function temaOku() {
     }
     // Öğeye özel kurallar: seçici stil etiketi içine yazıldığından sıkı
     // doğrulanır — küme işareti/noktalı virgül içeren seçici reddedilir.
+    // ozelV2 bayrağı olmayan eski kayıtların kuralları BİLEREK atılır:
+    // ilk sürümdeki denemeler gezinmeyi kaydırıp tasarımı bozmuştu.
     t.ozel = {};
-    if (ham.ozel && typeof ham.ozel === 'object') {
+    if (ham.ozelV2 && ham.ozel && typeof ham.ozel === 'object') {
       for (const [sec, ham2] of Object.entries(ham.ozel)) {
         if (typeof sec !== 'string' || sec.length > 250 || /[{};<>@]/.test(sec)) continue;
         if (!ham2 || typeof ham2 !== 'object') continue;
@@ -401,6 +402,7 @@ function temaSecenekler(sozluk, secili) {
 function temaPanelKur() {
   const t = { ...TEMA_VARSAYILAN, ...(temaOku() ?? {}) };
   if (!t.ozel || typeof t.ozel !== 'object') t.ozel = {};
+  t.ozelV2 = true; // bundan sonraki kayıtlar temizlenmez
 
   const stil = document.createElement('style');
   stil.textContent = TEMA_PANEL_CSS;
