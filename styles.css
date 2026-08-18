@@ -292,20 +292,15 @@ body {
 .ya-temizle:hover { border-color: var(--vurgu); color: var(--vurgu); }
 .ya-mesaj { margin: 10px 2px 0; }
 .ya-liste { margin-top: 12px; }
-.zar-kutu {
-  margin-top: 14px; padding-top: 14px;
-  border-top: 1px dashed var(--kenar);
-  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
-}
 .zar-btn {
-  padding: 11px 24px; border: none; border-radius: 999px; cursor: pointer;
+  padding: 9px 18px; border: none; border-radius: 999px; cursor: pointer;
   background: var(--altin); color: #fff;
-  font: inherit; font-size: 16px; font-weight: 800; letter-spacing: .02em;
+  font: inherit; font-size: 14px; font-weight: 800; letter-spacing: .02em;
   box-shadow: 0 3px 10px rgba(0, 0, 0, .18);
   transition: transform .12s;
+  white-space: nowrap;
 }
 .zar-btn:hover { transform: scale(1.04); background: var(--altin-koyu); }
-.zar-not { margin: 0; }
 
 .filtreler {
   display: flex;

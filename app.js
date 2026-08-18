@@ -104,6 +104,9 @@ function secimKutusu(id, etiket, secenekler) {
 }
 
 function filtreleriCiz() {
+  // Görünür filtre çubuğu kaldırıldı; küre tıklamaları filtreDurumu üzerinden
+  // çalışmaya devam eder. Kap yoksa çizim atlanır.
+  if (!document.getElementById('filtreler')) return;
   const ulkeler = benzersiz(RESTORANLAR.map(r => r.ulke));
   const sehirler = benzersiz(RESTORANLAR
     .filter(r => !filtreDurumu.ulke || r.ulke === filtreDurumu.ulke)
