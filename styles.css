@@ -1069,13 +1069,14 @@ img.avatar-mini { object-fit: cover; }
 .best-ust .eater-puan { margin-left: auto; font-size: 12px; padding: 3px 10px; }
 .best-ust .eater-puan + .best-sil { margin-left: 8px; }
 
-/* Detay: topluluk EATER Point ortalaması — metrik kutularının altında. */
+/* Detay: topluluk EATER Point ortalaması — başlık kutusunun içinde,
+   sayfa açılır açılmaz görünür. */
 .eater-ozet {
-  display: flex; align-items: center; justify-content: center; gap: 10px;
-  margin: 16px 0 0;
+  display: flex; align-items: center; gap: 10px;
+  margin: 14px 0 0;
 }
 .eater-ozet .eater-buyuk { font-size: 16px; padding: 8px 18px; }
-.eater-not { color: var(--fildisi-sonuk); font-size: 13px; }
+.eater-not { color: var(--krem-sonuk); font-size: 13px; }
 .akis-yorum { margin: 8px 0 0; font-size: 14.5px; line-height: 1.5; }
 
 /* Beğeni + yorum: kartın altında minik hap butonlar, yanlarında sayılar. */

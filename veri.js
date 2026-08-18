@@ -288,7 +288,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 8.2,
-      "ozet": "An art-deco, two-story space with a vertical winter garden and a long bakery counter at the entrance, split across a garden, indoor hall and upper floor. Weekend breakfast hours get crowded and noisy, with no one greeting guests at the door.",
+      "ozet": "An art-deco, two-story space with a vertical winter garden and a long bakery counter at the entrance, split across a garden, indoor hall and upper floor.",
       "etiketler": [
         "airy",
         "art-deco",
@@ -365,7 +365,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 7.8,
-      "ozet": "The Etiler branch holds a Gault&Millau toque and built its name on handmade fresh pasta, stone-oven pizza, burrata and carpaccio. The tiramisu, lasagna and crème brûlée draw recurring criticism though, and some diners question whether the cooking is consistently Italian enough for the price."
+      "ozet": "The Etiler branch holds a Gault&Millau toque and built its name on handmade fresh pasta, stone-oven pizza, burrata and carpaccio."
     },
     "neYenir": [
       {
@@ -396,7 +396,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 8.3,
-      "ozet": "Set inside a villa with white tablecloths, wood paneling and dim lighting — elegant without feeling stiff. The tree-shaded garden, with a bar area in warmer months, is the best seat in the house, though it fills up fast and needs a reservation days in advance.",
+      "ozet": "Set inside a villa with white tablecloths, wood paneling and dim lighting — elegant without feeling stiff.",
       "etiketler": [
         "garden",
         "elegant",
@@ -481,7 +481,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 7.5,
-      "ozet": "Chef Çiğdem Seferoğlu built a name for sourcing directly from Anatolian producers, and Hodan holds two Gault&Millau toques and a best-brunch award. Recurring complaints call portions small for the price, and some dishes land as bland or overly oily."
+      "ozet": "Chef Çiğdem Seferoğlu built a name for sourcing directly from Anatolian producers, and Hodan holds two Gault&Millau toques and a best-brunch award."
     },
     "neYenir": [
       {
@@ -625,7 +625,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 8.0,
-      "ozet": "Elegant and high-energy, built as much around spectacle as dinner — the fire show and Salt Bae's signature salting move turn a meal into a performance. This is the brand's original branch, opened in 2010. Some find the luxury-car valet and celebrity-photo marketing over the top, and seating can get chaotic on busy nights.",
+      "ozet": "Elegant and high-energy, built as much around spectacle as dinner — the fire show and Salt Bae's signature salting move turn a meal into a performance. This is the brand's original branch, opened in 2010.",
       "etiketler": [
         "luxury",
         "glamorous",
@@ -714,7 +714,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 8.0,
-      "ozet": "Home to what's considered Turkey's first sushi bar, opened in 1999, alongside meats dry-aged in-house and grilled over charcoal. The Sunset Fillet and the beef cheek are regular favorites. Quality has been known to fluctuate though, with occasional complaints about inconsistent portions and less-than-fresh sushi."
+      "ozet": "Home to what's considered Turkey's first sushi bar, opened in 1999, alongside meats dry-aged in-house and grilled over charcoal. The Sunset Fillet and the beef cheek are regular favorites."
     },
     "neYenir": [
       {
@@ -745,7 +745,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 9.2,
-      "ozet": "Perched above the Bosphorus with a terrace view that's genuinely one of the city's best, the evening unfolds in layers — bar, main dining room, then the late-night Sunset After. The one recurring frustration is seating: some guests with reservations still end up placed away from the view.",
+      "ozet": "Perched above the Bosphorus with a terrace view that's genuinely one of the city's best, the evening unfolds in layers — bar, main dining room, then the late-night Sunset After.",
       "etiketler": [
         "bosphorus-view",
         "terrace",
@@ -762,7 +762,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 8.0,
-      "ozet": "This team won MICHELIN's Service Award in 2023 for an old-school hospitality style built around guest comfort, and it shows on a good night. Recent visits have been rockier though, with reports of long waits at the bar despite reservations and billing mix-ups on pricier items.",
+      "ozet": "This team won MICHELIN's Service Award in 2023 for an old-school hospitality style built around guest comfort, and it shows on a good night.",
       "artilar": [
         "MICHELIN Guide Istanbul Service Award (2023 selection, presented with Mastercard)",
         "Gault&Millau Turkey's Contribution to the Industry and Honor awards",
@@ -839,7 +839,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 7.2,
-      "ozet": "The fish soup, grilled sea bass and grilled octopus are the standout orders. Reviews split hard on the rest of the kitchen though — plenty call it mediocre and accuse the restaurant of coasting on its view rather than its cooking."
+      "ozet": "The fish soup, grilled sea bass and grilled octopus are the standout orders."
     },
     "neYenir": [
       {
@@ -870,7 +870,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 9.0,
-      "ozet": "Right on the Bosphorus beneath the Fatih Sultan Mehmet Bridge, with guests arriving from Rumeli Hisarı ferried over by the restaurant's own boat. Even its harshest critics agree the view is spectacular, especially at sunset — though it varies noticeably by table, and the interior itself feels dated.",
+      "ozet": "Right on the Bosphorus beneath the Fatih Sultan Mehmet Bridge, with guests arriving from Rumeli Hisarı ferried over by the restaurant's own boat.",
       "etiketler": [
         "bosphorus-view",
         "seaside",
@@ -887,7 +887,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 7.3,
-      "ozet": "Staff are friendly and attentive, but the extras add up fast — a per-person cover charge, a service fee and a separate valet charge all get tacked onto the bill, which many read as a forced tip. There have been complaints about valet staff favoring flashier cars and about reaching the restaurant by phone at all.",
+      "ozet": "Staff are friendly and attentive, but the extras add up fast — a per-person cover charge, a service fee and a separate valet charge all get tacked onto the bill, which many read as a forced tip.",
       "artilar": [
         "Free boat service departing from Rumeli Hisarı (official description and Google reviews)",
         "Friendly and attentive staff (Zomato/mekan.com review roundups)",
@@ -962,7 +962,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 8.2,
-      "ozet": "Mikla holds a MICHELIN star and three Gault&Millau toques, built on a tightly composed tasting menu — the fish-and-bread course and slow-cooked lamb are highlights, backed by an extensive wine list. Consistency has been a recurring question over the years, with some visits landing well below the restaurant's best nights. Majority ownership passed to Fenix Yapı in 2023, though founding chef Mehmet Gürs's team reportedly stayed in place."
+      "ozet": "Mikla holds a MICHELIN star and three Gault&Millau toques, built on a tightly composed tasting menu — the fish-and-bread course and slow-cooked lamb are highlights, backed by an extensive wine list."
     },
     "neYenir": [
       {
@@ -993,7 +993,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 9.0,
-      "ozet": "Set on the top two floors of The Marmara Pera, with a panoramic Istanbul view that peaks at sunset and a clean mid-century interior. It reads as a serious dining room rather than a scene. Some local guests have reported trouble securing the best tables despite reservations made well ahead, with a sense that view seats skew toward tourists.",
+      "ozet": "Set on the top two floors of The Marmara Pera, with a panoramic Istanbul view that peaks at sunset and a clean mid-century interior. It reads as a serious dining room rather than a scene.",
       "etiketler": [
         "rooftop",
         "panoramic-view",
@@ -1009,7 +1009,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 8.7,
-      "ozet": "Staff are consistently praised as attentive and genuinely engaged, often sending out off-menu extras. The service charge added on top of the bill draws some criticism, and the same table-allocation concerns from the dining room carry over here.",
+      "ozet": "Staff are consistently praised as attentive and genuinely engaged, often sending out off-menu extras.",
       "artilar": [
         "Attentive, knowledgeable, non-intrusive service (Google reviews and Ekşi Sözlük)",
         "Off-menu extras and guidance on wine pairing (Ekşi Sözlük reviews)",
@@ -1084,7 +1084,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 8.0,
-      "ozet": "Neolokal holds a MICHELIN star, four Gault&Millau toques — the country's second-highest score, just behind TURK Fatih Tutak — and its sommelier has won a national award. The lamb, prawn and dessert courses draw the strongest praise. Some diners feel the tasting menu doesn't fully live up to its star, pointing to overpowering spice work or lean portions on certain courses."
+      "ozet": "Neolokal holds a MICHELIN star, four Gault&Millau toques — the country's second-highest score, just behind TURK Fatih Tutak — and its sommelier has won a national award. The lamb, prawn and dessert courses draw the strongest praise."
     },
     "neYenir": [
       {
@@ -1115,7 +1115,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 8.5,
-      "ozet": "Set inside SALT Galata, the historic Ottoman Bank building, with large windows and a terrace looking out over the historic peninsula toward Hagia Sophia — especially striking at sunset. The room gets loud once it fills up, and the tablet-and-headphones video accompanying one course strikes some diners as an unnecessary gimmick.",
+      "ozet": "Set inside SALT Galata, the historic Ottoman Bank building, with large windows and a terrace looking out over the historic peninsula toward Hagia Sophia — especially striking at sunset.",
       "etiketler": [
         "historic-building",
         "view",
@@ -1131,7 +1131,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 7.8,
-      "ozet": "Service is generally described as polished and well-trained, with table cards that walk guests through each course. Some find the welcome overly formal rather than warm, and there have been isolated mishaps — a wrong order, a spilled dish. The palate-cleansing water being billed separately during the tasting menu is a recurring gripe, as is the credit-card pre-authorization required to book.",
+      "ozet": "Service is generally described as polished and well-trained, with table cards that walk guests through each course. Some find the welcome overly formal rather than warm, and there have been isolated mishaps — a wrong order, a spilled dish.",
       "artilar": [
         "Professional, well-trained service team (detailed Ekşi Sözlük review)",
         "Item-explanation cards presented tableside (Ekşi Sözlük)",
@@ -1214,7 +1214,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 9.0,
-      "ozet": "One of the most consistently loved kitchens on this list: the mantı, sourdough bread with smoked butter and hummus have drawn praise for over a decade with barely a bad word said. Chef Civan Er's approach gives Turkish flavors a fresher, lighter quality. The only real gripe is that the tasting menu can leave you overly full, with the closing katmer felt as one course too many."
+      "ozet": "One of the most consistently loved kitchens on this list: the mantı, sourdough bread with smoked butter and hummus have drawn praise for over a decade with barely a bad word said."
     },
     "neYenir": [
       {
@@ -1245,7 +1245,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 8.7,
-      "ozet": "Warm, intimate and understated on Kumbaracı Yokuşu — dim lighting, green table lamps and an intimate dining room split into a glass-fronted area, the main room and a back room. It runs as a neighborhood lunch spot by day and shifts into tasting-menu mode at night. Small and popular enough that an evening table without a reservation is close to impossible.",
+      "ozet": "Warm, intimate and understated on Kumbaracı Yokuşu — dim lighting, green table lamps and an intimate dining room split into a glass-fronted area, the main room and a back room.",
       "etiketler": [
         "intimate",
         "dim",
@@ -1329,7 +1329,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 6.8,
-      "ozet": "The lobster linguine, octopus and tuna starter get consistent praise, and the chicken main has its fans too. Consistency is the issue — some visits land as mediocre, and one reviewer's supposedly prime ribeye came out extremely tough."
+      "ozet": "The lobster linguine, octopus and tuna starter get consistent praise, and the chicken main has its fans too."
     },
     "neYenir": [
       {
@@ -1360,7 +1360,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 7.5,
-      "ozet": "An art-deco room inside the Palais Garnier building, with live music and evening entertainment that turns dinner into something closer to a show. It's genuinely festive, but the noise can drown out conversation — the later evening sitting is where the real energy is.",
+      "ozet": "An art-deco room inside the Palais Garnier building, with live music and evening entertainment that turns dinner into something closer to a show.",
       "etiketler": [
         "historic-building",
         "lively",
@@ -1448,7 +1448,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 6.0,
-      "ozet": "When it's on, dishes like the trofie with pistachio pesto and the tuna linguine come out well, and the tiramisu gets real praise. When it's off, pasta arrives lukewarm or undercooked and under-seasoned — a recurring enough pattern that consistency is the venue's clearest weakness. Portions also draw complaints relative to the price."
+      "ozet": "When it's on, dishes like the trofie with pistachio pesto and the tuna linguine come out well, and the tiramisu gets real praise."
     },
     "neYenir": [
       {
@@ -1495,7 +1495,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 5.5,
-      "ozet": "Wait times are the biggest complaint — hour-plus waits have been reported for something as simple as a dessert or a glass of water. The restaurant also enforces a minimum of one main course per person, and there have been reports of an accessibility request being mishandled.",
+      "ozet": "Wait times are the biggest complaint — hour-plus waits have been reported for something as simple as a dessert or a glass of water.",
       "artilar": [
         "Staff described as friendly once seated (multiple reviews)",
         "Service quality reported to improve over the course of a longer visit (Jun 2026 review)"
@@ -1572,7 +1572,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 7.8,
-      "ozet": "The whole draw is the steak-frites-sauce combination, and it's what most diners come back for — the meat and the Café-de-Paris-style sauce paired with fries. A couple of visits have landed badly on both meat quality and the sauce, but it's the exception. Worth noting this is a separate, later (1974) establishment from the original Le Relais de l'Entrecôte, though reviewers rate it on par."
+      "ozet": "The whole draw is the steak-frites-sauce combination, and it's what most diners come back for — the meat and the Café-de-Paris-style sauce paired with fries."
     },
     "neYenir": [
       {
@@ -1603,7 +1603,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 7.2,
-      "ozet": "A classic, bustling Parisian brasserie with art nouveau mirrors and Mucha-style posters — lively yet relaxed. The catch is that it takes no reservations, so expect to queue, and some diners have complained the line isn't always managed fairly.",
+      "ozet": "A classic, bustling Parisian brasserie with art nouveau mirrors and Mucha-style posters — lively yet relaxed.",
       "etiketler": [
         "classic",
         "lively",
@@ -1680,7 +1680,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 9.8,
-      "ozet": "Dabiz Muñoz's three-MICHELIN-star restaurant is one of Madrid's most unusual gastronomic experiences, blending Spanish ingredients with techniques and influences from Asia, Mexico and beyond. Expect a tasting menu built on surprise and theater — unexpected combinations and textures rather than familiar comfort food."
+      "ozet": "Dabiz Muñoz's three-MICHELIN-star restaurant is one of Madrid's most unusual gastronomic experiences, blending Spanish ingredients with techniques and influences from Asia, Mexico and beyond."
     },
     "neYenir": [
       {
@@ -1791,7 +1791,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 8.5,
-      "ozet": "The signature cochinillo asado — roast suckling pig from the historic wood-fired oven — along with roast lamb define the kitchen. Opinions split on whether the cooking itself lives up to the legend, or whether the draw is really the history and atmosphere around it."
+      "ozet": "The signature cochinillo asado — roast suckling pig from the historic wood-fired oven — along with roast lamb define the kitchen."
     },
     "neYenir": [
       {
@@ -1838,7 +1838,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 8.3,
-      "ozet": "With a very high volume of international visitors, service leans more structured than personal. Staff are generally experienced and friendly, sometimes sharing bits of the restaurant's history, though peak hours can feel distinctly touristic.",
+      "ozet": "With a very high volume of international visitors, service leans more structured than personal.",
       "artilar": [
         "Experienced staff",
         "Strong familiarity with international guests",
@@ -1896,7 +1896,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 9.0,
-      "ozet": "Spanish ingredients presented in a modern, playful format — seafood, meat and minimally manipulated sharing plates built around presentation and ingredient quality. It sits comfortably between Madrid's traditional restaurants and its tasting-menu destinations: more contemporary than Botín, far less formal (and expensive) than DiverXO."
+      "ozet": "Spanish ingredients presented in a modern, playful format — seafood, meat and minimally manipulated sharing plates built around presentation and ingredient quality."
     },
     "neYenir": [
       {
@@ -2000,7 +2000,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 9.9,
-      "ozet": "Run by Oriol Castro, Eduard Xatruch and Mateu Casañas — all former members of Ferran Adrià's elBulli team — Disfrutar holds three MICHELIN stars for highly technical, creative Mediterranean cooking. Dishes play with shape, texture and temperature while keeping flavors recognizable, served across Classic and Festival tasting formats. Reviews consistently praise the precision and the sense of a carefully built progression."
+      "ozet": "Run by Oriol Castro, Eduard Xatruch and Mateu Casañas — all former members of Ferran Adrià's elBulli team — Disfrutar holds three MICHELIN stars for highly technical, creative Mediterranean cooking."
     },
     "neYenir": [
       {
@@ -2108,7 +2108,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 9.0,
-      "ozet": "From the same chef team behind Disfrutar — Oriol Castro, Eduard Xatruch and Mateu Casañas — but considerably more relaxed. 'Compartir' means 'to share': the menu is built around dishes meant for the table rather than a formal tasting sequence, and the seafood, tuna and brioche preparations are particular favorites."
+      "ozet": "From the same chef team behind Disfrutar — Oriol Castro, Eduard Xatruch and Mateu Casañas — but considerably more relaxed."
     },
     "neYenir": [
       {
@@ -2219,7 +2219,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 8.1,
-      "ozet": "Classic Catalan cooking — stews, cannelloni, roast meats, fish dishes and traditional Catalan desserts. Reviews are more mixed than at Barcelona's elite tables, so it's best approached as a historic local institution rather than a top culinary destination."
+      "ozet": "Classic Catalan cooking — stews, cannelloni, roast meats, fish dishes and traditional Catalan desserts."
     },
     "neYenir": [
       {
@@ -2322,7 +2322,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 8.4,
-      "ozet": "Polished Italian comfort food rather than experimental cooking — arancini, ossobuco, linguine alle vongole, carpaccio and Milanese-style dishes done well. The reputation rests as much on the scene and setting as on culinary ambition; think strong lifestyle restaurant rather than top gastronomic destination."
+      "ozet": "Polished Italian comfort food rather than experimental cooking — arancini, ossobuco, linguine alle vongole, carpaccio and Milanese-style dishes done well."
     },
     "neYenir": [
       {
@@ -2358,7 +2358,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 9.7,
-      "ozet": "The main reason to come: high above Avenue Montaigne with Eiffel Tower views and a glamorous Italian-palazzo look — golden Sienna marble, travertine and the Bellini Bar. Live music and a fashionable crowd keep it lively rather than intimate.",
+      "ozet": "The main reason to come: high above Avenue Montaigne with Eiffel Tower views and a glamorous Italian-palazzo look — golden Sienna marble, travertine and the Bellini Bar.",
       "etiketler": [
         "eiffel-view",
         "luxury",
@@ -2433,7 +2433,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 8.5,
-      "ozet": "A modern seafood restaurant built around platters, ceviche, sashimi, lobster, sole and turbot. Raw seafood and shellfish get the strongest praise; some cooked mains draw more moderate reactions. The kitchen holds its own, but the view is an equally big part of the draw."
+      "ozet": "A modern seafood restaurant built around platters, ceviche, sashimi, lobster, sole and turbot. Raw seafood and shellfish get the strongest praise; some cooked mains draw more moderate reactions."
     },
     "neYenir": [
       {
@@ -2541,7 +2541,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 8.7,
-      "ozet": "Italian and Mediterranean cooking with the polish that fits its setting beside the Musée des Arts Décoratifs and the Tuileries — pastas, vegetables, seafood, grilled meats and Italian-inspired desserts, more relaxed than haute cuisine. Simplicity and ingredient quality are the strengths, though busy nights can bring some inconsistency."
+      "ozet": "Italian and Mediterranean cooking with the polish that fits its setting beside the Musée des Arts Décoratifs and the Tuileries — pastas, vegetables, seafood, grilled meats and Italian-inspired desserts, more relaxed than haute cuisine."
     },
     "neYenir": [
       {
@@ -2648,7 +2648,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 8.5,
-      "ozet": "Modern French dining built on high-quality products — grilled meats, fish and polished sharing dishes, generally well executed. This isn't purely chef-driven gastronomy though; as with other Paris Society venues, the design and clientele are as central to the appeal as the kitchen."
+      "ozet": "Modern French dining built on high-quality products — grilled meats, fish and polished sharing dishes, generally well executed."
     },
     "neYenir": [
       {
@@ -2752,7 +2752,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 8.0,
-      "ozet": "A fashionable Italian restaurant built on familiar, comfort-driven dishes — pasta, seafood and meat — rather than highly technical cooking. Reviews are unusually split: some diners love the food, others question the value and consistency."
+      "ozet": "A fashionable Italian restaurant built on familiar, comfort-driven dishes — pasta, seafood and meat — rather than highly technical cooking."
     },
     "neYenir": [
       {
@@ -2859,7 +2859,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 8.2,
-      "ozet": "Not primarily a destination for experimental cooking — the menu is polished luxury comfort food and long-standing house favorites. The food can be genuinely good, but the real draw is the complete Costes experience: the music, the crowd, the design."
+      "ozet": "Not primarily a destination for experimental cooking — the menu is polished luxury comfort food and long-standing house favorites."
     },
     "neYenir": [
       {
@@ -2968,7 +2968,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 8.4,
-      "ozet": "A luxury Parisian social restaurant mixing French classics with international dishes — tuna tartare, burrata, matchstick fries and a well-known sea bass curry. The kitchen is reliably appealing, but the fashionable Avenue Montaigne crowd and the people-watching are just as much the point."
+      "ozet": "A luxury Parisian social restaurant mixing French classics with international dishes — tuna tartare, burrata, matchstick fries and a well-known sea bass curry."
     },
     "neYenir": [
       {
@@ -3072,7 +3072,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 7.9,
-      "ozet": "The current kitchen focuses on classic French luxury dining. Some dishes land well, others are criticized as underwhelming relative to the price and the weight of the name."
+      "ozet": "The current kitchen focuses on classic French luxury dining."
     },
     "neYenir": [
       {
@@ -3103,7 +3103,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 9.6,
-      "ozet": "The preserved Art Nouveau interiors are the real reason to come — ornate decoration, live music and Belle Époque history create an atmosphere unlike almost any modern restaurant. For guests interested in old Paris, the room itself is the experience.",
+      "ozet": "The preserved Art Nouveau interiors are the real reason to come — ornate decoration, live music and Belle Époque history create an atmosphere unlike almost any modern restaurant.",
       "etiketler": [
         "historic-building",
         "art-nouveau",
@@ -3205,7 +3205,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 9.5,
-      "ozet": "On the fourth floor of The Madrid EDITION, with a rooftop terrace, abundant greenery and views across central Madrid. The neighboring pool and greenhouse-like interior make it one of the city's strongest hotel-restaurant settings, especially at sunset.",
+      "ozet": "On the fourth floor of The Madrid EDITION, with a rooftop terrace, abundant greenery and views across central Madrid.",
       "etiketler": [
         "rooftop",
         "view",
@@ -3277,7 +3277,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 9.5,
-      "ozet": "One of Madrid's strongest modern steakhouses: brothers Martín and Joaquín Narvaiz bring Argentine grilling with a serious focus on sourcing, aging and precise fire control. The meat program is the main event, but starters and vegetable dishes get just as much attention. Listed in the MICHELIN Guide."
+      "ozet": "One of Madrid's strongest modern steakhouses: brothers Martín and Joaquín Narvaiz bring Argentine grilling with a serious focus on sourcing, aging and precise fire control."
     },
     "neYenir": [
       {
@@ -3389,7 +3389,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 9.2,
-      "ozet": "A meat-driven restaurant built around Uruguayan fire cooking — premium cuts grilled over oak and vine wood give the menu a clear identity centered on smoke and live fire. Grilled vegetables, sweetbreads, empanadas and desserts round things out. Popular with chefs and diners after a serious grill without the scale of a big steakhouse."
+      "ozet": "A meat-driven restaurant built around Uruguayan fire cooking — premium cuts grilled over oak and vine wood give the menu a clear identity centered on smoke and live fire."
     },
     "neYenir": [
       {
@@ -3596,7 +3596,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 9.4,
-      "ozet": "Chef Cenk Debensason combines contemporary European technique with a personal, cosmopolitan style, moving comfortably between seafood, pasta and meat rather than sticking to a strictly Turkish identity. The tuna preparations and duck-filled pasta are frequent favorites. Holds one MICHELIN star."
+      "ozet": "Chef Cenk Debensason combines contemporary European technique with a personal, cosmopolitan style, moving comfortably between seafood, pasta and meat rather than sticking to a strictly Turkish identity."
     },
     "neYenir": [
       {
@@ -3706,7 +3706,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 8.6,
-      "ozet": "One of Istanbul's long-running luxury dining institutions — modern Turkish and Mediterranean cooking with premium seafood, sushi-inspired dishes, grills and international classics. The food holds up well, though the location and scene are just as central to the appeal."
+      "ozet": "One of Istanbul's long-running luxury dining institutions — modern Turkish and Mediterranean cooking with premium seafood, sushi-inspired dishes, grills and international classics."
     },
     "neYenir": [
       {
@@ -3810,7 +3810,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 9.1,
-      "ozet": "Chef Fatih Tutak's more relaxed restaurant at The Peninsula Istanbul, inspired by the cuisines connected along the historic Silk Road — Turkish, Central Asian and East Asian flavors. Wood-fired dishes, spice work and manti-inspired preparations are ambitious but built for sharing. Listed in the MICHELIN Guide."
+      "ozet": "Chef Fatih Tutak's more relaxed restaurant at The Peninsula Istanbul, inspired by the cuisines connected along the historic Silk Road — Turkish, Central Asian and East Asian flavors."
     },
     "neYenir": [
       {
@@ -3920,7 +3920,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 9.8,
-      "ozet": "One of the most important restaurants in contemporary Turkish gastronomy: Fatih Tutak interprets Turkish ingredients, childhood memories and regional culinary traditions through modern fine-dining technique. Many courses are built around a story or a regional product rather than simply modernizing a familiar recipe. Holds two MICHELIN stars, and the tasting menu changes seasonally."
+      "ozet": "One of the most important restaurants in contemporary Turkish gastronomy: Fatih Tutak interprets Turkish ingredients, childhood memories and regional culinary traditions through modern fine-dining technique."
     },
     "neYenir": [
       {
@@ -4798,7 +4798,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 9.5,
-      "ozet": "The Mouriya group's Gion teppanyaki room, built around certified premium-grade Kobe beef — sirloin, filet and three-cut tasting courses cooked at the counter, rounded out with seasonal fish and teppanyaki vegetables. The Mouriya name has been associated with Kobe beef since 1885."
+      "ozet": "The Mouriya group's Gion teppanyaki room, built around certified premium-grade Kobe beef — sirloin, filet and three-cut tasting courses cooked at the counter, rounded out with seasonal fish and teppanyaki vegetables."
     },
     "neYenir": [
       {
@@ -6219,7 +6219,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 9.9,
-      "ozet": "Gaggan Anand's progressive Indian tasting menu is one of the world's most talked-about meals — playful, provocative and eaten partly with your hands, from the Yoghurt Explosion to Lick It Up. Holds a Michelin star and was named the best restaurant in Thailand."
+      "ozet": "Gaggan Anand's progressive Indian tasting menu is one of the world's most talked-about meals — playful, provocative and eaten partly with your hands, from the Yoghurt Explosion to Lick It Up."
     },
     "neYenir": [
       {
@@ -7159,7 +7159,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 9.3,
-      "ozet": "Chicago's only three-Michelin-starred kitchen, built around a daily-changing farm-to-table tasting menu that leans into bold, unexpected pairings — a crab course and a wagyu-and-truffle-doughnut plate are the ones reviewers keep returning to. Praise for the cooking is close to unanimous. A smaller but recurring thread of opinion argues the ambition occasionally outpaces coherence, especially since the third star arrived."
+      "ozet": "Chicago's only three-Michelin-starred kitchen, built around a daily-changing farm-to-table tasting menu that leans into bold, unexpected pairings — a crab course and a wagyu-and-truffle-doughnut plate are the ones reviewers keep returning to."
     },
     "neYenir": [
       {
@@ -7269,7 +7269,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 8.9,
-      "ozet": "A pescatarian, Senegalese-rooted tasting menu that threads Louisiana ingredients through West African technique and family-style courses; the concept won a James Beard Award for Best New Restaurant in 2024. The cooking draws consistent praise for depth of flavor and its personal, storytelling structure, with the seafood and rice courses singled out most often. Portions run intentionally small given the multi-course format."
+      "ozet": "A pescatarian, Senegalese-rooted tasting menu that threads Louisiana ingredients through West African technique and family-style courses; the concept won a James Beard Award for Best New Restaurant in 2024."
     },
     "neYenir": [
       {
@@ -7290,7 +7290,7 @@ const RESTORANLAR = [
     ],
     "ambiyans": {
       "puan": 8.6,
-      "ozet": "Set inside a traditional New Orleans house turned intimate dining room, with some courses served family-style around a shared table. Reviewers consistently describe the room as warm and inviting rather than formal.",
+      "ozet": "Set inside a traditional New Orleans house turned intimate dining room, with some courses served family-style around a shared table.",
       "etiketler": [
         "intimate",
         "historic-building",
@@ -7370,7 +7370,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 9.1,
-      "ozet": "Progressive Levantine, live-fire cooking rooted in the chef's Palestinian heritage — crisped kibbeh, fresh-baked pita and a duck-and-foie maqluba are the dishes reviewers return to most. The chef holds a national Outstanding Chef honor, and the restaurant's Michelin star has held every year since it first arrived. Complaints are rare and center more on how hard the room is to book than on the food itself."
+      "ozet": "Progressive Levantine, live-fire cooking rooted in the chef's Palestinian heritage — crisped kibbeh, fresh-baked pita and a duck-and-foie maqluba are the dishes reviewers return to most."
     },
     "neYenir": [
       {
@@ -7472,7 +7472,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 9.6,
-      "ozet": "A globally recognized tasting-menu destination for contemporary Korean cooking, built around banchan-inspired ideas and precise, seasonal technique. It is consistently cited as one of the hardest reservations in the city, and the cooking is treated as a genuine reference point rather than a passing trend. Criticism is rare and mostly directed at the rigidity of the nonrefundable booking system rather than the food."
+      "ozet": "A globally recognized tasting-menu destination for contemporary Korean cooking, built around banchan-inspired ideas and precise, seasonal technique."
     },
     "neYenir": [
       {
@@ -7578,7 +7578,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 9.5,
-      "ozet": "Chef César Ramirez's first solo project after leaving a three-Michelin-starred kitchen behind, built around exceptionally sourced, seafood-forward tasting courses. It earned two Michelin stars within five months of opening, a remarkably fast turnaround for the Guide. The consensus across coverage is near-uniform praise for ingredient quality and precision, with little in the way of recurring criticism yet on record."
+      "ozet": "Chef César Ramirez's first solo project after leaving a three-Michelin-starred kitchen behind, built around exceptionally sourced, seafood-forward tasting courses."
     },
     "neYenir": [
       {
@@ -7681,7 +7681,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 9.0,
-      "ozet": "Southern Thai cooking built around the chef's own family recipes, named for her mother; the kitchen has won a national Best Chef award and remains a nominee for the country's top restaurant honor. Coverage consistently highlights bold, layered spicing and dishes rarely found on other Thai menus in the city. There is little recurring criticism in the coverage reviewed."
+      "ozet": "Southern Thai cooking built around the chef's own family recipes, named for her mother; the kitchen has won a national Best Chef award and remains a nominee for the country's top restaurant honor."
     },
     "neYenir": [
       {
@@ -7783,7 +7783,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 8.8,
-      "ozet": "A 1937 bistro revived by the founding chefs of Balthazar and Minetta Tavern, serving Escoffier-era classics played straight rather than reinvented; the revival won a 2025 James Beard Award for Outstanding Restaurateur. Reviewers describe the frog legs as having reached cult status, alongside praise for the onion soup and duck. Coverage skews strongly positive, with little recurring criticism found."
+      "ozet": "A 1937 bistro revived by the founding chefs of Balthazar and Minetta Tavern, serving Escoffier-era classics played straight rather than reinvented; the revival won a 2025 James Beard Award for Outstanding Restaurateur."
     },
     "neYenir": [
       {
@@ -7884,7 +7884,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 9.7,
-      "ozet": "A three-Michelin-star seafood institution built on a 'unilateral cooking method' that treats fish with exacting, minimal-intervention technique. The tuna carpaccio with foie gras has stayed on the menu for decades and remains the dish most cited by reviewers. Praise is close to universal; the cooking is treated as a benchmark rather than a matter of debate."
+      "ozet": "A three-Michelin-star seafood institution built on a 'unilateral cooking method' that treats fish with exacting, minimal-intervention technique."
     },
     "neYenir": [
       {
@@ -7985,7 +7985,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 9.0,
-      "ozet": "Chef Paul Carmichael's personal take on Caribbean cuisine, served as a tasting menu in the former Momofuku Ko space; the restaurant has been named a top new-restaurant pick in multiple year-end lists. Dishes like the goat curry and plantain-and-caviar course are cited most consistently across coverage. No recurring criticism emerged from the sources reviewed."
+      "ozet": "Chef Paul Carmichael's personal take on Caribbean cuisine, served as a tasting menu in the former Momofuku Ko space; the restaurant has been named a top new-restaurant pick in multiple year-end lists."
     },
     "neYenir": [
       {
@@ -8096,7 +8096,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 9.6,
-      "ozet": "A kaiseki-framed tasting menu built almost entirely from the restaurant's own 24-acre farm, changing daily based on what is harvested rather than a fixed seasonal plan. Reviewers consistently rank the cooking among the most refined in the country, with the recurring hassun course singled out as a highlight. The main critical thread in coverage concerns cost rather than execution."
+      "ozet": "A kaiseki-framed tasting menu built almost entirely from the restaurant's own 24-acre farm, changing daily based on what is harvested rather than a fixed seasonal plan."
     },
     "neYenir": [
       {
@@ -8138,7 +8138,7 @@ const RESTORANLAR = [
     },
     "servis": {
       "puan": 9.5,
-      "ozet": "Staff are described as warm, knowledgeable and extremely professional throughout the entire stay, without exception in the coverage reviewed. The one recurring complaint concerns the clarity of service-charge and gratuity disclosures rather than staff behavior.",
+      "ozet": "Staff are described as warm, knowledgeable and extremely professional throughout the entire stay, without exception in the coverage reviewed.",
       "artilar": [
         "Warm, highly professional, knowledgeable staff throughout the stay"
       ],
@@ -8199,7 +8199,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 9.4,
-      "ozet": "The first Korean restaurant outside South Korea to hold three Michelin stars, opening with an elaborate banchan presentation before moving into modern Korean courses. Reviewers consistently praise the creativity and technical precision of the cooking. Service is called professional and largely error-free, with only isolated pacing hiccups noted."
+      "ozet": "The first Korean restaurant outside South Korea to hold three Michelin stars, opening with an elaborate banchan presentation before moving into modern Korean courses."
     },
     "neYenir": [
       {
@@ -8298,7 +8298,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 9.1,
-      "ozet": "A 31-seat seafood counter above sister restaurant Claud, built around a raw-bar 'Ice Box' and a short, technique-driven menu; it has been a finalist for the country's top new-restaurant honor. Ingredient quality draws consistent, strong praise across coverage, with the whole lobster and oyster confit mentioned most often. No significant recurring food criticism was found."
+      "ozet": "A 31-seat seafood counter above sister restaurant Claud, built around a raw-bar 'Ice Box' and a short, technique-driven menu; it has been a finalist for the country's top new-restaurant honor."
     },
     "neYenir": [
       {
@@ -8407,7 +8407,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 9.0,
-      "ozet": "Opened by Emeril Lagasse in 1990 and now led by his son E.J. Lagasse, the kitchen reinterprets New Orleans Creole flavor at a global fine-dining level while keeping two dishes that have run since opening night: a smoked salmon cheesecake starter and a banana pudding finish. The chef was named the region's top young chef by Michelin in the inaugural American South guide. Coverage is strongly positive with no significant recurring complaints found."
+      "ozet": "Opened by Emeril Lagasse in 1990 and now led by his son E.J. Lagasse, the kitchen reinterprets New Orleans Creole flavor at a global fine-dining level while keeping two dishes that have run since opening night: a smoked salmon cheesecake starter and a banana pudding finish."
     },
     "neYenir": [
       {
@@ -8513,7 +8513,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 9.0,
-      "ozet": "A walk-in-only seafood spot built on daily-changing raw bar, starter and entree offerings sourced directly from local fishermen and farmers; it is a national semifinalist for the country's top restaurant honor. Reviewers describe nearly every dish as a highlight, with fresh, boldly seasoned Lowcountry seafood as the consistent throughline. The main friction point in coverage is the wait to get a table, not the food itself."
+      "ozet": "A walk-in-only seafood spot built on daily-changing raw bar, starter and entree offerings sourced directly from local fishermen and farmers; it is a national semifinalist for the country's top restaurant honor."
     },
     "neYenir": [
       {
@@ -8605,7 +8605,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 9.5,
-      "ozet": "A two-Michelin-star tasting menu built around live-fire technique and the chef's own blend of Chinese heritage and premium California ingredients, from caviar and seaweed courses to a dry-aged duck with salted cherry leaf sauce. Reviewers consistently describe the execution as exacting and the overall experience as a well-run fine-dining machine. Little recurring criticism was found in the coverage reviewed."
+      "ozet": "A two-Michelin-star tasting menu built around live-fire technique and the chef's own blend of Chinese heritage and premium California ingredients, from caviar and seaweed courses to a dry-aged duck with salted cherry leaf sauce."
     },
     "neYenir": [
       {
@@ -8710,7 +8710,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 9.5,
-      "ozet": "Brooklyn's only two-Michelin-star kitchen, drawing on the chef's Swedish heritage and Northeastern-US foraging to build a highly personal tasting menu centered on preservation, smoke and seasonality. A raw kingfish course wrapped in seaweed with caviar is the dish most often singled out as the best bite of the meal. Reviews are consistently strong with essentially no recurring criticism found."
+      "ozet": "Brooklyn's only two-Michelin-star kitchen, drawing on the chef's Swedish heritage and Northeastern-US foraging to build a highly personal tasting menu centered on preservation, smoke and seasonality."
     },
     "neYenir": [
       {
@@ -8818,7 +8818,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 8.8,
-      "ozet": "Chef Kevin Tien channels his Vietnamese heritage and Cajun Louisiana upbringing into a modern, contemporary-technique menu at this Penn Quarter dining room. Dishes like the fried quail over Viet-Cajun tomato rice and mochi eel draw consistent praise for creativity without feeling overly formal. Coverage is strongly positive with no significant recurring criticism found."
+      "ozet": "Chef Kevin Tien channels his Vietnamese heritage and Cajun Louisiana upbringing into a modern, contemporary-technique menu at this Penn Quarter dining room."
     },
     "neYenir": [
       {
@@ -8920,7 +8920,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 9.3,
-      "ozet": "A Yucatecan-style seafood counter inside a South Los Angeles food hall, and the first Mexican marisquería in the country to hold a Michelin star. Its heirloom-corn tostadas and ceviches draw consistently strong praise, and it remains one of the only food-court restaurants recognized on a global best-restaurants list. No significant recurring food criticism was found in the coverage reviewed."
+      "ozet": "A Yucatecan-style seafood counter inside a South Los Angeles food hall, and the first Mexican marisquería in the country to hold a Michelin star."
     },
     "neYenir": [
       {
@@ -9017,7 +9017,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 8.9,
-      "ozet": "A mountain-lodge-themed dining room drawing on French, Northern Italian, Swiss, Austrian and German traditions, sourced heavily from the restaurant's own partner farm. Reviewers highlight the lemon-pepper frog legs and Milanese schnitzel most consistently, and it is the only Georgia restaurant named to a major national best-restaurants list. No significant recurring criticism was found in the coverage reviewed."
+      "ozet": "A mountain-lodge-themed dining room drawing on French, Northern Italian, Swiss, Austrian and German traditions, sourced heavily from the restaurant's own partner farm."
     },
     "neYenir": [
       {
@@ -9121,7 +9121,7 @@ const RESTORANLAR = [
     },
     "yemek": {
       "puan": 9.0,
-      "ozet": "A Bywater restaurant bridging the chef's Mexico City upbringing with Gulf seafood, earning a Bib Gourmand in the region's first Michelin guide. The al pastor hamachi tostada and crab-and-mushroom masa dumplings are the dishes most cited in coverage, and the restaurant has been named a best-new-restaurant pick by multiple national outlets. No significant recurring criticism was found."
+      "ozet": "A Bywater restaurant bridging the chef's Mexico City upbringing with Gulf seafood, earning a Bib Gourmand in the region's first Michelin guide."
     },
     "neYenir": [
       {

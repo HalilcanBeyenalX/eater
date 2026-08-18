@@ -187,12 +187,13 @@ async function gunlukBaglantisiniEkle(r) {
     .map(v => v.genel_puan).filter(x => typeof x === 'number');
   if (eaterPuanlari.length > 0) {
     const ortalama = eaterPuanlari.reduce((a, b) => a + b, 0) / eaterPuanlari.length;
-    const ozet = document.createElement('section');
+    const ozet = document.createElement('div');
     ozet.className = 'eater-ozet';
     ozet.innerHTML = `
       <span class="eater-puan eater-buyuk">⭐ EATER Point — ${ondalikTR(ortalama)}</span>
       <span class="eater-not">${eaterPuanlari.length} Eater rating${eaterPuanlari.length === 1 ? '' : 's'}</span>`;
-    document.querySelector('.metrikler')?.after(ozet);
+    // Başlık kutusunun içinde — sayfa açılır açılmaz görünür.
+    document.querySelector('.detay-basi')?.appendChild(ozet);
   }
   const sayim = new Map();
   (favVeri || []).forEach(v => [v.sevilen_yemek1, v.sevilen_yemek2].forEach(y => {
