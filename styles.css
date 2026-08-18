@@ -899,7 +899,8 @@ body {
 /* FEAT — başlık ile arama hapı tek satırda (eskiz). */
 .feat-baslik { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
 .feat-baslik h2 { margin: 0; }
-.feat-baslik .eater-arama { flex: 1; margin: 0; }
+/* min-width: 0 şart — arama hapı dar ekranda kutudan taşıyordu. */
+.feat-baslik .eater-arama { flex: 1; margin: 0; min-width: 0; }
 
 .eater-arama {
   display: flex; align-items: center; gap: 8px;
@@ -992,16 +993,21 @@ img.avatar-mini { object-fit: cover; }
   object-fit: cover; border-radius: 14px;
   border: 1px solid var(--kenar); cursor: zoom-in;
 }
-/* Puanlar fotoğrafın üstünde, her biri kendi kutusunda (hap). */
+/* Puanlar fotoğrafın üstünde 2×2 hap ızgarası:
+   Food | Ambiance
+   Service | EATER (altın) */
 .akis-puanlar {
-  display: flex; gap: 8px; flex-wrap: wrap;
-  justify-content: space-between; margin: 0 0 10px;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 8px; margin: 0 0 10px;
 }
 .akis-puanlar .mini-puan {
+  display: flex; align-items: center; justify-content: center;
   border: 1px solid var(--kenar); border-radius: 999px;
-  padding: 5px 13px; font-size: 13px; font-weight: 700;
+  padding: 6px 13px; font-size: 13px; font-weight: 700;
   background: var(--ortu-koyu); color: var(--vurgu);
+  white-space: nowrap;
 }
+.akis-puanlar .mini-eater { background: var(--altin); color: #fff; border: none; }
 
 /* EATER Point — altın hap; akışta ve profil kartlarında eylem satırının sağında. */
 .eater-puan {

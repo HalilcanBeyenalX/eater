@@ -60,10 +60,11 @@ async function kisileriGoster() {
     const kendim = takip && takip.benimId === p.id;
     const takipte = takip ? takip.kume.has(p.id) : false;
     const istekte = takip?.bekleyen?.has(p.id) ?? false; // eski önbellekli hesap.js'te bekleyen olmayabilir
-    const dugme = kendim ? '' : `
-      <button type="button" class="takip-btn${takipte ? ' takipte' : ''}"
-        data-id="${kacis(p.id)}" data-iliskili="${takipte || istekte ? '1' : ''}">
-        ${takipte ? '✓ Added' : (istekte ? 'Requested ✕' : 'Add Eaters')}
+    // Eklenmiş kişide düğme yok — liste sade kalsın (çıkarma profilden yapılır).
+    const dugme = (kendim || takipte) ? '' : `
+      <button type="button" class="takip-btn"
+        data-id="${kacis(p.id)}" data-iliskili="${istekte ? '1' : ''}">
+        ${istekte ? 'Requested ✕' : 'Add Eaters'}
       </button>`;
     const avatar = p.avatar
       ? `<img class="avatar-mini" src="${kacis(eaterHesap.fotoUrl(p.avatar))}" alt="">`
@@ -158,8 +159,6 @@ function akisKartiHTML(z, profil, mekanAdi, sosyal) {
   const profilBaglanti = profil
     ? `<a class="kisi-ad" href="kisi.html?id=${encodeURIComponent(profil.id)}">${kacis(ad)}</a>`
     : `<span class="kisi-ad">${kacis(ad)}</span>`;
-  const puan = (etiket, deger) =>
-    typeof deger === 'number' ? `<span class="mini-puan">${etiket} ${ondalikTR(deger)}</span>` : '';
   const fotolar = [z.sevilen_yemek1_foto, z.sevilen_yemek2_foto].filter(Boolean);
   const fotoHTML = fotolar.length
     ? `<div class="akis-fotolar${fotolar.length > 1 ? ' akis-iki' : ''}">
@@ -180,9 +179,7 @@ function akisKartiHTML(z, profil, mekanAdi, sosyal) {
           <span class="silik akis-tarih">${kacis(z.tarih)}</span>
         </span>
       </div>
-      <div class="akis-puanlar">
-        ${puan('Food', z.yemek_puan)}${puan('Ambiance', z.ambiyans_puan)}${puan('Service', z.servis_puan)}
-      </div>
+      ${puanPilleriHTML(z)}
       ${fotoHTML}
       ${z.yorum ? `<p class="akis-yorum">${kacis(z.yorum)}</p>` : ''}
       ${sosyalEylemlerHTML(z, sosyal)}

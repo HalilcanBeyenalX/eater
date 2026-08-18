@@ -218,11 +218,16 @@ function kutlamaGoster(puan) {
 
 // Ziyaret kartlarının ortak parçaları: hap puanlar + geniş fotoğraflar.
 // EATGRAM, ATE (Eatory) ve profil aynı kart yapısını kullanır.
+// 2×2 hap ızgarası: Food|Ambiance üstte, Service|EATER altta. EATER puanı
+// verilmemiş eski kayıtlarda bile hap görünür ("—") — metrik hep göz önünde.
 function puanPilleriHTML(z) {
   const p = (etiket, deger) => typeof deger === 'number'
     ? `<span class="mini-puan">${etiket} ${ondalikTR(deger)}</span>` : '';
-  const icerik = p('Food', z.yemek_puan) + p('Ambiance', z.ambiyans_puan) + p('Service', z.servis_puan);
-  return icerik ? `<div class="akis-puanlar">${icerik}</div>` : '';
+  const eater = `<span class="mini-puan mini-eater">EATER ${
+    typeof z.genel_puan === 'number' ? ondalikTR(z.genel_puan) : '—'}</span>`;
+  return `<div class="akis-puanlar">
+    ${p('Food', z.yemek_puan)}${p('Ambiance', z.ambiyans_puan)}${p('Service', z.servis_puan)}${eater}
+  </div>`;
 }
 
 function ziyaretFotolarGenisHTML(z) {
@@ -240,8 +245,6 @@ function ziyaretFotolarGenisHTML(z) {
 // null ise (Ek 7 kurulmamış) hiçbir şey çizilmez. EATER Point sağda altın hapta.
 function sosyalEylemlerHTML(z, sosyal) {
   if (!sosyal) return '';
-  const genel = typeof z.genel_puan === 'number'
-    ? `<span class="eater-puan">EATER ${ondalikTR(z.genel_puan)}</span>` : '';
   return `
     <div class="akis-eylemler">
       <button type="button" class="akis-eylem akis-begen"
@@ -252,7 +255,6 @@ function sosyalEylemlerHTML(z, sosyal) {
       <button type="button" class="akis-eylem akis-yorumla" data-id="${kacis(z.id)}">
         💬 <span class="eylem-sayi">${sosyal.yorumlar.get(z.id) || 0}</span>
       </button>
-      ${genel}
     </div>
     <div class="akis-yorum-kutu" id="yorumKutu-${kacis(z.id)}" hidden></div>`;
 }
