@@ -206,9 +206,138 @@ function yakinlikModunuAc() {
   render();
 }
 
+// --- Yemek araması + Pick For Me ------------------------------------------
+
+// Yaygın yemek kelimeleri → katalogdaki mutfak/yemek terimleri. Sorgudaki her
+// kelime hem ham haliyle hem eşanlamlılarıyla aranır; katalog metin havuzu
+// (mutfaklar + "what to eat" yemekleri + isim) üzerinde substring eşleşir.
+const YEMEK_SOZLUGU = {
+  sushi: ['sushi', 'omakase', 'nigiri', 'japanese'],
+  ramen: ['ramen', 'tonkotsu', 'noodle'],
+  noodle: ['ramen', 'udon', 'soba', 'noodle'],
+  noodles: ['ramen', 'udon', 'soba', 'noodle'],
+  pizza: ['pizza'],
+  pasta: ['pasta', 'italian', 'risotto', 'tagliatelle', 'spaghetti'],
+  steak: ['steak', 'steakhouse', 'wagyu', 'kobe', 'teppanyaki', 'beef', 'entrecôte'],
+  kebab: ['kebab', 'turkish', 'anatolian', 'ocakbaşı'],
+  kofte: ['köfte', 'meatball', 'turkish'],
+  köfte: ['köfte', 'meatball', 'turkish'],
+  fish: ['seafood', 'fish', 'black sea', 'turbot', 'sea bass'],
+  seafood: ['seafood', 'fish', 'lobster', 'crab', 'prawn'],
+  balik: ['seafood', 'fish', 'black sea'],
+  balık: ['seafood', 'fish', 'black sea'],
+  gyoza: ['gyoza', 'dumpling'],
+  dumpling: ['gyoza', 'dumpling'],
+  curry: ['curry', 'thai', 'indian'],
+  thai: ['thai'],
+  tapas: ['spanish', 'catalan', 'tapas'],
+  paella: ['paella', 'spanish', 'rice'],
+  jamon: ['jamón', 'jamon', 'spanish'],
+  dessert: ['patisserie', 'dessert', 'pastry', 'cake', 'baklava'],
+  tatli: ['patisserie', 'dessert', 'pastry', 'cake', 'baklava'],
+  tatlı: ['patisserie', 'dessert', 'pastry', 'cake', 'baklava'],
+  croissant: ['croissant', 'patisserie', 'breakfast'],
+  coffee: ['coffee', 'cafe'],
+  kahve: ['coffee', 'cafe'],
+  cocktail: ['cocktail', 'mixology', 'bar'],
+  wine: ['wine', 'brasserie', 'bistro'],
+  meze: ['meze', 'meyhane'],
+  duck: ['duck'],
+  ordek: ['duck'],
+  ördek: ['duck'],
+  lamb: ['lamb'],
+  kuzu: ['lamb'],
+  ceviche: ['ceviche', 'peruvian'],
+  burger: ['burger']
+};
+
+// Restoranın aranabilir metin havuzu bir kez kurulur.
+let yemekHavuzu = null;
+function yemekHavuzunuKur() {
+  if (yemekHavuzu) return yemekHavuzu;
+  yemekHavuzu = new Map(RESTORANLAR.map(r => [r.id, [
+    r.isim, ...r.mutfak, ...r.neYenir.map(y => y.yemek)
+  ].join(' | ').toLowerCase()]));
+  return yemekHavuzu;
+}
+
+function yemekEslesiyorMu(r, sorgu) {
+  const havuz = yemekHavuzunuKur().get(r.id);
+  const kelimeler = sorgu.toLowerCase().split(/\s+/).filter(Boolean);
+  // Her kelime (veya bir eşanlamlısı) havuzda geçmeli — "spicy ramen" gibi
+  // çok kelimeli sorgularda hepsi aranır.
+  return kelimeler.every(k => {
+    const adaylar = [k, ...(YEMEK_SOZLUGU[k] || [])];
+    if (k.endsWith('s') && k.length > 3) adaylar.push(k.slice(0, -1)); // naif çoğul
+    return adaylar.some(a => havuz.includes(a.toLowerCase()));
+  });
+}
+
+// "Where" seçiciye göre havuz: u:Ülke / s:Şehir / '' hepsi.
+function yerHavuzu() {
+  const deger = document.getElementById('yaYer').value;
+  if (deger.startsWith('u:')) return RESTORANLAR.filter(r => r.ulke === deger.slice(2));
+  if (deger.startsWith('s:')) return RESTORANLAR.filter(r => r.sehir === deger.slice(2));
+  return RESTORANLAR;
+}
+
+function yemekAramasiniCalistir() {
+  const sorgu = document.getElementById('yaYemek').value.trim();
+  const sonucKap = document.getElementById('yaSonuclar');
+  const mesaj = document.getElementById('yaMesaj');
+  if (!sorgu) { sonucKap.hidden = true; mesaj.hidden = true; return; }
+  const bulunanlar = yerHavuzu().filter(r => yemekEslesiyorMu(r, sorgu));
+  if (bulunanlar.length === 0) {
+    sonucKap.hidden = true;
+    mesaj.hidden = false;
+    mesaj.textContent = 'No spots serve that here (yet) — try another dish or place.';
+    return;
+  }
+  mesaj.hidden = false;
+  mesaj.textContent = `${bulunanlar.length} spot${bulunanlar.length === 1 ? '' : 's'} for that craving:`;
+  sonucKap.hidden = false;
+  sonucKap.innerHTML = bulunanlar.map(kartHTML).join('');
+}
+
+function yemekAramaKur() {
+  const yerSecim = document.getElementById('yaYer');
+  if (!yerSecim) return;
+  const ulkeler = benzersiz(RESTORANLAR.map(r => r.ulke));
+  const sehirler = benzersiz(RESTORANLAR.map(r => r.sehir));
+  yerSecim.innerHTML = `
+    <option value="">Anywhere</option>
+    <optgroup label="Countries">
+      ${ulkeler.map(u => `<option value="u:${u}">${u}</option>`).join('')}
+    </optgroup>
+    <optgroup label="Cities">
+      ${sehirler.map(s => `<option value="s:${s}">${s}</option>`).join('')}
+    </optgroup>`;
+
+  let zamanlayici = null;
+  document.getElementById('yaYemek').addEventListener('input', () => {
+    clearTimeout(zamanlayici);
+    zamanlayici = setTimeout(yemekAramasiniCalistir, 250);
+  });
+  yerSecim.addEventListener('change', yemekAramasiniCalistir);
+
+  // 🎲 Seçili yerden (yemek yazıldıysa ona da uyan) rastgele restoran.
+  document.getElementById('btnZar').addEventListener('click', () => {
+    const sorgu = document.getElementById('yaYemek').value.trim();
+    let aday = yerHavuzu();
+    if (sorgu) {
+      const suzulmus = aday.filter(r => yemekEslesiyorMu(r, sorgu));
+      if (suzulmus.length > 0) aday = suzulmus;
+    }
+    if (aday.length === 0) return;
+    const secilen = aday[Math.floor(Math.random() * aday.length)];
+    window.location.href = `detay.html?id=${encodeURIComponent(secilen.id)}`;
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('gezinme').innerHTML = gezinmeHTML('kesfet');
   eaterHesap.hesapKutusunuCiz();
   filtreleriCiz();
   render();
+  yemekAramaKur();
 });

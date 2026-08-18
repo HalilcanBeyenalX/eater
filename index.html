@@ -37,6 +37,27 @@
       <p id="konumMesaj" class="silik konum-mesaj" aria-live="polite"></p>
       <p class="silik osm-kredi">Location search: © OpenStreetMap contributors</p>
     </section>
+
+    <!-- Yemek araması + şanslı seçim: "Milano'da sushi" gibi -->
+    <section class="yemek-arama" aria-label="Dish search">
+      <div class="yemek-arama-satir">
+        <label class="filtre">
+          <span class="filtre-etiket">Where</span>
+          <select id="yaYer"></select>
+        </label>
+        <label class="filtre yemek-girdi">
+          <span class="filtre-etiket">Dish</span>
+          <input id="yaYemek" type="search" placeholder="sushi, ramen, kebab…"
+                 aria-label="Search a dish" autocomplete="off">
+        </label>
+      </div>
+      <p id="yaMesaj" class="silik ya-mesaj" aria-live="polite" hidden></p>
+      <div id="yaSonuclar" class="liste ya-liste" hidden></div>
+      <div class="zar-kutu">
+        <button type="button" id="btnZar" class="zar-btn">🎲 Pick For Me</button>
+        <p class="silik zar-not">Feeling lucky? We pick a random spot from the place you chose.</p>
+      </div>
+    </section>
     <section id="haritaBolumu" class="harita-bolumu" hidden aria-label="City map">
       <div id="harita"></div>
       <div class="harita-arac">

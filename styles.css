@@ -254,6 +254,42 @@ body {
   color: var(--krem-sonuk);
 }
 
+/* --- Yemek araması + Pick For Me ("Milano'da sushi") --- */
+.yemek-arama {
+  margin: 16px 0;
+  padding: 16px 18px;
+  border: 1px solid var(--kenar);
+  border-radius: var(--yuvarlak);
+  background: var(--yuzey-yukseltilmis);
+}
+.yemek-arama-satir { display: flex; gap: 14px; align-items: flex-end; }
+.yemek-arama-satir .filtre:first-child { flex: 0 1 220px; }
+.yemek-girdi { flex: 1; }
+.yemek-girdi input {
+  width: 100%; min-width: 0; padding: 8px 12px;
+  border: 1px solid var(--kenar); border-radius: 9px;
+  background: var(--yuzey-derin); color: var(--krem);
+  font-family: inherit; font-size: 14px;
+}
+.yemek-girdi input::placeholder { color: var(--krem-silik); }
+.yemek-girdi input:focus-visible { outline: 2px solid var(--altin); outline-offset: 1px; }
+.ya-mesaj { margin: 10px 2px 0; }
+.ya-liste { margin-top: 12px; }
+.zar-kutu {
+  margin-top: 14px; padding-top: 14px;
+  border-top: 1px dashed var(--kenar);
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+}
+.zar-btn {
+  padding: 11px 24px; border: none; border-radius: 999px; cursor: pointer;
+  background: var(--altin); color: #fff;
+  font: inherit; font-size: 16px; font-weight: 800; letter-spacing: .02em;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, .18);
+  transition: transform .12s;
+}
+.zar-btn:hover { transform: scale(1.04); background: var(--altin-koyu); }
+.zar-not { margin: 0; }
+
 .filtreler {
   display: flex;
   flex-wrap: wrap;
