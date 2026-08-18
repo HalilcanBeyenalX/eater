@@ -262,17 +262,34 @@ body {
   border-radius: var(--yuvarlak);
   background: var(--yuzey-yukseltilmis);
 }
-.yemek-arama-satir { display: flex; gap: 14px; align-items: flex-end; }
-.yemek-arama-satir .filtre:first-child { flex: 0 1 220px; }
+.yemek-arama-satir { display: flex; gap: 12px; align-items: flex-end; }
+.yemek-arama-satir .filtre:first-child { flex: 0 1 200px; }
 .yemek-girdi { flex: 1; }
+/* Hap görünümlü seçici ve girdi — yuvarlak hatlar. */
+.yemek-arama select,
 .yemek-girdi input {
-  width: 100%; min-width: 0; padding: 8px 12px;
-  border: 1px solid var(--kenar); border-radius: 9px;
+  width: 100%; min-width: 0; padding: 9px 16px;
+  border: 1px solid var(--kenar); border-radius: 999px;
   background: var(--yuzey-derin); color: var(--krem);
   font-family: inherit; font-size: 14px;
 }
 .yemek-girdi input::placeholder { color: var(--krem-silik); }
 .yemek-girdi input:focus-visible { outline: 2px solid var(--altin); outline-offset: 1px; }
+/* Sağ altta onay (FEAT) + iptal (✕) */
+.ya-butonlar { display: flex; gap: 8px; align-items: center; flex: none; }
+.ya-feat {
+  padding: 9px 22px; border: none; border-radius: 999px; cursor: pointer;
+  background: var(--altin); color: #fff;
+  font: inherit; font-size: 14px; font-weight: 800; letter-spacing: .04em;
+}
+.ya-feat:hover { background: var(--altin-koyu); }
+.ya-temizle {
+  width: 36px; height: 36px; padding: 0; line-height: 1;
+  border: 1px solid var(--kenar); border-radius: 50%;
+  background: transparent; color: var(--krem-sonuk);
+  font: inherit; font-size: 14px; cursor: pointer;
+}
+.ya-temizle:hover { border-color: var(--vurgu); color: var(--vurgu); }
 .ya-mesaj { margin: 10px 2px 0; }
 .ya-liste { margin-top: 12px; }
 .zar-kutu {
@@ -1195,6 +1212,12 @@ img.avatar-mini { object-fit: cover; }
 
   /* Kalp dairesi dar ekranda metnin üstüne binmesin. */
   .detay-basi { padding-right: 88px; }
+
+  /* Yemek araması dar ekranda: seçici+girdi üstte, FEAT/✕ sağ altta. */
+  .yemek-arama-satir { flex-wrap: wrap; }
+  .yemek-arama-satir .filtre:first-child { flex: 1 1 38%; }
+  .yemek-girdi { flex: 1 1 54%; }
+  .ya-butonlar { flex: 1 1 100%; justify-content: flex-end; }
 }
 
 /* Profil bölüm başlığı (EAT — Eatory) */

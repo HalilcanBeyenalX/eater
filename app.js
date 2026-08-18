@@ -313,12 +313,18 @@ function yemekAramaKur() {
       ${sehirler.map(s => `<option value="s:${s}">${s}</option>`).join('')}
     </optgroup>`;
 
-  let zamanlayici = null;
-  document.getElementById('yaYemek').addEventListener('input', () => {
-    clearTimeout(zamanlayici);
-    zamanlayici = setTimeout(yemekAramasiniCalistir, 250);
+  // Arama yalnız FEAT düğmesiyle (veya Enter'la) çalışır — yer/yemek
+  // değiştirirken bayat sonuç ekranda kalmaz, kullanıcı ne aradığını bilir.
+  document.getElementById('btnYaAra').addEventListener('click', yemekAramasiniCalistir);
+  document.getElementById('yaYemek').addEventListener('keydown', e => {
+    if (e.key === 'Enter') { e.preventDefault(); yemekAramasiniCalistir(); }
   });
-  yerSecim.addEventListener('change', yemekAramasiniCalistir);
+  document.getElementById('btnYaTemizle').addEventListener('click', () => {
+    document.getElementById('yaYemek').value = '';
+    yerSecim.value = '';
+    document.getElementById('yaSonuclar').hidden = true;
+    document.getElementById('yaMesaj').hidden = true;
+  });
 
   // 🎲 Seçili yerden (yemek yazıldıysa ona da uyan) rastgele restoran.
   document.getElementById('btnZar').addEventListener('click', () => {

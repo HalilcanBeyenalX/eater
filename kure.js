@@ -58,7 +58,7 @@ function kureyiKur() {
 
   kure = Globe()(kap)
     .width(kap.clientWidth)
-    .height(Math.min(420, Math.round(window.innerHeight * 0.5)))
+    .height(Math.min(300, Math.round(window.innerHeight * 0.4)))
     .backgroundColor('rgba(0,0,0,0)')
     .globeImageUrl('https://cdn.jsdelivr.net/npm/three-globe@2.45.2/example/img/earth-blue-marble.jpg')
     .polygonsData(DUNYA_ULKELER.features)
