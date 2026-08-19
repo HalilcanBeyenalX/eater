@@ -181,6 +181,9 @@ body {
   font-size: 13px;
 }
 
+/* Küçük ülke bayrağı — yer satırının başında, metinden hafif ayrık. */
+.bayrak { margin-right: 6px; font-size: .95em; }
+
 .fiyat {
   flex: none;
   color: var(--vurgu);
@@ -429,6 +432,18 @@ body {
   margin: 26px 0;
 }
 
+/* İki sütuna düşen genişliklerde üçüncü kutu (Service) tek başına kalır —
+   sola yapışmasın diye satırı kaplayıp sütun genişliğinde ortalanır.
+   Aralık, 2 sütunun sığdığı (2×220+16) ve 3'ün sığmadığı (3×220+32) bandın
+   .govde dolgusu (2×24) eklenmiş halidir. */
+@media (min-width: 504px) and (max-width: 739px) {
+  .metrik:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - 8px);
+  }
+}
+
 .metrik {
   padding: 18px;
   border: 1px solid var(--kenar);
@@ -578,6 +593,11 @@ body {
   .sifirla { flex: 1 1 42%; width: auto; margin-left: 0; padding: 7px 10px; align-self: flex-end; }
 
   .liste { grid-template-columns: 1fr; }
+
+  /* Dar ekranda tek satıra zorlamak yerine alt satıra sar — "Reservation
+     required" tek harfe kırpılmasın. */
+  .kart .isaretler { flex-wrap: wrap; }
+  .kart .rez-uyari { overflow: visible; text-overflow: clip; }
 
   .rozetler { gap: 6px; }
   .rozet-puan { font-size: 18px; }
@@ -1215,14 +1235,20 @@ img.avatar-mini { object-fit: cover; }
   .profil-bilgi p { margin-bottom: 0; }
   .profil-sag { flex: 1 1 100%; max-width: none; }
 
-  /* Kalp dairesi dar ekranda metnin üstüne binmesin. */
-  .detay-basi { padding-right: 88px; }
+  /* Kalp dairesi dar ekranda metnin üstüne binmesin. Dolgu .detay-basi'ye
+     değil metinlere verilir: tema aracının ürettiği .detay-basi padding
+     kuralı (aynı özgüllük, sonra gelir) buradaki dolguyu eziyordu. */
+  .detay-isim, .detay-yer { padding-right: 62px; }
 
-  /* Yemek araması dar ekranda: seçici+girdi üstte, FEAT/✕ sağ altta. */
+  /* Yemek araması dar ekranda: 1. satır Where · Dish · ✕ (✕ en sağda),
+     2. satır FEAT + Pick For Me eşit genişlikte. display: contents ile
+     düğmeler doğrudan satırın öğesi olur, böylece ✕ yukarıda kalabilir. */
   .yemek-arama-satir { flex-wrap: wrap; }
   .yemek-arama-satir .filtre:first-child { flex: 1 1 38%; }
-  .yemek-girdi { flex: 1 1 54%; }
-  .ya-butonlar { flex: 1 1 100%; justify-content: flex-end; }
+  .yemek-girdi { flex: 1 1 40%; }
+  .ya-butonlar { display: contents; }
+  .ya-temizle { flex: none; margin-bottom: 2px; }
+  .ya-feat, .zar-btn { flex: 1 1 40%; }
 }
 
 /* Profil bölüm başlığı (EAT — Eatory) */

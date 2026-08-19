@@ -216,6 +216,20 @@ function kutlamaGoster(puan) {
   }, 3200);
 }
 
+// Ülke bayrağı — mekânın yerini bir bakışta okutur. Katalogda olmayan bir
+// ülke gelirse hiç bayrak çizilmez (yanlış bayrak göstermektense boş kalsın).
+const ULKE_BAYRAKLARI = {
+  'Turkey': '🇹🇷', 'France': '🇫🇷', 'Spain': '🇪🇸', 'Italy': '🇮🇹',
+  'Japan': '🇯🇵', 'Thailand': '🇹🇭', 'USA': '🇺🇸', 'Greece': '🇬🇷',
+  'Germany': '🇩🇪', 'United Kingdom': '🇬🇧', 'Netherlands': '🇳🇱',
+  'Portugal': '🇵🇹', 'South Korea': '🇰🇷'
+};
+
+function bayrakEtiketi(ulke) {
+  const bayrak = ULKE_BAYRAKLARI[ulke];
+  return bayrak ? `<span class="bayrak" title="${kacis(ulke)}">${bayrak}</span>` : '';
+}
+
 // Ziyaret kartlarının ortak parçaları: hap puanlar + geniş fotoğraflar.
 // EATGRAM, ATE (Eatory) ve profil aynı kart yapısını kullanır.
 // 2×2 hap ızgarası: Food|Ambiance üstte, Service|EATER altta. EATER puanı

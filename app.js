@@ -20,7 +20,7 @@ function kartHTML(r) {
           <h2 class="kart-isim">${r.isim}</h2>
           ${fiyatEtiketi(r.fiyat.segment, r.ulke)}
         </div>
-        <p class="kart-yer">${r.semt} · ${r.mutfak.join(', ')}${mesafe}</p>
+        <p class="kart-yer">${bayrakEtiketi(r.ulke)}${r.semt} · ${r.mutfak.join(', ')}${mesafe}</p>
         <div class="rozetler">
           ${puanRozeti('Food', r.yemek.puan)}
           ${puanRozeti('Ambiance', r.ambiyans.puan)}
