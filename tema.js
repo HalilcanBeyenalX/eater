@@ -62,7 +62,7 @@ function temaBoyutCSS(t) {
 
   .panel { padding: ${px(32, 'bKutu')} ${px(28, 'bKutu')}; }
   .kart-govde { padding: ${px(16, 'bKutu')} ${px(18, 'bKutu')}; }
-  .kart-gorsel { height: ${px(116, 'bKutu')}; }
+  .kart-gorsel { height: ${px(172, 'bKutu')}; }
   .akis-kart, .best-kutu { padding: ${px(14, 'bKutu')} ${px(16, 'bKutu')}; }
   .detay-basi { padding: ${px(22, 'bKutu')} ${px(24, 'bKutu')}; }
   .rozet { padding: ${px(8, 'bKutu')} ${px(4, 'bKutu')}; }
