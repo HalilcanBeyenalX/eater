@@ -183,6 +183,7 @@ function render() {
   if (liste.length === 0) {
     kap.innerHTML = '<p class="bos">No restaurants match these filters. Clear the filters and try again.</p>';
   } else {
+    fotoAkisiSifirla(); // yan yana kartlar aynı fotoğrafı göstermesin
     kap.innerHTML = liste.map(kartHTML).join('');
   }
 
@@ -299,6 +300,7 @@ function yemekAramasiniCalistir() {
   mesaj.hidden = false;
   mesaj.textContent = `${bulunanlar.length} spot${bulunanlar.length === 1 ? '' : 's'} for that craving:`;
   sonucKap.hidden = false;
+  fotoAkisiSifirla();
   sonucKap.innerHTML = bulunanlar.map(kartHTML).join('');
 }
 
