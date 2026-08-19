@@ -22,8 +22,10 @@ const YEMEK_FOTO_ESLEME = [
   [['Cocktail Bar', 'Mixology', 'Wine Bar', 'Rooftop'],
     ['negroni', 'kokteyl-sour', 'kokteyl-pembe', 'kokteyl-salatalik', 'gimlet']],
   [['Specialty Coffee', 'Cafe', 'Breakfast'], ['sandvic']],
-  [['Patisserie'], ['tatli-krem']],
-  [['Pizza', 'Wood-Fired'], ['pizza-a', 'pizza-b']],
+  [['Patisserie'], ['tatli-krem', 'tatli-tart', 'tatli-fistik', 'tatli-tiramisu-kase']],
+  [['Pizza', 'Wood-Fired'], ['pizza-margherita', 'pizza-roka', 'pizza-bresaola', 'pizza-pepperoni',
+    'pizza-mantar', 'pizza-beyaz', 'pizza-acili', 'pizza-prosciutto', 'pizza-burrata',
+    'pizza-patlican', 'pizza-parma', 'pizza-dilim']],
   [['Kobe Beef', 'Wagyu', 'Teppanyaki'], ['wagyu']],
   [['Steakhouse', 'Grill', 'Meat', 'Argentinian', 'Uruguayan'], ['biftek', 'biftek-fine']],
   // Şık yerlere şık tabaklar: tadım menüsü/fine dining havuzu geniş tutuldu
@@ -31,19 +33,23 @@ const YEMEK_FOTO_ESLEME = [
   [['Fine Dining', 'Chef-driven', 'Creative', 'Contemporary', 'Tasting Menu',
     'Luxury Dining', 'Modern European', 'Progressive Indian', 'New Nordic', 'Kaiseki',
     'Korean', 'Modern Turkish', 'Modern Anatolian'],
-    ['tarak', 'corba', 'ordek-glaze', 'ordek-dilim', 'balik-fine', 'kalkan', 'levrek', 'biftek-fine', 'crudo']],
+    ['tarak', 'corba', 'ordek-glaze', 'ordek-dilim', 'balik-fine', 'kalkan', 'levrek',
+     'biftek-fine', 'crudo', 'ordek-visne', 'ordek-confit']],
   [['Peruvian', 'Latin American', 'Raw Bar', 'Pescatarian'], ['crudo']],
   [['Seafood', 'Black Sea'], ['somon', 'levrek', 'kalkan']],
   [['Spanish', 'Traditional Spanish', 'Modern Spanish', 'Catalan', 'Castilian'], ['paella-a', 'paella-b']],
   [['Pasta', 'Osteria', 'Italian', 'Traditional Italian', 'Southern Italian', 'Milanese', 'Calabrian'],
-    ['trufmakarna', 'trufmakarna-b']],
-  [['French', 'Brasserie', 'Luxury Bistro', 'French Bistro', 'Classic French'], ['foie']],
+    ['trufmakarna', 'trufmakarna-b', 'makarna-penne', 'risotto-mantar', 'makarna-deniz',
+     'makarna-pesto', 'makarna-tagliatelle', 'makarna-murekkep', 'makarna-karides',
+     'makarna-rigatoni', 'risotto-truf', 'makarna-vongole']],
+  [['French', 'Brasserie', 'Luxury Bistro', 'French Bistro', 'Classic French'],
+    ['foie', 'ordek-confit', 'ordek-visne', 'corba']],
   [['Turkish', 'Anatolian', 'Meyhane', 'Turk-Asian',
     'Levantine', 'Middle Eastern', 'Palestinian'], ['crudo', 'biftek']],
   [['Asian Fusion', 'Chinese', 'Thai-Chinese', 'Vietnamese'], ['manti']],
   [['New American', 'Contemporary American', 'Californian'], ['biftek-fine', 'tarak', 'somon']],
   [['Casual'], ['burger']],
-  [['Dessert'], ['tatli-cikolata']]
+  [['Dessert'], ['tatli-cikolata', 'tatli-lava', 'tatli-basque', 'tatli-tiramisu', 'tatli-pannacotta']]
 ];
 
 // Hiçbir kural tutmazsa: zarif tadım tabakları havuzu.

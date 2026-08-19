@@ -134,6 +134,7 @@ body {
 .kart-gorsel {
   height: 172px;
   overflow: hidden;
+  position: relative;
   display: grid;
   place-items: center;
   background: repeating-linear-gradient(
@@ -145,9 +146,12 @@ body {
   );
   border-bottom: 1px solid var(--kenar);
 }
+/* Banda tam oturur; kadraj merkezden BİRAZ yukarıda (tabak daha çok görünür). */
 .kart-foto {
+  position: absolute; inset: 0;
   width: 100%; height: 100%;
-  object-fit: cover; display: block;
+  object-fit: cover; object-position: 50% 38%;
+  display: block;
 }
 .kart-gorsel svg { width: 96px; height: 72px; opacity: .92; }
 
