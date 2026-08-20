@@ -217,7 +217,7 @@ function ziyaretKartHTML(z, mekanAdi, yer, sosyal) {
         <span class="silik">${kacis(yer)} · ${kacis(z.tarih)}</span>
       </div>
       ${puanPilleriHTML(z)}
-      ${favoriler.length ? `<p class="silik">Favorites: ${kacis(favoriler.join(', '))}</p>` : ''}
+      ${favoriler.length ? `<p class="favori-satir">Favorites: ${kacis(favoriler.join(', '))}</p>` : ''}
       ${ziyaretFotolarGenisHTML(z)}
       ${z.yorum ? `<p class="akis-yorum">${kacis(z.yorum)}</p>` : ''}
       ${sosyalEylemlerHTML(z, sosyal)}

@@ -51,29 +51,6 @@ function detayHTML(r) {
       ${metrikKarti('Service', r.servis)}
     </section>
 
-    <div class="satir-ikili">
-      <section class="blok">
-        <h2>What to eat</h2>
-        <ol class="yemek-kutulari">
-          ${r.neYenir.map((y, i) => `
-            <li>
-              <span class="yemek-no">${i + 1}</span>
-              <span class="yemek-ad">${y.yemek}</span>
-            </li>`).join('')}
-        </ol>
-      </section>
-      <section class="blok">
-        <h2>Ambiance</h2>
-        <ul class="ambiyans-listesi">
-          ${r.ambiyans.etiketler.map(e => `<li class="etiket">${e}</li>`).join('')}
-        </ul>
-        <dl class="cift">
-          <dt>Dress code</dt><dd>${veyaYok(r.ambiyans.dressCode, 'None stated')}</dd>
-          <dt>Good for</dt><dd>${r.ambiyans.uygun.length ? r.ambiyans.uygun.join(', ') : BOS_ISARET}</dd>
-        </dl>
-      </section>
-    </div>
-
     <section class="blok ikili">
       <div>
         <h2>Service — pros</h2>
@@ -87,21 +64,46 @@ function detayHTML(r) {
 
     <div class="satir-ikili">
       <section class="blok">
-        <h2>Price</h2>
-        <p class="fiyat-ozet">${fiyatMetni(r.fiyat)}</p>
-        ${r.fiyat.not ? `<p class="silik fiyat-not">${r.fiyat.not}</p>` : ''}
+        <h2>What to eat</h2>
+        <ol class="yemek-kutulari">
+          ${r.neYenir.map((y, i) => `
+            <li>
+              <span class="yemek-no">${i + 1}</span>
+              <span class="yemek-ad">${y.yemek}</span>
+            </li>`).join('')}
+        </ol>
+      </section>
+      <!-- Ambiance ve Price alt alta: ikisi de kısa, yan yana yer israfıydı -->
+      <div class="yigin">
+        <section class="blok">
+          <h2>Ambiance</h2>
+          <ul class="ambiyans-listesi">
+            ${r.ambiyans.etiketler.map(e => `<li class="etiket">${e}</li>`).join('')}
+          </ul>
+          <dl class="cift">
+            <dt>Dress code</dt><dd>${veyaYok(r.ambiyans.dressCode, 'None stated')}</dd>
+            <dt>Good for</dt><dd>${r.ambiyans.uygun.length ? r.ambiyans.uygun.join(', ') : BOS_ISARET}</dd>
+          </dl>
+        </section>
+        <section class="blok">
+          <h2>Price</h2>
+          <p class="fiyat-ozet">${fiyatMetni(r.fiyat)}</p>
+          ${r.fiyat.not ? `<p class="silik fiyat-not">${r.fiyat.not}</p>` : ''}
+        </section>
+      </div>
+    </div>
+
+    <div class="satir-ikili">
+      <section class="blok">
+        <h2>Address</h2>
+        <p>${veyaYok(r.adres, 'No verified address')}</p>
+        ${r.mapsUrl ? `<p><a class="harita" href="${r.mapsUrl}" target="_blank" rel="noopener">Open in Google Maps &rarr;</a></p>` : ''}
       </section>
       <section class="blok">
         <h2>Reservation</h2>
         ${rezSatirlari}
       </section>
-    </div>
-
-    <section class="blok">
-      <h2>Address</h2>
-      <p>${veyaYok(r.adres, 'No verified address')}</p>
-      ${r.mapsUrl ? `<p><a class="harita" href="${r.mapsUrl}" target="_blank" rel="noopener">Open in Google Maps &rarr;</a></p>` : ''}
-    </section>`;
+    </div>`;
 }
 
 function bulVeCiz() {

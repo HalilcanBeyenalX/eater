@@ -517,6 +517,9 @@ body {
 .satir-ikili .blok { margin-top: 0; display: flex; flex-direction: column; }
 .satir-ikili .blok h2 { font-size: 17px; margin-bottom: 10px; }
 .satir-ikili .blok:nth-child(2) { background: var(--yuzey-yukseltilmis); }
+/* Sağ sütunda alt alta duran bloklar (Ambiance + Price) — sütunu doldurur. */
+.satir-ikili .yigin { display: flex; flex-direction: column; gap: 18px; }
+.satir-ikili .yigin .blok { flex: 1; background: var(--yuzey-yukseltilmis); }
 /* Yan yana bloklarda etiket kolonunu daralt — değerler tek satıra sığsın */
 .satir-ikili .cift { grid-template-columns: 92px 1fr; gap: 10px 12px; font-size: 14px; }
 
@@ -1107,6 +1110,9 @@ img.avatar-mini { object-fit: cover; }
 .eater-ozet .eater-buyuk { font-size: 16px; padding: 8px 18px; }
 .eater-not { color: var(--krem-sonuk); font-size: 13px; }
 .akis-yorum { margin: 8px 0 0; font-size: 14.5px; line-height: 1.5; }
+/* Favori yemek satırı — akış ve profil kartlarında okunur boyda. */
+.favori-satir { margin: 8px 0 0; font-size: 15.5px; color: var(--krem-sonuk); }
+.favori-satir::first-line { font-weight: 600; }
 
 /* Beğeni + yorum: kartın altında minik hap butonlar, yanlarında sayılar. */
 .akis-eylemler { display: flex; gap: 8px; margin-top: 10px; }
