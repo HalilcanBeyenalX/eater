@@ -1203,8 +1203,17 @@ img.avatar-mini { object-fit: cover; }
   box-shadow: var(--golge);
   padding: .5rem .9rem .9rem; overflow: hidden;
 }
-#kure { display: flex; justify-content: center; }
+/* Küre ile arama çubuğu tek satırda: solda küçük küre, sağda arama. */
+.kure-satir { display: flex; align-items: center; gap: 18px; }
+#kure {
+  flex: none; width: 156px; height: 156px;
+  display: flex; align-items: center; justify-content: center;
+}
 #kure canvas { max-width: 100%; }
+.kure-sag { flex: 1; min-width: 0; }
+.kure-sag .konum-cubugu { margin-top: 0; }
+/* WebGL yoksa küre yerine duran işaret. */
+.kure-yedek { font-size: 76px; line-height: 1; opacity: .55; }
 /* Hap biçimli arama çubuğu: ikon + kutu + düğmeler tek kapta. */
 .konum-cubugu {
   display: flex; align-items: center; gap: .4rem; flex-wrap: wrap;
@@ -1249,6 +1258,10 @@ img.avatar-mini { object-fit: cover; }
      değil metinlere verilir: tema aracının ürettiği .detay-basi padding
      kuralı (aynı özgüllük, sonra gelir) buradaki dolguyu eziyordu. */
   .detay-isim, .detay-yer { padding-right: 62px; }
+
+  /* Küre telefonda arama çubuğunun üstünde, ortalı. */
+  .kure-satir { flex-direction: column; gap: 10px; }
+  .kure-sag { width: 100%; }
 
   /* Yemek araması dar ekranda: 1. satır Where · Dish · ✕ (✕ en sağda),
      2. satır FEAT + Pick For Me eşit genişlikte. display: contents ile

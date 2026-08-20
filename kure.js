@@ -49,6 +49,15 @@ function kureUlkeRengi(p) {
   return kureKatalogKodlari().has(p.id) ? KURE_RENK_KATALOG : KURE_RENK_DIGER;
 }
 
+// Küre arama çubuğuyla aynı satırda duran küçük bir küredir.
+const KURE_BOYU = 156;
+
+// WebGL kapalıysa (bazı tarayıcı/telefon ayarları, sanal makineler) küre
+// hiç çizilemez; kutu boş kalmasın diye yerine sabit bir dünya işareti konur.
+function kureYedegiCiz(kap) {
+  kap.innerHTML = '<span class="kure-yedek" role="img" aria-label="World">🌍</span>';
+}
+
 function kureyiKur() {
   if (typeof Globe === 'undefined' || typeof DUNYA_ULKELER === 'undefined') return;
   const bolum = document.getElementById('kureBolumu');
@@ -56,9 +65,10 @@ function kureyiKur() {
   if (!bolum || !kap) return;
   bolum.hidden = false;
 
-  kure = Globe()(kap)
-    .width(kap.clientWidth)
-    .height(Math.min(300, Math.round(window.innerHeight * 0.4)))
+  try {
+    kure = Globe()(kap)
+    .width(KURE_BOYU)
+    .height(KURE_BOYU)
     .backgroundColor('rgba(0,0,0,0)')
     .globeImageUrl('https://cdn.jsdelivr.net/npm/three-globe@2.45.2/example/img/earth-blue-marble.jpg')
     .polygonsData(DUNYA_ULKELER.features)
@@ -78,10 +88,16 @@ function kureyiKur() {
       ulkeFiltresiUygula(kureSeciliKod === p.id ? '' : KOD_ULKE[p.id]); // app.js ulkeSec ile geri döner
     });
 
-  kure.controls().autoRotate = true;
-  kure.controls().autoRotateSpeed = 0.6;
-  kure.pointOfView({ lat: 39, lng: 35, altitude: 2.2 }, 0); // açılışta Türkiye görünür
-  window.addEventListener('resize', () => kure.width(kap.clientWidth));
+    kure.controls().autoRotate = true;
+    kure.controls().autoRotateSpeed = 0.6;
+    kure.pointOfView({ lat: 39, lng: 35, altitude: 2.2 }, 0); // açılışta Türkiye görünür
+  } catch (hata) {
+    // WebGL yoksa sayfa çalışmaya devam eder; yalnız küre yerine işaret konur.
+    kure = null;
+    kureYedegiCiz(kap);
+    console.warn('kure.js: WebGL kullanılamıyor, küre çizilmedi.', hata);
+  }
+
   ulkeTamamlamaKur();
   konumCubuguKur(); // konum çubuğu bağları
 }
@@ -108,12 +124,16 @@ function kureKonumAl() { return kullaniciKonumu; }
 
 function konumBelirle(lat, lng, etiket) {
   kullaniciKonumu = { lat, lng };
-  kure.pointsData([{ lat, lng }])
-    .pointColor(() => '#ff5252')
-    .pointAltitude(0.03)
-    .pointRadius(0.6);
-  kure.controls().autoRotate = false; // pin görünür kalsın
-  kure.pointOfView({ lat, lng, altitude: 1.6 }, 1000);
+  // kure null olabilir (WebGL yok) — konum yine de kaydedilir, yalnız
+  // küre üstünde işaretlenmez; yakınlık sıralaması çalışmaya devam eder.
+  if (kure) {
+    kure.pointsData([{ lat, lng }])
+      .pointColor(() => '#ff5252')
+      .pointAltitude(0.03)
+      .pointRadius(0.6);
+    kure.controls().autoRotate = false; // pin görünür kalsın
+    kure.pointOfView({ lat, lng, altitude: 1.6 }, 1000);
+  }
   document.getElementById('konumMesaj').textContent = etiket;
   yakinlikModunuAc(); // app.js: Yakınlık seçeneğini ekler ve seçer
 }

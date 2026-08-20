@@ -25,17 +25,22 @@
 
   <main class="govde">
     <section id="kureBolumu" class="kure-bolumu" hidden aria-label="World globe">
-      <div id="kure"></div>
-      <div class="konum-cubugu">
-        <span class="arama-ikon" aria-hidden="true">🔍</span>
-        <input id="konumArama" type="search" list="ulkeListesi"
-               placeholder="Type a district, city or country…"
-               aria-label="Search location" autocomplete="off">
-        <datalist id="ulkeListesi"></datalist>
-        <button id="btnKonumAra" type="button">Search</button>
+      <!-- Küçük küre arama çubuğuyla aynı satırda durur. -->
+      <div class="kure-satir">
+        <div id="kure"></div>
+        <div class="kure-sag">
+          <div class="konum-cubugu">
+            <span class="arama-ikon" aria-hidden="true">🔍</span>
+            <input id="konumArama" type="search" list="ulkeListesi"
+                   placeholder="Type a district, city or country…"
+                   aria-label="Search location" autocomplete="off">
+            <datalist id="ulkeListesi"></datalist>
+            <button id="btnKonumAra" type="button">Search</button>
+          </div>
+          <p id="konumMesaj" class="silik konum-mesaj" aria-live="polite"></p>
+          <p class="silik osm-kredi">Location search: © OpenStreetMap contributors</p>
+        </div>
       </div>
-      <p id="konumMesaj" class="silik konum-mesaj" aria-live="polite"></p>
-      <p class="silik osm-kredi">Location search: © OpenStreetMap contributors</p>
     </section>
 
     <!-- Yemek araması + şanslı seçim: "Milano'da sushi" gibi -->
