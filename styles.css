@@ -807,7 +807,14 @@ body {
   padding: 3px 0; font-size: 14px;
 }
 .ist-satir strong { color: var(--vurgu); }
-@media (max-width: 640px) { .ist-cift { grid-template-columns: 1fr; } }
+/* Taste DNA + Average scores telefonda da yan yana: iki kısa liste, alt alta
+   gereksiz yer kaplıyordu. Dolgu ve yazı biraz kısılır. */
+@media (max-width: 640px) {
+  .ist-cift { gap: 8px; }
+  .ist-blok { padding: 8px 10px; }
+  .ist-blok h3 { font-size: 13px; }
+  .ist-satir { font-size: 13px; gap: 6px; }
+}
 
 /* Detay sağ üst kalp (yalın emoji) + profildeki Want to go listesi */
 .detay-basi { position: relative; }
