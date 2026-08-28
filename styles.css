@@ -275,7 +275,8 @@ body {
   border-radius: var(--yuvarlak);
   background: var(--yuzey-yukseltilmis);
 }
-/* Girdiler üstte, ✕ + FEAT + Pick For Me altta ORTALI (sağa yapışmasınlar). */
+/* Geniş ekranda TEK satır: Where · Dish · ✕ · FEAT · Pick For Me — düğmeler
+   ayrı satıra düşüp ortada boşluklu kalmasın. Dar ekran kuralı en altta. */
 .yemek-arama-satir { display: flex; gap: 10px; align-items: flex-end; flex-wrap: wrap; }
 .yemek-arama-satir .filtre:first-child { flex: 0 1 200px; }
 .yemek-girdi { flex: 1; }
@@ -289,8 +290,8 @@ body {
 }
 .yemek-girdi input::placeholder { color: var(--krem-silik); }
 .yemek-girdi input:focus-visible { outline: 2px solid var(--altin); outline-offset: 1px; }
-/* Sağ altta onay (FEAT) + iptal (✕) */
-.ya-butonlar { display: flex; gap: 8px; align-items: center; flex: 1 1 100%; justify-content: center; }
+/* Girdilerin hemen sağında iptal (✕) + onay (FEAT) + şans (🎲) */
+.ya-butonlar { display: flex; gap: 8px; align-items: center; flex: 0 0 auto; margin-bottom: 1px; }
 .ya-feat {
   padding: 9px 22px; border: none; border-radius: 999px; cursor: pointer;
   background: var(--altin); color: #fff;
@@ -383,6 +384,7 @@ body {
 /* Detay başlığı da diğer sayfalarla AYNI düzendedir: logo ortada üstte,
    menü altında — başlık/menü sayfadan sayfaya yer değiştirmez. */
 .ust-ince {
+  position: relative; /* .geri oku sol üste bununla tutunur */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -393,17 +395,19 @@ body {
   text-align: center;
 }
 .ust-ince .logo { order: -1; }
-.ust-ince .geri { display: inline-block; padding: 2px 0 4px; }
 
 .logo-kucuk { font-size: 24px; letter-spacing: 0.2em; }
 
+/* Geri: sol üstte yuvarlak ok — akışta yer kaplayıp sayfayı itmez. */
 .geri {
-  color: var(--fildisi-sonuk);
-  font-size: 14px;
+  position: absolute; left: 16px; top: 16px;
+  width: 38px; height: 38px; display: grid; place-items: center;
+  border-radius: 50%; background: rgba(255, 255, 255, .16);
+  color: var(--fildisi); font-size: 19px; line-height: 1;
   text-decoration: none;
 }
 
-.geri:hover { color: var(--fildisi); }
+.geri:hover { background: rgba(255, 255, 255, .3); }
 
 /* Detay sayfası daha dar ve ortada dursun */
 #detay { max-width: 880px; }
@@ -657,30 +661,34 @@ body {
 }
 .panel form + h2 { margin-top: 2rem; }
 .panel a { color: var(--vurgu); }
+/* Formda başlık dışı HER yazı .95rem, blok arası boşluk hep .85rem —
+   etiketler, girdiler ve kaydıraç satırı aynı ritimde akar. */
 .dikey-form { display: flex; flex-direction: column; gap: .85rem; }
 .dikey-form label { display: flex; flex-direction: column; gap: .3rem;
-  font-size: .85rem; letter-spacing: .02em; color: var(--krem-sonuk); }
+  font-size: .95rem; letter-spacing: .02em; color: var(--krem-sonuk); }
 .dikey-form input, .dikey-form select, .dikey-form textarea {
-  font: inherit; color: var(--krem); padding: .6rem .75rem; border-radius: 10px;
+  font: inherit; font-size: .95rem; color: var(--krem); padding: .6rem .75rem;
+  border-radius: 10px;
   border: 1px solid var(--kenar); background: var(--yuzey-derin); }
 .dikey-form input::placeholder, .dikey-form textarea::placeholder { color: var(--krem-silik); }
 .dikey-form select:disabled { opacity: .45; }
 .dikey-form input:focus, .dikey-form select:focus, .dikey-form textarea:focus {
   outline: 2px solid var(--altin); outline-offset: 1px; }
 .dikey-form button {
-  font: inherit; padding: .7rem; border-radius: 10px; border: none; cursor: pointer;
+  font: inherit; font-size: .95rem; padding: .7rem; border-radius: 10px;
+  border: none; cursor: pointer;
   font-weight: 700; background: var(--altin); color: var(--kirmizi-derin); }
 .dikey-form button:hover { background: var(--altin-koyu); }
-.form-satir { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: .6rem; }
-.puan-satiri { display: flex; gap: .9rem; }
+.form-satir { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: .85rem; }
+.puan-satiri { display: flex; gap: .85rem; }
 .puan-alani { flex: 1; }
 .puan-ust { display: flex; justify-content: space-between; align-items: baseline; }
-.puan-deger { color: var(--vurgu); font-weight: 700; font-size: 15px; }
+.puan-deger { color: var(--vurgu); font-weight: 700; font-size: .95rem; }
 .puan-alani input[type="range"] {
   width: 100%; padding: 0; border: none; background: transparent;
   accent-color: var(--vurgu); cursor: pointer;
 }
-.puan-alani { display: flex; flex-direction: column; gap: .25rem; flex: 1; }
+.puan-alani { display: flex; flex-direction: column; gap: .3rem; flex: 1; }
 .hata { color: #ffb3a7; min-height: 1.2em; }
 .ziyaret { border-top: 1px solid var(--kenar); padding: 1rem 0; }
 .ziyaret-ust { display: flex; justify-content: space-between; gap: .75rem; flex-wrap: wrap; }
@@ -1282,12 +1290,16 @@ img.avatar-mini { object-fit: cover; }
 }
 .konum-cubugu input::placeholder { color: var(--krem-silik); }
 .konum-cubugu input:focus { outline: none; }
+/* FEAT / Pick For Me ile aynı aile: dolgun altın hap, beyaz kalın yazı. */
 .konum-cubugu button {
-  padding: .5rem .95rem; border: none; border-radius: 999px;
-  background: var(--altin); color: var(--kirmizi-derin);
-  font-weight: 600; cursor: pointer; flex: none;
+  padding: .5rem 1.15rem; border: none; border-radius: 999px;
+  background: var(--altin); color: #fff;
+  font: inherit; font-size: 14px; font-weight: 800; letter-spacing: .04em;
+  cursor: pointer; flex: none;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, .15);
+  transition: transform .12s, background .12s;
 }
-.konum-cubugu button:hover { background: var(--altin-koyu); }
+.konum-cubugu button:hover { transform: scale(1.04); background: var(--altin-koyu); }
 .konum-mesaj { margin: .35rem 0 0; }
 .osm-kredi { margin: .15rem 0 0; font-size: .75rem; }
 .mesafe { color: var(--vurgu); font-weight: 600; margin-left: .4rem; }
