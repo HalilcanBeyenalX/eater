@@ -1272,6 +1272,13 @@ img.avatar-mini { object-fit: cover; }
      kuralı (aynı özgüllük, sonra gelir) buradaki dolguyu eziyordu. */
   .detay-isim, .detay-yer { padding-right: 62px; }
 
+  /* Gezinme telefonda TEK satır: beş hap küçülerek yan yana sığar. */
+  .gezinme { gap: 4px; flex-wrap: nowrap; margin-top: .8rem; }
+  .sekme,
+  .hesap-kutusu a, .hesap-kutusu button {
+    font-size: 12.5px; padding: .34rem .5rem; white-space: nowrap;
+  }
+
   /* Küre telefonda arama çubuğunun üstünde, ortalı. */
   .kure-satir { flex-direction: column; gap: 10px; }
   .kure-sag { width: 100%; }
