@@ -159,6 +159,65 @@ async function kalbiKur(r) {
   });
 }
 
+// Swarm usulü sosyal katman: Mayor rozeti başlık kutusunda + "Friends ate
+// here" bölümü puan kutularının hemen altında. Veri yoksa hiçbir şey çizilmez.
+async function mayorVeArkadaslariCiz(ziyaretler) {
+  if (ziyaretler.length === 0) return;
+
+  // Mayor: kişi başına ziyaret sayısı; taç için en az 2 ziyaret gerekir.
+  const sayim = new Map();
+  ziyaretler.forEach(v => sayim.set(v.kullanici, (sayim.get(v.kullanici) || 0) + 1));
+  const [mayorId, mayorZiyaret] = [...sayim.entries()].sort((a, b) => b[1] - a[1])[0];
+  const mayorVar = mayorZiyaret >= 2;
+
+  // Arkadaşlar (kabul edilmiş takipler) — girişsizse boş kalır.
+  const takip = await eaterHesap.takipEttiklerim();
+  const arkadasIdler = takip
+    ? [...new Set(ziyaretler.map(v => v.kullanici).filter(id => takip.kume.has(id)))]
+    : [];
+
+  const gerekliIdler = [...new Set([...(mayorVar ? [mayorId] : []), ...arkadasIdler])];
+  if (gerekliIdler.length === 0) return;
+  const { data: profiller = [] } = await eaterHesap.istemci
+    .from('profiller').select('id, kullanici_adi').in('id', gerekliIdler);
+  const adiniBul = id => profiller.find(p => p.id === id)?.kullanici_adi;
+
+  if (mayorVar && adiniBul(mayorId)) {
+    const cip = document.createElement('div');
+    cip.className = 'detay-sosyal';
+    cip.innerHTML = `<a class="sosyal-cip mayor-cip" href="kisi.html?id=${encodeURIComponent(mayorId)}">
+      👑 Mayor: <strong>${kacis(adiniBul(mayorId))}</strong>
+      <span class="silik">· ${mayorZiyaret} visits</span></a>`;
+    document.querySelector('.detay-basi')?.appendChild(cip);
+  }
+
+  // Arkadaş başına TEK satır: ad · verdiği EATER Point · yediği yemekler,
+  // sağda arkadaşın Eat Book'undaki o kayda giden düğme (#z-<ziyaret> çapası).
+  const satirlar = arkadasIdler.filter(id => adiniBul(id)).map(id => {
+    const kayitlar = ziyaretler.filter(v => v.kullanici === id)
+      .sort((a, b) => (b.tarih || '').localeCompare(a.tarih || ''));
+    const puanlar = kayitlar.map(v => v.genel_puan).filter(x => typeof x === 'number');
+    const ort = puanlar.length
+      ? puanlar.reduce((a, b) => a + b, 0) / puanlar.length : null;
+    const yemekler = [...new Set(kayitlar.flatMap(v => [v.sevilen_yemek1, v.sevilen_yemek2])
+      .map(y => (y || '').trim()).filter(Boolean))];
+    const capa = kayitlar[0]?.id ? `#z-${encodeURIComponent(kayitlar[0].id)}` : '';
+    return `
+      <div class="arkadas-satir">
+        <a class="arkadas-ad" href="kisi.html?id=${encodeURIComponent(id)}">👥 <strong>${kacis(adiniBul(id))}</strong></a>
+        ${ort !== null ? `<span class="eater-puan arkadas-puan">⭐ ${ondalikTR(ort)}</span>` : ''}
+        <span class="arkadas-yemek silik">${yemekler.length ? kacis(yemekler.join(' · ')) : 'no dish noted'}</span>
+        <a class="arkadas-btn" href="kisi.html?id=${encodeURIComponent(id)}${capa}">EAT BOOK →</a>
+      </div>`;
+  });
+  if (satirlar.length === 0) return;
+
+  const kutu = document.createElement('section');
+  kutu.className = 'blok arkadas-kutu';
+  kutu.innerHTML = `<h2>Friends ate here 👥</h2>${satirlar.join('')}`;
+  document.querySelector('.metrikler')?.after(kutu);
+}
+
 // Detaydan günlüğe geçiş + girişli kullanıcıya son ziyaretinin puanlarını
 // site puanının yanında gösterir. Kişisel puanlar katalog puanına karışmaz.
 async function gunlukBaglantisiniEkle(r) {
@@ -174,14 +233,18 @@ async function gunlukBaglantisiniEkle(r) {
   // Tüm kullanıcıların bu restorandaki favori yemekleri + EATER Point'leri
   // (girişsiz de görünür).
   let { data: favVeri, error: favHata } = await eaterHesap.istemci
-    .from('ziyaretler').select('sevilen_yemek1, sevilen_yemek2, genel_puan')
+    .from('ziyaretler').select('id, tarih, sevilen_yemek1, sevilen_yemek2, genel_puan, kullanici')
     .eq('restoran_id', r.id);
   if (favHata) {
     // genel_puan sütunu henüz yok (Ek 8 çalıştırılmamış) — favoriler puansız sürsün.
     ({ data: favVeri } = await eaterHesap.istemci
-      .from('ziyaretler').select('sevilen_yemek1, sevilen_yemek2')
+      .from('ziyaretler').select('id, tarih, sevilen_yemek1, sevilen_yemek2, kullanici')
       .eq('restoran_id', r.id));
   }
+
+  // 👑 Mayor: bu restorana en çok kaydı olan Eater (en az 2 ziyaret şart) +
+  // 👥 arkadaşlardan kimler yemiş. İkisi de mevcut ziyaret verisinden türetilir.
+  await mayorVeArkadaslariCiz(favVeri || []);
 
   // Topluluk EATER Point ortalaması — Food/Ambiance/Service kutularının
   // hemen altında durur; hiç puan yoksa satır hiç çizilmez.

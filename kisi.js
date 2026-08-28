@@ -5,7 +5,7 @@
 function profilZiyaretHTML(z, mekanAdi, yer, sosyal) {
   const favoriler = [z.sevilen_yemek1, z.sevilen_yemek2].filter(Boolean);
   return `
-    <article class="ziyaret profil-kart">
+    <article class="ziyaret profil-kart" id="z-${kacis(z.id)}">
       <div class="ziyaret-ust">
         <span class="profil-mekan">${kacis(mekanAdi)}</span>
         <span class="silik">${kacis(yer)} · ${kacis(z.tarih)}</span>
@@ -314,6 +314,16 @@ async function profiliGoster() {
           </section>` : '';
       })()}
     </div>`;
+
+  // Detaydaki EAT BOOK düğmesi #z-<ziyaret> çapasıyla gelir: kayıtlar async
+  // çizildiği için tarayıcı kendi kaydıramaz — burada kaydırıp vurgularız.
+  if (location.hash.startsWith('#z-')) {
+    const hedef = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if (hedef) {
+      hedef.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      hedef.classList.add('kart-vurgu');
+    }
+  }
 
   // Takip / istek düğmesi: kabul edilmişse çıkar, bekliyorsa geri çeker, yoksa istek yollar.
   document.getElementById('btnTakip')?.addEventListener('click', async e => {

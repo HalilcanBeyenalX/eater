@@ -41,12 +41,12 @@ function temaBoyutCSS(t) {
   const oran = alan => (t[alan] ?? 100) / 100;
   const px = (taban, alan) => (taban * oran(alan)).toFixed(1) + 'px';
   return `
-  .logo { font-size: calc(clamp(44px, 9vw, 88px) * ${oran('bBaslik')}); }
+  .logo { font-size: calc(clamp(30px, 5vw, 50px) * ${oran('bBaslik')}); }
   .detay-isim { font-size: calc(clamp(30px, 5vw, 46px) * ${oran('bBaslik')}); }
   .panel h2 { font-size: ${px(25.6, 'bBaslik')}; }
   .kart-isim { font-size: ${px(28, 'bBaslik')}; }
   .profil-mekan { font-size: ${px(21, 'bBaslik')}; }
-  .sekme, .hesap-kutusu a, .hesap-kutusu button { font-size: ${px(25, 'bBaslik')}; }
+  .sekme, .hesap-kutusu a, .hesap-kutusu button { font-size: ${px(16, 'bBaslik')}; }
   .pasaport-baslik, .best-kutu h3, .bolum-baslik { font-size: ${px(22, 'bBaslik')}; }
   .panel h2.akis-baslik { font-size: ${px(48, 'bBaslik')}; }
   .akis-mekan { font-size: ${px(18, 'bBaslik')}; }

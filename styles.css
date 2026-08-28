@@ -49,9 +49,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Başlığın kendi zemini yoktur — doğrudan sayfa arka planında durur. */
+/* Başlığın kendi zemini yoktur — doğrudan sayfa arka planında durur.
+   Kompakt tutulur: logo + gezinme scrollsuz ekranın küçük bir şeridini kaplar. */
 .ust {
-  padding: 56px 24px 28px;
+  padding: 22px 24px 14px;
   text-align: center;
   color: var(--fildisi);
 }
@@ -59,11 +60,11 @@ body {
 .logo {
   margin: 0;
   font-family: var(--serif);
-  font-size: clamp(44px, 9vw, 88px);
+  font-size: clamp(30px, 5vw, 50px);
   font-weight: 700;
   letter-spacing: 0.14em;
   color: var(--fildisi);
-  text-shadow: 0 3px 0 var(--kirmizi-derin);
+  text-shadow: 0 2px 0 var(--kirmizi-derin);
 }
 
 .alt-baslik {
@@ -617,15 +618,15 @@ body {
 
 /* --- Gezinme ---
    BEŞ öğe de (EATPLORE, ATE, EATGRAM, My profile, Log out) birebir aynı
-   kutu: EATPLORE hapı gibi yarı saydam zemin, 27px kalın, eşit aralık.
+   kutu: EATPLORE hapı gibi yarı saydam zemin, eşit aralık.
    .hesap-kutusu display:contents ile çocuklarını doğrudan gezinme
    flex'ine katar — aralıklar tek gap'ten gelir, fark oluşmaz. */
-.gezinme { display: flex; gap: 10px; justify-content: center; align-items: center;
-  flex-wrap: wrap; margin-top: 1rem; }
+.gezinme { display: flex; gap: 8px; justify-content: center; align-items: center;
+  flex-wrap: wrap; margin-top: .55rem; }
 .sekme,
 .hesap-kutusu a, .hesap-kutusu button {
-  font: inherit; font-size: 25px; font-weight: 700;
-  padding: .4rem 1.1rem; border: none; border-radius: 999px;
+  font: inherit; font-size: 16px; font-weight: 700;
+  padding: .3rem .9rem; border: none; border-radius: 999px;
   background: rgba(255, 255, 255, .18); color: inherit;
   text-decoration: none; cursor: pointer; opacity: .9;
 }
@@ -1121,6 +1122,41 @@ img.avatar-mini { object-fit: cover; }
 }
 .eater-ozet .eater-buyuk { font-size: 16px; padding: 8px 18px; }
 .eater-not { color: var(--krem-sonuk); font-size: 13px; }
+
+/* Detay başlığındaki Mayor çipi (👑). */
+.detay-sosyal { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.sosyal-cip {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 13.5px; padding: 5px 12px; border-radius: 999px;
+  background: rgba(255, 255, 255, .5); color: inherit; text-decoration: none;
+}
+.sosyal-cip:hover { background: rgba(255, 255, 255, .72); }
+
+/* F — "Friends ate here": puan kutularının hemen altında, arkadaş başına
+   TEK satır: ad · verdiği EATER Point · yedikleri; sağda EAT BOOK düğmesi. */
+.arkadas-satir {
+  display: flex; align-items: center; gap: 10px;
+  white-space: nowrap; min-width: 0;
+}
+.arkadas-satir + .arkadas-satir { margin-top: 8px; }
+.arkadas-ad { color: inherit; text-decoration: none; flex: none; }
+.arkadas-ad:hover { text-decoration: underline; }
+.arkadas-puan { flex: none; font-size: 12px; padding: 3px 10px; }
+.arkadas-yemek { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.arkadas-btn {
+  margin-left: auto; flex: none;
+  font-size: 12px; font-weight: 700; letter-spacing: .04em;
+  padding: 4px 12px; border-radius: 999px;
+  background: var(--vurgu); color: #fff; text-decoration: none;
+}
+.arkadas-btn:hover { filter: brightness(1.12); }
+
+/* EAT BOOK çapasıyla gelinen Eatory kaydı kısa süre çerçeveyle vurgulanır. */
+.kart-vurgu { animation: kartVurgu 2.4s ease-out 1; }
+@keyframes kartVurgu {
+  0%, 55% { box-shadow: 0 0 0 3px var(--vurgu); }
+  100% { box-shadow: 0 0 0 3px transparent; }
+}
 .akis-yorum { margin: 8px 0 0; font-size: 14.5px; line-height: 1.5; }
 /* Favori yemek satırı — akış ve profil kartlarında okunur boyda. */
 .favori-satir { margin: 8px 0 0; font-size: 15.5px; color: var(--krem-sonuk); }
