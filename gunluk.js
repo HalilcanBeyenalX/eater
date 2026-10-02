@@ -7,22 +7,26 @@ function benzersizSirali(dizi) {
 }
 
 function girisFormuHTML() {
+  // Giriş ve kayıt AYRI panellerde; her birinin kendi hata satırı var.
   return `
-    <div class="panel">
-      <h2>Log in</h2>
+    <div class="panel giris-panel">
+      <h2 class="giris-baslik">Log in</h2>
       <form id="fGiris" class="dikey-form">
         <input type="email" id="gEposta" placeholder="Email" required>
         <input type="password" id="gSifre" placeholder="Password" required>
         <button type="submit">Log in</button>
       </form>
-      <h2>No account yet?</h2>
+      <p id="hesapHata" class="hata" aria-live="polite"></p>
+    </div>
+    <div class="panel giris-panel">
+      <h2 class="giris-baslik">No account yet?</h2>
       <form id="fKayit" class="dikey-form">
         <input type="text" id="kAd" placeholder="Username" required minlength="2" maxlength="30">
         <input type="email" id="kEposta" placeholder="Email" required>
         <input type="password" id="kSifre" placeholder="Password (min 6 characters)" required minlength="6">
         <button type="submit">Sign up</button>
       </form>
-      <p id="hesapHata" class="hata" aria-live="polite"></p>
+      <p id="kayitHata" class="hata" aria-live="polite"></p>
     </div>`;
 }
 
@@ -370,7 +374,7 @@ async function sayfayiKur() {
         document.getElementById('kEposta').value,
         document.getElementById('kSifre').value,
         document.getElementById('kAd').value.trim());
-      if (hata) document.getElementById('hesapHata').textContent = hata;
+      if (hata) document.getElementById('kayitHata').textContent = hata;
       else window.location.reload();
     });
     return;

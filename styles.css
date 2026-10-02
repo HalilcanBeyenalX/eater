@@ -1159,6 +1159,29 @@ img.avatar-mini { object-fit: cover; }
 }
 .arkadas-btn:hover { filter: brightness(1.12); }
 
+/* Giriş/Kayıt: iki ayrı dar panel; başlıklar ortalı ve zarif (büyük harf +
+   harf aralığı), kutular normalden ufak, düğmeler koyu kırmızı. */
+.giris-panel { max-width: 420px; }
+.panel.giris-panel { padding-bottom: 16px; }
+.panel h2.giris-baslik {
+  text-align: center;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+}
+.giris-panel .dikey-form input {
+  padding: .5rem .7rem;
+  font-size: .9rem;
+}
+.giris-panel .dikey-form button {
+  padding: .55rem;
+  font-size: .9rem;
+  background: var(--vurgu);
+  color: #fff;
+  letter-spacing: .05em;
+}
+.giris-panel .dikey-form button:hover { background: var(--kirmizi-derin); }
+
 /* FAVE — ülke sekmeli favoriler: bayraklı sekme hapları + best-satir satırları. */
 .ufav-sekmeler { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 12px; }
 .ufav-sekme {
