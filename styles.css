@@ -1159,6 +1159,18 @@ img.avatar-mini { object-fit: cover; }
 }
 .arkadas-btn:hover { filter: brightness(1.12); }
 
+/* FAVE — ülke sekmeli favoriler: bayraklı sekme hapları + best-satir satırları. */
+.ufav-sekmeler { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 12px; }
+.ufav-sekme {
+  font: inherit; font-size: 13.5px; font-weight: 700;
+  padding: 5px 13px; border: 1px solid var(--kenar); border-radius: 999px;
+  background: transparent; color: var(--krem-sonuk); cursor: pointer;
+}
+.ufav-sekme:hover { border-color: var(--vurgu); color: var(--vurgu); }
+.ufav-aktif { background: var(--altin); border-color: var(--altin); color: var(--kirmizi-derin); }
+a.best-mekan { color: inherit; text-decoration: none; }
+a.best-mekan:hover { text-decoration: underline; }
+
 /* EAT BOOK çapasıyla gelinen Eatory kaydı kısa süre çerçeveyle vurgulanır. */
 .kart-vurgu { animation: kartVurgu 2.4s ease-out 1; }
 @keyframes kartVurgu {

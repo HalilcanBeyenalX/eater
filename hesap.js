@@ -139,6 +139,29 @@ const eaterHesap = (() => {
     return !error;
   }
 
+  // --- Ülke favorileri (Ek 9: ulke_favorileri) ---
+
+  // null dönerse tablo yok demektir (Ek 9 SQL'i henüz çalıştırılmamış).
+  async function ulkeFavListesi(kullaniciId) {
+    const { data, error } = await istemci.from('ulke_favorileri').select('*')
+      .eq('kullanici', kullaniciId).order('created_at', { ascending: true });
+    return error ? null : (data || []);
+  }
+
+  // kayit: { restoran_id } veya { mekan_id }. Hata mesajı ya da null döner.
+  async function ulkeFavEkle(kayit) {
+    const o = await oturum();
+    if (!o) return 'Not signed in.';
+    const { error } = await istemci.from('ulke_favorileri')
+      .insert({ ...kayit, kullanici: o.user.id });
+    return error ? error.message : null;
+  }
+
+  async function ulkeFavSil(id) {
+    const { error } = await istemci.from('ulke_favorileri').delete().eq('id', id);
+    return !error;
+  }
+
   // --- EATGRAM beğeni + yorum (Ek 7) ---
 
   // Verilen ziyaretlerin beğeni sayıları + benim beğendiklerim.
@@ -259,5 +282,6 @@ const eaterHesap = (() => {
     gelenIstekler, istekYanitla, avatarKaydet, fotoYukle, fotoUrl,
     favorilerim, favoriMi, favoriDegistir,
     bestEatsListesi, bestEatsEkle, bestEatsSil,
+    ulkeFavListesi, ulkeFavEkle, ulkeFavSil,
     begeniOzeti, begeniDegistir, yorumSayilari, yorumlariGetir, yorumEkle };
 })();

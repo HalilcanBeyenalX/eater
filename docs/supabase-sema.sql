@@ -189,3 +189,29 @@ create policy "akisyorum silme" on akis_yorumlar for delete using (auth.uid() = 
 alter table ziyaretler add column if not exists genel_puan numeric
   check (genel_puan is null or (genel_puan between 0 and 10));
 notify pgrst, 'reload schema';
+
+-- Ek 9 (2 Ekim 2026): "Country favorites" — profilde ülke sekmeli favori
+-- restoranlar. Kişi yalnız GİTTİĞİ yerlerden seçer (arayüz kısıtlar);
+-- katalog restoranı restoran_id ile, kullanıcının kendi eklediği mekân
+-- mekan_id ile bağlanır (ikisinden tam biri dolu). Ülke bilgisi satırda
+-- tutulmaz — restoran/mekân kaydından türetilir.
+create table if not exists ulke_favorileri (
+  id uuid primary key default gen_random_uuid(),
+  kullanici uuid not null references auth.users(id) on delete cascade,
+  restoran_id text,
+  mekan_id uuid references mekanlar(id) on delete cascade,
+  created_at timestamptz not null default now(),
+  check ((restoran_id is null) <> (mekan_id is null))
+);
+create unique index if not exists ulke_fav_restoran
+  on ulke_favorileri (kullanici, restoran_id) where restoran_id is not null;
+create unique index if not exists ulke_fav_mekan
+  on ulke_favorileri (kullanici, mekan_id) where mekan_id is not null;
+alter table ulke_favorileri enable row level security;
+drop policy if exists "ulkefav okuma" on ulke_favorileri;
+create policy "ulkefav okuma" on ulke_favorileri for select using (true);
+drop policy if exists "ulkefav ekleme" on ulke_favorileri;
+create policy "ulkefav ekleme" on ulke_favorileri for insert with check (auth.uid() = kullanici);
+drop policy if exists "ulkefav silme" on ulke_favorileri;
+create policy "ulkefav silme" on ulke_favorileri for delete using (auth.uid() = kullanici);
+notify pgrst, 'reload schema';

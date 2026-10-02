@@ -185,6 +185,135 @@ function bestEatsHTML(bestEats, kendim, ziyaretler, mekanlar) {
     </section>`;
 }
 
+// Ülke favorileri (Ek 9): FAVE — ülke sekmeleri, her sekmede o ülkede
+// gidilen yerlerden seçilmiş favori restoranlar. Sahibi gidilen yerlerden
+// ekler/siler; ziyaretçi yalnız dolu ülkeleri görür.
+let ulkeFavSecili = ''; // seçili sekme — profil yeniden çizilse de korunur
+
+function ulkeFavYer(k, mekanlar) {
+  if (k.restoran_id) {
+    const r = RESTORANLAR.find(x => x.id === k.restoran_id);
+    return r ? { isim: r.isim, sehir: r.sehir, ulke: r.ulke,
+      link: 'detay.html?id=' + encodeURIComponent(r.id) } : null;
+  }
+  const m = mekanlar.find(x => x.id === k.mekan_id);
+  return m ? { isim: m.isim, sehir: m.sehir, ulke: m.ulke, link: null } : null;
+}
+
+function ulkeFavBolumunuCiz(favlar, kendim, ziyaretler, mekanlar) {
+  const kutu = document.getElementById('ulkeFavKutu');
+  if (!kutu) return;
+  if (favlar === null) {
+    // Tablo henüz yok (Ek 9 SQL'i çalıştırılmamış) — yalnız sahibine not göster.
+    kutu.innerHTML = kendim
+      ? '<section class="best-kutu"><h3>FAVE <span class="best-alt">country favorites</span></h3><p class="silik">Not set up yet — run the Ek 9 SQL in Supabase.</p></section>'
+      : '';
+    return;
+  }
+
+  // Gidilen yerler (tekil): sahibin sekmeleri + eklenebilir seçenekleri.
+  const gidilen = new Map(); // 'r:<id>' / 'm:<uuid>' → {isim, ulke}
+  ziyaretler.forEach(z => {
+    if (z.restoran_id) {
+      const r = RESTORANLAR.find(x => x.id === z.restoran_id);
+      if (r) gidilen.set('r:' + r.id, { isim: r.isim, ulke: r.ulke });
+    } else if (z.mekan_id) {
+      const m = mekanlar.find(x => x.id === z.mekan_id);
+      if (m) gidilen.set('m:' + m.id, { isim: m.isim, ulke: m.ulke });
+    }
+  });
+
+  const favYerler = favlar.map(k => ({ k, yer: ulkeFavYer(k, mekanlar) }))
+    .filter(x => x.yer);
+  const ulkeler = [...new Set([
+    ...favYerler.map(x => x.yer.ulke),
+    ...(kendim ? [...gidilen.values()].map(g => g.ulke) : [])
+  ])].sort();
+  if (ulkeler.length === 0) { kutu.innerHTML = ''; return; }
+  if (!ulkeler.includes(ulkeFavSecili)) ulkeFavSecili = ulkeler[0];
+
+  const sekmeler = ulkeler.map(u => `
+    <button type="button" class="ufav-sekme${u === ulkeFavSecili ? ' ufav-aktif' : ''}"
+      data-ulke="${kacis(u)}">${ULKE_BAYRAKLARI[u] || '🌍'} ${kacis(u)}</button>`).join('');
+
+  // Satırın sağında kişinin o mekâna verdiği EATER Point (ziyaret ortalaması).
+  const eaterPuani = k => {
+    const puanlar = ziyaretler
+      .filter(z => k.restoran_id ? z.restoran_id === k.restoran_id : z.mekan_id === k.mekan_id)
+      .map(z => z.genel_puan).filter(x => typeof x === 'number');
+    return puanlar.length
+      ? puanlar.reduce((a, b) => a + b, 0) / puanlar.length : null;
+  };
+
+  const secililer = favYerler.filter(x => x.yer.ulke === ulkeFavSecili);
+  const satirlar = secililer.map(({ k, yer }) => `
+    <div class="best-satir">
+      <div class="best-ust">
+        ${yer.link
+          ? `<a class="best-mekan" href="${yer.link}">${kacis(yer.isim)}</a>`
+          : `<span class="best-mekan">${kacis(yer.isim)}</span>`}
+        ${eaterPuani(k) !== null ? `<span class="eater-puan best-eater">EATER ${ondalikTR(eaterPuani(k))}</span>` : ''}
+        ${kendim ? `<button type="button" class="best-sil ufav-sil" data-id="${kacis(k.id)}"
+          title="Remove" aria-label="Remove">✕</button>` : ''}
+      </div>
+      <span class="best-yer">${kacis(yer.sehir)}, ${kacis(yer.ulke)}</span>
+    </div>`).join('');
+
+  const favliAnahtarlar = new Set(favlar.map(k =>
+    k.restoran_id ? 'r:' + k.restoran_id : 'm:' + k.mekan_id));
+  const eklenebilir = [...gidilen].filter(([anahtar, g]) =>
+    g.ulke === ulkeFavSecili && !favliAnahtarlar.has(anahtar));
+  const form = (kendim && eklenebilir.length > 0) ? `
+    <div class="best-form">
+      <select id="ufavMekan" aria-label="Pick a favorite place">
+        <option value="">FAVE</option>
+        ${eklenebilir.map(([deger, g]) =>
+          `<option value="${kacis(deger)}">${kacis(g.isim)}</option>`).join('')}
+      </select>
+      <button type="button" id="btnUfavEkle" class="best-ekle">ADD</button>
+    </div>
+    <p id="ufavHata" class="hata" aria-live="polite"></p>` : '';
+
+  kutu.innerHTML = `
+    <section class="best-kutu">
+      <h3>FAVE <span class="best-alt">country favorites</span></h3>
+      <div class="ufav-sekmeler">${sekmeler}</div>
+      ${satirlar || `<p class="silik">${kendim
+        ? 'No favorites here yet — pick one below.'
+        : 'No favorites in this country yet.'}</p>`}
+      ${form}
+    </section>`;
+
+  // Sekme geçişi yalnız bu bölümü yeniden çizer (veri yeniden çekilmez).
+  kutu.querySelectorAll('.ufav-sekme').forEach(btn => {
+    btn.addEventListener('click', () => {
+      ulkeFavSecili = btn.dataset.ulke;
+      ulkeFavBolumunuCiz(favlar, kendim, ziyaretler, mekanlar);
+    });
+  });
+  document.getElementById('btnUfavEkle')?.addEventListener('click', async e => {
+    const secim = document.getElementById('ufavMekan').value;
+    if (!secim) { document.getElementById('ufavHata').textContent = 'Pick a place first.'; return; }
+    e.target.disabled = true;
+    const kayit = secim.startsWith('r:')
+      ? { restoran_id: secim.slice(2) } : { mekan_id: secim.slice(2) };
+    const hata = await eaterHesap.ulkeFavEkle(kayit);
+    if (hata) {
+      document.getElementById('ufavHata').textContent = hata;
+      e.target.disabled = false;
+      return;
+    }
+    profiliGoster();
+  });
+  kutu.querySelectorAll('.ufav-sil').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      btn.disabled = true;
+      await eaterHesap.ulkeFavSil(btn.dataset.id);
+      profiliGoster();
+    });
+  });
+}
+
 function avatarHTML(profil, kendim) {
   const gorsel = profil.avatar
     ? `<img src="${kacis(eaterHesap.fotoUrl(profil.avatar))}" alt="Profile photo">`
@@ -234,13 +363,14 @@ async function profiliGoster() {
     .from('profiller').select('*').eq('id', id).single();
   if (error || !profil) { kap.innerHTML = '<p class="panel">Profile not found.</p>'; return; }
 
-  const [{ data: ziyaretler = [] }, takipciler, takip, favoriIdler, bestEats] = await Promise.all([
+  const [{ data: ziyaretler = [] }, takipciler, takip, favoriIdler, bestEats, ulkeFavlar] = await Promise.all([
     eaterHesap.istemci.from('ziyaretler').select('*')
       .eq('kullanici', id).order('tarih', { ascending: false }),
     eaterHesap.takipciSayisi(id),
     eaterHesap.takipEttiklerim(),
     eaterHesap.favorilerim(id),
-    eaterHesap.bestEatsListesi(id)
+    eaterHesap.bestEatsListesi(id),
+    eaterHesap.ulkeFavListesi(id)
   ]);
   const mekanIdler = ziyaretler.filter(z => z.mekan_id).map(z => z.mekan_id);
   let mekanlar = [];
@@ -295,6 +425,7 @@ async function profiliGoster() {
       </div>
       ${profilIstatistikHTML(ziyaretler, mekanlar, profil)}
       ${bestEatsHTML(bestEats, kendim, ziyaretler, mekanlar)}
+      <div id="ulkeFavKutu"></div>
       <h3 class="bolum-baslik">EAT — Eatory</h3>
       ${ziyaretler.map(z => profilZiyaretHTML(z, ...isimYer(z), sosyal)).join('') ||
         '<p class="silik">No entries yet.</p>'}
@@ -314,6 +445,9 @@ async function profiliGoster() {
           </section>` : '';
       })()}
     </div>`;
+
+  // FAVE — ülke sekmeli favoriler (kendi olay bağları içinde).
+  ulkeFavBolumunuCiz(ulkeFavlar, kendim, ziyaretler, mekanlar);
 
   // Detaydaki EAT BOOK düğmesi #z-<ziyaret> çapasıyla gelir: kayıtlar async
   // çizildiği için tarayıcı kendi kaydıramaz — burada kaydırıp vurgularız.
