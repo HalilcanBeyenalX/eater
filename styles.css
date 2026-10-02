@@ -466,11 +466,13 @@ body {
 .metrik p { margin: 10px 0 0; color: var(--krem-sonuk); font-size: 14px; }
 
 .blok {
-  padding: 24px 26px;
-  margin-top: 18px;
+  padding: 20px 22px;
+  margin-top: 14px;
   border: 1px solid var(--kenar);
   border-radius: var(--yuvarlak);
   background: var(--yuzey-oyuk);
+  /* Bölüm içi TÜM yazılar tek boy — alt kurallar inherit ile buna uyar. */
+  font-size: 14.5px;
 }
 
 /* Ardışık panellerin ayırt edilebilmesi için hafif bir alternasyon —
@@ -479,17 +481,18 @@ body {
   background: var(--yuzey-yukseltilmis);
 }
 
+/* Başlık içerikten belirgin biçimde büyük — yan yana bloklarda da küçülmez. */
 .blok h2 {
-  margin: 0 0 14px;
+  margin: 0 0 12px;
   font-family: var(--serif);
-  font-size: 20px;
+  font-size: 23px;
   color: var(--vurgu);
 }
 
 .blok.ikili {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 26px;
+  gap: 20px;
 }
 
 /* What to eat — numaralı eşit kutular */
@@ -502,7 +505,6 @@ body {
   padding: 9px 12px;
   border: 1px solid var(--kenar); border-radius: 10px;
   background: var(--ortu-koyu);
-  font-size: 14px;
 }
 .yemek-no {
   flex: none; width: 24px; height: 24px;
@@ -518,18 +520,17 @@ body {
 .satir-ikili {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 18px;
-  margin-top: 18px;
+  gap: 14px;
+  margin-top: 14px;
   align-items: stretch;
 }
 .satir-ikili .blok { margin-top: 0; display: flex; flex-direction: column; }
-.satir-ikili .blok h2 { font-size: 17px; margin-bottom: 10px; }
 .satir-ikili .blok:nth-child(2) { background: var(--yuzey-yukseltilmis); }
 /* Sağ sütunda alt alta duran bloklar (Ambiance + Price) — sütunu doldurur. */
-.satir-ikili .yigin { display: flex; flex-direction: column; gap: 18px; }
+.satir-ikili .yigin { display: flex; flex-direction: column; gap: 14px; }
 .satir-ikili .yigin .blok { flex: 1; background: var(--yuzey-yukseltilmis); }
 /* Yan yana bloklarda etiket kolonunu daralt — değerler tek satıra sığsın */
-.satir-ikili .cift { grid-template-columns: 92px 1fr; gap: 10px 12px; font-size: 14px; }
+.satir-ikili .cift { grid-template-columns: 92px 1fr; gap: 10px 12px; }
 
 /* Ambiyans etiketleri — ortalanmış, sıkı ve düzenli rozet ızgarası */
 .ambiyans-listesi {
@@ -541,7 +542,7 @@ body {
 /* Servis artı/eksi maddeleri kutucuk içinde */
 .blok.ikili .madde { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
 .blok.ikili .madde li {
-  padding: 9px 12px; font-size: 14px; line-height: 1.45;
+  padding: 9px 12px; line-height: 1.45;
   border: 1px solid var(--kenar); border-radius: 10px;
   background: var(--ortu-koyu);
 }
@@ -566,9 +567,10 @@ body {
 }
 .ate-panel a { color: var(--fildisi); }
 
-/* Fiyat bloğu kompakt */
+/* Fiyat bloğu kompakt — boyutlar .blok'tan miras, yalnız vurgu farkı.
+   .silik'in 13px'i bölüm içi tek boyu bozmasın diye miras zorlanır. */
 .fiyat-ozet { margin: 0 0 8px; font-weight: 600; }
-.fiyat-not { margin: 0; font-size: 12.5px; line-height: 1.55; }
+.blok .fiyat-not { margin: 0; line-height: 1.55; font-size: inherit; }
 
 .etiketler { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 14px; }
 
@@ -581,7 +583,7 @@ body {
 }
 
 .cift { display: grid; grid-template-columns: minmax(120px, 180px) 1fr; gap: 8px 18px; margin: 0; }
-.cift dt { color: var(--krem-silik); font-size: 13px; }
+.cift dt { color: var(--krem-silik); }
 .cift dd { margin: 0; }
 .cift a, .harita { color: var(--vurgu); }
 
